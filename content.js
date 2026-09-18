@@ -50,3 +50,20 @@ Object.assign(CAREERS[0], {
   ],effects:[['一目で伝える内容を保ちやすい','案内先に移動できない人にも配慮する'],['重要な体験内容を紙の中に残せる','何を省くか、担当者と合意する'],['情報量が増えた影響を共有できる','確認用の案を完成品にしない']],perspective:'依頼をそのまま並べるだけでなく、目的を守りながら実現できる方法を提案します。',insight:'制約の中で提案する'}
  ]
 });
+
+// Interests are editorial entry points, never inferred aptitude or personality scores.
+const INTERESTS = [
+ {id:'make',label:'つくる・表現する'},
+ {id:'support',label:'人の役に立つ'},
+ {id:'solve',label:'しくみを考える'},
+ {id:'discover',label:'知らない世界に触れる'}
+];
+const ENTRY_POINTS = {
+ designer:{entryTitle:'「伝わる」ポスターって？',interests:['make','discover'],learning:'色や文字の配置、相手に伝える方法などを学ぶ分野があります。作品づくりや授業の内容を見てみると、体験とのつながりが分かります。'},
+ engineer:{entryTitle:'使う人の「困った」をほどく。',interests:['solve','support'],learning:'プログラミングや情報の扱い方、使いやすい仕組みを学ぶ分野があります。実際に何をつくる授業があるかも、学校を知る手がかりです。'},
+ architect:{entryTitle:'みんなが過ごしやすい場所を。',interests:['make','solve'],learning:'建物の設計や、暮らしと空間の関係を学ぶ分野があります。図面だけでなく、模型や実習でどう学ぶかにも目を向けてみましょう。'},
+ childcare:{entryTitle:'「やりたくない」の、その理由。',interests:['support'],learning:'子どもの育ちや遊び、関わり方を学ぶ分野があります。実習や資格取得につながる課程も、学校の公式情報で確認できます。'},
+ tourism:{entryTitle:'その人らしい旅を考えよう。',interests:['discover','support'],learning:'観光や地域の文化、サービスのつくり方を学ぶ分野があります。地域と関わる活動や実習も、学びを具体的に知るきっかけになります。'},
+ beauty:{entryTitle:'「こんな感じ」を、一緒に形に。',interests:['make','support'],learning:'美容の技術に加え、色や接客について学ぶ分野があります。授業や実習の内容、美容師免許の取得につながる課程を確かめてみましょう。'}
+};
+for (const career of CAREERS) Object.assign(career,ENTRY_POINTS[career.id]);
