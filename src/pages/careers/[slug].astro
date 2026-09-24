@@ -1,0 +1,24 @@
+---
+import SiteLayout from '../../layouts/SiteLayout.astro';
+import SceneCard from '../../components/SceneCard.astro';
+import ExperienceSummary from '../../components/ExperienceSummary.astro';
+import { getCareers, type Career } from '../../lib/careers';
+import { sitePath } from '../../lib/paths';
+export async function getStaticPaths() {
+  const careers = await getCareers();
+  return careers.map(career => ({ params:{slug:career.slug}, props:{career,related:careers.filter(v=>v.slug!==career.slug).sort((a,b)=>b.interests.filter(t=>career.interests.includes(t)).length-a.interests.filter(t=>career.interests.includes(t)).length).slice(0,2)} }));
+}
+interface Props { career: Career; related: Career[] }
+const { career, related } = Astro.props;
+---
+<SiteLayout title={`${career.name}の仕事体験 | ミライシーン`} description={career.description}>
+  <div class="experience" data-experience={career.slug}>
+    <a class="back" href={sitePath()}>← 体験一覧に戻る</a>
+    <noscript><p>選択して進む体験にはJavaScriptが必要です。ブラウザの設定で有効にしてください。</p></noscript>
+    {career.scenes.map((scene,index)=><SceneCard career={career} scene={scene} index={index} />)}
+    <ExperienceSummary career={career} related={related} />
+  </div>
+</SiteLayout>
+<script>
+  import '../../scripts/experience';
+</script>

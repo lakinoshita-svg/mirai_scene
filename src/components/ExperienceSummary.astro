@@ -1,0 +1,17 @@
+---
+import type { Career } from '../lib/careers';
+import { careerPath, sitePath } from '../lib/paths';
+interface Props { career: Career; related: Career[] }
+const { career:c, related } = Astro.props;
+const tags = c.scenes.map((s,i)=>({id:String(i),label:s.insight,response:`「${s.insight}」が気になったんですね。この体験につながる学びも、下で紹介しています。`})).concat([
+ {id:'unsure',label:'まだ、よく分からない',response:'すぐに分からなくても大丈夫。ほかの仕事を体験してから、考えてみてもかまいません。'},
+ {id:'different',label:'少し違うかも',response:'「少し違うかも」も、体験したからこその気づき。別のひと場面も、のぞいてみませんか。'},
+]);
+---
+<article class="scene-card summary-panel" data-summary hidden tabindex="-1" aria-labelledby="summary-title">
+  <div class="finish-intro"><div class="finish-icon" aria-hidden="true">✦</div><span class="scene-kicker">{c.name}の{c.scenes.length}つのシーンを体験しました</span><h1 id="summary-title">「好きかも」は、<br />見つかった？</h1><p>はっきりした答えは、まだなくても大丈夫。<br />今の気持ちを、少しだけ振り返ってみよう。</p></div>
+  <section class="reflection" aria-labelledby="reflection-title"><h2 class="question" id="reflection-title">どの部分が、ちょっと気になった？</h2><div class="reflection-options" role="group" aria-labelledby="reflection-title">{tags.map(t=><button class="filter" type="button" data-reflection={t.id} data-response={t.response} aria-pressed="false">{t.label}</button>)}</div><p id="reflection-response" class="reflection-response" aria-live="polite">気持ちに近いものがあれば、選んでみてください。選ばずに先へ進んでも大丈夫です。</p></section>
+  <details class="experience-recap"><summary>選んだことと、仕事の視点を振り返る</summary><ul class="insights">{c.scenes.map((s,i)=><li><b>{String(i+1).padStart(2,'0')}</b><div><strong>{s.insight}</strong><p class="answer-record" data-answer={i}></p><p>{s.perspective}</p></div></li>)}</ul></details>
+  <section class="learning-next"><span class="scene-kicker">気になったら、もう少し。</span><h2 class="question">この体験は、こんな学びにつながっています。</h2><div class="study-links">{c.studies.map(s=><span>{s}</span>)}</div><p>{c.learning}</p><p class="fine-print">学校によって学べる内容や課程は異なります。今の選択から適性を判定したおすすめではありません。</p><a class="primary learning-action" href="https://shinronavi.com/" target="_blank" rel="noopener">進路ナビで学校を調べる ↗</a><p class="fine-print">進路ナビのトップページが別タブで開きます。気になった学びの名前を手がかりに探せます。</p><div class="small-step"><strong>資料請求は、決めるためだけのものではありません。</strong><p>授業や学生生活を知るためにパンフレットを読む。雰囲気を確かめにオープンキャンパスへ行く。情報を集める一歩から始められます。</p></div></section>
+  <h2 class="question">別の「気になる」も、探してみよう。</h2><div class="next-careers">{related.map(v=><a href={careerPath(v.slug)}><span class="career-role">{v.name}</span>{v.entryTitle} ↗</a>)}</div><div class="actions"><a class="text-link" href={sitePath()}>いろいろな体験を見てみる →</a></div>
+</article>

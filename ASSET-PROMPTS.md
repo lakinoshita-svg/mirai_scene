@@ -2,7 +2,7 @@
 
 組み込み imagegen で各1枚を生成。サイト内では保存済み画像を配信する。
 
-## dist/assets/design-workspace.png
+## public/assets/design-workspace.png
 
 Use case: photorealistic-natural
 Asset type: original catalog and scenario image for Japanese high-school career experience website ミライシーン.
@@ -10,7 +10,7 @@ Primary request: Bright editorial photograph of a Japanese graphic designer's de
 Composition/framing: Landscape 3:2, close slightly overhead desk view, tactile printed work is central and hands appear naturally from edge. Crisp professional editorial photography, bright daylight.
 Constraints: No logos, no legible text, no watermarks, no website screenshot, no UI.
 
-## dist/assets/poster-a.png
+## public/assets/poster-a.png
 
 Use case: ads-marketing
 Asset type: standalone fictional school art workshop event poster for educational comparison of design information priorities.
@@ -19,7 +19,7 @@ Text (verbatim): "つくる、を楽しむ。" as oversized main title; "高校�
 Composition/framing: The entire landscape poster fills image, with all text comfortably inside image and sensible print margins. Confident hierarchy, polished grid-based design.
 Constraints: Fictional educational sample, no real brand logos, no device frame, no mockup, no UI, no watermark, no extra text. Render specified Japanese exactly.
 
-## dist/assets/poster-b.png
+## public/assets/poster-b.png
 
 Use case: ads-marketing
 Asset type: standalone fictional school art workshop event poster for educational comparison of design information priorities.

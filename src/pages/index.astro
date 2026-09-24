@@ -1,0 +1,28 @@
+---
+import SiteLayout from '../layouts/SiteLayout.astro';
+import CareerCard from '../components/CareerCard.astro';
+import { getCareers } from '../lib/careers';
+import { sitePath } from '../lib/paths';
+import interests from '../data/interests.json';
+const careers = await getCareers();
+const categories = ['すべて', ...new Set(careers.map(c => c.category))];
+---
+<SiteLayout title="ミライシーン | “好き”から始まる進路選び">
+  <div class="home" data-catalog>
+    <nav class="breadcrumbs" aria-label="現在地"><a href="https://shinronavi.com/" target="_blank" rel="noopener">進路ナビ ↗</a><span aria-hidden="true">/</span><span>ミライシーン</span></nav>
+    <section class="intro"><span class="eyebrow">“好き”から始まる進路選び</span><h1>なんとなく、<span class="interest-word">好きかも。</span><br />その気持ちから、ちょっと体験。</h1><p>やりたいことが、まだ分からなくても大丈夫。<br />画像を見たり、選んだり。仕事のひと場面で「気になる」を探してみよう。</p><div class="intro-stamp" aria-hidden="true"><span>いま決めなくても</span><strong>大丈夫。</strong><span>まずは、約3分の体験</span></div></section>
+    <section aria-labelledby="catalog-title">
+      <div class="catalog-title"><h2 id="catalog-title">どんなことが、ちょっと気になる？</h2></div>
+      <div class="catalog-controls" hidden>
+        <div class="filters interest-filters" role="group" aria-label="興味から体験を探す"><button class="filter active" data-interest="all" aria-pressed="true">まだ分からない・いろいろ見る</button>{interests.map(t => <button class="filter" data-interest={t.id} aria-pressed="false">{t.label}</button>)}</div>
+        <details class="field-picker"><summary>職業の分野からも探せます</summary><div class="filters" role="group" aria-label="分野で絞り込む">{categories.map((c,i) => <button class:list={['filter', {active:i===0}]} data-category-filter={c} aria-pressed={i===0?'true':'false'}>{c}</button>)}</div></details>
+      </div>
+      <p class="catalog-count" aria-live="polite"><span data-count-label>いろいろな仕事のひと場面</span> <span data-count>{careers.length}件</span></p>
+      <div class="grid" id="career-grid">{careers.map(c => <CareerCard career={c} />)}</div>
+    </section>
+    <section class="about-note"><div><h2>体験してから、気持ちを見つめてみよう。</h2><p>「おもしろそう」も「ちょっと違うかも」も、大切な気づき。仕事を決める必要はありません。少し気になったら、その先の学びをのぞいてみてください。</p></div><a class="text-link" href={sitePath('about/')}>ミライシーンについて ↗</a></section>
+  </div>
+</SiteLayout>
+<script>
+  import '../scripts/catalog';
+</script>

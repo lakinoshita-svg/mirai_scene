@@ -57,7 +57,7 @@
 
 閲覧時は保存済みの文章と画像だけを配信する。AIの生成費は制作・更新時に発生する。データと共通画面を分離し、職業の追加で画面を個別開発しない。
 
-本番の制作工程は、構成案 → 文章・画像生成 → 編集 → 分野の確認 → 公開。現状の試作には管理画面、AIの一括生成処理、承認ワークフローは未実装。内容は dist/content.js に保存している。
+本番の制作工程は、構成案 → 文章・画像生成 → 編集 → 分野の確認 → 公開。現状の試作には管理画面、AIの一括生成処理、承認ワークフローは未実装。内容は src/content/careers/ の職業別JSONに保存し、Astroのコンテンツコレクションで検証して静的ページを生成する。
 
 ## 画像のルール
 
@@ -75,4 +75,4 @@
 
 ## 今回生成した画像
 
-組み込み imagegen を使用。保存先は dist/assets/design-workspace.png、poster-a.png、poster-b.png。生成時プロンプトは ASSET-PROMPTS.md に記録。
+組み込み imagegen を使用。保存先は public/assets/design-workspace.png、poster-a.png、poster-b.png。生成時プロンプトは ASSET-PROMPTS.md に記録。

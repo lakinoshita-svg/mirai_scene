@@ -1,0 +1,13 @@
+---
+import type { Career } from '../lib/careers';
+import { careerPath, sitePath } from '../lib/paths';
+interface Props { career: Career }
+const { career: c } = Astro.props;
+---
+<a class="career" href={careerPath(c.slug)} data-career={c.slug} data-interests={c.interests.join(' ')} data-category={c.category} data-name={c.name} style={`--card-bg:${c.color};--card-ink:${c.ink}`}>
+  <div class="career-art">
+    {c.image ? <img src={sitePath(c.image.src)} alt={c.image.alt} width="1536" height="1024" loading="lazy" /> : <span class="word-art" aria-hidden="true">{c.word}</span>}
+    <span class="art-label">{c.category}</span>
+  </div>
+  <div class="card-body"><span class="career-role">{c.name}のひと場面</span><h3>{c.entryTitle}</h3><p>{c.description}</p><div class="card-bottom"><span>約{c.estimatedMinutes}分 · {c.scenes.length}つのシーン</span><span class="card-arrow" aria-hidden="true">↗</span></div></div>
+</a>

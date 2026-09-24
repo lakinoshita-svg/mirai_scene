@@ -1,3 +1,8 @@
 .sites-runtime/
 .env
 tmp/
+node_modules/
+.astro/
+dist/
+.env.*
+!.env.example

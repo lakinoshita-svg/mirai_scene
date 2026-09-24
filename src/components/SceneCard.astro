@@ -1,0 +1,28 @@
+---
+import type { Career, Scene } from '../lib/careers';
+import { sitePath } from '../lib/paths';
+interface Props { career: Career; scene: Scene; index: number }
+const { career:c, scene:s, index } = Astro.props;
+---
+<section class="scene-panel" data-scene={index} hidden={index!==0} tabindex="-1" aria-labelledby={`scene-title-${index}`}>
+  <div class="experience-top"><span>{c.category} / {c.name}</span><span>SCENE {String(index+1).padStart(2,'0')} / {String(c.scenes.length).padStart(2,'0')}</span></div>
+  <div class="progress" aria-label={`全${c.scenes.length}シーン中${index+1}シーン目`}>{c.scenes.map((_,i)=><span class:list={{done:i<=index}}></span>)}</div>
+  <article class="scene-card">
+    {c.brief && index===0 && <div class="brief"><strong>今回のミッション</strong><p>{c.mission}</p><dl><dt>役割</dt><dd>{c.brief.role}</dd><dt>相手</dt><dd>{c.brief.audience}</dd><dt>目的</dt><dd>{c.brief.goal}</dd><dt>条件</dt><dd>{c.brief.constraint}</dd></dl></div>}
+    <span class="scene-kicker">あなたなら、どうする？</span>
+    <h1 id={`scene-title-${index}`}>{s.title}</h1><p>{s.situation}</p>
+    {s.image && <img class="scene-image" src={sitePath(s.image.src)} alt={s.image.alt} width="1536" height="1024" loading={index===0?'eager':'lazy'} />}
+    {s.comparison && <><div class="comparison">{s.comparison.map(img => <figure><a href={sitePath(img.src)} target="_blank" rel="noopener" aria-label={`${img.caption}を別タブで拡大`}><img src={sitePath(img.src)} alt={img.alt} width="1536" height="1024" loading="lazy" /></a><figcaption>{img.caption}</figcaption></figure>)}</div><p class="fine-print">画像を押すと、別タブで大きく見られます。</p></>}
+    <form data-scene-form={index}>
+      <fieldset class="scene-options" disabled><legend class="question">{s.question}</legend><div class="options">{s.options.map((o,i)=><div class="choice-control"><input type="radio" name={`scene-${index}`} id={`scene-${index}-${o.id}`} value={i} required /><label class="option" for={`scene-${index}-${o.id}`}><span class="option-letter">{String.fromCharCode(65+i)}</span><span>{o.label}</span></label></div>)}</div></fieldset>
+      <div class="actions" data-explain-actions><button class="primary" type="submit" disabled data-explain>この選択の視点を見る <span>→</span></button></div>
+    </form>
+    <section class="feedback" data-feedback hidden tabindex="-1" aria-labelledby={`feedback-title-${index}`}>
+      <span class="selected-caption" data-selected-caption></span><h2 id={`feedback-title-${index}`}>この選択にある、仕事の視点。</h2>
+      {s.options.map((o,i)=><div data-explanation={i} hidden><p>{o.explanation}</p>{(o.benefit||o.caution)&&<div class="effects">{o.benefit&&<div><strong>この方法のよさ</strong><p>{o.benefit}</p></div>}{o.caution&&<div><strong>気をつけたいこと</strong><p>{o.caution}</p></div>}</div>}</div>)}
+      <details class="other-choices"><summary>ほかの選択の視点も見る</summary>{s.options.map((o,i)=><section data-other-choice={i}><h3>{String.fromCharCode(65+i)} · {o.label}</h3><p>{o.explanation}</p></section>)}</details>
+      <div class="perspective"><strong>この仕事で大切にしたいこと</strong><p>{s.perspective}</p></div><p class="fine-print">状況や相手によって、必要な対応は変わります。</p>
+      <div class="actions"><button class="primary" data-next type="button">{index===c.scenes.length-1?'体験を振り返る':'次のシーンへ'} <span>→</span></button></div>
+    </section>
+  </article>
+</section>

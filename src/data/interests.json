@@ -1,0 +1,18 @@
+[
+  {
+    "id": "make",
+    "label": "つくる・表現する"
+  },
+  {
+    "id": "support",
+    "label": "人の役に立つ"
+  },
+  {
+    "id": "solve",
+    "label": "しくみを考える"
+  },
+  {
+    "id": "discover",
+    "label": "知らない世界に触れる"
+  }
+]
