@@ -1,4 +1,10 @@
 [hidden]{display:none!important}
+.catalog-more{text-align:center;margin:32px 0 12px}
+.catalog-more .primary{min-width:240px;justify-content:center;gap:24px}
+.catalog-more p{font-size:13px;color:var(--muted);margin:14px 0}
+/* Apply the first page before the module loads, avoiding a flash of all cards. */
+@media(min-width:651px){[data-catalog]:not([data-ready]) .career:nth-child(n+10){display:none}}
+@media(max-width:650px){[data-catalog]:not([data-ready]) .career:nth-child(n+9){display:none}}
 .skip-link{position:absolute;top:8px;left:16px;padding:8px 16px;background:#fff;z-index:100;transform:translateY(-160%)}
 .skip-link:focus{transform:none}
 .catalog-count [data-count-label]{margin:0;padding:0;background:none;font-size:inherit;border-radius:0}
