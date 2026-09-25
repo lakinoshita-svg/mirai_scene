@@ -9,10 +9,10 @@ const text = z.string().trim().min(1);
 const asset = text.refine(value => /^assets\/[a-zA-Z0-9/_-]+\.(png|jpe?g|webp|svg)$/.test(value), 'public/assets 内の画像パスを指定してください')
   .refine(value => existsSync(resolve('public', value)), '画像ファイルが見つかりません');
 const image = z.object({ src: asset, alt: text });
-const option = z.object({ id: text, label: text, explanation: text, benefit: text.optional(), caution: text.optional() });
+const option = z.object({ id: text, label: text, explanation: text, benefit: text, caution: text });
 const uniqueIds = (values: { id: string }[]) => new Set(values.map(v => v.id)).size === values.length;
 const scene = z.object({
-  id: text, title: text, situation: text, question: text,
+  id: text, title: text, situation: text, question: text, contextExplanation: text,
   image: image.optional(),
   comparison: z.array(image.extend({ caption: text })).min(2).max(3).optional(),
   options: z.array(option).length(3).refine(uniqueIds, '選択肢のIDは重複できません'),

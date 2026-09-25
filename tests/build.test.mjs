@@ -16,6 +16,16 @@ test('Every JSON career has a prerendered route and its explanations',()=>{
   assert.equal((page.match(/data-explanation=/g)||[]).length,c.scenes.reduce((n,s)=>n+s.options.length,0));
   assert.ok(page.includes('data-summary'));
   assert.ok(!page.includes('src="content.js"'));
+  assert.equal((page.match(/data-context-explanation/g)||[]).length,c.scenes.length);
+  for(const scene of c.scenes){
+   assert.ok(page.includes(scene.contextExplanation),`${c.slug}/${scene.id}: common explanation missing`);
+   for(const option of scene.options){
+    for(const field of ['explanation','benefit','caution']){
+     assert.ok(typeof option[field]==='string' && option[field].trim(),`${c.slug}/${scene.id}/${option.id}: ${field} required`);
+     assert.equal(page.split(option[field]).length-1,2,`${c.slug}/${scene.id}/${option.id}: ${field} must appear in selected and comparison views`);
+    }
+   }
+  }
  }
 });
 test('Local links and assets exist and respect the configured base',()=>{

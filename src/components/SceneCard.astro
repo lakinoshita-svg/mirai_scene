@@ -1,6 +1,7 @@
 ---
 import type { Career, Scene } from '../lib/careers';
 import { sitePath } from '../lib/paths';
+import ChoiceExplanation from './ChoiceExplanation.astro';
 interface Props { career: Career; scene: Scene; index: number }
 const { career:c, scene:s, index } = Astro.props;
 ---
@@ -18,9 +19,11 @@ const { career:c, scene:s, index } = Astro.props;
       <div class="actions" data-explain-actions><button class="primary" type="submit" disabled data-explain>この選択の視点を見る <span>→</span></button></div>
     </form>
     <section class="feedback" data-feedback hidden tabindex="-1" aria-labelledby={`feedback-title-${index}`}>
-      <span class="selected-caption" data-selected-caption></span><h2 id={`feedback-title-${index}`}>この選択にある、仕事の視点。</h2>
-      {s.options.map((o,i)=><div data-explanation={i} hidden><p>{o.explanation}</p>{(o.benefit||o.caution)&&<div class="effects">{o.benefit&&<div><strong>この方法のよさ</strong><p>{o.benefit}</p></div>}{o.caution&&<div><strong>気をつけたいこと</strong><p>{o.caution}</p></div>}</div>}</div>)}
-      <details class="other-choices"><summary>ほかの選択の視点も見る</summary>{s.options.map((o,i)=><section data-other-choice={i}><h3>{String.fromCharCode(65+i)} · {o.label}</h3><p>{o.explanation}</p></section>)}</details>
+      <h2 id={`feedback-title-${index}`}>この場面を、振り返ってみよう。</h2>
+      <div class="context-explanation" data-context-explanation><h3>まず、状況を整理しよう</h3><p class="context-caption">どの選択にも共通する考え方</p><p>{s.contextExplanation}</p></div>
+      <span class="selected-caption" data-selected-caption></span>
+      {s.options.map((o,i)=><div data-explanation={i} hidden><h3 class="choice-explanation-title">選んだ行動の解説</h3><p class="chosen-action">{o.label}</p><ChoiceExplanation option={o} /></div>)}
+      <details class="other-choices"><summary>ほかの選択の視点も見る</summary>{s.options.map((o,i)=><section data-other-choice={i}><h3>{String.fromCharCode(65+i)} · {o.label}</h3><ChoiceExplanation option={o} /></section>)}</details>
       <div class="perspective"><strong>この仕事で大切にしたいこと</strong><p>{s.perspective}</p></div><p class="fine-print">状況や相手によって、必要な対応は変わります。</p>
       <div class="actions"><button class="primary" data-next type="button">{index===c.scenes.length-1?'体験を振り返る':'次のシーンへ'} <span>→</span></button></div>
     </section>

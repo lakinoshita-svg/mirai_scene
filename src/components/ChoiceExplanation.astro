@@ -1,0 +1,10 @@
+---
+import type { Scene } from '../lib/careers';
+interface Props { option: Scene['options'][number] }
+const { option } = Astro.props;
+---
+<p>{option.explanation}</p>
+<div class="effects">
+  <div><strong>この選択から期待できること</strong><p>{option.benefit}</p></div>
+  <div><strong>懸念点・気をつけたいこと</strong><p>{option.caution}</p></div>
+</div>

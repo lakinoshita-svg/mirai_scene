@@ -1,4 +1,9 @@
 [hidden]{display:none!important}
+.context-explanation{margin:24px 0 28px;padding:22px;background:#f6f0fa;border-left:4px solid #7043ae;border-radius:0 12px 12px 0}
+.context-explanation h3,.choice-explanation-title{font-size:18px;line-height:1.6;margin:0 0 8px}
+.context-explanation .context-caption{font-size:12px;color:var(--muted);margin:0 0 12px}
+.context-explanation p:last-child{margin-bottom:0}
+.feedback .chosen-action{font-weight:700;color:#604273;margin:0 0 14px}
 .catalog-more{text-align:center;margin:32px 0 12px}
 .catalog-more .primary{min-width:240px;justify-content:center;gap:24px}
 .catalog-more p{font-size:13px;color:var(--muted);margin:14px 0}
