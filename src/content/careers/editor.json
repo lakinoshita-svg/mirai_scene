@@ -1,5 +1,6 @@
 {
   "slug": "editor",
+  "cardTheme": "make",
   "order": 12,
   "name": "編集者",
   "category": "出版・メディア",

@@ -1,5 +1,6 @@
 {
   "slug": "librarian",
+  "cardTheme": "support",
   "order": 15,
   "name": "図書館司書",
   "category": "文化・学び",

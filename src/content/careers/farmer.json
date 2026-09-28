@@ -1,5 +1,6 @@
 {
   "slug": "farmer",
+  "cardTheme": "discover",
   "order": 9,
   "name": "農業生産者",
   "category": "農・自然",

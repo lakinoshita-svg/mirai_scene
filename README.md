@@ -22,7 +22,7 @@ pnpm preview
 | 場所 | 内容 |
 |---|---|
 | `src/content/careers/*.json` | 職業ごとの文章・選択肢・解説・画像参照 |
-| `src/data/interests.json` | 興味タグの定義 |
+| `src/data/interests.json` | 興味タグ・共通カード画像（[追加・編集方法](CARD-THEMES.md)） |
 | `src/data/school-ads.json` | カテゴリー共通の大学・専門学校広告（[設定方法](SCHOOL-ADS.md)） |
 | `src/content.config.ts` | JSONの必須項目・形式・画像の検証 |
 | `src/pages/` | トップ、職業別ページ、サービス説明 |

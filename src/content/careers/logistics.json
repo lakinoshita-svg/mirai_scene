@@ -1,5 +1,6 @@
 {
   "slug": "logistics",
+  "cardTheme": "solve",
   "order": 10,
   "name": "物流プランナー",
   "category": "流通・物流",

@@ -1,18 +1,30 @@
 [
   {
     "id": "make",
-    "label": "つくる・表現する"
+    "label": "つくる・表現する",
+    "image": "assets/interests/make.svg",
+    "color": "#F0E9FF",
+    "ink": "#7144B8"
   },
   {
     "id": "support",
-    "label": "人の役に立つ"
+    "label": "人の役に立つ",
+    "image": "assets/interests/support.svg",
+    "color": "#FFF0E4",
+    "ink": "#AD592C"
   },
   {
     "id": "solve",
-    "label": "しくみを考える"
+    "label": "しくみを考える",
+    "image": "assets/interests/solve.svg",
+    "color": "#E4F0FB",
+    "ink": "#346D9B"
   },
   {
     "id": "discover",
-    "label": "知らない世界に触れる"
+    "label": "知らない世界に触れる",
+    "image": "assets/interests/discover.svg",
+    "color": "#E7F3EB",
+    "ink": "#3D7C62"
   }
 ]

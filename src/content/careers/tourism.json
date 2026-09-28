@@ -1,5 +1,6 @@
 {
   "slug": "tourism",
+  "cardTheme": "discover",
   "order": 4,
   "name": "旅行プランナー",
   "category": "観光",

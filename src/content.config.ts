@@ -4,6 +4,7 @@ import { z } from 'astro/zod';
 import { existsSync } from 'node:fs';
 import { resolve } from 'node:path';
 import interests from './data/interests.json';
+import { cardThemes } from './lib/card-themes';
 
 const text = z.string().trim().min(1);
 const asset = text.refine(value => /^assets\/[a-zA-Z0-9/_-]+\.(png|jpe?g|webp|svg)$/.test(value), 'public/assets 内の画像パスを指定してください')
@@ -24,6 +25,7 @@ const careers = defineCollection({
   schema: z.object({
     slug: text.regex(/^[a-z][a-z0-9-]*$/), order: z.number().int().nonnegative(),
     name: text, category: text, entryTitle: text, description: text, word: text,
+    cardTheme: text.refine(id => cardThemes.some(theme => theme.id === id), '未定義のカードテーマです'),
     color: text.regex(/^#[0-9a-f]{6}$/i), ink: text.regex(/^#[0-9a-f]{6}$/i),
     interests: z.array(text.refine(id => interests.some(item => item.id === id), '未定義の興味タグです')).min(1),
     estimatedMinutes: z.number().int().positive(),
