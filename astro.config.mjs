@@ -1,9 +1,10 @@
 import { defineConfig } from 'astro/config';
 
-// e.g. ASTRO_BASE=/mirai-scene/ for a subdirectory on the parent website.
+// GitHub Pages is the default; set ASTRO_BASE=/ for root-hosted deployments.
 export default defineConfig({
   output: 'static',
-  base: process.env.ASTRO_BASE || '/',
+  site: 'https://lakinoshita-svg.github.io',
+  base: process.env.ASTRO_BASE || '/mirai_scene/',
   trailingSlash: 'always',
   build: { format: 'directory' },
   devToolbar: { enabled: false },

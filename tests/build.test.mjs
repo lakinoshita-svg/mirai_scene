@@ -3,7 +3,7 @@ import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import path from 'node:path';
 const output=path.resolve(process.env.TEST_DIST || 'dist');
-const base=(process.env.ASTRO_BASE || '/').replace(/\/$/,'');
+const base=(process.env.ASTRO_BASE || '/mirai_scene/').replace(/\/$/,'');
 const careers=fs.readdirSync('src/content/careers').filter(n=>n.endsWith('.json')).map(n=>JSON.parse(fs.readFileSync(`src/content/careers/${n}`,'utf8')));
 const read=p=>fs.readFileSync(path.join(output,p),'utf8');
 test('Every JSON career has a prerendered route and its explanations',()=>{
