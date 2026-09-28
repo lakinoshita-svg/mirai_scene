@@ -13,6 +13,8 @@ test('Every career card uses its configured shared theme asset', () => {
     assert.ok(fs.existsSync(`public/${theme.image}`));
     const card = html.match(new RegExp(`<a[^>]*data-career="${career.slug}"[\\s\\S]*?</a>`))?.[0];
     assert.ok(card?.includes(theme.image), `${career.slug}: wrong theme image`);
+    assert.ok(card.includes(`data-card-theme="${theme.id}"`), `${career.slug}: filter and image must use the same theme`);
+    assert.ok(!card.includes('data-interests='), `${career.slug}: secondary tags must not drive the card filter`);
     assert.ok(!card.includes('word-art'), `${career.slug}: legacy artwork`);
   }
 });

@@ -6,7 +6,7 @@ interface Props { career: Career }
 const { career: c } = Astro.props;
 const theme = getCardTheme(c.cardTheme);
 ---
-<a class="career" href={careerPath(c.slug)} data-career={c.slug} data-interests={c.interests.join(' ')} data-category={c.category} data-name={c.name} style={`--card-bg:${theme.color};--card-ink:${theme.ink}`}>
+<a class="career" href={careerPath(c.slug)} data-career={c.slug} data-card-theme={c.cardTheme} data-category={c.category} data-name={c.name} style={`--card-bg:${theme.color};--card-ink:${theme.ink}`}>
   <div class="career-art">
     <img class="theme-image" src={sitePath(theme.image)} alt={theme.label} width="480" height="320" loading="lazy" />
     <span class="art-label">{c.category}</span>

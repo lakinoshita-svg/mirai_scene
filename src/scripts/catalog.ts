@@ -36,7 +36,7 @@ if (root) {
         matching = cards.filter(card => {
             const matchesInterest = interest === 'convey'
                 ? CONVEY_CAREERS.has(card.dataset.career!)
-                : interest === 'all' || card.dataset.interests?.split(' ').includes(interest);
+                : interest === 'all' || card.dataset.cardTheme === interest;
             return matchesInterest && (category === 'すべて' || card.dataset.category === category);
         });
         limit = pageSize();

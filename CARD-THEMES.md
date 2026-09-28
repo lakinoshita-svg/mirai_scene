@@ -4,13 +4,14 @@
 
 `src/data/interests.json` が、興味の絞り込みとカード画像の共通設定です。
 職業JSONの `cardTheme` でカードに使う画像を1つ選びます。
-`interests` は絞り込み用なので複数指定できます。広告用の `category` とは独立しています。
+一覧の4テーマの絞り込みにも `cardTheme` を使います。選んだテーマとカード画像が必ず一致します。
+`interests` は関連体験の候補選びに使う複数タグです。一覧のテーマ絞り込みには使いません。広告用の `category` とは独立しています。
 
 ## 5つ目を追加する
 
 1. `public/assets/interests/` に画像を追加します。原稿は480×320（3:2）推奨です。
 2. `src/data/interests.json` に以下のように1件追加します。
-3. 対象の職業JSONの `cardTheme` を `nurture` にし、絞り込みにも使う場合は `interests` に追加します。
+3. 対象の職業JSONの `cardTheme` を `nurture` にします。画像と一覧の絞り込みが同時に切り替わります。関連体験の候補選びにも使う場合は `interests` にも追加します。
 4. ビルド・テスト後に再公開します。
 
 ```json

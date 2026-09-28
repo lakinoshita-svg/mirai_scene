@@ -20,7 +20,7 @@ const { title, description = '“好き”から始まる進路選び。画像�
     <a class="skip-link" href="#app">本文へ移動</a>
     <header class="site-header">
       <div class="brand-family">
-        <a class="parent-brand" href="https://shinronavi.com/" target="_blank" rel="noopener" aria-label="進路ナビを別タブで開く">進路ナビ</a>
+        <a class="parent-brand" href="https://shinronavi.com/" target="_blank" rel="noopener" aria-label="進路ナビを別タブで開く"><img src={sitePath('assets/brand/shinronavi-logo.png')} alt="進路ナビ" width="1200" height="300" /></a>
         <span class="brand-divider" aria-hidden="true"></span>
         <a class="brand" href={sitePath()} aria-label="ミライシーン ホーム"><span class="brand-mark" aria-hidden="true">◧</span>ミライシーン</a>
       </div>
@@ -30,3 +30,9 @@ const { title, description = '“好き”から始まる進路選び。画像�
     <footer><a href={sitePath()} class="footer-brand">ミライシーン</a><p>“好き”から始まる進路選び。今、将来を決めなくても大丈夫。</p><span>試作版 · 掲載シーンは架空の設定です</span></footer>
   </body>
 </html>
+<style>
+  .parent-brand{display:flex;align-items:center;flex-shrink:0}
+  .parent-brand img{display:block;width:112px;height:auto}
+  @media(max-width:650px){.parent-brand img{width:76px}}
+  @media(max-width:350px){.parent-brand img{width:64px}}
+</style>
