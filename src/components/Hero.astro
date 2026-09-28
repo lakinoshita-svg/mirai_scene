@@ -7,7 +7,7 @@ const asset = (name: string) => sitePath(`assets/hero/${name}`);
     <picture class="hero-background"><source media="(max-width: 900px)" srcset={asset('background-sp.png')} /><img src={asset('background-pc.png')} alt="" width="1774" height="887" fetchpriority="high" /></picture>
     <div class="hero-copy">
       <h1 id="hero-title">「好き！」の先にある、<span>未来をのぞいてみよう。</span></h1>
-      <p>まだ、やりたいことが決まっていなくても大丈夫。<br />気になるシーンから、仕事・学び・学校につながるヒントが見つかります。</p>
+      <p>まだ、やりたいことが決まっていなくても大丈夫。<br />約3分で、気になる仕事の3つのシーンを体験。<br />選んで、考えて、自分の「好き」のヒントを見つけよう。</p>
     </div>
     <div class="hero-art">
       <img class="hero-note" src={asset('note.png')} alt="好きから、きっと見つかる わたしのミライ" />
@@ -17,7 +17,7 @@ const asset = (name: string) => sitePath(`assets/hero/${name}`);
     </div>
     <div class="hero-action">
       <a class="hero-cta" href="#experiences" data-hero-interest="all"><img class="cta-background" src={asset('button.svg')} alt="" /><span>気になる未来を見てみる</span><span class="cta-icon"><img src={asset('circle.svg')} alt="" /><img class="cta-arrow" src={asset('arrow.svg')} alt="" /></span></a>
-      <p class="hero-meta"><span class="hero-check"><img src={asset('check-background.svg')} alt="" /><img src={asset('check.svg')} alt="" /></span>1〜3分でOK<span>・</span>登録なしでスタート</p>
+      <p class="hero-meta"><span class="hero-check"><img src={asset('check-background.svg')} alt="" /><img src={asset('check.svg')} alt="" /></span>登録なしでスタート</p>
     </div>
   </div>
 </section>
@@ -46,7 +46,7 @@ const asset = (name: string) => sitePath(`assets/hero/${name}`);
   .cta-icon{position:relative;display:flex;width:36px;height:36px;align-items:center;justify-content:center}
   .cta-icon>img:first-child{position:absolute;inset:0}
   .cta-arrow{position:relative}
-  .hero-meta{margin:18px 0 0;display:flex;align-items:center;justify-content:space-between;white-space:nowrap;color:#686171;font-size:15px;line-height:24px}
+  .hero-meta{margin:18px 0 0;display:flex;align-items:center;justify-content:center;gap:8px;white-space:nowrap;color:#686171;font-size:15px;line-height:24px}
   .hero-check{position:relative;display:grid;place-items:center;width:16px;height:16px}
   .hero-check img{position:absolute}
   @media(min-width:901px) and (max-width:1200px){.hero-action{transform:scale(.83);transform-origin:top left}}

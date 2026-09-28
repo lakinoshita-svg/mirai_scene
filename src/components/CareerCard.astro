@@ -9,5 +9,8 @@ const { career: c } = Astro.props;
     {c.image ? <img src={sitePath(c.image.src)} alt={c.image.alt} width="1536" height="1024" loading="lazy" /> : <span class="word-art" aria-hidden="true">{c.word}</span>}
     <span class="art-label">{c.category}</span>
   </div>
-  <div class="card-body"><span class="career-role">{c.name}のひと場面</span><h3>{c.entryTitle}</h3><p>{c.description}</p><div class="card-bottom"><span>約{c.estimatedMinutes}分 · {c.scenes.length}つのシーン</span><span class="card-arrow" aria-hidden="true">↗</span></div></div>
+  <div class="card-body"><span class="career-role">{c.name}のひと場面</span><h3>{c.entryTitle}</h3><p>{c.description}</p><div class="card-bottom"><span class="card-arrow" aria-hidden="true">↗</span></div></div>
 </a>
+<style>
+  .card-bottom{justify-content:flex-end}
+</style>
