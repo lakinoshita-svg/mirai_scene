@@ -2,6 +2,7 @@
 import SiteLayout from '../../layouts/SiteLayout.astro';
 import SceneCard from '../../components/SceneCard.astro';
 import ExperienceSummary from '../../components/ExperienceSummary.astro';
+import CategorySchoolAds from '../../components/CategorySchoolAds.astro';
 import { getCareers, type Career } from '../../lib/careers';
 import { sitePath } from '../../lib/paths';
 export async function getStaticPaths() {
@@ -17,6 +18,7 @@ const { career, related } = Astro.props;
     <noscript><p>選択して進む体験にはJavaScriptが必要です。ブラウザの設定で有効にしてください。</p></noscript>
     {career.scenes.map((scene,index)=><SceneCard career={career} scene={scene} index={index} />)}
     <ExperienceSummary career={career} related={related} />
+    <CategorySchoolAds category={career.category} />
   </div>
 </SiteLayout>
 <script>

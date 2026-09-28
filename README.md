@@ -23,6 +23,7 @@ pnpm preview
 |---|---|
 | `src/content/careers/*.json` | 職業ごとの文章・選択肢・解説・画像参照 |
 | `src/data/interests.json` | 興味タグの定義 |
+| `src/data/school-ads.json` | カテゴリー共通の大学・専門学校広告（[設定方法](SCHOOL-ADS.md)） |
 | `src/content.config.ts` | JSONの必須項目・形式・画像の検証 |
 | `src/pages/` | トップ、職業別ページ、サービス説明 |
 | `src/components/` | カード、場面、振り返りの共通部品 |
@@ -49,7 +50,7 @@ pnpm preview
 
 ## 進路ナビ内への配置
 
-初期設定はドメイン直下です。例えば `/mirai-scene/` に配置する場合：
+初期設定はGitHub Pages向けの `/mirai_scene/` です。ドメイン直下では `ASTRO_BASE=/` を指定します。例えば `/mirai-scene/` に配置する場合：
 
 ```powershell
 $env:ASTRO_BASE='/mirai-scene/'
