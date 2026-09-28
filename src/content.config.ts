@@ -17,7 +17,7 @@ const scene = z.object({
   image: image.optional(),
   comparison: z.array(image.extend({ caption: text })).min(2).max(3).optional(),
   options: z.array(option).length(3).refine(uniqueIds, '選択肢のIDは重複できません'),
-  perspective: text, insight: text,
+  perspective: text, insight: text, workConnection: text,
 });
 
 const careers = defineCollection({
@@ -29,6 +29,7 @@ const careers = defineCollection({
     color: text.regex(/^#[0-9a-f]{6}$/i), ink: text.regex(/^#[0-9a-f]{6}$/i),
     interests: z.array(text.refine(id => interests.some(item => item.id === id), '未定義の興味タグです')).min(1),
     estimatedMinutes: z.number().int().positive(),
+    reference: z.object({ title: text, publisher: text, url: z.string().url().startsWith('https://'), checkedAt: text.regex(/^\d{4}-\d{2}-\d{2}$/), background: text }),
     reviewStatus: z.enum(['editorial-draft', 'reviewed']),
     image: image.optional(), mission: text.optional(),
     brief: z.object({ role: text, audience: text, goal: text, constraint: text }).optional(),

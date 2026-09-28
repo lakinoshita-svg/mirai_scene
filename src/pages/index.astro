@@ -11,13 +11,6 @@ const careers = await getCareers();
 <style>[data-catalog] .career{display:block!important}</style>
 </noscript>
   <div data-catalog>
-<div class="home hero-breadcrumb">
-    <nav class="breadcrumbs" aria-label="現在地">
-<a href="https://shinronavi.com/" target="_blank" rel="noopener">進路ナビ ↗</a>
-<span aria-hidden="true">/</span>
-<span>ミライシーン</span>
-</nav>
-  </div>
 <Hero />
 <div class="home">
     <CareerCatalog careers={careers} />
@@ -35,5 +28,5 @@ const careers = await getCareers();
   import '../scripts/catalog';
 </script>
 
-<style>.hero-breadcrumb{padding-bottom:0}</style>
+
 

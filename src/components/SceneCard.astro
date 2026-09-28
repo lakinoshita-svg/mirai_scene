@@ -1,6 +1,7 @@
 ---
 import type { Career, Scene } from '../lib/careers';
 import { sitePath } from '../lib/paths';
+import SceneEvidence from './SceneEvidence.astro';
 import ChoiceExplanation from './ChoiceExplanation.astro';
 interface Props { career: Career; scene: Scene; index: number }
 const { career:c, scene:s, index } = Astro.props;
@@ -14,6 +15,7 @@ const { career:c, scene:s, index } = Astro.props;
     <h1 id={`scene-title-${index}`}>{s.title}</h1><p>{s.situation}</p>
     {s.image && <img class="scene-image" src={sitePath(s.image.src)} alt={s.image.alt} width="1536" height="1024" loading={index===0?'eager':'lazy'} />}
     {s.comparison && <><div class="comparison">{s.comparison.map(img => <figure><a href={sitePath(img.src)} target="_blank" rel="noopener" aria-label={`${img.caption}を別タブで拡大`}><img src={sitePath(img.src)} alt={img.alt} width="1536" height="1024" loading="lazy" /></a><figcaption>{img.caption}</figcaption></figure>)}</div><p class="fine-print">画像を押すと、別タブで大きく見られます。</p></>}
+    <SceneEvidence career={c} scene={s} />
     <form data-scene-form={index}>
       <fieldset class="scene-options" disabled><legend class="question">{s.question}</legend><div class="options">{s.options.map((o,i)=><div class="choice-control"><input type="radio" name={`scene-${index}`} id={`scene-${index}-${o.id}`} value={i} required /><label class="option" for={`scene-${index}-${o.id}`}><span class="option-letter">{String.fromCharCode(65+i)}</span><span>{o.label}</span></label></div>)}</div></fieldset>
       <div class="actions" data-explain-actions><button class="primary" type="submit" disabled data-explain>この選択の視点を見る <span>→</span></button></div>

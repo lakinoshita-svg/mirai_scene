@@ -1,0 +1,16 @@
+---
+import type { Career, Scene } from '../lib/careers';
+interface Props { career: Career; scene: Scene }
+const { career, scene } = Astro.props;
+---
+<details class="scene-evidence">
+  <summary>このシーンの参考情報</summary>
+  <h2>実際の仕事とのつながり</h2>
+  <p>{career.reference.background}</p>
+  <p>{scene.workConnection}</p>
+  <h2>仕事の背景を確認した資料</h2>
+  <a href={career.reference.url} target="_blank" rel="noopener">{career.reference.publisher}「{career.reference.title}」 ↗</a>
+  <p class="evidence-meta">資料確認日：<time datetime={career.reference.checkedAt}>{career.reference.checkedAt}</time></p>
+  <p class="evidence-meta">状況・選択肢・解説は、仕事への興味を見つけるための架空の教材です。参考資料が個々の選択や結果を保証するものではありません。実際の担当範囲や進め方は職場によって異なります。</p>
+  <p class="evidence-meta">{career.reviewStatus === 'editorial-draft' ? '専門家によるシーン監修：未実施' : '専門家によるシーン監修：確認済み'}</p>
+</details>
