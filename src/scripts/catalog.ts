@@ -35,6 +35,17 @@ if(root){
   }
   interests.forEach(b=>b.addEventListener('click',()=>filter(b.dataset.interest!,'すべて',b.dataset.interest==='all'?'いろいろな仕事のひと場面':`${b.textContent}につながるひと場面`)));
   categories.forEach(b=>b.addEventListener('click',()=>filter('all',b.dataset.categoryFilter!,b.dataset.categoryFilter==='すべて'?'いろいろな仕事のひと場面':b.dataset.categoryFilter!)));
+  root.querySelectorAll<HTMLAnchorElement>('[data-hero-interest]').forEach(link=>link.addEventListener('click',()=>{
+    const interest=link.dataset.heroInterest!;
+    filter(interest==='convey'?'all':interest,'すべて',interest==='all'?'いろいろな仕事のひと場面':`${interest==='make'?'つくる':interest==='support'?'支える':'伝える'}につながるひと場面`);
+    if(interest==='convey'){
+      const conveying=['childcare','editor','video-producer','event-planner','librarian','museum-curator'];
+      matching=cards.filter(card=>conveying.includes(card.dataset.career!));
+      interests.forEach(b=>{b.classList.remove('active');b.setAttribute('aria-pressed','false');});
+      render();root!.querySelector<HTMLElement>('[data-count]')!.textContent=`${matching.length}件`;
+    }
+    root!.querySelector<HTMLElement>('#experiences')?.focus({preventScroll:true});
+  }));
   render();
   root.dataset.ready='true';
   // Preserve links shared from the original hash-routed prototype.
