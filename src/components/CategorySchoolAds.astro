@@ -1,19 +1,53 @@
 ---
-import { getSchoolAds } from '../lib/school-ads';
+import { getSchoolAds, schoolAdConfig } from '../lib/school-ads';
+import regions from '../data/ad-regions.json';
 import { sitePath } from '../lib/paths';
 interface Props { category: string }
 const { category } = Astro.props;
-const ads = getSchoolAds(category);
+const ids = schoolAdConfig.categoryAds[category] ?? [];
+const ads = ids.flatMap(id => schoolAdConfig.ads.filter(ad => ad.id === id && ad.enabled));
+const initialIds = new Set(getSchoolAds(category).map(ad => ad.id));
 ---
 {ads.length > 0 && <aside class="school-ads" aria-labelledby="school-ads-title" data-ad-category={category}>
   <div class="school-ads-heading"><h2 id="school-ads-title">{category}に関連する大学・専門学校</h2><span class="ad-label">広告・PR</span></div>
   <p class="school-ads-caption">この職業の分野に関連する学校をご紹介します。</p>
-  <div class="school-ads-grid">{ads.map(ad => <a class="school-ad" href={ad.url} target="_blank" rel="sponsored noopener" data-ad-id={ad.id}>
+  <label class="ad-area" hidden>学校を探すエリア <select data-ad-region><option value="all">全国・指定なし</option>{regions.map(region => <option value={region.id}>{region.label}</option>)}</select></label>
+  <p data-ad-empty hidden={initialIds.size > 0}>現在、このエリアでご紹介できる学校広告はありません。</p>
+  <noscript><p>エリアの選択にはJavaScriptが必要です。</p></noscript>
+  <div class="school-ads-grid">{ads.map(ad => <a class="school-ad" hidden={!initialIds.has(ad.id)} href={ad.url} target="_blank" rel="sponsored noopener" data-ad-id={ad.id} data-ad-regions={ad.targetRegions.join(' ')}>
     {ad.image && <img src={sitePath(ad.image.src)} alt={ad.image.alt} loading="lazy" />}
     <div class="school-ad-body"><span class="school-type">{ad.schoolType}</span><h3>{ad.schoolName}</h3><strong>{ad.title}</strong><p>{ad.description}</p><span class="school-ad-link">学校の情報を見る <span aria-hidden="true">↗</span><span class="visually-hidden">（別タブで開きます）</span></span></div>
   </a>)}</div>
 </aside>}
+<script>
+  import { selectSchoolAds } from '../lib/select-school-ads.mjs';
+  document.querySelectorAll<HTMLElement>('[data-ad-category]').forEach(slot => {
+    const category = slot.dataset.adCategory!;
+    const cards = [...slot.querySelectorAll<HTMLAnchorElement>('[data-ad-id]')];
+    const select = slot.querySelector<HTMLSelectElement>('[data-ad-region]')!;
+    const ads = cards.map(card => ({id:card.dataset.adId!, enabled:true, targetRegions:card.dataset.adRegions!.split(' ')}));
+    const config = {ads, categoryAds:{[category]:ads.map(ad => ad.id)}};
+    const render = () => {
+      const visible = new Set(selectSchoolAds(category, config, select.value).map(ad => ad.id));
+      cards.forEach(card => card.hidden = !visible.has(card.dataset.adId!));
+      slot.querySelector<HTMLElement>('[data-ad-empty]')!.hidden = visible.size > 0;
+    };
+    try {
+      const saved = sessionStorage.getItem('mirai-ad-region');
+      if (saved && [...select.options].some(option => option.value === saved)) select.value = saved;
+    } catch { /* Selection still works when browser storage is unavailable. */ }
+    select.closest<HTMLElement>('label')!.hidden = false;
+    select.addEventListener('change', () => {
+      render();
+      try { sessionStorage.setItem('mirai-ad-region', select.value); } catch { /* Optional session persistence. */ }
+    });
+    render();
+  });
+</script>
 <style>
+  .school-ad[hidden],.ad-area[hidden]{display:none}
+  .ad-area{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin:0 0 20px;font-size:14px}
+  .ad-area select{font:inherit;padding:8px;border:1px solid var(--line);border-radius:6px;background:white;color:var(--ink)}
   .school-ads{margin:32px 0;padding:24px;border:1px solid var(--line);border-radius:20px;background:#fff}
   .school-ads-heading{display:flex;align-items:center;justify-content:space-between;gap:16px}
   .school-ads-heading h2{font-size:20px;margin:0}.ad-label{flex-shrink:0;font-size:12px;color:var(--muted);border:1px solid var(--line);padding:3px 8px;border-radius:4px}
