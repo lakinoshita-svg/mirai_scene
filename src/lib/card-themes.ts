@@ -3,7 +3,8 @@ import { existsSync } from 'node:fs';
 import { resolve } from 'node:path';
 import definitions from '../data/interests.json';
 
-// One registry drives filters, artwork and validation, without a fixed theme count.
+// interests.jsonが表示名・画像・フィルターの共通定義。テーマ数は固定しない。
+// 追加時は画像ファイルと職業JSONのcardThemeも揃える。手順は CARD-THEMES.md を参照。
 export const cardThemes = z.array(z.object({
   id: z.string().regex(/^[a-z][a-z0-9-]*$/),
   label: z.string().trim().min(1),

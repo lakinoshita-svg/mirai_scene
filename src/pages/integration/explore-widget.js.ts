@@ -1,20 +1,19 @@
 import type { APIRoute } from 'astro';
-import { learningLinks } from '../../lib/learning-links';
-import { sitePath } from '../../lib/paths';
+import { getIntegrationLinks } from '../../lib/integration-links';
 
 // A classic script: no fetch/CORS dependency on the legacy lesson site.
 export const GET: APIRoute = ({ site }) => {
-  if (!site) throw new Error('Astro site is required for integration links');
-  const links: Record<string, { label: string; url: string }[]> = {};
-  for (const field of learningLinks) for (const lesson of field.lessons) {
-    (links[lesson.slug] ??= []).push({ label: field.label, url: new URL(sitePath(`explore/${field.id}/`), site).href });
+  const links: Record<string, { label: string; url: string }[]> = Object.create(null);
+  for (const link of getIntegrationLinks(site)) {
+    (links[link.lessonSlug] ??= []).push({ label: link.label, url: link.miraiUrl });
   }
   const script = `(() => {
     const script = document.currentScript;
     if (!script) return;
     const slug = script.dataset.lesson || new URLSearchParams(location.search).get('slug');
-    const entries = ${JSON.stringify(links)}[slug];
-    if (!entries) return;
+    const links = ${JSON.stringify(links)};
+    if (!Object.prototype.hasOwnProperty.call(links, slug)) return;
+    const entries = links[slug];
     const section = document.createElement('section');
     section.className = 'mirai-scene-links';
     const heading = document.createElement('h2');
@@ -25,7 +24,7 @@ export const GET: APIRoute = ({ site }) => {
       const item = document.createElement('li');
       const link = document.createElement('a');
       link.href = entry.url;
-      link.textContent = entry.label + 'のミライシーンへ';
+      link.textContent = entry.label;
       item.append(link); list.append(item);
     });
     section.append(list);

@@ -1,8 +1,10 @@
 ---
+// 自動生成データ。修正はミライシーン側の対応表で行い npm run sync:inquiry で同期する。
 import connections from '../data/mirai-links.json';
 interface Props { slug: string }
 const { slug } = Astro.props;
 const connection = connections[slug as keyof typeof connections];
+// 本番は公開先のミライシーンへ接続。ローカル確認時だけMIRAI_BASE_URLを指定してビルドする。
 const base = new URL(import.meta.env.MIRAI_BASE_URL || 'https://lakinoshita-svg.github.io/mirai_scene/');
 if (!['https:', 'http:'].includes(base.protocol)) throw new Error('MIRAI_BASE_URLにはHTTP(S)のURLを指定してください');
 if (!base.pathname.endsWith('/')) base.pathname += '/';

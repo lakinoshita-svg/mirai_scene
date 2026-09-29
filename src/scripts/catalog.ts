@@ -6,6 +6,7 @@ if (root) {
     const cards = [...root.querySelectorAll<HTMLAnchorElement>('[data-career]')];
     const interests = [...root.querySelectorAll<HTMLButtonElement>('[data-interest]')];
     const categories = [...root.querySelectorAll<HTMLButtonElement>('[data-category-filter]')];
+    // 初期表示・追加件数はPC=9、SP=8。境界幅はカードのレスポンシブCSSと揃える。
     const mobile = matchMedia('(max-width: 650px)');
     const more = root.querySelector<HTMLButtonElement>('[data-more]')!;
     const moreContainer = root.querySelector<HTMLElement>('[data-more-container]')!;
@@ -28,10 +29,12 @@ if (root) {
         render();
         firstNew?.focus({ preventScroll: true });
     });
+    // 画面幅が区分をまたいだら初期件数へ戻す。絞り込み結果matchingは保持する。
     mobile.addEventListener('change', () => { limit = pageSize(); render(); });
     root.querySelector<HTMLElement>('.catalog-controls')!.hidden = false;
     function filter(interest: string, category: string, label: string) {
         matching = cards.filter(card => {
+            // 一覧の画像と分類を一致させるためcardThemeで絞る。複数のinterestsは関連体験用。
             const matchesInterest = interest === 'all' || card.dataset.cardTheme === interest;
             return matchesInterest && (category === 'すべて' || card.dataset.category === category);
         });
@@ -42,11 +45,12 @@ if (root) {
         countLabel.textContent = label;
         count.textContent = `${matching.length}件`;
     }
+    // 興味と職業分野は排他的に切り替える。片方を選ぶともう片方をリセットする仕様。
     interests.forEach(b => b.addEventListener('click', () => filter(b.dataset.interest!, 'すべて', b.dataset.interest === 'all' ? DEFAULT_LABEL : `${b.textContent}につながるひと場面`)));
     categories.forEach(b => b.addEventListener('click', () => filter('all', b.dataset.categoryFilter!, b.dataset.categoryFilter === 'すべて' ? DEFAULT_LABEL : b.dataset.categoryFilter!)));
     render();
     root.dataset.ready = 'true';
-    // Preserve links shared from the original hash-routed prototype.
+    // 旧試作の #career/...・#about の共有URLを救済する。旧リンクの利用終了までは残す。
     let legacy = '';
     try {
         legacy = decodeURIComponent(location.hash.slice(1));

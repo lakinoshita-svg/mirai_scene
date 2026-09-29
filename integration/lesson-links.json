@@ -18,6 +18,12 @@
     "miraiUrl": "https://lakinoshita-svg.github.io/mirai_scene/explore/it/"
   },
   {
+    "lessonSlug": "engineering_info",
+    "lessonUrl": "https://shinronavi.com/forteacher/lesson?slug=engineering_info",
+    "label": "ゲームのミライシーンへ",
+    "miraiUrl": "https://lakinoshita-svg.github.io/mirai_scene/explore/games/"
+  },
+  {
     "lessonSlug": "it_information_processing",
     "lessonUrl": "https://shinronavi.com/forteacher/lesson?slug=it_information_processing",
     "label": "情報・ITのミライシーンへ",
@@ -152,12 +158,6 @@
   {
     "lessonSlug": "gamecg_game",
     "lessonUrl": "https://shinronavi.com/forteacher/lesson?slug=gamecg_game",
-    "label": "ゲームのミライシーンへ",
-    "miraiUrl": "https://lakinoshita-svg.github.io/mirai_scene/explore/games/"
-  },
-  {
-    "lessonSlug": "engineering_info",
-    "lessonUrl": "https://shinronavi.com/forteacher/lesson?slug=engineering_info",
     "label": "ゲームのミライシーンへ",
     "miraiUrl": "https://lakinoshita-svg.github.io/mirai_scene/explore/games/"
   },

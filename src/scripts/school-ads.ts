@@ -10,6 +10,8 @@ document.querySelectorAll<HTMLElement>('[data-ad-category]').forEach(slot => {
         cards.forEach(card => card.hidden = !visible.has(card.dataset.adId!));
         slot.querySelector<HTMLElement>('[data-ad-empty]')!.hidden = visible.size > 0;
     };
+    // 地域は本人の選択をタブのセッション内だけ保存する。位置情報取得や永続保存は行わない。
+    // 保存できないブラウザでも、その場での選択と広告表示は動作させる。
     try {
         const saved = sessionStorage.getItem('mirai-ad-region');
         if (saved && [...select.options].some(option => option.value === saved))

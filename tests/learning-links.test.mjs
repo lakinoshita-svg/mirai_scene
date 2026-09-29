@@ -46,6 +46,8 @@ test('Lesson widget supports shared lessons, explicit slug, and unknown lessons 
     return added;
   };
   assert.equal(run('unknown').length, 0);
+  assert.equal(run('constructor').length, 0);
+  assert.equal(run('__proto__').length, 0);
   assert.equal(run('unknown', 'art_design').length, 1);
   const shared = run('engineering_info')[0].children[1].children;
   assert.equal(shared.length, 2);

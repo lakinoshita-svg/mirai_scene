@@ -1,6 +1,8 @@
 import { z } from 'astro/zod';
 import data from '../data/learning-links.json';
 
+// 編集元は learning-links.json。表示テーマ・広告カテゴリーとは別に、学びのIDで連携する。
+// 職業JSONのlearningIdsと対応させる。JSONはコメントを持てないため、編集手順は LEARNING-LINKS.md を参照。
 const text = z.string().trim().min(1);
 export const learningLinks = z.array(z.object({
   id: text.regex(/^[a-z][a-z0-9-]*$/), label: text, description: text,
@@ -15,6 +17,8 @@ export function getLearningLinks(ids: string[]) {
     return item;
   });
 }
+// 未設定：進路ナビ本番のクエリ形式。設定あり：独立した探究Astroの静的パス形式。
+// INQUIRY_BASE_URLはビルド／dev起動時に読む。利用者のアクセス先から自動判定しない。
 export const lessonUrl = (slug: string) => {
   const base = import.meta.env.INQUIRY_BASE_URL;
   if (base) {
@@ -24,6 +28,8 @@ export const lessonUrl = (slug: string) => {
   }
   return 'https://shinronavi.com/forteacher/lesson?' + new URLSearchParams({ slug });
 };
+// fld[]は進路ナビ側の検索仕様。同じ分野を重複送信しないようにまとめ、カンマ区切りにはしない。
+// 分野IDは外部サービスの値なので、変更時は実際の検索結果で選択条件が保持されるか確認する。
 export function schoolSearchUrl(ids: string[]) {
   const url = new URL('https://shinronavi.com/search/result');
   for (const id of new Set(getLearningLinks(ids).flatMap(item => item.schoolFields.map(field => field.id)))) url.searchParams.append('fld[]', id);

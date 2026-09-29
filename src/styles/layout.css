@@ -1,3 +1,5 @@
+/* ヘッダー・本文一覧・パンくず・フッターの左右位置を共通化。幅や余白はここで変更する。
+   SiteLayoutでは既存CSSより後に読み込み、以前の個別余白を上書きする。 */
 :root { --shell-width: 1224px; --shell-gutter: 32px; }
 .site-header, .home, .breadcrumb-shell, .site-footer-inner {
   box-sizing: border-box;

@@ -1,0 +1,11 @@
+---
+import type { Career } from '../lib/careers';
+interface Props { career: Career }
+const { career: c } = Astro.props;
+const tags = c.scenes.map((s,i)=>({id:String(i),label:s.insight,response:`「${s.insight}」が気になったんですね。この体験につながる学びも、下で紹介しています。`})).concat([
+ {id:'unsure',label:'まだ、よく分からない',response:'すぐに分からなくても大丈夫。ほかの仕事を体験してから、考えてみてもかまいません。'},
+ {id:'different',label:'少し違うかも',response:'「少し違うかも」も、体験したからこその気づき。別のひと場面も、のぞいてみませんか。'},
+]);
+---
+<section class="reflection" aria-labelledby="reflection-title"><h2 class="question" id="reflection-title">どの部分が、ちょっと気になった？</h2><div class="reflection-options" role="group" aria-labelledby="reflection-title">{tags.map(t=><button class="filter" type="button" data-reflection={t.id} data-response={t.response} aria-pressed="false">{t.label}</button>)}</div><p id="reflection-response" class="reflection-response" aria-live="polite">気持ちに近いものがあれば、選んでみてください。選ばずに先へ進んでも大丈夫です。</p></section>
+  <details class="experience-recap"><summary>選んだことと、仕事の視点を振り返る</summary><ul class="insights">{c.scenes.map((s,i)=><li><b>{String(i+1).padStart(2,'0')}</b><div><strong>{s.insight}</strong><p class="answer-record" data-answer={i}></p><p>{s.perspective}</p></div></li>)}</ul></details>

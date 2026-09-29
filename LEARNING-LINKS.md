@@ -1,5 +1,14 @@
 # 探究・学校検索との接続
 
+## 処理の分担
+
+- `src/data/learning-links.json`：編集する対応表。
+- `src/lib/learning-links.ts`：データ検証と探究・学校検索のURL生成。
+- `src/lib/lesson-connections.mjs`：探究から学び・職業への逆引き生成。公開用と探究側の同期で共用。
+- `src/lib/integration-links.ts`：Astroの公開URL設定を適用したリンク生成。
+- `scripts/sync-inquiry-links.mjs`：探究側の教材存在確認と生成JSONの書き出し。`npm run sync:inquiry` で実行。
+- `ExperienceSummary.astro`：完了画面全体。振り返りは `ExperienceReflection.astro`、学びへの案内は `ExperienceLearning.astro` に分離。
+
 ## 編集する場所
 
 `src/data/learning-links.json` が対応表です。学びの `id` ごとに探究の `slug`・表示名・学校種と、学校検索の `schoolFields`（分野ID・表示名）を定義します。各職業JSONの `learningIds` で参照します。複数の職業や体験から同じ学びを参照でき、逆方向の関連体験はこの設定から自動抽出します。
