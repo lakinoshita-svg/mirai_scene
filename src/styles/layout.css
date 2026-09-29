@@ -11,12 +11,6 @@
 .breadcrumbs [aria-current] { color: var(--ink, #30283e); }
 footer.site-footer { display: block; padding: 0; }
 .site-footer-inner { display: flex; align-items: center; justify-content: space-between; gap: 24px; padding-block: 32px; }
-.scene-evidence { margin-top: 24px; padding: 16px 20px; border: 1px solid #e4dfed; border-radius: 12px; background: #faf9fc; font-size: 14px; line-height: 1.8; }
-.scene-evidence summary { cursor: pointer; font-weight: 700; }
-.scene-evidence h2 { font-size: 15px; margin-top: 16px; }
-.scene-evidence p { font-size: 14px; margin-block: 8px; }
-.scene-evidence a { color: #6443a5; text-decoration: underline; text-underline-offset: 3px; }
-.scene-evidence .evidence-meta { color: #62596e; font-size: 12px; }
 @media(max-width:650px) {
   :root { --shell-gutter: 20px; }
   .site-footer-inner { display: block; padding-block: 24px; }
