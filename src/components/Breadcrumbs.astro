@@ -5,8 +5,6 @@ const { current } = Astro.props;
 ---
 <div class="breadcrumb-shell">
   <nav class="breadcrumbs" aria-label="現在地">
-    <a href="https://shinronavi.com/" target="_blank" rel="noopener">進路ナビ ↗</a>
-    <span aria-hidden="true">/</span>
     {current ? <><a href={sitePath()}>ミライシーン</a><span aria-hidden="true">/</span><span aria-current="page">{current}</span></> : <span aria-current="page">ミライシーン</span>}
   </nav>
 </div>

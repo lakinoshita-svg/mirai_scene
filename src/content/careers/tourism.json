@@ -128,5 +128,8 @@
     "url": "https://shigoto.mhlw.go.jp/User/Occupation/Detail/109",
     "checkedAt": "2026-09-28",
     "background": "旅行の希望を聞き取り、旅行商品や交通・宿泊の手配について案内する仕事です。"
-  }
+  },
+  "learningIds": [
+    "tourism"
+  ]
 }

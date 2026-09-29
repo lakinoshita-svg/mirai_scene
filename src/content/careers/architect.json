@@ -128,5 +128,8 @@
     "url": "https://shigoto.mhlw.go.jp/User/Occupation/Detail/20",
     "checkedAt": "2026-09-28",
     "background": "用途や予算、敷地などの条件を確認し、依頼者と相談しながら建築の計画・設計を進めます。"
-  }
+  },
+  "learningIds": [
+    "architecture"
+  ]
 }

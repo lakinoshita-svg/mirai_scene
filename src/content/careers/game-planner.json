@@ -127,5 +127,8 @@
     "url": "https://shirusen.mext.go.jp/job_library/ゲームクリエイター/",
     "checkedAt": "2026-09-28",
     "background": "ゲーム制作では、企画・グラフィック・プログラムなど複数の役割が協力します。"
-  }
+  },
+  "learningIds": [
+    "games"
+  ]
 }

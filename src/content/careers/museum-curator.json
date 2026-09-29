@@ -127,5 +127,8 @@
     "url": "https://shigoto.mhlw.go.jp/User/Occupation/Detail/185",
     "checkedAt": "2026-09-28",
     "background": "資料の収集・保存・調査研究と、その成果を伝える展示や解説を行います。"
-  }
+  },
+  "learningIds": [
+    "culture"
+  ]
 }

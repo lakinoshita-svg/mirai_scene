@@ -1,0 +1,227 @@
+---
+import MiraiConnections from '../components/MiraiConnections.astro';
+import { lessonPath, localPath } from '../lib/paths';
+const { entry, item, otherFields = [] } = Astro.props;
+
+const pageTitle = entry.middle_category;
+const majorCategory = entry.major_category;
+
+const recommendedFor = item.recommended_for ?? [];
+const overview = item.overview ?? '';
+const curriculum = item.curriculum ?? '';
+const careerPath = item.career_path ?? '';
+const socialRole = item.social_role ?? '';
+const relatedSubjects = item.related_subjects ?? [];
+const relatedJobs = item.related_jobs ?? [];
+const relatedQualifications = item.related_qualifications ?? [];
+const isUniversity = entry.dataType === 'university';
+const isVocational = entry.dataType === 'vocational';
+---
+
+<style>
+  .faculty-menu-card {
+    min-height: 68px;
+  }
+  .h-100px {
+    height: 100px;
+  }
+
+  @media screen and (min-width: 768px) {
+    .routeNavItem {
+      width: fit-content;
+    }
+  }
+</style>
+
+<article class="newSchool scEvent w-full text-base font-normal bg-neutral-50">
+  <div class="w-full text-base font-normal">
+
+    <div class="relative w-full">
+      <img
+        src="/image/page/teachers/img_fv_pc.webp"
+        alt="先生のための進路指導ナビ"
+        class="hidden md:block w-full h-auto object-cover"
+      />
+
+      <img
+        src="/image/page/teachers/img_fv_sp.webp"
+        alt="先生のための進路指導ナビ"
+        class="block md:hidden w-full h-auto object-cover"
+      />
+
+      <div class="absolute md:inset-0 bottom-6 left-4 md:flex md:items-center md:justify-center">
+        <h1 class="text-white text-2xl md:text-4xl font-bold drop-shadow-lg leading-[150%]">
+          先生のための<br class="block md:hidden" />進路指導ナビ
+        </h1>
+      </div>
+    </div>
+
+    <section class="scCnt flex w-full">
+      <div class="scSec mainContainer pt-10">
+
+        <div class="w-full routeNavWrap">
+          <ul class="routeNav scrollbar-hide">
+            <li class="routeNavItem">
+              <a href={localPath('forteacher/uni_lesson_list/')} class="routeNavLink routeNavLinkActive">
+                <span class="routeNavText">学問を調べる（大学・短大）</span>
+              </a>
+            </li>
+
+            <li class="routeNavItem">
+              <a href={localPath('forteacher/voc_lesson_list/')} class="routeNavLink">
+                <span class="routeNavText">学問を調べる（専門学校）</span>
+              </a>
+            </li>
+
+            <li class="routeNavItem">
+              <a href="#" class="routeNavLink" aria-current="page">
+                <span class="routeNavText">WEB教材</span>
+              </a>
+            </li>
+
+            <li class="routeNavItem">
+              <a href="#" class="routeNavLink">
+                <span class="routeNavText">動画教材</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="grid grid-cols-1 gap-8 xl:grid-cols-[minmax(0,1fr)_280px]">
+          <div>
+            <section class="space-y-[10px] px-4 pb-10 pt-2 md:px-10 xl:px-20">
+              <p class="text-sm text-slate-500">{majorCategory}</p>
+              <h2 class="mt-2 text-[32px] md:text-[40px] font-bold leading-tight text-[#2D3743]">
+                {pageTitle}
+              </h2>
+            </section>
+
+            <section class="space-y-[10px] px-4 pb-10 pt-2 md:px-10 xl:px-20" id="01">
+              <h3 class="flex items-center gap-3 rounded-md px-4 py-3 font-bold" style="background:#b8ddfd;color:#2b7bd7;">
+                どんな人に向いている？
+              </h3>
+              <div class="pt-7">
+                <ul class="mt-5 text-[15px] leading-[2.2] text-[#536375] list-disc pl-6">
+                  {recommendedFor.map((text) => (
+                    <li>{text}</li>
+                  ))}
+                </ul>
+              </div>
+            </section>
+
+            <section class="space-y-[10px] px-4 pb-10 pt-2 md:px-10 xl:px-20" id="02">
+              <h3 class="flex items-center gap-3 rounded-md px-4 py-3 font-bold" style="background:#b8ddfd;color:#2b7bd7;">
+                どんなことを学ぶの？
+              </h3>
+              <p class="mt-7 text-[15px] leading-[2.2] text-[#536375]">{overview}</p>
+            </section>
+
+            {curriculum && (
+              <section class="space-y-[10px] px-4 pb-10 pt-2 md:px-10 xl:px-20">
+                <h3 class="flex items-center gap-3 rounded-md px-4 py-3 font-bold" style="background:#b8ddfd;color:#2b7bd7;">
+                  どんな授業や研究テーマがあるの？
+                </h3>
+                <p class="mt-7 text-[15px] leading-[2.2] text-[#536375]">{curriculum}</p>
+              </section>
+            )}
+
+            {careerPath && (
+              <section class="space-y-[10px] px-4 pb-10 pt-2 md:px-10 xl:px-20">
+                <h3 class="flex items-center gap-3 rounded-md px-4 py-3 " style="background:#b8ddfd;color:#2b7bd7;">
+                  卒業後の進路や今後の展望は？
+                </h3>
+                <p class="mt-7 text-[15px] leading-[2.2] text-[#536375]">{careerPath}</p>
+              </section>
+            )}
+
+            <section class="space-y-[10px] px-4 pb-10 pt-2 md:px-10 xl:px-20" id="03">
+              <h3 class="flex items-center gap-3 rounded-md px-4 py-3 font-bold" style="background:#b8ddfd;color:#2b7bd7;">
+                この分野は、社会や私たちの生活の中で、どのように役立っている？
+              </h3>
+              <p class="mt-5 text-[15px] leading-[2.2] text-[#536375]">{socialRole}</p>
+            </section>
+
+            <section class="space-y-[10px] px-4 pb-10 pt-2 md:px-10 xl:px-20" id="04-subjects">
+              <h3 class="rounded-[4px] bg-[#A9D4FF] px-5 py-4 text-[20px] font-bold text-[#156AD1] ">
+                関連する科目は？
+              </h3>
+              <div class="mt-5 flex flex-wrap gap-2">
+                {relatedSubjects.map((subject) => (
+                  <span class="rounded-full border border-[#B9C7D8] px-4 py-1 text-[12px] text-[#718194]">
+                    {subject}
+                  </span>
+                ))}
+              </div>
+            </section>
+
+            <section class="space-y-[10px] px-4 pb-10 pt-2 md:px-10 xl:px-20" id="04-jobs">
+              <h3 class="rounded-[4px] bg-[#A9D4FF] px-5 py-4 text-[20px] font-bold text-[#156AD1]">
+                関連する職業は？
+              </h3>
+              <div class="mt-5 flex flex-wrap gap-2">
+                {relatedJobs.map((job) => (
+                  <span class="rounded-full border border-[#B9C7D8] px-4 py-1 text-[12px] text-[#718194]">
+                    {job}
+                  </span>
+                ))}
+              </div>
+            </section>
+
+            <MiraiConnections slug={entry.slug} />
+            <section class="space-y-[10px] px-4 pb-10 pt-2 md:px-10 xl:px-20" id="04-licenses">
+              <h3 class="rounded-[4px] bg-[#A9D4FF] px-5 py-4 text-[20px] font-bold text-[#156AD1]">
+                関連する資格は？
+              </h3>
+              <div class="mt-5 flex flex-wrap gap-2">
+                {relatedQualifications.map((qualification) => (
+                  <span class="rounded-full border border-[#B9C7D8] px-4 py-1 text-[12px] text-[#718194]">
+                    {qualification}
+                  </span>
+                ))}
+              </div>
+            </section>
+
+<section class="space-y-[10px] px-4 pb-10 pt-10 md:px-10 xl:px-20" id="other-fields">
+  <h3 class="mb-8 text-[28px] font-bold text-[#2D3743]">別の学問や仕事を調べる</h3>
+  <div class="grid grid-cols-1 gap-3 md:grid-cols-2">
+    {otherFields.map((field) => (
+      <a
+        href={lessonPath(field.slug)}
+        class="faculty-menu-card flex overflow-hidden rounded-sm border border-slate-200 bg-white shadowLight"
+      >
+        <div class="flex w-[68px] shrink-0 items-center justify-center self-stretch bg-blue-100 text-blue-600">
+          {field.major_icon ? (
+            <img
+              src={field.major_icon}
+              alt={field.major_category}
+              class="h-6 w-6 object-contain"
+            />
+          ) : (
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="h-6 w-6 fill-none stroke-current" stroke-width="1.8">
+              <path d="M12 4v16M5 8l7-4 7 4M7 20h10M7 8v12M17 8v12" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          )}
+        </div>
+
+        <div class="flex-1 px-4 py-3">
+          <p class="text-base font-bold leading-tight text-neutral-800">{field.middle_category}</p>
+          <p class="mt-1 text-xs leading-tight text-neutral-500">{field.major_category}</p>
+        </div>
+
+        <div class="flex w-6 shrink-0 items-center justify-center pr-2 text-neutral-500">∨</div>
+      </a>
+    ))}
+  </div>
+</section>
+          </div>
+
+          <section class="sideMenu pt-10">
+            <div class="rounded-xl bg-white p-6 shadow-sm text-sm text-slate-500">
+              サイドメニューは本番tpl側で差し込み
+            </div>
+          </section>
+        </div>
+      </div>
+    </section>
+  </div>
+</article>

@@ -127,5 +127,8 @@
     "url": "https://shigoto.mhlw.go.jp/User/Occupation/Detail/461",
     "checkedAt": "2026-09-28",
     "background": "消費者のニーズを調べて商品を企画し、販売実験などを通じて検討します。チェーンストアの業務を参考にしています。"
-  }
+  },
+  "learningIds": [
+    "business"
+  ]
 }

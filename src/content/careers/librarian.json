@@ -127,5 +127,8 @@
     "url": "https://shigoto.mhlw.go.jp/User/Occupation/Detail/182",
     "checkedAt": "2026-09-28",
     "background": "資料を収集・整理し、利用者の資料探しや情報の利用を支援します。"
-  }
+  },
+  "learningIds": [
+    "culture"
+  ]
 }

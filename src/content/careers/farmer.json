@@ -127,5 +127,8 @@
     "url": "https://shigoto.mhlw.go.jp/User/Occupation/Detail/505",
     "checkedAt": "2026-09-28",
     "background": "野菜の生育を観察し、収穫時期を判断して選別・出荷する仕事です。資料は施設栽培を扱うため、露地の畑とは環境管理の条件が異なります。"
-  }
+  },
+  "learningIds": [
+    "agriculture"
+  ]
 }

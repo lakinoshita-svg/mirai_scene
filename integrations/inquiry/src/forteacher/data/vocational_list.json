@@ -1,0 +1,957 @@
+[
+  {
+    "major_category": "電気・IT・ゲーム",
+    "major_slug":  "electronics",
+    "major_icon": "/icons/electronics_it_game.svg",
+    "major_order": 1,
+    "groups": [
+      {
+        "middle_category": "電気・電子",
+        "middle_slug": "electronics",
+        "middle_order": 1,
+        "links": [
+          {
+            "minor_slug": "electronics",
+            "minor_category": "電気・電子",
+            "minor_order": 1,
+            "url": "/forteacher/lesson?slug=electronics_electronics"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "major_category": "電気・IT・ゲーム",
+    "major_slug":  "it",
+    "major_icon": "/icons/electronics_it_game.svg",
+    "major_order": 1,
+    "groups": [
+      {
+        "middle_category": "IT・情報処理",
+        "middle_slug": "information_processing",
+        "middle_order": 2,
+        "links": [
+          {
+            "minor_slug": "information_processing",
+            "minor_category": "情報処理",
+            "minor_order": 2,
+            "url": "/forteacher/lesson?slug=it_information_processing"
+          },
+          {
+            "minor_slug": "network",
+            "minor_category": "ネットワーク",
+            "minor_order": 3,
+            "url": "/forteacher/lesson?slug=it_network"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "major_category": "電気・IT・ゲーム",
+    "major_slug":  "gamecg",
+    "major_icon": "/icons/electronics_it_game.svg",
+    "major_order": 1,
+    "groups": [
+      {
+        "middle_category": "ゲーム・CG",
+        "middle_slug": "game",
+        "middle_order": 3,
+        "links": [
+          {
+            "minor_slug": "game",
+            "minor_category": "ゲーム",
+            "minor_order": 4,
+            "url": "/forteacher/lesson?slug=gamecg_game"
+          },
+          {
+            "minor_slug": "cg",
+            "minor_category": "CG",
+            "minor_order": 5,
+            "url": "/forteacher/lesson?slug=gamecg_cg"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "major_category": "機械",
+    "major_slug":  "machine",
+    "major_icon": "/icons/machine.svg",
+    "major_order": 2,
+    "groups": [
+      {
+        "middle_category": "機械",
+        "middle_slug": "machine",
+        "middle_order": 1,
+        "links": [
+          {
+            "minor_slug": "machine",
+            "minor_category": "機械",
+            "minor_order": 6,
+            "url": "/forteacher/lesson?slug=machine_machine"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "major_category": "機械",
+    "major_slug":  "autoaviation",
+    "major_icon": "/icons/machine.svg",
+    "major_order": 2,
+    "groups": [
+      {
+        "middle_category": "自動車・航空",
+        "middle_slug": "auto",
+        "middle_order": 2,
+        "links": [
+          {
+            "minor_slug": "auto",
+            "minor_category": "自動車整備",
+            "minor_order": 7,
+            "url": "/forteacher/lesson?slug=autoaviation_auto"
+          },
+          {
+            "minor_slug": "aviation",
+            "minor_category": "航空整備",
+            "minor_order": 8,
+            "url": "/forteacher/lesson?slug=autoaviation_aviation"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "major_category": "建築・土木・インテリア",
+    "major_slug":  "architecture",
+    "major_icon": "/icons/architecture_civil_interior.svg",
+    "major_order": 3,
+    "groups": [
+      {
+        "middle_category": "建築・製図・インテリア",
+        "middle_slug": "architecture",
+        "middle_order": 1,
+        "links": [
+          {
+            "minor_slug": "architecture",
+            "minor_category": "建築",
+            "minor_order": 9,
+            "url": "/forteacher/lesson?slug=architecture_architecture"
+          },
+          {
+            "minor_slug": "cad",
+            "minor_category": "製図・CAD",
+            "minor_order": 10,
+            "url": "/forteacher/lesson?slug=architecture_cad"
+          },
+          {
+            "minor_slug": "interior",
+            "minor_category": "インテリア",
+            "minor_order": 11,
+            "url": "/forteacher/lesson?slug=architecture_interior"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "major_category": "建築・土木・インテリア",
+    "major_slug":  "civilengineering",
+    "major_icon": "/icons/architecture_civil_interior.svg",
+    "major_order": 3,
+    "groups": [
+      {
+        "middle_category": "土木・測量",
+        "middle_slug": "civil",
+        "middle_order": 2,
+        "links": [
+          {
+            "minor_slug": "civil",
+            "minor_category": "土木",
+            "minor_order": 12,
+            "url": "/forteacher/lesson?slug=civilengineering_civil"
+          },
+          {
+            "minor_slug": "survey",
+            "minor_category": "測量",
+            "minor_order": 13,
+            "url": "/forteacher/lesson?slug=civilengineering_survey"
+          },
+          {
+            "minor_slug": "landscape",
+            "minor_category": "造園",
+            "minor_order": 14,
+            "url": "/forteacher/lesson?slug=civilengineering_landscape"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "major_category": "農業・植物",
+    "major_slug":  "agriculture",
+    "major_icon": "/icons/agriculture_plants.svg",
+    "major_order": 4,
+    "groups": [
+      {
+        "middle_category": "農業・園芸・バイオ・環境",
+        "middle_slug": "horticulture",
+        "middle_order": 1,
+        "links": [
+          {
+            "minor_slug": "agriculture_agriculture",
+            "minor_category": "農業",
+            "minor_order": 15,
+            "url": "/forteacher/lesson?slug=voc_agriculture_agriculture"
+          },
+          {
+            "minor_slug": "horticulture",
+            "minor_category": "園芸",
+            "minor_order": 16,
+            "url": "/forteacher/lesson?slug=agriculture_horticulture"
+          },
+          {
+            "minor_slug": "biotech",
+            "minor_category": "バイオテクノロジー",
+            "minor_order": 17,
+            "url": "/forteacher/lesson?slug=agriculture_biotech"
+          },
+          {
+            "minor_slug": "environment",
+            "minor_category": "環境",
+            "minor_order": 18,
+            "url": "/forteacher/lesson?slug=agriculture_environment"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "major_category": "医療",
+    "major_slug":  "nursing",
+    "major_icon": "/icons/medical.svg",
+    "major_order": 5,
+    "groups": [
+      {
+        "middle_category": "看護",
+        "middle_slug": "nursing",
+        "middle_order": 1,
+        "links": [
+          {
+            "minor_slug": "nursing",
+            "minor_category": "看護",
+            "minor_order": 19,
+            "url": "/forteacher/lesson?slug=nursing_nursing"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "major_category": "医療",
+    "major_slug":  "rehabilitation",
+    "major_icon": "/icons/medical.svg",
+    "major_order": 5,
+    "groups": [
+      {
+        "middle_category": "理学療法・作業療法",
+        "middle_slug": "physical",
+        "middle_order": 2,
+        "links": [
+          {
+            "minor_slug": "physical",
+            "minor_category": "理学療法",
+            "minor_order": 20,
+            "url": "/forteacher/lesson?slug=rehabilitation_physical"
+          },
+          {
+            "minor_slug": "occupational",
+            "minor_category": "作業療法",
+            "minor_order": 21,
+            "url": "/forteacher/lesson?slug=rehabilitation_occupational"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "major_category": "医療",
+    "major_slug":  "therapy",
+    "major_icon": "/icons/medical.svg",
+    "major_order": 5,
+    "groups": [
+      {
+        "middle_category": "柔道整復・鍼灸・あん摩マッサージ",
+        "middle_slug": "judo",
+        "middle_order": 3,
+        "links": [
+          {
+            "minor_slug": "judo",
+            "minor_category": "柔道整復",
+            "minor_order": 22,
+            "url": "/forteacher/lesson?slug=therapy_judo"
+          },
+          {
+            "minor_slug": "acupuncture",
+            "minor_category": "鍼灸・あん摩マッサージ",
+            "minor_order": 23,
+            "url": "/forteacher/lesson?slug=therapy_acupuncture"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "major_category": "医療",
+    "major_slug":  "clinicalengineering",
+    "major_icon": "/icons/medical.svg",
+    "major_order": 5,
+    "groups": [
+      {
+        "middle_category": "臨床工学・臨床検査・診療放射線",
+        "middle_slug": "clinical_engineering",
+        "middle_order": 4,
+        "links": [
+          {
+            "minor_slug": "clinical_engineering",
+            "minor_category": "臨床工学",
+            "minor_order": 24,
+            "url": "/forteacher/lesson?slug=clinicalengineering_clinical_engineering"
+          },
+          {
+            "minor_slug": "clinical_test",
+            "minor_category": "臨床検査",
+            "minor_order": 25,
+            "url": "/forteacher/lesson?slug=clinicalengineering_clinical_test"
+          },
+          {
+            "minor_slug": "radiology",
+            "minor_category": "診療放射線",
+            "minor_order": 26,
+            "url": "/forteacher/lesson?slug=clinicalengineering_radiology"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "major_category": "医療",
+    "major_slug":  "dental",
+    "major_icon": "/icons/medical.svg",
+    "major_order": 5,
+    "groups": [
+      {
+        "middle_category": "歯科衛生・歯科技工",
+        "middle_slug": "dental_hygiene",
+        "middle_order": 5,
+        "links": [
+          {
+            "minor_slug": "dental_hygiene",
+            "minor_category": "歯科衛生",
+            "minor_order": 27,
+            "url": "/forteacher/lesson?slug=dental_dental_hygiene"
+          },
+          {
+            "minor_slug": "dental_tech",
+            "minor_category": "歯科技工",
+            "minor_order": 28,
+            "url": "/forteacher/lesson?slug=dental_dental_tech"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "major_category": "医療",
+    "major_slug":  "medical",
+    "major_icon": "/icons/medical.svg",
+    "major_order": 5,
+    "groups": [
+      {
+        "middle_category": "その他の医療技術",
+        "middle_slug": "other_emergency",
+        "middle_order": 6,
+        "links": [
+          {
+            "minor_slug": "other_emergency",
+            "minor_category": "救急救命",
+            "minor_order": 29,
+            "url": "/forteacher/lesson?slug=medical_other_emergency"
+          },
+          {
+            "minor_slug": "other_speech",
+            "minor_category": "言語聴覚",
+            "minor_order": 30,
+            "url": "/forteacher/lesson?slug=medical_other_speech"
+          },
+          {
+            "minor_slug": "other_vision",
+            "minor_category": "視能訓練",
+            "minor_order": 31,
+            "url": "/forteacher/lesson?slug=medical_other_vision"
+          },
+          {
+            "minor_slug": "other_prosthetics",
+            "minor_category": "義肢装具",
+            "minor_order": 32,
+            "url": "/forteacher/lesson?slug=medical_other_prosthetics"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "major_category": "理容・美容",
+    "major_slug":  "beauty",
+    "major_icon": "/icons/beauty.svg",
+    "major_order": 6,
+    "groups": [
+      {
+        "middle_category": "理容・美容・ビューティ",
+        "middle_slug": "barber",
+        "middle_order": 1,
+        "links": [
+          {
+            "minor_slug": "barber",
+            "minor_category": "理容",
+            "minor_order": 33,
+            "url": "/forteacher/lesson?slug=beauty_barber"
+          },
+          {
+            "minor_slug": "beauty",
+            "minor_category": "美容",
+            "minor_order": 34,
+            "url": "/forteacher/lesson?slug=beauty_beauty"
+          },
+          {
+            "minor_slug": "esthetic",
+            "minor_category": "エステ・メイク・ネイル",
+            "minor_order": 35,
+            "url": "/forteacher/lesson?slug=beauty_esthetic"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "major_category": "栄養・調理・製菓",
+    "major_slug":  "nutrition",
+    "major_icon": "/icons/cooking.svg",
+    "major_order": 7,
+    "groups": [
+      {
+        "middle_category": "栄養",
+        "middle_slug": "nutrition",
+        "middle_order": 1,
+        "links": [
+          {
+            "minor_slug": "nutrition",
+            "minor_category": "栄養",
+            "minor_order": 36,
+            "url": "/forteacher/lesson?slug=nutrition_nutrition"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "major_category": "栄養・調理・製菓",
+    "major_slug":  "cooking",
+    "major_icon": "/icons/cooking.svg",
+    "major_order": 7,
+    "groups": [
+      {
+        "middle_category": "調理・製菓",
+        "middle_slug": "cooking",
+        "middle_order": 2,
+        "links": [
+          {
+            "minor_slug": "cooking",
+            "minor_category": "調理",
+            "minor_order": 37,
+            "url": "/forteacher/lesson?slug=cooking_cooking"
+          },
+          {
+            "minor_slug": "bakery",
+            "minor_category": "製菓・製パン",
+            "minor_order": 38,
+            "url": "/forteacher/lesson?slug=cooking_bakery"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "major_category": "保育・幼児教育・福祉",
+    "major_slug":  "childcare",
+    "major_icon": "/icons/childcare_welfare.svg",
+    "major_order": 8,
+    "groups": [
+      {
+        "middle_category": "保育・幼児教育",
+        "middle_slug": "childcare",
+        "middle_order": 1,
+        "links": [
+          {
+            "minor_slug": "childcare",
+            "minor_category": "保育",
+            "minor_order": 39,
+            "url": "/forteacher/lesson?slug=childcare_childcare"
+          },
+          {
+            "minor_slug": "early_education",
+            "minor_category": "幼児教育",
+            "minor_order": 40,
+            "url": "/forteacher/lesson?slug=childcare_early_education"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "major_category": "保育・幼児教育・福祉",
+    "major_slug":  "welfare",
+    "major_icon": "/icons/childcare_welfare.svg",
+    "major_order": 8,
+    "groups": [
+      {
+        "middle_category": "福祉",
+        "middle_slug": "care",
+        "middle_order": 2,
+        "links": [
+          {
+            "minor_slug": "care",
+            "minor_category": "介護福祉",
+            "minor_order": 41,
+            "url": "/forteacher/lesson?slug=welfare_care"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "major_category": "観光・ホテル・エアライン",
+    "major_slug":  "tourism",
+    "major_icon": "/icons/tourism_hotel_airline.svg",
+    "major_order": 9,
+    "groups": [
+      {
+        "middle_category": "旅行・観光",
+        "middle_slug": "tourism",
+        "middle_order": 1,
+        "links": [
+          {
+            "minor_slug": "tourism",
+            "minor_category": "旅行・観光",
+            "minor_order": 42,
+            "url": "/forteacher/lesson?slug=tourism_tourism"
+          },
+          {
+            "minor_slug": "airline",
+            "minor_category": "エアライン",
+            "minor_order": 43,
+            "url": "/forteacher/lesson?slug=tourism_airline"
+          },
+          {
+            "minor_slug": "railway",
+            "minor_category": "鉄道",
+            "minor_order": 44,
+            "url": "/forteacher/lesson?slug=tourism_railway"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "major_category": "観光・ホテル・エアライン",
+    "major_slug":  "hotel",
+    "major_icon": "/icons/tourism_hotel_airline.svg",
+    "major_order": 9,
+    "groups": [
+      {
+        "middle_category": "ホテル・ブライダル・セレモニー",
+        "middle_slug": "hotel",
+        "middle_order": 2,
+        "links": [
+          {
+            "minor_slug": "hotel",
+            "minor_category": "ホテル",
+            "minor_order": 45,
+            "url": "/forteacher/lesson?slug=hotel_hotel"
+          },
+          {
+            "minor_slug": "bridal",
+            "minor_category": "ブライダル",
+            "minor_order": 46,
+            "url": "/forteacher/lesson?slug=hotel_bridal"
+          },
+          {
+            "minor_slug": "ceremony",
+            "minor_category": "セレモニー",
+            "minor_order": 47,
+            "url": "/forteacher/lesson?slug=hotel_ceremony"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "major_category": "語学・ビジネス・公務員",
+    "major_slug":  "language",
+    "major_icon": "/icons/fashion.svg",
+    "major_order": 10,
+    "groups": [
+      {
+        "middle_category": "語学",
+        "middle_slug": "language",
+        "middle_order": 1,
+        "links": [
+          {
+            "minor_slug": "language",
+            "minor_category": "語学",
+            "minor_order": 48,
+            "url": "/forteacher/lesson?slug=language_language"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "major_category": "語学・ビジネス・公務員",
+    "major_slug":  "business",
+    "major_icon": "/icons/business_public.svg",
+    "major_order": 10,
+    "groups": [
+      
+      {
+        "middle_category": "ビジネス",
+        "middle_slug": "office",
+        "middle_order": 2,
+        "links": [
+          {
+            "minor_slug": "office",
+            "minor_category": "事務",
+            "minor_order": 49,
+            "url": "/forteacher/lesson?slug=business_office"
+          },
+          {
+            "minor_slug": "accounting",
+            "minor_category": "経理・会計",
+            "minor_order": 50,
+            "url": "/forteacher/lesson?slug=business_accounting"
+          },
+          {
+            "minor_slug": "secretary",
+            "minor_category": "秘書",
+            "minor_order": 51,
+            "url": "/forteacher/lesson?slug=business_secretary"
+          },
+          {
+            "minor_slug": "realestate",
+            "minor_category": "不動産",
+            "minor_order": 52,
+            "url": "/forteacher/lesson?slug=business_realestate"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "major_category": "語学・ビジネス・公務員",
+    "major_slug":  "medicaladmin",
+    "major_icon": "/icons/business_public.svg",
+    "major_order": 10,
+    "groups": [
+      {
+        "middle_category": "医療事務・医療秘書・医療ビジネス",
+        "middle_slug": "medical_admin",
+        "middle_order": 3,
+        "links": [
+          {
+            "minor_slug": "medical_admin",
+            "minor_category": "医療事務・医療秘書",
+            "minor_order": 53,
+            "url": "/forteacher/lesson?slug=medicaladmin_medical_admin"
+          },
+          {
+            "minor_slug": "health_info",
+            "minor_category": "診療情報管理",
+            "minor_order": 54,
+            "url": "/forteacher/lesson?slug=medicaladmin_health_info"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "major_category": "語学・ビジネス・公務員",
+    "major_slug":  "lawadmin",
+    "major_icon": "/icons/fashion.svg",
+    "major_order": 10,
+    "groups": [
+      {
+        "middle_category": "法律行政",
+        "middle_slug": "fire_police",
+        "middle_order": 4,
+        "links": [
+          {
+            "minor_slug": "fire_police",
+            "minor_category": "消防・警察",
+            "minor_order": 55,
+            "url": "/forteacher/lesson?slug=lawadmin_fire_police"
+          },
+          {
+            "minor_slug": "public_servant",
+            "minor_category": "国家公務員・地方公務員",
+            "minor_order": 56,
+            "url": "/forteacher/lesson?slug=lawadmin_public_servant"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "major_category": "服飾・ファッション",
+    "major_slug":  "fashion",
+    "major_icon": "/icons/business_public.svg",
+    "major_order": 11,
+    "groups": [
+      {
+        "middle_category": "服飾・ファッション",
+        "middle_slug": "designer",
+        "middle_order": 3,
+        "links": [
+          {
+            "minor_slug": "designer",
+            "minor_category": "デザイナー",
+            "minor_order": 57,
+            "url": "/forteacher/lesson?slug=fashion_designer"
+          },
+          {
+            "minor_slug": "pattern",
+            "minor_category": "パタンナー",
+            "minor_order": 58,
+            "url": "/forteacher/lesson?slug=fashion_pattern"
+          },
+          {
+            "minor_slug": "stylist",
+            "minor_category": "スタイリスト",
+            "minor_order": 59,
+            "url": "/forteacher/lesson?slug=fashion_stylist"
+          },
+          {
+            "minor_slug": "business",
+            "minor_category": "ファッションビジネス",
+            "minor_order": 60,
+            "url": "/forteacher/lesson?slug=fashion_business"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "major_category": "スポーツ",
+    "major_slug":  "sports",
+    "major_icon": "/icons/sports.svg",
+    "major_order": 12,
+    "groups": [
+      {
+        "middle_category": "スポーツ・健康",
+        "middle_slug": "player",
+        "middle_order": 1,
+        "links": [
+          {
+            "minor_slug": "player",
+            "minor_category": "スポーツプレーヤー",
+            "minor_order": 61,
+            "url": "/forteacher/lesson?slug=sports_player"
+          },
+          {
+            "minor_slug": "business",
+            "minor_category": "スポーツビジネス",
+            "minor_order": 62,
+            "url": "/forteacher/lesson?slug=sports_business"
+          },
+          {
+            "minor_slug": "trainer",
+            "minor_category": "インストラクター・トレーナー",
+            "minor_order": 63,
+            "url": "/forteacher/lesson?slug=sports_trainer"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "major_category": "音楽・放送・パフォーマンス・芸能",
+    "major_slug":  "music",
+    "major_icon": "/icons/music_performance.svg",
+    "major_order": 13,
+    "groups": [
+      {
+        "middle_category": "音楽",
+        "middle_slug": "artist",
+        "middle_order": 1,
+        "links": [
+          {
+            "minor_slug": "artist",
+            "minor_category": "音楽（アーティスト）",
+            "minor_order": 64,
+            "url": "/forteacher/lesson?slug=music_artist"
+          },
+          {
+            "minor_slug": "business",
+            "minor_category": "音楽ビジネス",
+            "minor_order": 65,
+            "url": "/forteacher/lesson?slug=music_business"
+          },
+          {
+            "minor_slug": "repair",
+            "minor_category": "楽器リペア",
+            "minor_order": 66,
+            "url": "/forteacher/lesson?slug=music_repair"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "major_category": "音楽・放送・パフォーマンス・芸能",
+    "major_slug":  "media",
+    "major_icon": "/icons/music_performance.svg",
+    "major_order": 13,
+    "groups": [
+      {
+        "middle_category": "放送・パフォーマンス・芸能",
+        "middle_slug": "broadcast",
+        "middle_order": 1,
+        "links": [
+          {
+            "minor_slug": "broadcast",
+            "minor_category": "放送・メディア",
+            "minor_order": 67,
+            "url": "/forteacher/lesson?slug=media_broadcast"
+          },
+          {
+            "minor_slug": "video",
+            "minor_category": "映像",
+            "minor_order": 68,
+            "url": "/forteacher/lesson?slug=media_video"
+          },
+          {
+            "minor_slug": "sound_light",
+            "minor_category": "音響・照明",
+            "minor_order": 69,
+            "url": "/forteacher/lesson?slug=media_sound_light"
+          },
+          {
+            "minor_slug": "actor",
+            "minor_category": "演劇・俳優",
+            "minor_order": 70,
+            "url": "/forteacher/lesson?slug=media_actor"
+          },
+          {
+            "minor_slug": "dance",
+            "minor_category": "ダンス",
+            "minor_order": 71,
+            "url": "/forteacher/lesson?slug=media_dance"
+          },
+          {
+            "minor_slug": "voice",
+            "minor_category": "声優",
+            "minor_order": 72,
+            "url": "/forteacher/lesson?slug=media_voice"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "major_category": "美術・デザイン・イラスト",
+    "major_slug":  "art",
+    "major_icon": "/icons/art_illustration.svg",
+    "major_order": 14,
+    "groups": [
+      {
+        "middle_category": "美術・デザイン",
+        "middle_slug": "art",
+        "middle_order": 1,
+        "links": [
+          {
+            "minor_slug": "art",
+            "minor_category": "美術",
+            "minor_order": 73,
+            "url": "/forteacher/lesson?slug=voc_art_art"
+          },
+          {
+            "minor_slug": "design",
+            "minor_category": "デザイン",
+            "minor_order": 74,
+            "url": "/forteacher/lesson?slug=voc_art_design"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "major_category": "美術・デザイン・イラスト",
+    "major_slug":  "illustration",
+    "major_icon": "/icons/art_illustration.svg",
+    "major_order": 14,
+    "groups": [
+      {
+        "middle_category": "イラスト・マンガ・アニメ",
+        "middle_slug": "illustration",
+        "middle_order": 2,
+        "links": [
+          {
+            "minor_slug": "illustration",
+            "minor_category": "イラスト",
+            "minor_order": 75,
+            "url": "/forteacher/lesson?slug=illustration_illustration"
+          },
+          {
+            "minor_slug": "anime",
+            "minor_category": "マンガ・アニメ",
+            "minor_order": 76,
+            "url": "/forteacher/lesson?slug=illustration_anime"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "major_category": "動物",
+    "major_slug":  "animal",
+    "major_icon": "/icons/animal.svg",
+    "major_order": 15,
+    "groups": [
+      {
+        "middle_category": "動物",
+        "middle_slug": "vet_nurse",
+        "middle_order": 1,
+        "links": [
+          {
+            "minor_slug": "vet_nurse",
+            "minor_category": "動物看護",
+            "minor_order": 77,
+            "url": "/forteacher/lesson?slug=animal_vet_nurse"
+          },
+          {
+            "minor_slug": "trimmer",
+            "minor_category": "トリマー",
+            "minor_order": 78,
+            "url": "/forteacher/lesson?slug=animal_trimmer"
+          },
+          {
+            "minor_slug": "trainer",
+            "minor_category": "動物飼育・動物トレーナー",
+            "minor_order": 79,
+            "url": "/forteacher/lesson?slug=animal_trainer"
+          }
+        ]
+      }
+    ]
+  }
+]

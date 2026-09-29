@@ -1,8 +1,6 @@
 import { registerTools } from './webmcp';
 import { sitePath } from '../lib/paths';
 const DEFAULT_LABEL = 'いろいろな仕事のひと場面';
-const HERO_LABELS: Record<string, string> = { make: 'つくる', support: '支える', convey: '伝える' };
-const CONVEY_CAREERS = new Set(['childcare', 'editor', 'video-producer', 'event-planner', 'librarian', 'museum-curator']);
 const root = document.querySelector<HTMLElement>('[data-catalog]');
 if (root) {
     const cards = [...root.querySelectorAll<HTMLAnchorElement>('[data-career]')];
@@ -34,9 +32,7 @@ if (root) {
     root.querySelector<HTMLElement>('.catalog-controls')!.hidden = false;
     function filter(interest: string, category: string, label: string) {
         matching = cards.filter(card => {
-            const matchesInterest = interest === 'convey'
-                ? CONVEY_CAREERS.has(card.dataset.career!)
-                : interest === 'all' || card.dataset.cardTheme === interest;
+            const matchesInterest = interest === 'all' || card.dataset.cardTheme === interest;
             return matchesInterest && (category === 'すべて' || card.dataset.category === category);
         });
         limit = pageSize();
@@ -48,11 +44,6 @@ if (root) {
     }
     interests.forEach(b => b.addEventListener('click', () => filter(b.dataset.interest!, 'すべて', b.dataset.interest === 'all' ? DEFAULT_LABEL : `${b.textContent}につながるひと場面`)));
     categories.forEach(b => b.addEventListener('click', () => filter('all', b.dataset.categoryFilter!, b.dataset.categoryFilter === 'すべて' ? DEFAULT_LABEL : b.dataset.categoryFilter!)));
-    root.querySelectorAll<HTMLAnchorElement>('[data-hero-interest]').forEach(link => link.addEventListener('click', () => {
-        const interest = link.dataset.heroInterest!;
-        filter(interest, 'すべて', interest === 'all' ? DEFAULT_LABEL : `${HERO_LABELS[interest]}につながるひと場面`);
-        root!.querySelector<HTMLElement>('#experiences')?.focus({ preventScroll: true });
-    }));
     render();
     root.dataset.ready = 'true';
     // Preserve links shared from the original hash-routed prototype.

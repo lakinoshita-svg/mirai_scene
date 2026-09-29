@@ -1,0 +1,867 @@
+[
+  {
+    "major_category": "人文科学",
+    "major_slug": "humanities",
+    "major_icon": "/icons/humanities.svg",
+    "major_order": 1,
+    "groups": [
+      {
+        "middle_category": "文学",
+        "middle_slug": "literature",
+        "middle_order": 1,
+        "links": [
+          {
+            "minor_slug": "literature",
+            "minor_category": "文学",
+            "minor_order": 1,
+            "url": "/forteacher/lesson?slug=humanities_literature"
+          }
+        ]
+      },
+      {
+        "middle_category": "語学",
+        "middle_slug": "language",
+        "middle_order": 2,
+        "links": [
+          {
+            "minor_slug": "language",
+            "minor_category": "語学",
+            "minor_order": 2,
+            "url": "/forteacher/lesson?slug=humanities_language"
+          }
+        ]
+      },
+      {
+        "middle_category": "哲学",
+        "middle_slug": "philosophy",
+        "middle_order": 3,
+        "links": [
+          {
+            "minor_slug": "philosophy",
+            "minor_category": "哲学",
+            "minor_order": 3,
+            "url": "/forteacher/lesson?slug=humanities_philosophy"
+          }
+        ]
+      },
+      {
+        "middle_category": "史学",
+        "middle_slug": "history",
+        "middle_order": 4,
+        "links": [
+          {
+            "minor_slug": "history",
+            "minor_category": "史学",
+            "minor_order": 4,
+            "url": "/forteacher/lesson?slug=humanities_history"
+          }
+        ]
+      },
+      {
+        "middle_category": "地理学",
+        "middle_slug": "geography",
+        "middle_order": 5,
+        "links": [
+          {
+            "minor_slug": "geography",
+            "minor_category": "地理学",
+            "minor_order": 5,
+            "url": "/forteacher/lesson?slug=humanities_geography"
+          }
+        ]
+      },
+      {
+        "middle_category": "文化学",
+        "middle_slug": "culture",
+        "middle_order": 6,
+        "links": [
+          {
+            "minor_slug": "culture",
+            "minor_category": "文化学",
+            "minor_order": 6,
+            "url": "/forteacher/lesson?slug=humanities_culture"
+          }
+        ]
+      },
+      {
+        "middle_category": "心理学",
+        "middle_slug": "psychology",
+        "middle_order": 7,
+        "links": [
+          {
+            "minor_slug": "psychology",
+            "minor_category": "心理学",
+            "minor_order": 7,
+            "url": "/forteacher/lesson?slug=humanities_psychology"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "major_category": "社会科学",
+    "major_slug": "socialscience",
+    "major_icon": "/icons/socialscience.svg",
+    "major_order": 2,
+    "groups": [
+      {
+        "middle_category": "経済学",
+        "middle_slug": "economics",
+        "middle_order": 1,
+        "links": [
+          {
+            "minor_slug": "economics",
+            "minor_category": "経済学",
+            "minor_order": 8,
+            "url": "/forteacher/lesson?slug=socialscience_economics"
+          }
+        ]
+      },
+      {
+        "middle_category": "経営学",
+        "middle_slug": "management",
+        "middle_order": 2,
+        "links": [
+          {
+            "minor_slug": "management",
+            "minor_category": "経営学",
+            "minor_order": 9,
+            "url": "/forteacher/lesson?slug=socialscience_management"
+          }
+        ]
+      },
+      {
+        "middle_category": "商学",
+        "middle_slug": "commerce",
+        "middle_order": 3,
+        "links": [
+          {
+            "minor_slug": "commerce",
+            "minor_category": "商学",
+            "minor_order": 10,
+            "url": "/forteacher/lesson?slug=socialscience_commerce"
+          }
+        ]
+      },
+      {
+        "middle_category": "法学",
+        "middle_slug": "law",
+        "middle_order": 4,
+        "links": [
+          {
+            "minor_slug": "law",
+            "minor_category": "法学",
+            "minor_order": 11,
+            "url": "/forteacher/lesson?slug=socialscience_law"
+          }
+        ]
+      },
+      {
+        "middle_category": "政治学",
+        "middle_slug": "politics",
+        "middle_order": 5,
+        "links": [
+          {
+            "minor_slug": "politics",
+            "minor_category": "政治学",
+            "minor_order": 12,
+            "url": "/forteacher/lesson?slug=socialscience_politics"
+          }
+        ]
+      },
+      {
+        "middle_category": "社会学",
+        "middle_slug": "sociology",
+        "middle_order": 6,
+        "links": [
+          {
+            "minor_slug": "sociology",
+            "minor_category": "社会学",
+            "minor_order": 13,
+            "url": "/forteacher/lesson?slug=socialscience_sociology"
+          }
+        ]
+      },
+      {
+        "middle_category": "メディア学",
+        "middle_slug": "media",
+        "middle_order": 7,
+        "links": [
+          {
+            "minor_slug": "media",
+            "minor_category": "メディア学",
+            "minor_order": 14,
+            "url": "/forteacher/lesson?slug=socialscience_media"
+          }
+        ]
+      },
+      {
+        "middle_category": "情報学",
+        "middle_slug": "info",
+        "middle_order": 8,
+        "links": [
+          {
+            "minor_slug": "info",
+            "minor_category": "情報学",
+            "minor_order": 15,
+            "url": "/forteacher/lesson?slug=socialscience_info"
+          }
+        ]
+      },
+      {
+        "middle_category": "社会福祉学",
+        "middle_slug": "social_welfare",
+        "middle_order": 9,
+        "links": [
+          {
+            "minor_slug": "social_welfare",
+            "minor_category": "社会福祉学",
+            "minor_order": 16,
+            "url": "/forteacher/lesson?slug=socialscience_social_welfare"
+          }
+        ]
+      },
+      {
+        "middle_category": "観光学",
+        "middle_slug": "tourism",
+        "middle_order": 10,
+        "links": [
+          {
+            "minor_slug": "tourism",
+            "minor_category": "観光学",
+            "minor_order": 17,
+            "url": "/forteacher/lesson?slug=socialscience_tourism"
+          }
+        ]
+      },
+      {
+        "middle_category": "国際関係学",
+        "middle_slug": "international",
+        "middle_order": 11,
+        "links": [
+          {
+            "minor_slug": "international",
+            "minor_category": "国際関係学",
+            "minor_order": 18,
+            "url": "/forteacher/lesson?slug=socialscience_international"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "major_category": "理学",
+    "major_slug": "science",
+    "major_icon": "/icons/science.svg",
+    "major_order": 3,
+    "groups": [
+      {
+        "middle_category": "数学",
+        "middle_slug": "math",
+        "middle_order": 1,
+        "links": [
+          {
+            "minor_slug": "math",
+            "minor_category": "数学",
+            "minor_order": 19,
+            "url": "/forteacher/lesson?slug=science_math"
+          }
+        ]
+      },
+      {
+        "middle_category": "物理学",
+        "middle_slug": "physics",
+        "middle_order": 2,
+        "links": [
+          {
+            "minor_slug": "physics",
+            "minor_category": "物理学",
+            "minor_order": 20,
+            "url": "/forteacher/lesson?slug=science_physics"
+          }
+        ]
+      },
+      {
+        "middle_category": "化学",
+        "middle_slug": "chemistry",
+        "middle_order": 3,
+        "links": [
+          {
+            "minor_slug": "chemistry",
+            "minor_category": "化学",
+            "minor_order": 21,
+            "url": "/forteacher/lesson?slug=science_chemistry"
+          }
+        ]
+      },
+      {
+        "middle_category": "生物学",
+        "middle_slug": "biology",
+        "middle_order": 4,
+        "links": [
+          {
+            "minor_slug": "biology",
+            "minor_category": "生物学",
+            "minor_order": 22,
+            "url": "/forteacher/lesson?slug=science_biology"
+          }
+        ]
+      },
+      {
+        "middle_category": "地学",
+        "middle_slug": "geoscience",
+        "middle_order": 5,
+        "links": [
+          {
+            "minor_slug": "geoscience",
+            "minor_category": "地学",
+            "minor_order": 23,
+            "url": "/forteacher/lesson?slug=science_geoscience"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "major_category": "工学",
+    "major_slug": "engineering",
+    "major_icon": "/icons/engineering.svg",
+    "major_order": 4,
+    "groups": [
+      {
+        "middle_category": "機械工学",
+        "middle_slug": "mechanical",
+        "middle_order": 1,
+        "links": [
+          {
+            "minor_slug": "mechanical",
+            "minor_category": "機械工学",
+            "minor_order": 24,
+            "url": "/forteacher/lesson?slug=engineering_mechanical"
+          }
+        ]
+      },
+      {
+        "middle_category": "電気・電子工学",
+        "middle_slug": "electrical",
+        "middle_order": 2,
+        "links": [
+          {
+            "minor_slug": "electrical",
+            "minor_category": "電気・電子工学",
+            "minor_order": 25,
+            "url": "/forteacher/lesson?slug=engineering_electrical"
+          }
+        ]
+      },
+      {
+        "middle_category": "土木・建築工学",
+        "middle_slug": "civil_architecture",
+        "middle_order": 3,
+        "links": [
+          {
+            "minor_slug": "civil_architecture",
+            "minor_category": "土木・建築工学",
+            "minor_order": 26,
+            "url": "/forteacher/lesson?slug=engineering_civil_architecture"
+          }
+        ]
+      },
+      {
+        "middle_category": "航空・宇宙工学",
+        "middle_slug": "aerospace",
+        "middle_order": 4,
+        "links": [
+          {
+            "minor_slug": "aerospace",
+            "minor_category": "航空・宇宙工学",
+            "minor_order": 27,
+            "url": "/forteacher/lesson?slug=engineering_aerospace"
+          }
+        ]
+      },
+      {
+        "middle_category": "船舶・海洋工学",
+        "middle_slug": "marine",
+        "middle_order": 5,
+        "links": [
+          {
+            "minor_slug": "marine",
+            "minor_category": "船舶・海洋工学",
+            "minor_order": 28,
+            "url": "/forteacher/lesson?slug=engineering_marine"
+          }
+        ]
+      },
+      {
+        "middle_category": "資源・エネルギー工学",
+        "middle_slug": "energy",
+        "middle_order": 6,
+        "links": [
+          {
+            "minor_slug": "energy",
+            "minor_category": "資源・エネルギー工学",
+            "minor_order": 29,
+            "url": "/forteacher/lesson?slug=engineering_energy"
+          }
+        ]
+      },
+      {
+        "middle_category": "材料工学",
+        "middle_slug": "materials",
+        "middle_order": 7,
+        "links": [
+          {
+            "minor_slug": "materials",
+            "minor_category": "材料工学",
+            "minor_order": 30,
+            "url": "/forteacher/lesson?slug=engineering_materials"
+          }
+        ]
+      },
+      {
+        "middle_category": "生物工学",
+        "middle_slug": "bioengineering",
+        "middle_order": 8,
+        "links": [
+          {
+            "minor_slug": "bioengineering",
+            "minor_category": "生物工学",
+            "minor_order": 31,
+            "url": "/forteacher/lesson?slug=engineering_bioengineering"
+          }
+        ]
+      },
+      {
+        "middle_category": "情報工学",
+        "middle_slug": "info",
+        "middle_order": 9,
+        "links": [
+          {
+            "minor_slug": "info",
+            "minor_category": "情報工学",
+            "minor_order": 32,
+            "url": "/forteacher/lesson?slug=engineering_info"
+          }
+        ]
+      },
+      {
+        "middle_category": "画像・音響工学",
+        "middle_slug": "imaging_sound",
+        "middle_order": 10,
+        "links": [
+          {
+            "minor_slug": "imaging_sound",
+            "minor_category": "画像・音響工学",
+            "minor_order": 33,
+            "url": "/forteacher/lesson?slug=engineering_imaging_sound"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "major_category": "農学",
+    "major_slug": "agriculture",
+    "major_icon": "/icons/agriculture.svg",
+    "major_order": 5,
+    "groups": [
+      {
+        "middle_category": "農学",
+        "middle_slug": "agriculture",
+        "middle_order": 1,
+        "links": [
+          {
+            "minor_slug": "agriculture",
+            "minor_category": "農学",
+            "minor_order": 34,
+            "url": "/forteacher/lesson?slug=agriculture_agriculture"
+          }
+        ]
+      },
+      {
+        "middle_category": "林学",
+        "middle_slug": "forestry",
+        "middle_order": 2,
+        "links": [
+          {
+            "minor_slug": "forestry",
+            "minor_category": "林学",
+            "minor_order": 35,
+            "url": "/forteacher/lesson?slug=agriculture_forestry"
+          }
+        ]
+      },
+      {
+        "middle_category": "水産学",
+        "middle_slug": "fisheries",
+        "middle_order": 3,
+        "links": [
+          {
+            "minor_slug": "fisheries",
+            "minor_category": "水産学",
+            "minor_order": 36,
+            "url": "/forteacher/lesson?slug=agriculture_fisheries"
+          }
+        ]
+      },
+      {
+        "middle_category": "酪農畜産学",
+        "middle_slug": "livestock",
+        "middle_order": 4,
+        "links": [
+          {
+            "minor_slug": "livestock",
+            "minor_category": "酪農畜産学",
+            "minor_order": 37,
+            "url": "/forteacher/lesson?slug=agriculture_livestock"
+          }
+        ]
+      },
+      {
+        "middle_category": "獣医学",
+        "middle_slug": "veterinary",
+        "middle_order": 5,
+        "links": [
+          {
+            "minor_slug": "veterinary",
+            "minor_category": "獣医学",
+            "minor_order": 38,
+            "url": "/forteacher/lesson?slug=agriculture_veterinary"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "major_category": "医療",
+    "major_slug": "medical",
+    "major_icon": "/icons/medical.svg",
+    "major_order": 6,
+    "groups": [
+      {
+        "middle_category": "医学",
+        "middle_slug": "medicine",
+        "middle_order": 1,
+        "links": [
+          {
+            "minor_slug": "medicine",
+            "minor_category": "医学",
+            "minor_order": 39,
+            "url": "/forteacher/lesson?slug=medical_medicine"
+          }
+        ]
+      },
+      {
+        "middle_category": "歯学",
+        "middle_slug": "dentistry",
+        "middle_order": 2,
+        "links": [
+          {
+            "minor_slug": "dentistry",
+            "minor_category": "歯学",
+            "minor_order": 40,
+            "url": "/forteacher/lesson?slug=medical_dentistry"
+          }
+        ]
+      },
+      {
+        "middle_category": "薬学",
+        "middle_slug": "pharmacy",
+        "middle_order": 3,
+        "links": [
+          {
+            "minor_slug": "pharmacy",
+            "minor_category": "薬学",
+            "minor_order": 41,
+            "url": "/forteacher/lesson?slug=medical_pharmacy"
+          }
+        ]
+      },
+      {
+        "middle_category": "看護学",
+        "middle_slug": "nursing",
+        "middle_order": 4,
+        "links": [
+          {
+            "minor_slug": "nursing",
+            "minor_category": "看護学",
+            "minor_order": 42,
+            "url": "/forteacher/lesson?slug=medical_nursing"
+          }
+        ]
+      },
+      {
+        "middle_category": "理学療法",
+        "middle_slug": "physical_therapy",
+        "middle_order": 5,
+        "links": [
+          {
+            "minor_slug": "physical_therapy",
+            "minor_category": "理学療法",
+            "minor_order": 43,
+            "url": "/forteacher/lesson?slug=medical_physical_therapy"
+          }
+        ]
+      },
+      {
+        "middle_category": "作業療法",
+        "middle_slug": "occupational_therapy",
+        "middle_order": 6,
+        "links": [
+          {
+            "minor_slug": "occupational_therapy",
+            "minor_category": "作業療法",
+            "minor_order": 44,
+            "url": "/forteacher/lesson?slug=medical_occupational_therapy"
+          }
+        ]
+      },
+      {
+        "middle_category": "柔道整復",
+        "middle_slug": "judo_therapy",
+        "middle_order": 7,
+        "links": [
+          {
+            "minor_slug": "judo_therapy",
+            "minor_category": "柔道整復",
+            "minor_order": 45,
+            "url": "/forteacher/lesson?slug=medical_judo_therapy"
+          }
+        ]
+      },
+      {
+        "middle_category": "はり、きゅう、あん摩",
+        "middle_slug": "acupuncture",
+        "middle_order": 8,
+        "links": [
+          {
+            "minor_slug": "acupuncture",
+            "minor_category": "はり、きゅう、あん摩",
+            "minor_order": 46,
+            "url": "/forteacher/lesson?slug=medical_acupuncture"
+          }
+        ]
+      },
+      {
+        "middle_category": "臨床検査",
+        "middle_slug": "clinical_test",
+        "middle_order": 9,
+        "links": [
+          {
+            "minor_slug": "clinical_test",
+            "minor_category": "臨床検査",
+            "minor_order": 47,
+            "url": "/forteacher/lesson?slug=medical_clinical_test"
+          }
+        ]
+      },
+      {
+        "middle_category": "臨床工学",
+        "middle_slug": "clinical_engineering",
+        "middle_order": 10,
+        "links": [
+          {
+            "minor_slug": "clinical_engineering",
+            "minor_category": "臨床工学",
+            "minor_order": 48,
+            "url": "/forteacher/lesson?slug=medical_clinical_engineering"
+          }
+        ]
+      },
+      {
+        "middle_category": "診療放射線",
+        "middle_slug": "radiology",
+        "middle_order": 11,
+        "links": [
+          {
+            "minor_slug": "radiology",
+            "minor_category": "診療放射線",
+            "minor_order": 49,
+            "url": "/forteacher/lesson?slug=medical_radiology"
+          }
+        ]
+      },
+      {
+        "middle_category": "言語聴覚",
+        "middle_slug": "speech",
+        "middle_order": 12,
+        "links": [
+          {
+            "minor_slug": "speech",
+            "minor_category": "言語聴覚",
+            "minor_order": 50,
+            "url": "/forteacher/lesson?slug=medical_speech"
+          }
+        ]
+      },
+      {
+        "middle_category": "視能訓練",
+        "middle_slug": "vision",
+        "middle_order": 13,
+        "links": [
+          {
+            "minor_slug": "vision",
+            "minor_category": "視能訓練",
+            "minor_order": 51,
+            "url": "/forteacher/lesson?slug=medical_vision"
+          }
+        ]
+      },
+      {
+        "middle_category": "義肢装具",
+        "middle_slug": "prosthetics",
+        "middle_order": 14,
+        "links": [
+          {
+            "minor_slug": "prosthetics",
+            "minor_category": "義肢装具",
+            "minor_order": 52,
+            "url": "/forteacher/lesson?slug=medical_prosthetics"
+          }
+        ]
+      },
+      {
+        "middle_category": "救急救命",
+        "middle_slug": "emergency",
+        "middle_order": 15,
+        "links": [
+          {
+            "minor_slug": "emergency",
+            "minor_category": "救急救命",
+            "minor_order": 53,
+            "url": "/forteacher/lesson?slug=medical_emergency"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "major_category": "体育学",
+    "major_slug": "sports",
+    "major_icon": "/icons/sports.svg",
+    "major_order": 7,
+    "groups": [
+      {
+        "middle_category": "体育学",
+        "middle_slug": "sports",
+        "middle_order": 1,
+        "links": [
+          {
+            "minor_slug": "sports",
+            "minor_category": "体育学",
+            "minor_order": 54,
+            "url": "/forteacher/lesson?slug=sports_sports"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "major_category": "教育学・教員養成",
+    "major_slug": "education",
+    "major_icon": "/icons/education.svg",
+    "major_order": 8,
+    "groups": [
+      {
+        "middle_category": "教育学",
+        "middle_slug": "education",
+        "middle_order": 1,
+        "links": [
+          {
+            "minor_slug": "education",
+            "minor_category": "教育学",
+            "minor_order": 55,
+            "url": "/forteacher/lesson?slug=education_education"
+          }
+        ]
+      },
+      {
+        "middle_category": "教員養成",
+        "middle_slug": "teacher_training",
+        "middle_order": 2,
+        "links": [
+          {
+            "minor_slug": "teacher_training",
+            "minor_category": "教員養成",
+            "minor_order": 56,
+            "url": "/forteacher/lesson?slug=education_teacher_training"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "major_category": "芸術",
+    "major_slug": "art",
+    "major_icon": "/icons/art.svg",
+    "major_order": 9,
+    "groups": [
+      {
+        "middle_category": "美術",
+        "middle_slug": "art",
+        "middle_order": 1,
+        "links": [
+          {
+            "minor_slug": "art",
+            "minor_category": "美術",
+            "minor_order": 57,
+            "url": "/forteacher/lesson?slug=art_art"
+          }
+        ]
+      },
+      {
+        "middle_category": "工芸",
+        "middle_slug": "craft",
+        "middle_order": 2,
+        "links": [
+          {
+            "minor_slug": "craft",
+            "minor_category": "工芸",
+            "minor_order": 58,
+            "url": "/forteacher/lesson?slug=art_craft"
+          }
+        ]
+      },
+      {
+        "middle_category": "デザイン",
+        "middle_slug": "design",
+        "middle_order": 3,
+        "links": [
+          {
+            "minor_slug": "design",
+            "minor_category": "デザイン",
+            "minor_order": 59,
+            "url": "/forteacher/lesson?slug=art_design"
+          }
+        ]
+      },
+      {
+        "middle_category": "音楽",
+        "middle_slug": "music",
+        "middle_order": 4,
+        "links": [
+          {
+            "minor_slug": "music",
+            "minor_category": "音楽",
+            "minor_order": 60,
+            "url": "/forteacher/lesson?slug=art_music"
+          }
+        ]
+      },
+      {
+        "middle_category": "映像",
+        "middle_slug": "video",
+        "middle_order": 5,
+        "links": [
+          {
+            "minor_slug": "video",
+            "minor_category": "映像",
+            "minor_order": 61,
+            "url": "/forteacher/lesson?slug=art_video"
+          }
+        ]
+      }
+    ]
+  }
+]

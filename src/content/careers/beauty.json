@@ -128,5 +128,8 @@
     "url": "https://shigoto.mhlw.go.jp/User/Occupation/Detail/116",
     "checkedAt": "2026-09-28",
     "background": "希望する髪型について相談し、髪の状態などを踏まえて施術や助言を行います。"
-  }
+  },
+  "learningIds": [
+    "beauty"
+  ]
 }

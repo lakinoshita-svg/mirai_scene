@@ -127,5 +127,8 @@
     "url": "https://shigoto.mhlw.go.jp/User/Occupation/Detail/210",
     "checkedAt": "2026-09-28",
     "background": "読者を想定して内容や構成を企画し、原稿の整理・編集や制作の進行を担います。"
-  }
+  },
+  "learningIds": [
+    "media"
+  ]
 }

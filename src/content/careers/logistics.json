@@ -127,5 +127,8 @@
     "url": "https://shigoto.mhlw.go.jp/User/Occupation/Detail/542",
     "checkedAt": "2026-09-28",
     "background": "商品の受け入れ・保管・発送に関する情報や書類を管理します。物流に関わる事務業務を参考にしています。"
-  }
+  },
+  "learningIds": [
+    "business"
+  ]
 }

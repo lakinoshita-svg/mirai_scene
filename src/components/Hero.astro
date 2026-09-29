@@ -11,12 +11,12 @@ const asset = (name: string) => sitePath(`assets/hero/${name}`);
     </div>
     <div class="hero-art">
       <img class="hero-note" src={asset('note.png')} alt="好きから、きっと見つかる わたしのミライ" />
-      <a class="hero-card hero-make" href="#experiences" data-hero-interest="make" aria-label="つくる：デザイン・IT・ものづくりの体験を見る"><img src={asset('make.png')} alt="好きなものを、つくる。" width="1440" height="1080" /></a>
-      <a class="hero-card hero-support" href="#experiences" data-hero-interest="support" aria-label="支える：医療・福祉・保育・接客の体験を見る"><img src={asset('support.png')} alt="誰かの安心を、支える。" width="1440" height="1080" /></a>
-      <a class="hero-card hero-convey" href="#experiences" data-hero-interest="convey" aria-label="伝える：教育・出版・メディア・企画の体験を見る"><img src={asset('convey.png')} alt="気持ちやアイデアを、伝える。" width="1672" height="941" /></a>
+      <div class="hero-card hero-make"><img src={asset('make.png')} alt="好きなものを、つくる。" width="1440" height="1080" /></div>
+      <div class="hero-card hero-support"><img src={asset('support.png')} alt="誰かの安心を、支える。" width="1440" height="1080" /></div>
+      <div class="hero-card hero-convey"><img src={asset('convey.png')} alt="気持ちやアイデアを、伝える。" width="1672" height="941" /></div>
     </div>
     <div class="hero-action">
-      <a class="hero-cta" href="#experiences" data-hero-interest="all"><img class="cta-background" src={asset('button.svg')} alt="" /><span>気になる未来を見てみる</span><span class="cta-icon"><img src={asset('circle.svg')} alt="" /><img class="cta-arrow" src={asset('arrow.svg')} alt="" /></span></a>
+      <p class="hero-invitation">気になる未来を、見つけてみよう。</p>
       <p class="hero-meta"><span class="hero-check"><img src={asset('check-background.svg')} alt="" /><img src={asset('check.svg')} alt="" /></span>登録なしでスタート</p>
     </div>
   </div>
@@ -33,19 +33,13 @@ const asset = (name: string) => sitePath(`assets/hero/${name}`);
   .hero-copy p{margin:.5cqw 0 0;font-size:1.319cqw;line-height:1.68;color:#686171}
   .hero-art{position:absolute;inset:0;pointer-events:none}
   .hero-note{position:absolute;left:87%;top:7.2%;width:12.66%;height:auto;mix-blend-mode:multiply}
-  .hero-card{position:absolute;display:flex;align-items:center;justify-content:center;pointer-events:auto;transition:filter .2s}
-  .hero-card:hover{filter:brightness(1.035) drop-shadow(0 5px 8px #7043ae22)}
-  .hero-card:focus-visible,.hero-cta:focus-visible{outline:3px solid #7043ae;outline-offset:4px;border-radius:20px}
+  .hero-card{position:absolute;display:flex;align-items:center;justify-content:center;pointer-events:none}
   .hero-card img{display:block;width:100%;height:auto}
   .hero-make{left:49%;top:3%;width:27.78%;transform:rotate(-5deg)}
   .hero-support{left:70%;top:22%;width:27.78%;transform:rotate(5deg)}
   .hero-convey{left:49%;top:55%;width:37.01%;transform:rotate(-3deg)}
   .hero-action{position:absolute;left:15.55%;top:63.9%;width:286px}
-  .hero-cta{position:relative;display:flex;align-items:center;width:286px;height:64px;color:#fcfbfd;text-decoration:none;font-size:18px;font-weight:700;gap:14px;padding-left:20px}
-  .cta-background{position:absolute;inset:0;z-index:-1}
-  .cta-icon{position:relative;display:flex;width:36px;height:36px;align-items:center;justify-content:center}
-  .cta-icon>img:first-child{position:absolute;inset:0}
-  .cta-arrow{position:relative}
+  .hero-invitation{margin:0;color:#686171;font-size:18px;font-weight:700;line-height:1.7;text-align:center}
   .hero-meta{margin:18px 0 0;display:flex;align-items:center;justify-content:center;gap:8px;white-space:nowrap;color:#686171;font-size:15px;line-height:24px}
   .hero-check{position:relative;display:grid;place-items:center;width:16px;height:16px}
   .hero-check img{position:absolute}
@@ -63,5 +57,4 @@ const asset = (name: string) => sitePath(`assets/hero/${name}`);
     .hero-meta{font-size:13px;margin-top:14px}
   }
   @media(max-width:450px){.hero-art{height:400px}.hero-support{top:23%}.hero-convey{top:65%}.hero-copy h1{font-size:clamp(21px,6.4cqw,25px)}.hero-copy h1 span{font-size:clamp(23px,6.9cqw,27px)}.hero-stage{padding:24px 20px 32px}.hero-note{width:95px}.hero-action{margin-top:24px}}
-  @media(prefers-reduced-motion:reduce){.hero-card{transition:none}}
 </style>

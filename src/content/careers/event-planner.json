@@ -127,5 +127,8 @@
     "url": "https://www.mhlw.go.jp/stf/newpage_09874.html",
     "checkedAt": "2026-09-28",
     "background": "イベントの仕事には企画・制作・運営があり、会場や演出、警備などさまざまな担当者との調整が伴います。"
-  }
+  },
+  "learningIds": [
+    "events"
+  ]
 }

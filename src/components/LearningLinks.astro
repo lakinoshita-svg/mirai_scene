@@ -1,0 +1,14 @@
+---
+import { getLearningLinks, schoolSearchUrl } from '../lib/learning-links';
+import { sitePath } from '../lib/paths';
+interface Props { ids: string[] }
+const { ids } = Astro.props;
+const links = getLearningLinks(ids);
+---
+<div class="learning-connections">
+  <h3>学びを知って、別の仕事も体験してみよう。</h3>
+  <ul>{links.map(link => <li><a href={sitePath(`explore/${link.id}/`)}>{link.label}の探究・関連する体験を見る →</a></li>)}</ul>
+  <a class="primary learning-action" href={schoolSearchUrl(ids)} target="_blank" rel="noopener">この分野を学べる学校を探す ↗</a>
+  <p class="fine-print">{links.flatMap(link => link.schoolFields.map(field => field.label)).join('・')}を指定した進路ナビの検索結果が別タブで開きます。地域などは検索先で絞り込めます。</p>
+</div>
+<style>.learning-connections{margin-block:24px}.learning-connections h3{font-size:18px}.learning-connections ul{padding-left:1.3em;line-height:2}.learning-connections li a{color:#6443a5;text-decoration:underline}.learning-action{margin-top:16px}</style>

@@ -1,0 +1,47 @@
+---
+import uniData from '../../forteacher/data/university.json';
+import vocData from '../../forteacher/data/vocational.json';
+import ForteacherArticle from '../../forteacher/views/ForteacherArticle.astro';
+
+export async function getStaticPaths() {
+  const allData = [...uniData, ...vocData];
+
+  return allData.map((entry) => ({
+    params: { slug: entry.slug },
+    props: { entry }
+  }));
+}
+
+const { entry } = Astro.props;
+const item = entry?.items?.[0];
+
+if (!entry || !item) {
+  throw new Error('記事データが見つかりませんでした。');
+}
+
+const allData = [...uniData, ...vocData];
+
+const normalize = (v) => (v ?? '').trim();
+
+const sameMajorFields = allData.filter(
+  (x) =>
+    x.slug !== entry.slug &&
+    normalize(x.major_category) === normalize(entry.major_category)
+);
+
+const otherFields = (sameMajorFields.length > 0
+  ? sameMajorFields
+  : allData.filter((x) => x.slug !== entry.slug)
+).slice(0, 8);
+---
+
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{entry.middle_category}｜高校の先生へ｜進路ナビ</title>
+  </head>
+  <body>
+    <ForteacherArticle entry={entry} item={item} otherFields={otherFields} />
+  </body>
+</html>

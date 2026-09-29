@@ -1,0 +1,471 @@
+{
+  "art_design": {
+    "fields": [
+      {
+        "id": "design",
+        "label": "デザイン"
+      }
+    ],
+    "careers": [
+      {
+        "slug": "designer",
+        "name": "グラフィックデザイナー",
+        "title": "「伝わる」ポスターって？"
+      }
+    ]
+  },
+  "voc_art_design": {
+    "fields": [
+      {
+        "id": "design",
+        "label": "デザイン"
+      }
+    ],
+    "careers": [
+      {
+        "slug": "designer",
+        "name": "グラフィックデザイナー",
+        "title": "「伝わる」ポスターって？"
+      }
+    ]
+  },
+  "engineering_info": {
+    "fields": [
+      {
+        "id": "it",
+        "label": "情報・IT"
+      },
+      {
+        "id": "games",
+        "label": "ゲーム"
+      }
+    ],
+    "careers": [
+      {
+        "slug": "engineer",
+        "name": "Webエンジニア",
+        "title": "使う人の「困った」をほどく。"
+      },
+      {
+        "slug": "game-planner",
+        "name": "ゲームプランナー",
+        "title": "「もう一回！」を考える。"
+      }
+    ]
+  },
+  "it_information_processing": {
+    "fields": [
+      {
+        "id": "it",
+        "label": "情報・IT"
+      }
+    ],
+    "careers": [
+      {
+        "slug": "engineer",
+        "name": "Webエンジニア",
+        "title": "使う人の「困った」をほどく。"
+      }
+    ]
+  },
+  "engineering_civil_architecture": {
+    "fields": [
+      {
+        "id": "architecture",
+        "label": "建築"
+      }
+    ],
+    "careers": [
+      {
+        "slug": "architect",
+        "name": "建築士",
+        "title": "みんなが過ごしやすい場所を。"
+      }
+    ]
+  },
+  "architecture_architecture": {
+    "fields": [
+      {
+        "id": "architecture",
+        "label": "建築"
+      }
+    ],
+    "careers": [
+      {
+        "slug": "architect",
+        "name": "建築士",
+        "title": "みんなが過ごしやすい場所を。"
+      }
+    ]
+  },
+  "education_education": {
+    "fields": [
+      {
+        "id": "childcare",
+        "label": "保育・幼児教育"
+      }
+    ],
+    "careers": [
+      {
+        "slug": "childcare",
+        "name": "保育士",
+        "title": "「やりたくない」の、その理由。"
+      }
+    ]
+  },
+  "childcare_childcare": {
+    "fields": [
+      {
+        "id": "childcare",
+        "label": "保育・幼児教育"
+      }
+    ],
+    "careers": [
+      {
+        "slug": "childcare",
+        "name": "保育士",
+        "title": "「やりたくない」の、その理由。"
+      }
+    ]
+  },
+  "socialscience_tourism": {
+    "fields": [
+      {
+        "id": "tourism",
+        "label": "観光"
+      }
+    ],
+    "careers": [
+      {
+        "slug": "tourism",
+        "name": "旅行プランナー",
+        "title": "その人らしい旅を考えよう。"
+      }
+    ]
+  },
+  "tourism_tourism": {
+    "fields": [
+      {
+        "id": "tourism",
+        "label": "観光"
+      }
+    ],
+    "careers": [
+      {
+        "slug": "tourism",
+        "name": "旅行プランナー",
+        "title": "その人らしい旅を考えよう。"
+      }
+    ]
+  },
+  "beauty_beauty": {
+    "fields": [
+      {
+        "id": "beauty",
+        "label": "美容"
+      }
+    ],
+    "careers": [
+      {
+        "slug": "beauty",
+        "name": "美容師",
+        "title": "「こんな感じ」を、一緒に形に。"
+      }
+    ]
+  },
+  "cooking_cooking": {
+    "fields": [
+      {
+        "id": "cooking",
+        "label": "調理"
+      }
+    ],
+    "careers": [
+      {
+        "slug": "chef",
+        "name": "料理人",
+        "title": "おいしい時間を、段取りから。"
+      }
+    ]
+  },
+  "cooking_bakery": {
+    "fields": [
+      {
+        "id": "pastry",
+        "label": "製菓・製パン"
+      }
+    ],
+    "careers": [
+      {
+        "slug": "pastry",
+        "name": "パティシエ",
+        "title": "小さなお菓子で、気持ちを届ける。"
+      }
+    ]
+  },
+  "science_biology": {
+    "fields": [
+      {
+        "id": "animals",
+        "label": "動物"
+      }
+    ],
+    "careers": [
+      {
+        "slug": "animal-keeper",
+        "name": "動物園飼育員",
+        "title": "いつもとの違いに、気づく。"
+      }
+    ]
+  },
+  "animal_trainer": {
+    "fields": [
+      {
+        "id": "animals",
+        "label": "動物"
+      }
+    ],
+    "careers": [
+      {
+        "slug": "animal-keeper",
+        "name": "動物園飼育員",
+        "title": "いつもとの違いに、気づく。"
+      }
+    ]
+  },
+  "agriculture_agriculture": {
+    "fields": [
+      {
+        "id": "agriculture",
+        "label": "農業"
+      }
+    ],
+    "careers": [
+      {
+        "slug": "farmer",
+        "name": "農業生産者",
+        "title": "育つ様子から、明日を考える。"
+      }
+    ]
+  },
+  "voc_agriculture_agriculture": {
+    "fields": [
+      {
+        "id": "agriculture",
+        "label": "農業"
+      }
+    ],
+    "careers": [
+      {
+        "slug": "farmer",
+        "name": "農業生産者",
+        "title": "育つ様子から、明日を考える。"
+      }
+    ]
+  },
+  "socialscience_management": {
+    "fields": [
+      {
+        "id": "business",
+        "label": "経営・商学"
+      }
+    ],
+    "careers": [
+      {
+        "slug": "logistics",
+        "name": "物流プランナー",
+        "title": "届くまでの道を、組み立てる。"
+      },
+      {
+        "slug": "product-developer",
+        "name": "商品企画担当",
+        "title": "「こんなの欲しい」を形に。"
+      }
+    ]
+  },
+  "socialscience_commerce": {
+    "fields": [
+      {
+        "id": "business",
+        "label": "経営・商学"
+      }
+    ],
+    "careers": [
+      {
+        "slug": "logistics",
+        "name": "物流プランナー",
+        "title": "届くまでの道を、組み立てる。"
+      },
+      {
+        "slug": "product-developer",
+        "name": "商品企画担当",
+        "title": "「こんなの欲しい」を形に。"
+      }
+    ]
+  },
+  "music_business": {
+    "fields": [
+      {
+        "id": "events",
+        "label": "イベント"
+      }
+    ],
+    "careers": [
+      {
+        "slug": "event-planner",
+        "name": "イベントプランナー",
+        "title": "楽しい一日を、裏側からつくる。"
+      }
+    ]
+  },
+  "media_sound_light": {
+    "fields": [
+      {
+        "id": "events",
+        "label": "イベント"
+      }
+    ],
+    "careers": [
+      {
+        "slug": "event-planner",
+        "name": "イベントプランナー",
+        "title": "楽しい一日を、裏側からつくる。"
+      }
+    ]
+  },
+  "socialscience_media": {
+    "fields": [
+      {
+        "id": "media",
+        "label": "出版・メディア"
+      }
+    ],
+    "careers": [
+      {
+        "slug": "editor",
+        "name": "編集者",
+        "title": "「知りたい」に届く言葉を。"
+      }
+    ]
+  },
+  "media_broadcast": {
+    "fields": [
+      {
+        "id": "media",
+        "label": "出版・メディア"
+      }
+    ],
+    "careers": [
+      {
+        "slug": "editor",
+        "name": "編集者",
+        "title": "「知りたい」に届く言葉を。"
+      }
+    ]
+  },
+  "art_video": {
+    "fields": [
+      {
+        "id": "video",
+        "label": "映像"
+      }
+    ],
+    "careers": [
+      {
+        "slug": "video-producer",
+        "name": "映像ディレクター",
+        "title": "30秒に、伝えたいことを込める。"
+      }
+    ]
+  },
+  "media_video": {
+    "fields": [
+      {
+        "id": "video",
+        "label": "映像"
+      }
+    ],
+    "careers": [
+      {
+        "slug": "video-producer",
+        "name": "映像ディレクター",
+        "title": "30秒に、伝えたいことを込める。"
+      }
+    ]
+  },
+  "gamecg_game": {
+    "fields": [
+      {
+        "id": "games",
+        "label": "ゲーム"
+      }
+    ],
+    "careers": [
+      {
+        "slug": "game-planner",
+        "name": "ゲームプランナー",
+        "title": "「もう一回！」を考える。"
+      }
+    ]
+  },
+  "humanities_literature": {
+    "fields": [
+      {
+        "id": "culture",
+        "label": "文学・文化・歴史"
+      }
+    ],
+    "careers": [
+      {
+        "slug": "librarian",
+        "name": "図書館司書",
+        "title": "探している一冊の、その先へ。"
+      },
+      {
+        "slug": "museum-curator",
+        "name": "博物館学芸員",
+        "title": "ものに残る物語をひらく。"
+      }
+    ]
+  },
+  "humanities_culture": {
+    "fields": [
+      {
+        "id": "culture",
+        "label": "文学・文化・歴史"
+      }
+    ],
+    "careers": [
+      {
+        "slug": "librarian",
+        "name": "図書館司書",
+        "title": "探している一冊の、その先へ。"
+      },
+      {
+        "slug": "museum-curator",
+        "name": "博物館学芸員",
+        "title": "ものに残る物語をひらく。"
+      }
+    ]
+  },
+  "humanities_history": {
+    "fields": [
+      {
+        "id": "culture",
+        "label": "文学・文化・歴史"
+      }
+    ],
+    "careers": [
+      {
+        "slug": "librarian",
+        "name": "図書館司書",
+        "title": "探している一冊の、その先へ。"
+      },
+      {
+        "slug": "museum-curator",
+        "name": "博物館学芸員",
+        "title": "ものに残る物語をひらく。"
+      }
+    ]
+  }
+}

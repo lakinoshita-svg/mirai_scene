@@ -127,5 +127,8 @@
     "url": "https://shigoto.mhlw.go.jp/User/Occupation/Detail/214",
     "checkedAt": "2026-09-28",
     "background": "映像編集では、ディレクターなどと意図を共有し、素材を選んで規定の時間内にまとめ、テロップも作成します。関連する編集業務を参考にしています。"
-  }
+  },
+  "learningIds": [
+    "video"
+  ]
 }

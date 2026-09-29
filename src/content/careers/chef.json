@@ -127,5 +127,8 @@
     "url": "https://shigoto.mhlw.go.jp/User/Occupation/Detail/99",
     "checkedAt": "2026-09-28",
     "background": "仕込み・調理・盛り付けのほか、原価の管理や新メニューの試作も行います。"
-  }
+  },
+  "learningIds": [
+    "cooking"
+  ]
 }

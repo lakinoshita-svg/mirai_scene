@@ -1,0 +1,420 @@
+[
+  {
+    "id": "design",
+    "label": "デザイン",
+    "description": "色・文字・写真を使い、伝わる表現を考える学び。",
+    "lessons": [
+      {
+        "slug": "art_design",
+        "label": "デザイン",
+        "schoolType": "大学・短大"
+      },
+      {
+        "slug": "voc_art_design",
+        "label": "デザイン",
+        "schoolType": "専門学校"
+      }
+    ],
+    "schoolFields": [
+      {
+        "id": "Q-306",
+        "label": "デザイン学"
+      },
+      {
+        "id": "C-306",
+        "label": "デザイン"
+      }
+    ]
+  },
+  {
+    "id": "it",
+    "label": "情報・IT",
+    "description": "使う人の課題を、システムやプログラムで解決する学び。",
+    "lessons": [
+      {
+        "slug": "engineering_info",
+        "label": "情報工学",
+        "schoolType": "大学・短大"
+      },
+      {
+        "slug": "it_information_processing",
+        "label": "情報処理",
+        "schoolType": "専門学校"
+      }
+    ],
+    "schoolFields": [
+      {
+        "id": "S-410",
+        "label": "情報工学"
+      },
+      {
+        "id": "D-432",
+        "label": "情報･IT"
+      }
+    ]
+  },
+  {
+    "id": "architecture",
+    "label": "建築",
+    "description": "使いやすさや安全性を考え、空間をつくる学び。",
+    "lessons": [
+      {
+        "slug": "engineering_civil_architecture",
+        "label": "土木・建築工学",
+        "schoolType": "大学・短大"
+      },
+      {
+        "slug": "architecture_architecture",
+        "label": "建築",
+        "schoolType": "専門学校"
+      }
+    ],
+    "schoolFields": [
+      {
+        "id": "S-413",
+        "label": "建築学､土木工学"
+      },
+      {
+        "id": "D-413",
+        "label": "建築･CAD･インテリア･土木･測量･造園"
+      }
+    ]
+  },
+  {
+    "id": "childcare",
+    "label": "保育・幼児教育",
+    "description": "子どもの育ちや生活を支える学び。",
+    "lessons": [
+      {
+        "slug": "education_education",
+        "label": "教育学",
+        "schoolType": "大学・短大"
+      },
+      {
+        "slug": "childcare_childcare",
+        "label": "保育",
+        "schoolType": "専門学校"
+      }
+    ],
+    "schoolFields": [
+      {
+        "id": "P-112",
+        "label": "児童学･保育学"
+      },
+      {
+        "id": "F-626",
+        "label": "保育士"
+      }
+    ]
+  },
+  {
+    "id": "tourism",
+    "label": "観光",
+    "description": "人や地域を知り、旅の体験を考える学び。",
+    "lessons": [
+      {
+        "slug": "socialscience_tourism",
+        "label": "観光学",
+        "schoolType": "大学・短大"
+      },
+      {
+        "slug": "tourism_tourism",
+        "label": "旅行・観光",
+        "schoolType": "専門学校"
+      }
+    ],
+    "schoolFields": [
+      {
+        "id": "L-204",
+        "label": "観光学"
+      },
+      {
+        "id": "B-205",
+        "label": "旅行・観光"
+      }
+    ]
+  },
+  {
+    "id": "beauty",
+    "label": "美容",
+    "description": "髪や美容の技術と、相手の希望に応える方法を学ぶ。",
+    "lessons": [
+      {
+        "slug": "beauty_beauty",
+        "label": "美容",
+        "schoolType": "専門学校"
+      }
+    ],
+    "schoolFields": [
+      {
+        "id": "Q-506",
+        "label": "美容"
+      },
+      {
+        "id": "E-506",
+        "label": "美容"
+      }
+    ]
+  },
+  {
+    "id": "cooking",
+    "label": "調理",
+    "description": "食材や調理技術を知り、食事を届ける学び。",
+    "lessons": [
+      {
+        "slug": "cooking_cooking",
+        "label": "調理",
+        "schoolType": "専門学校"
+      }
+    ],
+    "schoolFields": [
+      {
+        "id": "P-102",
+        "label": "調理"
+      },
+      {
+        "id": "A-102",
+        "label": "調理"
+      }
+    ]
+  },
+  {
+    "id": "pastry",
+    "label": "製菓・製パン",
+    "description": "材料や製造工程を知り、お菓子やパンをつくる学び。",
+    "lessons": [
+      {
+        "slug": "cooking_bakery",
+        "label": "製菓・製パン",
+        "schoolType": "専門学校"
+      }
+    ],
+    "schoolFields": [
+      {
+        "id": "P-107",
+        "label": "製菓・製パン"
+      },
+      {
+        "id": "A-107",
+        "label": "製菓･製パン"
+      }
+    ]
+  },
+  {
+    "id": "animals",
+    "label": "動物",
+    "description": "動物の生態や飼育について理解を深める学び。",
+    "lessons": [
+      {
+        "slug": "science_biology",
+        "label": "生物学",
+        "schoolType": "大学・短大"
+      },
+      {
+        "slug": "animal_trainer",
+        "label": "動物飼育・動物トレーナー",
+        "schoolType": "専門学校"
+      }
+    ],
+    "schoolFields": [
+      {
+        "id": "R-404",
+        "label": "生物学"
+      },
+      {
+        "id": "G-706",
+        "label": "動物飼育（動物園・水族館）"
+      }
+    ]
+  },
+  {
+    "id": "agriculture",
+    "label": "農業",
+    "description": "作物の生育や生産、環境との関係を学ぶ。",
+    "lessons": [
+      {
+        "slug": "agriculture_agriculture",
+        "label": "農学",
+        "schoolType": "大学・短大"
+      },
+      {
+        "slug": "voc_agriculture_agriculture",
+        "label": "農業",
+        "schoolType": "専門学校"
+      }
+    ],
+    "schoolFields": [
+      {
+        "id": "T-711",
+        "label": "農学､生物生産･資源学"
+      }
+    ]
+  },
+  {
+    "id": "business",
+    "label": "経営・商学",
+    "description": "商品やサービスが届く仕組みや、事業の運営を学ぶ。",
+    "lessons": [
+      {
+        "slug": "socialscience_management",
+        "label": "経営学",
+        "schoolType": "大学・短大"
+      },
+      {
+        "slug": "socialscience_commerce",
+        "label": "商学",
+        "schoolType": "大学・短大"
+      }
+    ],
+    "schoolFields": [
+      {
+        "id": "L-219",
+        "label": "経営学"
+      },
+      {
+        "id": "L-218",
+        "label": "商学､会計学"
+      }
+    ]
+  },
+  {
+    "id": "events",
+    "label": "イベント",
+    "description": "企画を形にし、多くの人と協力して運営する学び。",
+    "lessons": [
+      {
+        "slug": "music_business",
+        "label": "音楽ビジネス",
+        "schoolType": "専門学校"
+      },
+      {
+        "slug": "media_sound_light",
+        "label": "音響・照明",
+        "schoolType": "専門学校"
+      }
+    ],
+    "schoolFields": [
+      {
+        "id": "C-323",
+        "label": "イベント運営"
+      }
+    ]
+  },
+  {
+    "id": "media",
+    "label": "出版・メディア",
+    "description": "情報を集め、読み手に届ける方法を考える学び。",
+    "lessons": [
+      {
+        "slug": "socialscience_media",
+        "label": "メディア学",
+        "schoolType": "大学・短大"
+      },
+      {
+        "slug": "media_broadcast",
+        "label": "放送・メディア",
+        "schoolType": "専門学校"
+      }
+    ],
+    "schoolFields": [
+      {
+        "id": "L-224",
+        "label": "メディア学"
+      },
+      {
+        "id": "C-309",
+        "label": "編集･広告"
+      }
+    ]
+  },
+  {
+    "id": "video",
+    "label": "映像",
+    "description": "映像の構成や演出、撮影・編集について学ぶ。",
+    "lessons": [
+      {
+        "slug": "art_video",
+        "label": "映像",
+        "schoolType": "大学・短大"
+      },
+      {
+        "slug": "media_video",
+        "label": "映像",
+        "schoolType": "専門学校"
+      }
+    ],
+    "schoolFields": [
+      {
+        "id": "Q-316",
+        "label": "映画･映像"
+      },
+      {
+        "id": "C-316",
+        "label": "映画･映像"
+      }
+    ]
+  },
+  {
+    "id": "games",
+    "label": "ゲーム",
+    "description": "ゲームのルールや動きを考え、形にする学び。",
+    "lessons": [
+      {
+        "slug": "gamecg_game",
+        "label": "ゲーム",
+        "schoolType": "専門学校"
+      },
+      {
+        "slug": "engineering_info",
+        "label": "情報工学",
+        "schoolType": "大学・短大"
+      }
+    ],
+    "schoolFields": [
+      {
+        "id": "D-437",
+        "label": "ゲーム"
+      },
+      {
+        "id": "S-410",
+        "label": "情報工学"
+      }
+    ]
+  },
+  {
+    "id": "culture",
+    "label": "文学・文化・歴史",
+    "description": "資料や文化を調べ、知識を人に伝える学び。",
+    "lessons": [
+      {
+        "slug": "humanities_literature",
+        "label": "文学",
+        "schoolType": "大学・短大"
+      },
+      {
+        "slug": "humanities_culture",
+        "label": "文化学",
+        "schoolType": "大学・短大"
+      },
+      {
+        "slug": "humanities_history",
+        "label": "史学",
+        "schoolType": "大学・短大"
+      }
+    ],
+    "schoolFields": [
+      {
+        "id": "K-201",
+        "label": "文学"
+      },
+      {
+        "id": "K-207",
+        "label": "文化学"
+      },
+      {
+        "id": "K-208",
+        "label": "史学､地理学"
+      }
+    ]
+  }
+]

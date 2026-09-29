@@ -155,5 +155,8 @@
     "url": "https://shigoto.mhlw.go.jp/User/Occupation/Detail/334",
     "checkedAt": "2026-09-28",
     "background": "依頼内容をもとに、文字・写真・図などの配置を検討し、関係者と調整して制作する仕事です。"
-  }
+  },
+  "learningIds": [
+    "design"
+  ]
 }

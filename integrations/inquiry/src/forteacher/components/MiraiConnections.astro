@@ -1,0 +1,22 @@
+---
+import connections from '../data/mirai-links.json';
+interface Props { slug: string }
+const { slug } = Astro.props;
+const connection = connections[slug as keyof typeof connections];
+const base = new URL(import.meta.env.MIRAI_BASE_URL || 'https://lakinoshita-svg.github.io/mirai_scene/');
+if (!['https:', 'http:'].includes(base.protocol)) throw new Error('MIRAI_BASE_URLにはHTTP(S)のURLを指定してください');
+if (!base.pathname.endsWith('/')) base.pathname += '/';
+const miraiUrl = (path: string) => new URL(path, base).href;
+---
+{connection && <section class="mirai-connections" aria-labelledby="mirai-title">
+  <p class="eyebrow">学びから、仕事のひと場面へ</p>
+  <h3 id="mirai-title">気になった仕事を、体験してみよう。</h3>
+  <p>ミライシーンでは、約3分・3つのシーンを通して仕事の考え方に触れられます。体験後は、関連する探究や学校探しへ進めます。</p>
+  <ul>{connection.careers.map(career => <li><a href={miraiUrl(`careers/${career.slug}/`)} target="_blank" rel="noopener"><span>{career.name}</span><strong>{career.title} ↗</strong></a></li>)}</ul>
+  <div class="fields">{connection.fields.map(field => <a href={miraiUrl(`explore/${field.id}/`)} target="_blank" rel="noopener">{field.label}の学びと体験を見渡す ↗</a>)}</div>
+  <p class="note">別タブで開きます。探究と体験は、どちらからでも始められます。</p>
+</section>}
+<style>
+.mirai-connections{margin:32px 16px;padding:24px;border:1px solid #e4d9f4;border-radius:16px;background:#faf7ff;color:#30283e;font-family:system-ui,sans-serif;line-height:1.8}
+.eyebrow{color:#7651ad;font-size:13px;font-weight:700;margin:0}.mirai-connections h3{font-size:22px;margin:8px 0}.mirai-connections ul{list-style:none;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr));gap:12px}.mirai-connections li a{display:block;padding:16px;border:1px solid #e4d9f4;background:white;border-radius:10px;text-decoration:none;color:inherit}.mirai-connections li span{display:block;font-size:13px}.mirai-connections a:focus-visible{outline:3px solid #7651ad;outline-offset:3px}.fields{display:flex;flex-wrap:wrap;gap:12px}.fields a{color:#684399}.note{font-size:12px;color:#655b71}
+</style>

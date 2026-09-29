@@ -128,5 +128,8 @@
     "url": "https://shigoto.mhlw.go.jp/User/Occupation/Detail/314",
     "checkedAt": "2026-09-28",
     "background": "必要な機能を整理し、設計・開発をチームで進める仕事です。"
-  }
+  },
+  "learningIds": [
+    "it"
+  ]
 }
