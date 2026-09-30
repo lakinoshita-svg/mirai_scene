@@ -1,0 +1,10 @@
+name = "mirai-scene-region"
+main = "worker.mjs"
+compatibility_date = "2026-09-01"
+
+[vars]
+# パスではなくOriginを指定。公開先を増やすときはここも変更する。
+ALLOWED_ORIGINS = "https://lakinoshita-svg.github.io,https://shinronavi.com,https://www.shinronavi.com"
+
+[observability]
+enabled = false

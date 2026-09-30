@@ -16,6 +16,7 @@ const initialIds = new Set(getSchoolAds(category).map(ad => ad.id));
   <label class="ad-area" hidden>学校を探すエリア <select data-ad-region>
 <option value="all">全国・指定なし</option>{regions.map(region => <option value={region.id}>{region.label}</option>)}</select>
 </label>
+  <p class="school-ads-caption" data-ad-region-status aria-live="polite"></p>
   <p data-ad-empty hidden={initialIds.size > 0}>現在、このエリアでご紹介できる学校広告はありません。</p>
   <noscript>
 <p>エリアの選択にはJavaScriptが必要です。</p>

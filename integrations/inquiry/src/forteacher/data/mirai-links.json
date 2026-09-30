@@ -42,6 +42,11 @@
     ],
     "careers": [
       {
+        "slug": "data-scientist",
+        "name": "データサイエンティスト",
+        "title": "数字の向こうの「なぜ？」を探す。"
+      },
+      {
         "slug": "engineer",
         "name": "Webエンジニア",
         "title": "使う人の「困った」をほどく。"
@@ -61,6 +66,11 @@
       }
     ],
     "careers": [
+      {
+        "slug": "data-scientist",
+        "name": "データサイエンティスト",
+        "title": "数字の向こうの「なぜ？」を探す。"
+      },
       {
         "slug": "engineer",
         "name": "Webエンジニア",
@@ -272,6 +282,11 @@
     ],
     "careers": [
       {
+        "slug": "data-scientist",
+        "name": "データサイエンティスト",
+        "title": "数字の向こうの「なぜ？」を探す。"
+      },
+      {
         "slug": "logistics",
         "name": "物流プランナー",
         "title": "届くまでの道を、組み立てる。"
@@ -291,6 +306,11 @@
       }
     ],
     "careers": [
+      {
+        "slug": "data-scientist",
+        "name": "データサイエンティスト",
+        "title": "数字の向こうの「なぜ？」を探す。"
+      },
       {
         "slug": "logistics",
         "name": "物流プランナー",

@@ -1,4 +1,9 @@
 import { selectSchoolAds } from '../lib/select-school-ads.mjs';
+import { createRegionResolver } from '../lib/ad-region.mjs';
+let storage: Storage | undefined;
+try { storage = window.sessionStorage; } catch { /* 保存を拒否していても利用可能 */ }
+const resolver = createRegionResolver({ storage, endpoint: import.meta.env.PUBLIC_REGION_API_URL || '' });
+const slots: Array<() => Promise<void>> = [];
 document.querySelectorAll<HTMLElement>('[data-ad-category]').forEach(slot => {
     const category = slot.dataset.adCategory!;
     const cards = [...slot.querySelectorAll<HTMLAnchorElement>('[data-ad-id]')];
@@ -10,21 +15,24 @@ document.querySelectorAll<HTMLElement>('[data-ad-category]').forEach(slot => {
         cards.forEach(card => card.hidden = !visible.has(card.dataset.adId!));
         slot.querySelector<HTMLElement>('[data-ad-empty]')!.hidden = visible.size > 0;
     };
-    // 地域は本人の選択をタブのセッション内だけ保存する。位置情報取得や永続保存は行わない。
-    // 保存できないブラウザでも、その場での選択と広告表示は動作させる。
-    try {
-        const saved = sessionStorage.getItem('mirai-ad-region');
-        if (saved && [...select.options].some(option => option.value === saved))
-            select.value = saved;
-    }
-    catch { /* Selection still works when browser storage is unavailable. */ }
+    const update = async () => {
+        const result = await resolver.resolve();
+        select.value = result.region;
+        render();
+        const status = slot.querySelector<HTMLElement>('[data-ad-region-status]')!;
+        const label = select.selectedOptions[0].text;
+        const hasRegional = ads.some(ad => ad.targetRegions.includes(select.value));
+        status.textContent = result.source === 'estimated'
+            ? `学校を探すエリア：${label}（IPアドレスからの目安・変更できます）`
+            : `学校を探すエリア：${label}`;
+        if (select.value !== 'all' && !hasRegional) status.textContent += '。このエリアの広告がないため、全国向けの掲載情報を表示します。';
+    };
+    slots.push(update);
     select.closest<HTMLElement>('label')!.hidden = false;
     select.addEventListener('change', () => {
-        render();
-        try {
-            sessionStorage.setItem('mirai-ad-region', select.value);
-        }
-        catch { /* Optional session persistence. */ }
+        resolver.choose(select.value);
+        slots.forEach(refresh => void refresh());
     });
     render();
+    void update();
 });

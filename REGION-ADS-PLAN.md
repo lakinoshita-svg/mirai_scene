@@ -1,6 +1,8 @@
 # 地域に応じた学校広告の方針
 
-実装済み：広告の対象地域設定、カテゴリー×地域の選択、全国広告へのフォールバック、広告欄での任意エリア選択とセッション内保存。未実装：以下のIPによる自動推定API接続。現在の初期値は全国。
+公開方針（2026-09-30）：進路ナビの自社サーバー内で公開します。地域推定も自社APIへの接続を前提とします。サーバーの言語・IP地域データの提供元・APIパスは未確認です。Workers版は参考実装として保持し、公開には使用しません。自社APIは `{"region":"kanto"}` などの地域IDのみを返す共通仕様を利用できます。
+
+実装済み：広告の対象地域設定、カテゴリー×地域の選択、全国広告へのフォールバック、任意エリア選択、IP地域推定APIへの接続処理、Cloudflare Workers用API。APIの公開と `PUBLIC_REGION_API_URL` の設定は未完了のため、現在は全国表示と手動選択で動作します。
 
 ユーザーの負担を抑えるため、ブラウザの位置情報許可は求めず、配信基盤または自社APIで接続元IPから地域を推定する。取得結果は住所・居住地ではなく接続地域の目安として扱う。
 
@@ -19,4 +21,4 @@ GitHub Pagesは静的配信なので地域推定APIを別に用意する必要�
 - https://developers.cloudflare.com/workers/runtime-apis/request/
 - https://developers.cloudflare.com/network/ip-geolocation/
 
-カテゴリーと地域による広告選択は実装済み。自動推定APIの接続は次段階の作業。詳細は `SCHOOL-ADS.md` を参照。
+公開手順は `integrations/region-api/README.md`、広告の登録方法は `SCHOOL-ADS.md` を参照。
