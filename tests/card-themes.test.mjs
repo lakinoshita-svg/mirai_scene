@@ -6,8 +6,8 @@ import path from 'node:path';
 test('Every career card uses its configured shared theme asset', () => {
   const themes = JSON.parse(fs.readFileSync('src/data/interests.json','utf8'));
   const careers = fs.readdirSync('src/content/careers').map(file => JSON.parse(fs.readFileSync(`src/content/careers/${file}`,'utf8')));
-  const html = fs.readFileSync(path.join(process.env.TEST_DIST || 'dist','index.html'),'utf8');
   for (const career of careers) {
+    const html = fs.readFileSync(path.join(process.env.TEST_DIST || 'dist','catalog/cards',career.slug,'index.html'),'utf8');
     const theme = themes.find(theme => theme.id === career.cardTheme);
     assert.ok(theme, career.slug);
     assert.ok(fs.existsSync(`public/${theme.image}`));

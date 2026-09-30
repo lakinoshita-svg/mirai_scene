@@ -7,7 +7,7 @@ import { learningLinks } from './lib/learning-links';
 import interests from './data/interests.json';
 import { cardThemes } from './lib/card-themes';
 
-const text = z.string().trim().min(1);
+const text = z.string().trim().min(1).refine(value => !value.includes('【要編集】'), '下書きの要編集項目が残っています');
 const asset = text.refine(value => /^assets\/[a-zA-Z0-9/_-]+\.(png|jpe?g|webp|svg)$/.test(value), 'public/assets 内の画像パスを指定してください')
   .refine(value => existsSync(resolve('public', value)), '画像ファイルが見つかりません');
 const image = z.object({ src: asset, alt: text });

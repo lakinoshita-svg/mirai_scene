@@ -8,12 +8,17 @@
     "node": ">=22.12.0"
   },
   "scripts": {
+    "build:shinronavi": "node scripts/build-shinronavi.mjs",
     "dev": "astro dev --host 127.0.0.1",
     "check": "astro check",
     "build": "astro build",
     "preview": "astro preview --host 127.0.0.1",
     "test": "node --test tests/*.test.mjs",
-    "sync:inquiry": "node scripts/sync-inquiry-links.mjs"
+    "sync:inquiry": "node scripts/sync-inquiry-links.mjs",
+    "content:new": "node scripts/new-career.mjs",
+    "content:audit": "node scripts/content-audit.mjs",
+    "content:benchmark": "node scripts/benchmark-catalog.mjs",
+    "content:verify": "npm run content:audit && npm run check && npm run build && npm test && npm run sync:inquiry"
   },
   "dependencies": {
     "astro": "7.3.4"
@@ -21,6 +26,9 @@
   "devDependencies": {
     "@astrojs/check": "^0.9.10",
     "@types/node": "^24.13.6",
+    "parse5": "^8.0.1",
+    "postcss": "^8.5.28",
+    "postcss-selector-parser": "^7.1.6",
     "typescript": "^6.0.3"
   }
 }

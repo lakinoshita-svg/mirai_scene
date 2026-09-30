@@ -4,7 +4,7 @@ import { defineConfig } from 'astro/config';
 // baseは画像・内部リンク、siteは探究側へ渡す絶対URLに影響する。変更後は両サイトを再ビルドする。
 export default defineConfig({
   output: 'static',
-  site: 'https://lakinoshita-svg.github.io',
+  site: process.env.ASTRO_SITE || 'https://lakinoshita-svg.github.io',
   base: process.env.ASTRO_BASE || '/mirai_scene/',
   trailingSlash: 'always',
   build: { format: 'directory' },

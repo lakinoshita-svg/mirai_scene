@@ -2,15 +2,17 @@
 import CareerCard from './CareerCard.astro';
 import type { Career } from '../lib/careers';
 import interests from '../data/interests.json';
-interface Props { careers: Career[] }
-const { careers } = Astro.props;
+import { sitePath, careerPath } from '../lib/paths';
+interface Props { careers: Career[]; learningId?: string; title?: string }
+const { careers, learningId = '', title = 'どんなことが、ちょっと気になる？' } = Astro.props;
 const categories = ['すべて', ...new Set(careers.map(c => c.category))];
 ---
-    <section id="experiences" aria-labelledby="catalog-title" tabindex="-1">
+    <section id="experiences" aria-labelledby="catalog-title" tabindex="-1" data-catalog data-learning={learningId} data-index-url={sitePath('catalog/index.json')} data-card-base={sitePath('catalog/cards/')}>
       <div class="catalog-title">
-<h2 id="catalog-title">どんなことが、ちょっと気になる？</h2>
+<h2 id="catalog-title">{title}</h2>
 </div>
       <div class="catalog-controls" hidden>
+        <label class="catalog-search">キーワードで探す<input type="search" data-search placeholder="職業名・気になる言葉" maxlength="100" /></label>
         <div class="filters interest-filters" role="group" aria-label="興味から体験を探す">
 <button class="filter active" data-interest="all" aria-pressed="true">まだ分からない・いろいろ見る</button>{interests.map(t => <button class="filter" data-interest={t.id} aria-pressed="false">{t.label}</button>)}</div>
         <details class="field-picker">
@@ -21,7 +23,10 @@ const categories = ['すべて', ...new Set(careers.map(c => c.category))];
       <p class="catalog-count" aria-live="polite">
 <span data-count-label>いろいろな仕事のひと場面</span> <span data-count>{careers.length}件</span>
 </p>
-      <div class="grid" id="career-grid">{careers.map(c => <CareerCard career={c} />)}</div>
+      <div class="grid" id="career-grid">{careers.slice(0,9).map(c => <CareerCard career={c} />)}</div>
+      <p data-catalog-status role="status"></p>
+      <button type="button" class="text-link" data-retry hidden>読み込みを再試行する</button>
+      <noscript><p>すべての体験へのリンク：</p><ul>{careers.map(c => <li><a href={careerPath(c.slug)}>{c.name}：{c.entryTitle}</a></li>)}</ul></noscript>
       <div class="catalog-more" hidden data-more-container>
 <button type="button" class="primary" data-more aria-controls="career-grid">もっとみる <span aria-hidden="true">＋</span>
 </button>
@@ -33,4 +38,9 @@ const categories = ['すべて', ...new Set(careers.map(c => c.category))];
 <style>
   #experiences{scroll-margin-top:24px}
   #experiences:focus{outline:none}
+</style>
+<script>import '../scripts/catalog';</script>
+<style>
+ .catalog-search{display:grid;gap:8px;margin:20px 0;font-weight:700}
+ .catalog-search input{width:100%;box-sizing:border-box;padding:12px 16px;font:inherit;border:1px solid var(--line);border-radius:8px}
 </style>

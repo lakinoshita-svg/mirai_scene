@@ -16,7 +16,7 @@ const { title, breadcrumb, description = '“好き”から始まる進路選�
     <meta name="description" content={description} />
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
-    <link rel="icon" type="image/svg+xml" href={sitePath('favicon.svg')} />
+    <link rel="icon" type="image/png" href={sitePath('assets/brand/mirai-scene-favicon.png')} />
   </head>
   <body>
     <a class="skip-link" href="#app">本文へ移動</a>
@@ -24,17 +24,20 @@ const { title, breadcrumb, description = '“好き”から始まる進路選�
       <div class="brand-family">
         <a class="parent-brand" href="https://shinronavi.com/" target="_blank" rel="noopener" aria-label="進路ナビを別タブで開く"><img src={sitePath('assets/brand/shinronavi-logo.png')} alt="進路ナビ" width="1200" height="300" /></a>
         <span class="brand-divider" aria-hidden="true"></span>
-        <a class="brand" href={sitePath()} aria-label="ミライシーン ホーム"><span class="brand-mark" aria-hidden="true">◧</span>ミライシーン</a>
+        <a class="brand" href={sitePath()} aria-label="ミライシーン ホーム"><img class="mirai-logo" src={sitePath('assets/brand/mirai-scene-logo.png')} alt="ミライシーン" width="2172" height="724" /></a>
       </div>
       <a class="header-link" href={sitePath('about/')}>ミライシーンについて <span>↗</span></a>
     </header>
     <main id="app" tabindex="-1"><Breadcrumbs current={breadcrumb} /><slot /></main>
-    <footer class="site-footer"><div class="site-footer-inner"><a href={sitePath()} class="footer-brand">ミライシーン</a><p>“好き”から始まる進路選び。今、将来を決めなくても大丈夫。</p></div></footer>
+    <footer class="site-footer"><div class="site-footer-inner"><a href={sitePath()} class="footer-brand"><img class="mirai-logo" src={sitePath('assets/brand/mirai-scene-logo.png')} alt="ミライシーン" width="2172" height="724" /></a><p>“好き”から始まる進路選び。今、将来を決めなくても大丈夫。</p></div></footer>
   </body>
 </html>
 <style>
   .parent-brand{display:flex;align-items:center;flex-shrink:0}
   .parent-brand img{display:block;width:112px;height:auto}
+  .mirai-logo{display:block;width:240px;height:auto;max-width:100%}
+  @media(max-width:650px){.mirai-logo{width:170px}}
+  @media(max-width:350px){.mirai-logo{width:140px}}
   @media(max-width:650px){.parent-brand img{width:76px}}
   @media(max-width:350px){.parent-brand img{width:64px}}
 </style>

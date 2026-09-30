@@ -10,7 +10,7 @@ const careers = await getCareers();
   <noscript>
 <style>[data-catalog] .career{display:block!important}</style>
 </noscript>
-  <div data-catalog>
+  <div>
 <Hero />
 <div class="home">
     <CareerCatalog careers={careers} />
@@ -25,9 +25,6 @@ const careers = await getCareers();
   </div>
   </div>
 </SiteLayout>
-<script>
-  import '../scripts/catalog';
-</script>
 
 
 
