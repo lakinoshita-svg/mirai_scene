@@ -16,7 +16,8 @@ const asset = (name: string) => sitePath(`assets/hero/${name}`);
       <div class="hero-card hero-convey"><img src={asset('convey.png')} alt="気持ちやアイデアを、伝える。" width="1672" height="941" /></div>
     </div>
     <div class="hero-action">
-      <p class="hero-invitation">気になる未来を、見つけてみよう。</p>
+      <!-- カード画像にはリンクを付けず、CTAから体験一覧へ移動する。 -->
+      <a class="hero-invitation" href="#experiences">気になる未来を、見つけてみよう。<span aria-hidden="true">↓</span></a>
       <p class="hero-meta"><span class="hero-check"><img src={asset('check-background.svg')} alt="" /><img src={asset('check.svg')} alt="" /></span>登録なしでスタート</p>
     </div>
   </div>
@@ -38,8 +39,11 @@ const asset = (name: string) => sitePath(`assets/hero/${name}`);
   .hero-make{left:49%;top:3%;width:27.78%;transform:rotate(-5deg)}
   .hero-support{left:70%;top:22%;width:27.78%;transform:rotate(5deg)}
   .hero-convey{left:49%;top:55%;width:37.01%;transform:rotate(-3deg)}
-  .hero-action{position:absolute;left:15.55%;top:63.9%;width:286px}
-  .hero-invitation{margin:0;color:#686171;font-size:18px;font-weight:700;line-height:1.7;text-align:center}
+  .hero-action{position:absolute;left:15.55%;top:63.9%;width:350px;max-width:100%}
+  .hero-invitation{display:flex;align-items:center;justify-content:center;gap:12px;min-height:64px;padding:12px 18px;box-sizing:border-box;border-radius:999px;background:linear-gradient(145deg,#6956d9,#a45dd8 58%,#f59a4a);color:#fff;font-size:16px;font-weight:700;line-height:1.7;text-align:center;text-decoration:none;box-shadow:0 6px 18px #6956d926}
+  .hero-invitation span{display:grid;place-items:center;flex-shrink:0;width:32px;height:32px;border-radius:50%;background:#fff;color:#6956d9;font-size:20px}
+  .hero-invitation:hover{box-shadow:0 8px 24px #6956d94d}
+  .hero-invitation:focus-visible{outline:3px solid #6956d9;outline-offset:4px}
   .hero-meta{margin:18px 0 0;display:flex;align-items:center;justify-content:center;gap:8px;white-space:nowrap;color:#686171;font-size:15px;line-height:24px}
   .hero-check{position:relative;display:grid;place-items:center;width:16px;height:16px}
   .hero-check img{position:absolute}
@@ -53,7 +57,8 @@ const asset = (name: string) => sitePath(`assets/hero/${name}`);
     .hero-art{position:relative;inset:auto;height:560px;width:100%;max-width:500px;margin:10px auto 0}
     .hero-note{left:auto;right:0;top:0;width:115px}
     .hero-make{left:-2%;top:0;width:62%}.hero-support{left:auto;right:-2%;top:23%;width:62%}.hero-convey{left:-2%;top:64%;width:82%}
-    .hero-action{position:relative;left:auto;top:auto;width:286px;margin:18px auto 0}
+    .hero-action{position:relative;left:auto;top:auto;width:350px;margin:18px auto 0}
+    .hero-invitation{font-size:clamp(12px,3.5cqw,16px);gap:8px;padding-inline:12px}
     .hero-meta{font-size:13px;margin-top:14px}
   }
   @media(max-width:450px){.hero-art{height:400px}.hero-support{top:23%}.hero-convey{top:65%}.hero-copy h1{font-size:clamp(21px,6.4cqw,25px)}.hero-copy h1 span{font-size:clamp(23px,6.9cqw,27px)}.hero-stage{padding:24px 20px 32px}.hero-note{width:95px}.hero-action{margin-top:24px}}
