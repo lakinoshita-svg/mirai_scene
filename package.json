@@ -17,6 +17,7 @@
     "sync:inquiry": "node scripts/sync-inquiry-links.mjs",
     "content:new": "node scripts/new-career.mjs",
     "content:audit": "node scripts/content-audit.mjs",
+    "content:export-review": "node scripts/export-review.mjs",
     "content:benchmark": "node scripts/benchmark-catalog.mjs",
     "content:verify": "npm run content:audit && npm run check && npm run build && npm test && npm run sync:inquiry"
   },

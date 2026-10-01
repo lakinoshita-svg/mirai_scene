@@ -1,5 +1,16 @@
 # コンテンツ運用
 
+## 別部署確認用Excel
+
+運用担当向けの手順は `outputs/operations/運用マニュアル.html` を参照してください。
+
+- `npm run content:export-review`：最新JSONからExcelと原稿照合用manifestを出力します。Codex同梱のartifact-toolが必要です。別端末で依存の場所が異なる場合は `CODEX_ARTIFACT_MODULE_ROOT` に同梱node_modulesの絶対パスを指定します。
+- `npm run content:export-review -- --check`：Excel用依存なしで原稿の読み込みと件数を確認します。
+- 出力先は `outputs/operations/<UTC日時>/`。Excel内の日付は日本時間です。プレビューは `tmp/review-export/<UTC日時>/` に保存します。
+- 記入済みのExcelは上書きせず保管してください。確認欄は再出力ごとに未確認となり、旧版のコメントは自動移行しません。Codexへ記入済みExcelを渡し、manifestと現行原稿の差分を確認したうえでJSONへ修正を反映します。
+
+出力処理の修正箇所：`scripts/lib/review-data.mjs` がJSON展開・出典ハッシュ、`scripts/lib/review-workbook.mjs` が列・書式、`scripts/export-review.mjs` が依存読込・保存を担当します。新しいJSON項目は自動で出力されます。日本語の項目名はreview-dataの辞書へ追加してください。
+
 ## 編集元と生成物
 
 - 職業体験：`src/content/careers/<slug>.json`。TOP・学び別一覧・詳細は同じ原稿を使います。

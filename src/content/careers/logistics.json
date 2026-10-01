@@ -57,6 +57,7 @@
     {
       "id": "scene-2",
       "title": "箱のサイズを見直したい。",
+      "image": { "src": "assets/scenes/logistics-box.png", "alt": "大きな配送箱の中に小さな商品箱が入り、周りの広い空間に紙の緩衝材が詰められている" },
       "situation": "小さな商品にも大きな箱を使い、梱包材が多く必要になっています。",
       "question": "何を比べる？",
       "options": [

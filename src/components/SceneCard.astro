@@ -29,3 +29,7 @@ const { career:c, scene:s, index } = Astro.props;
     </section>
   </article>
 </section>
+<style>
+  /* 観察に使う写真は全体を残す。固定高のcoverで判断材料を切り落とさない。 */
+  .scene-image { height:auto; object-fit:contain; }
+</style>
