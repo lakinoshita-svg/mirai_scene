@@ -49,7 +49,7 @@ fs.writeFileSync(path.join(privateDir,'manifest.json'),JSON.stringify(manifest,n
 fs.writeFileSync(path.join(privateDir,'.htaccess'),'Require all denied\n');
 const cssDir=path.join(target,'new/_app/_webroot/css/page/miraiscene');
 fs.mkdirSync(cssDir,{recursive:true});
-fs.writeFileSync(path.join(cssDir,'miraiscene.css'),scopeCss([...css].join('\n'))+'\n#mirai-scene{font-family:inherit}#mirai-scene .mirai-local-nav{display:flex;align-items:center;justify-content:space-between;gap:16px;max-width:1224px;margin:auto;padding:12px 20px}#mirai-scene .mirai-local-nav img{display:block;width:240px;max-width:50vw;height:auto}#mirai-scene .mirai-local-nav>a:last-child{font-size:13px;color:#6443a5}\n');
+fs.writeFileSync(path.join(cssDir,'miraiscene.css'),scopeCss([...css].join('\n'))+'\n#mirai-scene{font-family:inherit}#mirai-scene .mirai-local-nav{display:flex;align-items:center;justify-content:space-between;gap:16px;max-width:1224px;margin:auto;padding:12px 20px}#mirai-scene .mirai-local-nav img{display:block;width:180px;max-width:42vw;height:auto}#mirai-scene .mirai-local-nav>a:last-child{font-size:13px;color:#6443a5}@media(max-width:650px){#mirai-scene .mirai-local-nav img{width:140px}}\n');
 const templates='integrations/shinronavi/templates';
 copy(`${templates}/MiraisceneController.php`,'new/_app/_controller/MiraisceneController.php');
 copy(`${templates}/MiraiPageService.php`,'new/_app/_util/miraiscene/MiraiPageService.php');
@@ -60,6 +60,8 @@ copy(`${templates}/banner.css`,'new/_app/_webroot/css/page/miraiscene/banner.css
 copy(`${templates}/install.mjs`,'install.mjs');
 copy(`${templates}/rewrite.conf`,'rewrite-addition.conf');
 fs.copyFileSync('integrations/shinronavi/README.md',path.join(target,'INSTALL.md'));
+// 運用担当へ渡す手順書も毎回同じリリースへ同梱し、旧版との混在を防ぐ。
+copy('outputs/operations/運用マニュアル.html','運用マニュアル.html');
 if(fs.existsSync('integrations/shinronavi/VALIDATION.md')) fs.copyFileSync('integrations/shinronavi/VALIDATION.md',path.join(target,'VALIDATION.md'));
 fs.writeFileSync(path.join(output,'latest.json'),JSON.stringify({directory:target,pages:Object.keys(manifest).length},null,2));
 console.log(`進路ナビ配置用: ${target}\n本文${Object.keys(manifest).length}ページ。INSTALL.mdの配置・rewrite手順を確認してください。`);
