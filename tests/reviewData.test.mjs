@@ -3,7 +3,7 @@ import assert from 'node:assert/strict';
 import { fileURLToPath } from 'node:url';
 import fs from 'node:fs/promises';
 import path from 'node:path';
-import { flatten, loadReviewData } from '../scripts/lib/review-data.mjs';
+import { flatten, loadReviewData } from '../scripts/lib/reviewData.mjs';
 
 test('review rows preserve falsy values, empty collections and escaped JSON pointers', () => {
   const rows = [];

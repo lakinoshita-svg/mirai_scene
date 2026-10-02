@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { createAsyncCache } from '../src/lib/async-cache.mjs';
+import { createAsyncCache } from '../src/lib/asyncCache.mjs';
 
 test('overlapping requests share one fetch and reuse server-rendered cards', async () => {
   let calls = 0;

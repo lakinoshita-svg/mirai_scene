@@ -6,7 +6,7 @@ $mirai_banner_compact = isset($mirai_banner_variant) && $mirai_banner_variant ==
 <a class="ms-entry-banner<?= $mirai_banner_compact ? ' ms-entry-banner--compact' : '' ?>" href="/mirai_scene/" data-mirai-entry="<?= $mirai_banner_compact ? 'inquiry' : 'top' ?>">
   <div class="ms-entry-banner__copy">
     <div class="ms-entry-banner__topline">
-      <img class="ms-entry-banner__logo" src="/mirai_scene/assets/brand/mirai-scene-logo.png" alt="ミライシーン" width="2172" height="724" loading="lazy">
+      <img class="ms-entry-banner__logo" src="/mirai_scene/assets/brand/miraiSceneLogo.png" alt="ミライシーン" width="2069" height="523" loading="lazy">
       <span class="ms-entry-banner__badge">約3分・登録不要</span>
     </div>
     <p class="ms-entry-banner__eyebrow"><?= $mirai_banner_compact ? '学びの先にある仕事を、のぞいてみよう。' : 'やりたいことが、まだ決まっていなくても。' ?></p>
@@ -18,7 +18,7 @@ $mirai_banner_compact = isset($mirai_banner_variant) && $mirai_banner_variant ==
     <span class="ms-entry-banner__spark">✦</span>
     <div class="ms-entry-banner__scene">
       <span class="ms-entry-banner__scene-label">MIRAI SCENE</span>
-      <img src="/mirai_scene/assets/brand/mirai-scene-favicon.png" alt="" width="1280" height="1280" loading="lazy">
+      <img src="/mirai_scene/assets/brand/miraiSceneFavicon.png" alt="" width="1280" height="1280" loading="lazy">
       <span class="ms-entry-banner__question">もし、あなたなら？</span>
       <span class="ms-entry-banner__choice"><b>A</b>まず、相手に聞く</span>
       <span class="ms-entry-banner__choice"><b>B</b>試して、確かめる</span>

@@ -1,5 +1,5 @@
-import { selectSchoolAds } from '../lib/select-school-ads.mjs';
-import { createRegionResolver } from '../lib/ad-region.mjs';
+import { selectSchoolAds } from '../lib/selectSchoolAds.mjs';
+import { createRegionResolver } from '../lib/adRegion.mjs';
 let storage: Storage | undefined;
 try { storage = window.sessionStorage; } catch { /* 保存を拒否していても利用可能 */ }
 const resolver = createRegionResolver({ storage, endpoint: import.meta.env.PUBLIC_REGION_API_URL || '' });

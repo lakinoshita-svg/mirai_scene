@@ -4,6 +4,8 @@ require_once __DIR__ . '/../_util/miraiscene/MiraiPageService.php';
 /** 公開済みの静的原稿を共通Tailwindレイアウトへ差し込む。DB更新は行わない。 */
 class MiraisceneController extends Controller
 {
+    // 親Controller・既存レイアウトのsnake_case名は進路ナビの接続仕様に合わせる。
+    // このクラス名と配置先もホストのルーティング対象なので独自に変更しない。
     public $mirai_page;
 
     public function __construct($controller_name = '', $action_name = '')

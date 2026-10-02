@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { selectSchoolAds } from '../src/lib/select-school-ads.mjs';
+import { selectSchoolAds } from '../src/lib/selectSchoolAds.mjs';
 
 const config = {
   ads: [{id:'university',enabled:true,targetRegions:['all']},{id:'college',enabled:true,targetRegions:['all']},{id:'paused',enabled:false,targetRegions:['all']}],

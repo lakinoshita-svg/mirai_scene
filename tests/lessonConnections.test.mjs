@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { createLessonConnections } from '../src/lib/lesson-connections.mjs';
+import { createLessonConnections } from '../src/lib/lessonConnections.mjs';
 
 test('Shared lessons combine fields and careers without duplicates and keep editorial order', () => {
   const fields = [

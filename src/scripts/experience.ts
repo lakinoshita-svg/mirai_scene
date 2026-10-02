@@ -46,7 +46,7 @@ if (root) {
             moveFocus(next);
         });
     });
-    // 以下のdata-*と#reflection-responseはExperienceReflection.astroの表示契約。
+    // 以下のdata-*と#reflection-responseはexperienceReflection.astroの表示契約。
     // コンポーネント分割・名称変更時も、このセレクターと同時に修正する。
     const reflections = [...summary.querySelectorAll<HTMLButtonElement>('[data-reflection]')];
     reflections.forEach(button => button.addEventListener('click', () => {

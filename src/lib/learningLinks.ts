@@ -1,7 +1,7 @@
 import { z } from 'astro/zod';
-import data from '../data/learning-links.json';
+import data from '../data/learningLinks.json';
 
-// 編集元は learning-links.json。表示テーマ・広告カテゴリーとは別に、学びのIDで連携する。
+// 編集元は learningLinks.json。表示テーマ・広告カテゴリーとは別に、学びのIDで連携する。
 // 職業JSONのlearningIdsと対応させる。JSONはコメントを持てないため、編集手順は LEARNING-LINKS.md を参照。
 const text = z.string().trim().min(1);
 export const learningLinks = z.array(z.object({

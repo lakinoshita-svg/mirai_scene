@@ -1,7 +1,7 @@
 import { sitePath, careerPath } from '../lib/paths';
 import { registerTools } from './webmcp';
-import { filterCatalog } from '../lib/catalog-filter.mjs';
-import { createAsyncCache } from '../lib/async-cache.mjs';
+import { filterCatalog } from '../lib/catalogFilter.mjs';
+import { createAsyncCache } from '../lib/asyncCache.mjs';
 interface Entry { slug: string; name: string; category: string; cardTheme: string; entryTitle: string; description: string; learningIds: string[] }
 document.querySelectorAll<HTMLElement>('[data-catalog]').forEach(root => {
   const grid = root.querySelector<HTMLElement>('#career-grid')!;
@@ -100,10 +100,11 @@ document.querySelectorAll<HTMLElement>('[data-catalog]').forEach(root => {
       limit = pageSize();
       root.querySelector<HTMLElement>('.catalog-controls')!.hidden = false;
       await render();
-      let legacy = '';
-      try { legacy = decodeURIComponent(location.hash.slice(1)); } catch { /* 不正な旧URLを無視 */ }
-      if (legacy === 'about') location.replace(sitePath('about/'));
-      else if (legacy.startsWith('career/') && entries.some(entry => entry.slug === legacy.slice(7))) location.replace(careerPath(legacy.slice(7)));
+      // 過去に共有された #career/職業ID と #about を現在のURLへ案内する互換処理。
+      let legacyRoute = '';
+      try { legacyRoute = decodeURIComponent(location.hash.slice(1)); } catch { /* 不正な旧URLを無視 */ }
+      if (legacyRoute === 'about') location.replace(sitePath('about/'));
+      else if (legacyRoute.startsWith('career/') && entries.some(entry => entry.slug === legacyRoute.slice(7))) location.replace(careerPath(legacyRoute.slice(7)));
       registerTools([
         { name: 'list_careers', description: 'List available career experiences.', inputSchema: { type: 'object', properties: {}, additionalProperties: false }, annotations: { readOnlyHint: true }, execute: () => entries.map(c => ({ id: c.slug, name: c.name, category: c.category })) },
         { name: 'open_career', description: 'Navigate to a career experience.', inputSchema: { type: 'object', properties: { id: { type: 'string' } }, required: ['id'], additionalProperties: false }, annotations: { readOnlyHint: false }, execute: input => {

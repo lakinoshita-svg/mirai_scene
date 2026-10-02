@@ -41,7 +41,7 @@
 
 | 知りたいこと | 読むファイル |
 |---|---|
-| 項目・画面の現在仕様 | [CONTENT-SPEC.md](../CONTENT-SPEC.md)、実装は `src/content.config.ts` |
+| 項目・画面の現在仕様 | [CONTENT-SPEC-AI.md](../CONTENT-SPEC-AI.md)、実装は `src/content.config.ts` |
 | 自社資料の原文 | [company-career-material.txt](company-career-material.txt) |
 | 資料がその職業を扱っているか | [source-mapping.md](source-mapping.md) |
 | 実際の原稿 | `src/content/careers/`、制作中は `drafts/` |

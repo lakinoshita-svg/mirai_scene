@@ -1,6 +1,6 @@
 ---
-import { getSchoolAds, getCategorySchoolAds } from '../lib/school-ads';
-import regions from '../data/ad-regions.json';
+import { getSchoolAds, getCategorySchoolAds } from '../lib/schoolAds';
+import regions from '../data/adRegions.json';
 import { sitePath } from '../lib/paths';
 interface Props { category: string }
 const { category } = Astro.props;
@@ -35,7 +35,7 @@ const initialIds = new Set(getSchoolAds(category).map(ad => ad.id));
   </a>)}</div>
 </aside>}
 <script>
-  import '../scripts/school-ads';
+  import '../scripts/schoolAds';
 </script>
 <style>
   .school-ad[hidden],.ad-area[hidden]{display:none}

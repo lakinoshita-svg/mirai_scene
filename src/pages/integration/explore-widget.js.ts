@@ -1,5 +1,5 @@
 import type { APIRoute } from 'astro';
-import { getIntegrationLinks } from '../../lib/integration-links';
+import { getIntegrationLinks } from '../../lib/integrationLinks';
 
 // A classic script: no fetch/CORS dependency on the legacy lesson site.
 export const GET: APIRoute = ({ site }) => {

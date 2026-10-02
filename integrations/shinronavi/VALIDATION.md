@@ -7,7 +7,7 @@
 - 自動配置：提供された共通レイアウトを使う独立した検証ディレクトリへ配置。2回実行してrewrite・head追記が重複しないことを確認。
 - UI：PHP検証サーバー上でTOP、9→18件の追加表示、デザイナーの3シーンと解説、完了画面、学校検索の分野パラメーターを確認。
 - スタイル：提供元の `input.css` をTailwind 4.1.17で生成して読み込み、専用CSSと共存する表示を確認。提供物に共通 `output.css` がなく、付属CLIのWindows用依存も欠けていたため、公式CLIで検証用の生成物のみ作成した。
-- ロゴ：提供PNGを変更せず、`mirai-scene-logo.png`、`mirai-scene-favicon.png` として配置。元のDownloads画像は保持。
+- ロゴ：提供PNGを変更せず、`miraiSceneLogo.png`、`miraiSceneFavicon.png` として配置。元のDownloads画像は保持。
 
 ## 未確認
 

@@ -1,7 +1,7 @@
 ---
 import type { Career } from '../lib/careers';
 import { careerPath, sitePath } from '../lib/paths';
-import { getCardTheme } from '../lib/card-themes';
+import { getCardTheme } from '../lib/cardThemes';
 interface Props { career: Career }
 const { career: c } = Astro.props;
 const theme = getCardTheme(c.cardTheme);

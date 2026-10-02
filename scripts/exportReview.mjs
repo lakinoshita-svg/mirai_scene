@@ -4,8 +4,8 @@ import path from 'node:path';
 import os from 'node:os';
 import { createRequire } from 'node:module';
 import { fileURLToPath, pathToFileURL } from 'node:url';
-import { loadReviewData } from './lib/review-data.mjs';
-import { createReviewWorkbook } from './lib/review-workbook.mjs';
+import { loadReviewData } from './lib/reviewData.mjs';
+import { createReviewWorkbook } from './lib/reviewWorkbook.mjs';
 
 const root = fileURLToPath(new URL('../', import.meta.url));
 const data = await loadReviewData(root);

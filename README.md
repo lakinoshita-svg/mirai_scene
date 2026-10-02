@@ -1,5 +1,9 @@
 # ミライシーン
 
+コードを変更する前に [命名・コード管理ガイド](docs/CODE-MAINTENANCE.md)を確認してください。内部ファイルはキャメルケースで管理し、公開URLや外部連携の名前は互換性を維持します。
+
+資料の入口：内容確認を行う担当者は [作業者向け仕様書](docs/CONTENT-SPEC.md)、AI・開発担当者は [AI向け仕様書](docs/CONTENT-SPEC-AI.md) を読んでください。どちらにも背景・目的・概要を記載しています。
+
 Astro＋職業別JSONで構成した、進路ナビ向けの選択型仕事体験です。静的HTMLと保存済み画像を配信し、閲覧時にAIやデータベースを呼び出しません。
 
 ## 起動・ビルド
@@ -27,7 +31,7 @@ pnpm preview
 |---|---|
 | `src/content/careers/*.json` | 職業ごとの文章・選択肢・解説・画像参照 |
 | `src/data/interests.json` | 興味タグ・共通カード画像（[追加・編集方法](CARD-THEMES.md)） |
-| `src/data/school-ads.json` | カテゴリー共通の大学・専門学校広告（[設定方法](SCHOOL-ADS.md)） |
+| `src/data/schoolAds.json` | カテゴリー共通の大学・専門学校広告（[設定方法](SCHOOL-ADS.md)） |
 | `src/content.config.ts` | JSONの必須項目・形式・画像の検証 |
 | `src/pages/` | トップ、職業別ページ、サービス説明 |
 | `src/components/` | カード、場面、振り返りの共通部品 |

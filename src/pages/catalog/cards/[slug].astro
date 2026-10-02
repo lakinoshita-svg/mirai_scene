@@ -1,5 +1,5 @@
 ---
-import CareerCard from '../../../components/CareerCard.astro';
+import CareerCard from '../../../components/careerCard.astro';
 import { getCareers } from '../../../lib/careers';
 export async function getStaticPaths() {
   return (await getCareers()).map(career => ({ params: { slug: career.slug }, props: { career } }));

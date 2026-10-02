@@ -1,12 +1,12 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { createLessonConnections } from '../src/lib/lesson-connections.mjs';
+import { createLessonConnections } from '../src/lib/lessonConnections.mjs';
 const root = fileURLToPath(new URL('../', import.meta.url));
 const read = p => JSON.parse(fs.readFileSync(path.join(root, p), 'utf8'));
 // このスクリプトが探究側へ書き出すJSONは生成物。直接編集すると次回同期で上書きされる。
-// 編集元：learning-links.json と careers/*.json。更新後は npm run sync:inquiry → 探究側ビルド。
-const fields = read('src/data/learning-links.json');
+// 編集元：learningLinks.json と careers/*.json。更新後は npm run sync:inquiry → 探究側ビルド。
+const fields = read('src/data/learningLinks.json');
 const careers = fs.readdirSync(path.join(root, 'src/content/careers')).filter(f => f.endsWith('.json')).map(f => read(`src/content/careers/${f}`));
 const lessons = ['university', 'vocational'].flatMap(type => read(`integrations/inquiry/src/forteacher/data/${type}.json`));
 const links = createLessonConnections(fields, careers);

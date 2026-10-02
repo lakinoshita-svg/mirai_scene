@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { scopeCss, extractPage } from '../scripts/lib/shinronavi-export.mjs';
+import { scopeCss, extractPage } from '../scripts/lib/shinronaviExport.mjs';
 test('embedded CSS scopes root, generic Tailwind names, nested rules and comma selectors',()=>{
  const css=scopeCss('@import "https://example.test/font.css"; :root{--ink:black}body{margin:0}.grid,a:is(.one,.two){display:block}@media(max-width:650px){h1{font-size:20px}}@keyframes fade{from{opacity:0}to{opacity:1}}');
  assert.ok(!css.includes('@import'));

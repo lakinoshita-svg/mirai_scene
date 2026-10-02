@@ -1,6 +1,6 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { createRegionResolver } from '../src/lib/ad-region.mjs';
+import { createRegionResolver } from '../src/lib/adRegion.mjs';
 import worker, { regionFromCf } from '../integrations/region-api/worker.mjs';
 
 test('47 prefectures map to eight regions; unsupported data stays nationwide', () => {

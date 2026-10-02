@@ -1,9 +1,9 @@
 import { z } from 'astro/zod';
 import { existsSync } from 'node:fs';
 import { resolve } from 'node:path';
-import rawConfig from '../data/school-ads.json';
-import regions from '../data/ad-regions.json';
-import { getCategoryAds, selectSchoolAds } from './select-school-ads.mjs';
+import rawConfig from '../data/schoolAds.json';
+import regions from '../data/adRegions.json';
+import { getCategoryAds, selectSchoolAds } from './selectSchoolAds.mjs';
 const text = z.string().trim().min(1);
 const schema = z.object({
     ads: z.array(z.object({

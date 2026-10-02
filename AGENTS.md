@@ -7,7 +7,7 @@
 最初に次を読む。仕様を独自に推測して量産しない。
 
 1. [制作引き継ぎガイド](docs/editorial/HANDBOOK.md)：企画意図、決定事項、作り方、良い例・避ける例、レビュー基準。
-2. [現行仕様](docs/CONTENT-SPEC.md)：JSON項目と画面の動作。実装の正本は `src/content.config.ts`。
+2. [現行仕様](docs/CONTENT-SPEC-AI.md)：JSON項目と画面の動作。実装の正本は `src/content.config.ts`。
 3. [資料対応表](docs/editorial/source-mapping.md)：自社資料と職業の対応・不足。必要な職業の原文を `docs/editorial/company-career-material.txt` で確認する。
 4. [制作台帳](docs/CONTENT-BATCHES.md)：既存題材との重複と制作中のバッチを確認する。
 
@@ -28,5 +28,7 @@
 初期導入の固定版 `deliveries/initial-2026-10-02/` は通常のコンテンツ作成で変更しない。ZIPは配布物であり編集元ではない。現在は初期導入用の一式生成が実装済みで、コンテンツ更新専用パッケージ・競合検出付き取り込みは未実装。実装済みとして案内しない。
 
 ## ナレッジの更新
+
+コード変更時は [命名・コード管理ガイド](docs/CODE-MAINTENANCE.md) を読む。内部ファイル・変数・関数はlowerCamelCaseを基本とし、外部連携名・公開URL・フレームワーク指定名を機械的に改名しない。
 
 新たな方針が決まったら、影響するガイド・仕様書・台帳を同じ作業で更新する。個人の判断案をユーザーの決定事項として記載しない。公開原稿や共通実装の変更を伴わない文書作業では、固定ZIPを再作成しない。

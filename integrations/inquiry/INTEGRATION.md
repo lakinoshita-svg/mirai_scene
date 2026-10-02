@@ -5,7 +5,7 @@
 ## 今回の変更
 
 - 共通記事の「関連する職業」の後に `MiraiConnections.astro` を追加。対応する体験がある教材だけに表示します。
-- `mirai-links.json` はミライシーンの学び対応表と職業JSONから自動生成します。手で編集しません。ミライシーンのルートで `node scripts/sync-inquiry-links.mjs` を実行すると更新できます。
+- `mirai-links.json` はミライシーンの学び対応表と職業JSONから自動生成します。手で編集しません。ミライシーンのルートで `node scripts/syncInquiryLinks.mjs` を実行すると更新できます。
 - 元コードの関連記事リンクは `lesson?slug=…` でしたが、同梱の静的ルートは `/forteacher/[slug]/` です。作業コピーでは後者に統一し、一覧・戻り先・ワークシートも同梱ルートに接続します。本番PHP等に移植する場合はルーティングを本番仕様に合わせてください。
 - 接続先の既定値は公開予定のGitHub Pages。ローカルで検証する場合は `MIRAI_BASE_URL=http://127.0.0.1:4321/mirai_scene/` を設定します。本番公開前には両サイトの公開状況を確認してください。
 

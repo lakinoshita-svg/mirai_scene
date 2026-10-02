@@ -1,0 +1,4 @@
+/* aboutの表示幅を全ページの共通基準にする。PHP組み込みにも同じCSSを使う。 */
+.miraiLogo{display:block;width:180px;height:auto;max-width:100%;margin:0;padding:0;flex-shrink:0}
+@media(max-width:650px){.miraiLogo{width:140px}}
+@media(max-width:350px){.miraiLogo{width:120px}}

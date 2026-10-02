@@ -1,9 +1,12 @@
 ---
-import '../styles/style.css';
-import '../styles/brand.css';
-import '../styles/astro.css';
-import '../styles/layout.css';
-import Breadcrumbs from '../components/Breadcrumbs.astro';
+// 共通CSSは基本→配色→操作状態→配置→ロゴの順。後段が前段を上書きするため順番を維持する。
+import '../styles/baseStyles.css';
+import '../styles/brandStyles.css';
+import '../styles/interactionStyles.css';
+import '../styles/layoutStyles.css';
+import '../styles/brandLogo.css';
+import BrandLogo from '../components/brandLogo.astro';
+import Breadcrumbs from '../components/breadcrumbs.astro';
 import { sitePath } from '../lib/paths';
 interface Props { title: string; description?: string; breadcrumb?: string }
 const { title, breadcrumb, description = '“好き”から始まる進路選び。画像を見て選ぶ約3分の仕事体験で、小さな「気になる」を見つけよう。' } = Astro.props;
@@ -16,28 +19,25 @@ const { title, breadcrumb, description = '“好き”から始まる進路選�
     <meta name="description" content={description} />
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
-    <link rel="icon" type="image/png" href={sitePath('assets/brand/mirai-scene-favicon.png')} />
+    <link rel="icon" type="image/png" href={sitePath('assets/brand/miraiSceneFavicon.png')} />
   </head>
   <body>
     <a class="skip-link" href="#app">本文へ移動</a>
     <header class="site-header">
       <div class="brand-family">
-        <a class="parent-brand" href="https://shinronavi.com/" target="_blank" rel="noopener" aria-label="進路ナビを別タブで開く"><img src={sitePath('assets/brand/shinronavi-logo.png')} alt="進路ナビ" width="1200" height="300" /></a>
+        <a class="parent-brand" href="https://shinronavi.com/" target="_blank" rel="noopener" aria-label="進路ナビを別タブで開く"><img src={sitePath('assets/brand/shinronaviLogo.png')} alt="進路ナビ" width="1200" height="300" /></a>
         <span class="brand-divider" aria-hidden="true"></span>
-        <a class="brand" href={sitePath()} aria-label="ミライシーン ホーム"><img class="mirai-logo" src={sitePath('assets/brand/mirai-scene-logo.png')} alt="ミライシーン" width="2172" height="724" /></a>
+        <a class="brand" href={sitePath()} aria-label="ミライシーン ホーム"><BrandLogo /></a>
       </div>
       <a class="header-link" href={sitePath('about/')}>ミライシーンについて <span>↗</span></a>
     </header>
     <main id="app" tabindex="-1"><Breadcrumbs current={breadcrumb} /><slot /></main>
-    <footer class="site-footer"><div class="site-footer-inner"><a href={sitePath()} class="footer-brand"><img class="mirai-logo" src={sitePath('assets/brand/mirai-scene-logo.png')} alt="ミライシーン" width="2172" height="724" /></a><p>“好き”から始まる進路選び。今、将来を決めなくても大丈夫。</p></div></footer>
+    <footer class="site-footer"><div class="site-footer-inner"><a href={sitePath()} class="footer-brand"><BrandLogo /></a><p>“好き”から始まる進路選び。今、将来を決めなくても大丈夫。</p></div></footer>
   </body>
 </html>
 <style>
   .parent-brand{display:flex;align-items:center;flex-shrink:0}
   .parent-brand img{display:block;width:112px;height:auto}
-  .mirai-logo{display:block;width:180px;height:auto;max-width:100%}
-  @media(max-width:650px){.mirai-logo{width:140px}}
-  @media(max-width:350px){.mirai-logo{width:120px}}
   @media(max-width:650px){.parent-brand img{width:76px}}
   @media(max-width:350px){.parent-brand img{width:64px}}
 </style>

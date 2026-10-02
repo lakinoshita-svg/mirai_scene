@@ -5,7 +5,7 @@ import path from 'node:path';
 import vm from 'node:vm';
 const root = process.env.TEST_DIST || 'dist';
 const base = (process.env.ASTRO_BASE || '/mirai_scene/').replace(/\/$/, '');
-const fields = JSON.parse(fs.readFileSync('src/data/learning-links.json', 'utf8'));
+const fields = JSON.parse(fs.readFileSync('src/data/learningLinks.json', 'utf8'));
 const careers = fs.readdirSync('src/content/careers').filter(f => f.endsWith('.json')).map(f => JSON.parse(fs.readFileSync(`src/content/careers/${f}`, 'utf8')));
 const read = p => fs.readFileSync(path.join(root, p), 'utf8');
 

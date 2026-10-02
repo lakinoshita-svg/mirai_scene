@@ -3,9 +3,9 @@ import { glob } from 'astro/loaders';
 import { z } from 'astro/zod';
 import { existsSync } from 'node:fs';
 import { resolve } from 'node:path';
-import { learningLinks } from './lib/learning-links';
+import { learningLinks } from './lib/learningLinks';
 import interests from './data/interests.json';
-import { cardThemes } from './lib/card-themes';
+import { cardThemes } from './lib/cardThemes';
 
 const text = z.string().trim().min(1).refine(value => !value.includes('【要編集】'), '下書きの要編集項目が残っています');
 const asset = text.refine(value => /^assets\/[a-zA-Z0-9/_-]+\.(png|jpe?g|webp|svg)$/.test(value), 'public/assets 内の画像パスを指定してください')

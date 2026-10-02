@@ -1,7 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
-import { filterCatalog } from '../src/lib/catalog-filter.mjs';
+import { filterCatalog } from '../src/lib/catalogFilter.mjs';
 test('300 entries preserve theme, learning and normalized AND search', () => {
  const items = Array.from({length:300},(_,i)=>({slug:`job-${i}`,name:`Web担当${i}`,category:'IT',cardTheme:i%2?'make':'solve',entryTitle:'仕組みを考える',description:'予約サイト',learningIds:i%3?['it']:['business']}));
  assert.equal(filterCatalog(items).length,300);
