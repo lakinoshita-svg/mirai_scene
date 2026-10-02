@@ -1,0 +1,86 @@
+{
+  "release": "initial-2026-10-02",
+  "purpose": "初期導入用固定版。通常ビルドでは更新しない",
+  "contentCount": 19,
+  "zip": "mirai-scene-initial-2026-10-02.zip",
+  "sha256": "3cc5df90ac2a25e2d3ea52794e60ecbfb54dd00dcc6b6912eeca537cb1eb7abe",
+  "sourceBundle": "release-8EJID0",
+  "sources": [
+    {
+      "file": "src/content/careers/animal-keeper.json",
+      "sha256": "039841b6adebbdae760d63e160ca96154435bd96f16d87434ad29b9407db04e3"
+    },
+    {
+      "file": "src/content/careers/architect.json",
+      "sha256": "48528fe3d96db092d4d9ec8b8ce4ae368b07bc7797f566aa8d0cfbc62ebcfffe"
+    },
+    {
+      "file": "src/content/careers/beauty.json",
+      "sha256": "f6dac221c98951d13db5aa53afff51ead9eb55c33aea1dfb6f8fbcfa3b0a4473"
+    },
+    {
+      "file": "src/content/careers/chef.json",
+      "sha256": "de966e9f33bd3e63d769af2c74421dcc0071df53d043ac479c003ac6d43ba6d3"
+    },
+    {
+      "file": "src/content/careers/childcare.json",
+      "sha256": "458af2d3ea7cba9993cd9a9b66b72a5bea4c037f9f49c4b43ffc233b30f2c827"
+    },
+    {
+      "file": "src/content/careers/data-scientist.json",
+      "sha256": "a4aec1ccb5574af4267258faa214b2893c53df8f88c24c7d8cedc3492ab637a8"
+    },
+    {
+      "file": "src/content/careers/designer.json",
+      "sha256": "6d135b01d5083f578f976f964991b17908e2fae638df20538ba477bf7ed8dbf9"
+    },
+    {
+      "file": "src/content/careers/editor.json",
+      "sha256": "b2e3e8ff002765151f0c1551f602e5a9ac145c1725caec6919dc15a73f90fcd8"
+    },
+    {
+      "file": "src/content/careers/engineer.json",
+      "sha256": "e87aeb47902e12855b5d11ae807a2ed71548701f953e51f8ec3409d3d4e203d5"
+    },
+    {
+      "file": "src/content/careers/event-planner.json",
+      "sha256": "ab8be63726eab4c36c6fba94459b89cd3c672e2767bc315e1a49a7aec953a61a"
+    },
+    {
+      "file": "src/content/careers/farmer.json",
+      "sha256": "deea26faa230880b189c9048b60e74e622353a87f64964b8ef4c6b4de5037921"
+    },
+    {
+      "file": "src/content/careers/game-planner.json",
+      "sha256": "7ee5637951697f6337d84a81493fab670a4c94c7f0a104b0d4142925eeb5149b"
+    },
+    {
+      "file": "src/content/careers/librarian.json",
+      "sha256": "3f1ec9060a4ef28405c5690ff49db3a05efef208c19d9c40abea74885a802adc"
+    },
+    {
+      "file": "src/content/careers/logistics.json",
+      "sha256": "73170060e5edd17f00a45bbf99ade58c741ab5727ae7362518896e73f604212a"
+    },
+    {
+      "file": "src/content/careers/museum-curator.json",
+      "sha256": "de215709b51c06255af9afecbb1bb27a352d44c357d00883b4aaaf76af7c643c"
+    },
+    {
+      "file": "src/content/careers/pastry.json",
+      "sha256": "3534e4167c7ccb92a0daeffdaeaa749f63c2602fda1e03eba828e30b33f7ef78"
+    },
+    {
+      "file": "src/content/careers/product-developer.json",
+      "sha256": "d28db1d0ca8c316bea644e490ebfa61461f2c4aee6e1ff4d7da93a5b9932229b"
+    },
+    {
+      "file": "src/content/careers/tourism.json",
+      "sha256": "742a8c3531a84e38aa0213e979ad36be8011767e857d170902a788c6386fa840"
+    },
+    {
+      "file": "src/content/careers/video-producer.json",
+      "sha256": "fe6bbd6c55e7f6c70ea888dcd96f1662e93c501e5350a4ecf5bedd9b7c88359d"
+    }
+  ]
+}

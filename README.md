@@ -4,6 +4,10 @@ Astro＋職業別JSONで構成した、進路ナビ向けの選択型仕事体�
 
 ## 起動・ビルド
 
+別担当者への引き継ぎは [AGENTS.md](AGENTS.md) を入口にしてください。[制作引き継ぎガイド](docs/editorial/HANDBOOK.md)と[依頼テンプレート](docs/editorial/REQUEST-TEMPLATE.md)に、チャットで決めた編集方針・基準例・確認方法をまとめています。
+
+初期導入用の固定ZIPと追加原稿の制作を分けています。[担当別の手順](docs/DELIVERY-AND-CONTENT.md)、[コンテンツ仕様v1](docs/CONTENT-SPEC.md)、[制作台帳](docs/CONTENT-BATCHES.md)を参照してください。追加原稿は `drafts/` で確認し、現在の導入用ZIPへ混ぜません。
+
 Node.js 22.12以上（24推奨）、pnpmを使用します。
 
 ```sh
@@ -33,12 +37,12 @@ pnpm preview
 
 ## 職業を追加する
 
-1. 既存の職業JSONをコピーし、新しい職業のJSONを作成します。
+1. 既存の職業JSONを参考に、`drafts/<batch-id>/` へ新しい体験のJSONを作成します。内容確認前に公開コレクションへ入れません。
 2. `slug` を重複しない半角英小文字・数字・ハイフンにし、`order` で表示順を指定します。
 3. `interests` に興味タグ定義のIDを指定します。
 4. `scenes` に3場面、各 `options` に3選択肢を用意します。
 5. 画像を `public/assets/` に置き、JSONには `assets/ファイル名.png` と代替テキストを記載します。
-6. 内容確認後、チェック・ビルド・テストを実行して公開します。
+6. `npm run content:verify-drafts -- batch-001` などで隔離ビルドし、内容確認後に `src/content/careers/` へ移します。チェック・ビルド・テストを実行し、初期導入版とは別の更新版として公開します。
 
 画像（`image`）、依頼（`mission` と `brief`）、比較画像（`comparison`）は必要に応じて追加できます。比較画像もJSONで管理し、画面側に職業固有の画像を埋め込みません。
 

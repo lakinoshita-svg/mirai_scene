@@ -19,6 +19,7 @@ const categories = ['すべて', ...new Set(careers.map(c => c.category))];
 <summary>職業の分野からも探せます</summary>
 <div class="filters" role="group" aria-label="分野で絞り込む">{categories.map((c,i) => <button class:list={['filter', {active:i===0}]} data-category-filter={c} aria-pressed={i===0?'true':'false'}>{c}</button>)}</div>
 </details>
+        <button class="text-link" type="button" data-clear-filters hidden>検索条件をクリア</button>
       </div>
       <p class="catalog-count" aria-live="polite">
 <span data-count-label>いろいろな仕事のひと場面</span> <span data-count>{careers.length}件</span>

@@ -14,7 +14,9 @@
 .skip-link:focus{transform:none}
 .catalog-count [data-count-label]{margin:0;padding:0;background:none;font-size:inherit;border-radius:0}
 .choice-control{position:relative}
-.choice-control input{position:absolute;opacity:0;width:1px;height:1px}
+/* 見た目の選択肢とネイティブradioの操作領域を一致させる。 */
+.choice-control input{position:absolute;inset:0;opacity:0;width:100%;height:100%;margin:0;z-index:1;cursor:pointer}
+.choice-control input:disabled{pointer-events:none}
 .choice-control label{cursor:pointer}
 .choice-control input:focus-visible+label{outline:3px solid #ea7900;outline-offset:4px}
 .choice-control input:checked+label{border-color:#7043ae;background:#f5effb}

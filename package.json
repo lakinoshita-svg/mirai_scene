@@ -9,6 +9,7 @@
   },
   "scripts": {
     "build:shinronavi": "node scripts/build-shinronavi.mjs",
+    "release:verify-initial": "node scripts/verify-initial-release.mjs",
     "dev": "astro dev --host 127.0.0.1",
     "check": "astro check",
     "build": "astro build",
@@ -16,6 +17,7 @@
     "test": "node --test tests/*.test.mjs",
     "sync:inquiry": "node scripts/sync-inquiry-links.mjs",
     "content:new": "node scripts/new-career.mjs",
+    "content:verify-drafts": "node scripts/verify-drafts.mjs",
     "content:audit": "node scripts/content-audit.mjs",
     "content:export-review": "node scripts/export-review.mjs",
     "content:benchmark": "node scripts/benchmark-catalog.mjs",
