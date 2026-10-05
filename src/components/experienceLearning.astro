@@ -4,4 +4,15 @@ import type { Career } from '../lib/careers';
 interface Props { career: Career }
 const { career: c } = Astro.props;
 ---
-<section class="learning-next"><span class="scene-kicker">気になったら、もう少し。</span><h2 class="question">この体験は、こんな学びにつながっています。</h2><div class="study-links">{c.studies.map(s=><span>{s}</span>)}</div><p>{c.learning}</p><p class="fine-print">学校によって学べる内容や課程は異なります。今の選択から適性を判定したおすすめではありません。</p><LearningLinks ids={c.learningIds} /><div class="small-step"><strong>資料請求は、決めるためだけのものではありません。</strong><p>授業や学生生活を知るためにパンフレットを読む。雰囲気を確かめにオープンキャンパスへ行く。情報を集める一歩から始められます。</p></div></section>
+<section class="learning-next">
+  <span class="scene-kicker">気になったら、もう少し。</span>
+  <h2 class="question">この体験は、こんな学びにつながっています。</h2>
+  <div class="study-links">{c.studies.map(study => <span>{study}</span>)}</div>
+  <p>{c.learning}</p>
+  <LearningLinks ids={c.learningIds}>
+    <div class="small-step">
+      <strong>資料請求は、決めるためだけのものではありません。</strong>
+      <p>授業や学生生活を知るためにパンフレットを読む。雰囲気を確かめにオープンキャンパスへ行く。情報を集める一歩から始められます。</p>
+    </div>
+  </LearningLinks>
+</section>

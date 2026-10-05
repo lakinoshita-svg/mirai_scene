@@ -49,7 +49,7 @@ fs.writeFileSync(path.join(privateDir,'manifest.json'),JSON.stringify(manifest,n
 fs.writeFileSync(path.join(privateDir,'.htaccess'),'Require all denied\n');
 const cssDir=path.join(target,'new/_app/_webroot/css/page/miraiscene');
 fs.mkdirSync(cssDir,{recursive:true});
-fs.writeFileSync(path.join(cssDir,'miraiscene.css'),scopeCss([...css,fs.readFileSync('src/styles/brandLogo.css','utf8')].join('\n'))+'\n#mirai-scene{font-family:inherit}#mirai-scene .mirai-local-nav{display:flex;align-items:center;justify-content:space-between;gap:16px;max-width:1224px;margin:auto;padding:12px 20px}#mirai-scene .mirai-local-nav>a:last-child{font-size:13px;color:#6443a5}\n');
+fs.writeFileSync(path.join(cssDir,'miraiscene.css'),scopeCss([...css,fs.readFileSync('src/styles/brandLogo.css','utf8'),fs.readFileSync('src/styles/brandNavigation.css','utf8')].join('\n'))+'\n#mirai-scene{font-family:inherit}\n');
 const templates='integrations/shinronavi/templates';
 copy(`${templates}/MiraisceneController.php`,'new/_app/_controller/MiraisceneController.php');
 copy(`${templates}/MiraiPageService.php`,'new/_app/_util/miraiscene/MiraiPageService.php');

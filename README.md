@@ -1,5 +1,7 @@
 # ミライシーン
 
+現在の導入版：[2026-10-05版の変更・導入手順](deliveries/release-2026-10-05/RELEASE-NOTES.md)。ZIPは同フォルダの `miraiSceneShinronavi20261005.zip`（Git対象外）を別途共有してください。旧初期版は保持しています。
+
 コードを変更する前に [命名・コード管理ガイド](docs/CODE-MAINTENANCE.md)を確認してください。内部ファイルはキャメルケースで管理し、公開URLや外部連携の名前は互換性を維持します。
 
 資料の入口：内容確認を行う担当者は [作業者向け仕様書](docs/CONTENT-SPEC.md)、AI・開発担当者は [AI向け仕様書](docs/CONTENT-SPEC-AI.md) を読んでください。どちらにも背景・目的・概要を記載しています。

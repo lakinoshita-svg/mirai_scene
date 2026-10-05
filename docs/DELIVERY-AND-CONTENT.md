@@ -8,13 +8,13 @@
 
 ## 導入担当
 
-`deliveries/initial-2026-10-02/mirai-scene-initial-2026-10-02.zip` を使う。既存19体験を含む2026-10-02版をコピーして固定したもの。ZIP内のINSTALL.md・VALIDATION.md・運用マニュアルと、隣のmanifest.jsonを渡す。
+現在の導入指定版は `deliveries/release-2026-10-05/miraiSceneShinronavi20261005.zip`。19体験・57シーンと2026-10-05時点の共通実装を収録する。ZIP内のINSTALL.md・VALIDATION.md・運用マニュアル・RELEASE-NOTES.mdと、隣のmanifest.jsonを渡す。旧 `deliveries/initial-2026-10-02/` は復元・比較用に保持する。
 
-通常の `build:shinronavi` が更新する `integrations/shinronavi/output/latest.json` は制作側の最新ビルドを示す。初期導入の指定として使い続けない。導入用ZIPの内容は今回変更していない。
+通常の `build:shinronavi` が更新する `integrations/shinronavi/output/latest.json` は制作側の最新ビルドを示す。配布対象は日付・版を明記したdeliveries内のZIPで指定する。旧固定ZIPは変更せず、修正版を別名で作成した。
 
 ZIPは大容量の生成物のためGit対象外。manifestと手順はGitで管理する。別PCで導入作業する際は固定ZIPを別途共有し、manifestのSHA-256と照合する。Gitをcloneしただけでは固定ZIPは付属しない。
 
-PowerShellで `Get-FileHash deliveries/initial-2026-10-02/mirai-scene-initial-2026-10-02.zip -Algorithm SHA256` を実行して照合できる。ハッシュが違う場合はそのまま導入せず、対象版を確認する。
+PowerShellで `Get-FileHash deliveries/release-2026-10-05/miraiSceneShinronavi20261005.zip -Algorithm SHA256` を実行してmanifest.jsonと照合する。ハッシュが違う場合はそのまま導入せず、対象版を確認する。
 
 初期導入中に修正が必要になった場合も、このZIPへ上書きせず修正版を別名で作成し、変更点を明記する。本番配置・rewrite・実際の進路ナビとの併存確認はINSTALL.mdに従う。
 

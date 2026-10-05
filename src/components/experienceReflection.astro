@@ -2,9 +2,10 @@
 import type { Career } from '../lib/careers';
 interface Props { career: Career }
 const { career: c } = Astro.props;
-const tags = c.scenes.map((s,i)=>({id:String(i),label:s.insight,response:`「${s.insight}」が気になったんですね。この体験につながる学びも、下で紹介しています。`})).concat([
- {id:'unsure',label:'まだ、よく分からない',response:'すぐに分からなくても大丈夫。ほかの仕事を体験してから、考えてみてもかまいません。'},
- {id:'different',label:'少し違うかも',response:'「少し違うかも」も、体験したからこその気づき。別のひと場面も、のぞいてみませんか。'},
+// 感想を言葉にする補助。適性の判定や次の行動の指示には使わない。
+const tags = c.scenes.map((s,i)=>({id:String(i),label:s.insight,response:`「${s.insight}」。この仕事の中でも、その部分が気になった。仕事全体を好きかはまだ分からなくても、そこにはもう少し触れてみたい気持ちがあるのかもしれません。`})).concat([
+ {id:'unsure',label:'まだ、よく分からない',response:'「選んでみたけれど、どの部分が面白いのかは、まだ言葉にできない。」今の感覚は、そんな気持ちに近いかもしれません。はっきりした感想になっていなくても大丈夫です。'},
+ {id:'different',label:'少し違うかも',response:'「体験してみたけれど、自分が気になるものとは少し違う気がする。」どこが違うのかは、まだ説明できなくても、その感覚が今の感想なのかもしれません。'},
 ]);
 ---
 <section class="reflection" aria-labelledby="reflection-title"><h2 class="question" id="reflection-title">どの部分が、ちょっと気になった？</h2><div class="reflection-options" role="group" aria-labelledby="reflection-title">{tags.map(t=><button class="filter" type="button" data-reflection={t.id} data-response={t.response} aria-pressed="false">{t.label}</button>)}</div><p id="reflection-response" class="reflection-response" aria-live="polite">気持ちに近いものがあれば、選んでみてください。選ばずに先へ進んでも大丈夫です。</p></section>

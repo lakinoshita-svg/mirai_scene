@@ -1,5 +1,9 @@
 # 共通ロゴの管理
 
+## FVの説明用カード画像
+
+`public/assets/hero/make.png`・`support.png`・`convey.png` はリンクのない説明用画像。2026-10-05、内蔵imagegenで右下の丸い矢印ボタンを除去した素材へ差し替えた。編集指示は「右下の紫の矢印と円を除去し、白いカード背景で補う。人物・文字・構図・透過背景を維持する」。生成編集のため画素単位で元画像と同一ではない。文字と矢印の除去を目視確認済み。実際に移動するCTAの矢印は維持する。
+
 2026-10-02更新。
 
 ## 命名規則
@@ -8,6 +12,7 @@
 
 - 使用画像：`public/assets/brand/miraiSceneLogo.png`（2069×523、透過PNG）。TOP・about・詳細・フッター・進路ナビ組み込み・導線バナーから同じ画像を参照する。
 - Astroの表示部品：`src/components/brandLogo.astro`。
+- 配置：`src/styles/brandNavigation.css`。ヘッダーのミライシーンロゴは左右同幅のグリッドで中央揃え。進路ナビロゴは左、aboutリンクは右。フッターも中央揃え。PHP組み込みのローカルナビにも同じCSSを使う。
 - 共通サイズ：`src/styles/brandLogo.css`。aboutを基準にPC180px、650px以下140px、350px以下120px。ページ固有のロゴ幅を追加しない。
 - 進路ナビ用：`scripts/buildShinronavi.mjs` が同じbrandLogo.cssを取り込む。バナーは配置面積が違うため、banner.cssの専用幅を使用する。
 - ファビコン：`public/assets/brand/miraiSceneFavicon.png`。ブラウザのタブに表示するアイコン。

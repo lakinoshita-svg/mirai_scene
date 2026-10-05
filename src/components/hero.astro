@@ -10,9 +10,10 @@ const asset = (name: string) => sitePath(`assets/hero/${name}`);
       <p>まだ、やりたいことが決まっていなくても大丈夫。<br />約3分で、気になる仕事の3つのシーンを体験。<br />選んで、考えて、自分の「好き」のヒントを見つけよう。</p>
     </div>
     <div class="hero-art">
+      <!-- 3枚は説明用画像。リンクを示す丸い矢印は素材から除去し、移動は下のCTAにまとめる。 -->
       <img class="hero-note" src={asset('note.png')} alt="好きから、きっと見つかる わたしのミライ" />
-      <div class="hero-card hero-make"><img src={asset('make.png')} alt="好きなものを、つくる。" width="1440" height="1080" /></div>
-      <div class="hero-card hero-support"><img src={asset('support.png')} alt="誰かの安心を、支える。" width="1440" height="1080" /></div>
+      <div class="hero-card hero-make"><img src={asset('make.png')} alt="好きなものを、つくる。" width="1448" height="1086" /></div>
+      <div class="hero-card hero-support"><img src={asset('support.png')} alt="誰かの安心を、支える。" width="1448" height="1086" /></div>
       <div class="hero-card hero-convey"><img src={asset('convey.png')} alt="気持ちやアイデアを、伝える。" width="1672" height="941" /></div>
     </div>
     <div class="hero-action">

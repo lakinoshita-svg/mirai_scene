@@ -1,6 +1,6 @@
 # コンテンツ運用
 
-初期導入は `deliveries/initial-2026-10-02/` の固定ZIPを使用します。追加制作は `drafts/<batch-id>/` で進め、初期導入版を更新しません。[担当別手順](docs/DELIVERY-AND-CONTENT.md)・[仕様v1](docs/CONTENT-SPEC.md)・[制作台帳](docs/CONTENT-BATCHES.md)を参照してください。
+現在の導入指定版は `deliveries/release-2026-10-05/` です。`deliveries/initial-2026-10-02/` は過去の固定版として保持します。追加制作は `drafts/<batch-id>/` で進め、初期導入版を更新しません。[担当別手順](docs/DELIVERY-AND-CONTENT.md)・[仕様v1](docs/CONTENT-SPEC.md)・[制作台帳](docs/CONTENT-BATCHES.md)を参照してください。
 
 バッチ下書きの検証は `npm run content:verify-drafts -- batch-001`。公開コレクションと同じスキーマで一時プロジェクトをビルドします。元のsrc・dist・固定ZIPへは反映しません。`content:new` がdrafts直下に作った原稿は、対象バッチのディレクトリへ整理してから検証してください。
 
@@ -8,19 +8,19 @@
 
 運用担当向けの手順は `outputs/operations/運用マニュアル.html` を参照してください。
 
-- `npm run content:export-review`：最新JSONからExcelと原稿照合用manifestを出力します。Codex同梱のartifact-toolが必要です。別端末で依存の場所が異なる場合は `CODEX_ARTIFACT_MODULE_ROOT` に同梱node_modulesの絶対パスを指定します。
-- `npm run content:export-review -- --check`：Excel用依存なしで原稿の読み込みと件数を確認します。
+- `npm run content:exportReview`：最新JSONからExcelと原稿照合用manifestを出力します。Codex同梱のartifact-toolが必要です。別端末で依存の場所が異なる場合は `CODEX_ARTIFACT_MODULE_ROOT` に同梱node_modulesの絶対パスを指定します。
+- `npm run content:exportReview -- --check`：Excel用依存なしで原稿の読み込みと件数を確認します。
 - 出力先は `outputs/operations/<UTC日時>/`。Excel内の日付は日本時間です。プレビューは `tmp/review-export/<UTC日時>/` に保存します。
 - 記入済みのExcelは上書きせず保管してください。確認欄は再出力ごとに未確認となり、旧版のコメントは自動移行しません。Codexへ記入済みExcelを渡し、manifestと現行原稿の差分を確認したうえでJSONへ修正を反映します。
 
-出力処理の修正箇所：`scripts/lib/review-data.mjs` がJSON展開・出典ハッシュ、`scripts/lib/review-workbook.mjs` が列・書式、`scripts/export-review.mjs` が依存読込・保存を担当します。新しいJSON項目は自動で出力されます。日本語の項目名はreview-dataの辞書へ追加してください。
+出力処理の修正箇所：`scripts/lib/reviewData.mjs` がJSON展開・出典ハッシュ、`scripts/lib/reviewWorkbook.mjs` が列・書式、`scripts/exportReview.mjs` が依存読込・保存を担当します。新しいJSON項目は自動で出力されます。日本語の項目名はreviewDataの辞書へ追加してください。
 
 ## 編集元と生成物
 
 - 職業体験：`src/content/careers/<slug>.json`。TOP・学び別一覧・詳細は同じ原稿を使います。
 - カード画像・テーマ名：`src/data/interests.json`。テーマの追加はこの定義と画像の追加で対応します。
-- 探究・学校検索の対応：`src/data/learning-links.json`。職業JSONの `learningIds` に登録済みIDを指定します。
-- 広告：`src/data/school-ads.json`。同じcategoryなら異なる体験でも共通の広告候補を使います。
+- 探究・学校検索の対応：`src/data/learningLinks.json`。職業JSONの `learningIds` に登録済みIDを指定します。
+- 広告：`src/data/schoolAds.json`。同じcategoryなら異なる体験でも共通の広告候補を使います。
 - `dist/`、探究側の `mirai-links.json` は生成物です。直接編集しません。
 
 ## 追加・更新の手順
