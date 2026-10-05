@@ -8,7 +8,8 @@
   margin-inline: auto;
   padding-inline: var(--shell-gutter);
 }
-.breadcrumb-shell { padding-block: 8px 10px; }
+/* パンくずの上下余白はPC・SP共通で8pt。内側のnavには余白を重ねない。 */
+.breadcrumb-shell { margin-block: 8pt; padding-block: 0; }
 .breadcrumb-shell .breadcrumbs { margin: 0; flex-wrap: wrap; }
 .breadcrumbs [aria-current] { color: var(--ink, #30283e); }
 footer.site-footer { display: block; padding: 0; }
