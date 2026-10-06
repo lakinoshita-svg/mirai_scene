@@ -25,6 +25,8 @@
 
 ## 編集・確認
 
+2026-10-06の追加調整：通常表示のFVはPC・SPとも650px以内にする。SPは画像領域を260px高、最大320px幅にまとめ、説明・CTAとの余白を縮小。幅320〜1920pxの代表10サイズでFV高500〜629px、横はみ出しなしを確認。共通ヘッダーはPC68px・SP56px、パンくずは行高18px・上下余白4pxへ縮小した（以前の上下8pt指定を更新）。文字拡大時は内容を切らないため自然な高さを許容する。
+
 - FV：`src/components/hero.astro`。文字・CTAを画像と同じ絶対座標で固定しない。
 - TOP一覧と下部：`src/styles/homeStyles.css`、`src/pages/index.astro`。TOP専用のCSSは`.homePage`内に限定する。
 - 検索UI：`src/components/careerCatalog.astro`。データ属性と検索ロジックの接続を維持する。カテゴリーは既存のJSONを使用する。

@@ -50,14 +50,18 @@ const asset = (name: string) => sitePath(`assets/hero/${name}`);
   .hero-invitation:focus-visible{outline:3px solid #6956d9;outline-offset:4px}
   .hero-meta{margin:12px 0 0;display:flex;align-items:center;justify-content:center;gap:8px;color:#686171;font-size:12px;line-height:1.8}
   @media(max-width:900px){
-    /* SPではCTAを写真より先に置く。画像を極端に縮めて画面内へ押し込まない。 */
-    .hero-stage{grid-template-columns:minmax(0,1fr);grid-template-areas:"copy" "action" "art";padding:24px 20px 40px;min-height:0;max-width:600px}
+    /* 通常表示は650px以内。文字を切るmax-heightではなく余白と画像領域を調整する。
+       文字拡大時だけは読みやすさを優先し、自然に縦へ伸ばす。 */
+    .hero-stage{grid-template-columns:minmax(0,1fr);grid-template-areas:"copy" "action" "art";grid-template-rows:auto auto auto;padding:16px 20px 20px;min-height:0;max-width:600px}
     .hero-copy{padding-top:0}.hero-copy .heroEyebrow{font-size:12px;margin-bottom:12px}
-    .hero-copy h1{font-size:clamp(23px,6vw,34px);line-height:1.5}
-    .hero-copy p{font-size:14px;margin-top:16px;line-height:1.85}
-    .hero-action{margin-top:22px;width:100%;max-width:370px}
+    .hero-copy h1{font-size:clamp(23px,6vw,30px);line-height:1.5}
+    .hero-copy p{font-size:14px;margin-top:12px;line-height:1.8}
+    .hero-action{margin-top:16px;width:100%;max-width:370px}
     .hero-invitation{font-size:14px;min-height:56px;padding-left:18px;gap:8px}
-    .hero-art{max-width:400px;width:100%;margin:28px auto 0;aspect-ratio:1}
+    .hero-art{max-width:320px;width:100%;height:260px;margin:16px auto 0;aspect-ratio:auto}
+    .hero-card{width:50%}
+    .hero-support{top:28%}
+    .hero-convey{left:0;top:59%;width:58%}
     .hero-note{width:25%}
   }
   @media(max-width:350px){.hero-stage{padding-inline:14px}.hero-copy h1{font-size:21px}.hero-invitation{font-size:12px}.hero-meta{font-size:11px}}
