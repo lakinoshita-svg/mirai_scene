@@ -27,7 +27,7 @@ const asset = (name: string) => sitePath(`assets/hero/${name}`);
 <style>
   /* コピーとCTAは同じ列・通常フローでまとめる。写真だけを重ね、文字量で衝突させない。 */
   .hero{position:relative;isolation:isolate;overflow:hidden}
-  .hero-stage{max-width:1224px;margin:auto;padding:36px 32px 48px;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);grid-template-areas:"copy art" "action art";grid-template-rows:auto 1fr;column-gap:32px;align-content:center;min-height:500px;box-sizing:border-box}
+  .hero-stage{max-width:1224px;margin:auto;padding:16px 32px 20px;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);grid-template-areas:"copy art" "action art";grid-template-rows:auto 1fr;column-gap:32px;align-content:center;box-sizing:border-box}
   .hero-background{position:absolute;inset:0;z-index:-1;opacity:.7}
   .hero-background img{width:100%;height:100%;object-fit:cover}
   .hero-copy{grid-area:copy;align-self:start;padding-top:24px;z-index:1}
@@ -52,7 +52,7 @@ const asset = (name: string) => sitePath(`assets/hero/${name}`);
   @media(max-width:900px){
     /* 通常表示は650px以内。文字を切るmax-heightではなく余白と画像領域を調整する。
        文字拡大時だけは読みやすさを優先し、自然に縦へ伸ばす。 */
-    .hero-stage{grid-template-columns:minmax(0,1fr);grid-template-areas:"copy" "action" "art";grid-template-rows:auto auto auto;padding:16px 20px 20px;min-height:0;max-width:600px}
+    .hero-stage{grid-template-columns:minmax(0,1fr);grid-template-areas:"copy" "action" "art";grid-template-rows:auto auto auto;padding:8px 20px 8px;max-width:600px}
     .hero-copy{padding-top:0}.hero-copy .heroEyebrow{font-size:12px;margin-bottom:12px}
     .hero-copy h1{font-size:clamp(23px,6vw,30px);line-height:1.5}
     .hero-copy p{font-size:14px;margin-top:12px;line-height:1.8}
