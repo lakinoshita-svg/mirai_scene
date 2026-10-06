@@ -6,8 +6,9 @@ const asset = (name: string) => sitePath(`assets/hero/${name}`);
   <div class="hero-stage">
     <picture class="hero-background"><source media="(max-width: 900px)" srcset={asset('background-sp.png')} /><img src={asset('background-pc.png')} alt="" width="1774" height="887" fetchpriority="high" /></picture>
     <div class="hero-copy">
+      <p class="heroEyebrow">“好き”から始まる、仕事のひと場面体験</p>
       <h1 id="hero-title">「好き！」の先にある、<span>未来をのぞいてみよう。</span></h1>
-      <p>まだ、やりたいことが決まっていなくても大丈夫。<br />約3分で、気になる仕事の3つのシーンを体験。<br />選んで、考えて、自分の「好き」のヒントを見つけよう。</p>
+      <p>まだ、やりたいことが決まっていなくても大丈夫。<br />仕事のひと場面を選んで、考えて。<br />自分の「好き」のヒントを見つけよう。</p>
     </div>
     <div class="hero-art">
       <!-- 3枚は説明用画像。リンクを示す丸い矢印は素材から除去し、移動は下のCTAにまとめる。 -->
@@ -19,50 +20,45 @@ const asset = (name: string) => sitePath(`assets/hero/${name}`);
     <div class="hero-action">
       <!-- カード画像にはリンクを付けず、CTAから体験一覧へ移動する。 -->
       <a class="hero-invitation" href="#experiences">気になる未来を、見つけてみよう。<span aria-hidden="true">↓</span></a>
-      <p class="hero-meta"><span class="hero-check"><img src={asset('check-background.svg')} alt="" /><img src={asset('check.svg')} alt="" /></span>登録なしでスタート</p>
+      <p class="hero-meta">約3分・3つのシーン<span aria-hidden="true">／</span>登録なしでスタート</p>
     </div>
   </div>
 </section>
 <style>
-  .hero{container-type:inline-size;max-width:1440px;margin:0 auto}
-  .hero-stage{position:relative;aspect-ratio:1440/734;isolation:isolate}
-  .hero-background{position:absolute;inset:1.9% 0 0;z-index:-1;overflow:hidden}
+  /* コピーとCTAは同じ列・通常フローでまとめる。写真だけを重ね、文字量で衝突させない。 */
+  .hero{position:relative;isolation:isolate;overflow:hidden}
+  .hero-stage{max-width:1224px;margin:auto;padding:36px 32px 48px;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);grid-template-areas:"copy art" "action art";grid-template-rows:auto 1fr;column-gap:32px;align-content:center;min-height:500px;box-sizing:border-box}
+  .hero-background{position:absolute;inset:0;z-index:-1;opacity:.7}
   .hero-background img{width:100%;height:100%;object-fit:cover}
-  .hero-copy{position:absolute;left:9.3%;top:19%;z-index:2}
-  .hero-copy h1{margin:0;color:#2c243d;font-size:3.333cqw;font-weight:700;line-height:1.24;letter-spacing:0}
-  .hero-copy h1 span{display:block;width:max-content;font-size:3.889cqw;background:linear-gradient(90deg,#6956d9,#a45dd8 52%,#f59a4a);background-clip:text;color:transparent}
+  .hero-copy{grid-area:copy;align-self:start;padding-top:24px;z-index:1}
+  .hero-copy .heroEyebrow{margin:0 0 20px;color:#7043ae;font-size:13px;font-weight:700;letter-spacing:.06em}
+  .hero-copy h1{margin:0;color:#2c243d;font-size:clamp(28px,3vw,42px);font-weight:700;line-height:1.5;letter-spacing:-.035em}
+  .hero-copy h1 span{display:block;background:linear-gradient(90deg,#6956d9,#a45dd8 65%,#c96a48);background-clip:text;color:transparent;white-space:nowrap}
   .hero-copy h1 span::after{display:none}
-  .hero-copy p{margin:.5cqw 0 0;font-size:1.319cqw;line-height:1.68;color:#686171}
-  .hero-art{position:absolute;inset:0;pointer-events:none}
-  .hero-note{position:absolute;left:87%;top:7.2%;width:12.66%;height:auto;mix-blend-mode:multiply}
-  .hero-card{position:absolute;display:flex;align-items:center;justify-content:center;pointer-events:none}
+  .hero-copy p{margin:20px 0 0;font-size:15px;line-height:1.9;color:#686171}
+  .hero-art{grid-area:art;position:relative;align-self:center;justify-self:end;width:100%;max-width:500px;aspect-ratio:1;pointer-events:none}
+  .hero-note{position:absolute;right:0;top:0;width:27%;height:auto;mix-blend-mode:multiply}
+  .hero-card{position:absolute;width:54%}
   .hero-card img{display:block;width:100%;height:auto}
-  .hero-make{left:49%;top:3%;width:27.78%;transform:rotate(-5deg)}
-  .hero-support{left:70%;top:22%;width:27.78%;transform:rotate(5deg)}
-  .hero-convey{left:49%;top:55%;width:37.01%;transform:rotate(-3deg)}
-  .hero-action{position:absolute;left:15.55%;top:55%;width:350px;max-width:100%}
-  .hero-invitation{display:flex;align-items:center;justify-content:center;gap:12px;min-height:64px;padding:12px 18px;box-sizing:border-box;border-radius:999px;background:linear-gradient(145deg,#6956d9,#a45dd8 58%,#f59a4a);color:#fff;font-size:16px;font-weight:700;line-height:1.7;text-align:center;text-decoration:none;box-shadow:0 6px 18px #6956d926}
-  .hero-invitation span{display:grid;place-items:center;flex-shrink:0;width:32px;height:32px;border-radius:50%;background:#fff;color:#6956d9;font-size:20px}
-  .hero-invitation:hover{box-shadow:0 8px 24px #6956d94d}
+  .hero-make{left:0;top:0;transform:rotate(-5deg)}
+  .hero-support{right:0;top:28%;transform:rotate(5deg)}
+  .hero-convey{left:2%;top:65%;width:68%;transform:rotate(-3deg)}
+  .hero-action{grid-area:action;align-self:start;width:fit-content;max-width:100%;margin-top:28px;z-index:1}
+  .hero-invitation{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:60px;padding:12px 18px 12px 24px;box-sizing:border-box;border-radius:999px;background:linear-gradient(115deg,#6956d9,#9956c1);color:#fff;font-size:15px;font-weight:700;line-height:1.6;text-decoration:none;box-shadow:0 6px 18px #6956d926}
+  .hero-invitation span{display:grid;place-items:center;flex-shrink:0;width:30px;height:30px;border-radius:50%;background:#fff;color:#6956d9;font-size:20px}
+  .hero-invitation:hover{box-shadow:0 8px 24px #6956d94d;background:#7043ae}
   .hero-invitation:focus-visible{outline:3px solid #6956d9;outline-offset:4px}
-  .hero-meta{margin:18px 0 0;display:flex;align-items:center;justify-content:center;gap:8px;white-space:nowrap;color:#686171;font-size:15px;line-height:24px}
-  .hero-check{position:relative;display:grid;place-items:center;width:16px;height:16px}
-  .hero-check img{position:absolute}
-  @media(min-width:901px) and (max-width:1200px){.hero-action{transform:scale(.83);transform-origin:top left}}
+  .hero-meta{margin:12px 0 0;display:flex;align-items:center;justify-content:center;gap:8px;color:#686171;font-size:12px;line-height:1.8}
   @media(max-width:900px){
-    .hero-stage{aspect-ratio:auto;display:flex;flex-direction:column;padding:12px 24px 20px}
-    .hero-background{inset:0}.hero-copy{position:relative;left:auto;top:auto}
-    .hero-copy h1{font-size:clamp(25px,4.5cqw,38px);line-height:1.4}
-    .hero-copy h1 span{font-size:clamp(27px,5cqw,42px)}
-    .hero-copy p{font-size:14px;line-height:1.9;margin:12px 0 0;max-width:590px}
-    /* 画面が低い端末では画像群を縮め、見出し・CTAの領域を確保する。
-       svhはブラウザの操作バーが表示された状態の高さ。文字拡大時は自然に縦へ伸ばす。 */
-    .hero-art{position:relative;inset:auto;height:auto;aspect-ratio:1/1.08;width:min(100%,clamp(180px,calc(92svh - 450px),340px));margin:6px auto 0}
-    .hero-note{left:auto;right:0;top:0;width:115px}
-    .hero-make{left:-2%;top:0;width:62%}.hero-support{left:auto;right:-2%;top:23%;width:62%}.hero-convey{left:-2%;top:56%;width:82%}
-    .hero-action{position:relative;left:auto;top:auto;width:350px;margin:10px auto 0}
-    .hero-invitation{font-size:clamp(12px,3.5cqw,16px);gap:8px;padding-inline:12px;min-height:56px}
-    .hero-meta{font-size:13px;margin-top:8px}
+    /* SPではCTAを写真より先に置く。画像を極端に縮めて画面内へ押し込まない。 */
+    .hero-stage{grid-template-columns:minmax(0,1fr);grid-template-areas:"copy" "action" "art";padding:24px 20px 40px;min-height:0;max-width:600px}
+    .hero-copy{padding-top:0}.hero-copy .heroEyebrow{font-size:12px;margin-bottom:12px}
+    .hero-copy h1{font-size:clamp(23px,6vw,34px);line-height:1.5}
+    .hero-copy p{font-size:14px;margin-top:16px;line-height:1.85}
+    .hero-action{margin-top:22px;width:100%;max-width:370px}
+    .hero-invitation{font-size:14px;min-height:56px;padding-left:18px;gap:8px}
+    .hero-art{max-width:400px;width:100%;margin:28px auto 0;aspect-ratio:1}
+    .hero-note{width:25%}
   }
-  @media(max-width:450px){.hero-copy h1{font-size:clamp(21px,6.4cqw,25px)}.hero-copy h1 span{font-size:clamp(23px,6.9cqw,27px)}.hero-stage{padding:8px 20px 16px}.hero-note{width:min(95px,30%)}}
+  @media(max-width:350px){.hero-stage{padding-inline:14px}.hero-copy h1{font-size:21px}.hero-invitation{font-size:12px}.hero-meta{font-size:11px}}
 </style>

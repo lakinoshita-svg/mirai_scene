@@ -3,18 +3,20 @@ import CareerCard from './careerCard.astro';
 import type { Career } from '../lib/careers';
 import interests from '../data/interests.json';
 import { sitePath, careerPath } from '../lib/paths';
-interface Props { careers: Career[]; learningId?: string; title?: string }
-const { careers, learningId = '', title = 'どんなことが、ちょっと気になる？' } = Astro.props;
+interface Props { careers: Career[]; learningId?: string; title?: string; introduction?: string }
+const { careers, learningId = '', title = 'どんなことが、ちょっと気になる？', introduction } = Astro.props;
 const categories = ['すべて', ...new Set(careers.map(c => c.category))];
 ---
     <section id="experiences" aria-labelledby="catalog-title" tabindex="-1" data-catalog data-learning={learningId} data-index-url={sitePath('catalog/index.json')} data-card-base={sitePath('catalog/cards/')}>
       <div class="catalog-title">
 <h2 id="catalog-title">{title}</h2>
 </div>
+      {introduction && <p class="catalogIntroduction">{introduction}</p>}
       <div class="catalog-controls" hidden>
-        <label class="catalog-search">キーワードで探す<input type="search" data-search placeholder="職業名・気になる言葉" maxlength="100" /></label>
+        <!-- 興味をまだ言語化できない人が先に選べるよう、カテゴリーを検索欄より前に置く。 -->
         <div class="filters interest-filters" role="group" aria-label="興味から体験を探す">
 <button class="filter active" data-interest="all" aria-pressed="true">まだ分からない・いろいろ見る</button>{interests.map(t => <button class="filter" data-interest={t.id} aria-pressed="false">{t.label}</button>)}</div>
+        <label class="catalog-search">キーワードで探す<input type="search" data-search placeholder="職業名・気になる言葉" maxlength="100" /></label>
         <details class="field-picker">
 <summary>職業の分野からも探せます</summary>
 <div class="filters" role="group" aria-label="分野で絞り込む">{categories.map((c,i) => <button class:list={['filter', {active:i===0}]} data-category-filter={c} aria-pressed={i===0?'true':'false'}>{c}</button>)}</div>
