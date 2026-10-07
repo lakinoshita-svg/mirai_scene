@@ -7,7 +7,7 @@
 - 共通HTML：`src/components/brandLogo.astro`
 - 共通のサイズ・色：`src/styles/brandLogo.css`
 - ヘッダーの配置：`src/styles/brandNavigation.css`
-- 進路ナビ組み込みの共通ロゴ：`integrations/shinronavi/templates/index.tpl`。Web版と同じ`.miraiLogo`クラスとCSSを使います。
+- 進路ナビ組み込み画面：`integrations/shinronavi/templates/index.tpl` は独自ヘッダーを出さず、進路ナビ本体の共通ヘッダーを使います。
 - 進路ナビ導線バナー：`integrations/shinronavi/templates/banner.tpl` と `banner.css`。文字ロゴとして表示し、ホスト側CSSとの衝突を避けるため専用トークンを使います。
 - ファビコン：`public/assets/brand/miraiSceneFavicon.png`。ブラウザタブ用のほか、導線バナーのイメージ内で装飾として単独表示します。文字ロゴと組み合わせてロゴ表示には使いません。
 
