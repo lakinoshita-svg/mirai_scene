@@ -1,5 +1,5 @@
 <?php
-// TOPはwide、探究記事はcompact。指定がなければwide。外部入力をURLへ渡さない。
+// TOPはwide、教材記事はcompact。指定がなければwide。外部入力をURLへ渡さない。
 $mirai_banner_compact = isset($mirai_banner_variant) && $mirai_banner_variant === 'compact';
 ?>
 <link rel="stylesheet" href="/new/_app/_webroot/css/page/miraiscene/banner.css">

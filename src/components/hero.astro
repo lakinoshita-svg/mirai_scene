@@ -1,6 +1,12 @@
 ---
 import { sitePath } from '../lib/paths';
 const asset = (name: string) => sitePath(`assets/hero/${name}`);
+// FVは仕事のイメージを示す3枚。検索カテゴリーとは別のためinterests.jsonへ混在させない。
+const heroCards = [
+  { className: 'hero-make', file: 'make.png', alt: '好きなものを、つくる。', width: 1448, height: 1086 },
+  { className: 'hero-support', file: 'support.png', alt: '誰かの安心を、支える。', width: 1448, height: 1086 },
+  { className: 'hero-convey', file: 'convey.png', alt: '気持ちやアイデアを、伝える。', width: 1672, height: 941 },
+];
 ---
 <section class="hero" aria-labelledby="hero-title">
   <div class="hero-stage">
@@ -13,9 +19,11 @@ const asset = (name: string) => sitePath(`assets/hero/${name}`);
     <div class="hero-art">
       <!-- 3枚は説明用画像。リンクを示す丸い矢印は素材から除去し、移動は下のCTAにまとめる。 -->
       <img class="hero-note" src={asset('note.png')} alt="好きから、きっと見つかる わたしのミライ" />
-      <div class="hero-card hero-make"><img src={asset('make.png')} alt="好きなものを、つくる。" width="1448" height="1086" /></div>
-      <div class="hero-card hero-support"><img src={asset('support.png')} alt="誰かの安心を、支える。" width="1448" height="1086" /></div>
-      <div class="hero-card hero-convey"><img src={asset('convey.png')} alt="気持ちやアイデアを、伝える。" width="1672" height="941" /></div>
+      {heroCards.map(card => (
+        <div class:list={['hero-card', card.className]}>
+          <img src={asset(card.file)} alt={card.alt} width={card.width} height={card.height} />
+        </div>
+      ))}
     </div>
     <div class="hero-action">
       <!-- カード画像にはリンクを付けず、CTAから体験一覧へ移動する。 -->
@@ -25,44 +33,237 @@ const asset = (name: string) => sitePath(`assets/hero/${name}`);
   </div>
 </section>
 <style>
-  /* コピーとCTAは同じ列・通常フローでまとめる。写真だけを重ね、文字量で衝突させない。 */
-  .hero{position:relative;isolation:isolate;overflow:hidden}
-  .hero-stage{max-width:1224px;margin:auto;padding:16px 32px 20px;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);grid-template-areas:"copy art" "action art";grid-template-rows:auto 1fr;column-gap:32px;align-content:center;box-sizing:border-box}
-  .hero-background{position:absolute;inset:0;z-index:-1;opacity:.7}
-  .hero-background img{width:100%;height:100%;object-fit:cover}
-  .hero-copy{grid-area:copy;align-self:start;padding-top:24px;z-index:1}
-  .hero-copy .heroEyebrow{margin:0 0 20px;color:#7043ae;font-size:13px;font-weight:700;letter-spacing:.06em}
-  .hero-copy h1{margin:0;color:#2c243d;font-size:clamp(28px,3vw,42px);font-weight:700;line-height:1.5;letter-spacing:-.035em}
-  .hero-copy h1 span{display:block;background:linear-gradient(90deg,#6956d9,#a45dd8 65%,#c96a48);background-clip:text;color:transparent;white-space:nowrap}
-  .hero-copy h1 span::after{display:none}
-  .hero-copy p{margin:20px 0 0;font-size:15px;line-height:1.9;color:#686171}
-  .hero-art{grid-area:art;position:relative;align-self:center;justify-self:end;width:100%;max-width:500px;aspect-ratio:1;pointer-events:none}
-  .hero-note{position:absolute;right:0;top:0;width:27%;height:auto;mix-blend-mode:multiply}
-  .hero-card{position:absolute;width:54%}
-  .hero-card img{display:block;width:100%;height:auto}
-  .hero-make{left:0;top:0;transform:rotate(-5deg)}
-  .hero-support{right:0;top:28%;transform:rotate(5deg)}
-  .hero-convey{left:2%;top:65%;width:68%;transform:rotate(-3deg)}
-  .hero-action{grid-area:action;align-self:start;width:fit-content;max-width:100%;margin-top:28px;z-index:1}
-  .hero-invitation{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:60px;padding:12px 18px 12px 24px;box-sizing:border-box;border-radius:999px;background:linear-gradient(115deg,#6956d9,#9956c1);color:#fff;font-size:15px;font-weight:700;line-height:1.6;text-decoration:none;box-shadow:0 6px 18px #6956d926}
-  .hero-invitation span{display:grid;place-items:center;flex-shrink:0;width:30px;height:30px;border-radius:50%;background:#fff;color:#6956d9;font-size:20px}
-  .hero-invitation:hover{box-shadow:0 8px 24px #6956d94d;background:#7043ae}
-  .hero-invitation:focus-visible{outline:3px solid #6956d9;outline-offset:4px}
-  .hero-meta{margin:12px 0 0;display:flex;align-items:center;justify-content:center;gap:8px;color:#686171;font-size:12px;line-height:1.8}
-  @media(max-width:900px){
-    /* 通常表示は650px以内。文字を切るmax-heightではなく余白と画像領域を調整する。
+/* コピーとCTAは同じ列・通常フローでまとめる。写真だけを重ね、文字量で衝突させない。 */
+.hero {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+}
+.hero-stage {
+  max-width: 1224px;
+  margin: auto;
+  padding: 16px 32px 20px;
+  display: grid;
+  grid-template-columns: minmax(0,1fr) minmax(0,1fr);
+  grid-template-areas: "copy art" "action art";
+  grid-template-rows: auto 1fr;
+  column-gap: 32px;
+  align-content: center;
+  box-sizing: border-box;
+}
+.hero-background {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  opacity: .7;
+}
+.hero-background img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.hero-copy {
+  grid-area: copy;
+  align-self: start;
+  padding-top: 24px;
+  z-index: 1;
+}
+.hero-copy .heroEyebrow {
+  margin: 0 0 20px;
+  color: #7043ae;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: .06em;
+}
+.hero-copy h1 {
+  margin: 0;
+  color: #2c243d;
+  font-size: clamp(28px,3vw,42px);
+  font-weight: 700;
+  line-height: 1.5;
+  letter-spacing: -.035em;
+}
+.hero-copy h1 span {
+  display: block;
+  background: linear-gradient(90deg,#6956d9,#a45dd8 65%,#c96a48);
+  background-clip: text;
+  color: transparent;
+  white-space: nowrap;
+}
+.hero-copy h1 span::after {
+  display: none;
+}
+.hero-copy p {
+  margin: 20px 0 0;
+  font-size: 15px;
+  line-height: 1.9;
+  color: #686171;
+}
+.hero-art {
+  grid-area: art;
+  position: relative;
+  align-self: center;
+  justify-self: end;
+  width: 100%;
+  max-width: 500px;
+  aspect-ratio: 1;
+  pointer-events: none;
+}
+.hero-note {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 27%;
+  height: auto;
+  mix-blend-mode: multiply;
+}
+.hero-card {
+  position: absolute;
+  width: 54%;
+}
+.hero-card img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.hero-make {
+  left: 0;
+  top: 0;
+  transform: rotate(-5deg);
+}
+.hero-support {
+  right: 0;
+  top: 28%;
+  transform: rotate(5deg);
+}
+.hero-convey {
+  left: 2%;
+  top: 65%;
+  width: 68%;
+  transform: rotate(-3deg);
+}
+.hero-action {
+  grid-area: action;
+  align-self: start;
+  width: fit-content;
+  max-width: 100%;
+  margin-top: 28px;
+  z-index: 1;
+}
+.hero-invitation {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  min-height: 60px;
+  padding: 12px 18px 12px 24px;
+  box-sizing: border-box;
+  border-radius: 999px;
+  background: linear-gradient(115deg,#6956d9,#9956c1);
+  color: #fff;
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 1.6;
+  text-decoration: none;
+  box-shadow: 0 6px 18px #6956d926;
+}
+.hero-invitation span {
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: #fff;
+  color: #6956d9;
+  font-size: 20px;
+}
+.hero-invitation:hover {
+  box-shadow: 0 8px 24px #6956d94d;
+  background: #7043ae;
+}
+.hero-invitation:focus-visible {
+  outline: 3px solid #6956d9;
+  outline-offset: 4px;
+}
+.hero-meta {
+  margin: 12px 0 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  color: #686171;
+  font-size: 12px;
+  line-height: 1.8;
+}
+@media(max-width:900px) {
+  /* 通常表示は650px以内。文字を切るmax-heightではなく余白と画像領域を調整する。
        文字拡大時だけは読みやすさを優先し、自然に縦へ伸ばす。 */
-    .hero-stage{grid-template-columns:minmax(0,1fr);grid-template-areas:"copy" "action" "art";grid-template-rows:auto auto auto;padding:8px 20px 8px;max-width:600px}
-    .hero-copy{padding-top:0}.hero-copy .heroEyebrow{font-size:12px;margin-bottom:12px}
-    .hero-copy h1{font-size:clamp(23px,6vw,30px);line-height:1.5}
-    .hero-copy p{font-size:14px;margin-top:12px;line-height:1.8}
-    .hero-action{margin-top:16px;width:100%;max-width:370px}
-    .hero-invitation{font-size:14px;min-height:56px;padding-left:18px;gap:8px}
-    .hero-art{max-width:320px;width:100%;height:260px;margin:16px auto 0;aspect-ratio:auto}
-    .hero-card{width:50%}
-    .hero-support{top:28%}
-    .hero-convey{left:0;top:59%;width:58%}
-    .hero-note{width:25%}
+  .hero-stage {
+    grid-template-columns: minmax(0,1fr);
+    grid-template-areas: "copy" "action" "art";
+    grid-template-rows: auto auto auto;
+    padding: 8px 20px 8px;
+    max-width: 600px;
   }
-  @media(max-width:350px){.hero-stage{padding-inline:14px}.hero-copy h1{font-size:21px}.hero-invitation{font-size:12px}.hero-meta{font-size:11px}}
+  .hero-copy {
+    padding-top: 0;
+  }
+  .hero-copy .heroEyebrow {
+    font-size: 12px;
+    margin-bottom: 12px;
+  }
+  .hero-copy h1 {
+    font-size: clamp(23px,6vw,30px);
+    line-height: 1.5;
+  }
+  .hero-copy p {
+    font-size: 14px;
+    margin-top: 12px;
+    line-height: 1.8;
+  }
+  .hero-action {
+    margin-top: 16px;
+    width: 100%;
+    max-width: 370px;
+  }
+  .hero-invitation {
+    font-size: 14px;
+    min-height: 56px;
+    padding-left: 18px;
+    gap: 8px;
+  }
+  .hero-art {
+    max-width: 320px;
+    width: 100%;
+    height: 260px;
+    margin: 16px auto 0;
+    aspect-ratio: auto;
+  }
+  .hero-card {
+    width: 50%;
+  }
+  .hero-convey {
+    left: 0;
+    top: 59%;
+    width: 58%;
+  }
+  .hero-note {
+    width: 25%;
+  }
+}
+@media(max-width:350px) {
+  .hero-stage {
+    padding-inline: 14px;
+  }
+  .hero-copy h1 {
+    font-size: 21px;
+  }
+  .hero-invitation {
+    font-size: 12px;
+  }
+  .hero-meta {
+    font-size: 11px;
+  }
+}
 </style>

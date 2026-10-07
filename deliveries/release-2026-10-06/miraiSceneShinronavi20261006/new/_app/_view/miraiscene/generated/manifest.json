@@ -1,0 +1,359 @@
+{
+  "about": {
+    "file": "a4262e1c9bcbc1721eb3fe13558154460a2b2a2d307daa32532478526ce6ccb1.html",
+    "title": "ミライシーンについて | 進路ナビ",
+    "description": "“好き”から始まる進路選び。画像を見て選ぶ約3分の仕事体験で、小さな「気になる」を見つけよう。",
+    "scripts": [],
+    "canonical": "https://shinronavi.com/mirai_scene/about/"
+  },
+  "careers/animal-keeper": {
+    "file": "ecf99b04349c9d2b733118f8ed27325e9642d3ab2e91c8d3f6de4a402632e693.html",
+    "title": "動物園飼育員の仕事体験 | ミライシーン",
+    "description": "動物の行動を観察し、記録や展示の工夫へつなげる。",
+    "scripts": [
+      "/mirai_scene/_astro/mirai-91d4a1d107b89ca159b96eff14f066fbf69067a707187de0024d2fd5f070db98.js",
+      "/mirai_scene/_astro/mirai-282de84a94f66893e384334132fdb5e47e5f2cfee8bf09bcef63284599375b31.js"
+    ],
+    "canonical": "https://shinronavi.com/mirai_scene/careers/animal-keeper/"
+  },
+  "careers/architect": {
+    "file": "2c7d86fdf3a1d0dd15682e170894fa3b1274cc395042262430d256d0bdeddd44.html",
+    "title": "建築士の仕事体験 | ミライシーン",
+    "description": "同じ場所でも、使い方はいろいろ。暮らす人から空間を考える。",
+    "scripts": [
+      "/mirai_scene/_astro/mirai-91d4a1d107b89ca159b96eff14f066fbf69067a707187de0024d2fd5f070db98.js",
+      "/mirai_scene/_astro/mirai-282de84a94f66893e384334132fdb5e47e5f2cfee8bf09bcef63284599375b31.js"
+    ],
+    "canonical": "https://shinronavi.com/mirai_scene/careers/architect/"
+  },
+  "careers/beauty": {
+    "file": "71bd92db59e5c581a16f07ea542eb1365c98dd11a46c82ffe3b80c594cf20140.html",
+    "title": "美容師の仕事体験 | ミライシーン",
+    "description": "「こんな感じ」を、一緒に形に。似合うと暮らしやすいを考える。",
+    "scripts": [
+      "/mirai_scene/_astro/mirai-91d4a1d107b89ca159b96eff14f066fbf69067a707187de0024d2fd5f070db98.js",
+      "/mirai_scene/_astro/mirai-282de84a94f66893e384334132fdb5e47e5f2cfee8bf09bcef63284599375b31.js"
+    ],
+    "canonical": "https://shinronavi.com/mirai_scene/careers/beauty/"
+  },
+  "careers/chef": {
+    "file": "db3ce6ad895ccf3c3d2aa03f0e92fdf84dbbd14ea4336838b7465b125fe46675.html",
+    "title": "料理人の仕事体験 | ミライシーン",
+    "description": "味だけでなく、届ける順番や相手を考える料理の仕事。",
+    "scripts": [
+      "/mirai_scene/_astro/mirai-91d4a1d107b89ca159b96eff14f066fbf69067a707187de0024d2fd5f070db98.js",
+      "/mirai_scene/_astro/mirai-282de84a94f66893e384334132fdb5e47e5f2cfee8bf09bcef63284599375b31.js"
+    ],
+    "canonical": "https://shinronavi.com/mirai_scene/careers/chef/"
+  },
+  "careers/childcare": {
+    "file": "2b97b2dabd2f11dfa739c32e8d7e229b559318dc7b904679bc558d5e4958ecb3.html",
+    "title": "保育士の仕事体験 | ミライシーン",
+    "description": "「やりたくない」にも理由がある。子どもの気持ちを想像しよう。",
+    "scripts": [
+      "/mirai_scene/_astro/mirai-91d4a1d107b89ca159b96eff14f066fbf69067a707187de0024d2fd5f070db98.js",
+      "/mirai_scene/_astro/mirai-282de84a94f66893e384334132fdb5e47e5f2cfee8bf09bcef63284599375b31.js"
+    ],
+    "canonical": "https://shinronavi.com/mirai_scene/careers/childcare/"
+  },
+  "careers/data-scientist": {
+    "file": "5df7cbceebcfc5de8ecd8810f4c139c9479a6a09f8b871f62c4ffcd817872118.html",
+    "title": "データサイエンティストの仕事体験 | ミライシーン",
+    "description": "売り切れも、売れ残りも減らしたい。パン屋の記録から、明日の仕組みを考える。",
+    "scripts": [
+      "/mirai_scene/_astro/mirai-91d4a1d107b89ca159b96eff14f066fbf69067a707187de0024d2fd5f070db98.js",
+      "/mirai_scene/_astro/mirai-282de84a94f66893e384334132fdb5e47e5f2cfee8bf09bcef63284599375b31.js"
+    ],
+    "canonical": "https://shinronavi.com/mirai_scene/careers/data-scientist/"
+  },
+  "careers/designer": {
+    "file": "e2897b70a12d7e63b72579b2a9b9edd979d58ed41327ca7c795749fb351637ec.html",
+    "title": "グラフィックデザイナーの仕事体験 | ミライシーン",
+    "description": "「伝わる」をつくる。ポスターの向こうにいる人を想像してみよう。",
+    "scripts": [
+      "/mirai_scene/_astro/mirai-91d4a1d107b89ca159b96eff14f066fbf69067a707187de0024d2fd5f070db98.js",
+      "/mirai_scene/_astro/mirai-282de84a94f66893e384334132fdb5e47e5f2cfee8bf09bcef63284599375b31.js"
+    ],
+    "canonical": "https://shinronavi.com/mirai_scene/careers/designer/"
+  },
+  "careers/editor": {
+    "file": "e69eda651b99db2a3a192678080b6a65038625a26cbd9300a747abb2d0344072.html",
+    "title": "編集者の仕事体験 | ミライシーン",
+    "description": "読者の疑問から企画し、取材と文章をつなげる。",
+    "scripts": [
+      "/mirai_scene/_astro/mirai-91d4a1d107b89ca159b96eff14f066fbf69067a707187de0024d2fd5f070db98.js",
+      "/mirai_scene/_astro/mirai-282de84a94f66893e384334132fdb5e47e5f2cfee8bf09bcef63284599375b31.js"
+    ],
+    "canonical": "https://shinronavi.com/mirai_scene/careers/editor/"
+  },
+  "careers/engineer": {
+    "file": "4c438d335d99476c22d362d5e07be5b31c94df7a24bb3624a30c2995c4173e25.html",
+    "title": "Webエンジニアの仕事体験 | ミライシーン",
+    "description": "動くだけで、おしまい？使う人の「困った」から仕組みを考える。",
+    "scripts": [
+      "/mirai_scene/_astro/mirai-91d4a1d107b89ca159b96eff14f066fbf69067a707187de0024d2fd5f070db98.js",
+      "/mirai_scene/_astro/mirai-282de84a94f66893e384334132fdb5e47e5f2cfee8bf09bcef63284599375b31.js"
+    ],
+    "canonical": "https://shinronavi.com/mirai_scene/careers/engineer/"
+  },
+  "careers/event-planner": {
+    "file": "c0e5a3a809d9fdc1f0b6b89f3e147b1c460ada0ebdaad67b0e9fef6bb47d0564.html",
+    "title": "イベントプランナーの仕事体験 | ミライシーン",
+    "description": "来場者の動きや準備の順番を想像して企画する。",
+    "scripts": [
+      "/mirai_scene/_astro/mirai-91d4a1d107b89ca159b96eff14f066fbf69067a707187de0024d2fd5f070db98.js",
+      "/mirai_scene/_astro/mirai-282de84a94f66893e384334132fdb5e47e5f2cfee8bf09bcef63284599375b31.js"
+    ],
+    "canonical": "https://shinronavi.com/mirai_scene/careers/event-planner/"
+  },
+  "careers/farmer": {
+    "file": "ccdd0e4311164b8bab1e65a034818a1ced8f52678e0921628c0d82a42b0e0457.html",
+    "title": "農業生産者の仕事体験 | ミライシーン",
+    "description": "ハウスでの観察、収穫の計画、届け方を考える仕事。",
+    "scripts": [
+      "/mirai_scene/_astro/mirai-91d4a1d107b89ca159b96eff14f066fbf69067a707187de0024d2fd5f070db98.js",
+      "/mirai_scene/_astro/mirai-282de84a94f66893e384334132fdb5e47e5f2cfee8bf09bcef63284599375b31.js"
+    ],
+    "canonical": "https://shinronavi.com/mirai_scene/careers/farmer/"
+  },
+  "careers/game-planner": {
+    "file": "93ccce09ce79cf94b034130bd65de9cc50376b21b409fc136cb955f560c67776.html",
+    "title": "ゲームプランナーの仕事体験 | ミライシーン",
+    "description": "遊ぶ人の反応から、ルールや難しさを調整する。",
+    "scripts": [
+      "/mirai_scene/_astro/mirai-91d4a1d107b89ca159b96eff14f066fbf69067a707187de0024d2fd5f070db98.js",
+      "/mirai_scene/_astro/mirai-282de84a94f66893e384334132fdb5e47e5f2cfee8bf09bcef63284599375b31.js"
+    ],
+    "canonical": "https://shinronavi.com/mirai_scene/careers/game-planner/"
+  },
+  "careers/librarian": {
+    "file": "fc37304307d372936c7c3db2a60d5363aa22bcd6584977b398b5dddb75d55ca1.html",
+    "title": "図書館司書の仕事体験 | ミライシーン",
+    "description": "曖昧な質問を聞き取り、資料や情報へつなぐ。",
+    "scripts": [
+      "/mirai_scene/_astro/mirai-91d4a1d107b89ca159b96eff14f066fbf69067a707187de0024d2fd5f070db98.js",
+      "/mirai_scene/_astro/mirai-282de84a94f66893e384334132fdb5e47e5f2cfee8bf09bcef63284599375b31.js"
+    ],
+    "canonical": "https://shinronavi.com/mirai_scene/careers/librarian/"
+  },
+  "careers/logistics": {
+    "file": "a6ad19fbe5c6857bcb5bc515cf3df9ebe84db55d4db4779f9f82b30aad8c13c0.html",
+    "title": "物流プランナーの仕事体験 | ミライシーン",
+    "description": "荷物の量、作業時間、届け先から流れを考える。",
+    "scripts": [
+      "/mirai_scene/_astro/mirai-91d4a1d107b89ca159b96eff14f066fbf69067a707187de0024d2fd5f070db98.js",
+      "/mirai_scene/_astro/mirai-282de84a94f66893e384334132fdb5e47e5f2cfee8bf09bcef63284599375b31.js"
+    ],
+    "canonical": "https://shinronavi.com/mirai_scene/careers/logistics/"
+  },
+  "careers/museum-curator": {
+    "file": "051e9f8c5f4a0631e0e253300b895f743f02b2651c2978e9c2b7796c52d12448.html",
+    "title": "博物館学芸員の仕事体験 | ミライシーン",
+    "description": "資料を調べ、展示を通じて新しい疑問を届ける。",
+    "scripts": [
+      "/mirai_scene/_astro/mirai-91d4a1d107b89ca159b96eff14f066fbf69067a707187de0024d2fd5f070db98.js",
+      "/mirai_scene/_astro/mirai-282de84a94f66893e384334132fdb5e47e5f2cfee8bf09bcef63284599375b31.js"
+    ],
+    "canonical": "https://shinronavi.com/mirai_scene/careers/museum-curator/"
+  },
+  "careers/pastry": {
+    "file": "48bcdaf5e29d33530ae2b04e5ba4d260188ce519ca6ee0cf465ee2015ab3834f.html",
+    "title": "パティシエの仕事体験 | ミライシーン",
+    "description": "贈る相手や持ち運び方まで考えて、お菓子をつくる。",
+    "scripts": [
+      "/mirai_scene/_astro/mirai-91d4a1d107b89ca159b96eff14f066fbf69067a707187de0024d2fd5f070db98.js",
+      "/mirai_scene/_astro/mirai-282de84a94f66893e384334132fdb5e47e5f2cfee8bf09bcef63284599375b31.js"
+    ],
+    "canonical": "https://shinronavi.com/mirai_scene/careers/pastry/"
+  },
+  "careers/product-developer": {
+    "file": "9dc5edb2ce33391705d223ac619cbfc33e7b45407b880b60a74d97c8dfa2b07b.html",
+    "title": "商品企画担当の仕事体験 | ミライシーン",
+    "description": "使う場面を調べ、条件の中で商品の案を磨く。",
+    "scripts": [
+      "/mirai_scene/_astro/mirai-91d4a1d107b89ca159b96eff14f066fbf69067a707187de0024d2fd5f070db98.js",
+      "/mirai_scene/_astro/mirai-282de84a94f66893e384334132fdb5e47e5f2cfee8bf09bcef63284599375b31.js"
+    ],
+    "canonical": "https://shinronavi.com/mirai_scene/careers/product-developer/"
+  },
+  "careers/tourism": {
+    "file": "84f51fa685f1c62c5fa1b1440102e4cf58fbbf382258b9cdd815a1378ad46f48.html",
+    "title": "旅行プランナーの仕事体験 | ミライシーン",
+    "description": "行き先を決める、その前に。旅で大切にしたいことを聞いてみよう。",
+    "scripts": [
+      "/mirai_scene/_astro/mirai-91d4a1d107b89ca159b96eff14f066fbf69067a707187de0024d2fd5f070db98.js",
+      "/mirai_scene/_astro/mirai-282de84a94f66893e384334132fdb5e47e5f2cfee8bf09bcef63284599375b31.js"
+    ],
+    "canonical": "https://shinronavi.com/mirai_scene/careers/tourism/"
+  },
+  "careers/video-producer": {
+    "file": "16984b0c5c38eb957dded5ab0d1b6b0eafec66aadb7a3e1d72b81ee4725de7fd.html",
+    "title": "映像ディレクターの仕事体験 | ミライシーン",
+    "description": "見る人を想像し、撮影と編集の順番を考える。",
+    "scripts": [
+      "/mirai_scene/_astro/mirai-91d4a1d107b89ca159b96eff14f066fbf69067a707187de0024d2fd5f070db98.js",
+      "/mirai_scene/_astro/mirai-282de84a94f66893e384334132fdb5e47e5f2cfee8bf09bcef63284599375b31.js"
+    ],
+    "canonical": "https://shinronavi.com/mirai_scene/careers/video-producer/"
+  },
+  "explore/agriculture": {
+    "file": "1d95d188e0ba6519fd3a5950f3e388930b8aa5f85a8c73c9974baf038042ec22.html",
+    "title": "農業の探究と仕事体験 | ミライシーン",
+    "description": "“好き”から始まる進路選び。画像を見て選ぶ約3分の仕事体験で、小さな「気になる」を見つけよう。",
+    "scripts": [
+      "/mirai_scene/_astro/careerCatalog.astro_astro_type_script_index_0_lang.bLQA-nRJ.js"
+    ],
+    "canonical": "https://shinronavi.com/mirai_scene/explore/agriculture/"
+  },
+  "explore/animals": {
+    "file": "15ef4ff34e295a124de480ae88ec80efa50dbcf179c5efbb9fb2f64a9b0d134b.html",
+    "title": "動物の探究と仕事体験 | ミライシーン",
+    "description": "“好き”から始まる進路選び。画像を見て選ぶ約3分の仕事体験で、小さな「気になる」を見つけよう。",
+    "scripts": [
+      "/mirai_scene/_astro/careerCatalog.astro_astro_type_script_index_0_lang.bLQA-nRJ.js"
+    ],
+    "canonical": "https://shinronavi.com/mirai_scene/explore/animals/"
+  },
+  "explore/architecture": {
+    "file": "483d7ad1fa2268869751689b78beb3929cce65d2c06899bfe9b860e92c9d9f85.html",
+    "title": "建築の探究と仕事体験 | ミライシーン",
+    "description": "“好き”から始まる進路選び。画像を見て選ぶ約3分の仕事体験で、小さな「気になる」を見つけよう。",
+    "scripts": [
+      "/mirai_scene/_astro/careerCatalog.astro_astro_type_script_index_0_lang.bLQA-nRJ.js"
+    ],
+    "canonical": "https://shinronavi.com/mirai_scene/explore/architecture/"
+  },
+  "explore/beauty": {
+    "file": "3a6c6b68b3428bc06f6b3e71eec73ac3f8411ba3725948939f2a72fdd1a125c2.html",
+    "title": "美容の探究と仕事体験 | ミライシーン",
+    "description": "“好き”から始まる進路選び。画像を見て選ぶ約3分の仕事体験で、小さな「気になる」を見つけよう。",
+    "scripts": [
+      "/mirai_scene/_astro/careerCatalog.astro_astro_type_script_index_0_lang.bLQA-nRJ.js"
+    ],
+    "canonical": "https://shinronavi.com/mirai_scene/explore/beauty/"
+  },
+  "explore/business": {
+    "file": "52380f60e491df47ce98f7fb8a4ffdad96c7cb870bd5bcf356af77b4467a7676.html",
+    "title": "経営・商学の探究と仕事体験 | ミライシーン",
+    "description": "“好き”から始まる進路選び。画像を見て選ぶ約3分の仕事体験で、小さな「気になる」を見つけよう。",
+    "scripts": [
+      "/mirai_scene/_astro/careerCatalog.astro_astro_type_script_index_0_lang.bLQA-nRJ.js"
+    ],
+    "canonical": "https://shinronavi.com/mirai_scene/explore/business/"
+  },
+  "explore/childcare": {
+    "file": "ceaafd2f0ab2f7add70bf62911906a8f74cd32db623979e154b996d950b7d962.html",
+    "title": "保育・幼児教育の探究と仕事体験 | ミライシーン",
+    "description": "“好き”から始まる進路選び。画像を見て選ぶ約3分の仕事体験で、小さな「気になる」を見つけよう。",
+    "scripts": [
+      "/mirai_scene/_astro/careerCatalog.astro_astro_type_script_index_0_lang.bLQA-nRJ.js"
+    ],
+    "canonical": "https://shinronavi.com/mirai_scene/explore/childcare/"
+  },
+  "explore/cooking": {
+    "file": "2c3ca8822264880c19e13a42381b270798cb1019092f4e9013888204356f6202.html",
+    "title": "調理の探究と仕事体験 | ミライシーン",
+    "description": "“好き”から始まる進路選び。画像を見て選ぶ約3分の仕事体験で、小さな「気になる」を見つけよう。",
+    "scripts": [
+      "/mirai_scene/_astro/careerCatalog.astro_astro_type_script_index_0_lang.bLQA-nRJ.js"
+    ],
+    "canonical": "https://shinronavi.com/mirai_scene/explore/cooking/"
+  },
+  "explore/culture": {
+    "file": "597155870a436f0ffec3ccf12f4bc1708f511533cbc64cd3eb22fd20a08b2a02.html",
+    "title": "文学・文化・歴史の探究と仕事体験 | ミライシーン",
+    "description": "“好き”から始まる進路選び。画像を見て選ぶ約3分の仕事体験で、小さな「気になる」を見つけよう。",
+    "scripts": [
+      "/mirai_scene/_astro/careerCatalog.astro_astro_type_script_index_0_lang.bLQA-nRJ.js"
+    ],
+    "canonical": "https://shinronavi.com/mirai_scene/explore/culture/"
+  },
+  "explore/design": {
+    "file": "163059fb93934b9c04508b401d858914b7d37aa7353e69e9d345bbd34b9ae7cd.html",
+    "title": "デザインの探究と仕事体験 | ミライシーン",
+    "description": "“好き”から始まる進路選び。画像を見て選ぶ約3分の仕事体験で、小さな「気になる」を見つけよう。",
+    "scripts": [
+      "/mirai_scene/_astro/careerCatalog.astro_astro_type_script_index_0_lang.bLQA-nRJ.js"
+    ],
+    "canonical": "https://shinronavi.com/mirai_scene/explore/design/"
+  },
+  "explore/events": {
+    "file": "36cfd877fb715c7373a980e0eb355c917e72fb180317a61cde23672a084c4dae.html",
+    "title": "イベントの探究と仕事体験 | ミライシーン",
+    "description": "“好き”から始まる進路選び。画像を見て選ぶ約3分の仕事体験で、小さな「気になる」を見つけよう。",
+    "scripts": [
+      "/mirai_scene/_astro/careerCatalog.astro_astro_type_script_index_0_lang.bLQA-nRJ.js"
+    ],
+    "canonical": "https://shinronavi.com/mirai_scene/explore/events/"
+  },
+  "explore/games": {
+    "file": "cdccde9c7ad90b6c12f19176298e5ebd204a4f27e97abbf1dc2146820e1a316d.html",
+    "title": "ゲームの探究と仕事体験 | ミライシーン",
+    "description": "“好き”から始まる進路選び。画像を見て選ぶ約3分の仕事体験で、小さな「気になる」を見つけよう。",
+    "scripts": [
+      "/mirai_scene/_astro/careerCatalog.astro_astro_type_script_index_0_lang.bLQA-nRJ.js"
+    ],
+    "canonical": "https://shinronavi.com/mirai_scene/explore/games/"
+  },
+  "explore": {
+    "file": "6f281157ab246f0e1f35db82165d3448ee1e39077ab0d720fca7dddf014249d6.html",
+    "title": "学びから探究と仕事体験を探す | ミライシーン",
+    "description": "“好き”から始まる進路選び。画像を見て選ぶ約3分の仕事体験で、小さな「気になる」を見つけよう。",
+    "scripts": [],
+    "canonical": "https://shinronavi.com/mirai_scene/explore/"
+  },
+  "explore/it": {
+    "file": "8b6a40e6df7399d81334538cebad1b126d46c79996fc6b4f9bcf714aa4510133.html",
+    "title": "情報・ITの探究と仕事体験 | ミライシーン",
+    "description": "“好き”から始まる進路選び。画像を見て選ぶ約3分の仕事体験で、小さな「気になる」を見つけよう。",
+    "scripts": [
+      "/mirai_scene/_astro/careerCatalog.astro_astro_type_script_index_0_lang.bLQA-nRJ.js"
+    ],
+    "canonical": "https://shinronavi.com/mirai_scene/explore/it/"
+  },
+  "explore/media": {
+    "file": "846a2abf3e95e1e9d72e1f3a23db2a49bc6bc37babd57ec0efed29e6fa9086a8.html",
+    "title": "出版・メディアの探究と仕事体験 | ミライシーン",
+    "description": "“好き”から始まる進路選び。画像を見て選ぶ約3分の仕事体験で、小さな「気になる」を見つけよう。",
+    "scripts": [
+      "/mirai_scene/_astro/careerCatalog.astro_astro_type_script_index_0_lang.bLQA-nRJ.js"
+    ],
+    "canonical": "https://shinronavi.com/mirai_scene/explore/media/"
+  },
+  "explore/pastry": {
+    "file": "39bc1ac52b92a515359ab6ef3d42a8235ba0aa2f11ac42e8afb2b3ac08f30d23.html",
+    "title": "製菓・製パンの探究と仕事体験 | ミライシーン",
+    "description": "“好き”から始まる進路選び。画像を見て選ぶ約3分の仕事体験で、小さな「気になる」を見つけよう。",
+    "scripts": [
+      "/mirai_scene/_astro/careerCatalog.astro_astro_type_script_index_0_lang.bLQA-nRJ.js"
+    ],
+    "canonical": "https://shinronavi.com/mirai_scene/explore/pastry/"
+  },
+  "explore/tourism": {
+    "file": "18c9ea64e2c3b2d089d9149ad9b68f88bdd6e807b85734165270aa593ee846b9.html",
+    "title": "観光の探究と仕事体験 | ミライシーン",
+    "description": "“好き”から始まる進路選び。画像を見て選ぶ約3分の仕事体験で、小さな「気になる」を見つけよう。",
+    "scripts": [
+      "/mirai_scene/_astro/careerCatalog.astro_astro_type_script_index_0_lang.bLQA-nRJ.js"
+    ],
+    "canonical": "https://shinronavi.com/mirai_scene/explore/tourism/"
+  },
+  "explore/video": {
+    "file": "fa9f8287e60ff3fe339223bea16655a8e09f02296622ce5f914572cbf8aad4d6.html",
+    "title": "映像の探究と仕事体験 | ミライシーン",
+    "description": "“好き”から始まる進路選び。画像を見て選ぶ約3分の仕事体験で、小さな「気になる」を見つけよう。",
+    "scripts": [
+      "/mirai_scene/_astro/careerCatalog.astro_astro_type_script_index_0_lang.bLQA-nRJ.js"
+    ],
+    "canonical": "https://shinronavi.com/mirai_scene/explore/video/"
+  },
+  "": {
+    "file": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.html",
+    "title": "ミライシーン | “好き”から始まる進路選び",
+    "description": "“好き”から始まる進路選び。画像を見て選ぶ約3分の仕事体験で、小さな「気になる」を見つけよう。",
+    "scripts": [
+      "/mirai_scene/_astro/careerCatalog.astro_astro_type_script_index_0_lang.bLQA-nRJ.js"
+    ],
+    "canonical": "https://shinronavi.com/mirai_scene/"
+  }
+}

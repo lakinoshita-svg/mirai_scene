@@ -10,6 +10,15 @@ document.querySelectorAll<HTMLElement>('[data-catalog]').forEach(root => {
   const status = root.querySelector<HTMLElement>('[data-catalog-status]')!;
   const search = root.querySelector<HTMLInputElement>('[data-search]')!;
   const clear = root.querySelector<HTMLButtonElement>('[data-clear-filters]')!;
+  // 一覧の操作で繰り返し使う要素は初期化時に集約。data属性はAstro側との接続契約。
+  const controls = root.querySelector<HTMLElement>('.catalog-controls')!;
+  const moreContainer = root.querySelector<HTMLElement>('[data-more-container]')!;
+  const visibleCount = root.querySelector<HTMLElement>('[data-visible-count]')!;
+  const count = root.querySelector<HTMLElement>('[data-count]')!;
+  const countLabel = root.querySelector<HTMLElement>('[data-count-label]')!;
+  const interestButtons = [...root.querySelectorAll<HTMLButtonElement>('[data-interest]')];
+  const categoryButtons = [...root.querySelectorAll<HTMLButtonElement>('[data-category-filter]')];
+  const filterButtons = [...interestButtons, ...categoryButtons];
   const mobile = matchMedia('(max-width: 650px)');
   const pageSize = () => mobile.matches ? 8 : 9;
   const cache = new Map<string, HTMLElement>();
@@ -46,9 +55,9 @@ document.querySelectorAll<HTMLElement>('[data-catalog]').forEach(root => {
       root.dataset.ready = 'true';
       failed = false;
       more.hidden = visible.length >= matching.length;
-      root.querySelector<HTMLElement>('[data-more-container]')!.hidden = false;
-      root.querySelector<HTMLElement>('[data-visible-count]')!.textContent = `全${matching.length}件中 ${visible.length}件を表示`;
-      root.querySelector<HTMLElement>('[data-count]')!.textContent = `${matching.length}件`;
+      moreContainer.hidden = false;
+      visibleCount.textContent = `全${matching.length}件中 ${visible.length}件を表示`;
+      count.textContent = `${matching.length}件`;
       status.textContent = matching.length ? '' : '該当する体験がありません。キーワードや条件を変えてみてください。';
       if (focusNew) cards[previous]?.focus({ preventScroll: true });
     } catch {
@@ -64,17 +73,17 @@ document.querySelectorAll<HTMLElement>('[data-catalog]').forEach(root => {
     clearTimeout(searchTimer);
     limit = pageSize();
     clear.hidden = interest === 'all' && category === 'すべて' && !search.value;
-    root.querySelectorAll<HTMLButtonElement>('[data-interest], [data-category-filter]').forEach(button => {
+    filterButtons.forEach(button => {
       const selected = button.dataset.interest !== undefined ? button.dataset.interest === interest : button.dataset.categoryFilter === category;
       button.classList.toggle('active', selected); button.setAttribute('aria-pressed', String(selected));
     });
-    const selectedTheme = [...root.querySelectorAll<HTMLButtonElement>('[data-interest]')].find(button => button.dataset.interest === interest)?.textContent;
-    root.querySelector<HTMLElement>('[data-count-label]')!.textContent = interest !== 'all' ? `${selectedTheme}につながるひと場面` : category !== 'すべて' ? category : 'いろいろな仕事のひと場面';
+    const selectedTheme = interestButtons.find(button => button.dataset.interest === interest)?.textContent;
+    countLabel.textContent = interest !== 'all' ? `${selectedTheme}につながるひと場面` : category !== 'すべて' ? category : 'いろいろな仕事のひと場面';
     void render();
   }
   // 興味と分野は従来通り排他的。キーワードは選択中の分類と組み合わせる。
-  root.querySelectorAll<HTMLButtonElement>('[data-interest]').forEach(button => button.addEventListener('click', () => { interest = button.dataset.interest!; category = 'すべて'; reset(); }));
-  root.querySelectorAll<HTMLButtonElement>('[data-category-filter]').forEach(button => button.addEventListener('click', () => { category = button.dataset.categoryFilter!; interest = 'all'; reset(); }));
+  interestButtons.forEach(button => button.addEventListener('click', () => { interest = button.dataset.interest!; category = 'すべて'; reset(); }));
+  categoryButtons.forEach(button => button.addEventListener('click', () => { category = button.dataset.categoryFilter!; interest = 'all'; reset(); }));
   // 日本語変換中は検索を確定せず、確定後に一度だけ更新する。
   search.addEventListener('compositionstart', () => { composing = true; clearTimeout(searchTimer); ++revision; more.disabled = true; });
   search.addEventListener('compositionend', () => { composing = false; reset(); });
@@ -98,7 +107,7 @@ document.querySelectorAll<HTMLElement>('[data-catalog]').forEach(root => {
       entries = await response.json(); loaded = true;
       // 索引の通信中に画面幅が変わった場合も、現在の幅の初期件数に合わせる。
       limit = pageSize();
-      root.querySelector<HTMLElement>('.catalog-controls')!.hidden = false;
+      controls.hidden = false;
       await render();
       // 過去に共有された #career/職業ID と #about を現在のURLへ案内する互換処理。
       let legacyRoute = '';

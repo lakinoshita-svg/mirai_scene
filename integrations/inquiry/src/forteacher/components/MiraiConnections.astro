@@ -13,10 +13,10 @@ const miraiUrl = (path: string) => new URL(path, base).href;
 {connection && <section class="mirai-connections" aria-labelledby="mirai-title">
   <p class="eyebrow">学びから、仕事のひと場面へ</p>
   <h3 id="mirai-title">気になった仕事を、体験してみよう。</h3>
-  <p>ミライシーンでは、約3分・3つのシーンを通して仕事の考え方に触れられます。体験後は、関連する探究や学校探しへ進めます。</p>
+  <p>ミライシーンでは、約3分・3つのシーンを通して仕事の考え方に触れられます。体験後は、関連する教材や学校探しへ進めます。</p>
   <ul>{connection.careers.map(career => <li><a href={miraiUrl(`careers/${career.slug}/`)} target="_blank" rel="noopener"><span>{career.name}</span><strong>{career.title} ↗</strong></a></li>)}</ul>
   <div class="fields">{connection.fields.map(field => <a href={miraiUrl(`explore/${field.id}/`)} target="_blank" rel="noopener">{field.label}の学びと体験を見渡す ↗</a>)}</div>
-  <p class="note">別タブで開きます。探究と体験は、どちらからでも始められます。</p>
+  <p class="note">別タブで開きます。教材と体験は、どちらからでも始められます。</p>
 </section>}
 <style>
 .mirai-connections{margin:32px 16px;padding:24px;border:1px solid #e4d9f4;border-radius:16px;background:#faf7ff;color:#30283e;font-family:system-ui,sans-serif;line-height:1.8}

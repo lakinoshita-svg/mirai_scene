@@ -10,14 +10,14 @@ export async function getStaticPaths() {
 }
 const { learning, careers } = Astro.props;
 ---
-<SiteLayout title={`${learning.label}の探究と仕事体験 | ミライシーン`} breadcrumb={`${learning.label}の学びと体験`}>
+<SiteLayout title={`${learning.label}の教材と仕事体験 | ミライシーン`} breadcrumb={`${learning.label}の学びと体験`}>
   <div class="home exploration">
     <a href={sitePath('explore/')} class="back">← 学びの分野一覧へ</a>
     <h1>{learning.label}を、学びと体験から知ろう。</h1>
-    <p>{learning.description}探究からでも、仕事体験からでも始められます。</p>
+    <p>{learning.description}教材を読むことからでも、仕事体験からでも始められます。</p>
     <section class="scene-card"><h2>この分野では何を学ぶ？</h2>
-      <p>進路ナビの探究教材を別タブで開きます。読んだあとは、このページで関連する仕事を体験できます。</p>
-      <ul>{learning.lessons.map(lesson => <li><a href={lessonUrl(lesson.slug)} target="_blank" rel="noopener">{lesson.schoolType}：{lesson.label}の探究を読む ↗</a></li>)}</ul>
+      <p>進路ナビの学習教材を別タブで開きます。読んだあとは、このページで関連する仕事を体験できます。</p>
+      <ul>{learning.lessons.map(lesson => <li><a href={lessonUrl(lesson.slug)} target="_blank" rel="noopener">{lesson.schoolType}：{lesson.label}の教材を読む ↗</a></li>)}</ul>
     </section>
     <CareerCatalog careers={careers} learningId={learning.id} title="学びにつながる仕事を体験しよう。" />
     <p class="fine-print">関連する学びの例です。職業に必要な資格や履修課程は、学校ごとに確認してください。</p>

@@ -1,50 +1,217 @@
-/* TOP固有の階層。主導線＝体験一覧、補助導線＝探究、説明＝about。
+/* TOP固有の階層。主導線＝体験一覧、補助導線＝教材、説明＝about。
    詳細ページのカードや完了画面へ影響させないようhomePage内に限定する。 */
-.homePage .home{padding-top:48px;padding-bottom:56px}
-.homePage .catalog-title{margin:0;display:block}
-.homePage .catalog-title h2{font-size:clamp(22px,2.4vw,28px);line-height:1.5;margin:0}
-.homePage .catalogIntroduction{margin:12px 0 24px;font-size:14px;line-height:1.9;color:var(--muted)}
-.homePage .catalog-controls{border:1px solid var(--line);border-radius:20px;padding:24px;background:#fff}
-.homePage .interest-filters{display:flex;flex-wrap:wrap;gap:10px;margin:0 0 24px}
-.homePage .interest-filters .filter{min-height:44px;padding:10px 16px;line-height:1.5;font-size:14px}
-.homePage .catalog-search{max-width:480px;font-size:12px;margin:0;gap:8px;color:var(--muted)}
-.homePage .catalog-search input{font-size:14px;background:#fbfafc;color:var(--ink)}
-.homePage .field-picker{margin:16px 0 0;font-size:13px}
-.homePage [data-clear-filters]{margin-top:16px;white-space:normal;border:0;background:transparent;padding:8px 0;min-height:44px;text-decoration:underline;text-underline-offset:4px}
-.homePage .filter:focus-visible,.homePage input:focus-visible,.homePage summary:focus-visible{outline:3px solid #7043ae;outline-offset:3px}
-.homePage .catalog-count{margin:28px 0 16px}
-.homePage .grid{gap:24px}
+.homePage .home {
+  padding-top: 48px;
+  padding-bottom: 56px;
+}
+.homePage .catalog-title {
+  margin: 0;
+  display: block;
+}
+.homePage .catalog-title h2 {
+  font-size: clamp(22px,2.4vw,28px);
+  line-height: 1.5;
+  margin: 0;
+}
+.homePage .catalogIntroduction {
+  margin: 12px 0 24px;
+  font-size: 14px;
+  line-height: 1.9;
+  color: var(--muted);
+}
+.homePage .catalog-controls {
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  padding: 24px;
+  background: #fff;
+}
+.homePage .interest-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 0 0 24px;
+}
+.homePage .interest-filters .filter {
+  min-height: 44px;
+  padding: 10px 16px;
+  line-height: 1.5;
+  font-size: 14px;
+}
+.homePage .catalog-search {
+  max-width: 480px;
+  font-size: 12px;
+  margin: 0;
+  gap: 8px;
+  color: var(--muted);
+}
+.homePage .catalog-search input {
+  font-size: 14px;
+  background: #fbfafc;
+  color: var(--ink);
+}
+.homePage .field-picker {
+  margin: 16px 0 0;
+  font-size: 13px;
+}
+.homePage [data-clear-filters] {
+  margin-top: 16px;
+  white-space: normal;
+  border: 0;
+  background: transparent;
+  padding: 8px 0;
+  min-height: 44px;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+.homePage .filter:focus-visible,.homePage input:focus-visible,.homePage summary:focus-visible {
+  outline: 3px solid #7043ae;
+  outline-offset: 3px;
+}
+.homePage .catalog-count {
+  margin: 28px 0 16px;
+}
+.homePage .grid {
+  gap: 24px;
+}
 /* サムネイルはテーマの識別用。大きな装飾より、体験の題名に視線を集める。 */
-.homePage .career-art{height:144px}
-.homePage .career{border-radius:16px;box-shadow:none}
-.homePage .career .card-body{padding:20px}
-.homePage .career .card-body h3{font-size:19px;line-height:1.6;margin-bottom:10px}
-.homePage .career .card-body p{font-size:13px;line-height:1.85}
-.homePage .career:hover{border-color:#aa8bcd;box-shadow:0 6px 20px #4725570d}
-.homePage .catalog-more{margin:32px 0 0}
-.homePage .catalog-more .primary{background:#fff;border:1px solid #7043ae;color:#7043ae;min-height:48px;font-size:14px;border-radius:999px}
-.homeExplore{display:flex;align-items:center;justify-content:space-between;gap:32px;padding:32px;margin-top:48px;background:#f3eef9;border-radius:20px}
-.homeExplore .homeSectionLabel{font-size:12px;font-weight:700;color:#7043ae;margin:0 0 8px}
-.homeExplore h2{font-size:22px;line-height:1.6;margin:0 0 8px}
-.homeExplore p{font-size:14px;line-height:1.8;color:var(--muted);margin:0}
-.homePage .about-note{margin-top:32px;padding:32px 0 0;gap:24px}
-.homePage .about-note h2{font-size:18px;line-height:1.7}
-.homePage .about-note p{line-height:1.9}
-@media(max-width:650px){
-  .homePage .home{padding-top:32px;padding-bottom:32px}
-  .homePage .catalogIntroduction{margin-bottom:20px;font-size:13px}
-  .homePage .catalog-controls{padding:16px;border-radius:16px}
-  .homePage .interest-filters{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;margin-bottom:20px}
-  .homePage .interest-filters [data-interest="all"]{grid-column:1/-1}
-  .homePage .interest-filters .filter{font-size:12px;padding:10px 6px;white-space:normal}
-  .homePage .grid{gap:12px}
-  .homePage .career{grid-template-columns:92px minmax(0,1fr)}
-  .homePage .career-art{height:100%;min-height:0}
-  .homePage .career .card-body{padding:14px}
-  .homePage .career .card-body h3{font-size:16px;line-height:1.6;margin-bottom:6px}
-  .homePage .career .card-body p{font-size:12px;line-height:1.8}
-  .homeExplore{display:block;padding:24px 20px;margin-top:32px;border-radius:16px}
-  .homeExplore h2{font-size:19px}
-  .homeExplore .text-link{display:inline-block;margin-top:20px;white-space:normal}
-  .homePage .about-note{margin-top:24px;padding-top:24px}
+.homePage .career-art {
+  height: 144px;
+}
+.homePage .career {
+  border-radius: 16px;
+  box-shadow: none;
+}
+.homePage .career .card-body {
+  padding: 20px;
+}
+.homePage .career .card-body h3 {
+  font-size: 19px;
+  line-height: 1.6;
+  margin-bottom: 10px;
+}
+.homePage .career .card-body p {
+  font-size: 13px;
+  line-height: 1.85;
+}
+.homePage .career:hover {
+  border-color: #aa8bcd;
+  box-shadow: 0 6px 20px #4725570d;
+}
+.homePage .catalog-more {
+  margin: 32px 0 0;
+}
+.homePage .catalog-more .primary {
+  background: #fff;
+  border: 1px solid #7043ae;
+  color: #7043ae;
+  min-height: 48px;
+  font-size: 14px;
+  border-radius: 999px;
+}
+.homeExplore {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px;
+  padding: 32px;
+  margin-top: 48px;
+  background: #f3eef9;
+  border-radius: 20px;
+}
+.homeExplore .homeSectionLabel {
+  font-size: 12px;
+  font-weight: 700;
+  color: #7043ae;
+  margin: 0 0 8px;
+}
+.homeExplore h2 {
+  font-size: 22px;
+  line-height: 1.6;
+  margin: 0 0 8px;
+}
+.homeExplore p {
+  font-size: 14px;
+  line-height: 1.8;
+  color: var(--muted);
+  margin: 0;
+}
+.homePage .about-note {
+  margin-top: 32px;
+  padding: 32px 0 0;
+  gap: 24px;
+}
+.homePage .about-note h2 {
+  font-size: 18px;
+  line-height: 1.7;
+}
+.homePage .about-note p {
+  line-height: 1.9;
+}
+@media(max-width:650px) {
+  .homePage .home {
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
+  .homePage .catalogIntroduction {
+    margin-bottom: 20px;
+    font-size: 13px;
+  }
+  .homePage .catalog-controls {
+    padding: 16px;
+    border-radius: 16px;
+  }
+  .homePage .interest-filters {
+    display: grid;
+    grid-template-columns: repeat(2,minmax(0,1fr));
+    gap: 8px;
+    margin-bottom: 20px;
+  }
+  .homePage .interest-filters [data-interest="all"] {
+    grid-column: 1/-1;
+  }
+  .homePage .interest-filters .filter {
+    font-size: 12px;
+    padding: 10px 6px;
+    white-space: normal;
+  }
+  .homePage .grid {
+    gap: 12px;
+  }
+  .homePage .career {
+    grid-template-columns: 92px minmax(0,1fr);
+  }
+  .homePage .career-art {
+    height: 100%;
+    min-height: 0;
+  }
+  .homePage .career .card-body {
+    padding: 14px;
+  }
+  .homePage .career .card-body h3 {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 6px;
+  }
+  .homePage .career .card-body p {
+    font-size: 12px;
+    line-height: 1.8;
+  }
+  .homeExplore {
+    display: block;
+    padding: 24px 20px;
+    margin-top: 32px;
+    border-radius: 16px;
+  }
+  .homeExplore h2 {
+    font-size: 19px;
+  }
+  .homeExplore .text-link {
+    display: inline-block;
+    margin-top: 20px;
+    white-space: normal;
+  }
+  .homePage .about-note {
+    margin-top: 24px;
+    padding-top: 24px;
+  }
 }

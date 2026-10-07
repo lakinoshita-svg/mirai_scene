@@ -16,7 +16,7 @@ const { career, related } = Astro.props;
 <SiteLayout title={`${career.name}の仕事体験 | ミライシーン`} description={career.description} breadcrumb={career.name}>
   <div class="experience" data-experience={career.slug}>
     <a class="back" href={sitePath()}>← 体験一覧に戻る</a>
-    <nav aria-label="関連する探究" class="experience-learning">{getLearningLinks(career.learningIds).map(link => <a class="text-link" href={sitePath(`explore/${link.id}/`)}>{link.label}の探究・関連する体験へ →</a>)}</nav>
+    <nav aria-label="関連する教材" class="experience-learning">{getLearningLinks(career.learningIds).map(link => <a class="text-link" href={sitePath(`explore/${link.id}/`)}>{link.label}の教材・関連する体験へ →</a>)}</nav>
     <noscript><p>選択して進む体験にはJavaScriptが必要です。ブラウザの設定で有効にしてください。</p></noscript>
     {career.scenes.map((scene,index)=><SceneCard career={career} scene={scene} index={index} />)}
     <ExperienceSummary career={career} related={related} />

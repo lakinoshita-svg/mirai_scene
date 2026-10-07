@@ -1,0 +1,554 @@
+{
+  "release": "release-2026-10-06",
+  "purpose": "現行実装の導入用一式。旧固定版は保持",
+  "contentCount": 19,
+  "sceneCount": 57,
+  "pageCount": 38,
+  "zip": "miraiSceneShinronavi20261006.zip",
+  "sha256": "9f2a8df2ecb44988f3c32e78e9021e37f198f07d15fba8bb2fa3f4eb685e1281",
+  "sourceBundle": "release-N7v2Ns",
+  "validation": {
+    "contentVerify": "passed",
+    "testsPassed": 26,
+    "archiveFilesMatched": 107,
+    "productionDeployment": "not performed",
+    "seo": "incomplete; see RELEASE-NOTES.md"
+  },
+  "files": [
+    {
+      "file": "INSTALL.md",
+      "sha256": "97f224e5791f12598a901e26f43fdfd967f75b2c48396708cb4e4d87cefd66cf",
+      "bytes": 7091
+    },
+    {
+      "file": "install.mjs",
+      "sha256": "ca78bbee910f3ff8e50d73c02e2cdb9210c5b7ea90be412dbe7e9c809a2996f9",
+      "bytes": 2683
+    },
+    {
+      "file": "new/_app/_controller/MiraisceneController.php",
+      "sha256": "cedbf8671a7d59b24ed3b803a45afd9ad32ed03ba0e76e3d9e89ebf02e35b6d5",
+      "bytes": 2228
+    },
+    {
+      "file": "new/_app/_util/miraiscene/MiraiPageService.php",
+      "sha256": "1a4e298841a9b314bae7f8e7c936837c4c8f424d7f19dbe34586913b980bd88f",
+      "bytes": 1401
+    },
+    {
+      "file": "new/_app/_view/miraiscene/banner.tpl",
+      "sha256": "a1434bd8ce16abafa9f2b0624be2b63042daf2e9d0a45410468672f5bd17e7be",
+      "bytes": 2254
+    },
+    {
+      "file": "new/_app/_view/miraiscene/generated/.htaccess",
+      "sha256": "fa28d421a28ed9b6f4b997d5119c2b8adbacff6e2dd119a179b71230f9664934",
+      "bytes": 19
+    },
+    {
+      "file": "new/_app/_view/miraiscene/generated/051e9f8c5f4a0631e0e253300b895f743f02b2651c2978e9c2b7796c52d12448.html",
+      "sha256": "63169dcccd93717a0fb312661cfebc0e475c1cb084c28ac03bf9e2faafc99f02",
+      "bytes": 35162
+    },
+    {
+      "file": "new/_app/_view/miraiscene/generated/15ef4ff34e295a124de480ae88ec80efa50dbcf179c5efbb9fb2f64a9b0d134b.html",
+      "sha256": "b4eb7d712cad8054042df4e00a13228a6d9723978dfab49ca7504e46cb3af840",
+      "bytes": 6393
+    },
+    {
+      "file": "new/_app/_view/miraiscene/generated/163059fb93934b9c04508b401d858914b7d37aa7353e69e9d345bbd34b9ae7cd.html",
+      "sha256": "51d442a36bbc0b0acf4f89e0305b0524e34b955db07fad2a685677e1b1a215c9",
+      "bytes": 6438
+    },
+    {
+      "file": "new/_app/_view/miraiscene/generated/16984b0c5c38eb957dded5ab0d1b6b0eafec66aadb7a3e1d72b81ee4725de7fd.html",
+      "sha256": "73543e93131cec02f7869a5f99624b79ec9608011f5725e0fa7a9254bf703ef4",
+      "bytes": 33942
+    },
+    {
+      "file": "new/_app/_view/miraiscene/generated/18c9ea64e2c3b2d089d9149ad9b68f88bdd6e807b85734165270aa593ee846b9.html",
+      "sha256": "67ec42b4ef9b4990e6d3a35d0cf85b8dfbd4b336cf4212f36b13243874b56332",
+      "bytes": 6375
+    },
+    {
+      "file": "new/_app/_view/miraiscene/generated/1d95d188e0ba6519fd3a5950f3e388930b8aa5f85a8c73c9974baf038042ec22.html",
+      "sha256": "71263fe0daa53e0f783206341c85d0b26bc2ec5b044e24e5a50f05801b2646fc",
+      "bytes": 6355
+    },
+    {
+      "file": "new/_app/_view/miraiscene/generated/2b97b2dabd2f11dfa739c32e8d7e229b559318dc7b904679bc558d5e4958ecb3.html",
+      "sha256": "666e876f11fb38acd1374ae9e439bbbae92578f36c8b1edbaf49791d556c5eba",
+      "bytes": 35579
+    },
+    {
+      "file": "new/_app/_view/miraiscene/generated/2c3ca8822264880c19e13a42381b270798cb1019092f4e9013888204356f6202.html",
+      "sha256": "f7a13f33ee62037b416e8271c3e1c8dd7c6b669f4d9a901228e727f33d5fe3d6",
+      "bytes": 6085
+    },
+    {
+      "file": "new/_app/_view/miraiscene/generated/2c7d86fdf3a1d0dd15682e170894fa3b1274cc395042262430d256d0bdeddd44.html",
+      "sha256": "7b5c5d5208d8533699b0aca450cf3b8ac90f43f671ff96381f19f4b46dd63450",
+      "bytes": 35483
+    },
+    {
+      "file": "new/_app/_view/miraiscene/generated/36cfd877fb715c7373a980e0eb355c917e72fb180317a61cde23672a084c4dae.html",
+      "sha256": "90b15210c65fe79c1e0a7c5a62b7a4114a95528cc71dc61cfd741e1538a4f19a",
+      "bytes": 6419
+    },
+    {
+      "file": "new/_app/_view/miraiscene/generated/39bc1ac52b92a515359ab6ef3d42a8235ba0aa2f11ac42e8afb2b3ac08f30d23.html",
+      "sha256": "d425116f9ea4f5cde342b0dbfad46f448e0b5827ddb5b8bd2b70acbb23f572fd",
+      "bytes": 6200
+    },
+    {
+      "file": "new/_app/_view/miraiscene/generated/3a6c6b68b3428bc06f6b3e71eec73ac3f8411ba3725948939f2a72fdd1a125c2.html",
+      "sha256": "f94a6550bb782dd4f8b65484d38fb4c6ae0e247f558e8b151fd0e9cb87ac591c",
+      "bytes": 6097
+    },
+    {
+      "file": "new/_app/_view/miraiscene/generated/483d7ad1fa2268869751689b78beb3929cce65d2c06899bfe9b860e92c9d9f85.html",
+      "sha256": "7ca86ffd264e3ba750e57ae6610b5c3d53a8c0b4d71e77b836144c698c85be2a",
+      "bytes": 6424
+    },
+    {
+      "file": "new/_app/_view/miraiscene/generated/48bcdaf5e29d33530ae2b04e5ba4d260188ce519ca6ee0cf465ee2015ab3834f.html",
+      "sha256": "18b09c410a3e4c70ceb2bb9564cd17b7daf447537d1a963a115934b044f01dad",
+      "bytes": 34680
+    },
+    {
+      "file": "new/_app/_view/miraiscene/generated/4c438d335d99476c22d362d5e07be5b31c94df7a24bb3624a30c2995c4173e25.html",
+      "sha256": "52b73d9a5b9c19c5915fc61b45bc81c4ae5614781f99b65e62bf0b22cc68cef9",
+      "bytes": 36129
+    },
+    {
+      "file": "new/_app/_view/miraiscene/generated/52380f60e491df47ce98f7fb8a4ffdad96c7cb870bd5bcf356af77b4467a7676.html",
+      "sha256": "dac9a3e6fe58cf7852e2e7769961f3546db50c906a377f861cab95607584faaf",
+      "bytes": 8858
+    },
+    {
+      "file": "new/_app/_view/miraiscene/generated/597155870a436f0ffec3ccf12f4bc1708f511533cbc64cd3eb22fd20a08b2a02.html",
+      "sha256": "977a6538a58bd2d305c89f96d1329b06dfa8f8f33f072b240d6de57a4a2b24ca",
+      "bytes": 7723
+    },
+    {
+      "file": "new/_app/_view/miraiscene/generated/5df7cbceebcfc5de8ecd8810f4c139c9479a6a09f8b871f62c4ffcd817872118.html",
+      "sha256": "021b764fbed16456fd2cb213a79dacb68ddafb2026c9fdb24229a5b8ba00a9e6",
+      "bytes": 35335
+    },
+    {
+      "file": "new/_app/_view/miraiscene/generated/6f281157ab246f0e1f35db82165d3448ee1e39077ab0d720fca7dddf014249d6.html",
+      "sha256": "8398fc6676d827230683848ab291cda4f0721d66715b94fe0548540f5bdc7eaf",
+      "bytes": 4486
+    },
+    {
+      "file": "new/_app/_view/miraiscene/generated/71bd92db59e5c581a16f07ea542eb1365c98dd11a46c82ffe3b80c594cf20140.html",
+      "sha256": "fbc68f4af14e801d814145f0f18556a6dbeae67d480cd2f7f2a2b6450d24e705",
+      "bytes": 35358
+    },
+    {
+      "file": "new/_app/_view/miraiscene/generated/846a2abf3e95e1e9d72e1f3a23db2a49bc6bc37babd57ec0efed29e6fa9086a8.html",
+      "sha256": "0c13862fc5666d45120866539799fceeec02b57de09eb1f81c55c0ddffc6a187",
+      "bytes": 6423
+    },
+    {
+      "file": "new/_app/_view/miraiscene/generated/84f51fa685f1c62c5fa1b1440102e4cf58fbbf382258b9cdd815a1378ad46f48.html",
+      "sha256": "d19d2977a28581227483dd0daa29c59915515d65139261887af272772ce962ea",
+      "bytes": 35423
+    },
+    {
+      "file": "new/_app/_view/miraiscene/generated/8b6a40e6df7399d81334538cebad1b126d46c79996fc6b4f9bcf714aa4510133.html",
+      "sha256": "d740f365ae0588122d7264f1058d235e57822eef0036c2c7c401b4945c9f54dc",
+      "bytes": 7506
+    },
+    {
+      "file": "new/_app/_view/miraiscene/generated/93ccce09ce79cf94b034130bd65de9cc50376b21b409fc136cb955f560c67776.html",
+      "sha256": "33a229c7436622dc83598875e24d623e154da0583f9a61ac1cf3766383a06622",
+      "bytes": 34052
+    },
+    {
+      "file": "new/_app/_view/miraiscene/generated/9dc5edb2ce33391705d223ac619cbfc33e7b45407b880b60a74d97c8dfa2b07b.html",
+      "sha256": "1b9cebb4e1758c6356ebc9009723c73b24acaad9ac301c0913d82beda4c88e63",
+      "bytes": 34111
+    },
+    {
+      "file": "new/_app/_view/miraiscene/generated/a4262e1c9bcbc1721eb3fe13558154460a2b2a2d307daa32532478526ce6ccb1.html",
+      "sha256": "f8ffa87a849872fa82f019fd8353f0fd49c4c4ac74ef5f2ca778da7c63a48e18",
+      "bytes": 3163
+    },
+    {
+      "file": "new/_app/_view/miraiscene/generated/a6ad19fbe5c6857bcb5bc515cf3df9ebe84db55d4db4779f9f82b30aad8c13c0.html",
+      "sha256": "2c84b6771a4d2c61e682a1e4e7c06134cf556a223edae1f12969590b6603bbb1",
+      "bytes": 34845
+    },
+    {
+      "file": "new/_app/_view/miraiscene/generated/c0e5a3a809d9fdc1f0b6b89f3e147b1c460ada0ebdaad67b0e9fef6bb47d0564.html",
+      "sha256": "f8662f7a3144e9d44c62b3b0d74e08b4060fb8b03ce7924f19920979b23188f1",
+      "bytes": 34159
+    },
+    {
+      "file": "new/_app/_view/miraiscene/generated/ccdd0e4311164b8bab1e65a034818a1ced8f52678e0921628c0d82a42b0e0457.html",
+      "sha256": "c685e21eae1a6dd4440ff5581090cc72ebca7d09b935107633d0eb1bce97ab97",
+      "bytes": 33911
+    },
+    {
+      "file": "new/_app/_view/miraiscene/generated/cdccde9c7ad90b6c12f19176298e5ebd204a4f27e97abbf1dc2146820e1a316d.html",
+      "sha256": "828f51eeef3c546ce8b7eb31ac5d4be818bc9a1d1336f3cb378f3c8b0d678b43",
+      "bytes": 6362
+    },
+    {
+      "file": "new/_app/_view/miraiscene/generated/ceaafd2f0ab2f7add70bf62911906a8f74cd32db623979e154b996d950b7d962.html",
+      "sha256": "ee525ad3b1fc69eabd696780edbf8858474ba1b9b732805f0167b1890ededbe3",
+      "bytes": 6377
+    },
+    {
+      "file": "new/_app/_view/miraiscene/generated/db3ce6ad895ccf3c3d2aa03f0e92fdf84dbbd14ea4336838b7465b125fe46675.html",
+      "sha256": "d82cc0c68e6ae904ab951e850f646a481872690e19215c3f05bfcaae75f26e4e",
+      "bytes": 34403
+    },
+    {
+      "file": "new/_app/_view/miraiscene/generated/e2897b70a12d7e63b72579b2a9b9edd979d58ed41327ca7c795749fb351637ec.html",
+      "sha256": "9d21e1b06986b6f83c5b03fde045af95295ecb7c0ce1fb08a58a75d4992325dd",
+      "bytes": 40593
+    },
+    {
+      "file": "new/_app/_view/miraiscene/generated/e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.html",
+      "sha256": "8df3c43fa11de1be438c6c5aa526cc016a131b7c868d2dc85474249ec9858df5",
+      "bytes": 19734
+    },
+    {
+      "file": "new/_app/_view/miraiscene/generated/e69eda651b99db2a3a192678080b6a65038625a26cbd9300a747abb2d0344072.html",
+      "sha256": "0790d7a20397f315e74c85a03bd8218adeed5e32ea98fb4180f87803ea5691a0",
+      "bytes": 34770
+    },
+    {
+      "file": "new/_app/_view/miraiscene/generated/ecf99b04349c9d2b733118f8ed27325e9642d3ab2e91c8d3f6de4a402632e693.html",
+      "sha256": "c0a01b115f75535632cd951788616b6312f65c5b6a1c77da77d5307b2038ae4a",
+      "bytes": 34470
+    },
+    {
+      "file": "new/_app/_view/miraiscene/generated/fa9f8287e60ff3fe339223bea16655a8e09f02296622ce5f914572cbf8aad4d6.html",
+      "sha256": "54d41f876896aebfdfb9e3db524e3de3f6a907feaa65be9e262afb7b8d69f35f",
+      "bytes": 6413
+    },
+    {
+      "file": "new/_app/_view/miraiscene/generated/fc37304307d372936c7c3db2a60d5363aa22bcd6584977b398b5dddb75d55ca1.html",
+      "sha256": "13f62a8c7a9fca140db58e20c0d13eb33d3fd84632e7594bc22cec151989356a",
+      "bytes": 34413
+    },
+    {
+      "file": "new/_app/_view/miraiscene/generated/manifest.json",
+      "sha256": "3979049fd117f337897aa4078f751ee193ff4255d1a32cacb95a601ad12b09b6",
+      "bytes": 21094
+    },
+    {
+      "file": "new/_app/_view/miraiscene/head.tpl",
+      "sha256": "68930e70ae81e8d3ba84222c61d972de19cded4f16418356a520907bc6746512",
+      "bytes": 467
+    },
+    {
+      "file": "new/_app/_view/miraiscene/index.tpl",
+      "sha256": "fba4a471137fb979ce8fdeca2cf67f1426a98ef15a6a9d6b8d6f3dd82c7378a8",
+      "bytes": 667
+    },
+    {
+      "file": "new/_app/_webroot/css/page/miraiscene/banner.css",
+      "sha256": "d65aeb450c593bf71cced4b99c0d3f72cd50f0db6100d0e92e836df8583010c0",
+      "bytes": 5207
+    },
+    {
+      "file": "new/_app/_webroot/css/page/miraiscene/miraiscene.css",
+      "sha256": "9564b66767dad86401b2015892511e185f8535f1a5d07230ba7818c91a4decad",
+      "bytes": 41233
+    },
+    {
+      "file": "new/_app/_webroot/js/page/miraiscene/careerCatalog.astro_astro_type_script_index_0_lang.bLQA-nRJ.js",
+      "sha256": "c6eb2c87dc59292c454ff0b33a38f29ed37a4011dd6bf4d323c624fbf6154ce9",
+      "bytes": 5107
+    },
+    {
+      "file": "new/_app/_webroot/js/page/miraiscene/index.mYqckQOG.css",
+      "sha256": "fcc56998fb77851eda0506b15c16ce49d58da68336b0e318d177ef94e714ec4f",
+      "bytes": 7624
+    },
+    {
+      "file": "new/_app/_webroot/js/page/miraiscene/mirai-282de84a94f66893e384334132fdb5e47e5f2cfee8bf09bcef63284599375b31.js",
+      "sha256": "282de84a94f66893e384334132fdb5e47e5f2cfee8bf09bcef63284599375b31",
+      "bytes": 1679
+    },
+    {
+      "file": "new/_app/_webroot/js/page/miraiscene/mirai-91d4a1d107b89ca159b96eff14f066fbf69067a707187de0024d2fd5f070db98.js",
+      "sha256": "91d4a1d107b89ca159b96eff14f066fbf69067a707187de0024d2fd5f070db98",
+      "bytes": 2699
+    },
+    {
+      "file": "new/_app/_webroot/js/page/miraiscene/siteLayout.Cjub4r33.css",
+      "sha256": "0f0101f5f1ebe4fba61227cd8d45672619c85caa177da36d79e7caaac498c151",
+      "bytes": 20060
+    },
+    {
+      "file": "new/_app/_webroot/miraiscene/assets/brand/miraiSceneFavicon.png",
+      "sha256": "1b0ad5aa279406e1dff0ecc7fb60731cae6e316451c1a214ae06c29d168021d9",
+      "bytes": 829384
+    },
+    {
+      "file": "new/_app/_webroot/miraiscene/assets/brand/miraiSceneLogo.png",
+      "sha256": "52de27af5cc38d6fb2975926331d6582d2365b13bf2185fbf5976bb5b3224c13",
+      "bytes": 740022
+    },
+    {
+      "file": "new/_app/_webroot/miraiscene/assets/brand/miraiSceneLogo.svg",
+      "sha256": "db7c919497662ba8119885b9ce021e41529f6c786db3ac1f5e55c40f271a9085",
+      "bytes": 11582
+    },
+    {
+      "file": "new/_app/_webroot/miraiscene/assets/brand/shinronaviLogo.png",
+      "sha256": "129eff6704214f567ac8c67d43bccd27065973c6908c3c1efa676814b7c8ec4a",
+      "bytes": 23020
+    },
+    {
+      "file": "new/_app/_webroot/miraiscene/assets/design-workspace.png",
+      "sha256": "4e031b4c9a6415d44a58902637db2121e461e40d0eef68bc3c05bcad8b0712cd",
+      "bytes": 2106154
+    },
+    {
+      "file": "new/_app/_webroot/miraiscene/assets/hero/arrow.svg",
+      "sha256": "f9ca6aaed0426cbc9c0d5502d4faf1aae1ca41de615f1dcff0f2e54b871520b8",
+      "bytes": 318
+    },
+    {
+      "file": "new/_app/_webroot/miraiscene/assets/hero/background-pc.png",
+      "sha256": "b7fa7064f7a12160ed77fedd30e7c59d8f94372504c83c3e49250d30d2c620b5",
+      "bytes": 950103
+    },
+    {
+      "file": "new/_app/_webroot/miraiscene/assets/hero/background-sp.png",
+      "sha256": "5e836d937b4fd8f02ce567922258b6b994620f7f6679eb5dbf58d9c22cfd6bcc",
+      "bytes": 1072526
+    },
+    {
+      "file": "new/_app/_webroot/miraiscene/assets/hero/button.svg",
+      "sha256": "1f120e362a9c05afb6315b00692ee0d57e63dc7f3b5f6894335c4cd084549aa4",
+      "bytes": 611
+    },
+    {
+      "file": "new/_app/_webroot/miraiscene/assets/hero/check-background.svg",
+      "sha256": "6d95466c269f219c9e430500ccc4c04ac9292e4221fb1d8bb170522c876523a5",
+      "bytes": 321
+    },
+    {
+      "file": "new/_app/_webroot/miraiscene/assets/hero/check.svg",
+      "sha256": "5be3ef965dff7f6de1e1e129969925fd2beaa233efbb82226f2decd5d0118eb9",
+      "bytes": 319
+    },
+    {
+      "file": "new/_app/_webroot/miraiscene/assets/hero/circle.svg",
+      "sha256": "6c74b2f4e5168452bb2a964cfe8327942c8911eed6d022164c2353e44c1886f2",
+      "bytes": 326
+    },
+    {
+      "file": "new/_app/_webroot/miraiscene/assets/hero/convey.png",
+      "sha256": "bbf920f90aa0e6c5e526b15ca66459632434d38bbc4ad053ba88eb0cd75d089e",
+      "bytes": 1599627
+    },
+    {
+      "file": "new/_app/_webroot/miraiscene/assets/hero/make.png",
+      "sha256": "85c58dd29d4ff032d45523aa38eb32434099c79a9e41e9a903f403ddd9828619",
+      "bytes": 1738729
+    },
+    {
+      "file": "new/_app/_webroot/miraiscene/assets/hero/note.png",
+      "sha256": "75c37314415a81018d382c1be429b45e86afafd9750ac7608ed73a6d01a3273d",
+      "bytes": 6400
+    },
+    {
+      "file": "new/_app/_webroot/miraiscene/assets/hero/support.png",
+      "sha256": "b421b9e7cceff19b8ca08d52b43141dffe14c872c3ba8fb920ba480861bce77a",
+      "bytes": 1699583
+    },
+    {
+      "file": "new/_app/_webroot/miraiscene/assets/interests/discover.svg",
+      "sha256": "9fb817a3ac5b6c3f3c1f6011983f821eba11c89b344242b651b4d4ecfbbcfc4c",
+      "bytes": 23011
+    },
+    {
+      "file": "new/_app/_webroot/miraiscene/assets/interests/make.svg",
+      "sha256": "450a1286755312973a4063606cecbce58fbca8a00cad9a1f2bda2a9ec71cffef",
+      "bytes": 17588
+    },
+    {
+      "file": "new/_app/_webroot/miraiscene/assets/interests/solve.svg",
+      "sha256": "0ac9722ddaa4ac6d80dd0507a3741036a99d8936e32e590c7f687caa6d230fb2",
+      "bytes": 19241
+    },
+    {
+      "file": "new/_app/_webroot/miraiscene/assets/interests/support.svg",
+      "sha256": "1d74e86a45fb1cad514845fb523dad7c4954152cac25120f74d77946d74764ac",
+      "bytes": 12665
+    },
+    {
+      "file": "new/_app/_webroot/miraiscene/assets/poster-a.png",
+      "sha256": "2cd627de5c1a31114698aa4338f2c81b0e5187bd0ff11aaae3930e7db5203f1c",
+      "bytes": 2073350
+    },
+    {
+      "file": "new/_app/_webroot/miraiscene/assets/poster-b.png",
+      "sha256": "2db68478eeb1b51ef14783aaf62abe964ab0c67057bd95df0de327b353aa216e",
+      "bytes": 3010361
+    },
+    {
+      "file": "new/_app/_webroot/miraiscene/assets/scenes/architect-entrance.png",
+      "sha256": "bcc3e5ad2d5b7ead8712d0571f890e73b314537759328dec22831880aa9a53e3",
+      "bytes": 2517266
+    },
+    {
+      "file": "new/_app/_webroot/miraiscene/assets/scenes/beauty-reference.png",
+      "sha256": "2545f08a3d7099477306dd77813bdb23b092a54158bb9c3006910e29f18b6d63",
+      "bytes": 2035091
+    },
+    {
+      "file": "new/_app/_webroot/miraiscene/assets/scenes/logistics-box.png",
+      "sha256": "6676018e5d27a6e72ab4d28fd1c2065e8203acdc4bf9addb3678509946f48c72",
+      "bytes": 2602034
+    },
+    {
+      "file": "new/_app/_webroot/miraiscene/assets/scenes/pastry-spread.png",
+      "sha256": "5616756cb7375dd1591f1dfd7cf491dc8e5b792aa48559b171b6a33415a33b51",
+      "bytes": 2790617
+    },
+    {
+      "file": "new/_app/_webroot/miraiscene/catalog/cards/animal-keeper/index.html",
+      "sha256": "c69b3270e0de13549ee437a97ecfbf833240341e2b3be8f85c7de5e316ce2ca8",
+      "bytes": 1577
+    },
+    {
+      "file": "new/_app/_webroot/miraiscene/catalog/cards/architect/index.html",
+      "sha256": "d467b88b6fa1409ada9cf6d6f730ec0fd6e485098de5b8c9e5999abd32ab83d1",
+      "bytes": 1569
+    },
+    {
+      "file": "new/_app/_webroot/miraiscene/catalog/cards/beauty/index.html",
+      "sha256": "3245f55ff462ed74798afbb6edd61ae4d98a62f2992b04dd9ed6de161c39d13f",
+      "bytes": 1569
+    },
+    {
+      "file": "new/_app/_webroot/miraiscene/catalog/cards/chef/index.html",
+      "sha256": "558018dab4e6f285e9c6093fb384efc5e0935ce7acb11997315d1b3700746d65",
+      "bytes": 1559
+    },
+    {
+      "file": "new/_app/_webroot/miraiscene/catalog/cards/childcare/index.html",
+      "sha256": "bf3fa5f06ef00763ae0d2e143f759e49398379f5ab11cdc860496b43696433ae",
+      "bytes": 1575
+    },
+    {
+      "file": "new/_app/_webroot/miraiscene/catalog/cards/data-scientist/index.html",
+      "sha256": "bcbb7bc3fc7dbaf9f5865a94592fd5bac6b7face5844d6449da313b6704c85a4",
+      "bytes": 1648
+    },
+    {
+      "file": "new/_app/_webroot/miraiscene/catalog/cards/designer/index.html",
+      "sha256": "9323e125bc6b9db0d5a706730d2b72162e57218fd759bda5c48dd9e6b1475a73",
+      "bytes": 1627
+    },
+    {
+      "file": "new/_app/_webroot/miraiscene/catalog/cards/editor/index.html",
+      "sha256": "4d99ac83a84d4f8f7ddb3587bc4d622845eb14858e38d88925656be3f874d30e",
+      "bytes": 1569
+    },
+    {
+      "file": "new/_app/_webroot/miraiscene/catalog/cards/engineer/index.html",
+      "sha256": "c129f7b164a762768d131874b6ec6aba718ddab0bc5f58b4ef94478a2b545667",
+      "bytes": 1579
+    },
+    {
+      "file": "new/_app/_webroot/miraiscene/catalog/cards/event-planner/index.html",
+      "sha256": "c271f4a88246976940428af6dd49f681b2dbaa5723bebfad1ea3556f3edb42c2",
+      "bytes": 1613
+    },
+    {
+      "file": "new/_app/_webroot/miraiscene/catalog/cards/farmer/index.html",
+      "sha256": "58683eb8a2efaaacbf2c60bab0e6cc99520d9770ca0180384a0828ec15b376fb",
+      "bytes": 1586
+    },
+    {
+      "file": "new/_app/_webroot/miraiscene/catalog/cards/game-planner/index.html",
+      "sha256": "8a0582acee1b78b240df6e8da599b5a2fe98b040d23f55aa8b957d1c526824df",
+      "bytes": 1584
+    },
+    {
+      "file": "new/_app/_webroot/miraiscene/catalog/cards/librarian/index.html",
+      "sha256": "fce6f7a057a8e60cf24651ff8c8778acb38b4488b97ace391f91a1d7066e9464",
+      "bytes": 1575
+    },
+    {
+      "file": "new/_app/_webroot/miraiscene/catalog/cards/logistics/index.html",
+      "sha256": "3190892dcf17c30d5b54d3264ec40f92c70a8218e9a22d8517202a7030f1fee8",
+      "bytes": 1589
+    },
+    {
+      "file": "new/_app/_webroot/miraiscene/catalog/cards/museum-curator/index.html",
+      "sha256": "e225869c43ef15cda7df6ebb5ed01b40b085c16e9f3e2451fdbb4ba1f5c9aace",
+      "bytes": 1602
+    },
+    {
+      "file": "new/_app/_webroot/miraiscene/catalog/cards/pastry/index.html",
+      "sha256": "47fd043a55969113324bab0cb486c7219937fb594f98b58442a2144709b64ba5",
+      "bytes": 1578
+    },
+    {
+      "file": "new/_app/_webroot/miraiscene/catalog/cards/product-developer/index.html",
+      "sha256": "5cd8d9bbff7bd284c6074c676306c9c239609f7f0153ebc8fb4099cf6b93532b",
+      "bytes": 1594
+    },
+    {
+      "file": "new/_app/_webroot/miraiscene/catalog/cards/tourism/index.html",
+      "sha256": "b548ef95a523b91218c4d9e9a54fcbd4af3cfd2430977c05499d58f5b05ec322",
+      "bytes": 1606
+    },
+    {
+      "file": "new/_app/_webroot/miraiscene/catalog/cards/video-producer/index.html",
+      "sha256": "5d9aafa0f38ebc3a32872c801823301251b79a31c466bb79e1b22cc15970cc13",
+      "bytes": 1617
+    },
+    {
+      "file": "new/_app/_webroot/miraiscene/catalog/index.json",
+      "sha256": "ab234130c1fe40162b40fe26466a0f17f6b55eaccb6ea738569d3d66ce679522",
+      "bytes": 5187
+    },
+    {
+      "file": "new/_app/_webroot/miraiscene/favicon.svg",
+      "sha256": "8417f121322dd373edc21dcb843a957bc700ab07bef649e5c21aa531023534d4",
+      "bytes": 161
+    },
+    {
+      "file": "new/_app/_webroot/miraiscene/integration/explore-widget.js",
+      "sha256": "4212a89c7cbb23aa8e7b86236cdf92cacb2973720a647ba3c81b40b8181570a6",
+      "bytes": 4834
+    },
+    {
+      "file": "new/_app/_webroot/miraiscene/integration/lesson-links.json",
+      "sha256": "190b37d269c1e0a274cad6675f7443e6775352aed812e3cc5f6ee6bff69f1be9",
+      "bytes": 7692
+    },
+    {
+      "file": "RELEASE-NOTES.md",
+      "sha256": "ac5138c910607298ae742b229f304260a06ef8aeab802197809155c8435d4311",
+      "bytes": 3159
+    },
+    {
+      "file": "rewrite-addition.conf",
+      "sha256": "0a7094a4f7ec7b227d59bca81367ded61882e15af4c5ae9a51443ee148bd73eb",
+      "bytes": 547
+    },
+    {
+      "file": "VALIDATION.md",
+      "sha256": "70d88ebd9dde9311798a30c3ad396919123462d3ca4bbd0c6fa467214ed7b016",
+      "bytes": 3395
+    },
+    {
+      "file": "運用マニュアル.html",
+      "sha256": "0c39607bfd8d965deb6fcccde0f7b75d3a635f5c2f32cd523f166086e63e5055",
+      "bytes": 21008
+    }
+  ]
+}

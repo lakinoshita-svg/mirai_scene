@@ -3,8 +3,8 @@ import SiteLayout from '../../layouts/siteLayout.astro';
 import { learningLinks } from '../../lib/learningLinks';
 import { sitePath } from '../../lib/paths';
 ---
-<SiteLayout title="学びから探究と仕事体験を探す | ミライシーン" breadcrumb="学びと体験">
-  <div class="home"><h1>学びと仕事を、行き来してみよう。</h1><p>気になる分野の探究を読んだり、仕事のひと場面を体験したり。自分のペースで理解を深められます。</p>
+<SiteLayout title="学びの分野から教材と仕事体験を探す | ミライシーン" breadcrumb="学びと体験">
+  <div class="home"><h1>学びと仕事を、行き来してみよう。</h1><p>気になる分野の教材を読んだり、仕事のひと場面を体験したり。自分のペースで理解を深められます。</p>
     <div class="learning-grid">{learningLinks.map(link => <a class="scene-card" href={sitePath(`explore/${link.id}/`)}><h2>{link.label} →</h2><p>{link.description}</p></a>)}</div>
   </div>
 </SiteLayout>

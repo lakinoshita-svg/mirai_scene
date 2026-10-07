@@ -9,10 +9,10 @@ const lessons = [...new Map(links.flatMap(link => link.lessons).map(lesson => [l
 ---
 <div class="learning-connections">
   <a class="primary learning-action" href={schoolSearchUrl(ids)} target="_blank" rel="noopener">この分野を学べる学校を探す ↗</a>
-  <h3>探究でもう少し知ってみよう。</h3>
-  <ul>{lessons.map(lesson => <li><a href={lessonUrl(lesson.slug)} target="_blank" rel="noopener">{lesson.label}の探究（{lesson.schoolType}） ↗</a></li>)}</ul>
-  {/* 資料請求の説明を、探究の教材リンクと分野一覧への導線の間に置く。 */}
+  <h3>この分野で学ぶことを知ろう。</h3>
+  <ul>{lessons.map(lesson => <li><a href={lessonUrl(lesson.slug)} target="_blank" rel="noopener">{lesson.label}の教材（{lesson.schoolType}） ↗</a></li>)}</ul>
+  {/* 資料請求の説明を、教材へのリンクと分野一覧への導線の間に置く。 */}
   <slot />
-  <nav aria-label="同じ分野の探究と体験"><ul>{links.map(link => <li><a href={sitePath(`explore/${link.id}/`)}>ほかの{link.label}の探究・仕事体験を見る →</a></li>)}</ul></nav>
+  <nav aria-label="同じ分野の教材と体験"><ul>{links.map(link => <li><a href={sitePath(`explore/${link.id}/`)}>ほかの{link.label}の教材・仕事体験を見る →</a></li>)}</ul></nav>
 </div>
 <style>.learning-connections{margin-block:24px}.learning-connections h3{font-size:18px}.learning-connections ul{padding-left:1.3em;line-height:2}.learning-connections li a{color:#6443a5;text-decoration:underline}.learning-action{margin-top:16px}</style>

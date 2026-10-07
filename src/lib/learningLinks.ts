@@ -17,7 +17,7 @@ export function getLearningLinks(ids: string[]) {
     return item;
   });
 }
-// 未設定：進路ナビ本番のクエリ形式。設定あり：独立した探究Astroの静的パス形式。
+// 未設定：進路ナビ本番のクエリ形式。設定あり：独立した教材Astroの静的パス形式。
 // INQUIRY_BASE_URLはビルド／dev起動時に読む。利用者のアクセス先から自動判定しない。
 export const lessonUrl = (slug: string) => {
   const base = import.meta.env.INQUIRY_BASE_URL;
