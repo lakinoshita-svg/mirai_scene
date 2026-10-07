@@ -21,9 +21,9 @@
 }
 .homePage .catalog-controls {
   border: 1px solid var(--line);
-  border-radius: 20px;
+  border-radius: var(--radius-panel);
   padding: 24px;
-  background: #fff;
+  background: var(--surface);
 }
 .homePage .interest-filters {
   display: flex;
@@ -46,7 +46,7 @@
 }
 .homePage .catalog-search input {
   font-size: 14px;
-  background: #fbfafc;
+  background: var(--surface-brand-hover);
   color: var(--ink);
 }
 .homePage .field-picker {
@@ -63,10 +63,6 @@
   text-decoration: underline;
   text-underline-offset: 4px;
 }
-.homePage .filter:focus-visible,.homePage input:focus-visible,.homePage summary:focus-visible {
-  outline: 3px solid #7043ae;
-  outline-offset: 3px;
-}
 .homePage .catalog-count {
   margin: 28px 0 16px;
 }
@@ -78,7 +74,7 @@
   height: 144px;
 }
 .homePage .career {
-  border-radius: 16px;
+  border-radius: var(--radius-card);
   box-shadow: none;
 }
 .homePage .career .card-body {
@@ -93,20 +89,16 @@
   font-size: 13px;
   line-height: 1.85;
 }
-.homePage .career:hover {
-  border-color: #aa8bcd;
-  box-shadow: 0 6px 20px #4725570d;
-}
 .homePage .catalog-more {
   margin: 32px 0 0;
 }
 .homePage .catalog-more .primary {
-  background: #fff;
-  border: 1px solid #7043ae;
-  color: #7043ae;
+  background: var(--surface);
+  border: 1px solid var(--brand-purple);
+  color: var(--brand-purple);
   min-height: 48px;
   font-size: 14px;
-  border-radius: 999px;
+  border-radius: var(--radius-pill);
 }
 .homeExplore {
   display: flex;
@@ -115,13 +107,13 @@
   gap: 32px;
   padding: 32px;
   margin-top: 48px;
-  background: #f3eef9;
-  border-radius: 20px;
+  background: var(--surface-brand-soft);
+  border-radius: var(--radius-panel);
 }
 .homeExplore .homeSectionLabel {
   font-size: 12px;
   font-weight: 700;
-  color: #7043ae;
+  color: var(--brand-purple);
   margin: 0 0 8px;
 }
 .homeExplore h2 {
@@ -158,7 +150,7 @@
   }
   .homePage .catalog-controls {
     padding: 16px;
-    border-radius: 16px;
+    border-radius: var(--radius-card);
   }
   .homePage .interest-filters {
     display: grid;
@@ -200,7 +192,7 @@
     display: block;
     padding: 24px 20px;
     margin-top: 32px;
-    border-radius: 16px;
+    border-radius: var(--radius-card);
   }
   .homeExplore h2 {
     font-size: 19px;

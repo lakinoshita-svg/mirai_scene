@@ -1,4 +1,4 @@
-/* aboutの表示幅を全ページの共通基準にする。PHP組み込みにも同じCSSを使う。 */
-.miraiLogo{display:block;width:180px;height:auto;max-width:100%;margin:0;padding:0;flex-shrink:0}
-@media(max-width:650px){.miraiLogo{width:140px}}
-@media(max-width:350px){.miraiLogo{width:120px}}
+/* 文字ロゴはヘッダー、フッター、進路ナビ組み込みで同じサイズと色を使う。 */
+.miraiLogo{display:block;width:max-content;max-width:100%;margin:0;padding:0;flex-shrink:0;color:var(--brand-purple);font-size:24px;font-weight:900;line-height:1.3;letter-spacing:.03em;white-space:nowrap}
+@media(max-width:650px){.miraiLogo{font-size:20px}}
+@media(max-width:350px){.miraiLogo{font-size:18px}}

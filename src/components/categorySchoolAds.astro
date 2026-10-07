@@ -40,15 +40,15 @@ const initialIds = new Set(getSchoolAds(category).map(ad => ad.id));
 <style>
   .school-ad[hidden],.ad-area[hidden]{display:none}
   .ad-area{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin:0 0 20px;font-size:14px}
-  .ad-area select{font:inherit;padding:8px;border:1px solid var(--line);border-radius:6px;background:white;color:var(--ink)}
-  .school-ads{margin:32px 0;padding:24px;border:1px solid var(--line);border-radius:20px;background:#fff}
+  .ad-area select{font:inherit;padding:8px;border:1px solid var(--line);border-radius:var(--radius-small);background:var(--surface);color:var(--ink)}
+  .school-ads{margin:32px 0;padding:24px;border:1px solid var(--line);border-radius:var(--radius-panel);background:var(--surface)}
   .school-ads-heading{display:flex;align-items:center;justify-content:space-between;gap:16px}
-  .school-ads-heading h2{font-size:20px;margin:0}.ad-label{flex-shrink:0;font-size:12px;color:var(--muted);border:1px solid var(--line);padding:3px 8px;border-radius:4px}
+  .school-ads-heading h2{font-size:20px;margin:0}.ad-label{flex-shrink:0;font-size:12px;color:var(--muted);border:1px solid var(--line);padding:3px 8px;border-radius:var(--radius-small)}
   .school-ads-caption{font-size:14px;color:var(--muted);margin:12px 0 20px}
   .school-ads-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr));gap:20px}
-  .school-ad{display:block;border:1px solid var(--line);border-radius:12px;overflow:hidden;color:var(--ink);text-decoration:none}
-  .school-ad:hover{border-color:var(--blue)}.school-ad:focus-visible{outline:3px solid var(--blue);outline-offset:4px}
+  .school-ad{display:block;border:1px solid var(--line);border-radius:var(--radius-control);overflow:hidden;color:var(--ink);text-decoration:none}
+  .school-ad:hover{border-color:var(--brand-purple)}.school-ad:focus-visible{outline:3px solid var(--focus-color);outline-offset:5px}
   .school-ad img{display:block;width:100%;height:auto}.school-ad-body{padding:20px}.school-type{font-size:12px;color:var(--muted)}
-  .school-ad h3{margin:6px 0 14px;font-size:20px}.school-ad strong{font-size:16px}.school-ad p{font-size:14px;line-height:1.8}.school-ad-link{display:block;margin-top:16px;font-weight:700;color:var(--blue)}
+  .school-ad h3{margin:6px 0 14px;font-size:20px}.school-ad strong{font-size:16px}.school-ad p{font-size:14px;line-height:1.8}.school-ad-link{display:block;margin-top:16px;font-weight:700;color:var(--brand-purple)}
   @media(max-width:650px){.school-ads{padding:16px}.school-ads-heading h2{font-size:17px}}
 </style>

@@ -13,7 +13,7 @@
 .breadcrumb-shell { margin-block: 4px; padding-block: 0; }
 .breadcrumb-shell .breadcrumbs { margin: 0; flex-wrap: wrap; }
 .breadcrumb-shell .breadcrumbs { line-height: 18px; }
-.breadcrumbs [aria-current] { color: var(--ink, #30283e); }
+.breadcrumbs [aria-current] { color: var(--ink); }
 footer.site-footer { display: block; padding: 0; }
 .site-footer-inner { display: flex; align-items: center; justify-content: space-between; gap: 24px; padding-block: 32px; }
 @media(max-width:650px) {

@@ -15,4 +15,4 @@ const lessons = [...new Map(links.flatMap(link => link.lessons).map(lesson => [l
   <slot />
   <nav aria-label="同じ分野の教材と体験"><ul>{links.map(link => <li><a href={sitePath(`explore/${link.id}/`)}>ほかの{link.label}の教材・仕事体験を見る →</a></li>)}</ul></nav>
 </div>
-<style>.learning-connections{margin-block:24px}.learning-connections h3{font-size:18px}.learning-connections ul{padding-left:1.3em;line-height:2}.learning-connections li a{color:#6443a5;text-decoration:underline}.learning-action{margin-top:16px}</style>
+<style>.learning-connections{margin-block:24px}.learning-connections h3{font-size:18px}.learning-connections ul{padding-left:1.3em;line-height:2}.learning-connections li a{color:var(--brand-purple);text-decoration:underline}.learning-action{margin-top:16px}</style>

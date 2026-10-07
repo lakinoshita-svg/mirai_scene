@@ -24,4 +24,4 @@ const { learning, careers } = Astro.props;
     <section class="scene-card"><h2>学べる場所を探してみよう。</h2><a class="primary" href={schoolSearchUrl([learning.id])} target="_blank" rel="noopener">{learning.label}につながる学校を探す ↗</a><p class="fine-print">検索分野：{learning.schoolFields.map(field => field.label).join('・')}</p></section>
   </div>
 </SiteLayout>
-<style>.exploration h1{font-size:clamp(24px,4vw,34px);line-height:1.5}.exploration section{margin-block:32px}.exploration ul{padding-left:1.3em;line-height:2.2}.exploration li a{color:#6443a5;text-decoration:underline}</style>
+<style>.exploration h1{font-size:clamp(24px,4vw,34px);line-height:1.5}.exploration section{margin-block:32px}.exploration ul{padding-left:1.3em;line-height:2.2}.exploration li a{color:var(--brand-purple);text-decoration:underline}</style>

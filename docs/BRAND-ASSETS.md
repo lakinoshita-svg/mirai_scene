@@ -1,34 +1,26 @@
-# 共通ロゴの管理
+# ブランド素材の管理
 
-## FVの説明用カード画像
+## ミライシーンの文字ロゴ
 
-FVの配置は `src/components/hero.astro` で管理する。2026-10-06に割合による文字・CTAの絶対配置を廃止し、PCは左に説明とCTA、右に画像群を置くグリッドへ変更。900px以下では説明→CTA→画像の順にする。文字拡大時は内容を切らずに縦へ伸ばす。画像を画面の高さに応じて極端に縮めない。TOP全体の配置意図は [TOPデザインの判断基準](homeDesign.md) を参照する。
+画面上のロゴは画像を使わず、「ミライシーン」の文字で表示します。ファビコンの図柄はタブ用のアイコンとして使い、ページ内のロゴには含めません。
 
-`public/assets/hero/make.png`・`support.png`・`convey.png` はリンクのない説明用画像。2026-10-05、内蔵imagegenで右下の丸い矢印ボタンを除去した素材へ差し替えた。編集指示は「右下の紫の矢印と円を除去し、白いカード背景で補う。人物・文字・構図・透過背景を維持する」。生成編集のため画素単位で元画像と同一ではない。文字と矢印の除去を目視確認済み。実際に移動するCTAの矢印は維持する。
+- 共通HTML：`src/components/brandLogo.astro`
+- 共通のサイズ・色：`src/styles/brandLogo.css`
+- ヘッダーの配置：`src/styles/brandNavigation.css`
+- 進路ナビ組み込みの共通ロゴ：`integrations/shinronavi/templates/index.tpl`。Web版と同じ`.miraiLogo`クラスとCSSを使います。
+- 進路ナビ導線バナー：`integrations/shinronavi/templates/banner.tpl` と `banner.css`。文字ロゴとして表示し、ホスト側CSSとの衝突を避けるため専用トークンを使います。
+- ファビコン：`public/assets/brand/miraiSceneFavicon.png`。ブラウザタブ用のほか、導線バナーのイメージ内で装飾として単独表示します。文字ロゴと組み合わせてロゴ表示には使いません。
 
-2026-10-02更新。
+表示サイズとブランド色は共通CSSで管理します。画面ごとに別のロゴ画像や独自のサイズを足さず、変更時はAstro共通部品と進路ナビ組み込みの表示を確認します。
 
-## 命名規則
+`public/assets/brand/miraiSceneLogo.png` は現在の画面ロゴ表示には使いません。文字ロゴの表示を変更するときは、画像素材ではなく上記のHTMLとCSSを編集してください。
 
-ロゴ関連の画像・共通コンポーネントのファイル名・CSSファイル名・共通ロゴのクラス名はlowerCamelCase（先頭を小文字、単語の区切りを大文字）にする。例：`miraiSceneLogo.png`、`brandLogo.astro`、`brandLogo.css`、`.miraiLogo`。`trimmed`などの加工履歴ではなく用途を名前にする。Astro内のコンポーネント識別子は、HTML要素と区別するため慣例どおり`BrandLogo`を使う。プロジェクト全体の規則と例外は [命名・コード管理ガイド](CODE-MAINTENANCE.md) を参照する。
+## FV画像
 
-- 使用画像：`public/assets/brand/miraiSceneLogo.png`（2069×523、透過PNG）。TOP・about・詳細・フッター・進路ナビ組み込み・導線バナーから同じ画像を参照する。
-- Astroの表示部品：`src/components/brandLogo.astro`。
-- 配置：`src/styles/brandNavigation.css`。ヘッダーのミライシーンロゴは左右同幅のグリッドで中央揃え。進路ナビロゴは左、aboutリンクは右。フッターも中央揃え。PHP組み込みのローカルナビにも同じCSSを使う。
-- 共通サイズ：`src/styles/brandLogo.css`。aboutを基準にPC180px、650px以下140px、350px以下120px。ページ固有のロゴ幅を追加しない。
-- 進路ナビ用：`scripts/buildShinronavi.mjs` が同じbrandLogo.cssを取り込む。バナーは配置面積が違うため、banner.cssの専用幅を使用する。
-- ファビコン：`public/assets/brand/miraiSceneFavicon.png`。ブラウザのタブに表示するアイコン。
-- 進路ナビのロゴ：`public/assets/brand/shinronaviLogo.png`。ミライシーンのロゴとは別のブランド画像。
+FVの配置は `src/components/hero.astro`、画像は `public/assets/hero/` で管理します。カード画像は説明用の素材です。実際に移動する導線はCTAリンクとして別に実装します。
 
-## ロゴを差し替える手順
+画像の差し替え時はPC・SPの表示、代替テキスト、リンクの有無、画像内の矢印や文字が実際の機能と一致しているかを確認してください。
 
-1. 新しい画像を `public/assets/brand/miraiSceneLogo.png` に保存する。用途を表す固定名を使い、加工方法や版番号をファイル名に付けない。
-2. 画像の縦横ピクセル数が変わった場合は、`src/components/brandLogo.astro` と `integrations/shinronavi/templates/` の `index.tpl`・`banner.tpl` のwidth・height属性を更新する。これは画像の比率をブラウザへ伝える値で、画面上の表示幅ではない。
-3. 表示幅を変更する場合は `src/styles/brandLogo.css` を編集する。導線バナーの幅のみ `integrations/shinronavi/templates/banner.css` で管理する。
-4. `npm run build` と `npm run build:shinronavi` でWeb公開用・進路ナビ組み込み用を生成し、TOP・about・フッター・バナーの表示を確認する。生成先を直接編集しない。
+## ファイル名
 
-## 変更記録
-
-2026-10-02：提供された `ChatGPT 画像 2026年10月2日 11_37_23.png` を加工せず採用。作業中の名前 `mirai-scene-logo-trimmed.png` は廃止し、`miraiSceneLogo.png` に統一した。旧画像も公開素材から置き換え、現行ロゴを一つにした。既存の配布版を更新するときは、画像だけでなく参照するテンプレートも同じ版へ更新する。
-
-初期導入固定ZIPは旧版のまま保存する。新ロゴを進路ナビへ取り込むときは、新しい配布版の画像・テンプレート・CSSをまとめて確認する。固定ZIPを上書きしない。
+ロゴ関連の内部ファイル名はlowerCamelCaseを基本にします。例：`brandLogo.astro`、`brandLogo.css`、`.miraiLogo`。フレームワークや外部連携で固定されている名前は機械的に変更しません。全体ルールは[コード管理ガイド](CODE-MAINTENANCE.md)を参照してください。

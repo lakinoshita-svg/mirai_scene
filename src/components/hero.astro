@@ -70,14 +70,14 @@ const heroCards = [
 }
 .hero-copy .heroEyebrow {
   margin: 0 0 20px;
-  color: #7043ae;
+  color: var(--brand-purple);
   font-size: 13px;
   font-weight: 700;
   letter-spacing: .06em;
 }
 .hero-copy h1 {
   margin: 0;
-  color: #2c243d;
+  color: var(--ink);
   font-size: clamp(28px,3vw,42px);
   font-weight: 700;
   line-height: 1.5;
@@ -85,7 +85,7 @@ const heroCards = [
 }
 .hero-copy h1 span {
   display: block;
-  background: linear-gradient(90deg,#6956d9,#a45dd8 65%,#c96a48);
+  background: var(--brand-gradient);
   background-clip: text;
   color: transparent;
   white-space: nowrap;
@@ -97,7 +97,7 @@ const heroCards = [
   margin: 20px 0 0;
   font-size: 15px;
   line-height: 1.9;
-  color: #686171;
+  color: var(--muted);
 }
 .hero-art {
   grid-area: art;
@@ -158,14 +158,14 @@ const heroCards = [
   min-height: 60px;
   padding: 12px 18px 12px 24px;
   box-sizing: border-box;
-  border-radius: 999px;
-  background: linear-gradient(115deg,#6956d9,#9956c1);
-  color: #fff;
+  border-radius: var(--radius-pill);
+  background: var(--brand-gradient);
+  color: var(--surface);
   font-size: 15px;
   font-weight: 700;
   line-height: 1.6;
   text-decoration: none;
-  box-shadow: 0 6px 18px #6956d926;
+  box-shadow: var(--cta-shadow);
 }
 .hero-invitation span {
   display: grid;
@@ -174,17 +174,17 @@ const heroCards = [
   width: 30px;
   height: 30px;
   border-radius: 50%;
-  background: #fff;
-  color: #6956d9;
+  background: var(--surface);
+  color: var(--brand-violet);
   font-size: 20px;
 }
 .hero-invitation:hover {
-  box-shadow: 0 8px 24px #6956d94d;
-  background: #7043ae;
+  box-shadow: var(--cta-shadow-hover);
+  background: var(--brand-purple);
 }
 .hero-invitation:focus-visible {
-  outline: 3px solid #6956d9;
-  outline-offset: 4px;
+  outline: 3px solid var(--focus-color);
+  outline-offset: 5px;
 }
 .hero-meta {
   margin: 12px 0 0;
@@ -192,7 +192,7 @@ const heroCards = [
   align-items: center;
   justify-content: center;
   gap: 8px;
-  color: #686171;
+  color: var(--muted);
   font-size: 12px;
   line-height: 1.8;
 }
