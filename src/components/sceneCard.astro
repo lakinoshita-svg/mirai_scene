@@ -30,6 +30,9 @@ const { career:c, scene:s, index } = Astro.props;
   </article>
 </section>
 <style>
+  /* 職業名が長い場合も進捗を一まとまりで読めるよう、狭い幅では行を分ける。 */
+  .experience-top { flex-wrap:wrap; gap:var(--space-1) var(--space-2); }
+  .experience-top > span:last-child { flex-shrink:0; white-space:nowrap; margin-left:auto; }
   /* 観察に使う写真は全体を残す。固定高のcoverで判断材料を切り落とさない。 */
   .scene-image { height:auto; object-fit:contain; }
 </style>

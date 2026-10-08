@@ -1,12 +1,12 @@
 /* 左右を同じ幅にすることで、リンクの文字数に左右されずロゴを中央に置く。 */
-.site-header{display:grid;grid-template-columns:minmax(0,1fr) auto minmax(0,1fr);align-items:center;gap:16px}
+.site-header{display:grid;grid-template-columns:minmax(0,1fr) auto minmax(0,1fr);align-items:center;gap:var(--space-2)}
 .site-header .brand-family{display:contents}
 .site-header .brand-divider{display:none}
 .site-header .parent-brand{grid-column:1;justify-self:start}
 .site-header .brand{grid-column:2;justify-self:center}
 .site-header .header-link{grid-column:3;justify-self:end;text-align:right;min-width:0}
-.site-footer .site-footer-inner{display:flex;flex-direction:column;align-items:center;gap:12px;text-align:center}
+.site-footer .site-footer-inner{display:flex;flex-direction:column;align-items:center;gap:var(--space-2);text-align:center}
 .site-footer-inner p{margin:0}
 @media(max-width:650px){
-  .site-header{gap:8px}
+  .site-header{gap:var(--space-1)}
 }

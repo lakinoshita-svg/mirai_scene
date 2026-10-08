@@ -42,12 +42,12 @@ const heroCards = [
 .hero-stage {
   max-width: 1224px;
   margin: auto;
-  padding: 16px 32px 20px;
+  padding:var(--space-2) var(--space-4) var(--space-3);
   display: grid;
   grid-template-columns: minmax(0,1fr) minmax(0,1fr);
   grid-template-areas: "copy art" "action art";
   grid-template-rows: auto 1fr;
-  column-gap: 32px;
+  column-gap:var(--space-4);
   align-content: center;
   box-sizing: border-box;
 }
@@ -65,11 +65,11 @@ const heroCards = [
 .hero-copy {
   grid-area: copy;
   align-self: start;
-  padding-top: 24px;
+  padding-top:var(--space-3);
   z-index: 1;
 }
 .hero-copy .heroEyebrow {
-  margin: 0 0 20px;
+  margin:0 0 var(--space-3);
   color: var(--brand-purple);
   font-size: 13px;
   font-weight: 700;
@@ -94,7 +94,7 @@ const heroCards = [
   display: none;
 }
 .hero-copy p {
-  margin: 20px 0 0;
+  margin:var(--space-3) 0 0;
   font-size: 15px;
   line-height: 1.9;
   color: var(--muted);
@@ -147,16 +147,16 @@ const heroCards = [
   align-self: start;
   width: fit-content;
   max-width: 100%;
-  margin-top: 28px;
+  margin-top:var(--space-4);
   z-index: 1;
 }
 .hero-invitation {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 16px;
+  gap:var(--space-2);
   min-height: 60px;
-  padding: 12px 18px 12px 24px;
+  padding:var(--space-2) var(--space-2) var(--space-2) var(--space-3);
   box-sizing: border-box;
   border-radius: var(--radius-pill);
   background: var(--brand-gradient);
@@ -187,11 +187,11 @@ const heroCards = [
   outline-offset: 5px;
 }
 .hero-meta {
-  margin: 12px 0 0;
+  margin:var(--space-2) 0 0;
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 8px;
+  gap:var(--space-1);
   color: var(--muted);
   font-size: 12px;
   line-height: 1.8;
@@ -203,7 +203,7 @@ const heroCards = [
     grid-template-columns: minmax(0,1fr);
     grid-template-areas: "copy" "action" "art";
     grid-template-rows: auto auto auto;
-    padding: 8px 20px 8px;
+    padding:var(--space-1) var(--space-3) var(--space-1);
     max-width: 600px;
   }
   .hero-copy {
@@ -211,7 +211,7 @@ const heroCards = [
   }
   .hero-copy .heroEyebrow {
     font-size: 12px;
-    margin-bottom: 12px;
+    margin-bottom:var(--space-2);
   }
   .hero-copy h1 {
     font-size: clamp(23px,6vw,30px);
@@ -219,25 +219,25 @@ const heroCards = [
   }
   .hero-copy p {
     font-size: 14px;
-    margin-top: 12px;
+    margin-top:var(--space-2);
     line-height: 1.8;
   }
   .hero-action {
-    margin-top: 16px;
+    margin-top:var(--space-2);
     width: 100%;
     max-width: 370px;
   }
   .hero-invitation {
     font-size: 14px;
     min-height: 56px;
-    padding-left: 18px;
-    gap: 8px;
+    padding-left:var(--space-2);
+    gap:var(--space-1);
   }
   .hero-art {
     max-width: 320px;
     width: 100%;
     height: 260px;
-    margin: 16px auto 0;
+    margin:var(--space-2) auto 0;
     aspect-ratio: auto;
   }
   .hero-card {
@@ -254,7 +254,7 @@ const heroCards = [
 }
 @media(max-width:350px) {
   .hero-stage {
-    padding-inline: 14px;
+    padding-inline:var(--space-2);
   }
   .hero-copy h1 {
     font-size: 21px;

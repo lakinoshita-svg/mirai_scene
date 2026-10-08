@@ -21,7 +21,7 @@ const { learning, careers } = Astro.props;
     </section>
     <CareerCatalog careers={careers} learningId={learning.id} title="学びにつながる仕事を体験しよう。" />
     <p class="fine-print">関連する学びの例です。職業に必要な資格や履修課程は、学校ごとに確認してください。</p>
-    <section class="scene-card"><h2>学べる場所を探してみよう。</h2><a class="primary" href={schoolSearchUrl([learning.id])} target="_blank" rel="noopener">{learning.label}につながる学校を探す ↗</a><p class="fine-print">検索分野：{learning.schoolFields.map(field => field.label).join('・')}</p></section>
+    <section class="scene-card"><h2>学べる場所を探してみよう。</h2><a class="primary" href={schoolSearchUrl([learning.id])} target="_blank" rel="noopener"><span>{learning.label}につながる学校を探す</span><span aria-hidden="true">↗</span></a><p class="fine-print">検索分野：{learning.schoolFields.map(field => field.label).join('・')}</p></section>
   </div>
 </SiteLayout>
-<style>.exploration h1{font-size:clamp(24px,4vw,34px);line-height:1.5}.exploration section{margin-block:32px}.exploration ul{padding-left:1.3em;line-height:2.2}.exploration li a{color:var(--brand-purple);text-decoration:underline}</style>
+<style>.exploration h1{font-size:clamp(24px,4vw,34px);line-height:1.5}.exploration section{margin-block:var(--space-4)}.exploration ul{padding-left:var(--space-2);line-height:2.2}.exploration li a{color:var(--brand-purple);text-decoration:underline}</style>

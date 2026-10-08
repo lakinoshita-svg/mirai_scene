@@ -1,8 +1,8 @@
 /* TOP固有の階層。主導線＝体験一覧、補助導線＝教材、説明＝about。
    詳細ページのカードや完了画面へ影響させないようhomePage内に限定する。 */
 .homePage .home {
-  padding-top: 48px;
-  padding-bottom: 56px;
+  padding-top:var(--space-6);
+  padding-bottom:var(--space-7);
 }
 .homePage .catalog-title {
   margin: 0;
@@ -14,7 +14,7 @@
   margin: 0;
 }
 .homePage .catalogIntroduction {
-  margin: 12px 0 24px;
+  margin:var(--space-2) 0 var(--space-3);
   font-size: 14px;
   line-height: 1.9;
   color: var(--muted);
@@ -22,18 +22,18 @@
 .homePage .catalog-controls {
   border: 1px solid var(--line);
   border-radius: var(--radius-panel);
-  padding: 24px;
+  padding:var(--space-3);
   background: var(--surface);
 }
 .homePage .interest-filters {
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;
-  margin: 0 0 24px;
+  gap:var(--space-1);
+  margin:0 0 var(--space-3);
 }
 .homePage .interest-filters .filter {
   min-height: 44px;
-  padding: 10px 16px;
+  padding:var(--space-1) var(--space-2);
   line-height: 1.5;
   font-size: 14px;
 }
@@ -41,7 +41,7 @@
   max-width: 480px;
   font-size: 12px;
   margin: 0;
-  gap: 8px;
+  gap:var(--space-1);
   color: var(--muted);
 }
 .homePage .catalog-search input {
@@ -50,24 +50,24 @@
   color: var(--ink);
 }
 .homePage .field-picker {
-  margin: 16px 0 0;
+  margin:var(--space-2) 0 0;
   font-size: 13px;
 }
 .homePage [data-clear-filters] {
-  margin-top: 16px;
+  margin-top:var(--space-2);
   white-space: normal;
   border: 0;
   background: transparent;
-  padding: 8px 0;
+  padding:var(--space-1) 0;
   min-height: 44px;
   text-decoration: underline;
   text-underline-offset: 4px;
 }
 .homePage .catalog-count {
-  margin: 28px 0 16px;
+  margin:var(--space-4) 0 var(--space-2);
 }
 .homePage .grid {
-  gap: 24px;
+  gap:var(--space-3);
 }
 /* サムネイルはテーマの識別用。大きな装飾より、体験の題名に視線を集める。 */
 .homePage .career-art {
@@ -78,19 +78,19 @@
   box-shadow: none;
 }
 .homePage .career .card-body {
-  padding: 20px;
+  padding:var(--space-3);
 }
 .homePage .career .card-body h3 {
   font-size: 19px;
   line-height: 1.6;
-  margin-bottom: 10px;
+  margin-bottom:var(--space-1);
 }
 .homePage .career .card-body p {
   font-size: 13px;
   line-height: 1.85;
 }
 .homePage .catalog-more {
-  margin: 32px 0 0;
+  margin:var(--space-4) 0 0;
 }
 .homePage .catalog-more .primary {
   background: var(--surface);
@@ -104,9 +104,9 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 32px;
-  padding: 32px;
-  margin-top: 48px;
+  gap:var(--space-4);
+  padding:var(--space-4);
+  margin-top:var(--space-6);
   background: var(--surface-brand-soft);
   border-radius: var(--radius-panel);
 }
@@ -114,12 +114,12 @@
   font-size: 12px;
   font-weight: 700;
   color: var(--brand-purple);
-  margin: 0 0 8px;
+  margin:0 0 var(--space-1);
 }
 .homeExplore h2 {
   font-size: 22px;
   line-height: 1.6;
-  margin: 0 0 8px;
+  margin:0 0 var(--space-1);
 }
 .homeExplore p {
   font-size: 14px;
@@ -128,9 +128,9 @@
   margin: 0;
 }
 .homePage .about-note {
-  margin-top: 32px;
-  padding: 32px 0 0;
-  gap: 24px;
+  margin-top:var(--space-4);
+  padding:var(--space-4) 0 0;
+  gap:var(--space-3);
 }
 .homePage .about-note h2 {
   font-size: 18px;
@@ -141,33 +141,33 @@
 }
 @media(max-width:650px) {
   .homePage .home {
-    padding-top: 32px;
-    padding-bottom: 32px;
+    padding-top:var(--space-4);
+    padding-bottom:var(--space-4);
   }
   .homePage .catalogIntroduction {
-    margin-bottom: 20px;
+    margin-bottom:var(--space-3);
     font-size: 13px;
   }
   .homePage .catalog-controls {
-    padding: 16px;
+    padding:var(--space-2);
     border-radius: var(--radius-card);
   }
   .homePage .interest-filters {
     display: grid;
     grid-template-columns: repeat(2,minmax(0,1fr));
-    gap: 8px;
-    margin-bottom: 20px;
+    gap:var(--space-1);
+    margin-bottom:var(--space-3);
   }
   .homePage .interest-filters [data-interest="all"] {
     grid-column: 1/-1;
   }
   .homePage .interest-filters .filter {
     font-size: 12px;
-    padding: 10px 6px;
+    padding:var(--space-1) var(--space-1);
     white-space: normal;
   }
   .homePage .grid {
-    gap: 12px;
+    gap:var(--space-2);
   }
   .homePage .career {
     grid-template-columns: 92px minmax(0,1fr);
@@ -177,12 +177,12 @@
     min-height: 0;
   }
   .homePage .career .card-body {
-    padding: 14px;
+    padding:var(--space-2);
   }
   .homePage .career .card-body h3 {
     font-size: 16px;
     line-height: 1.6;
-    margin-bottom: 6px;
+    margin-bottom:var(--space-1);
   }
   .homePage .career .card-body p {
     font-size: 12px;
@@ -190,8 +190,8 @@
   }
   .homeExplore {
     display: block;
-    padding: 24px 20px;
-    margin-top: 32px;
+    padding:var(--space-3) var(--space-3);
+    margin-top:var(--space-4);
     border-radius: var(--radius-card);
   }
   .homeExplore h2 {
@@ -199,11 +199,11 @@
   }
   .homeExplore .text-link {
     display: inline-block;
-    margin-top: 20px;
+    margin-top:var(--space-3);
     white-space: normal;
   }
   .homePage .about-note {
-    margin-top: 24px;
-    padding-top: 24px;
+    margin-top:var(--space-3);
+    padding-top:var(--space-3);
   }
 }

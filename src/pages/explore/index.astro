@@ -8,4 +8,4 @@ import { sitePath } from '../../lib/paths';
     <div class="learning-grid">{learningLinks.map(link => <a class="scene-card" href={sitePath(`explore/${link.id}/`)}><h2>{link.label} →</h2><p>{link.description}</p></a>)}</div>
   </div>
 </SiteLayout>
-<style>.learning-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,280px),1fr));gap:20px;margin-block:32px}.learning-grid a{display:block;text-decoration:none}.learning-grid h2{font-size:20px}</style>
+<style>.learning-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,280px),1fr));gap:var(--space-3);margin-block:var(--space-4)}.learning-grid a{display:block;text-decoration:none}.learning-grid h2{font-size:20px}</style>

@@ -1,6 +1,6 @@
 /* ヘッダー・本文一覧・パンくず・フッターの左右位置を共通化。幅や余白はここで変更する。
    SiteLayoutでは既存CSSより後に読み込み、以前の個別余白を上書きする。 */
-:root { --shell-width: 1224px; --shell-gutter: 32px; }
+:root { --space-1: 8px; --space-2: 16px; --space-3: 24px; --space-4: 32px; --space-5: 40px; --space-6: 48px; --space-7: 56px; --space-8: 64px; --space-9: 72px; --space-10: 80px; --space-11: 88px; --space-12: 96px; --space-13: 104px; --space-14: 112px; --space-15: 120px; --space-16: 128px; --space-17: 136px; --space-18: 144px; --space-19: 152px; --space-20: 160px; --space-21: 168px; --space-22: 176px; --space-23: 184px; --shell-width: 1224px; --shell-gutter: var(--space-4); }
 .site-header, .home, .breadcrumb-shell, .site-footer-inner {
   box-sizing: border-box;
   width: 100%;
@@ -9,16 +9,19 @@
   padding-inline: var(--shell-gutter);
 }
 .site-header { height: 68px; }
-/* 上部をコンパクトにするため、上下8ptから4pxへ変更。折り返しは許容する。 */
-.breadcrumb-shell { margin-block: 4px; padding-block: 0; }
+/* 余白は8pxグリッドに統一し、パンくずの上下間隔は最小の8pxにする。 */
+.breadcrumb-shell { margin-block:var(--space-1); padding-block: 0; }
 .breadcrumb-shell .breadcrumbs { margin: 0; flex-wrap: wrap; }
 .breadcrumb-shell .breadcrumbs { line-height: 18px; }
 .breadcrumbs [aria-current] { color: var(--ink); }
+/* 長い分野名や複数の教材リンクも本文幅の内側で折り返す。 */
+.experience-learning { display:flex; flex-wrap:wrap; gap:var(--space-1) var(--space-2); margin-bottom:var(--space-2); }
+.experience-learning .text-link { min-width:0; white-space:normal; }
 footer.site-footer { display: block; padding: 0; }
-.site-footer-inner { display: flex; align-items: center; justify-content: space-between; gap: 24px; padding-block: 32px; }
+.site-footer-inner { display: flex; align-items: center; justify-content: space-between; gap:var(--space-3); padding-block:var(--space-4); }
 @media(max-width:650px) {
-  :root { --shell-gutter: 20px; }
+  :root { --shell-gutter: var(--space-3); }
   .site-header { height: 56px; }
-  .site-footer-inner { display: block; padding-block: 24px; }
+  .site-footer-inner { display: block; padding-block:var(--space-3); }
 }
-@media(max-width:350px) { :root { --shell-gutter: 14px; } }
+@media(max-width:350px) { :root { --shell-gutter: var(--space-2); } }

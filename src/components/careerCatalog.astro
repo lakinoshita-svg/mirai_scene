@@ -39,11 +39,11 @@ const categories = ['すべて', ...new Set(careers.map(c => c.category))];
     </section>
 
 <style>
-  #experiences{scroll-margin-top:24px}
+  #experiences{scroll-margin-top:var(--space-3)}
   #experiences:focus{outline:none}
 </style>
 <script>import '../scripts/catalog';</script>
 <style>
- .catalog-search{display:grid;gap:8px;margin:20px 0;font-weight:700}
- .catalog-search input{width:100%;box-sizing:border-box;padding:12px 16px;font:inherit;border:1px solid var(--line);border-radius:var(--radius-small)}
+ .catalog-search{display:grid;gap:var(--space-1);margin:var(--space-3) 0;font-weight:700}
+ .catalog-search input{width:100%;box-sizing:border-box;padding:var(--space-2) var(--space-2);font:inherit;border:1px solid var(--line);border-radius:var(--radius-small)}
 </style>
