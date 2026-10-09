@@ -18,7 +18,7 @@ const scene = z.object({
   image: image.optional(),
   comparison: z.array(image.extend({ caption: text })).min(2).max(3).optional(),
   options: z.array(option).length(3).refine(uniqueIds, '選択肢のIDは重複できません'),
-  perspective: text, insight: text, workConnection: text,
+  perspective: text, insight: text, reflectionResponse: text, workConnection: text,
 });
 
 const careers = defineCollection({

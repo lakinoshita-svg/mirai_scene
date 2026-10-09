@@ -12,6 +12,8 @@ data.name = '【要編集】職業名';
 data.entryTitle = '【要編集】体験の見出し';
 data.reviewStatus = 'editorial-draft';
 delete data.review;
+// 場面を作り替える際、コピー元の感想をそのまま使わない。
+for (const scene of data.scenes) scene.reflectionResponse = '【要編集】この場面で気になった理由を代弁する振り返り文';
 data.order = Math.max(...fs.readdirSync('src/content/careers').filter(f => f.endsWith('.json')).map(f => JSON.parse(fs.readFileSync(`src/content/careers/${f}`, 'utf8')).order)) + 1;
 fs.mkdirSync('drafts', { recursive: true });
 const target = path.join('drafts', `${slug}.json`);

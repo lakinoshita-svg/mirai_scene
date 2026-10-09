@@ -3,6 +3,7 @@ import path from 'node:path';
 import crypto from 'node:crypto';
 import { spawnSync } from 'node:child_process';
 import { extractPage, scopeCss } from './lib/shinronaviExport.mjs';
+import './buildManual.mjs';
 
 const root=process.cwd();
 const parent=path.join(root,'tmp');
@@ -51,14 +52,18 @@ const cssDir=path.join(target,'new/_app/_webroot/css/page/miraiscene');
 fs.mkdirSync(cssDir,{recursive:true});
 fs.writeFileSync(path.join(cssDir,'miraiscene.css'),scopeCss([...css,fs.readFileSync('src/styles/brandLogo.css','utf8'),fs.readFileSync('src/styles/brandNavigation.css','utf8')].join('\n'))+'\n#mirai-scene{font-family:inherit}\n');
 const templates='integrations/shinronavi/templates';
-copy(`${templates}/MiraisceneController.php`,'new/_app/_controller/MiraisceneController.php');
-copy(`${templates}/MiraiPageService.php`,'new/_app/_util/miraiscene/MiraiPageService.php');
-copy(`${templates}/index.tpl`,'new/_app/_view/miraiscene/index.tpl');
-copy(`${templates}/head.tpl`,'new/_app/_view/miraiscene/head.tpl');
-copy(`${templates}/banner.tpl`,'new/_app/_view/miraiscene/banner.tpl');
-copy(`${templates}/banner.css`,'new/_app/_webroot/css/page/miraiscene/banner.css');
-copy(`${templates}/install.mjs`,'install.mjs');
-copy(`${templates}/rewrite.conf`,'rewrite-addition.conf');
+// 配置対応は一か所で管理し、テンプレート追加時のコピー漏れを防ぐ。
+const templateTargets = {
+  'MiraisceneController.php': 'new/_app/_controller/MiraisceneController.php',
+  'MiraiPageService.php': 'new/_app/_util/miraiscene/MiraiPageService.php',
+  'index.tpl': 'new/_app/_view/miraiscene/index.tpl',
+  'head.tpl': 'new/_app/_view/miraiscene/head.tpl',
+  'banner.tpl': 'new/_app/_view/miraiscene/banner.tpl',
+  'banner.css': 'new/_app/_webroot/css/page/miraiscene/banner.css',
+  'install.mjs': 'install.mjs',
+  'rewrite.conf': 'rewrite-addition.conf',
+};
+for (const [source, destination] of Object.entries(templateTargets)) copy(`${templates}/${source}`, destination);
 fs.copyFileSync('integrations/shinronavi/README.md',path.join(target,'INSTALL.md'));
 // 運用担当へ渡す手順書も毎回同じリリースへ同梱し、旧版との混在を防ぐ。
 copy('outputs/operations/運用マニュアル.html','運用マニュアル.html');

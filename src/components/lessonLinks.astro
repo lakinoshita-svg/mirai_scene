@@ -1,0 +1,12 @@
+---
+import { lessonUrl, lessonLinkLabel, type Lesson } from '../lib/learningLinks';
+interface Props { lessons: Lesson[] }
+const { lessons } = Astro.props;
+---
+<ul>{lessons.map(lesson => (
+  <li><a href={lessonUrl(lesson.slug)} target="_blank" rel="noopener">{lessonLinkLabel(lesson)} <span aria-hidden="true">↗</span></a></li>
+))}</ul>
+<style>
+  ul{padding-left:var(--space-2);line-height:2}
+  a{color:var(--brand-purple);text-decoration:underline;overflow-wrap:anywhere}
+</style>

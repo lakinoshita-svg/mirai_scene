@@ -8,6 +8,8 @@
     "node": ">=22.12.0"
   },
   "scripts": {
+    "manual:build": "node scripts/buildManual.mjs",
+    "release:package": "powershell -NoProfile -ExecutionPolicy Bypass -File scripts/packageDelivery.ps1",
     "build:shinronavi": "node scripts/buildShinronavi.mjs",
     "release:verify-initial": "node scripts/verifyInitialRelease.mjs",
     "dev": "astro dev --host 127.0.0.1",

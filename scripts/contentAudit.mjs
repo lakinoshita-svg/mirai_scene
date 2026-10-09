@@ -18,6 +18,9 @@ for (const file of fs.readdirSync(directory).filter(file => file.endsWith('.json
     if (!c.learningIds?.length || c.learningIds.some(id => !learning.some(field => field.id === id))) fail('学びIDが未定義です');
     if (!(c.category in ads.categoryAds)) fail('広告のカテゴリー定義がありません（広告なしの場合も空配列で登録）');
     if (c.scenes?.length !== 3) fail('シーンは3件必要です');
+    const responses = (c.scenes || []).map(scene => scene.reflectionResponse?.trim());
+    if (responses.some(response => !response)) fail('各シーンにreflectionResponseが必要です');
+    if (new Set(responses).size !== responses.length) fail('振り返り文はシーンごとに書き分けてください');
     // 同じ職業名で複数体験を作ることは許可する。URLのslugだけを一意にする。
     rows.push({ slug: c.slug, name: c.name, category: c.category, theme: c.cardTheme, order: c.order, review: c.reviewStatus, referenceDate: c.reference?.checkedAt });
   } catch (error) { console.error(`${file}: ${error.message}`); errors++; }

@@ -17,6 +17,15 @@ export function getLearningLinks(ids: string[]) {
     return item;
   });
 }
+// 外部教材への行動名は、表示場所によらず同じ文言にする。
+export type Lesson = (typeof learningLinks)[number]['lessons'][number];
+export function lessonLinkLabel(lesson: Pick<Lesson, 'label' | 'schoolType'>) {
+  return `分野探究する（${lesson.label}／${lesson.schoolType}）`;
+}
+export function getLessons(ids: string[]): Lesson[] {
+  // 複数分野が同じ教材に対応する場合も、最初の掲載順を保って一度だけ表示する。
+  return [...new Map(getLearningLinks(ids).flatMap(link => link.lessons).map(lesson => [lesson.slug, lesson])).values()];
+}
 // 未設定：進路ナビ本番のクエリ形式。設定あり：独立した教材Astroの静的パス形式。
 // INQUIRY_BASE_URLはビルド／dev起動時に読む。利用者のアクセス先から自動判定しない。
 export const lessonUrl = (slug: string) => {

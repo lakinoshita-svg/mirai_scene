@@ -3,7 +3,10 @@ import type { Career } from '../lib/careers';
 interface Props { career: Career }
 const { career: c } = Astro.props;
 // 感想を言葉にする補助。適性の判定や次の行動の指示には使わない。
-const tags = c.scenes.map((s,i)=>({id:String(i),label:s.insight,response:`「${s.insight}」。この仕事の中でも、その部分が気になった。仕事全体を好きかはまだ分からなくても、そこにはもう少し触れてみたい気持ちがあるのかもしれません。`})).concat([
+// 場面固有の言葉は原稿で管理する。見出しだけを差し込む共通文にはしない。
+const tags = c.scenes.map((scene, index) => ({
+  id: String(index), label: scene.insight, response: scene.reflectionResponse,
+})).concat([
  {id:'unsure',label:'まだ、よく分からない',response:'「選んでみたけれど、どの部分が面白いのかは、まだ言葉にできない。」今の感覚は、そんな気持ちに近いかもしれません。はっきりした感想になっていなくても大丈夫です。'},
  {id:'different',label:'少し違うかも',response:'「体験してみたけれど、自分が気になるものとは少し違う気がする。」どこが違うのかは、まだ説明できなくても、その感覚が今の感想なのかもしれません。'},
 ]);

@@ -1,54 +1,52 @@
-# 内部ファイル名の変更対応表
+# ファイル案内
 
-2026-10-02。過去の手順書・レビュー結果から現行ファイルを探すための対応表です。公開URLやコンテンツIDの変更ではありません。固定配布版・過去のExcelは当時の名前を保持します。
+現在の編集元を示します。内部名はlowerCamelCase、公開URL・外部連携名は連携仕様を使います。
 
-| 変更前 | 現行 |
-| --- | --- |
-| `src/lib/ad-region.mjs` | `src/lib/adRegion.mjs` |
-| `src/lib/async-cache.mjs` | `src/lib/asyncCache.mjs` |
-| `src/lib/card-themes.ts` | `src/lib/cardThemes.ts` |
-| `src/lib/catalog-filter.mjs` | `src/lib/catalogFilter.mjs` |
-| `src/lib/integration-links.ts` | `src/lib/integrationLinks.ts` |
-| `src/lib/learning-links.ts` | `src/lib/learningLinks.ts` |
-| `src/lib/lesson-connections.mjs` | `src/lib/lessonConnections.mjs` |
-| `src/lib/school-ads.ts` | `src/lib/schoolAds.ts` |
-| `src/lib/select-school-ads.mjs` | `src/lib/selectSchoolAds.mjs` |
-| `src/scripts/school-ads.ts` | `src/scripts/schoolAds.ts` |
-| `src/components/Breadcrumbs.astro` | `src/components/breadcrumbs.astro` |
-| `src/components/CareerCard.astro` | `src/components/careerCard.astro` |
-| `src/components/CareerCatalog.astro` | `src/components/careerCatalog.astro` |
-| `src/components/CategorySchoolAds.astro` | `src/components/categorySchoolAds.astro` |
-| `src/components/ChoiceExplanation.astro` | `src/components/choiceExplanation.astro` |
-| `src/components/ExperienceLearning.astro` | `src/components/experienceLearning.astro` |
-| `src/components/ExperienceReflection.astro` | `src/components/experienceReflection.astro` |
-| `src/components/ExperienceSummary.astro` | `src/components/experienceSummary.astro` |
-| `src/components/Hero.astro` | `src/components/hero.astro` |
-| `src/components/LearningLinks.astro` | `src/components/learningLinks.astro` |
-| `src/components/SceneCard.astro` | `src/components/sceneCard.astro` |
-| `src/layouts/SiteLayout.astro` | `src/layouts/siteLayout.astro` |
-| `src/data/ad-regions.json` | `src/data/adRegions.json` |
-| `src/data/learning-links.json` | `src/data/learningLinks.json` |
-| `src/data/school-ads.json` | `src/data/schoolAds.json` |
-| `scripts/benchmark-catalog.mjs` | `scripts/benchmarkCatalog.mjs` |
-| `scripts/build-shinronavi.mjs` | `scripts/buildShinronavi.mjs` |
-| `scripts/content-audit.mjs` | `scripts/contentAudit.mjs` |
-| `scripts/export-review.mjs` | `scripts/exportReview.mjs` |
-| `scripts/lib/review-data.mjs` | `scripts/lib/reviewData.mjs` |
-| `scripts/lib/review-workbook.mjs` | `scripts/lib/reviewWorkbook.mjs` |
-| `scripts/lib/shinronavi-export.mjs` | `scripts/lib/shinronaviExport.mjs` |
-| `scripts/new-career.mjs` | `scripts/newCareer.mjs` |
-| `scripts/sync-inquiry-links.mjs` | `scripts/syncInquiryLinks.mjs` |
-| `scripts/verify-drafts.mjs` | `scripts/verifyDrafts.mjs` |
-| `scripts/verify-initial-release.mjs` | `scripts/verifyInitialRelease.mjs` |
-| `tests/ad-region.test.mjs` | `tests/adRegion.test.mjs` |
-| `tests/async-cache.test.mjs` | `tests/asyncCache.test.mjs` |
-| `tests/card-themes.test.mjs` | `tests/cardThemes.test.mjs` |
-| `tests/learning-links.test.mjs` | `tests/learningLinks.test.mjs` |
-| `tests/lesson-connections.test.mjs` | `tests/lessonConnections.test.mjs` |
-| `tests/review-data.test.mjs` | `tests/reviewData.test.mjs` |
-| `tests/school-ads.test.mjs` | `tests/schoolAds.test.mjs` |
-| `tests/shinronavi-export.test.mjs` | `tests/shinronaviExport.test.mjs` |
-| `src/styles/style.css` | `src/styles/baseStyles.css` |
-| `src/styles/brand.css` | `src/styles/brandStyles.css` |
-| `src/styles/astro.css` | `src/styles/interactionStyles.css` |
-| `src/styles/layout.css` | `src/styles/layoutStyles.css` |
+- `src/lib/adRegion.mjs`
+- `src/lib/asyncCache.mjs`
+- `src/lib/cardThemes.ts`
+- `src/lib/catalogFilter.mjs`
+- `src/lib/integrationLinks.ts`
+- `src/lib/learningLinks.ts`
+- `src/lib/lessonConnections.mjs`
+- `src/lib/schoolAds.ts`
+- `src/lib/selectSchoolAds.mjs`
+- `src/scripts/schoolAds.ts`
+- `src/components/breadcrumbs.astro`
+- `src/components/careerCard.astro`
+- `src/components/careerCatalog.astro`
+- `src/components/categorySchoolAds.astro`
+- `src/components/choiceExplanation.astro`
+- `src/components/experienceLearning.astro`
+- `src/components/experienceReflection.astro`
+- `src/components/experienceSummary.astro`
+- `src/components/hero.astro`
+- `src/components/learningLinks.astro`
+- `src/components/sceneCard.astro`
+- `src/layouts/siteLayout.astro`
+- `src/data/adRegions.json`
+- `src/data/learningLinks.json`
+- `src/data/schoolAds.json`
+- `scripts/benchmarkCatalog.mjs`
+- `scripts/buildShinronavi.mjs`
+- `scripts/contentAudit.mjs`
+- `scripts/exportReview.mjs`
+- `scripts/lib/reviewData.mjs`
+- `scripts/lib/reviewWorkbook.mjs`
+- `scripts/lib/shinronaviExport.mjs`
+- `scripts/newCareer.mjs`
+- `scripts/syncInquiryLinks.mjs`
+- `scripts/verifyDrafts.mjs`
+- `scripts/verifyInitialRelease.mjs`
+- `tests/adRegion.test.mjs`
+- `tests/asyncCache.test.mjs`
+- `tests/cardThemes.test.mjs`
+- `tests/learningLinks.test.mjs`
+- `tests/lessonConnections.test.mjs`
+- `tests/reviewData.test.mjs`
+- `tests/schoolAds.test.mjs`
+- `tests/shinronaviExport.test.mjs`
+- `src/styles/baseStyles.css`
+- `src/styles/brandStyles.css`
+- `src/styles/interactionStyles.css`
+- `src/styles/layoutStyles.css`

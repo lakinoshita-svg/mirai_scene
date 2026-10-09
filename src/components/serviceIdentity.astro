@@ -1,0 +1,12 @@
+---
+import BrandLogo from './brandLogo.astro';
+import { sitePath } from '../lib/paths';
+---
+{/* 本文内に置くことで、進路ナビの共通ヘッダーを使う導入版にもサービス名を残す。 */}
+<div class="service-identity" data-service-identity>
+  <a href={sitePath()} aria-label="ミライシーン ホーム"><BrandLogo /></a>
+</div>
+<style>
+  .service-identity{display:flex;justify-content:center;padding:var(--space-1) var(--space-2)}
+  .service-identity a{display:flex;align-items:center;min-height:40px}
+</style>

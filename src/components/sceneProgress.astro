@@ -1,0 +1,12 @@
+---
+interface Props { current: number; total: number }
+const { current, total } = Astro.props;
+---
+<div class="sceneProgress" role="progressbar" aria-label="シーンの進捗" aria-valuemin="0" aria-valuemax={total} aria-valuenow={current} aria-valuetext={`全${total}シーン中${current}シーン目`}>
+  {Array.from({length:total}, (_, index) => <span class:list={{pending:index >= current}} />)}
+</div>
+<style>
+  /* 色はバー全体に一本で描く。3分割の隙間はマスク、未到達部分は中立色で表す。 */
+  .sceneProgress{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--space-1);height:8px;margin:var(--space-2) 0 var(--space-4);background:var(--brand-gradient);mask:linear-gradient(#000 0 0) left / calc((100% - var(--space-2)) / 3) 100% no-repeat,linear-gradient(#000 0 0) center / calc((100% - var(--space-2)) / 3) 100% no-repeat,linear-gradient(#000 0 0) right / calc((100% - var(--space-2)) / 3) 100% no-repeat}
+  .pending{background:var(--line)}
+</style>

@@ -1,6 +1,6 @@
 # 進路ナビ組み込み版
 
-更新日：2026-10-06。今回の導入版は `miraiSceneShinronavi20261006.zip`。変更点は同梱のRELEASE-NOTES.md、今回の検証範囲はVALIDATION.mdを参照してください。旧固定版とは混在させないでください。
+導入版：`miraiSceneShinronavi20261009.zip`。配置は本書、検証範囲はVALIDATION.md、照合情報はZIPに隣接するmanifest.jsonを参照してください。同一版の一式を配置してください。
 
 ## 配置
 
@@ -22,7 +22,7 @@
 
 ## TailwindCSSと共通レイアウト
 
-配布物はHTML・JSだけではありません。専用CSS、画像、一覧・連携用JSON、既存MVCへ接続するPHP・tpl、rewrite設定も必要です。HTML内には独自クラスとAstroのスコープ属性があるため、既存Tailwindだけでは今回の見た目を再現できません。`new/`を一式で扱い、CSSやPHPを省略しないでください。
+配布物はHTML・JSだけではありません。専用CSS、画像、一覧・連携用JSON、既存MVCへ接続するPHP・tpl、rewrite設定も必要です。HTML内には独自クラスとAstroのスコープ属性があるため、既存Tailwindだけでは専用の見た目を再現できません。`new/`を一式で扱い、CSSやPHPを省略しないでください。
 
 既存の `default_new.tpl` をそのまま使用し、進路ナビのヘッダー・フッター・GTMを読み込みます。ミライシーン本文側に追加ヘッダーを置かず、進路ナビのヘッダーの下から本文を表示します。Tailwindの再インストールやCDN追加、新しいPreflightはありません。既存の画面デザインは専用CSSで維持し、生成時に全セレクターを `#mirai-scene` の内側へ限定します。全スタイルをTailwindユーティリティへ書き換えたものではありません。
 

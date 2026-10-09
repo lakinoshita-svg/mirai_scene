@@ -11,11 +11,15 @@ const heroCards = [
 <section class="hero" aria-labelledby="hero-title">
   <div class="hero-stage">
     <picture class="hero-background"><source media="(max-width: 900px)" srcset={asset('background-sp.png')} /><img src={asset('background-pc.png')} alt="" width="1774" height="887" fetchpriority="high" /></picture>
-    <div class="hero-copy">
+    <div class="hero-message"><div class="hero-copy">
       <p class="heroEyebrow">“好き”から始まる、仕事のひと場面体験</p>
       <h1 id="hero-title">「好き！」の先にある、<span>未来をのぞいてみよう。</span></h1>
       <p>まだ、やりたいことが決まっていなくても大丈夫。<br />仕事のひと場面を選んで、考えて。<br />自分の「好き」のヒントを見つけよう。</p>
     </div>
+    <div class="hero-action">
+      <a class="hero-invitation" href="#experiences">気になる未来を、見つけてみよう。<span aria-hidden="true">↓</span></a>
+      <p class="hero-meta">約3分・3つのシーン<span aria-hidden="true">／</span>登録なしでスタート</p>
+    </div></div>
     <div class="hero-art">
       <!-- 3枚は説明用画像。リンクを示す丸い矢印は素材から除去し、移動は下のCTAにまとめる。 -->
       <img class="hero-note" src={asset('note.png')} alt="好きから、きっと見つかる わたしのミライ" />
@@ -24,11 +28,6 @@ const heroCards = [
           <img src={asset(card.file)} alt={card.alt} width={card.width} height={card.height} />
         </div>
       ))}
-    </div>
-    <div class="hero-action">
-      <!-- カード画像にはリンクを付けず、CTAから体験一覧へ移動する。 -->
-      <a class="hero-invitation" href="#experiences">気になる未来を、見つけてみよう。<span aria-hidden="true">↓</span></a>
-      <p class="hero-meta">約3分・3つのシーン<span aria-hidden="true">／</span>登録なしでスタート</p>
     </div>
   </div>
 </section>
@@ -45,8 +44,7 @@ const heroCards = [
   padding:var(--space-2) var(--space-4) var(--space-3);
   display: grid;
   grid-template-columns: minmax(0,1fr) minmax(0,1fr);
-  grid-template-areas: "copy art" "action art";
-  grid-template-rows: auto 1fr;
+  grid-template-areas: "message art";
   column-gap:var(--space-4);
   align-content: center;
   box-sizing: border-box;
@@ -62,10 +60,12 @@ const heroCards = [
   height: 100%;
   object-fit: cover;
 }
-.hero-copy {
-  grid-area: copy;
-  align-self: start;
-  padding-top:var(--space-3);
+.hero-message {
+  grid-area:message;
+  place-self:center;
+  width:fit-content;
+  max-width:100%;
+  text-align:left;
   z-index: 1;
 }
 .hero-copy .heroEyebrow {
@@ -143,7 +143,6 @@ const heroCards = [
   transform: rotate(-3deg);
 }
 .hero-action {
-  grid-area: action;
   align-self: start;
   width: fit-content;
   max-width: 100%;
@@ -201,8 +200,8 @@ const heroCards = [
        文字拡大時だけは読みやすさを優先し、自然に縦へ伸ばす。 */
   .hero-stage {
     grid-template-columns: minmax(0,1fr);
-    grid-template-areas: "copy" "action" "art";
-    grid-template-rows: auto auto auto;
+    grid-template-areas: "message" "art";
+    grid-template-rows: auto auto;
     padding:var(--space-1) var(--space-3) var(--space-1);
     max-width: 600px;
   }

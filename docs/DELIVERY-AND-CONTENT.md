@@ -8,15 +8,15 @@
 
 ## 導入担当
 
-現在の導入指定版は `deliveries/release-2026-10-06/miraiSceneShinronavi20261006.zip`。19体験・57シーンと2026-10-06時点の共通実装を収録する。ZIP内のINSTALL.md・VALIDATION.md・運用マニュアル・RELEASE-NOTES.mdと、隣のmanifest.jsonを渡す。旧 `deliveries/initial-2026-10-02/` は復元・比較用に保持する。
+現在の導入指定版は `deliveries/release-2026-10-09/miraiSceneShinronavi20261009.zip`。19体験・57シーンと2026-10-09時点の共通実装を収録する。ZIP内のINSTALL.md・VALIDATION.md・運用マニュアルと、隣のmanifest.jsonを渡す。固定配布物は指定版で保管する。
 
-通常の `build:shinronavi` が更新する `integrations/shinronavi/output/latest.json` は制作側の最新ビルドを示す。配布対象は日付・版を明記したdeliveries内のZIPで指定する。旧固定ZIPは変更せず、修正版を別名で作成した。
+通常の `build:shinronavi` が更新する `integrations/shinronavi/output/latest.json` は制作側の最新ビルドを示す。配布対象は日付・版を明記したdeliveries内のZIPで指定する。配布設定は `config/delivery.json`。`npm run release:package` でZIPと照合manifestを生成する。
 
 ZIPは大容量の生成物のためGit対象外。manifestと手順はGitで管理する。別PCで導入作業する際は固定ZIPを別途共有し、manifestのSHA-256と照合する。Gitをcloneしただけでは固定ZIPは付属しない。
 
-PowerShellで `Get-FileHash deliveries/release-2026-10-06/miraiSceneShinronavi20261006.zip -Algorithm SHA256` を実行してmanifest.jsonと照合する。ハッシュが違う場合はそのまま導入せず、対象版を確認する。
+PowerShellで `Get-FileHash deliveries/release-2026-10-09/miraiSceneShinronavi20261009.zip -Algorithm SHA256` を実行してmanifest.jsonと照合する。ハッシュが違う場合はそのまま導入せず、対象版を確認する。
 
-初期導入中に修正が必要になった場合も、このZIPへ上書きせず修正版を別名で作成し、変更点を明記する。本番配置・rewrite・実際の進路ナビとの併存確認はINSTALL.mdに従う。
+初期導入中に修正が必要になった場合も、このZIPへ上書きせず別の版を指定し、収録内容と適用手順を明記する。本番配置・rewrite・実際の進路ナビとの併存確認はINSTALL.mdに従う。
 
 ## コンテンツ制作担当
 
@@ -31,8 +31,4 @@ PowerShellで `Get-FileHash deliveries/release-2026-10-06/miraiSceneShinronavi20
 現行Excel出力はsrc/content/careersと連携設定が対象で、draftsを直接は含まない。下書き確認はJSON・隔離プレビューで行う。別部署へExcelで確認を回す場合は、隔離プロジェクトへexportスクリプトをコピーして出力するなど、公開元へ未確認原稿を混ぜない手順を選ぶ。
 
 自動で定期生成・公開する設定はしていない。制作を続ける際は台帳から次の少量バッチを進める。
-
-## 2026年10月7日の未配布変更
-
-名詞としての「探究」を画面と現行資料から置き換えた。10月6日付の固定ZIPは当時の内容を保持し、この用語変更を含まない。次回配布時に最新コードから別版を生成する。
 

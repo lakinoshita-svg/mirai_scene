@@ -1,12 +1,10 @@
-/* 左右を同じ幅にすることで、リンクの文字数に左右されずロゴを中央に置く。 */
-.site-header{display:grid;grid-template-columns:minmax(0,1fr) auto minmax(0,1fr);align-items:center;gap:var(--space-2)}
+/* 単独公開用の外枠。サービス名は組み込み先にも残る本文内で中央に配置する。 */
+.site-header{display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:center;gap:var(--space-2);height:48px}
 .site-header .brand-family{display:contents}
-.site-header .brand-divider{display:none}
 .site-header .parent-brand{grid-column:1;justify-self:start}
-.site-header .brand{grid-column:2;justify-self:center}
-.site-header .header-link{grid-column:3;justify-self:end;text-align:right;min-width:0}
+.site-header .header-link{grid-column:2;justify-self:end;text-align:right;min-width:0}
 .site-footer .site-footer-inner{display:flex;flex-direction:column;align-items:center;gap:var(--space-2);text-align:center}
 .site-footer-inner p{margin:0}
 @media(max-width:650px){
-  .site-header{gap:var(--space-1)}
+  .site-header{gap:var(--space-1);height:40px}
 }

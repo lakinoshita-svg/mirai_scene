@@ -4,6 +4,9 @@
 
 ## 正本
 
+- サービス名の表示位置は本文先頭の `serviceIdentity.astro`。中央配置・上下8px、文字は共通 `brandLogo.astro` と `brandLogo.css` を使う。進路ナビ共通ヘッダーにサービス名の表示を依存させない。
+- 単独公開用ヘッダーは進路ナビへのリンクとAboutへのリンクを表示する外枠。組み込み版では進路ナビ本体のヘッダーを使用する。
+
 - 色・角丸・影の値は `src/styles/brandStyles.css` の `:root` に集約します。
 - 進路ナビへ単独で組み込むバナーは `integrations/shinronavi/templates/banner.css` 内の `--ms-*` トークンを使います。ホスト側のCSSに依存しないため値を内包し、色はこの文書と共通パレットに合わせます。
 - 基本部品の見た目は `src/styles/baseStyles.css`、操作状態は `src/styles/interactionStyles.css`、共通配置は `src/styles/layoutStyles.css`、TOP固有の配置は `src/styles/homeStyles.css` で管理します。
@@ -69,3 +72,7 @@
 ## 追加時の確認
 
 CSS変更では新しいカラーコード、同じ役割の重複宣言、未使用トークン、`aria-pressed` と見た目状態の不一致を確認します。ページ固有CSSが共通部品を上書きする場合は、その画面だけに必要な理由があり、他画面の表示を変えない範囲か確認します。
+
+## シーンと情報ページ
+
+進捗は `sceneProgress.astro` に集約し、全体のグラデーションを3分割のマスクで見せる。未到達部分は中立色。別の選択肢は表示中の2項目の間だけに `--line` の1px罫線を置く。TOP下部の補助導線はPCのリンク列224px・共通内側余白で整列し、SPは1列にする。Aboutの外幅はTOPと同じ `.home` を使う。

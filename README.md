@@ -1,6 +1,6 @@
 # ミライシーン
 
-現在の導入版：[2026-10-05版の変更・導入手順](deliveries/release-2026-10-05/RELEASE-NOTES.md)。ZIPは同フォルダの `miraiSceneShinronavi20261005.zip`（Git対象外）を別途共有してください。旧初期版は保持しています。
+導入用ZIP：`deliveries/release-2026-10-09/miraiSceneShinronavi20261009.zip`。同じフォルダのmanifest.jsonで照合してください。手順は [担当別手順](docs/DELIVERY-AND-CONTENT.md) を参照してください。
 
 コードを変更する前に [命名・コード管理ガイド](docs/CODE-MAINTENANCE.md)を確認してください。内部ファイルはキャメルケースで管理し、公開URLや外部連携の名前は互換性を維持します。
 
@@ -70,7 +70,7 @@ pnpm test
 
 `dist/` の中身を配置先へ配信します。職業別URLの `/careers/designer/` は該当ディレクトリの `index.html` を返す設定にします。404ページはサーバー側で `404.html` に設定してください。Node.jsはビルド時だけ必要です。
 
-旧試作の `#career/designer` と `#about` はトップページから新URLへ案内します。回答はページ内のみで保持し、再読み込みで最初からになります。
+`#career/designer` と `#about` は該当ページへ案内します。回答はページ内のみで保持し、再読み込みで最初からになります。
 
 ## 現在の範囲
 

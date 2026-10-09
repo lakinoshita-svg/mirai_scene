@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ミライシーン 運用マニュアル</title>
+<style>
+*{box-sizing:border-box}body{font-family:'Yu Gothic',sans-serif;line-height:1.9;color:#30283e;background:#f5f3f8;margin:0}main{max-width:960px;margin:32px auto;background:white;padding:48px}h1{font-size:30px;line-height:1.5}h2{border-bottom:2px solid #ded2ef;margin-top:40px;font-size:22px}h3{font-size:18px}a{color:#69449e}table{border-collapse:collapse;width:100%;font-size:14px}th,td{border-bottom:1px solid #ddd;padding:16px;text-align:left;vertical-align:top;overflow-wrap:anywhere}th{background:#f0eaf7}code{background:#f4f0f7;padding:0 8px;overflow-wrap:anywhere}.note{background:#fff4de;padding:16px}nav{display:flex;flex-wrap:wrap;gap:8px 24px}li{margin-block:8px}pre{white-space:pre-wrap;overflow-wrap:anywhere;background:#f4f0f7;padding:16px}@media print{body{background:white}main{margin:0;padding:0}h2,h3{break-after:avoid}tr{break-inside:avoid}}@media(max-width:650px){main{padding:24px;margin:0}th,td{padding:8px}}
+</style></head><body><main>
+<p>進路ナビ / ミライシーン</p><h1>コンテンツ運用マニュアル</h1>
+<p>適用版：{{date}}。{{contentCount}}体験・{{sceneCount}}シーン。原稿制作、部署確認、導入の担当者が使う手順書です。</p>
+<nav aria-label="目次"><a href="#concept">サービスの考え方</a><a href="#flow">制作と確認</a><a href="#excel">Excel</a><a href="#screen">画面仕様</a><a href="#delivery">導入とZIP</a><a href="#settings">管理場所</a><a href="#help">困ったとき</a></nav>
+<h2 id="concept">1．サービスの考え方</h2>
+<p>「好き・興味」を入口に、仕事のひと場面を選んで考える体験です。ガイダンス参加者と、進路ナビへ直接アクセスする学生の両方が利用します。適性診断や正解当てにはしません。</p>
+<p>1体験は3シーン、各シーンは3選択肢です。選択後は、状況を整理する共通解説と、各案の説明・良い点・懸念点を表示します。</p>
+<p>完了後の「どの部分が、ちょっと気になった？」は、感想を言葉にする手助けです。各場面に専用の振り返り文があります。「まだ、よく分からない」「少し違うかも」も選べ、選ばずに進めます。感想は保存・送信しません。</p>
+<p>学校検索 →「分野探究する」→ 資料請求の説明 → 同分野の仕事体験 → 別の仕事体験の順で案内します。「探究」は機能名の名詞としては使わず、教材へ進む行動を「分野探究する」と表します。</p>
+<h2 id="flow">2．制作と部署確認</h2>
+<ol><li>体験の題材、件数、資料、確認担当者を決めます。通常は2〜5体験ずつ作ります。</li><li>Codexへ制作引き継ぎガイドとAI向け仕様書を読ませ、下書き作成を依頼します。下書きは <code>drafts/batch-NNN/</code> で管理します。</li><li>自社資料・進路ナビの情報を土台に、具体的な業務描写は厚生労働省job tagで確認します。資料本文を確認した日を記録します。</li><li>担当部署は文章・画像・学びの対応を確認します。AIの構造チェックと、実務内容の確認を区別してください。</li><li>確認者・確認日・未確認事項を記録します。承認のある原稿だけを公開用の編集元へ入れます。</li><li>制作担当が検証と配布物作成を行い、導入担当へ渡します。本番公開は導入先の手順で行います。</li></ol>
+<h3>Codexへの依頼例</h3><p class="note">制作引き継ぎガイドとAI向け仕様書に従い、〇〇の体験を2件、下書きで作成してください。各3シーン・3選択肢と、場面ごとの振り返り文を用意してください。添付資料を確認し、不明点を確認記録へ残してください。公開元への反映は対象外です。</p>
+<h3>文章の確認基準</h3><ul><li>選択前の状況に、判断に必要な条件がある。</li><li>各案の良い点と懸念点が、場面の条件と結び付いている。</li><li>振り返り文が場面ごとに異なり、気になった理由を本人の言葉の候補として示す。</li><li>感情・性格・適性を断定しない。</li><li>架空の設定と資料で確認できる事実を混同しない。</li><li>確認していない資料日付や監修済みの表記を使わない。</li></ul>
+<h2 id="excel">3．Excelで原稿を確認する</h2>
+<ol><li>配布された確認用Excelを部署名付きで保存します。</li><li>「確認対象一覧」で担当コンテンツIDを選びます。同じ職業の別体験は別IDです。</li><li>「原稿確認」をIDで絞り込みます。1行がJSONの1項目です。「体験後の振り返り文」も確認対象です。</li><li>原文・ID・JSON内の位置は保持し、「確認状況」「修正希望・理由」「確認者」「確認日」を記入します。</li><li>「連携設定確認」で、テーマ・分野・教材・学校検索・広告・地域の対応を確認します。空配列 <code>[]</code> は登録なしです。</li><li>記入済みExcelを制作担当へ返します。ExcelからJSONへの自動取り込み機能はありません。制作担当が指摘と現行原稿を照合して反映します。</li></ol>
+<table><tr><th>確認状況</th><th>意味</th></tr><tr><td>未確認</td><td>未着手</td></tr><tr><td>確認中</td><td>資料や部署内で確認中</td></tr><tr><td>修正依頼</td><td>対象の文・希望する表現・理由を記入</td></tr><tr><td>確認済み</td><td>その項目を確認した人と日付を記入</td></tr></table>
+<p>例：「結果を保証する表現を避け、条件によって結果が異なることを示してください」。確認済みは公開承認や専門家監修と同じ意味ではありません。</p>
+<p>Excelは出力時点の原稿です。manifest.jsonの対象ファイル・SHA-256で原稿を照合します。再出力時の確認欄は未確認です。記入済みExcelは別途保管してください。</p>
+<p>制作担当は <code>npm run content:export-review</code> を実行します。出力は <code>outputs/operations/&lt;UTC日時&gt;/</code>、Excel内の日付は日本時間です。対象は公開元JSONと連携設定で、下書きは通常出力に含みません。下書きの確認用Excelは対象を明示して依頼してください。</p>
+<p>Excel出力にはCodex同梱のartifact-toolが必要です。依存の場所は <code>CODEX_ARTIFACT_MODULE_ROOT</code> で指定できます。<code>npm run content:export-review -- --check</code> は原稿読込と件数のみを確認します。</p>
+<h2 id="screen">4．画面と画像の仕様</h2>
+<table><tr><th>項目</th><th>仕様</th></tr><tr><td>サービス名</td><td>本文先頭の中央に「ミライシーン」を表示。進路ナビ共通ヘッダー・フッターの使用時も残ります。</td></tr><tr><td>ヘッダー</td><td>進路ナビ組み込み時は本体の共通ヘッダー。単独公開版の外枠はPC48px、幅650px以下40pxです。</td></tr><tr><td>FV</td><td>通常表示で高さ650px以内。外枠・サービス名・パンくずは別領域です。文字拡大時は切り取らず伸ばします。PCの上下余白は16px・24px、幅900px以下は上下8px。タイトル・説明・CTAは左揃えのまとまりを中央に配置します。3枚の写真にリンクはありません。</td></tr><tr><td>パンくず・余白</td><td>パンくずは行高18px・上下8px。画面のmargin・padding・gapは8px刻みの共通トークンを使います。</td></tr><tr><td>体験一覧</td><td>PCは9件ずつ、幅650px以下は8件ずつ。「もっとみる」は全件表示で非表示。分類・検索・画面幅区分に応じて初期件数を表示します。</td></tr><tr><td>興味カテゴリー</td><td>つくる・表現する／人の役に立つ／しくみを考える／知らない世界に触れる。テーマ定義と共通画像で管理します。</td></tr><tr><td>教材へのリンク</td><td>「分野探究する（分野／学校種）」から該当教材を別タブで開きます。</td></tr></table>
+<p>進捗バーは全体に一本のグラデーションを描き、8pxの隙間で3等分します。「ほかの選択の視点も見る」では表示中の2項目の間に薄い罫線を置きます。TOP下部の学びとAboutへのリンクは同じ列にそろえます。AboutはTOPと同じ外幅を使い、対象者・体験内容・利用方法を説明します。</p><h3>画像の管理</h3><p>場面の観察や案の比較に必要な画像を使います。正誤マークや原因を断定する矢印は加えません。装飾だけを目的に全シーンへ画像を入れる必要はありません。</p><p><code>public/assets/</code> に画像を保存し、原稿の <code>image.src</code> と <code>image.alt</code> を設定します。比較は <code>comparison</code> を使います。ファイル名は用途の分かるキャメルケースを基本にし、公開URLの識別子は維持します。単独・比較画像は縦横比を保って表示します。</p>
+<h3>PC・スマートフォンで確認すること</h3><ul><li>文字・画像・ボタンが切れず、横スクロールが出ない。</li><li>FVのCTAで一覧へ移動できる。</li><li>カテゴリー・キーワード検索・条件クリア・追加表示が動く。</li><li>3シーンを完了でき、選択肢の説明を比較できる。</li><li>感想ボタンで専用の文章が表示され、選び直せる。</li><li>学校検索の分野パラメーターと、教材へのリンク先が正しい。</li></ul>
+<h2 id="delivery">5．導入とZIPの受け渡し</h2>
+<p>配布対象：<code>{{releasePath}}</code>。ZIPと同じフォルダのmanifest.jsonを一緒に渡します。制作元はGitHub、進路ナビ本体は別のGitLabです。コミットの直接取り込みは前提にしません。</p>
+<ol><li><code>npm run content:verify</code> で監査・型・ビルド・テスト・連携データを確認します。</li><li><code>npm run build:shinronavi</code> で本文・静的ファイル・PHP接続部品・マニュアルを生成します。<code>integrations/shinronavi/output/latest.json</code> で生成先を確認します。</li><li><code>npm run release:package</code> で、配布設定に従ってZIPを作成します。ZIP内の全ファイルと生成元を照合し、SHA-256をmanifestへ記録します。同名のZIPがある場合は停止します。</li><li>導入担当へZIP・manifestを渡します。ZIP内のINSTALL.mdに従い、検証環境へ配置してください。</li><li>進路ナビ本体のヘッダー・フッター・Tailwind・DB・ルーティングとの結合を確認します。</li><li>本番ファイルと設定をバックアップし、承認された一式を配置します。問題時は保存した一式へ戻します。</li></ol>
+<p class="note">ZIPにはHTML・JSのほか、専用CSS・画像・一覧JSON・PHP・tpl・rewrite設定が必要です。Tailwindだけでは専用スタイルを代替できません。JSONだけの本番コピーでは反映されません。</p>
+<p>固定配布物は上書きせず、版を指定して保管します。ZIPはGit対象外なので別途共有します。マニュアルや仕様書は公開領域へ置かず、配置対象はZIPの <code>new/</code> 配下です。コンテンツだけを安全に自動更新する専用パッケージ・競合検出付き取り込みは未実装です。</p>
+<h2 id="settings">6．管理場所と接続状況</h2>
+<table><tr><th>対象</th><th>編集元</th></tr><tr><td>公開用原稿</td><td><code>src/content/careers/</code>。reviewStatusは公開制御ではありません。</td></tr><tr><td>AI向け仕様</td><td><code>docs/CONTENT-SPEC-AI.md</code> と <code>docs/editorial/HANDBOOK.md</code></td></tr><tr><td>担当者向け仕様</td><td><code>docs/CONTENT-SPEC.md</code></td></tr><tr><td>テーマとカード画像</td><td><code>src/data/interests.json</code></td></tr><tr><td>教材・学校検索</td><td><code>src/data/learningLinks.json</code>。learningIdsを介して連携し、schoolFieldsを検索のfld[]へ渡します。</td></tr><tr><td>広告・地域</td><td><code>src/data/schoolAds.json</code> と <code>adRegions.json</code>。職業カテゴリーと地域で表示します。</td></tr><tr><td>マニュアル</td><td><code>docs/operationsManual.html</code> が編集元。<code>npm run manual:build</code> で閲覧用HTMLを生成します。</td></tr><tr><td>配布設定</td><td><code>config/delivery.json</code>。版・日付・ZIP名を管理します。</td></tr><tr><td>バナー</td><td><code>integrations/shinronavi/templates/banner.tpl</code> と <code>banner.css</code></td></tr></table>
+<h3>導入先で必要な確認・設定</h3><ul><li>本番DB・Apache・共通レイアウトとの結合。</li><li>進路ナビTOPのバナー、教材側の戻りリンクの設置。連携データ生成と設置は別工程です。</li><li>広告の実データ登録。広告DBの自動接続はありません。</li><li>自社IP推定APIと <code>PUBLIC_REGION_API_URL</code>。未設定時は全国向けと手動選択で利用できます。</li><li>専用計測イベント、サイトマップ、検索対象制御、構造化データ、OGP。Astro単独版は公開先設定に応じたcanonicalを出力します。PHP組み込み版のcanonicalはhead.tplを通して導入先で確認します。</li><li>高校生による試用と別部署の内容確認。「約3分」は目安です。</li></ul>
+<h2 id="help">7．困ったとき</h2><table><tr><th>症状</th><th>確認すること</th></tr><tr><td>原稿が画面に出ない</td><td>編集元・ビルド・配布版・配置先・キャッシュを確認します。</td></tr><tr><td>画像やCSSが404</td><td>/mirai_scene/、rewrite、同一版の静的ファイルを確認します。</td></tr><tr><td>広告が出ない</td><td>広告登録、enabled、categoryAds、地域条件を確認します。空の登録では非表示が正常です。</td></tr><tr><td>Excelの原文が合わない</td><td>manifestと対象原稿を照合して再出力します。</td></tr><tr><td>ロゴが見つからない</td><td>生成本文にserviceIdentityが含まれ、専用CSSが読み込まれているか確認します。</td></tr></table>
+<p>詳細な配置手順は配布物のINSTALL.md、確認範囲はVALIDATION.mdを参照してください。</p>
+</main></body></html>

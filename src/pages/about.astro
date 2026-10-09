@@ -2,8 +2,8 @@
 import SiteLayout from '../layouts/siteLayout.astro';
 import { sitePath } from '../lib/paths';
 ---
-<SiteLayout breadcrumb="ミライシーンについて" title="ミライシーンについて | 進路ナビ">
-<div class="experience about-page"><a class="back" href={sitePath()}>← 体験を探す</a><article class="scene-card"><span class="scene-kicker">進路ナビの体験コンテンツ</span><h1>“好き”から始まる、<br>進路選び。</h1><p>「なんとなく好き」「少し気になる」。ミライシーンは、そんな小さな気持ちを、仕事のひと場面を通して探す体験です。やりたいことや将来の目標が、まだ決まっていなくても始められます。</p><h2>見て、選んで、気づく。</h2><p>画像や場面を見て「自分ならどうする？」を選びます。解説では、その仕事で大切にされる考え方に触れられます。約3分の体験のあとに、どこがおもしろかったか、どこが違うと感じたかを振り返ってみてください。</p><h2>気持ちに、正解はありません。</h2><p>選択で点数をつけたり、適性や向いている仕事を決めたりはしません。好きなことが見つからなくても、選ばずに別の体験へ進んでも大丈夫です。仕事のすべてや、専門的な判断を再現するものではありません。</p><h2>知るための、一歩へ。</h2><p>少し気になったら、つながる学びや学校について見てみる。パンフレットや、実際に学ぶ人の声に触れてみる。オープンキャンパスで雰囲気を知る。進路を決める前に、情報を集めるところから始められます。</p><section class="content-sources" aria-labelledby="content-sources-title">
+<SiteLayout breadcrumb="ミライシーンについて" title="高校生のオンライン仕事体験・進路選び｜ミライシーンについて｜進路ナビ" description="ミライシーンは高校生が約3分・3つのシーンで仕事の考え方に触れられる、進路ナビのオンライン仕事体験です。やりたいことが分からなくても、興味から学び・学校探しへ進めます。">
+<div class="home about-page"><a class="back" href={sitePath()}>← 体験を探す</a><article class="scene-card"><span class="scene-kicker">進路ナビの体験コンテンツ</span><h1>ミライシーンとは？<br />高校生のためのオンライン仕事体験</h1><p>「なんとなく好き」「少し気になる」。ミライシーンは、そんな小さな気持ちを、仕事のひと場面を通して探す体験です。やりたいことや将来の目標が、まだ決まっていなくても始められます。</p><h2>やりたいことが分からなくても、始められる</h2><p>高校の進路ガイダンスに参加した人も、進路ナビを見ていて立ち寄った人も、自分のペースで利用できます。つくる・表現する、人の役に立つ、しくみを考える、知らない世界に触れる。気になるテーマから、仕事の場面を探してみてください。</p><h2>約3分・3つのシーンで、仕事の考え方を知る</h2><p>画像や場面を見て「自分ならどうする？」を選びます。解説では、その仕事で大切にされる考え方に触れられます。約3分の体験のあとに、どこがおもしろかったか、どこが違うと感じたかを振り返ってみてください。</p><h2>適性診断ではなく、「好き・興味」を見つけるきっかけ</h2><p>選択で点数をつけたり、適性や向いている仕事を決めたりはしません。好きなことが見つからなくても、選ばずに別の体験へ進んでも大丈夫です。仕事のすべてや、専門的な判断を再現するものではありません。</p><h2>気になる仕事から、学び・学校探しへ</h2><p>少し気になったら、つながる学びや学校について見てみる。パンフレットや、実際に学ぶ人の声に触れてみる。オープンキャンパスで雰囲気を知る。進路を決める前に、情報を集めるところから始められます。</p><p>体験した仕事につながる分野を知り、その分野を学べる学校の検索結果へ進めます。「分野探究する」から進路ナビの教材を読むこともできます。</p><p><a class="text-link" href={sitePath('explore/')}>学びの分野から探す →</a></p><section class="content-sources" aria-labelledby="content-sources-title">
 <h2 id="content-sources-title">進路ナビの知識に、仕事の具体像を。</h2>
 <p>ミライシーンは、自社で発行する進路情報誌や、進路ナビで蓄積してきた学問・職業・学校の情報を土台に、仕事への興味を育む体験をつくることを編集方針としています。</p>
 <p>学びと進路のつながりには進路ナビの情報を生かし、具体的な業務内容や仕事の進め方は、厚生労働省の職業情報提供サイト「job tag」を参考に補っています。</p>
@@ -13,5 +13,15 @@ import { sitePath } from '../lib/paths';
 <li><a href="https://shigoto.mhlw.go.jp/" target="_blank" rel="noopener">厚生労働省：職業情報提供サイト「job tag」 ↗</a></li>
 </ul>
 <p>これらの情報を、高校生が「自分ならどうする？」と考えられる場面に編集しています。</p>
-</section><div class="actions"><a href={sitePath()} class="primary">気になる体験を探す →</a></div></article></div>
+</section><section><h2>利用についてよくある質問</h2><h3>会員登録は必要ですか？</h3><p>仕事体験は登録なしで始められます。</p><h3>体験すると、向いている職業が分かりますか？</h3><p>適性を判定するサービスではありません。気になった場面や考え方から、知りたい仕事や学びを探すために使えます。</p><h3>スマートフォンでも使えますか？</h3><p>スマートフォンとパソコンのどちらでも利用できます。文章や比較画像を見ながら選んで進めます。</p></section><div class="actions"><a href={sitePath()} class="primary">気になる体験を探す →</a></div></article></div>
 </SiteLayout>
+
+<style>
+.about-page{padding-top:var(--space-3)}
+.about-page h1{font-size:clamp(26px,3vw,40px);line-height:1.6}
+.about-page h2{font-size:22px;line-height:1.6}
+.about-page h3{font-size:18px;margin-top:var(--space-3)}
+.about-page p,.about-page li{max-width:80ch;overflow-wrap:anywhere}
+.about-page ul{padding-left:var(--space-3)}
+.content-sources a{color:var(--brand-purple);text-decoration:underline}
+</style>

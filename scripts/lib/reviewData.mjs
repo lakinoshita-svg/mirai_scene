@@ -3,6 +3,8 @@ import path from 'node:path';
 import crypto from 'node:crypto';
 const names = {slug:'コンテンツID',name:'職業名',category:'分野',entryTitle:'カード見出し',description:'説明',cardTheme:'カードテーマ',order:'表示順',estimatedMinutes:'目安時間',reviewStatus:'原稿状態',mission:'ミッション',role:'役割',audience:'相手',goal:'目的',constraint:'制約',learning:'学びの説明',title:'見出し',situation:'状況',question:'問い',contextExplanation:'共通解説・状況整理',label:'表示文',explanation:'選択の説明',benefit:'良いこと',caution:'懸念点',perspective:'考える視点',insight:'気づき',workConnection:'業務との関連',src:'画像パス',alt:'画像の説明',caption:'画像見出し',publisher:'発行元',url:'URL',checkedAt:'資料確認日',background:'業務の背景'};
 
+names.reflectionResponse = '体験後の振り返り文';
+
 // JSON Pointerを保持し、レビューの行を原稿の項目へ確実に対応させる。
 export function flatten(value, pointer, context, result, base) {
   if (value !== null && typeof value === 'object' && Object.keys(value).length) {
