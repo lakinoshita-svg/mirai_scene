@@ -1,6 +1,6 @@
 # 進路ナビ組み込み版
 
-導入版：`miraiSceneShinronavi20261009.zip`。配置は本書、検証範囲はVALIDATION.md、照合情報はZIPに隣接するmanifest.jsonを参照してください。同一版の一式を配置してください。
+導入版：`miraiSceneShinronavi20261013.zip`。配置は本書、検証範囲はVALIDATION.md、照合情報はZIPに隣接するmanifest.jsonを参照してください。同一版の一式を配置してください。
 
 ## 配置
 
@@ -16,7 +16,7 @@
 <?php require __DIR__ . '/../miraiscene/head.tpl'; ?>
 ```
 
-上記の配置・rewrite・head追記をまとめて実施するには、配布フォルダーで `node install.mjs "進路ナビのプロジェクトルート"` を実行できます。実行前に対象が開発・検証環境であることを確認してください。既存変更はプロジェクトと同階層の `mirai-backup-…` に退避します。元のダウンロードフォルダーへは自動適用していません。配置先でNode.jsを使えない場合は手動配置できます。
+配置・rewrite・head・サイトマップ接続をまとめて実施するには、配布フォルダーで `node install.mjs "進路ナビのプロジェクトルート"` を実行できます。実行前に対象が開発・検証環境であることを確認してください。既存変更はプロジェクトと同階層の `mirai-backup-…` に退避します。元のダウンロードフォルダーへは自動適用していません。配置先でNode.jsを使えない場合は手動配置できます。
 
 公開先は現在 `/mirai_scene/` 固定です。別のパスへ配置する場合は、生成スクリプト・rewrite規則を合わせて変更し再生成してください。静的ファイルは `new/_app/_webroot/miraiscene/`、JSは `new/_app/_webroot/js/page/miraiscene/`、PHP本文は `new/_app/_view/miraiscene/` に配置します。公開URLと物理配置先の対応はrewriteが担います。
 
@@ -64,6 +64,24 @@ TOPなどの本文内には、次の一行を追加します。リンク先は `
 
 完了画面は学校検索→学習教材→資料請求の説明→同分野の教材・仕事体験→別の興味の順です。学校検索のfld[]と教材slugの遷移を検証環境で確認してください。
 
-SEOは別途作業が必要です。サイトマップ・確認用サイトとカード取得用URLの検索除外・構造化データ・OGPは未実装です。Controllerが渡すcanonicalが本体のheadに一つだけ正しく出力されるかを確認し、Astro単体版にもcanonicalがあると誤認しないでください。
+サイトマップとOGPは下記の共通処理へ接続します。確認用サイトのnoindex・構造化データ・Search Consoleでの登録状況は導入先で確認してください。カード取得用catalogはサイトマップの対象外です。
 
 PHP 8.3想定（提供されたDockerfileに合わせています）。開発環境でPHPファイルの構文確認、TOP・体験完了・学び・検索・PC9件/SP8件の追加表示、存在しないURLの404、CSSのヘッダーへの漏れを確認してください。DB接続を含む進路ナビ本体の起動環境は別途必要です。配置だけでIP推定や広告DB連携まで有効になるものではありません。
+
+## SEOの組み込み
+
+サイトマップは進路ナビの sitemap_second.php に統合します。robots.txt は既存の同ファイルの指定を使います。専用XMLの新規登録は不要です。公開ページ一覧は生成manifestと共通なので、コンテンツ追加時は一式の再生成・配置で反映されます。
+
+手動導入の場合は sitemap_second.php の `header('Content-Type: application/xml');` の直前に次を追加します。
+
+```php
+$urls = array_merge($urls, require __DIR__ . '/new/_app/_util/miraiscene/sitemapUrls.php');
+```
+
+共通OGPは default_new.tpl が出力し、Controller がブランド画像・summaryカードを指定します。Twitterアカウントは未指定です。共有画像は /mirai_scene/assets/brand/miraiSceneFavicon.png です。手動配置時は共通テンプレートの $_SERVER[" REQUEST_URI"] を htmlspecialchars($_SERVER["REQUEST_URI"], ENT_QUOTES, 'UTF-8') としてください（キー先頭の空白を含めない）。install.mjs はこの既知の表記も処理します。
+
+共通ファイルは丸ごと配布せず、インストーラーで必要箇所を編集します。既存ファイルは公開ルート外へバックアップします。サイトマップの出力位置が想定と異なる場合は配置前に停止します。手動導入でもGitLabの差分で追記位置を確認してください。
+
+公開後は sitemap_second.php のXMLにミライシーンの全公開URLが含まれること、catalog・確認用ドメインが含まれないこと、各ページのcanonical・OGPが1組であること、画像URLが200で返ることを確認してください。Search Consoleの既存サイトマップの取得結果とページ登録状況を確認します。元の学校データを含めたXML全体の検証には本番相当DBが必要です。
+
+共有コードの sitemap_first.php / sitemap_second.php は名前空間が https://www.sitemaps.org/schemas/sitemap/0.9 になっています。サイトマップ規格の http://www.sitemaps.org/schemas/sitemap/0.9 に合わせる確認が必要です。また sitemap_first.php は urlset 直下へ件数を出力します。インストーラーは接続対象のsitemap_second.phpの名前空間を規格に合わせます。手動導入でもこのファイルの名前空間を合わせてください。学校側sitemap_first.phpの名前空間・件数出力は本体担当者による確認項目であり、今回の自動編集対象ではありません。

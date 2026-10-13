@@ -18,3 +18,13 @@ check($service->find_page('careers/designer/')['title'] === $service->find_page(
 try { (new MiraiPageService(__DIR__ . '/not-present'))->find_page(''); throw new LogicException('Missing manifest accepted'); }
 catch (RuntimeException $e) { /* 期待する読み込み失敗 */ }
 echo count($manifest) . " routes / invalid paths / missing manifest: OK\n";
+
+$urls = require $argv[1] . '/new/_app/_util/miraiscene/sitemapUrls.php';
+check(count($urls) === count($manifest), 'Sitemap count mismatch');
+foreach ($urls as $entry) {
+    check(in_array('https://shinronavi.com/' . $entry['loc'], array_column($manifest, 'canonical'), true), 'Unknown sitemap URL');
+    check(!isset($entry['lastmod']), 'Invented lastmod');
+    check(strpos($entry['loc'], 'catalog') === false, 'Catalog indexed');
+}
+check(count(array_unique(array_column($urls, 'loc'))) === count($urls), 'Duplicate sitemap URL');
+echo count($urls) . " sitemap URLs / canonical match / catalog excluded: OK\n";

@@ -39,6 +39,12 @@ class MiraisceneController extends Controller
         $this->title = htmlspecialchars($this->mirai_page['title'], ENT_QUOTES, 'UTF-8');
         $this->description_str = htmlspecialchars($this->mirai_page['description'], ENT_QUOTES, 'UTF-8');
         $this->canonical = $this->mirai_page['canonical'];
+        // 共通レイアウトがOGPを出力する。専用headから同じタグを重複出力しない。
+        $this->twitter_card = [
+            'og_image' => 'https://shinronavi.com/mirai_scene/assets/brand/miraiSceneFavicon.png',
+            'twitter_card' => 'summary',
+            'twitter_site' => '',
+        ];
         $this->h1_str = 'ミライシーン';
         // パンくずは本文内のミライシーン専用表示に一本化する。
         $this->pnkz_paths = [];

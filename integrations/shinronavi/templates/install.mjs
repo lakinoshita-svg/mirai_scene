@@ -12,7 +12,16 @@ const layout=fs.readFileSync(layoutPath,'utf8');
 const config=fs.readFileSync(fs.existsSync(configPath)?configPath:path.join(target,'.htaccess.base'),'utf8');
 if(!layout.includes('</head>')|| !/RewriteEngine\s+on/i.test(config)) throw new Error('共通レイアウトまたはrewriteの構造が変わっています');
 const head="<?php require __DIR__ . '/../miraiscene/head.tpl'; ?>";
-const nextLayout=layout.includes(head)?layout:layout.replace('</head>',`${head}\n</head>`);
+const withHead=layout.includes(head)?layout:layout.replace('</head>',`${head}\n</head>`);
+// 提供元テンプレートのREQUEST_URIキーを補正。正しいキーの環境には作用しない。
+const nextLayout=withHead.replaceAll('$_SERVER[" REQUEST_URI"]', "htmlspecialchars($_SERVER[\"REQUEST_URI\"], ENT_QUOTES, 'UTF-8')");
+const sitemapPath=path.join(target,'sitemap_second.php');
+const sitemap=fs.readFileSync(sitemapPath,'utf8');
+const sitemapHook="$urls = array_merge($urls, require __DIR__ . '/new/_app/_util/miraiscene/sitemapUrls.php');";
+const xmlHeader="header('Content-Type: application/xml');";
+if(!sitemap.includes(xmlHeader)) throw new Error('sitemap_second.phpのXML出力位置を確認してください');
+const withSitemapHook=sitemap.includes(sitemapHook)?sitemap:sitemap.replace(xmlHeader,`${sitemapHook}\n\n${xmlHeader}`);
+const nextSitemap=withSitemapHook.replaceAll('https://www.sitemaps.org/schemas/sitemap/0.9','http://www.sitemaps.org/schemas/sitemap/0.9');
 const rules=fs.readFileSync(path.join(source,'rewrite-addition.conf'),'utf8');
 const marker='# BEGIN MIRAI SCENE';
 const block=`${marker}\n${rules}\n# END MIRAI SCENE`;
@@ -36,5 +45,6 @@ const copy=relative=>{
 };
 copy('new');
 write('new/_app/_view/layout/default_new.tpl',nextLayout);
+write('sitemap_second.php',nextSitemap);
 write('.htaccess',nextConfig);
 console.log(`配置しました: ${target}\n変更前ファイル: ${backup}\n.htaccess.baseから本番設定を再生成する場合は、同じrewrite追記をテンプレートにも反映してください。`);

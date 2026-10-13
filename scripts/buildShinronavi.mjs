@@ -56,6 +56,7 @@ const templates='integrations/shinronavi/templates';
 const templateTargets = {
   'MiraisceneController.php': 'new/_app/_controller/MiraisceneController.php',
   'MiraiPageService.php': 'new/_app/_util/miraiscene/MiraiPageService.php',
+  'sitemapUrls.php': 'new/_app/_util/miraiscene/sitemapUrls.php',
   'index.tpl': 'new/_app/_view/miraiscene/index.tpl',
   'head.tpl': 'new/_app/_view/miraiscene/head.tpl',
   'banner.tpl': 'new/_app/_view/miraiscene/banner.tpl',

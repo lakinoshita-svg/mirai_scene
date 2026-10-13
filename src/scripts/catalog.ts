@@ -24,7 +24,8 @@ document.querySelectorAll<HTMLElement>('[data-catalog]').forEach(root => {
   const cache = new Map<string, HTMLElement>();
   grid.querySelectorAll<HTMLElement>('[data-career]').forEach(card => cache.set(card.dataset.career!, card));
   let entries: Entry[] = [];
-  let interest = 'all', category = 'すべて', limit = pageSize(), revision = 0;
+  const defaultCategory = root.dataset.defaultCategory || 'すべて';
+  let interest = 'all', category = defaultCategory, limit = pageSize(), revision = 0;
   let loaded = false;
   let failed = false;
   let composing = false;
@@ -72,17 +73,17 @@ document.querySelectorAll<HTMLElement>('[data-catalog]').forEach(root => {
   function reset() {
     clearTimeout(searchTimer);
     limit = pageSize();
-    clear.hidden = interest === 'all' && category === 'すべて' && !search.value;
+    clear.hidden = interest === 'all' && category === defaultCategory && !search.value;
     filterButtons.forEach(button => {
       const selected = button.dataset.interest !== undefined ? button.dataset.interest === interest : button.dataset.categoryFilter === category;
       button.classList.toggle('active', selected); button.setAttribute('aria-pressed', String(selected));
     });
     const selectedTheme = interestButtons.find(button => button.dataset.interest === interest)?.textContent;
-    countLabel.textContent = interest !== 'all' ? `${selectedTheme}につながるひと場面` : category !== 'すべて' ? category : 'いろいろな仕事のひと場面';
+    countLabel.textContent = interest !== 'all' ? `${selectedTheme}につながるひと場面` : category !== 'すべて' ? category : root.dataset.learning ? 'この学びにつながる仕事のひと場面' : 'いろいろな仕事のひと場面';
     void render();
   }
   // 興味と分野は従来通り排他的。キーワードは選択中の分類と組み合わせる。
-  interestButtons.forEach(button => button.addEventListener('click', () => { interest = button.dataset.interest!; category = 'すべて'; reset(); }));
+  interestButtons.forEach(button => button.addEventListener('click', () => { interest = button.dataset.interest!; category = defaultCategory; reset(); }));
   categoryButtons.forEach(button => button.addEventListener('click', () => { category = button.dataset.categoryFilter!; interest = 'all'; reset(); }));
   // 日本語変換中は検索を確定せず、確定後に一度だけ更新する。
   search.addEventListener('compositionstart', () => { composing = true; clearTimeout(searchTimer); ++revision; more.disabled = true; });
@@ -94,7 +95,7 @@ document.querySelectorAll<HTMLElement>('[data-catalog]').forEach(root => {
     if (!composing) searchTimer = setTimeout(reset, 180);
   });
   clear.addEventListener('click', () => {
-    interest = 'all'; category = 'すべて'; search.value = ''; reset(); search.focus();
+    interest = 'all'; category = defaultCategory; search.value = ''; reset(); search.focus();
   });
   more.addEventListener('click', () => { limit += pageSize(); void render(true); });
   mobile.addEventListener('change', () => { if (loaded) reset(); });

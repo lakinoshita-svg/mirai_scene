@@ -28,3 +28,22 @@ test('HTML holds at most nine cards; index contains metadata only and every frag
    assert.ok(fs.existsSync(`${root}/catalog/cards/${c.slug}/index.html`));
  }
 });
+
+test('field pages select their single category and scope multi-category all labels', () => {
+ const root=process.env.TEST_DIST || 'dist';
+ const index=JSON.parse(fs.readFileSync(`${root}/catalog/index.json`,'utf8'));
+ for(const field of fs.readdirSync(`${root}/explore`,{withFileTypes:true}).filter(e=>e.isDirectory())) {
+  const html=fs.readFileSync(`${root}/explore/${field.name}/index.html`,'utf8');
+  const categories=[...new Set(index.filter(c=>c.learningIds.includes(field.name)).map(c=>c.category))];
+  const expected=categories.length===1?categories[0]:'すべて';
+  assert.ok(html.includes(`data-default-category="${expected}"`),field.name);
+  const buttons=[...html.matchAll(/<button\b([^>]*data-category-filter[^>]*)>(.*?)<\/button>/g)];
+  const selected=buttons.filter(b=>b[1].includes('aria-pressed="true"'));
+  assert.equal(selected.length,1,field.name);
+  assert.ok(selected[0][1].includes(`data-category-filter="${expected}"`));
+  if(categories.length===1) assert.equal(buttons.length,1,field.name);
+  else assert.equal(selected[0][2],'この学びの分野のすべて');
+ }
+ const home=fs.readFileSync(`${root}/index.html`,'utf8');
+ assert.ok(home.includes('data-default-category="すべて"'));
+});

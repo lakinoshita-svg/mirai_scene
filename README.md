@@ -1,6 +1,6 @@
 # ミライシーン
 
-導入用ZIP：`deliveries/release-2026-10-09/miraiSceneShinronavi20261009.zip`。同じフォルダのmanifest.jsonで照合してください。手順は [担当別手順](docs/DELIVERY-AND-CONTENT.md) を参照してください。
+導入用ZIP：`deliveries/release-2026-10-13/miraiSceneShinronavi20261013.zip`。同じフォルダのmanifest.jsonで照合してください。手順は [担当別手順](docs/DELIVERY-AND-CONTENT.md) を参照してください。
 
 コードを変更する前に [命名・コード管理ガイド](docs/CODE-MAINTENANCE.md)を確認してください。内部ファイルはキャメルケースで管理し、公開URLや外部連携の名前は互換性を維持します。
 
