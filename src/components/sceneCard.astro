@@ -9,6 +9,7 @@ const { career:c, scene:s, index } = Astro.props;
 <section class="scene-panel" data-scene={index} hidden={index!==0} tabindex="-1" aria-labelledby={`scene-title-${index}`}>
   <div class="experience-top"><span>{c.category} / {c.name}</span><span>SCENE {String(index+1).padStart(2,'0')} / {String(c.scenes.length).padStart(2,'0')}</span></div>
   <SceneProgress current={index+1} total={c.scenes.length} />
+  {index > 0 && <button class="text-link" type="button" data-previous>← 前のシーンを読み返す</button>}
   <article class="scene-card">
     {c.brief && index===0 && <div class="brief"><strong>今回のミッション</strong><p>{c.mission}</p><dl><dt>役割</dt><dd>{c.brief.role}</dd><dt>相手</dt><dd>{c.brief.audience}</dd><dt>目的</dt><dd>{c.brief.goal}</dd><dt>条件</dt><dd>{c.brief.constraint}</dd></dl></div>}
     <span class="scene-kicker">あなたなら、どうする？</span>

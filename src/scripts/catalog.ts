@@ -98,7 +98,8 @@ document.querySelectorAll<HTMLElement>('[data-catalog]').forEach(root => {
     interest = 'all'; category = defaultCategory; search.value = ''; reset(); search.focus();
   });
   more.addEventListener('click', () => { limit += pageSize(); void render(true); });
-  mobile.addEventListener('change', () => { if (loaded) reset(); });
+  // 画面回転で読み進めた一覧を初期件数へ戻さない。追加分の単位だけPC/SPに合わせる。
+  mobile.addEventListener('change', () => { if (loaded) { limit = Math.max(limit, pageSize()); void render(); } });
   retry.addEventListener('click', () => { if (loaded) void render(); else void initialize(); });
   async function initialize() {
     retry.hidden = true;

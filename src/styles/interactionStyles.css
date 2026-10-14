@@ -31,4 +31,9 @@
 .scene-panel:focus,.summary-panel:focus{outline:none}
 .reflection-response{min-height:54px}
 .summary-panel .question{scroll-margin-top:var(--space-3)}
+/* 開閉操作と補助ボタンにも、タッチ領域・キーボード位置を共通で示す。 */
+summary{cursor:pointer;min-height:48px;padding-block:var(--space-1)}
+summary:focus-visible{outline:3px solid var(--focus-color);outline-offset:4px}
+[data-previous],[data-clear-filters],[data-retry]{min-height:48px;padding-block:var(--space-1)}
+.filter{min-height:48px}
 @media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important}}

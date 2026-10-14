@@ -4,10 +4,22 @@ if (root) {
     const summary = root.querySelector<HTMLElement>('[data-summary]')!;
     // 回答はDOM内のみで保持し、再読込時は最初から開始する（送信・永続保存はしない）。
     let current = 0;
+    const experienceTitle = document.title;
     const moveFocus = (element: HTMLElement) => {
         element.focus({ preventScroll: true });
         element.scrollIntoView({ behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'instant' : 'smooth', block: 'start' });
     };
+    // 戻る操作は回答・解説を保持する。再回答や会員履歴の保存とは別の操作。
+    root.querySelectorAll<HTMLButtonElement>('[data-previous]').forEach(button => {
+        button.addEventListener('click', () => {
+            if (current <= 0) return;
+            (scenes[current] ?? summary).hidden = true;
+            current--;
+            scenes[current].hidden = false;
+            document.title = experienceTitle;
+            moveFocus(scenes[current]);
+        });
+    });
     scenes.forEach((scene, index) => {
         const form = scene.querySelector<HTMLFormElement>('form')!;
         const fieldset = form.querySelector<HTMLFieldSetElement>('fieldset')!;

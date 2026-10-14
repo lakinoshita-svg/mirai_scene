@@ -88,7 +88,7 @@ const heroCards = [
   background: var(--brand-gradient);
   background-clip: text;
   color: transparent;
-  white-space: nowrap;
+  overflow-wrap: anywhere;
 }
 .hero-copy h1 span::after {
   display: none;
@@ -188,6 +188,7 @@ const heroCards = [
 .hero-meta {
   margin:var(--space-2) 0 0;
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: center;
   gap:var(--space-1);

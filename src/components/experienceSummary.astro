@@ -10,6 +10,7 @@ const { career:c, related } = Astro.props;
 
 ---
 <article class="scene-card summary-panel" data-summary hidden tabindex="-1" aria-labelledby="summary-title">
+  <button class="text-link" type="button" data-previous>← 最後のシーンを読み返す</button>
   <div class="finish-intro"><div class="finish-icon" aria-hidden="true">✦</div><span class="scene-kicker">{c.name}の{c.scenes.length}つのシーンを体験しました</span><h1 id="summary-title">「好きかも」は、<br />見つかった？</h1><p>はっきりした答えは、まだなくても大丈夫。<br />今の気持ちを、少しだけ振り返ってみよう。</p></div>
   <ExperienceReflection career={c} />
   <ExperienceLearning career={c} />

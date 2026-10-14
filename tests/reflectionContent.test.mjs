@@ -20,7 +20,8 @@ test('progress exposes each scene position and related work links target the cat
 test('about includes descriptive search metadata and canonical for the configured host', () => {
   const html = fs.readFileSync('dist/about/index.html', 'utf8');
   assert.match(html, /<title>高校生のオンライン仕事体験/);
-  assert.match(html, /name="description" content="ミライシーンは高校生/);
+  const description = html.match(/name="description" content="([^"]+)"/)[1];
+  assert.ok(description.includes('ミライシーン') && description.includes('使い方'));
   const canonical = html.match(/rel="canonical" href="([^"]+)"/)[1];
   assert.equal(new URL(canonical).origin, process.env.ASTRO_SITE || 'https://lakinoshita-svg.github.io');
   assert.ok(canonical.endsWith('/about/'));
