@@ -4,7 +4,7 @@
 
 ## 正本
 
-- サービス名の表示位置は本文先頭の `serviceIdentity.astro`。中央配置・上下8px、文字は共通 `brandLogo.astro` と `brandLogo.css` を使う。進路ナビ共通ヘッダーにサービス名の表示を依存させない。
+- サービス名の表示位置は本文先頭の `serviceIdentity.astro`。中央配置・上下8px、ロゴは共通 `brandLogo.astro` と `brandLogo.css` を使う。素材は `public/assets/brand/miraiSceneWordmark.svg`。進路ナビ共通ヘッダーにサービス名の表示を依存させない。
 - 単独公開用ヘッダーは進路ナビへのリンクとAboutへのリンクを表示する外枠。組み込み版では進路ナビ本体のヘッダーを使用する。
 
 - 色・角丸・影の値は `src/styles/brandStyles.css` の `:root` に集約します。
