@@ -8,13 +8,13 @@
 
 ## 導入担当
 
-現在の導入指定版は `deliveries/release-2026-10-13/miraiSceneShinronavi20261013.zip`。19体験・57シーンと2026-10-13時点の共通実装を収録する。ZIP内のINSTALL.md・VALIDATION.md・運用マニュアルと、隣のmanifest.jsonを渡す。固定配布物は指定版で保管する。
+現在の導入指定版は `deliveries/release-2026-10-16/miraiSceneShinronavi20261016.zip`。19体験・57シーンと2026-10-16時点の共通実装を収録する。ZIP内のINSTALL.md・VALIDATION.md・運用マニュアルと、隣のmanifest.jsonを渡す。固定配布物は指定版で保管する。
 
 通常の `build:shinronavi` が更新する `integrations/shinronavi/output/latest.json` は制作側の最新ビルドを示す。配布対象は日付・版を明記したdeliveries内のZIPで指定する。配布設定は `config/delivery.json`。`npm run release:package` でZIPと照合manifestを生成する。
 
 ZIPは大容量の生成物のためGit対象外。manifestと手順はGitで管理する。別PCで導入作業する際は固定ZIPを別途共有し、manifestのSHA-256と照合する。Gitをcloneしただけでは固定ZIPは付属しない。
 
-PowerShellで `Get-FileHash deliveries/release-2026-10-13/miraiSceneShinronavi20261013.zip -Algorithm SHA256` を実行してmanifest.jsonと照合する。ハッシュが違う場合はそのまま導入せず、対象版を確認する。
+PowerShellで `Get-FileHash deliveries/release-2026-10-16/miraiSceneShinronavi20261016.zip -Algorithm SHA256` を実行してmanifest.jsonと照合する。ハッシュが違う場合はそのまま導入せず、対象版を確認する。
 
 初期導入中に修正が必要になった場合も、このZIPへ上書きせず別の版を指定し、収録内容と適用手順を明記する。本番配置・rewrite・実際の進路ナビとの併存確認はINSTALL.mdに従う。
 
