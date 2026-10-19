@@ -1,5 +1,7 @@
 ﻿$ErrorActionPreference = 'Stop'
 Set-Location (Split-Path $PSScriptRoot -Parent)
+node scripts/verifyDelivery.mjs
+if ($LASTEXITCODE -ne 0) { throw '配布前照合が完了していません。' }
 $config = Get-Content -LiteralPath 'config/delivery.json' -Raw | ConvertFrom-Json
 if ($config.release -notmatch '^release-\d{4}-\d{2}-\d{2}(-[a-z0-9]+)?$' -or $config.zip -notmatch '^[a-zA-Z0-9]+\.zip$') { throw '配布名の形式が不正です。' }
 $latest = Get-Content -LiteralPath 'integrations/shinronavi/output/latest.json' -Raw -Encoding UTF8 | ConvertFrom-Json
@@ -47,11 +49,11 @@ try {
     [ordered]@{file=$relative;sha256=$digest;bytes=$file.Length}
   }
 } finally { $archive.Dispose() }
-$careers = @(Get-ChildItem -LiteralPath 'src/content/careers' -Filter '*.json' | ForEach-Object { Get-Content -LiteralPath $_.FullName -Raw -Encoding UTF8 | ConvertFrom-Json })
+$buildManifest = Get-Content -LiteralPath (Join-Path $bundlePath 'buildManifest.json') -Raw -Encoding UTF8 | ConvertFrom-Json
 $manifest = [ordered]@{
   release=$config.release; purpose='進路ナビ導入用一式'; zip=$config.zip
   sha256=(Get-Sha256 $zipPath)
-  contentCount=$careers.Count; sceneCount=($careers | ForEach-Object {$_.scenes.Count} | Measure-Object -Sum).Sum
+  contentCount=$buildManifest.contentCount; sceneCount=$buildManifest.sceneCount; sourceHash=$buildManifest.sourceHash
   pageCount=$latest.pages; sourceBundle=(Split-Path $bundlePath -Leaf)
   validation=[ordered]@{archiveFilesMatched=$files.Count;productionDeployment='未実施';details='VALIDATION.md'}
   files=@($files)

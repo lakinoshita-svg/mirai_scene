@@ -27,7 +27,10 @@ export function flatten(value, pointer, context, result, base) {
   result.push([base, context, names[key] || key, cellValue, '未確認', '', '', '', pointer]);
 }
 
-export async function loadReviewData(root) {
+export async function loadReviewData(root, {batch, ids = []} = {}) {
+  if (batch && !/^batch-\d+$/.test(batch)) throw new Error('batch-NNNを指定してください');
+  if (ids.some(id=>!/^[a-z][a-z0-9-]*$/.test(id))) throw new Error('コンテンツIDの形式が不正です');
+  const directory = batch ? 'drafts/' + batch : 'src/content/careers';
   const sources = [];
   async function read(relativePath) {
     const raw = await fs.readFile(path.join(root, relativePath), 'utf8');
@@ -38,7 +41,11 @@ export async function loadReviewData(root) {
     return (await fs.readdir(path.join(root, directory))).filter(file => file.endsWith('.json')).sort();
   }
   const careers = [];
-  for (const file of await files('src/content/careers')) careers.push(await read('src/content/careers/' + file));
+  for (const file of await files(directory)) {
+    if (!ids.length || ids.includes(file.slice(0,-5))) careers.push(await read(directory + '/' + file));
+  }
+  for (const id of ids) if (!careers.some(career=>career.slug===id)) throw new Error('対象にないID: ' + id);
+  if (!careers.length) throw new Error('確認対象の原稿がありません');
   careers.sort((a,b) => a.order - b.order || a.slug.localeCompare(b.slug));
   const rows = [], configs = [];
   for (const career of careers) flatten(career, '', career.name, rows, career.slug);

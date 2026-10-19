@@ -1,0 +1,1 @@
+var e=(e=``)=>`${`/mirai_scene/`.replace(/\/$/,``)}/${e.replace(/^\/+/,``)}`,t=t=>e(`careers/${t}/`);export{e as n,t};

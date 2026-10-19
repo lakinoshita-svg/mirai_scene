@@ -20,6 +20,9 @@ for (const file of files) {
   // 名前が衝突する下書きで既存原稿を置き換えない。別体験は別slugで登録する。
   fs.copyFileSync(path.join(source, file), path.join(directory, file), fs.constants.COPYFILE_EXCL);
 }
+const audit = spawnSync(process.execPath, [path.join(root,'scripts/contentAudit.mjs')], {cwd:target,encoding:'utf8'});
+fs.writeFileSync(path.join(target,'audit.log'), (audit.stdout || '') + (audit.stderr || ''));
+if (audit.status !== 0) throw new Error('下書き監査失敗: ' + target + '/audit.log');
 const result = spawnSync(process.execPath, [path.join(root, 'node_modules/astro/bin/astro.mjs'), 'build'], { cwd: target, encoding: 'utf8' });
 fs.writeFileSync(path.join(target, 'build.log'), (result.stdout || '') + (result.stderr || ''));
 if (result.status !== 0) throw new Error(`下書きビルド失敗: ${target}/build.log`);

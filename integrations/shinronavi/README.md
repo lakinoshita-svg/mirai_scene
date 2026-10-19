@@ -1,6 +1,10 @@
 # 進路ナビ組み込み版
 
-導入版：`miraiSceneShinronavi20261016.zip`。配置は本書、検証範囲はVALIDATION.md、照合情報はZIPに隣接するmanifest.jsonを参照してください。同一版の一式を配置してください。
+配布対象はZIPに隣接するmanifest.jsonのreleaseを確認してください。配置は本書、検証範囲はVALIDATION.md、照合情報はZIPに隣接するmanifest.jsonを参照してください。同一版の一式を配置してください。
+
+## 配置前の照合
+
+`node install.mjs "進路ナビのプロジェクトルート" --dry-run` で全対象を確認してから、同じコマンドの --dry-run を外して配置します。配置記録と異なる独自調整があれば停止します。導入記録のない固定版は、その配布時のmanifest.jsonを `--baseline "manifest.json"` で指定します。本番の処理中の画面混在を避けるため保守時間帯に実施してください。例外時は書き込み済みファイルを復旧します。強制終了時はバックアップのrestoreManifest.jsonとGitLabの復旧手順を利用します。
 
 ## 配置
 
@@ -16,15 +20,21 @@
 <?php require __DIR__ . '/../miraiscene/head.tpl'; ?>
 ```
 
-配置・rewrite・head・サイトマップ接続をまとめて実施するには、配布フォルダーで `node install.mjs "進路ナビのプロジェクトルート"` を実行できます。実行前に対象が開発・検証環境であることを確認してください。既存変更はプロジェクトと同階層の `mirai-backup-…` に退避します。元のダウンロードフォルダーへは自動適用していません。配置先でNode.jsを使えない場合は手動配置できます。
+配置・rewrite・head・サイトマップ接続をまとめて実施するには、配布フォルダーで `node install.mjs "進路ナビのプロジェクトルート"` を実行できます。実行前に対象が開発・検証環境であることを確認してください。既存変更はプロジェクトと同階層の `miraiBackup-…` に退避します。元のダウンロードフォルダーへは自動適用していません。配置先でNode.jsを使えない場合は手動配置できます。
 
 公開先は現在 `/mirai_scene/` 固定です。別のパスへ配置する場合は、生成スクリプト・rewrite規則を合わせて変更し再生成してください。静的ファイルは `new/_app/_webroot/miraiscene/`、JSは `new/_app/_webroot/js/page/miraiscene/`、PHP本文は `new/_app/_view/miraiscene/` に配置します。公開URLと物理配置先の対応はrewriteが担います。
+
+手動配置で本体フッターを呼ぶ箇所は、次の条件を付けます。他ページは本体のフッターを使います。
+
+```php
+<?php if (!isset($this->mirai_page)) { require_once '../_view/layout/_footer.tpl'; } ?>
+```
 
 ## TailwindCSSと共通レイアウト
 
 配布物はHTML・JSだけではありません。専用CSS、画像、一覧・連携用JSON、既存MVCへ接続するPHP・tpl、rewrite設定も必要です。HTML内には独自クラスとAstroのスコープ属性があるため、既存Tailwindだけでは専用の見た目を再現できません。`new/`を一式で扱い、CSSやPHPを省略しないでください。
 
-既存の `default_new.tpl` をそのまま使用し、進路ナビのヘッダー・フッター・GTMを読み込みます。ミライシーン本文側に追加ヘッダーを置かず、進路ナビのヘッダーの下から本文を表示します。Tailwindの再インストールやCDN追加、新しいPreflightはありません。既存の画面デザインは専用CSSで維持し、生成時に全セレクターを `#mirai-scene` の内側へ限定します。全スタイルをTailwindユーティリティへ書き換えたものではありません。
+既存の `default_new.tpl` から進路ナビのヘッダー・GTMを読み込みます。ミライシーンは本文にサービス用のフッターを含み、本体フッターはこのページで省きます。ミライシーン本文側に追加ヘッダーを置かず、進路ナビのヘッダーの下から本文を表示します。Tailwindの再インストールやCDN追加、新しいPreflightはありません。既存の画面デザインは専用CSSで維持し、生成時に全セレクターを `#mirai-scene` の内側へ限定します。全スタイルをTailwindユーティリティへ書き換えたものではありません。
 
 パンくずは本文内のミライシーン専用表示だけを残し、レイアウト側では空配列にして重複を防ぎます。既存の `main` 内へ差し込むため、生成HTMLの `main` は `div` に変換します。ページのtitle・description・canonicalはControllerから既存レイアウトへ渡します。
 
@@ -46,7 +56,7 @@ TOPなどの本文内には、次の一行を追加します。リンク先は `
 
 ## 更新手順
 
-原稿はこれまで通り `src/content/careers/*.json`。`npm run content:verify` 後に `npm run build:shinronavi` を実行します。Node.jsは生成する端末にだけ必要です。本番ではPHPとApacheが動作すれば表示できます。
+原稿は `src/content/careers/*.json`。`npm run content:verify` 後に `npm run build:shinronavi` を実行します。Node.jsは生成する端末にだけ必要です。本番ではPHPとApacheが動作すれば表示できます。
 
 古い公開ファイルと混在しないよう同一リリースのファイルをまとめて反映してください。既存ページを上書きせず、ミライシーン専用の配置先だけを更新します。配布物を削除する前に直前のリリースを保存してください。
 
@@ -56,7 +66,7 @@ TOPなどの本文内には、次の一行を追加します。リンク先は `
 - 学校検索は既存の `fld[]` パラメーターを使用します。
 - 広告は現在のJSON方式のままで、既存広告DBへの接続は含みません。登録済み広告がない場合は非表示です。
 - IP地域APIは `PUBLIC_REGION_API_URL` の指定がある場合のみ接続します。自社IP推定APIは別途必要です。
-- 既存GTMの読み込みは共通レイアウトに委ねます。ミライシーン専用イベントの計測設定は含みません。
+- 既存GTMの読み込みは共通レイアウトに委ねます。ホストが window.miraiSceneAnalyticsEnabled = true を設定した場合、start・sceneComplete・complete・linkClickをdataLayerへ渡します。GTM・同意管理・送信先の設定はホストの担当です。
 
 ## 確認
 

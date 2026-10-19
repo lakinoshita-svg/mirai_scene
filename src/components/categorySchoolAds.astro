@@ -21,7 +21,7 @@ const initialIds = new Set(getSchoolAds(category).map(ad => ad.id));
   <noscript>
 <p>エリアの選択にはJavaScriptが必要です。</p>
 </noscript>
-  <div class="school-ads-grid">{ads.map(ad => <a class="school-ad" hidden={!initialIds.has(ad.id)} href={ad.url} target="_blank" rel="sponsored noopener" data-ad-id={ad.id} data-ad-regions={ad.targetRegions.join(' ')}>
+  <div class="school-ads-grid">{ads.map(ad => <a class="school-ad" hidden={!initialIds.has(ad.id)} href={ad.url} target="_blank" rel="sponsored noopener" data-track="schoolAd" data-track-id={ad.id} data-ad-id={ad.id} data-ad-regions={ad.targetRegions.join(' ')}>
     {ad.image && <img src={sitePath(ad.image.src)} alt={ad.image.alt} loading="lazy" />}
     <div class="school-ad-body">
 <span class="school-type">{ad.schoolType}</span>

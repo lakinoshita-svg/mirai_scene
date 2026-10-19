@@ -30,7 +30,7 @@ const careers = defineCollection({
     color: text.regex(/^#[0-9a-f]{6}$/i), ink: text.regex(/^#[0-9a-f]{6}$/i),
     interests: z.array(text.refine(id => interests.some(item => item.id === id), '未定義の興味タグです')).min(1),
     estimatedMinutes: z.number().int().positive(),
-    reference: z.object({ title: text, publisher: text, url: z.url({ protocol: /^https$/ }), checkedAt: text.regex(/^\d{4}-\d{2}-\d{2}$/), background: text }),
+    reference: z.object({ title: text, publisher: text, url: z.url({ protocol: /^https$/ }), checkedAt: z.iso.date(), background: text }),
     reviewStatus: z.enum(['editorial-draft', 'reviewed']),
     review: z.object({ reviewer: text, reviewedAt: z.iso.date(), scope: text }).optional(),
     image: image.optional(), mission: text.optional(),
@@ -38,7 +38,7 @@ const careers = defineCollection({
     studies: z.array(text).min(1), learning: text,
     learningIds: z.array(text.refine(id => learningLinks.some(item => item.id === id), '未定義の学びIDです')).min(1),
     scenes: z.array(scene).length(3).refine(uniqueIds, 'シーンのIDは重複できません'),
-  }).refine(c => c.reviewStatus !== 'reviewed' || Boolean(c.review), '監修済みには監修者・確認日・確認範囲が必要です').refine(c => Boolean(c.mission) === Boolean(c.brief), 'missionとbriefは両方を指定してください'),
+  }).refine(c => c.reviewStatus !== 'reviewed' || Boolean(c.review), '編集レビュー済みには確認者・確認日・確認範囲が必要です').refine(c => Boolean(c.mission) === Boolean(c.brief), 'missionとbriefは両方を指定してください'),
 });
 
 export const collections = { careers };

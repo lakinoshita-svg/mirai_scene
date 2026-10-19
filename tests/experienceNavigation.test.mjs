@@ -12,7 +12,7 @@ class Element {
  scrollIntoView(){}
  setAttribute(){}
 }
-const code=ts.transpile(fs.readFileSync('src/scripts/experience.ts','utf8'),{target:ts.ScriptTarget.ES2022});
+const code=ts.transpile(fs.readFileSync('src/scripts/experience.ts','utf8').replace(/^import .*;$/gm,''),{target:ts.ScriptTarget.ES2022});
 test('scene review preserves answers, blocks skipping and returns to completion',()=>{
  const previous=[];const records=Array.from({length:3},()=>new Element());
  const summary=new Element();summary.hidden=true;
@@ -30,9 +30,10 @@ test('scene review preserves answers, blocks skipping and returns to completion'
   return Object.assign(scene,{form,fieldset,radio,next});
  });
  previous.push(new Element());
- const root={querySelectorAll:s=>s==='[data-scene]'?scenes:previous,querySelector:()=>summary};
+ const events=[];
+ const root={dataset:{experience:'test-career'},addEventListener(){},querySelectorAll:s=>s==='[data-scene]'?scenes:previous,querySelector:()=>summary};
  const document={title:'体験',querySelector:()=>root};
- vm.runInNewContext(code,{document,matchMedia:()=>({matches:true})});
+ vm.runInNewContext(code,{document,matchMedia:()=>({matches:true}),location:{search:'',origin:'https://example.test'},URLSearchParams,catalogReturn:()=>null,sitePath:()=>'/mirai_scene/',track:(event,detail)=>events.push({event,detail})});
  scenes[0].next.fire('click');assert.equal(scenes[0].hidden,false);
  for(const scene of scenes){scene.radio.checked=true;scene.form.fire('change');scene.form.fire('submit');scene.next.fire('click');}
  assert.equal(summary.hidden,false);assert.equal(document.title,'体験のあとに見つけた気持ち | ミライシーン');
@@ -40,4 +41,8 @@ test('scene review preserves answers, blocks skipping and returns to completion'
  previous[1].fire('click');assert.equal(scenes[1].hidden,false);
  assert.equal(records[1].textContent,'あなたの選択：answer1');assert.equal(scenes[1].fieldset.disabled,true);
  scenes[1].next.fire('click');scenes[2].next.fire('click');assert.equal(summary.hidden,false);
+ assert.equal(events.filter(e=>e.event==='start').length,1);
+ assert.equal(events.filter(e=>e.event==='complete').length,1);
+ assert.equal(events.filter(e=>e.event==='sceneComplete').length,3);
+ assert.ok(events.every(e=>!('answer' in e.detail)));
 });

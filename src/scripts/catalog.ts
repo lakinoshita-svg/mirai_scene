@@ -26,6 +26,12 @@ document.querySelectorAll<HTMLElement>('[data-catalog]').forEach(root => {
   let entries: Entry[] = [];
   const defaultCategory = root.dataset.defaultCategory || 'すべて';
   let interest = 'all', category = defaultCategory, limit = pageSize(), revision = 0;
+  const stateKey = 'miraiSceneCatalog:' + location.pathname;
+  const resume = new URLSearchParams(location.search).get('resume');
+  let resumed = false;
+  function remember() {
+    try { sessionStorage.setItem(stateKey, JSON.stringify({interest,category,query:search.value,limit})); } catch { /* 保存できない環境でも閲覧を続ける */ }
+  }
   let loaded = false;
   let failed = false;
   let composing = false;
@@ -48,19 +54,35 @@ document.querySelectorAll<HTMLElement>('[data-catalog]').forEach(root => {
     status.textContent = '読み込み中…';
     grid.setAttribute('aria-busy', 'true');
     try {
-      const cards = await Promise.all(visible.map(entry => cardFor(entry.slug)));
+      const results = await Promise.allSettled(visible.map(entry => cardFor(entry.slug)));
+      const cards = results.flatMap(result => result.status === 'fulfilled' ? [result.value] : []);
       // 古い検索応答で、新しい検索結果を上書きしない。
       if (current !== revision) return;
       grid.replaceChildren(...cards);
-      cards.forEach(card => card.hidden = false);
+      cards.forEach(card => {
+        card.hidden = false;
+        const link = card as HTMLAnchorElement;
+        const url = new URL(link.href);
+        const back = new URL(location.pathname, location.origin);
+        back.searchParams.set('resume', card.dataset.career!);
+        back.hash = 'experiences';
+        url.searchParams.set('returnTo', back.pathname + back.search + back.hash);
+        link.href = url.href;
+      });
+      remember();
       root.dataset.ready = 'true';
-      failed = false;
+      failed = cards.length < visible.length;
+      retry.hidden = !failed;
       more.hidden = visible.length >= matching.length;
       moreContainer.hidden = false;
-      visibleCount.textContent = `全${matching.length}件中 ${visible.length}件を表示`;
+      visibleCount.textContent = `全${matching.length}件中 ${cards.length}件を表示`;
       count.textContent = `${matching.length}件`;
-      status.textContent = matching.length ? '' : '該当する体験がありません。キーワードや条件を変えてみてください。';
+      status.textContent = failed ? '一部の体験を読み込めませんでした。再試行で不足分を読み込めます。' : matching.length ? '' : '該当する体験がありません。キーワードや条件を変えてみてください。';
       if (focusNew) cards[previous]?.focus({ preventScroll: true });
+      if (resume && !resumed) {
+        const card = cards.find(card => card.dataset.career === resume);
+        if (card) { resumed = true; card.focus({preventScroll:true}); card.scrollIntoView({block:'center'}); }
+      }
     } catch {
       if (current !== revision) return;
       failed = true;
@@ -70,9 +92,9 @@ document.querySelectorAll<HTMLElement>('[data-catalog]').forEach(root => {
       if (current === revision) { more.disabled = failed; grid.setAttribute('aria-busy', 'false'); }
     }
   }
-  function reset() {
+  function reset(restore = false) {
     clearTimeout(searchTimer);
-    limit = pageSize();
+    if (!restore) limit = pageSize();
     clear.hidden = interest === 'all' && category === defaultCategory && !search.value;
     filterButtons.forEach(button => {
       const selected = button.dataset.interest !== undefined ? button.dataset.interest === interest : button.dataset.categoryFilter === category;
@@ -92,7 +114,7 @@ document.querySelectorAll<HTMLElement>('[data-catalog]').forEach(root => {
     clearTimeout(searchTimer);
     ++revision; // 入力直前の通信結果を表示しない。
     more.disabled = true;
-    if (!composing) searchTimer = setTimeout(reset, 180);
+    if (!composing) searchTimer = setTimeout(() => reset(), 180);
   });
   clear.addEventListener('click', () => {
     interest = 'all'; category = defaultCategory; search.value = ''; reset(); search.focus();
@@ -106,11 +128,24 @@ document.querySelectorAll<HTMLElement>('[data-catalog]').forEach(root => {
     try {
       const response = await fetch(root.dataset.indexUrl!, { signal: AbortSignal.timeout(10000) });
       if (!response.ok) throw new Error('Index unavailable');
-      entries = await response.json(); loaded = true;
+      const data = await response.json();
+      if (!Array.isArray(data) || data.some(entry => typeof entry.slug !== 'string' || !/^[a-z][a-z0-9-]*$/.test(entry.slug) || !['name','category','cardTheme','entryTitle','description'].every(key=>typeof entry[key] === 'string') || !Array.isArray(entry.learningIds))) throw new Error('Invalid index');
+      entries = data; loaded = true;
       // 索引の通信中に画面幅が変わった場合も、現在の幅の初期件数に合わせる。
       limit = pageSize();
+      if (resume) {
+        try {
+          const saved = JSON.parse(sessionStorage.getItem(stateKey) || 'null');
+          if (saved) {
+            interest = interestButtons.some(button=>button.dataset.interest===saved.interest) ? saved.interest : 'all';
+            category = categoryButtons.some(button=>button.dataset.categoryFilter===saved.category) ? saved.category : defaultCategory;
+            search.value = typeof saved.query === 'string' ? saved.query.slice(0,100) : '';
+            limit = Number.isInteger(saved.limit) ? Math.min(entries.length,Math.max(pageSize(),saved.limit)) : pageSize();
+          }
+        } catch { /* 保存値が不正なら標準の一覧を使う */ }
+      }
       controls.hidden = false;
-      await render();
+      reset(true);
       // 過去に共有された #career/職業ID と #about を現在のURLへ案内する互換処理。
       let legacyRoute = '';
       try { legacyRoute = decodeURIComponent(location.hash.slice(1)); } catch { /* 不正な旧URLを無視 */ }

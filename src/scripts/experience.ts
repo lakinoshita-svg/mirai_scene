@@ -1,5 +1,18 @@
+import { catalogReturn } from '../lib/catalogNavigation.mjs';
+import { sitePath } from '../lib/paths';
+import { track } from './analytics';
 const root = document.querySelector<HTMLElement>('[data-experience]');
 if (root) {
+    const experienceId = root.dataset.experience!;
+    let started = false, completed = false;
+    const back = root.querySelector<HTMLAnchorElement>('[data-catalog-return]');
+    const value = new URLSearchParams(location.search).get('returnTo');
+    const returnUrl = value && catalogReturn(value, location.origin, sitePath());
+    if (back && returnUrl) back.href = returnUrl;
+    root.addEventListener('click', event => {
+      const link = (event.target as Element).closest<HTMLAnchorElement>('a[data-track]');
+      if (link) track('linkClick', {experienceId,destination:link.dataset.track,destinationId:link.dataset.trackId});
+    });
     const scenes = [...root.querySelectorAll<HTMLElement>('[data-scene]')];
     const summary = root.querySelector<HTMLElement>('[data-summary]')!;
     // 回答はDOM内のみで保持し、再読込時は最初から開始する（送信・永続保存はしない）。
@@ -36,6 +49,8 @@ if (root) {
             if (selected < 0 || revealed || index !== current)
                 return;
             revealed = true;
+            if (!started) { started = true; track('start',{experienceId}); }
+            track('sceneComplete',{experienceId,sceneNumber:index+1});
             fieldset.disabled = true;
             form.querySelector<HTMLElement>('[data-explain-actions]')!.hidden = true;
             scene.querySelector<HTMLElement>('[data-selected-caption]')!.textContent = `あなたが選んだのは ${String.fromCharCode(65 + selected)}`;
@@ -53,8 +68,10 @@ if (root) {
             current++;
             const next = scenes[current] ?? summary;
             next.hidden = false;
-            if (next === summary)
+            if (next === summary) {
                 document.title = '体験のあとに見つけた気持ち | ミライシーン';
+                if (!completed) { completed = true; track('complete',{experienceId}); }
+            }
             moveFocus(next);
         });
     });

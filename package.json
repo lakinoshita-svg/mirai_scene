@@ -23,10 +23,13 @@
     "content:audit": "node scripts/contentAudit.mjs",
     "content:export-review": "node scripts/exportReview.mjs",
     "content:benchmark": "node scripts/benchmarkCatalog.mjs",
-    "content:verify": "npm run content:audit && npm run check && npm run build && npm test && npm run sync:inquiry"
+    "content:verify": "node scripts/verifyContent.mjs",
+    "release:check": "node scripts/verifyDelivery.mjs",
+    "content:inventory": "node scripts/contentInventory.mjs"
   },
   "dependencies": {
-    "astro": "7.3.4"
+    "astro": "7.3.4",
+    "sharp": "0.35.4"
   },
   "devDependencies": {
     "@astrojs/check": "^0.9.10",

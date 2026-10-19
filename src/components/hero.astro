@@ -1,20 +1,27 @@
 ---
+import { Image, getImage } from 'astro:assets';
+import makeImage from '../../public/assets/hero/make.png';
+import supportImage from '../../public/assets/hero/support.png';
+import conveyImage from '../../public/assets/hero/convey.png';
+import backgroundPc from '../../public/assets/hero/background-pc.png';
+import backgroundSp from '../../public/assets/hero/background-sp.png';
+const [pcBackground, spBackground] = await Promise.all([getImage({src:backgroundPc,format:'webp',width:1440,quality:75}),getImage({src:backgroundSp,format:'webp',width:720,quality:75})]);
 import { sitePath } from '../lib/paths';
 const asset = (name: string) => sitePath(`assets/hero/${name}`);
 // FVは仕事のイメージを示す3枚。検索カテゴリーとは別のためinterests.jsonへ混在させない。
 const heroCards = [
-  { className: 'hero-make', file: 'make.png', alt: '好きなものを、つくる。', width: 1448, height: 1086 },
-  { className: 'hero-support', file: 'support.png', alt: '誰かの安心を、支える。', width: 1448, height: 1086 },
-  { className: 'hero-convey', file: 'convey.png', alt: '気持ちやアイデアを、伝える。', width: 1672, height: 941 },
+  { className: 'hero-make', image: makeImage, alt: '好きなものを、つくる。', width: 1448, height: 1086 },
+  { className: 'hero-support', image: supportImage, alt: '誰かの安心を、支える。', width: 1448, height: 1086 },
+  { className: 'hero-convey', image: conveyImage, alt: '気持ちやアイデアを、伝える。', width: 1672, height: 941 },
 ];
 ---
 <section class="hero" aria-labelledby="hero-title">
   <div class="hero-stage">
-    <picture class="hero-background"><source media="(max-width: 900px)" srcset={asset('background-sp.png')} /><img src={asset('background-pc.png')} alt="" width="1774" height="887" fetchpriority="high" /></picture>
+    <picture class="hero-background"><source media="(max-width: 900px)" srcset={spBackground.src} /><img src={pcBackground.src} alt="" width="1774" height="887" fetchpriority="high" /></picture>
     <div class="hero-message"><div class="hero-copy">
       <p class="heroEyebrow">“好き”から始まる、仕事のひと場面体験</p>
       <h1 id="hero-title">「好き！」の先にある、<span>未来をのぞいてみよう。</span></h1>
-      <p>まだ、やりたいことが決まっていなくても大丈夫。<br />ミライシーンでは、仕事のひと場面を体験しながら、<br />自分の「好き」のヒントを探せます。</p>
+      <p>まだ、やりたいことが決まっていなくても大丈夫。ミライシーンでは、仕事のひと場面を体験し、自分の「好き」のヒントを探せます。</p>
     </div>
     <div class="hero-action">
       <a class="hero-invitation" href="#experiences">気になる未来を、見つけてみよう。<span aria-hidden="true">↓</span></a>
@@ -25,13 +32,14 @@ const heroCards = [
       <img class="hero-note" src={asset('note.png')} alt="好きから、きっと見つかる わたしのミライ" />
       {heroCards.map(card => (
         <div class:list={['hero-card', card.className]}>
-          <img src={asset(card.file)} alt={card.alt} width={card.width} height={card.height} />
+          <Image src={card.image} alt={card.alt} widths={[240,480,720]} sizes="(max-width:900px) 200px, 340px" format="webp" quality={82} loading="eager" />
         </div>
       ))}
     </div>
   </div>
 </section>
 <style>
+.hero-copy p { text-wrap: pretty; }
 /* コピーとCTAは同じ列・通常フローでまとめる。写真だけを重ね、文字量で衝突させない。 */
 .hero {
   position: relative;

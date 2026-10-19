@@ -4,11 +4,13 @@ import path from 'node:path';
 import os from 'node:os';
 import { createRequire } from 'node:module';
 import { fileURLToPath, pathToFileURL } from 'node:url';
+import { parseArgs } from 'node:util';
 import { loadReviewData } from './lib/reviewData.mjs';
 import { createReviewWorkbook } from './lib/reviewWorkbook.mjs';
 
 const root = fileURLToPath(new URL('../', import.meta.url));
-const data = await loadReviewData(root);
+const {values} = parseArgs({options:{check:{type:'boolean'},batch:{type:'string'},ids:{type:'string'}}});
+const data = await loadReviewData(root, {batch:values.batch,ids:values.ids?.split(',') || []});
 if (process.argv.includes('--check')) {
   console.log(JSON.stringify({careers: data.careers.length, contentFields: data.rows.length, configFields: data.configs.length}));
 } else {

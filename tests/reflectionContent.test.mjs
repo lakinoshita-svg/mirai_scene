@@ -14,7 +14,7 @@ test('progress exposes each scene position and related work links target the cat
   assert.deepEqual(bars.map(node => attr(node, 'aria-valuenow')), ['1', '2', '3']);
   assert.ok(bars.every(node => attr(node, 'aria-valuemax') === '3'));
   assert.ok(nodes.some(node => attr(node, 'href')?.endsWith('/explore/tourism/#experiences')));
-  assert.ok(html.includes('ほかの観光の仕事体験を見る'));
+  assert.ok(html.includes('観光の仕事体験を見る'));
 });
 
 test('about includes descriptive search metadata and canonical for the configured host', () => {

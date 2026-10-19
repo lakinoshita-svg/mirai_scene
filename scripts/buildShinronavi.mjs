@@ -3,9 +3,12 @@ import path from 'node:path';
 import crypto from 'node:crypto';
 import { spawnSync } from 'node:child_process';
 import { extractPage, scopeCss } from './lib/shinronaviExport.mjs';
-import './buildManual.mjs';
+import { buildOperationsManual } from './lib/operationsManual.mjs';
 
+import { sourceSnapshot, digest } from './lib/sourceSnapshot.mjs';
 const root=process.cwd();
+const source = sourceSnapshot(root);
+const manual = buildOperationsManual(root);
 const parent=path.join(root,'tmp');
 fs.mkdirSync(parent,{recursive:true});
 const build=fs.mkdtempSync(path.join(parent,'shinronavi-build-'));
@@ -67,7 +70,12 @@ const templateTargets = {
 for (const [source, destination] of Object.entries(templateTargets)) copy(`${templates}/${source}`, destination);
 fs.copyFileSync('integrations/shinronavi/README.md',path.join(target,'INSTALL.md'));
 // 運用担当へ渡す手順書も毎回同じリリースへ同梱し、旧版との混在を防ぐ。
-copy('outputs/operations/運用マニュアル.html','運用マニュアル.html');
+copy(manual.outputPath,'運用マニュアル.html');
 if(fs.existsSync('integrations/shinronavi/VALIDATION.md')) fs.copyFileSync('integrations/shinronavi/VALIDATION.md',path.join(target,'VALIDATION.md'));
+const current = sourceSnapshot(root);
+if (source.sha256 !== current.sha256) throw new Error('ビルド中に編集元が変わっています。再実行してください。');
+const files = Object.fromEntries(walk(target).map(file => [path.relative(target,file).replaceAll(path.sep,'/'), digest(fs.readFileSync(file))]));
+const careers = fs.readdirSync('src/content/careers').filter(file=>file.endsWith('.json')).map(file=>JSON.parse(fs.readFileSync('src/content/careers/'+file)));
+fs.writeFileSync(path.join(target,'buildManifest.json'),JSON.stringify({sourceHash:source.sha256, files, contentCount:careers.length, sceneCount:careers.reduce((n,c)=>n+c.scenes.length,0)},null,2));
 fs.writeFileSync(path.join(output,'latest.json'),JSON.stringify({directory:target,pages:Object.keys(manifest).length},null,2));
 console.log(`進路ナビ配置用: ${target}\n本文${Object.keys(manifest).length}ページ。INSTALL.mdの配置・rewrite手順を確認してください。`);

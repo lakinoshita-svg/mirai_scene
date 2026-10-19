@@ -7,6 +7,7 @@
 - 内部のファイル名・変数・関数はlowerCamelCaseを基本にする。例：`cardThemes.ts`、`schoolAds.json`、`buildShinronavi.mjs`。
 - Astroのファイル名は`careerCard.astro`、import時の識別子は`CareerCard`とする。型名・クラス名・コンポーネント識別子はPascalCaseで区別する。
 - ファイル名は用途を表す。`trimmed`、`new`、`final2`などの作業段階を現行ファイル名にしない。配布物は版ごとに管理する。
+- ファイル名・クラス名・関数名に `edit`、`updated` などの作業経緯を含めない。名称は対象と役割を表す。外部連携先の既定パスは連携契約として保持する。
 - CSSの既存クラス・ID・data属性はHTMLとJavaScriptの接続契約。機械的に一括変更しない。新しい内部名はキャメルケースにし、既存名を変える場合はセレクターも同時に修正する。
 - `astro.config.mjs`、`content.config.ts`、`[slug].astro`などの指定名、環境変数、npmコマンドは維持する。
 - 公開URL、職業slug、教材slug、分野ID、学校検索の`fld[]`、保存済みの地域選択キーは互換性のため維持する。職業JSONのファイル名はslugと一致させるためハイフンを含んでよい。
@@ -59,3 +60,9 @@ GitHub Pages用の生成物を更新するときは、HTMLが参照する`_astro
 現行の目的・仕様・手順・未設定項目を直接説明する。経緯や過去との比較は説明資料に含めない。版番号・配布物のハッシュ・確認者・確認範囲は照合情報として保持する。
 
 マニュアルの編集元は `docs/operationsManual.html`、配布設定は `config/delivery.json`。`npm run manual:build` で閲覧用HTMLを生成する。`npm run build:shinronavi` は同じ生成処理を含む。ZIPは `npm run release:package` で全ファイルの照合まで行う。
+
+マニュアル生成処理は `scripts/lib/operationsManual.mjs` の `buildOperationsManual(root)` に集約する。CLIと導入ビルドは関数を明示的に呼び出し、戻り値の出力先を利用する。モジュールの読み込みだけではファイルを生成しない。型チェックは編集元を対象とし、配布物・閲覧用出力は除外する。
+
+## 運営の照合
+
+制作・配布の手順は [制作・配布運用](OPERATIONS.md)。入力ファイルの照合は sourceSnapshot.mjs、一覧復帰先の検証は catalogNavigation.mjs、計測の接続は analytics.ts に集約する。生成物を直接編集せず、承認者・公開日・担当者をAIで補完しない。

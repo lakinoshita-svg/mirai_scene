@@ -39,5 +39,6 @@ export function extractPage(html) {
   // 本体のmain要素は既存レイアウトが持つ。idとtabindexはフォーカス制御用に維持する。
   main.tagName='div'; main.nodeName='div';
   const title=nodes.find(node=>node.tagName==='title');
-  return { html:serializeOuter(main), title:title?.childNodes.map(node=>node.value||'').join('') || 'ミライシーン', description:attr(nodes.find(node=>node.tagName==='meta' && attr(node,'name')==='description') || {},'content') || '', scripts:[...new Set(scripts.map(node=>attr(node,'src')).filter(Boolean))], inlineScripts, styles, links };
+  const footer=nodes.find(node=>node.tagName==='footer' && attr(node,'class')?.split(' ').includes('site-footer'));
+  return { html:serializeOuter(main)+(footer?serializeOuter(footer):''), title:title?.childNodes.map(node=>node.value||'').join('') || 'ミライシーン', description:attr(nodes.find(node=>node.tagName==='meta' && attr(node,'name')==='description') || {},'content') || '', scripts:[...new Set(scripts.map(node=>attr(node,'src')).filter(Boolean))], inlineScripts, styles, links };
 }

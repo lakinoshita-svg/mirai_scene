@@ -1,0 +1,22 @@
+import fs from 'node:fs';
+import path from 'node:path';
+import {digest} from './lib/sourceSnapshot.mjs';
+const operations = JSON.parse(fs.readFileSync('config/contentOperations.json'));
+const approvals = JSON.parse(fs.readFileSync('config/publicationApprovals.json'));
+const directories = ['src/content/careers', ...fs.readdirSync('drafts',{withFileTypes:true}).filter(item=>item.isDirectory()&&/^batch-\d+$/.test(item.name)).map(item=>'drafts/'+item.name)];
+const today = new Intl.DateTimeFormat('sv-SE',{timeZone:'Asia/Tokyo'}).format(new Date());
+const rows = directories.flatMap(directory=>fs.readdirSync(directory).filter(name=>name.endsWith('.json')).map(name=>{
+  const raw = fs.readFileSync(path.join(directory,name));
+  const c = JSON.parse(raw), op = operations.contents[c.slug] || {}, approval = approvals[c.slug];
+  return {id:c.slug,name:c.name,title:c.entryTitle,theme:c.cardTheme,category:c.category,source:directory+'/'+name,sha256:digest(raw),review:c.reviewStatus,referenceDate:c.reference?.checkedAt,owner:op.owner || '未設定',reviewDueAt:op.reviewDueAt || '未設定',reviewDue:!!op.reviewDueAt && op.reviewDueAt<=today,publication:approval?.sha256===digest(raw)&&approval.approvedBy&&approval.approvedAt&&approval.scope ? '承認記録あり' : '承認記録なし',deployedRelease:op.deployedRelease || '未記録'};
+}));
+const esc = value=>String(value??'').replace(/[&<>"']/g,char=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[char]));
+const summary = Object.entries(Object.groupBy(rows,row=>row.theme)).map(([theme,items])=>`${theme}: ${items.length}件`).join(' / ');
+const columns = ['id','name','title','theme','source','owner','review','referenceDate','reviewDueAt','publication','deployedRelease'];
+const labels = ['ID','職業名','題材','テーマ','原稿の場所','担当','編集状態','資料確認日','再確認予定','公開承認','導入済み版'];
+const ads = JSON.parse(fs.readFileSync('src/data/schoolAds.json')).ads.map(ad=>({...ad,...operations.ads[ad.id]}));
+const html = `<!doctype html><html lang="ja"><meta charset="utf-8"><meta name="viewport" content="width=device-width"><title>ミライシーン 運営一覧</title><style>body{font:15px/1.7 system-ui;margin:24px;color:#30283e}table{border-collapse:collapse}th,td{border:1px solid #ded2ef;padding:8px;text-align:left;min-width:96px}th{background:#f4f0f7}td{vertical-align:top}caption{text-align:left;font-weight:bold}.tableWrap{overflow:auto}.due{background:#fff4de}</style><h1>ミライシーン 運営一覧</h1><p>確認日 ${today} / ${rows.length}体験（下書き含む）。担当・再確認予定・導入済み版は config/contentOperations.json で記録します。公開承認は原稿ハッシュとの一致で照合します。</p><p>${esc(summary)}</p><div class="tableWrap"><table><tr>${labels.map(label=>`<th>${label}</th>`).join('')}</tr>${rows.map(row=>`<tr class="${row.reviewDue?'due':''}">${columns.map(key=>`<td>${esc(row[key])}</td>`).join('')}</tr>`).join('')}</table></div><h2>題材の確認</h2><p>同じ職業名の体験も制作できます。題材・相手・制約の重複は、次のバッチを決める前に確認してください。各テーマの件数だけで制作優先度を自動決定しません。</p><h2>広告の掲載確認</h2><p>掲載終了日は自動非表示の設定ではありません。期限前に enabled を設定し、ビルド・配布・導入します。</p><ul>${ads.map(ad=>`<li>${esc(ad.id)} / 担当 ${esc(ad.owner||'未設定')} / 掲載終了 ${esc(ad.endsAt||'未設定')}</li>`).join('')||'<li>登録広告なし</li>'}</ul></html>`;
+fs.mkdirSync('outputs/operations',{recursive:true});
+fs.writeFileSync('outputs/operations/contentInventory.html',html);
+fs.writeFileSync('outputs/operations/contentInventory.json',JSON.stringify({asOf:today,rows,ads},null,2));
+console.log('運営一覧: outputs/operations/contentInventory.html');
