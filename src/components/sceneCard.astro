@@ -9,7 +9,7 @@ const { career:c, scene:s, index } = Astro.props;
 <section class="scene-panel" data-scene={index} hidden={index!==0} tabindex="-1" aria-labelledby={`scene-title-${index}`}>
   <div class="experience-top"><span>{c.category} / {c.name}</span><span>SCENE {String(index+1).padStart(2,'0')} / {String(c.scenes.length).padStart(2,'0')}</span></div>
   <SceneProgress current={index+1} total={c.scenes.length} />
-  {index > 0 && <button class="text-link" type="button" data-previous>← 前のシーンを読み返す</button>}
+  {index > 0 && <button class="sceneBack" type="button" data-previous>← 前のシーンを読み返す</button>}
   <article class="scene-card">
     {c.brief && index===0 && <div class="brief"><strong>今回のミッション</strong><p>{c.mission}</p><dl><dt>役割</dt><dd>{c.brief.role}</dd><dt>相手</dt><dd>{c.brief.audience}</dd><dt>目的</dt><dd>{c.brief.goal}</dd><dt>条件</dt><dd>{c.brief.constraint}</dd></dl></div>}
     <span class="scene-kicker">あなたなら、どうする？</span>
@@ -32,6 +32,19 @@ const { career:c, scene:s, index } = Astro.props;
   </article>
 </section>
 <style>
+  .sceneBack {
+    display:inline-flex;
+    align-items:center;
+    min-height:48px;
+    margin-bottom:var(--space-1);
+    padding:var(--space-1) var(--space-2);
+    background:var(--paper);
+    border:1.5px solid var(--line);
+    border-radius:var(--radius-scene-back);
+    color:var(--ink);
+    font-size:14px;
+    font-weight:700;
+  }
   /* 職業名が長い場合も進捗を一まとまりで読めるよう、狭い幅では行を分ける。 */
   .experience-top { flex-wrap:wrap; gap:var(--space-1) var(--space-2); }
   .experience-top > span:last-child { flex-shrink:0; white-space:nowrap; margin-left:auto; }

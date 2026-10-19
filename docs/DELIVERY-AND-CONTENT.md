@@ -4,7 +4,7 @@
 
 ミライシーンの制作元はGitHub、進路ナビ本体は別サービスのGitLabで管理する。GitHub側のコミットをGitLabへ直接マージする運用を前提にしない。初期導入は固定ZIPを受け渡し、GitLab側の作業ブランチで配置・差分確認する。
 
-配布はPHP・テンプレートを含む一式。コンテンツ更新専用パッケージは未実装。一式の導入処理はdry-run・導入済みハッシュとの照合・競合停止・削除対象の表示に対応する。公開承認、配布前検証、取り込み手順は [制作・配布運用](OPERATIONS.md) を参照する。
+初期導入・共通実装の配布はPHP・テンプレートを含む一式。原稿・シーン画像だけの配布は [差分配布手順](CONTENT-DELIVERY.md) に従う。一式の導入処理はdry-run・導入済みハッシュとの照合・競合停止・削除対象の表示に対応する。公開承認、配布前検証、取り込み手順は [制作・配布運用](OPERATIONS.md) を参照する。
 
 ## 導入担当
 
@@ -26,7 +26,7 @@ PowerShellで `Get-FileHash deliveries/release-2026-10-16/miraiSceneShinronavi20
 2. `npm run content:verify-drafts -- batch-001` で公開元とは別の一時プロジェクトに下書きを加えてビルドする。結果の場所はコマンド出力を参照。元のsrc・dist・導入ZIPは変更しない。
 3. 文章・SP画面・学びのつながりを確認する。機械チェックの成功を内容承認や監修と扱わない。
 4. 内容確認済みの原稿だけを `src/content/careers/` へ移す。同名ファイルに上書きしない。台帳を更新し、`npm run content:verify` を実行。
-5. config/delivery.jsonに未使用の配布版を設定し、公開承認と検証を完了してから `npm run build:shinronavi` を実行し、新しい日付・版のZIPを作る。初期導入の固定ZIPは変更しない。JSON単独の差し替えではなく、生成された一式で更新する。
+5. config/delivery.jsonに未使用の配布版を設定し、公開承認と検証を完了してから `npm run build:shinronavi` を実行し、新しい日付・版のZIPを作る。初期導入の固定ZIPは変更しない。JSON単独では配置しない。共通実装が一致する場合は差分パッケージ、それ以外は一式を配置する。
 
 確認用Excelは `npm run content:export-review -- --batch batch-001` で下書き、`--ids designer,engineer` で指定原稿を対象にできる。引数なしは公開元全件。連携設定も含む。記入済み確認結果の自動移行・自動取り込みはない。
 

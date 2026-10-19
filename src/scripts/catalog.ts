@@ -95,6 +95,7 @@ document.querySelectorAll<HTMLElement>('[data-catalog]').forEach(root => {
   function reset(restore = false) {
     clearTimeout(searchTimer);
     if (!restore) limit = pageSize();
+    remember();
     clear.hidden = interest === 'all' && category === defaultCategory && !search.value;
     filterButtons.forEach(button => {
       const selected = button.dataset.interest !== undefined ? button.dataset.interest === interest : button.dataset.categoryFilter === category;
@@ -112,6 +113,9 @@ document.querySelectorAll<HTMLElement>('[data-catalog]').forEach(root => {
   search.addEventListener('compositionend', () => { composing = false; reset(); });
   search.addEventListener('input', () => {
     clearTimeout(searchTimer);
+    // 検索の待機時間内にカードへ進んでも、入力した条件へ戻れるようにする。
+    limit = pageSize();
+    remember();
     ++revision; // 入力直前の通信結果を表示しない。
     more.disabled = true;
     if (!composing) searchTimer = setTimeout(() => reset(), 180);

@@ -42,7 +42,7 @@
 
 ## 進路ナビ側での配置
 
-ZIP内の `install.mjs` を使う。一式の配布が対象で、コンテンツだけの差分パッケージではない。
+一式のZIPは `install.mjs` を使う。原稿・シーン画像だけを配布する場合は [コンテンツの差分配布](CONTENT-DELIVERY.md) の条件を確認し、`release:content-zip` と `installContent.mjs` を使う。以下は一式の手順。
 
 ```text
 node install.mjs "進路ナビのプロジェクトルート" --dry-run

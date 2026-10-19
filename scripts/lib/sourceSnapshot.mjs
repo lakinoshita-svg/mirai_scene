@@ -19,6 +19,17 @@ export function sourceSnapshot(root) {
   return {sha256: digest(JSON.stringify({files, environment, node: process.version})), files};
 }
 
+// 原稿とシーン画像以外の実装・設定が違う場合は一式で導入する。
+export function runtimeHash(snapshot) {
+  const entries=Object.entries(snapshot.files).filter(([file])=>
+    (file.startsWith('src/')&&!file.startsWith('src/content/careers/')) ||
+    (file.startsWith('public/')&&!file.startsWith('public/assets/scenes/')) ||
+    file.startsWith('integrations/shinronavi/templates/') ||
+    file.startsWith('scripts/') ||
+    ['astro.config.mjs','package.json','pnpm-lock.yaml','package-lock.json'].includes(file) || file.startsWith('.env'));
+  return digest(JSON.stringify({entries,regionApi:process.env.PUBLIC_REGION_API_URL||'',node:process.version}));
+}
+
 export function approvalErrors(root, approvals) {
   const directory = path.join(root, 'src/content/careers');
   const errors = [];

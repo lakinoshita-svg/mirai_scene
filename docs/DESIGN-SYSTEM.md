@@ -54,11 +54,14 @@
 | モバイル用パネル | `--radius-panel-compact` |
 | 大きな囲み | `--radius-large` |
 | ピル型 | `--radius-pill` |
+| シーンの読み返しボタン | `--radius-scene-back`（30px 5px 30px 5px） |
 | 通常カードの影 | `--card-shadow` |
 | ホバー時の影 | `--card-shadow-hover` |
 | 主CTAの影 | `--cta-shadow`, `--cta-shadow-hover` |
 
 同じ役割のカード、入力、パネルは同じ角丸トークンを使います。独自の影や角丸を作らず、既存の役割に当てはまるか先に確認します。
+
+「前のシーンを読み返す」は背景 `--paper`（#fcfbfd）、文字 `--ink`、枠線は選択肢と同じ1.5pxの `--line`。下余白は8pxとし、専用の角丸トークンを使います。体験一覧への戻りリンクの表記は「体験一覧に戻る」です。
 
 ## 共通の操作状態
 

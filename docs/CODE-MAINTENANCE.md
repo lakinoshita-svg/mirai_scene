@@ -66,3 +66,5 @@ GitHub Pages用の生成物を更新するときは、HTMLが参照する`_astro
 ## 運営の照合
 
 制作・配布の手順は [制作・配布運用](OPERATIONS.md)。入力ファイルの照合は sourceSnapshot.mjs、一覧復帰先の検証は catalogNavigation.mjs、計測の接続は analytics.ts に集約する。生成物を直接編集せず、承認者・公開日・担当者をAIで補完しない。
+
+差分配布の判定・配置は `integrations/shinronavi/templates/contentDelivery.mjs` に集約する。`scripts/buildContentDelivery.mjs` が計画を生成し、`installContent.mjs` が同じ判定を再確認して配置する。共通実装の互換性は `scripts/lib/sourceSnapshot.mjs` の `runtimeHash` で判断する。詳細は [差分配布手順](CONTENT-DELIVERY.md)。

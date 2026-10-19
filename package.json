@@ -25,7 +25,9 @@
     "content:benchmark": "node scripts/benchmarkCatalog.mjs",
     "content:verify": "node scripts/verifyContent.mjs",
     "release:check": "node scripts/verifyDelivery.mjs",
-    "content:inventory": "node scripts/contentInventory.mjs"
+    "content:inventory": "node scripts/contentInventory.mjs",
+    "release:content": "node scripts/buildContentDelivery.mjs",
+    "release:content-zip": "powershell -NoProfile -ExecutionPolicy Bypass -File scripts/packageContent.ps1"
   },
   "dependencies": {
     "astro": "7.3.4",
