@@ -8,7 +8,7 @@ const links = getLearningLinks(ids);
 const lessons = getLessons(ids);
 ---
 <div class="learning-connections">
-  <a data-track="schoolSearch" class="primary learning-action" href={schoolSearchUrl(ids)} target="_blank" rel="noopener"><span>この分野を学べる学校を探す</span><span aria-hidden="true">↗</span></a>
+  <a data-track="schoolSearch" class="primary learning-action schoolSearchAction" href={schoolSearchUrl(ids)} target="_blank" rel="noopener"><span>この分野を学べる学校を探す</span><span aria-hidden="true">↗</span></a>
   <h3>この分野で学ぶことを知ろう。</h3>
   <LessonLinks lessons={lessons} />
   {/* 資料請求の説明を、教材へのリンクと分野一覧への導線の間に置く。 */}
