@@ -31,7 +31,7 @@ const canonical = Astro.site ? new URL(Astro.url.pathname, Astro.site).href : un
       <div class="brand-family">
         <a class="parent-brand" href="https://shinronavi.com/" target="_blank" rel="noopener" aria-label="進路ナビを別タブで開く"><img src={sitePath('assets/brand/shinronaviLogo.png')} alt="進路ナビ" width="1200" height="300" /></a>
       </div>
-      <a class="header-link" href={sitePath('about/')}>ミライシーンについて <span>↗</span></a>
+      <a class="header-link" href={sitePath('about/')}>ミライシーンについて</a>
     </header>
     <main id="app" tabindex="-1"><ServiceIdentity /><Breadcrumbs current={breadcrumb} /><slot /></main>
     <footer class="site-footer"><div class="site-footer-inner"><a href={sitePath()} class="footer-brand"><BrandLogo /></a><p>“好き”から始まる進路選び。今、将来を決めなくても大丈夫。</p></div></footer>

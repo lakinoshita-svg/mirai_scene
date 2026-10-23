@@ -1,0 +1,1113 @@
+{
+  "batchId": "batch-002",
+  "reviewType": "twoPassSelfReview",
+  "passes": {
+    "occupational": {
+      "reviewer": "Codex（同一担当による自己確認）",
+      "checkedAt": "2026-10-22",
+      "method": "自社職業原文と公的な職業説明5資料の本文を読み、10体験・30シーンの役割・対象物・判断・隣接職種との分担を照合。"
+    },
+    "editorial": {
+      "reviewer": "Codex（同一担当による二巡目の自己確認）",
+      "checkedAt": "2026-10-22",
+      "method": "全30シーンと全90案を通読。各案のlabel・explanation・benefit・cautionを状況・問い・共通条件と照合し、シーンごとの振り返りも確認。各案の判断理由はoptionChecksに保存。"
+    }
+  },
+  "limitations": [
+    "独立した別担当者のレビューではない。",
+    "実務経験者による確認、高校生による読解・所要時間確認、公開承認は未実施。",
+    "選択肢は架空の教材案であり、資料が個々の案の効果を実証しているわけではない。"
+  ],
+  "entries": [
+    {
+      "slug": "engineer-search-language",
+      "sha256": "4ca97ebc58e03cba962b6c1b04b872087c5373ca52b4b087994bbfdb82bb5ef8",
+      "sources": [
+        "docs/editorial/company-career-material.txt",
+        "https://shigoto.mhlw.go.jp/User/Occupation/Detail/314"
+      ],
+      "scenes": [
+        {
+          "sceneId": "scene-1",
+          "optionIds": [
+            "option-1",
+            "option-2",
+            "option-3"
+          ],
+          "occupational": {
+            "status": "pass",
+            "reason": "検索データと照合処理の設計。店舗による用語の確認と技術的な実現方法を分ける。"
+          },
+          "editorial": {
+            "status": "pass",
+            "reason": "入力語を対応表で広げて商品名を調べる案。共通表を使える利点と、別用途のボトルが混ざる懸念が処理に対応する。 ／ 説明文に入力語が含まれるかを調べる案。用途で見つけられる一方、水筒用ブラシも一致し得るという限界が対応する。 ／ 商品別の検索語を持たせる案。調整しやすさと登録作業の負担を比較。登録漏れの影響は追加した呼び方に限り、商品名検索まで失敗するとはしない。"
+          },
+          "optionChecks": [
+            {
+              "optionId": "option-1",
+              "status": "pass",
+              "reason": "入力語を対応表で広げて商品名を調べる案。共通表を使える利点と、別用途のボトルが混ざる懸念が処理に対応する。"
+            },
+            {
+              "optionId": "option-2",
+              "status": "pass",
+              "reason": "説明文に入力語が含まれるかを調べる案。用途で見つけられる一方、水筒用ブラシも一致し得るという限界が対応する。"
+            },
+            {
+              "optionId": "option-3",
+              "status": "pass",
+              "reason": "商品別の検索語を持たせる案。調整しやすさと登録作業の負担を比較。登録漏れの影響は追加した呼び方に限り、商品名検索まで失敗するとはしない。"
+            }
+          ]
+        },
+        {
+          "sceneId": "scene-2",
+          "optionIds": [
+            "option-1",
+            "option-2",
+            "option-3"
+          ],
+          "occupational": {
+            "status": "pass",
+            "reason": "データの持ち方と抽出条件を設計する。商品分類の正しさは店員と確認する。"
+          },
+          "editorial": {
+            "status": "pass",
+            "reason": "一商品に一分類を持たせ、本体と本体入りセットを抽出する。表で確認しやすい利点と、構成が増えた際の分類の限界が対応する。 ／ 本体と部品の印を別々に持つため、セットが両方の検索対象になれる。誤登録で結果がずれるという懸念が対応する。 ／ セットを構成する商品を参照し、単品の分類から判定する案。構成を再利用できる一方、商品間の参照を維持する手間がある。"
+          },
+          "optionChecks": [
+            {
+              "optionId": "option-1",
+              "status": "pass",
+              "reason": "一商品に一分類を持たせ、本体と本体入りセットを抽出する。表で確認しやすい利点と、構成が増えた際の分類の限界が対応する。"
+            },
+            {
+              "optionId": "option-2",
+              "status": "pass",
+              "reason": "本体と部品の印を別々に持つため、セットが両方の検索対象になれる。誤登録で結果がずれるという懸念が対応する。"
+            },
+            {
+              "optionId": "option-3",
+              "status": "pass",
+              "reason": "セットを構成する商品を参照し、単品の分類から判定する案。構成を再利用できる一方、商品間の参照を維持する手間がある。"
+            }
+          ]
+        },
+        {
+          "sceneId": "scene-3",
+          "optionIds": [
+            "option-1",
+            "option-2",
+            "option-3"
+          ],
+          "occupational": {
+            "status": "pass",
+            "reason": "期待する商品番号と実際の結果を比べる機能テスト。企画方針や見た目の決定ではない。"
+          },
+          "editorial": {
+            "status": "pass",
+            "reason": "対応予定の呼び方で、期待した商品番号が出るかを比較するテスト。未知の語を一律に不具合と判定しない条件がある。 ／ 本体入りセットを含む期待結果と照合するテスト。本体単品だけに限定せず、件数だけでは誤った混入を見抜けないという懸念も正しい。 ／ 一致しない入力に対する0件表示と再検索を調べるテスト。通信エラーとの区別を残し、正常な検索の0件を扱っている。"
+          },
+          "optionChecks": [
+            {
+              "optionId": "option-1",
+              "status": "pass",
+              "reason": "対応予定の呼び方で、期待した商品番号が出るかを比較するテスト。未知の語を一律に不具合と判定しない条件がある。"
+            },
+            {
+              "optionId": "option-2",
+              "status": "pass",
+              "reason": "本体入りセットを含む期待結果と照合するテスト。本体単品だけに限定せず、件数だけでは誤った混入を見抜けないという懸念も正しい。"
+            },
+            {
+              "optionId": "option-3",
+              "status": "pass",
+              "reason": "一致しない入力に対する0件表示と再検索を調べるテスト。通信エラーとの区別を残し、正常な検索の0件を扱っている。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "engineer-event-notifications",
+      "sha256": "50edec4f74d2147dd27d8e0b024c46458e243d6cd6ffc1f1af71f0370f81f06c",
+      "sources": [
+        "docs/editorial/company-career-material.txt",
+        "https://shigoto.mhlw.go.jp/User/Occupation/Detail/314"
+      ],
+      "scenes": [
+        {
+          "sceneId": "scene-1",
+          "optionIds": [
+            "option-1",
+            "option-2",
+            "option-3"
+          ],
+          "occupational": {
+            "status": "pass",
+            "reason": "受信条件を保存して配信対象を判定する処理の設計。サービス方針は運営者と相談。"
+          },
+          "editorial": {
+            "status": "pass",
+            "reason": "通知の種類を保存して配信対象を判定する案。必要な種類を残せる一方、分類名の誤解で受信を外す可能性がある。 ／ 頻度設定で即時と一日分のまとめを分ける案。同じ内容の回数を抑えられるが、受付開始を知る時刻も遅れる。 ／ 保存したイベント番号との照合で対象を絞る案。関心との対応は明確になるが、未保存の新規イベントの発見には別の入口が必要。"
+          },
+          "optionChecks": [
+            {
+              "optionId": "option-1",
+              "status": "pass",
+              "reason": "通知の種類を保存して配信対象を判定する案。必要な種類を残せる一方、分類名の誤解で受信を外す可能性がある。"
+            },
+            {
+              "optionId": "option-2",
+              "status": "pass",
+              "reason": "頻度設定で即時と一日分のまとめを分ける案。同じ内容の回数を抑えられるが、受付開始を知る時刻も遅れる。"
+            },
+            {
+              "optionId": "option-3",
+              "status": "pass",
+              "reason": "保存したイベント番号との照合で対象を絞る案。関心との対応は明確になるが、未保存の新規イベントの発見には別の入口が必要。"
+            }
+          ]
+        },
+        {
+          "sceneId": "scene-2",
+          "optionIds": [
+            "option-1",
+            "option-2",
+            "option-3"
+          ],
+          "occupational": {
+            "status": "pass",
+            "reason": "サーバーの結果を画面に渡すデータ設計。画面デザイナーと役割を分担。"
+          },
+          "editorial": {
+            "status": "pass",
+            "reason": "共通の保存成功表示に加え、保存された条件の一覧を返す案。入力欄の見た目だけで成功扱いせず、条件の詳細を照合する追加手段になっている。 ／ 準備済みの元設定の通知と、準備前の新設定の配信予定を分ける案。適用条件と矛盾せず、予定を保証と受け取らせない懸念がある。 ／ 見本データを設定に当てはめる試算。実送信はせず、見本を実際の配信結果と混同しない条件がある。"
+          },
+          "optionChecks": [
+            {
+              "optionId": "option-1",
+              "status": "pass",
+              "reason": "共通の保存成功表示に加え、保存された条件の一覧を返す案。入力欄の見た目だけで成功扱いせず、条件の詳細を照合する追加手段になっている。"
+            },
+            {
+              "optionId": "option-2",
+              "status": "pass",
+              "reason": "準備済みの元設定の通知と、準備前の新設定の配信予定を分ける案。適用条件と矛盾せず、予定を保証と受け取らせない懸念がある。"
+            },
+            {
+              "optionId": "option-3",
+              "status": "pass",
+              "reason": "見本データを設定に当てはめる試算。実送信はせず、見本を実際の配信結果と混同しない条件がある。"
+            }
+          ]
+        },
+        {
+          "sceneId": "scene-3",
+          "optionIds": [
+            "option-1",
+            "option-2",
+            "option-3"
+          ],
+          "occupational": {
+            "status": "pass",
+            "reason": "保存と配信準備の前後、連続操作、端末間の状態をテストする。"
+          },
+          "editorial": {
+            "status": "pass",
+            "reason": "送信準備の前後で保存するテスト。時刻の表示だけでなく、処理が準備済みかを確認する必要性がある。 ／ 準備前に、一回目の保存完了を待って二回目を保存するテスト。二回目の条件を使うという期待結果が、この時系列で成立する。 ／ 同じアカウントを別端末で開いて保存済み設定を読むテスト。表示の一致から配信処理の成功までは推定しない。"
+          },
+          "optionChecks": [
+            {
+              "optionId": "option-1",
+              "status": "pass",
+              "reason": "送信準備の前後で保存するテスト。時刻の表示だけでなく、処理が準備済みかを確認する必要性がある。"
+            },
+            {
+              "optionId": "option-2",
+              "status": "pass",
+              "reason": "準備前に、一回目の保存完了を待って二回目を保存するテスト。二回目の条件を使うという期待結果が、この時系列で成立する。"
+            },
+            {
+              "optionId": "option-3",
+              "status": "pass",
+              "reason": "同じアカウントを別端末で開いて保存済み設定を読むテスト。表示の一致から配信処理の成功までは推定しない。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "engineer-save-progress",
+      "sha256": "726a30f030651f53ea007812a7446440e8b41b3c9aaa56f2e10929cf9a63aba7",
+      "sources": [
+        "docs/editorial/company-career-material.txt",
+        "https://shigoto.mhlw.go.jp/User/Occupation/Detail/314"
+      ],
+      "scenes": [
+        {
+          "sceneId": "scene-1",
+          "optionIds": [
+            "option-1",
+            "option-2",
+            "option-3"
+          ],
+          "occupational": {
+            "status": "pass",
+            "reason": "利用者の操作とデータ保存のタイミングを設計する。"
+          },
+          "editorial": {
+            "status": "pass",
+            "reason": "利用者が保存する時点を選ぶ案。残す項目を個別に選択できるとは説明せず、押し忘れが残る点も示す。 ／ 入力が落ち着いた時点を保存の契機にする案。操作を減らす利点と、通信失敗時に保存済みと扱えない条件が対応する。 ／ 画面遷移を保存の契機にする案。閉じたときに残らないのは未保存の入力で、以前の保存まで消えるとは記していない。"
+          },
+          "optionChecks": [
+            {
+              "optionId": "option-1",
+              "status": "pass",
+              "reason": "利用者が保存する時点を選ぶ案。残す項目を個別に選択できるとは説明せず、押し忘れが残る点も示す。"
+            },
+            {
+              "optionId": "option-2",
+              "status": "pass",
+              "reason": "入力が落ち着いた時点を保存の契機にする案。操作を減らす利点と、通信失敗時に保存済みと扱えない条件が対応する。"
+            },
+            {
+              "optionId": "option-3",
+              "status": "pass",
+              "reason": "画面遷移を保存の契機にする案。閉じたときに残らないのは未保存の入力で、以前の保存まで消えるとは記していない。"
+            }
+          ]
+        },
+        {
+          "sceneId": "scene-2",
+          "optionIds": [
+            "option-1",
+            "option-2",
+            "option-3"
+          ],
+          "occupational": {
+            "status": "pass",
+            "reason": "古い版からの保存を検知した後の、競合するデータの保存方針を設計する。"
+          },
+          "editorial": {
+            "status": "pass",
+            "reason": "二つの版を比較して採用する文を選ぶ案。選ばない文も残るので、両方を失わない共通条件を満たす。 ／ 今回の文を別下書きで保管し、選択を後に回す案。判断を急がなくてよい一方、日時と使用する版を区別する必要がある。 ／ 今回の文を控えに残し、保存済みの文へ必要箇所を写す案。全文選択や別文書保存とは異なり、統合作業を続ける手段になる。"
+          },
+          "optionChecks": [
+            {
+              "optionId": "option-1",
+              "status": "pass",
+              "reason": "二つの版を比較して採用する文を選ぶ案。選ばない文も残るので、両方を失わない共通条件を満たす。"
+            },
+            {
+              "optionId": "option-2",
+              "status": "pass",
+              "reason": "今回の文を別下書きで保管し、選択を後に回す案。判断を急がなくてよい一方、日時と使用する版を区別する必要がある。"
+            },
+            {
+              "optionId": "option-3",
+              "status": "pass",
+              "reason": "今回の文を控えに残し、保存済みの文へ必要箇所を写す案。全文選択や別文書保存とは異なり、統合作業を続ける手段になる。"
+            }
+          ]
+        },
+        {
+          "sceneId": "scene-3",
+          "optionIds": [
+            "option-1",
+            "option-2",
+            "option-3"
+          ],
+          "occupational": {
+            "status": "pass",
+            "reason": "サーバーの受付記録と画面表示を対応させる。画面文言だけの企画ではない。"
+          },
+          "editorial": {
+            "status": "pass",
+            "reason": "サーバーの記録を一覧に再表示する案。後から受付状態を確認できるが、一覧へたどり着く入口は別途必要。 ／ 受付成功の応答を受けて内容を表示する案。クリックだけで成功とせず、その場の確認と後からの確認を区別している。 ／ 未入力項目と正式応募の残りを示す案。下書きを応募と誤認しにくくする予防策であり、これだけで受付成功を証明しない。"
+          },
+          "optionChecks": [
+            {
+              "optionId": "option-1",
+              "status": "pass",
+              "reason": "サーバーの記録を一覧に再表示する案。後から受付状態を確認できるが、一覧へたどり着く入口は別途必要。"
+            },
+            {
+              "optionId": "option-2",
+              "status": "pass",
+              "reason": "受付成功の応答を受けて内容を表示する案。クリックだけで成功とせず、その場の確認と後からの確認を区別している。"
+            },
+            {
+              "optionId": "option-3",
+              "status": "pass",
+              "reason": "未入力項目と正式応募の残りを示す案。下書きを応募と誤認しにくくする予防策であり、これだけで受付成功を証明しない。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "game-planner-cooperative-roles",
+      "sha256": "ed2fdf1a8c59449198eb3bc812f83d92df0ebb05a3951e309323e9068fea0861",
+      "sources": [
+        "docs/editorial/company-career-material.txt",
+        "https://shirusen.mext.go.jp/job_library/ゲームクリエイター/"
+      ],
+      "scenes": [
+        {
+          "sceneId": "scene-1",
+          "optionIds": [
+            "option-1",
+            "option-2",
+            "option-3"
+          ],
+          "occupational": {
+            "status": "pass",
+            "reason": "ゲームプランナーのルール設計。操作のプログラム実装を担当させない。"
+          },
+          "editorial": {
+            "status": "pass",
+            "reason": "二人に異なる手掛かりを渡して情報交換を促すルール。会話の理由は作れるが、説明負担が増える可能性もある。 ／ 移動と道具を分担するルール。組み合わせが進行につながるが、道具の出番が少なければ待ち時間が偏る。 ／ 区間ごとに先導役を交代するルール。選ぶ権限は配れるが、実際に指示する人が交代するとは保証しない。"
+          },
+          "optionChecks": [
+            {
+              "optionId": "option-1",
+              "status": "pass",
+              "reason": "二人に異なる手掛かりを渡して情報交換を促すルール。会話の理由は作れるが、説明負担が増える可能性もある。"
+            },
+            {
+              "optionId": "option-2",
+              "status": "pass",
+              "reason": "移動と道具を分担するルール。組み合わせが進行につながるが、道具の出番が少なければ待ち時間が偏る。"
+            },
+            {
+              "optionId": "option-3",
+              "status": "pass",
+              "reason": "区間ごとに先導役を交代するルール。選ぶ権限は配れるが、実際に指示する人が交代するとは保証しない。"
+            }
+          ]
+        },
+        {
+          "sceneId": "scene-2",
+          "optionIds": [
+            "option-1",
+            "option-2",
+            "option-3"
+          ],
+          "occupational": {
+            "status": "pass",
+            "reason": "遊びのテンポと協力行動の設計。プログラマーへの実装依頼前のルール検討。"
+          },
+          "editorial": {
+            "status": "pass",
+            "reason": "待つ側が道の情報を集めるルール。次の相談に結び付く一方、情報を増やしすぎると新たな待ちが生まれる。 ／ 手掛かりへの目印で同じ課題を支えるルール。補助として参加できるが、相手の判断を奪わない扱いが必要。 ／ 合図で時計を止めるルール。急ぐ負担を下げられるが、待ち時間を活動へ変える案とは違うため、再開の合図も設計する。"
+          },
+          "optionChecks": [
+            {
+              "optionId": "option-1",
+              "status": "pass",
+              "reason": "待つ側が道の情報を集めるルール。次の相談に結び付く一方、情報を増やしすぎると新たな待ちが生まれる。"
+            },
+            {
+              "optionId": "option-2",
+              "status": "pass",
+              "reason": "手掛かりへの目印で同じ課題を支えるルール。補助として参加できるが、相手の判断を奪わない扱いが必要。"
+            },
+            {
+              "optionId": "option-3",
+              "status": "pass",
+              "reason": "合図で時計を止めるルール。急ぐ負担を下げられるが、待ち時間を活動へ変える案とは違うため、再開の合図も設計する。"
+            }
+          ]
+        },
+        {
+          "sceneId": "scene-3",
+          "optionIds": [
+            "option-1",
+            "option-2",
+            "option-3"
+          ],
+          "occupational": {
+            "status": "pass",
+            "reason": "試遊でルールを評価する観察計画。遊ぶ人の性格判定ではない。"
+          },
+          "editorial": {
+            "status": "pass",
+            "reason": "誰が進路・道具を決めたかを記録する方法。参加の偏りは見られるが、回数が同じなら満足とは結論しない。 ／ 会話が始まるきっかけを記録する方法。仕掛けと質問の原因を検討できるが、会話量だけを成果にしない。 ／ 一人ずつ出番の感想を聞く方法。個別に言える機会を作れる一方、記憶の偏りを操作記録で補う。"
+          },
+          "optionChecks": [
+            {
+              "optionId": "option-1",
+              "status": "pass",
+              "reason": "誰が進路・道具を決めたかを記録する方法。参加の偏りは見られるが、回数が同じなら満足とは結論しない。"
+            },
+            {
+              "optionId": "option-2",
+              "status": "pass",
+              "reason": "会話が始まるきっかけを記録する方法。仕掛けと質問の原因を検討できるが、会話量だけを成果にしない。"
+            },
+            {
+              "optionId": "option-3",
+              "status": "pass",
+              "reason": "一人ずつ出番の感想を聞く方法。個別に言える機会を作れる一方、記憶の偏りを操作記録で補う。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "game-planner-story-choices",
+      "sha256": "b8dcbf9318b8951f90d8fd5825823f9fcb8b2bb948262347e21d688773bb0fe7",
+      "sources": [
+        "docs/editorial/company-career-material.txt",
+        "https://shirusen.mext.go.jp/job_library/ゲームクリエイター/"
+      ],
+      "scenes": [
+        {
+          "sceneId": "scene-1",
+          "optionIds": [
+            "option-1",
+            "option-2",
+            "option-3"
+          ],
+          "occupational": {
+            "status": "pass",
+            "reason": "物語と行動の分岐を設計するプランナーの仕事。シナリオ職とも接点がある。"
+          },
+          "editorial": {
+            "status": "pass",
+            "reason": "相談先で得られる情報を変える案。同一の結末へ至るための情報は両方の道筋で得られる条件を保つ。 ／ 相談した相手の終盤の反応を変える案。選択を覚えている演出だが、元の行動と反応の関係が分かる必要がある。 ／ 模様の比較と構内図の探索など、解く課題を変える案。情報の差だけではなく操作の差で、追加制作と時間の制約がある。"
+          },
+          "optionChecks": [
+            {
+              "optionId": "option-1",
+              "status": "pass",
+              "reason": "相談先で得られる情報を変える案。同一の結末へ至るための情報は両方の道筋で得られる条件を保つ。"
+            },
+            {
+              "optionId": "option-2",
+              "status": "pass",
+              "reason": "相談した相手の終盤の反応を変える案。選択を覚えている演出だが、元の行動と反応の関係が分かる必要がある。"
+            },
+            {
+              "optionId": "option-3",
+              "status": "pass",
+              "reason": "模様の比較と構内図の探索など、解く課題を変える案。情報の差だけではなく操作の差で、追加制作と時間の制約がある。"
+            }
+          ]
+        },
+        {
+          "sceneId": "scene-2",
+          "optionIds": [
+            "option-1",
+            "option-2",
+            "option-3"
+          ],
+          "occupational": {
+            "status": "pass",
+            "reason": "プレイヤーの選択文と進行内容の対応を設計する。文章の装飾だけではない。"
+          },
+          "editorial": {
+            "status": "pass",
+            "reason": "相談相手と行動を明示する文章案。押した直後を想像できる一方、答えを先に全部示す必要はない。 ／ 知りたい目的を選ばせる文章案。目的から相談先へ導けるが、実際にその情報が得られる展開が必要。 ／ 行動を含む主人公のせりふで選ぶ文章案。物語の語り口へ合わせられるが、雰囲気だけの文では行動が不明なままになる。"
+          },
+          "optionChecks": [
+            {
+              "optionId": "option-1",
+              "status": "pass",
+              "reason": "相談相手と行動を明示する文章案。押した直後を想像できる一方、答えを先に全部示す必要はない。"
+            },
+            {
+              "optionId": "option-2",
+              "status": "pass",
+              "reason": "知りたい目的を選ばせる文章案。目的から相談先へ導けるが、実際にその情報が得られる展開が必要。"
+            },
+            {
+              "optionId": "option-3",
+              "status": "pass",
+              "reason": "行動を含む主人公のせりふで選ぶ文章案。物語の語り口へ合わせられるが、雰囲気だけの文では行動が不明なままになる。"
+            }
+          ]
+        },
+        {
+          "sceneId": "scene-3",
+          "optionIds": [
+            "option-1",
+            "option-2",
+            "option-3"
+          ],
+          "occupational": {
+            "status": "pass",
+            "reason": "ゲームプランナーが仕様を伝え、プログラマーが実装する関係を明記。"
+          },
+          "editorial": {
+            "status": "pass",
+            "reason": "流れ図で分岐と合流を伝える資料。つながりは確認できるが、細かな条件やせりふの情報を併記する必要がある。 ／ 状態ごとに最後のせりふを表にする資料。表示条件を直接照合できるが、状態が決まる場面の情報も必要。 ／ 二通りのプレイ例を示す資料。表示を具体化できる一方、例外が漏れ得る。途中再開は機能を作る場合に限る確認とする。"
+          },
+          "optionChecks": [
+            {
+              "optionId": "option-1",
+              "status": "pass",
+              "reason": "流れ図で分岐と合流を伝える資料。つながりは確認できるが、細かな条件やせりふの情報を併記する必要がある。"
+            },
+            {
+              "optionId": "option-2",
+              "status": "pass",
+              "reason": "状態ごとに最後のせりふを表にする資料。表示条件を直接照合できるが、状態が決まる場面の情報も必要。"
+            },
+            {
+              "optionId": "option-3",
+              "status": "pass",
+              "reason": "二通りのプレイ例を示す資料。表示を具体化できる一方、例外が漏れ得る。途中再開は機能を作る場合に限る確認とする。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "childcare-rain-sounds",
+      "sha256": "fc4420abc7d116be0b488744a41466b85db83c4b096a8f19713394d67f401bb0",
+      "sources": [
+        "docs/editorial/company-career-material.txt",
+        "https://shigoto.mhlw.go.jp/User/Occupation/Detail/131"
+      ],
+      "scenes": [
+        {
+          "sceneId": "scene-1",
+          "optionIds": [
+            "option-1",
+            "option-2",
+            "option-3"
+          ],
+          "occupational": {
+            "status": "pass",
+            "reason": "保育士の子どもの関心を踏まえた遊びの環境づくり。音楽の技能指導を目的にしない。"
+          },
+          "editorial": {
+            "status": "pass",
+            "reason": "小さな手拍子をきっかけに子どもの反応へ合わせる案。言葉以外で関われるが、保育士のまねだけにしない。 ／ 感じたことを自由に描ける場所を用意する案。描画を選ぶ子のペースを尊重し、絵から気持ちを断定しない。 ／ 気付いた音を共有する案。発見につなぐ狙いと、窓際に人が集まる場合の見守りへの懸念が対応する。"
+          },
+          "optionChecks": [
+            {
+              "optionId": "option-1",
+              "status": "pass",
+              "reason": "小さな手拍子をきっかけに子どもの反応へ合わせる案。言葉以外で関われるが、保育士のまねだけにしない。"
+            },
+            {
+              "optionId": "option-2",
+              "status": "pass",
+              "reason": "感じたことを自由に描ける場所を用意する案。描画を選ぶ子のペースを尊重し、絵から気持ちを断定しない。"
+            },
+            {
+              "optionId": "option-3",
+              "status": "pass",
+              "reason": "気付いた音を共有する案。発見につなぐ狙いと、窓際に人が集まる場合の見守りへの懸念が対応する。"
+            }
+          ]
+        },
+        {
+          "sceneId": "scene-2",
+          "optionIds": [
+            "option-1",
+            "option-2",
+            "option-3"
+          ],
+          "occupational": {
+            "status": "pass",
+            "reason": "保育士による観察と環境調整。つらさへの対応を選択次第にしない。"
+          },
+          "editorial": {
+            "status": "pass",
+            "reason": "音の遊びと静かな遊びを空間で分ける案。同時に選べる利点があるが、距離だけで音が届かなくなるとはしない。 ／ 音を出す時間を区切る案。見通しを示せる一方、時間内だから我慢すべきとはせず、落ち着ける場所を残す。 ／ 音の強さを遊びの表現として調整する案。小さい音でも困る場合があるため、反応の継続確認を残す。"
+          },
+          "optionChecks": [
+            {
+              "optionId": "option-1",
+              "status": "pass",
+              "reason": "音の遊びと静かな遊びを空間で分ける案。同時に選べる利点があるが、距離だけで音が届かなくなるとはしない。"
+            },
+            {
+              "optionId": "option-2",
+              "status": "pass",
+              "reason": "音を出す時間を区切る案。見通しを示せる一方、時間内だから我慢すべきとはせず、落ち着ける場所を残す。"
+            },
+            {
+              "optionId": "option-3",
+              "status": "pass",
+              "reason": "音の強さを遊びの表現として調整する案。小さい音でも困る場合があるため、反応の継続確認を残す。"
+            }
+          ]
+        },
+        {
+          "sceneId": "scene-3",
+          "optionIds": [
+            "option-1",
+            "option-2",
+            "option-3"
+          ],
+          "occupational": {
+            "status": "pass",
+            "reason": "保育日誌に相当する記録と保育士間の共有。子どもの能力診断ではない。"
+          },
+          "editorial": {
+            "status": "pass",
+            "reason": "発言と動作を組み合わせた記録。子どもの言葉に基づく材料を残し、一言から固定的な興味を判定しない。 ／ 素材を使う行動を記録する案。素材の選択に使えるが、長く遊んだ原因を素材だけに決めない。 ／ 環境と行動を対応させて記録する案。翌日の検討材料であり、その環境が反応の原因だったと立証する記録ではない。"
+          },
+          "optionChecks": [
+            {
+              "optionId": "option-1",
+              "status": "pass",
+              "reason": "発言と動作を組み合わせた記録。子どもの言葉に基づく材料を残し、一言から固定的な興味を判定しない。"
+            },
+            {
+              "optionId": "option-2",
+              "status": "pass",
+              "reason": "素材を使う行動を記録する案。素材の選択に使えるが、長く遊んだ原因を素材だけに決めない。"
+            },
+            {
+              "optionId": "option-3",
+              "status": "pass",
+              "reason": "環境と行動を対応させて記録する案。翌日の検討材料であり、その環境が反応の原因だったと立証する記録ではない。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "childcare-getting-ready",
+      "sha256": "a9aaadd5f860c48ec052aca027f3972dbec6901ba3b07fb6ef90c93cd498b601",
+      "sources": [
+        "docs/editorial/company-career-material.txt",
+        "https://shigoto.mhlw.go.jp/User/Occupation/Detail/131"
+      ],
+      "scenes": [
+        {
+          "sceneId": "scene-1",
+          "optionIds": [
+            "option-1",
+            "option-2",
+            "option-3"
+          ],
+          "occupational": {
+            "status": "pass",
+            "reason": "保育士の着替えへの援助。子どもの意思と発達の個人差を踏まえる。"
+          },
+          "editorial": {
+            "status": "pass",
+            "reason": "裏返った袖を見せて本人が試す余地を残す援助。放置を推奨せず、分からない場合に援助を足す条件がある。 ／ 袖だけ一緒に戻す援助。目の前の障害に直接対応し、全部を着せる案ではない。子どもの受け止めを確認する。 ／ 事前に用意した別の上着で袖を戻す動きを見せる援助。腕を通すだけの見本と混同せず、模倣を強制しない。"
+          },
+          "optionChecks": [
+            {
+              "optionId": "option-1",
+              "status": "pass",
+              "reason": "裏返った袖を見せて本人が試す余地を残す援助。放置を推奨せず、分からない場合に援助を足す条件がある。"
+            },
+            {
+              "optionId": "option-2",
+              "status": "pass",
+              "reason": "袖だけ一緒に戻す援助。目の前の障害に直接対応し、全部を着せる案ではない。子どもの受け止めを確認する。"
+            },
+            {
+              "optionId": "option-3",
+              "status": "pass",
+              "reason": "事前に用意した別の上着で袖を戻す動きを見せる援助。腕を通すだけの見本と混同せず、模倣を強制しない。"
+            }
+          ]
+        },
+        {
+          "sceneId": "scene-2",
+          "optionIds": [
+            "option-1",
+            "option-2",
+            "option-3"
+          ],
+          "occupational": {
+            "status": "pass",
+            "reason": "保育士の身辺整理を支える環境と働きかけ。読字能力の訓練ではない。"
+          },
+          "editorial": {
+            "status": "pass",
+            "reason": "本人と選んだ絵で棚を示す案。読字以外の手掛かりになり得るが、本人が見分けられるかを確認する。 ／ 上着の写真と実物を結び付ける案。上着が替わると目印が合わないので、恒久的に有効な方法とは扱わない。 ／ 保育士と場所を確かめてから見守る援助。印の追加だけとは異なり、位置を強制的に覚えさせる案にもしていない。"
+          },
+          "optionChecks": [
+            {
+              "optionId": "option-1",
+              "status": "pass",
+              "reason": "本人と選んだ絵で棚を示す案。読字以外の手掛かりになり得るが、本人が見分けられるかを確認する。"
+            },
+            {
+              "optionId": "option-2",
+              "status": "pass",
+              "reason": "上着の写真と実物を結び付ける案。上着が替わると目印が合わないので、恒久的に有効な方法とは扱わない。"
+            },
+            {
+              "optionId": "option-3",
+              "status": "pass",
+              "reason": "保育士と場所を確かめてから見守る援助。印の追加だけとは異なり、位置を強制的に覚えさせる案にもしていない。"
+            }
+          ]
+        },
+        {
+          "sceneId": "scene-3",
+          "optionIds": [
+            "option-1",
+            "option-2",
+            "option-3"
+          ],
+          "occupational": {
+            "status": "pass",
+            "reason": "日々の状態に合わせて援助を調整する保育士の仕事。3歳の達成水準を規定しない。"
+          },
+          "editorial": {
+            "status": "pass",
+            "reason": "必要な援助の範囲を尋ねる案。質問に答えられることを必須にせず、細かい問いが負担なら様子を見る。 ／ 一緒に着ながら子どもの動きを待つ案。求めに応じることと、できる部分まで先回りしないことが両立している。 ／ 気持ちを受け止めてから支度を手伝う案。必ず待たせるのではなく、すぐ援助を求める場合に応じる条件がある。"
+          },
+          "optionChecks": [
+            {
+              "optionId": "option-1",
+              "status": "pass",
+              "reason": "必要な援助の範囲を尋ねる案。質問に答えられることを必須にせず、細かい問いが負担なら様子を見る。"
+            },
+            {
+              "optionId": "option-2",
+              "status": "pass",
+              "reason": "一緒に着ながら子どもの動きを待つ案。求めに応じることと、できる部分まで先回りしないことが両立している。"
+            },
+            {
+              "optionId": "option-3",
+              "status": "pass",
+              "reason": "気持ちを受け止めてから支度を手伝う案。必ず待たせるのではなく、すぐ援助を求める場合に応じる条件がある。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "video-producer-interview",
+      "sha256": "89029bf9588f57b313eef25b8b1209aabe41ffdd194025c6951a521e723c23eb",
+      "sources": [
+        "docs/editorial/company-career-material.txt",
+        "https://shigoto.mhlw.go.jp/User/Occupation/Detail/214"
+      ],
+      "scenes": [
+        {
+          "sceneId": "scene-1",
+          "optionIds": [
+            "option-1",
+            "option-2",
+            "option-3"
+          ],
+          "occupational": {
+            "status": "pass",
+            "reason": "映像ディレクターが構成の軸を決め、撮影・編集側へ意図を伝える。編集機器の操作とは区別。"
+          },
+          "editorial": {
+            "status": "pass",
+            "reason": "店主の思いを構成の軸にする演出案。理由の言葉を使う利点と、店の業務が見えにくくなる懸念が対応する。 ／ 素材にある一件の修理を軸にする構成案。具体性は得られるが、一例を全業務の代表や保証にはしない。 ／ 開店の経緯を軸にする構成案。人柄を伝える入口だが、現在の仕事を見せる時間も残す。"
+          },
+          "optionChecks": [
+            {
+              "optionId": "option-1",
+              "status": "pass",
+              "reason": "店主の思いを構成の軸にする演出案。理由の言葉を使う利点と、店の業務が見えにくくなる懸念が対応する。"
+            },
+            {
+              "optionId": "option-2",
+              "status": "pass",
+              "reason": "素材にある一件の修理を軸にする構成案。具体性は得られるが、一例を全業務の代表や保証にはしない。"
+            },
+            {
+              "optionId": "option-3",
+              "status": "pass",
+              "reason": "開店の経緯を軸にする構成案。人柄を伝える入口だが、現在の仕事を見せる時間も残す。"
+            }
+          ]
+        },
+        {
+          "sceneId": "scene-2",
+          "optionIds": [
+            "option-1",
+            "option-2",
+            "option-3"
+          ],
+          "occupational": {
+            "status": "pass",
+            "reason": "ディレクターが映像編集者と発言の扱いを相談する。自社のディレクター資料が職域の根拠。"
+          },
+          "editorial": {
+            "status": "pass",
+            "reason": "条件を含む発言を使い、別の部分で時間を調整する案。意味は保てるが、削る別の情報も必要性を確認する。 ／ 収録可能な条件のもとで、本人に短い言い方を相談する案。制作側が架空の断言を言わせる手順にはしていない。 ／ 本人確認を経た要約を制作側のテロップにする案。誤解を招く短縮音声を併用せず、注記だけで意味を補う案ではない。"
+          },
+          "optionChecks": [
+            {
+              "optionId": "option-1",
+              "status": "pass",
+              "reason": "条件を含む発言を使い、別の部分で時間を調整する案。意味は保てるが、削る別の情報も必要性を確認する。"
+            },
+            {
+              "optionId": "option-2",
+              "status": "pass",
+              "reason": "収録可能な条件のもとで、本人に短い言い方を相談する案。制作側が架空の断言を言わせる手順にはしていない。"
+            },
+            {
+              "optionId": "option-3",
+              "status": "pass",
+              "reason": "本人確認を経た要約を制作側のテロップにする案。誤解を招く短縮音声を併用せず、注記だけで意味を補う案ではない。"
+            }
+          ]
+        },
+        {
+          "sceneId": "scene-3",
+          "optionIds": [
+            "option-1",
+            "option-2",
+            "option-3"
+          ],
+          "occupational": {
+            "status": "pass",
+            "reason": "本人確認の結果を構成・編集の指示に反映する制作上の判断。一般的な連絡業務だけにしない。"
+          },
+          "editorial": {
+            "status": "pass",
+            "reason": "映像の時刻と確認項目を結ぶ渡し方。場所を見つけやすくするが、項目外を確認しなくてよいとは扱わない。 ／ 発言と要約の違いを文書で示す渡し方。意味を照合しやすいが、映像全体を見ず文書だけで終えることは認めない。 ／ 一緒に再生して確かめる方法。解釈の違いを聞けるが、本人の都合と、同席者の前で答えにくい場合にも配慮する。"
+          },
+          "optionChecks": [
+            {
+              "optionId": "option-1",
+              "status": "pass",
+              "reason": "映像の時刻と確認項目を結ぶ渡し方。場所を見つけやすくするが、項目外を確認しなくてよいとは扱わない。"
+            },
+            {
+              "optionId": "option-2",
+              "status": "pass",
+              "reason": "発言と要約の違いを文書で示す渡し方。意味を照合しやすいが、映像全体を見ず文書だけで終えることは認めない。"
+            },
+            {
+              "optionId": "option-3",
+              "status": "pass",
+              "reason": "一緒に再生して確かめる方法。解釈の違いを聞けるが、本人の都合と、同席者の前で答えにくい場合にも配慮する。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "video-producer-craft-process",
+      "sha256": "3757308512f4c879eea064e1ef85cd4689a321522d04703d62c4b00cbbc35e86",
+      "sources": [
+        "docs/editorial/company-career-material.txt",
+        "https://shigoto.mhlw.go.jp/User/Occupation/Detail/214"
+      ],
+      "scenes": [
+        {
+          "sceneId": "scene-1",
+          "optionIds": [
+            "option-1",
+            "option-2",
+            "option-3"
+          ],
+          "occupational": {
+            "status": "pass",
+            "reason": "ディレクターが映像の狙いと必要なカットを構成する。カメラマンの操作技術の体験ではない。"
+          },
+          "editorial": {
+            "status": "pass",
+            "reason": "手元の動きに着目する構成案。作業の観点を示せるが、動きだけでは意図が伝わらないため説明も組み合わせる。 ／ 使用場面と制作を結ぶ構成案。工夫の狙いを想像できるが、一人の使用感を万人へ一般化しない。 ／ 提示可能な試作品と本人の説明を軸にする構成案。制作過程の判断を示せるが、一分半に収まる焦点が必要。"
+          },
+          "optionChecks": [
+            {
+              "optionId": "option-1",
+              "status": "pass",
+              "reason": "手元の動きに着目する構成案。作業の観点を示せるが、動きだけでは意図が伝わらないため説明も組み合わせる。"
+            },
+            {
+              "optionId": "option-2",
+              "status": "pass",
+              "reason": "使用場面と制作を結ぶ構成案。工夫の狙いを想像できるが、一人の使用感を万人へ一般化しない。"
+            },
+            {
+              "optionId": "option-3",
+              "status": "pass",
+              "reason": "提示可能な試作品と本人の説明を軸にする構成案。制作過程の判断を示せるが、一分半に収まる焦点が必要。"
+            }
+          ]
+        },
+        {
+          "sceneId": "scene-2",
+          "optionIds": [
+            "option-1",
+            "option-2",
+            "option-3"
+          ],
+          "occupational": {
+            "status": "pass",
+            "reason": "編集者へ構成を伝える演出上の判断。陶芸の標準工程や日数を断定しない。"
+          },
+          "editorial": {
+            "status": "pass",
+            "reason": "工程で区切り、別日・別品と分かる映像を使う案。実写で紹介できるが、注記以外の構成も連続した一品の記録に見せない。 ／ 撮影範囲と確認済みの工程図を分ける案。実際の記録と説明の違いを示せるが、図の順序や時間も作り手に確認する。 ／ 完成品から工程を紹介する案。逆順に見せるだけで誤解が消えるとはせず、異なる品・日と時間の説明を全案と同じく含める。"
+          },
+          "optionChecks": [
+            {
+              "optionId": "option-1",
+              "status": "pass",
+              "reason": "工程で区切り、別日・別品と分かる映像を使う案。実写で紹介できるが、注記以外の構成も連続した一品の記録に見せない。"
+            },
+            {
+              "optionId": "option-2",
+              "status": "pass",
+              "reason": "撮影範囲と確認済みの工程図を分ける案。実際の記録と説明の違いを示せるが、図の順序や時間も作り手に確認する。"
+            },
+            {
+              "optionId": "option-3",
+              "status": "pass",
+              "reason": "完成品から工程を紹介する案。逆順に見せるだけで誤解が消えるとはせず、異なる品・日と時間の説明を全案と同じく含める。"
+            }
+          ]
+        },
+        {
+          "sceneId": "scene-3",
+          "optionIds": [
+            "option-1",
+            "option-2",
+            "option-3"
+          ],
+          "occupational": {
+            "status": "pass",
+            "reason": "視聴者の受け止めを構成と編集指示に生かす。作り手の事実確認とは分離。"
+          },
+          "editorial": {
+            "status": "pass",
+            "reason": "視聴者に目的と動作を説明してもらう聞き方。理解の手掛かりになるが、話す能力の差を考えて別の答え方も認める。 ／ 残った疑問を聞く方法。興味と説明不足を考え分ける材料であり、質問がないだけで理解十分とはしない。 ／ 印象とその理由を聞く方法。予想外の関心が分かるが、記憶に残ることと工夫の理解を同じ成果にしない。"
+          },
+          "optionChecks": [
+            {
+              "optionId": "option-1",
+              "status": "pass",
+              "reason": "視聴者に目的と動作を説明してもらう聞き方。理解の手掛かりになるが、話す能力の差を考えて別の答え方も認める。"
+            },
+            {
+              "optionId": "option-2",
+              "status": "pass",
+              "reason": "残った疑問を聞く方法。興味と説明不足を考え分ける材料であり、質問がないだけで理解十分とはしない。"
+            },
+            {
+              "optionId": "option-3",
+              "status": "pass",
+              "reason": "印象とその理由を聞く方法。予想外の関心が分かるが、記憶に残ることと工夫の理解を同じ成果にしない。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "beauty-event-preparation",
+      "sha256": "4a8ffc352e4b2be2e66710ed842da5762b2e8b631015b818135e12f0411caa62",
+      "sources": [
+        "docs/editorial/company-career-material.txt",
+        "https://shigoto.mhlw.go.jp/User/Occupation/Detail/116"
+      ],
+      "scenes": [
+        {
+          "sceneId": "scene-1",
+          "optionIds": [
+            "option-1",
+            "option-2",
+            "option-3"
+          ],
+          "occupational": {
+            "status": "pass",
+            "reason": "ヘアセット前の美容師の相談。一般接客だけでなく固定・着替え・髪への感覚と接続。"
+          },
+          "editorial": {
+            "status": "pass",
+            "reason": "練習の動きをヘアセットの相談材料にする聞き方。固定方法の検討には使えるが、崩れない保証とはしない。 ／ 着替えや帽子との接触を確認する聞き方。支度の順番を相談でき、事前に確認済みの好みとも両立するかを確かめる。 ／ 締め付けなどの苦手な感覚を聞く方法。本人の過ごしやすさを考える材料になり、過去と同じ結果とは決めない。"
+          },
+          "optionChecks": [
+            {
+              "optionId": "option-1",
+              "status": "pass",
+              "reason": "練習の動きをヘアセットの相談材料にする聞き方。固定方法の検討には使えるが、崩れない保証とはしない。"
+            },
+            {
+              "optionId": "option-2",
+              "status": "pass",
+              "reason": "着替えや帽子との接触を確認する聞き方。支度の順番を相談でき、事前に確認済みの好みとも両立するかを確かめる。"
+            },
+            {
+              "optionId": "option-3",
+              "status": "pass",
+              "reason": "締め付けなどの苦手な感覚を聞く方法。本人の過ごしやすさを考える材料になり、過去と同じ結果とは決めない。"
+            }
+          ]
+        },
+        {
+          "sceneId": "scene-2",
+          "optionIds": [
+            "option-1",
+            "option-2",
+            "option-3"
+          ],
+          "occupational": {
+            "status": "pass",
+            "reason": "ヘアセットを美容師同士で分担する設定。担当職種の不明な人へ施術を任せない。"
+          },
+          "editorial": {
+            "status": "pass",
+            "reason": "決定事項と相談事項をメモで分ける共有方法。耳周り・飾り・時刻の区別ができるが、読まれたかも確認する。 ／ 本人と引き継ぐ美容師で要点を確認する方法。本人がずれを指摘できる機会はできるが、同じ説明を繰り返させない。 ／ 担当工程と戻す時点を決める方法。勝手に飾りの位置を決定しない役割分担で、内容の希望も併せて共有する。"
+          },
+          "optionChecks": [
+            {
+              "optionId": "option-1",
+              "status": "pass",
+              "reason": "決定事項と相談事項をメモで分ける共有方法。耳周り・飾り・時刻の区別ができるが、読まれたかも確認する。"
+            },
+            {
+              "optionId": "option-2",
+              "status": "pass",
+              "reason": "本人と引き継ぐ美容師で要点を確認する方法。本人がずれを指摘できる機会はできるが、同じ説明を繰り返させない。"
+            },
+            {
+              "optionId": "option-3",
+              "status": "pass",
+              "reason": "担当工程と戻す時点を決める方法。勝手に飾りの位置を決定しない役割分担で、内容の希望も併せて共有する。"
+            }
+          ]
+        },
+        {
+          "sceneId": "scene-3",
+          "optionIds": [
+            "option-1",
+            "option-2",
+            "option-3"
+          ],
+          "occupational": {
+            "status": "pass",
+            "reason": "美容師による仕上がりと使用感の確認。見た目と頭部の感覚の両方に接続。"
+          },
+          "editorial": {
+            "status": "pass",
+            "reason": "鏡で横・後ろも確認してもらう案。視認できる角度は増えるが、締め付けの感覚までは確認できない。 ／ 無理のない動作時の感覚を聞く案。静止中の確認を補えるが、長時間の快適さを保証するものではない。 ／ 移動や着替えでの扱いを相談する案。退店後の不安に接続するが、説明を一方的に増やすのでなく必要な点に絞る。"
+          },
+          "optionChecks": [
+            {
+              "optionId": "option-1",
+              "status": "pass",
+              "reason": "鏡で横・後ろも確認してもらう案。視認できる角度は増えるが、締め付けの感覚までは確認できない。"
+            },
+            {
+              "optionId": "option-2",
+              "status": "pass",
+              "reason": "無理のない動作時の感覚を聞く案。静止中の確認を補えるが、長時間の快適さを保証するものではない。"
+            },
+            {
+              "optionId": "option-3",
+              "status": "pass",
+              "reason": "移動や着替えでの扱いを相談する案。退店後の不安に接続するが、説明を一方的に増やすのでなく必要な点に絞る。"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

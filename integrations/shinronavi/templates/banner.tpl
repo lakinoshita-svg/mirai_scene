@@ -12,7 +12,7 @@ $mirai_banner_compact = isset($mirai_banner_variant) && $mirai_banner_variant ==
     <p class="ms-entry-banner__eyebrow"><?= $mirai_banner_compact ? '学びの先にある仕事を、のぞいてみよう。' : 'やりたいことが、まだ決まっていなくても。' ?></p>
     <p class="ms-entry-banner__title">気になる仕事で、<br><span>「あなたなら？」を体験。</span></p>
     <p class="ms-entry-banner__description">3つのシーンで、選んで、考える。<br>自分の「好き」のヒントを見つけよう。</p>
-    <span class="ms-entry-banner__cta">仕事を体験してみる<span aria-hidden="true">→</span></span>
+    <span class="ms-entry-banner__cta">仕事を体験してみる<span aria-hidden="true">{{forwardArrow}}</span></span>
   </div>
   <div class="ms-entry-banner__visual" aria-hidden="true">
     <span class="ms-entry-banner__spark">✦</span>

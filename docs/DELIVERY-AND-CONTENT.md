@@ -32,3 +32,15 @@ PowerShellで `Get-FileHash deliveries/release-2026-10-16/miraiSceneShinronavi20
 
 自動で定期生成・公開する設定はしていない。制作を続ける際は台帳から次の少量バッチを進める。
 
+## 原稿・確認資料のZIP
+
+制作内容を部署間で確認するときは、全件の二段階確認を記録し、`content:verify-review` と `content:verify-drafts` を実行した後、次を実行する。
+
+```text
+npm run content:package-drafts -- batch-002
+```
+
+確認記録と原稿を照合して原稿一覧・回答確認表・職種確認表を生成し、原稿JSON・自社資料の原文とともにZIPへ収録する。Windows PowerShellが必要。出力は `outputs/contentReview/<batch-id>/<UTC日時>/`。ZIP内全ファイルとmanifestを照合し、既存ZIPは上書きしない。展開後は `drafts/<batch-id>/manuscript.html` を開く。確認記録は `review/occupationChecks.json` が正本で、Markdownの確認表は生成物。
+
+このZIPは原稿と確認資料の受け渡し用。進路ナビへ配置する生成HTML・一覧・接続部品の配布は、一式またはコンテンツ差分の手順を使う。
+

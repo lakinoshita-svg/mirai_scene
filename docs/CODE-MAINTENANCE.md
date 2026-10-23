@@ -18,6 +18,8 @@
 | 内容 | 編集元 |
 | --- | --- |
 | 画面部品 | `src/components/` |
+| 操作の矢印 | `src/lib/actionArrows.mjs`、`src/components/actionArrow.astro` |
+| シーン・完了画面の読み返しボタン | `src/components/sceneBackButton.astro` |
 | 全ページの骨組み・CSSの読み込み順 | `src/layouts/siteLayout.astro` |
 | 基本の見た目 | `src/styles/baseStyles.css` |
 | ブランドの配色・装飾 | `src/styles/brandStyles.css` |
@@ -68,3 +70,16 @@ GitHub Pages用の生成物を更新するときは、HTMLが参照する`_astro
 制作・配布の手順は [制作・配布運用](OPERATIONS.md)。入力ファイルの照合は sourceSnapshot.mjs、一覧復帰先の検証は catalogNavigation.mjs、計測の接続は analytics.ts に集約する。生成物を直接編集せず、承認者・公開日・担当者をAIで補完しない。
 
 差分配布の判定・配置は `integrations/shinronavi/templates/contentDelivery.mjs` に集約する。`scripts/buildContentDelivery.mjs` が計画を生成し、`installContent.mjs` が同じ判定を再確認して配置する。共通実装の互換性は `scripts/lib/sourceSnapshot.mjs` の `runtimeHash` で判断する。詳細は [差分配布手順](CONTENT-DELIVERY.md)。
+
+## 下書きの確認・受け渡し
+
+| 役割 | 管理場所 |
+|---|---|
+| バッチID・原稿の読み込み・件数集計 | `scripts/lib/draftBatch.mjs` |
+| 二段階・回答別の記録と原稿ハッシュの照合 | `scripts/lib/editorialReview.mjs` |
+| 原稿一覧HTML・読み手用の確認表 | `scripts/lib/draftReviewDocuments.mjs` |
+| 原稿一覧の見た目 | `scripts/templates/draftManuscript.css` |
+| 確認用ZIPの対象・案内・manifest | `scripts/lib/contentReviewPackage.mjs` |
+| ZIP作成と展開内容のハッシュ照合 | `scripts/lib/contentReviewArchive.ps1` |
+
+CLIは `verifyEditorialReview.mjs`・`exportDraftManuscript.mjs`・`packageDrafts.mjs`。CLIの読み込みだけでファイルを生成せず、検証・生成はライブラリの明示的な関数で実行する。原稿JSONと `review/occupationChecks.json` を編集元とし、HTML・Markdownの確認表・ZIPはコマンドで生成する。`REVIEW.md` の資料と確認範囲は編集者が記録する。

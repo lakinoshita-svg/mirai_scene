@@ -1,0 +1,182 @@
+[
+  {
+    "lessonSlug": "art_design",
+    "lessonUrl": "https://shinronavi.com/forteacher/lesson?slug=art_design",
+    "label": "デザインのミライシーンへ",
+    "miraiUrl": "https://shinronavi.com/mirai_scene/explore/design/"
+  },
+  {
+    "lessonSlug": "voc_art_design",
+    "lessonUrl": "https://shinronavi.com/forteacher/lesson?slug=voc_art_design",
+    "label": "デザインのミライシーンへ",
+    "miraiUrl": "https://shinronavi.com/mirai_scene/explore/design/"
+  },
+  {
+    "lessonSlug": "engineering_info",
+    "lessonUrl": "https://shinronavi.com/forteacher/lesson?slug=engineering_info",
+    "label": "情報・ITのミライシーンへ",
+    "miraiUrl": "https://shinronavi.com/mirai_scene/explore/it/"
+  },
+  {
+    "lessonSlug": "engineering_info",
+    "lessonUrl": "https://shinronavi.com/forteacher/lesson?slug=engineering_info",
+    "label": "ゲームのミライシーンへ",
+    "miraiUrl": "https://shinronavi.com/mirai_scene/explore/games/"
+  },
+  {
+    "lessonSlug": "it_information_processing",
+    "lessonUrl": "https://shinronavi.com/forteacher/lesson?slug=it_information_processing",
+    "label": "情報・ITのミライシーンへ",
+    "miraiUrl": "https://shinronavi.com/mirai_scene/explore/it/"
+  },
+  {
+    "lessonSlug": "engineering_civil_architecture",
+    "lessonUrl": "https://shinronavi.com/forteacher/lesson?slug=engineering_civil_architecture",
+    "label": "建築のミライシーンへ",
+    "miraiUrl": "https://shinronavi.com/mirai_scene/explore/architecture/"
+  },
+  {
+    "lessonSlug": "architecture_architecture",
+    "lessonUrl": "https://shinronavi.com/forteacher/lesson?slug=architecture_architecture",
+    "label": "建築のミライシーンへ",
+    "miraiUrl": "https://shinronavi.com/mirai_scene/explore/architecture/"
+  },
+  {
+    "lessonSlug": "education_education",
+    "lessonUrl": "https://shinronavi.com/forteacher/lesson?slug=education_education",
+    "label": "保育・幼児教育のミライシーンへ",
+    "miraiUrl": "https://shinronavi.com/mirai_scene/explore/childcare/"
+  },
+  {
+    "lessonSlug": "childcare_childcare",
+    "lessonUrl": "https://shinronavi.com/forteacher/lesson?slug=childcare_childcare",
+    "label": "保育・幼児教育のミライシーンへ",
+    "miraiUrl": "https://shinronavi.com/mirai_scene/explore/childcare/"
+  },
+  {
+    "lessonSlug": "socialscience_tourism",
+    "lessonUrl": "https://shinronavi.com/forteacher/lesson?slug=socialscience_tourism",
+    "label": "観光のミライシーンへ",
+    "miraiUrl": "https://shinronavi.com/mirai_scene/explore/tourism/"
+  },
+  {
+    "lessonSlug": "tourism_tourism",
+    "lessonUrl": "https://shinronavi.com/forteacher/lesson?slug=tourism_tourism",
+    "label": "観光のミライシーンへ",
+    "miraiUrl": "https://shinronavi.com/mirai_scene/explore/tourism/"
+  },
+  {
+    "lessonSlug": "beauty_beauty",
+    "lessonUrl": "https://shinronavi.com/forteacher/lesson?slug=beauty_beauty",
+    "label": "美容のミライシーンへ",
+    "miraiUrl": "https://shinronavi.com/mirai_scene/explore/beauty/"
+  },
+  {
+    "lessonSlug": "cooking_cooking",
+    "lessonUrl": "https://shinronavi.com/forteacher/lesson?slug=cooking_cooking",
+    "label": "調理のミライシーンへ",
+    "miraiUrl": "https://shinronavi.com/mirai_scene/explore/cooking/"
+  },
+  {
+    "lessonSlug": "cooking_bakery",
+    "lessonUrl": "https://shinronavi.com/forteacher/lesson?slug=cooking_bakery",
+    "label": "製菓・製パンのミライシーンへ",
+    "miraiUrl": "https://shinronavi.com/mirai_scene/explore/pastry/"
+  },
+  {
+    "lessonSlug": "science_biology",
+    "lessonUrl": "https://shinronavi.com/forteacher/lesson?slug=science_biology",
+    "label": "動物のミライシーンへ",
+    "miraiUrl": "https://shinronavi.com/mirai_scene/explore/animals/"
+  },
+  {
+    "lessonSlug": "animal_trainer",
+    "lessonUrl": "https://shinronavi.com/forteacher/lesson?slug=animal_trainer",
+    "label": "動物のミライシーンへ",
+    "miraiUrl": "https://shinronavi.com/mirai_scene/explore/animals/"
+  },
+  {
+    "lessonSlug": "agriculture_agriculture",
+    "lessonUrl": "https://shinronavi.com/forteacher/lesson?slug=agriculture_agriculture",
+    "label": "農業のミライシーンへ",
+    "miraiUrl": "https://shinronavi.com/mirai_scene/explore/agriculture/"
+  },
+  {
+    "lessonSlug": "voc_agriculture_agriculture",
+    "lessonUrl": "https://shinronavi.com/forteacher/lesson?slug=voc_agriculture_agriculture",
+    "label": "農業のミライシーンへ",
+    "miraiUrl": "https://shinronavi.com/mirai_scene/explore/agriculture/"
+  },
+  {
+    "lessonSlug": "socialscience_management",
+    "lessonUrl": "https://shinronavi.com/forteacher/lesson?slug=socialscience_management",
+    "label": "経営・商学のミライシーンへ",
+    "miraiUrl": "https://shinronavi.com/mirai_scene/explore/business/"
+  },
+  {
+    "lessonSlug": "socialscience_commerce",
+    "lessonUrl": "https://shinronavi.com/forteacher/lesson?slug=socialscience_commerce",
+    "label": "経営・商学のミライシーンへ",
+    "miraiUrl": "https://shinronavi.com/mirai_scene/explore/business/"
+  },
+  {
+    "lessonSlug": "music_business",
+    "lessonUrl": "https://shinronavi.com/forteacher/lesson?slug=music_business",
+    "label": "イベントのミライシーンへ",
+    "miraiUrl": "https://shinronavi.com/mirai_scene/explore/events/"
+  },
+  {
+    "lessonSlug": "media_sound_light",
+    "lessonUrl": "https://shinronavi.com/forteacher/lesson?slug=media_sound_light",
+    "label": "イベントのミライシーンへ",
+    "miraiUrl": "https://shinronavi.com/mirai_scene/explore/events/"
+  },
+  {
+    "lessonSlug": "socialscience_media",
+    "lessonUrl": "https://shinronavi.com/forteacher/lesson?slug=socialscience_media",
+    "label": "出版・メディアのミライシーンへ",
+    "miraiUrl": "https://shinronavi.com/mirai_scene/explore/media/"
+  },
+  {
+    "lessonSlug": "media_broadcast",
+    "lessonUrl": "https://shinronavi.com/forteacher/lesson?slug=media_broadcast",
+    "label": "出版・メディアのミライシーンへ",
+    "miraiUrl": "https://shinronavi.com/mirai_scene/explore/media/"
+  },
+  {
+    "lessonSlug": "art_video",
+    "lessonUrl": "https://shinronavi.com/forteacher/lesson?slug=art_video",
+    "label": "映像のミライシーンへ",
+    "miraiUrl": "https://shinronavi.com/mirai_scene/explore/video/"
+  },
+  {
+    "lessonSlug": "media_video",
+    "lessonUrl": "https://shinronavi.com/forteacher/lesson?slug=media_video",
+    "label": "映像のミライシーンへ",
+    "miraiUrl": "https://shinronavi.com/mirai_scene/explore/video/"
+  },
+  {
+    "lessonSlug": "gamecg_game",
+    "lessonUrl": "https://shinronavi.com/forteacher/lesson?slug=gamecg_game",
+    "label": "ゲームのミライシーンへ",
+    "miraiUrl": "https://shinronavi.com/mirai_scene/explore/games/"
+  },
+  {
+    "lessonSlug": "humanities_literature",
+    "lessonUrl": "https://shinronavi.com/forteacher/lesson?slug=humanities_literature",
+    "label": "文学・文化・歴史のミライシーンへ",
+    "miraiUrl": "https://shinronavi.com/mirai_scene/explore/culture/"
+  },
+  {
+    "lessonSlug": "humanities_culture",
+    "lessonUrl": "https://shinronavi.com/forteacher/lesson?slug=humanities_culture",
+    "label": "文学・文化・歴史のミライシーンへ",
+    "miraiUrl": "https://shinronavi.com/mirai_scene/explore/culture/"
+  },
+  {
+    "lessonSlug": "humanities_history",
+    "lessonUrl": "https://shinronavi.com/forteacher/lesson?slug=humanities_history",
+    "label": "文学・文化・歴史のミライシーンへ",
+    "miraiUrl": "https://shinronavi.com/mirai_scene/explore/culture/"
+  }
+]

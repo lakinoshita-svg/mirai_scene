@@ -3,6 +3,7 @@ import SiteLayout from '../../layouts/siteLayout.astro';
 import CareerCatalog from '../../components/careerCatalog.astro';
 import { learningLinks, schoolSearchUrl } from '../../lib/learningLinks';
 import LessonLinks from '../../components/lessonLinks.astro';
+import ActionArrow from '../../components/actionArrow.astro';
 import { getCareers } from '../../lib/careers';
 import { sitePath } from '../../lib/paths';
 export async function getStaticPaths() {
@@ -13,7 +14,7 @@ const { learning, careers } = Astro.props;
 ---
 <SiteLayout title={`${learning.label}の教材と仕事体験 | ミライシーン`} breadcrumb={`${learning.label}の学びと体験`}>
   <div class="home exploration">
-    <a href={sitePath('explore/')} class="back">← 学びの分野一覧へ</a>
+    <a href={sitePath('explore/')} class="back"><ActionArrow kind="back" />学びの分野一覧へ</a>
     <h1>{learning.label}を、学びと体験から知ろう。</h1>
     <p>{learning.description}教材を読むことからでも、仕事体験からでも始められます。</p>
     <section class="scene-card"><h2>この分野では何を学ぶ？</h2>
@@ -22,7 +23,7 @@ const { learning, careers } = Astro.props;
     </section>
     <CareerCatalog careers={careers} learningId={learning.id} title="学びにつながる仕事を体験しよう。" />
     <p class="fine-print">関連する学びの例です。職業に必要な資格や履修課程は、学校ごとに確認してください。</p>
-    <section class="scene-card"><h2>学べる場所を探してみよう。</h2><a class="primary schoolSearchAction" href={schoolSearchUrl([learning.id])} target="_blank" rel="noopener"><span>{learning.label}につながる学校を探す</span><span aria-hidden="true">↗</span></a><p class="fine-print">検索分野：{learning.schoolFields.map(field => field.label).join('・')}</p></section>
+    <section class="scene-card"><h2>学べる場所を探してみよう。</h2><a class="primary schoolSearchAction" href={schoolSearchUrl([learning.id])} target="_blank" rel="noopener"><span>{learning.label}につながる学校を探す</span><ActionArrow kind="external" /></a><p class="fine-print">検索分野：{learning.schoolFields.map(field => field.label).join('・')}</p></section>
   </div>
 </SiteLayout>
 <style>.exploration h1{font-size:clamp(24px,4vw,34px);line-height:1.5}.exploration section{margin-block:var(--space-4)}.exploration ul{padding-left:var(--space-2);line-height:2.2}.exploration li a{color:var(--brand-purple);text-decoration:underline}</style>

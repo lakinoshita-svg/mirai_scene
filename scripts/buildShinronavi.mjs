@@ -4,6 +4,7 @@ import crypto from 'node:crypto';
 import { spawnSync } from 'node:child_process';
 import { extractPage, scopeCss } from './lib/shinronaviExport.mjs';
 import { buildOperationsManual } from './lib/operationsManual.mjs';
+import { renderActionArrow } from '../src/lib/actionArrows.mjs';
 
 import { sourceSnapshot, digest, runtimeHash } from './lib/sourceSnapshot.mjs';
 const root=process.cwd();
@@ -67,7 +68,13 @@ const templateTargets = {
   'install.mjs': 'install.mjs',
   'rewrite.conf': 'rewrite-addition.conf',
 };
-for (const [source, destination] of Object.entries(templateTargets)) copy(`${templates}/${source}`, destination);
+for (const [source, destination] of Object.entries(templateTargets)) {
+  if (source === 'banner.tpl') {
+    // 単独バナーにも画面と同じ矢印を渡す。配布するテンプレートにはSVG本体を含める。
+    const template = fs.readFileSync(`${templates}/${source}`, 'utf8');
+    fs.writeFileSync(path.join(target, destination), template.replaceAll('{{forwardArrow}}', renderActionArrow('forward')));
+  } else copy(`${templates}/${source}`, destination);
+}
 fs.copyFileSync('integrations/shinronavi/README.md',path.join(target,'INSTALL.md'));
 // 運用担当へ渡す手順書も毎回同じリリースへ同梱し、旧版との混在を防ぐ。
 copy(manual.outputPath,'運用マニュアル.html');

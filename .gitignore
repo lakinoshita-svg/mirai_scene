@@ -8,3 +8,4 @@ dist/
 !.env.example
 integrations/shinronavi/output/
 deliveries/**/*.zip
+outputs/contentReview/**/*.zip

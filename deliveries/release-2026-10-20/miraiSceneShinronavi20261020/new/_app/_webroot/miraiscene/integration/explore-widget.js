@@ -1,0 +1,23 @@
+(() => {
+    const script = document.currentScript;
+    if (!script) return;
+    const slug = script.dataset.lesson || new URLSearchParams(location.search).get('slug');
+    const links = {"art_design":[{"label":"デザインのミライシーンへ","url":"https://shinronavi.com/mirai_scene/explore/design/"}],"voc_art_design":[{"label":"デザインのミライシーンへ","url":"https://shinronavi.com/mirai_scene/explore/design/"}],"engineering_info":[{"label":"情報・ITのミライシーンへ","url":"https://shinronavi.com/mirai_scene/explore/it/"},{"label":"ゲームのミライシーンへ","url":"https://shinronavi.com/mirai_scene/explore/games/"}],"it_information_processing":[{"label":"情報・ITのミライシーンへ","url":"https://shinronavi.com/mirai_scene/explore/it/"}],"engineering_civil_architecture":[{"label":"建築のミライシーンへ","url":"https://shinronavi.com/mirai_scene/explore/architecture/"}],"architecture_architecture":[{"label":"建築のミライシーンへ","url":"https://shinronavi.com/mirai_scene/explore/architecture/"}],"education_education":[{"label":"保育・幼児教育のミライシーンへ","url":"https://shinronavi.com/mirai_scene/explore/childcare/"}],"childcare_childcare":[{"label":"保育・幼児教育のミライシーンへ","url":"https://shinronavi.com/mirai_scene/explore/childcare/"}],"socialscience_tourism":[{"label":"観光のミライシーンへ","url":"https://shinronavi.com/mirai_scene/explore/tourism/"}],"tourism_tourism":[{"label":"観光のミライシーンへ","url":"https://shinronavi.com/mirai_scene/explore/tourism/"}],"beauty_beauty":[{"label":"美容のミライシーンへ","url":"https://shinronavi.com/mirai_scene/explore/beauty/"}],"cooking_cooking":[{"label":"調理のミライシーンへ","url":"https://shinronavi.com/mirai_scene/explore/cooking/"}],"cooking_bakery":[{"label":"製菓・製パンのミライシーンへ","url":"https://shinronavi.com/mirai_scene/explore/pastry/"}],"science_biology":[{"label":"動物のミライシーンへ","url":"https://shinronavi.com/mirai_scene/explore/animals/"}],"animal_trainer":[{"label":"動物のミライシーンへ","url":"https://shinronavi.com/mirai_scene/explore/animals/"}],"agriculture_agriculture":[{"label":"農業のミライシーンへ","url":"https://shinronavi.com/mirai_scene/explore/agriculture/"}],"voc_agriculture_agriculture":[{"label":"農業のミライシーンへ","url":"https://shinronavi.com/mirai_scene/explore/agriculture/"}],"socialscience_management":[{"label":"経営・商学のミライシーンへ","url":"https://shinronavi.com/mirai_scene/explore/business/"}],"socialscience_commerce":[{"label":"経営・商学のミライシーンへ","url":"https://shinronavi.com/mirai_scene/explore/business/"}],"music_business":[{"label":"イベントのミライシーンへ","url":"https://shinronavi.com/mirai_scene/explore/events/"}],"media_sound_light":[{"label":"イベントのミライシーンへ","url":"https://shinronavi.com/mirai_scene/explore/events/"}],"socialscience_media":[{"label":"出版・メディアのミライシーンへ","url":"https://shinronavi.com/mirai_scene/explore/media/"}],"media_broadcast":[{"label":"出版・メディアのミライシーンへ","url":"https://shinronavi.com/mirai_scene/explore/media/"}],"art_video":[{"label":"映像のミライシーンへ","url":"https://shinronavi.com/mirai_scene/explore/video/"}],"media_video":[{"label":"映像のミライシーンへ","url":"https://shinronavi.com/mirai_scene/explore/video/"}],"gamecg_game":[{"label":"ゲームのミライシーンへ","url":"https://shinronavi.com/mirai_scene/explore/games/"}],"humanities_literature":[{"label":"文学・文化・歴史のミライシーンへ","url":"https://shinronavi.com/mirai_scene/explore/culture/"}],"humanities_culture":[{"label":"文学・文化・歴史のミライシーンへ","url":"https://shinronavi.com/mirai_scene/explore/culture/"}],"humanities_history":[{"label":"文学・文化・歴史のミライシーンへ","url":"https://shinronavi.com/mirai_scene/explore/culture/"}]};
+    if (!Object.prototype.hasOwnProperty.call(links, slug)) return;
+    const entries = links[slug];
+    const section = document.createElement('section');
+    section.className = 'mirai-scene-links';
+    const heading = document.createElement('h2');
+    heading.textContent = 'この学びにつながる仕事を体験しよう';
+    section.append(heading);
+    const list = document.createElement('ul');
+    entries.forEach(entry => {
+      const item = document.createElement('li');
+      const link = document.createElement('a');
+      link.href = entry.url;
+      link.textContent = entry.label;
+      item.append(link); list.append(item);
+    });
+    section.append(list);
+    script.after(section);
+  })();

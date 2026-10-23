@@ -1,5 +1,6 @@
 ---
 import { Image, getImage } from 'astro:assets';
+import ActionArrow from './actionArrow.astro';
 import makeImage from '../../public/assets/hero/make.png';
 import supportImage from '../../public/assets/hero/support.png';
 import conveyImage from '../../public/assets/hero/convey.png';
@@ -24,11 +25,11 @@ const heroCards = [
       <p>まだ、やりたいことが決まっていなくても大丈夫。ミライシーンでは、仕事のひと場面を体験し、自分の「好き」のヒントを探せます。</p>
     </div>
     <div class="hero-action">
-      <a class="hero-invitation" href="#experiences">気になる未来を、見つけてみよう。<span aria-hidden="true">↓</span></a>
+      <a class="hero-invitation" href="#experiences">気になる未来を、見つけてみよう。<span aria-hidden="true"><ActionArrow kind="down" /></span></a>
       <p class="hero-meta">約3分・3つのシーン<span aria-hidden="true">／</span>登録なしでスタート</p>
     </div></div>
     <div class="hero-art">
-      <!-- 3枚は説明用画像。リンクを示す丸い矢印は素材から除去し、移動は下のCTAにまとめる。 -->
+      <!-- 3枚は説明用画像。ページ内の移動はCTAで案内する。 -->
       <img class="hero-note" src={asset('note.png')} alt="好きから、きっと見つかる わたしのミライ" />
       {heroCards.map(card => (
         <div class:list={['hero-card', card.className]}>

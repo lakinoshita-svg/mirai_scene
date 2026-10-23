@@ -1,0 +1,99 @@
+{
+  "packageType": "reviewedContentSources",
+  "batchId": "batch-002",
+  "packagedAt": "2026-10-22",
+  "zip": "miraiSceneContentsBatch00220261022.zip",
+  "sha256": "57ea35dfefa4e28c3281948e92d99cadadc3ac82e9fd6ffca74a908329b6239a",
+  "bytes": 116384,
+  "fileCount": 18,
+  "experienceCount": 10,
+  "sceneCount": 30,
+  "optionCount": 90,
+  "files": [
+    {
+      "path": "drafts/batch-002/beauty-event-preparation.json",
+      "bytes": 10031,
+      "sha256": "4a8ffc352e4b2be2e66710ed842da5762b2e8b631015b818135e12f0411caa62"
+    },
+    {
+      "path": "drafts/batch-002/childcare-getting-ready.json",
+      "bytes": 10335,
+      "sha256": "a9aaadd5f860c48ec052aca027f3972dbec6901ba3b07fb6ef90c93cd498b601"
+    },
+    {
+      "path": "drafts/batch-002/childcare-rain-sounds.json",
+      "bytes": 9805,
+      "sha256": "fc4420abc7d116be0b488744a41466b85db83c4b096a8f19713394d67f401bb0"
+    },
+    {
+      "path": "drafts/batch-002/engineer-event-notifications.json",
+      "bytes": 10599,
+      "sha256": "50edec4f74d2147dd27d8e0b024c46458e243d6cd6ffc1f1af71f0370f81f06c"
+    },
+    {
+      "path": "drafts/batch-002/engineer-save-progress.json",
+      "bytes": 10483,
+      "sha256": "726a30f030651f53ea007812a7446440e8b41b3c9aaa56f2e10929cf9a63aba7"
+    },
+    {
+      "path": "drafts/batch-002/engineer-search-language.json",
+      "bytes": 10853,
+      "sha256": "4ca97ebc58e03cba962b6c1b04b872087c5373ca52b4b087994bbfdb82bb5ef8"
+    },
+    {
+      "path": "drafts/batch-002/game-planner-cooperative-roles.json",
+      "bytes": 9864,
+      "sha256": "ed2fdf1a8c59449198eb3bc812f83d92df0ebb05a3951e309323e9068fea0861"
+    },
+    {
+      "path": "drafts/batch-002/game-planner-story-choices.json",
+      "bytes": 9880,
+      "sha256": "b8dcbf9318b8951f90d8fd5825823f9fcb8b2bb948262347e21d688773bb0fe7"
+    },
+    {
+      "path": "drafts/batch-002/manuscript.html",
+      "bytes": 103220,
+      "sha256": "da4bc70ea076a76478bcf7c4a47cb2c1d0c2c3b5d7b5900885c3b6f7e7eb3f00"
+    },
+    {
+      "path": "drafts/batch-002/README.md",
+      "bytes": 4026,
+      "sha256": "7d129f74e86de7b2985839255e273e12f3148079be9aa2fbfe824bf8bb45ff8f"
+    },
+    {
+      "path": "drafts/batch-002/REVIEW.md",
+      "bytes": 26963,
+      "sha256": "b93918b98bceab952bd14a3fc940d039c043fbfe879b47cec93c6f7bc2bf8c94"
+    },
+    {
+      "path": "drafts/batch-002/video-producer-craft-process.json",
+      "bytes": 10249,
+      "sha256": "3757308512f4c879eea064e1ef85cd4689a321522d04703d62c4b00cbbc35e86"
+    },
+    {
+      "path": "drafts/batch-002/video-producer-interview.json",
+      "bytes": 10112,
+      "sha256": "89029bf9588f57b313eef25b8b1209aabe41ffdd194025c6951a521e723c23eb"
+    },
+    {
+      "path": "drafts/batch-002/review/answerChecks.md",
+      "bytes": 27964,
+      "sha256": "1a53851e11f5e38c5515109dad6f638140dc96f3098ce6bcc8b8d5167fce4e8c"
+    },
+    {
+      "path": "drafts/batch-002/review/occupationChecks.json",
+      "bytes": 58357,
+      "sha256": "ba4f918c31efe384c538603cef202c70ce430e5449df13d2783ca1f4c250257d"
+    },
+    {
+      "path": "drafts/batch-002/review/occupationChecks.md",
+      "bytes": 21528,
+      "sha256": "c625753a5a86b7aec4d7d8f08ebccb49880eb44a33ceaf78112e9347d27c2630"
+    },
+    {
+      "path": "docs/editorial/company-career-material.txt",
+      "bytes": 31974,
+      "sha256": "e9e4e2b03694cf14b62f690597c8fd0d5476a69cea5b56bbb1c8c3992c62dbab"
+    }
+  ]
+}

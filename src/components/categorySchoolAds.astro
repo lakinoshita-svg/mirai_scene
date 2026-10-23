@@ -2,6 +2,7 @@
 import { getSchoolAds, getCategorySchoolAds } from '../lib/schoolAds';
 import regions from '../data/adRegions.json';
 import { sitePath } from '../lib/paths';
+import ActionArrow from './actionArrow.astro';
 interface Props { category: string }
 const { category } = Astro.props;
 const ads = getCategorySchoolAds(category);
@@ -28,7 +29,7 @@ const initialIds = new Set(getSchoolAds(category).map(ad => ad.id));
 <h3>{ad.schoolName}</h3>
 <strong>{ad.title}</strong>
 <p>{ad.description}</p>
-<span class="school-ad-link">学校の情報を見る <span aria-hidden="true">↗</span>
+<span class="school-ad-link">学校の情報を見る <ActionArrow kind="external" />
 <span class="visually-hidden">（別タブで開きます）</span>
 </span>
 </div>

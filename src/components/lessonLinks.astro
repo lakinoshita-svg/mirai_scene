@@ -1,10 +1,11 @@
 ---
 import { lessonUrl, lessonLinkLabel, type Lesson } from '../lib/learningLinks';
+import ActionArrow from './actionArrow.astro';
 interface Props { lessons: Lesson[] }
 const { lessons } = Astro.props;
 ---
 <ul>{lessons.map(lesson => (
-  <li><a data-track="lesson" data-track-id={lesson.slug} href={lessonUrl(lesson.slug)} target="_blank" rel="noopener">{lessonLinkLabel(lesson)} <span aria-hidden="true">↗</span></a></li>
+  <li><a data-track="lesson" data-track-id={lesson.slug} href={lessonUrl(lesson.slug)} target="_blank" rel="noopener">{lessonLinkLabel(lesson)} <ActionArrow kind="external" /></a></li>
 ))}</ul>
 <style>
   ul{padding-left:var(--space-2);line-height:2}

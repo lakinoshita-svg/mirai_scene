@@ -1,0 +1,6 @@
+---
+import { actionArrowPaths, renderActionArrow } from '../lib/actionArrows.mjs';
+interface Props { kind?: keyof typeof actionArrowPaths }
+const { kind = 'forward' } = Astro.props;
+---
+<Fragment set:html={renderActionArrow(kind)} />
