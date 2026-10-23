@@ -40,3 +40,7 @@
 
 /* 学校検索は進路ナビのロゴ色を使い、文字と矢印は白で統一する。 */
 .primary.schoolSearchAction{background:var(--shinronavi-orange);color:var(--surface)}
+
+/* 解説を開く操作は白い面とブランド色の枠・文字で示す。矢印も文字色を継承する。 */
+.primary.explainAction{background:var(--surface);color:var(--brand-purple);border:1.5px solid var(--brand-purple)}
+.primary.explainAction:enabled:hover{background:var(--surface-brand-hover)}
