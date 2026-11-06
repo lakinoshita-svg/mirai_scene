@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="960" viewBox="0 0 640 960" role="img" aria-labelledby="title desc">
+  <title id="title">雰囲気を先に伝える教室ページの案</title>
+  <desc id="desc">教室名、紙の花のイメージと紹介、開催情報、参加条件へのボタンの順。比較用の架空の画面。</desc>
+  <defs>
+    <style>text{font-family:'Noto Sans JP','Yu Gothic',sans-serif;fill:#202038}.heading{font-size:38px;font-weight:700}.body{font-size:26px}.meta{font-size:24px;fill:#625d73}.button{font-size:28px;font-weight:700;fill:#fff}</style>
+  </defs>
+  <rect width="640" height="960" rx="24" fill="#fcfbfd"/>
+  <rect x="24" y="24" width="592" height="912" rx="24" fill="#fff" stroke="#e5ddec" stroke-width="2"/>
+  <text x="56" y="80" class="meta">まちの体験教室</text>
+  <text x="56" y="144" class="heading">紙の花をつくろう</text>
+  <g transform="translate(56 184)">
+    <rect width="528" height="256" rx="16" fill="#f1eaff"/>
+    <path d="M264 204V112M264 177C224 180 210 159 210 159M264 159C299 163 318 141 318 141" fill="none" stroke="#625d73" stroke-width="7" stroke-linecap="round"/>
+    <g fill="#d9c9ee" stroke="#7144b8" stroke-width="3">
+      <ellipse cx="264" cy="80" rx="27" ry="44"/>
+      <ellipse cx="264" cy="80" rx="27" ry="44" transform="rotate(60 264 108)"/>
+      <ellipse cx="264" cy="80" rx="27" ry="44" transform="rotate(120 264 108)"/>
+      <ellipse cx="264" cy="80" rx="27" ry="44" transform="rotate(180 264 108)"/>
+      <ellipse cx="264" cy="80" rx="27" ry="44" transform="rotate(240 264 108)"/>
+      <ellipse cx="264" cy="80" rx="27" ry="44" transform="rotate(300 264 108)"/>
+    </g>
+    <circle cx="264" cy="108" r="23" fill="#ee7800"/>
+    <text x="24" y="232" class="meta">作品のイメージ</text>
+  </g>
+  <text x="56" y="496" class="body">色紙を重ねて、自分だけの一輪を。</text>
+  <text x="56" y="536" class="body">初めての人も参加できます。</text>
+  <g transform="translate(56 576)">
+    <rect width="528" height="208" rx="16" fill="#fcfbfd" stroke="#e5ddec" stroke-width="2"/>
+    <text x="24" y="48" class="body">日時　11月15日（日）</text>
+    <text x="104" y="88" class="body">13:00〜15:00</text>
+    <text x="24" y="136" class="body">会場　まちの交流館</text>
+    <text x="24" y="176" class="body">費用　500円</text>
+  </g>
+  <rect x="56" y="816" width="528" height="72" rx="16" fill="#7144b8"/>
+  <text x="320" y="862" class="button" text-anchor="middle">参加条件を見る</text>
+</svg>

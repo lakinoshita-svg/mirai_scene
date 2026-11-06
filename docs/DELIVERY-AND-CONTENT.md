@@ -20,6 +20,8 @@ PowerShellで `Get-FileHash deliveries/release-2026-10-16/miraiSceneShinronavi20
 
 ## コンテンツ制作担当
 
+GitHub Pagesでの画面確認には `npm run build:preview` を使う。対象は `config/preview.json` の指定バッチ。下書きは一時プロジェクト内だけで公開元と合流し、導入用の原稿・固定ZIPとは分離する。手順は [README](../README.md#github-pagesで下書きを確認する) を参照。プレビュー掲載と本番公開承認は別に扱う。
+
 仕様書は [CONTENT-SPEC.md](CONTENT-SPEC.md)。進行状況は [CONTENT-BATCHES.md](CONTENT-BATCHES.md)。当面は1回2〜5体験で、内容と仕様を確認してから次のバッチへ進む。
 
 1. `drafts/batch-001/` などに原稿を作る。各体験を完成したJSONとして保存し、コピー元の説明や出典が残っていないか確認。
