@@ -1,0 +1,419 @@
+{
+  "batchId": "batch-004",
+  "checkedAt": "2026-10-26",
+  "method": "隔離したAstroプレビューをブラウザで操作。各シーンで全案の解説を開き、表示文字列をJSONと照合。完了後の各振り返りを押し、学校検索の分野IDを共通対応表と照合。",
+  "viewports": [
+    {
+      "width": 1280,
+      "height": 720,
+      "experiences": 5
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "experiences": 5
+    }
+  ],
+  "results": [
+    {
+      "slug": "animal-keeper-feeding-enrichment",
+      "scenes": [
+        {
+          "missing": [],
+          "overflow": false,
+          "scene": 1,
+          "width": 1280
+        },
+        {
+          "missing": [],
+          "overflow": false,
+          "scene": 2,
+          "width": 1280
+        },
+        {
+          "missing": [],
+          "overflow": false,
+          "scene": 3,
+          "width": 1280
+        }
+      ],
+      "summary": true,
+      "schoolHref": "https://shinronavi.com/search/result?fld%5B%5D=R-404&fld%5B%5D=G-706",
+      "reflections": [
+        {
+          "overflow": false,
+          "shown": true
+        },
+        {
+          "overflow": false,
+          "shown": true
+        },
+        {
+          "overflow": false,
+          "shown": true
+        }
+      ],
+      "sha256": "97382dd5887fc1378a08985b3964c8317f1d0d9d15c368c100664404b3bd4eb0"
+    },
+    {
+      "slug": "farmer-planting-plan",
+      "scenes": [
+        {
+          "missing": [],
+          "overflow": false,
+          "scene": 1,
+          "width": 1280
+        },
+        {
+          "missing": [],
+          "overflow": false,
+          "scene": 2,
+          "width": 1280
+        },
+        {
+          "missing": [],
+          "overflow": false,
+          "scene": 3,
+          "width": 1280
+        }
+      ],
+      "summary": true,
+      "schoolHref": "https://shinronavi.com/search/result?fld%5B%5D=T-711",
+      "reflections": [
+        {
+          "overflow": false,
+          "shown": true
+        },
+        {
+          "overflow": false,
+          "shown": true
+        },
+        {
+          "overflow": false,
+          "shown": true
+        }
+      ],
+      "sha256": "b73e1a9cff85ab10796cfe15c027af373b93d14c47d88ed9b15e85051ae1d406"
+    },
+    {
+      "slug": "logistics-picking-layout",
+      "scenes": [
+        {
+          "missing": [],
+          "overflow": false,
+          "scene": 1,
+          "width": 1280
+        },
+        {
+          "missing": [],
+          "overflow": false,
+          "scene": 2,
+          "width": 1280
+        },
+        {
+          "missing": [],
+          "overflow": false,
+          "scene": 3,
+          "width": 1280
+        }
+      ],
+      "summary": true,
+      "schoolHref": "https://shinronavi.com/search/result?fld%5B%5D=L-219&fld%5B%5D=L-218",
+      "reflections": [
+        {
+          "overflow": false,
+          "shown": true
+        },
+        {
+          "overflow": false,
+          "shown": true
+        },
+        {
+          "overflow": false,
+          "shown": true
+        }
+      ],
+      "sha256": "b2e117969ba023e6c22c432731c495cdfd622ff65a64b4cf3032e8a866cb3af3"
+    },
+    {
+      "slug": "librarian-storytime-preparation",
+      "scenes": [
+        {
+          "missing": [],
+          "overflow": false,
+          "scene": 1,
+          "width": 1280
+        },
+        {
+          "missing": [],
+          "overflow": false,
+          "scene": 2,
+          "width": 1280
+        },
+        {
+          "missing": [],
+          "overflow": false,
+          "scene": 3,
+          "width": 1280
+        }
+      ],
+      "summary": true,
+      "schoolHref": "https://shinronavi.com/search/result?fld%5B%5D=K-201&fld%5B%5D=K-207&fld%5B%5D=K-208",
+      "reflections": [
+        {
+          "overflow": false,
+          "shown": true
+        },
+        {
+          "overflow": false,
+          "shown": true
+        },
+        {
+          "overflow": false,
+          "shown": true
+        }
+      ],
+      "sha256": "78a9e0504a88d6d581668f51a83dcf29b21bba2a04ea705a80fae39a479b75aa"
+    },
+    {
+      "slug": "museum-curator-collection-loan",
+      "scenes": [
+        {
+          "missing": [],
+          "overflow": false,
+          "scene": 1,
+          "width": 1280
+        },
+        {
+          "missing": [],
+          "overflow": false,
+          "scene": 2,
+          "width": 1280
+        },
+        {
+          "missing": [],
+          "overflow": false,
+          "scene": 3,
+          "width": 1280
+        }
+      ],
+      "summary": true,
+      "schoolHref": "https://shinronavi.com/search/result?fld%5B%5D=K-201&fld%5B%5D=K-207&fld%5B%5D=K-208",
+      "reflections": [
+        {
+          "overflow": false,
+          "shown": true
+        },
+        {
+          "overflow": false,
+          "shown": true
+        },
+        {
+          "overflow": false,
+          "shown": true
+        }
+      ],
+      "sha256": "fa576e3d786910c4b71affb262e712f71154e995c1ecc6afdab9f98f8fca5f92"
+    },
+    {
+      "slug": "product-developer-customer-use",
+      "scenes": [
+        {
+          "missing": [],
+          "overflow": false,
+          "scene": 1,
+          "width": 390
+        },
+        {
+          "missing": [],
+          "overflow": false,
+          "scene": 2,
+          "width": 390
+        },
+        {
+          "missing": [],
+          "overflow": false,
+          "scene": 3,
+          "width": 390
+        }
+      ],
+      "summary": true,
+      "schoolHref": "https://shinronavi.com/search/result?fld%5B%5D=L-219&fld%5B%5D=L-218",
+      "reflections": [
+        {
+          "overflow": false,
+          "shown": true
+        },
+        {
+          "overflow": false,
+          "shown": true
+        },
+        {
+          "overflow": false,
+          "shown": true
+        }
+      ],
+      "sha256": "7c800d7a81cbffde84a351bdfa49ca1073a0d264b65985200a56bab0c27035a5"
+    },
+    {
+      "slug": "game-planner-tool-choices",
+      "scenes": [
+        {
+          "missing": [],
+          "overflow": false,
+          "scene": 1,
+          "width": 390
+        },
+        {
+          "missing": [],
+          "overflow": false,
+          "scene": 2,
+          "width": 390
+        },
+        {
+          "missing": [],
+          "overflow": false,
+          "scene": 3,
+          "width": 390
+        }
+      ],
+      "summary": true,
+      "schoolHref": "https://shinronavi.com/search/result?fld%5B%5D=D-437&fld%5B%5D=S-410",
+      "reflections": [
+        {
+          "overflow": false,
+          "shown": true
+        },
+        {
+          "overflow": false,
+          "shown": true
+        },
+        {
+          "overflow": false,
+          "shown": true
+        }
+      ],
+      "sha256": "ceb8369218bfb18020e12de3ca23c51b8a5d0fbc315c69a35847d56b6a7f86ed"
+    },
+    {
+      "slug": "engineer-duplicate-submission",
+      "scenes": [
+        {
+          "missing": [],
+          "overflow": false,
+          "scene": 1,
+          "width": 390
+        },
+        {
+          "missing": [],
+          "overflow": false,
+          "scene": 2,
+          "width": 390
+        },
+        {
+          "missing": [],
+          "overflow": false,
+          "scene": 3,
+          "width": 390
+        }
+      ],
+      "summary": true,
+      "schoolHref": "https://shinronavi.com/search/result?fld%5B%5D=S-410&fld%5B%5D=D-432",
+      "reflections": [
+        {
+          "overflow": false,
+          "shown": true
+        },
+        {
+          "overflow": false,
+          "shown": true
+        },
+        {
+          "overflow": false,
+          "shown": true
+        }
+      ],
+      "sha256": "34f54662dff2553847658f9cb5a454f3cb8c2fef7b9b4b19a6f3fb587c4ae14b"
+    },
+    {
+      "slug": "childcare-block-town",
+      "scenes": [
+        {
+          "missing": [],
+          "overflow": false,
+          "scene": 1,
+          "width": 390
+        },
+        {
+          "missing": [],
+          "overflow": false,
+          "scene": 2,
+          "width": 390
+        },
+        {
+          "missing": [],
+          "overflow": false,
+          "scene": 3,
+          "width": 390
+        }
+      ],
+      "summary": true,
+      "schoolHref": "https://shinronavi.com/search/result?fld%5B%5D=P-112&fld%5B%5D=F-626",
+      "reflections": [
+        {
+          "overflow": false,
+          "shown": true
+        },
+        {
+          "overflow": false,
+          "shown": true
+        },
+        {
+          "overflow": false,
+          "shown": true
+        }
+      ],
+      "sha256": "3b14b3d7d3423a4129c87d6362e32b5bc5d677ae36af60194a42091cd30fa571"
+    },
+    {
+      "slug": "video-producer-location-sound",
+      "scenes": [
+        {
+          "missing": [],
+          "overflow": false,
+          "scene": 1,
+          "width": 390
+        },
+        {
+          "missing": [],
+          "overflow": false,
+          "scene": 2,
+          "width": 390
+        },
+        {
+          "missing": [],
+          "overflow": false,
+          "scene": 3,
+          "width": 390
+        }
+      ],
+      "summary": true,
+      "schoolHref": "https://shinronavi.com/search/result?fld%5B%5D=Q-316&fld%5B%5D=C-316",
+      "reflections": [
+        {
+          "overflow": false,
+          "shown": true
+        },
+        {
+          "overflow": false,
+          "shown": true
+        },
+        {
+          "overflow": false,
+          "shown": true
+        }
+      ],
+      "sha256": "92d3ca831bfe0352a0884c464bc20602f5f4600fe21151c0d67f20f9e03bc4e1"
+    }
+  ]
+}

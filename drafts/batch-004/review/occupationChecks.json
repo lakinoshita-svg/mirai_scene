@@ -1,0 +1,1120 @@
+{
+  "batchId": "batch-004",
+  "reviewType": "twoPassSelfReview",
+  "passes": {
+    "occupational": {
+      "reviewer": "Codex（同一担当による自己確認）",
+      "checkedAt": "2026-10-26",
+      "method": "自社原文と職種対応表、job tagの仕事の内容、厚生労働省・文部科学省・図書館・博物館・制作会社の一次資料の本文を照合。技術事項はMDNとAWSの資料で補完し、全30シーンの対象物と権限、隣接職との分担を確認。資料ごとの確認範囲はsourceEvidence.mdに記載。"
+    },
+    "editorial": {
+      "reviewer": "Codex（同一担当による二巡目の自己確認）",
+      "checkedAt": "2026-10-26",
+      "method": "全30シーンと90案を、状況・問い・共通解説・説明・利点・懸念・振り返りまで再読。選択前の条件、三案の違い、事実と推測、前の回答への非依存を確認。passは架空の条件での編集整合を示し、実務上の最善や効果を認定しない。"
+    }
+  },
+  "limitations": [
+    "同一Codexによる二段階の自己確認。資料発行者からの個別回答や、別担当者による独立レビュー、実務経験者による確認ではない。",
+    "高校生による読解・所要時間の確認、専門家監修、公開承認は未実施。全件editorial-draft。",
+    "三案の効果は未実測。出典の職業説明や一施設・一企業の業務例は、各架空シーンや全職場の手順を保証しない。",
+    "自社資料の書名・版・原本ページは未提供。直接の項目がない職種と関連職を区別する。"
+  ],
+  "entries": [
+    {
+      "slug": "animal-keeper-feeding-enrichment",
+      "sources": [
+        "docs/editorial/company-career-material.txt：第16章 動物トレーナー／動物飼育係（飼育の範囲）",
+        "https://shigoto.mhlw.go.jp/User/Occupation/Detail/220"
+      ],
+      "scenes": [
+        {
+          "sceneId": "scene-1",
+          "optionIds": [
+            "option-1",
+            "option-2",
+            "option-3"
+          ],
+          "occupational": {
+            "status": "pass",
+            "reason": "飼育員による行動・健康観察と環境エンリッチメントの検討に対応。健康の診断や具体的な給餌手順の選択を読者に委ねない。"
+          },
+          "editorial": {
+            "status": "pass",
+            "reason": "同じ場所にいることと退屈の推定を分離。時間、場所、動作という三つの記録の入口があり、全案で複数日と条件を確認する。"
+          },
+          "optionChecks": [
+            {
+              "optionId": "option-1",
+              "status": "pass",
+              "reason": "採食前後を記録するため、一日の中で比較する利点に対応。長さだけでは意味は分からない限界を保つ。"
+            },
+            {
+              "optionId": "option-2",
+              "status": "pass",
+              "reason": "場所の利用を図に記す行動と配置検討が対応。未利用を嫌悪と断定せず、環境条件も確かめる。"
+            },
+            {
+              "optionId": "option-3",
+              "status": "pass",
+              "reason": "発見から摂食までの具体動作を対象にし、種の生態と複数日の観察を残す。単発から好みを決めない。"
+            }
+          ]
+        },
+        {
+          "sceneId": "scene-2",
+          "optionIds": [
+            "option-1",
+            "option-2",
+            "option-3"
+          ],
+          "occupational": {
+            "status": "pass",
+            "reason": "記録を基に飼育環境を検討する職務。方法の安全性はチームが確認済みで、種類と総量を変えない試行の比べ方を扱う。"
+          },
+          "editorial": {
+            "status": "pass",
+            "reason": "時間帯等、行動分類、実施内容を同じ計画段階で比較する。中止の判断と健康確認は全案必須で、比較条件を完全にそろえられるとはしない。"
+          },
+          "optionChecks": [
+            {
+              "optionId": "option-1",
+              "status": "pass",
+              "reason": "そろえる条件とそろわない条件の記録を区別。天候を統制できるとは書かず、再観察も相談する。"
+            },
+            {
+              "optionId": "option-2",
+              "status": "pass",
+              "reason": "観察者間の分類を合わせる利点に、分類外の動作を捨てない限界が対応する。"
+            },
+            {
+              "optionId": "option-3",
+              "status": "pass",
+              "reason": "配置と食べ残しは試行の実施確認になる一方、行動や体調の指標を一つに絞らない。"
+            }
+          ]
+        },
+        {
+          "sceneId": "scene-3",
+          "optionIds": [
+            "option-1",
+            "option-2",
+            "option-3"
+          ],
+          "occupational": {
+            "status": "pass",
+            "reason": "行動記録と健康確認をチームで読み合わせる飼育業務。採食時間を福祉の単独指標にしない。"
+          },
+          "editorial": {
+            "status": "pass",
+            "reason": "共通試行例として前の回答に依存しない。時間が長くなった事実と改善の判断を分離し、健康と継続の判断を全案で共有する。"
+          },
+          "optionChecks": [
+            {
+              "optionId": "option-1",
+              "status": "pass",
+              "reason": "行動の中身とその後を観察記録で見返す。映像の死角を補作しない点が判断材料の限界に対応。"
+            },
+            {
+              "optionId": "option-2",
+              "status": "pass",
+              "reason": "条件差を調べる案は因果の断定を避ける入口。条件を知るだけで原因が確定するとはしない。"
+            },
+            {
+              "optionId": "option-3",
+              "status": "pass",
+              "reason": "複数日の記録を比較する理由が一回の反応との区別に対応。回数を重ねても安全保証にはならない。"
+            }
+          ]
+        }
+      ],
+      "sha256": "97382dd5887fc1378a08985b3964c8317f1d0d9d15c368c100664404b3bd4eb0"
+    },
+    {
+      "slug": "farmer-planting-plan",
+      "sources": [
+        "docs/editorial/company-career-material.txt：第15章 農業技術者（関連職。生産者の直接資料ではない）",
+        "https://shigoto.mhlw.go.jp/User/Occupation/Detail/505"
+      ],
+      "scenes": [
+        {
+          "sceneId": "scene-1",
+          "optionIds": [
+            "option-1",
+            "option-2",
+            "option-3"
+          ],
+          "occupational": {
+            "status": "pass",
+            "reason": "生産計画・定植準備・栽培中の管理を見通す農業生産者の業務。研究や指導をする農業技術者と区別する。"
+          },
+          "editorial": {
+            "status": "pass",
+            "reason": "間隔と通路幅は確認済みの計画として提示。水やり動線、台車と仮置き、列の識別が配置の異なる確認点になる。"
+          },
+          "optionChecks": [
+            {
+              "optionId": "option-1",
+              "status": "pass",
+              "reason": "届く範囲と通る経路を対象とし、水やりの適量は教えない。道具が届くことと栽培上の適否を分ける。"
+            },
+            {
+              "optionId": "option-2",
+              "status": "pass",
+              "reason": "空のハウスで台車を確認できる条件がある。苗が育つ時期の空間は別確認とし、その場の試行で完結させない。"
+            },
+            {
+              "optionId": "option-3",
+              "status": "pass",
+              "reason": "列の目印と記録区分を対応させるため、場所の共有へつながる。作業動線まで確認できるとはしない。"
+            }
+          ]
+        },
+        {
+          "sceneId": "scene-2",
+          "optionIds": [
+            "option-1",
+            "option-2",
+            "option-3"
+          ],
+          "occupational": {
+            "status": "pass",
+            "reason": "生産者が労力・苗・道具を使って定植の工程を組む仕事。二人という人数を標準人員とはしない。"
+          },
+          "editorial": {
+            "status": "pass",
+            "reason": "午前受け取りと午後作業を明示。物の移動、人の分担、開始条件を同じ準備段階で扱い、苗や環境の当日確認を全案に置く。"
+          },
+          "optionChecks": [
+            {
+              "optionId": "option-1",
+              "status": "pass",
+              "reason": "受け取りから各列までを順に整理し、置き場と移動を具体化。苗の状態や人数は残る確認として明記。"
+            },
+            {
+              "optionId": "option-2",
+              "status": "pass",
+              "reason": "同時作業と受け渡しの違いを整理する利点に、所要時間・経験・休憩の確認が対応する。"
+            },
+            {
+              "optionId": "option-3",
+              "status": "pass",
+              "reason": "誰がいつ確認するかを準備項目と合わせる。チェック済みでも当日の実物確認を省略しない。"
+            }
+          ]
+        },
+        {
+          "sceneId": "scene-3",
+          "optionIds": [
+            "option-1",
+            "option-2",
+            "option-3"
+          ],
+          "occupational": {
+            "status": "pass",
+            "reason": "栽培管理と生育観察を別の生産者へつなぐ記録。葉の状態から病気や処置を診断しない。"
+          },
+          "editorial": {
+            "status": "pass",
+            "reason": "日付・種類・本数・列は共通で記録済み。苗、設備、残る作業という補足があり、別の人が明日読む目的に対応する。"
+          },
+          "optionChecks": [
+            {
+              "optionId": "option-1",
+              "status": "pass",
+              "reason": "位置と見えた状態、時刻を記すため、同じ苗の比較が可能になる。原因や薬剤判断へ飛躍しない。"
+            },
+            {
+              "optionId": "option-2",
+              "status": "pass",
+              "reason": "設備の確認済みと未確認を分ける。翌日の点検を代替せず、状態が変わる可能性を示す。"
+            },
+            {
+              "optionId": "option-3",
+              "status": "pass",
+              "reason": "列ごとの済・未済を分ける利点が重複と抜けの防止に対応。当日の観察で予定を見直す余地も残す。"
+            }
+          ]
+        }
+      ],
+      "sha256": "b73e1a9cff85ab10796cfe15c027af373b93d14c47d88ed9b15e85051ae1d406"
+    },
+    {
+      "slug": "logistics-picking-layout",
+      "sources": [
+        "自社資料に直接の物流プランナー項目なし",
+        "https://shigoto.mhlw.go.jp/User/Occupation/Detail/542",
+        "https://www.mhlw.go.jp/stf/newpage_08922.html"
+      ],
+      "scenes": [
+        {
+          "sceneId": "scene-1",
+          "optionIds": [
+            "option-1",
+            "option-2",
+            "option-3"
+          ],
+          "occupational": {
+            "status": "pass",
+            "reason": "倉庫システム立案・作業改善を担う物流プランナーの役割。現場の作業データと動線から提案し、物流設備の保守を扱わない。"
+          },
+          "editorial": {
+            "status": "pass",
+            "reason": "図、注文、時間記録を選択前に提示。順路、注文の組み合わせ、混雑という違う入口を置き、近くへ寄せる案を未採用とする。"
+          },
+          "optionChecks": [
+            {
+              "optionId": "option-1",
+              "status": "pass",
+              "reason": "代表注文の往復を図に描く行動が配置検討へつながる。少数例を全体と扱わず別条件の注文も確認する。"
+            },
+            {
+              "optionId": "option-2",
+              "status": "pass",
+              "reason": "同時注文のまとまりは商品単体の頻度と異なる判断材料。保管条件を優先し、いつも同じ組み合わせとはしない。"
+            },
+            {
+              "optionId": "option-3",
+              "status": "pass",
+              "reason": "待ちが起きる位置と時刻を観察・聞き取りで確かめる。距離以外の阻害点を見られる一方、特定日の条件を残す。"
+            }
+          ]
+        },
+        {
+          "sceneId": "scene-2",
+          "optionIds": [
+            "option-1",
+            "option-2",
+            "option-3"
+          ],
+          "occupational": {
+            "status": "pass",
+            "reason": "棚の識別・番号管理を含む倉庫改善。取り出し作業者の注意だけへ責任を置かず、管理者と表示・配置を検討する。"
+          },
+          "editorial": {
+            "status": "pass",
+            "reason": "同柄で容量違いの具体物を提示。全案でコード照合を継続し、表示、離隔、区画の三つを追加策として比べる。"
+          },
+          "optionChecks": [
+            {
+              "optionId": "option-1",
+              "status": "pass",
+              "reason": "容量の数字と単位を同位置で見せるため、区別点を棚で探せる利点がある。照合そのものの代わりにはしない。"
+            },
+            {
+              "optionId": "option-2",
+              "status": "pass",
+              "reason": "別位置への配置は隣棚への取り違えに対応し、距離増と棚情報の整合を残す。同じ柄でも必ず誤るとはしない。"
+            },
+            {
+              "optionId": "option-3",
+              "status": "pass",
+              "reason": "区画と表示を合わせ、補充で混ざる可能性を考慮。物理区画があるだけで誤補充を防げると保証しない。"
+            }
+          ]
+        },
+        {
+          "sceneId": "scene-3",
+          "optionIds": [
+            "option-1",
+            "option-2",
+            "option-3"
+          ],
+          "occupational": {
+            "status": "pass",
+            "reason": "倉庫内作業の計画と改善を現場と検討する業務。補充とピッキングの両方の成果を対象にする。"
+          },
+          "editorial": {
+            "status": "pass",
+            "reason": "安全な試行の時間を提示し、時間分離、棚順、小分けの案を同じ試行段階へ置く。在庫切れと全体の負担を共通の確認にする。"
+          },
+          "optionChecks": [
+            {
+              "optionId": "option-1",
+              "status": "pass",
+              "reason": "閑散時間に寄せる案と同時進入減の利点が対応。途中補充や注文変動を考慮し、一律の時間固定にしない。"
+            },
+            {
+              "optionId": "option-2",
+              "status": "pass",
+              "reason": "棚順をずらす案は大きな配置変更なしに重なりを見る手段。進み方の差と連絡を追加条件に置く。"
+            },
+            {
+              "optionId": "option-3",
+              "status": "pass",
+              "reason": "一回の補充量を分け、占有時間と運搬回数を両方測る。待ちだけ短ければ良いという局所最適にしない。"
+            }
+          ]
+        }
+      ],
+      "sha256": "b2e117969ba023e6c22c432731c495cdfd622ff65a64b4cf3032e8a866cb3af3"
+    },
+    {
+      "slug": "librarian-storytime-preparation",
+      "sources": [
+        "docs/editorial/company-career-material.txt：第17章 司書教諭（公共図書館司書とは役割を区別）",
+        "https://www.library.metro.tokyo.lg.jp/junior/babies_toddlers/",
+        "https://shigoto.mhlw.go.jp/User/Occupation/Detail/182"
+      ],
+      "scenes": [
+        {
+          "sceneId": "scene-1",
+          "optionIds": [
+            "option-1",
+            "option-2",
+            "option-3"
+          ],
+          "occupational": {
+            "status": "pass",
+            "reason": "公共図書館の児童サービスと読み聞かせ事業の実施例に対応。学校での授業支援をする司書教諭と分ける。"
+          },
+          "editorial": {
+            "status": "pass",
+            "reason": "本を使用できる条件と、実物での読み合わせを事前に提示。見え方、言葉、全体の流れという三つの確認で、実在作品の内容を創作しない。"
+          },
+          "optionChecks": [
+            {
+              "optionId": "option-1",
+              "status": "pass",
+              "reason": "参加者の位置から実物を見るため、離れた席の見え方を確認できる。絵が見えることと話が届くことは別に残す。"
+            },
+            {
+              "optionId": "option-2",
+              "status": "pass",
+              "reason": "声に出して間や流れを聞き合う利点に、大人だけの確認では子どもの反応は分からない限界が対応する。"
+            },
+            {
+              "optionId": "option-3",
+              "status": "pass",
+              "reason": "本の順で実際に読むため全体の時間を検討できる。予定を優先して参加者へ継続を強いる案にはしない。"
+            }
+          ]
+        },
+        {
+          "sceneId": "scene-2",
+          "optionIds": [
+            "option-1",
+            "option-2",
+            "option-3"
+          ],
+          "occupational": {
+            "status": "pass",
+            "reason": "児童サービスを行う場の調整として、司書が本を届ける条件を確認する。専門的な建築・安全基準の代替はしない。"
+          },
+          "editorial": {
+            "status": "pass",
+            "reason": "端の席の問題と配置調整の余地を明示。席、読み手、持ち方という違いがあり、安全と実物確認は全案共通。"
+          },
+          "optionChecks": [
+            {
+              "optionId": "option-1",
+              "status": "pass",
+              "reason": "席の横幅を抑える案に、後席が遠くなる等の反作用を記載。全体に適用した効果を確認せず断定しない。"
+            },
+            {
+              "optionId": "option-2",
+              "status": "pass",
+              "reason": "読み手位置を変えて光と距離を見る案。参加者の視線だけでなく通路や姿勢の条件を残す。"
+            },
+            {
+              "optionId": "option-3",
+              "status": "pass",
+              "reason": "高さと向きを変える工夫は実物で比較可能。読み続ける負担も確認し、無理な持ち方を推奨しない。"
+            }
+          ]
+        },
+        {
+          "sceneId": "scene-3",
+          "optionIds": [
+            "option-1",
+            "option-2",
+            "option-3"
+          ],
+          "occupational": {
+            "status": "pass",
+            "reason": "児童サービスを所蔵検索・資料提供・相談へ接続する司書の業務。特定の本を貸し出すことを会の成果としない。"
+          },
+          "editorial": {
+            "status": "pass",
+            "reason": "読んだ一冊は貸出中になるが別の一冊を探せる条件。題名案内、関連本実物、相談の三案で次の本探しを支える。"
+          },
+          "optionChecks": [
+            {
+              "optionId": "option-1",
+              "status": "pass",
+              "reason": "題名・作者と検索情報を渡す行動が後日の探索に対応。現時点の貸出可否は別に確認する。"
+            },
+            {
+              "optionId": "option-2",
+              "status": "pass",
+              "reason": "関連本を実際に見られる案は別の出会いへつながる。似た題材を同じ楽しさと断言せず、親子が選ぶ余地を保つ。"
+            },
+            {
+              "optionId": "option-3",
+              "status": "pass",
+              "reason": "相談先と時間を具体化し、題名以外の記憶も使える利点を示す。急ぐ親子への後日案内も残す。"
+            }
+          ]
+        }
+      ],
+      "sha256": "78a9e0504a88d6d581668f51a83dcf29b21bba2a04ea705a80fae39a479b75aa"
+    },
+    {
+      "slug": "museum-curator-collection-loan",
+      "sources": [
+        "自社資料に直接の博物館学芸員項目なし",
+        "https://www.kahaku.go.jp/kenkyu/kenkyubu/hyohon.html",
+        "https://shigoto.mhlw.go.jp/User/Occupation/Detail/185"
+      ],
+      "scenes": [
+        {
+          "sceneId": "scene-1",
+          "optionIds": [
+            "option-1",
+            "option-2",
+            "option-3"
+          ],
+          "occupational": {
+            "status": "pass",
+            "reason": "資料の保管・展示と他館との連携に対応。資料貸与と活用履歴の管理は国立科学博物館の公開方針で補い、貸出の権限は館へ残す。"
+          },
+          "editorial": {
+            "status": "pass",
+            "reason": "未承認の依頼を整理する段階。展示目的、使用環境、全日程は同じ打ち合わせ準備の入口で、どれを選んでも必要な保存点検と承認は行う。"
+          },
+          "optionChecks": [
+            {
+              "optionId": "option-1",
+              "status": "pass",
+              "reason": "展示テーマと見せたい箇所を聞くため、資料の活用目的を検討できる。意義だけで保存条件を免除しない。"
+            },
+            {
+              "optionId": "option-2",
+              "status": "pass",
+              "reason": "展示環境と使用方法を整理し、保存担当者へ質問できる。依頼先の説明だけで適合の判定はしない。"
+            },
+            {
+              "optionId": "option-3",
+              "status": "pass",
+              "reason": "搬出入・返却・窓口を日程と結ぶ利点が手続き調整に対応。日程が合うだけで貸出確約しない。"
+            }
+          ]
+        },
+        {
+          "sceneId": "scene-2",
+          "optionIds": [
+            "option-1",
+            "option-2",
+            "option-3"
+          ],
+          "occupational": {
+            "status": "pass",
+            "reason": "資料の状態と活用履歴を保存担当者と記録する役割。分解・清掃・材質別処置の実行方法は示さない。"
+          },
+          "editorial": {
+            "status": "pass",
+            "reason": "前回答とは独立する承認済みの例。必須記録を全部そろえた上で、位置、写真対応、過去記録の整理を比較する。"
+          },
+          "optionChecks": [
+            {
+              "optionId": "option-1",
+              "status": "pass",
+              "reason": "箇所の位置を全体図と結ぶため、拡大像のどこかを共有できる。位置だけで状態の詳細は確定しない。"
+            },
+            {
+              "optionId": "option-2",
+              "status": "pass",
+              "reason": "全体と近接写真の対応により再照合できる。光や角度による差を、状態変化と即断しない。"
+            },
+            {
+              "optionId": "option-3",
+              "status": "pass",
+              "reason": "過去と今回の記録を日付と確認者で分ける。今回初めて記録した箇所を新しい傷と同一視しない。"
+            }
+          ]
+        },
+        {
+          "sceneId": "scene-3",
+          "optionIds": [
+            "option-1",
+            "option-2",
+            "option-3"
+          ],
+          "occupational": {
+            "status": "pass",
+            "reason": "返却後の状態照合と資料履歴の整理。保存判断・原因認定・責任判断は館と専門担当者へ残す。"
+          },
+          "editorial": {
+            "status": "pass",
+            "reason": "取扱い停止と所定保管は共通で実施済み。状態記録、受け渡し履歴、展示中の情報の三入口があり、写真の差を損傷と確定しない。"
+          },
+          "optionChecks": [
+            {
+              "optionId": "option-1",
+              "status": "pass",
+              "reason": "同じ資料番号と箇所を照合して比較を用意する。写真の見た目のみでは原因を確定せず専門確認へつなぐ。"
+            },
+            {
+              "optionId": "option-2",
+              "status": "pass",
+              "reason": "時系列と空白を整理するため経過が見える。未記録期間で損傷したと推定する誤りを避ける。"
+            },
+            {
+              "optionId": "option-3",
+              "status": "pass",
+              "reason": "展示先の記録から具体的な質問を作る。質問の段階で相手の不備を前提にせず、双方の情報をそろえる。"
+            }
+          ]
+        }
+      ],
+      "sha256": "fa576e3d786910c4b71affb262e712f71154e995c1ecc6afdab9f98f8fca5f92"
+    },
+    {
+      "slug": "product-developer-customer-use",
+      "sources": [
+        "docs/editorial/company-career-material.txt：第9章 マーチャンダイザー（商品企画の関連業務）",
+        "https://shigoto.mhlw.go.jp/User/Occupation/Detail/434"
+      ],
+      "scenes": [
+        {
+          "sceneId": "scene-1",
+          "optionIds": [
+            "option-1",
+            "option-2",
+            "option-3"
+          ],
+          "occupational": {
+            "status": "pass",
+            "reason": "発売後の声を調査し次の企画条件へつなぐ商品企画の仕事。技術設計や市場全体の統計推計を主題にしない。"
+          },
+          "editorial": {
+            "status": "pass",
+            "reason": "少数の声と未確認の利用条件を提示。物、場所、行動の三視点で反対の感想を読み解き、購入者全体への一般化を防ぐ。"
+          },
+          "optionChecks": [
+            {
+              "optionId": "option-1",
+              "status": "pass",
+              "reason": "物の種類と量は容量要件につながる。入るだけでは使用中の不便は分からず、出し入れや場所も残す。"
+            },
+            {
+              "optionId": "option-2",
+              "status": "pass",
+              "reason": "机と周りの物の関係は占有の不満に対応。特定の机の事例を対象全体へ適用しない。"
+            },
+            {
+              "optionId": "option-3",
+              "status": "pass",
+              "reason": "取り出しと戻す場面を聞くため困る行動を具体化できる。本人の記憶から全行動を再現したとはしない。"
+            }
+          ]
+        },
+        {
+          "sceneId": "scene-2",
+          "optionIds": [
+            "option-1",
+            "option-2",
+            "option-3"
+          ],
+          "occupational": {
+            "status": "pass",
+            "reason": "対象と価格の方向を踏まえ、設計部門へコンセプトを提案する企画業務。構造成立や製造安全を単独決定しない。"
+          },
+          "editorial": {
+            "status": "pass",
+            "reason": "前回答と別の対象設定を明示。面積を増やさず使いやすくする目的に、区分、可変区画、高さの三方向が対応する。"
+          },
+          "optionChecks": [
+            {
+              "optionId": "option-1",
+              "status": "pass",
+              "reason": "頻度で置き場を分ける提案はよく使う物の探索に対応。頻度の個人差と固定しすぎる制約を残す。"
+            },
+            {
+              "optionId": "option-2",
+              "status": "pass",
+              "reason": "仕切り可変という方向に、持ち物の差への対応と調整負担・費用を対にして記載する。"
+            },
+            {
+              "optionId": "option-3",
+              "status": "pass",
+              "reason": "高さを使う案に対し、届きやすさ・視界・安定性の検証が必要。成立を宣言せず設計相談の案にする。"
+            }
+          ]
+        },
+        {
+          "sceneId": "scene-3",
+          "optionIds": [
+            "option-1",
+            "option-2",
+            "option-3"
+          ],
+          "occupational": {
+            "status": "pass",
+            "reason": "利用者の試用を商品企画の改善へつなぐ調査業務。品質試験や売上予測と混同しない。"
+          },
+          "editorial": {
+            "status": "pass",
+            "reason": "安全に試せる試作と協力者を提示。動作、机上空間、期待との差の三入口を、条件を記録する試用へ対応させる。"
+          },
+          "optionChecks": [
+            {
+              "optionId": "option-1",
+              "status": "pass",
+              "reason": "指定課題と自由な使用の両方を見て、見られる影響を残す。観察だけで内心を断定しない。"
+            },
+            {
+              "optionId": "option-2",
+              "status": "pass",
+              "reason": "机と本の条件を記録することで占有を具体化する。一種類の机での結果を対象全体へ広げない。"
+            },
+            {
+              "optionId": "option-3",
+              "status": "pass",
+              "reason": "使用前の期待と使用後を聞くためギャップを検討できる。肯定を誘導せず、感想だけで動作を分かった扱いにしない。"
+            }
+          ]
+        }
+      ],
+      "sha256": "7c800d7a81cbffde84a351bdfa49ca1073a0d264b65985200a56bab0c27035a5"
+    },
+    {
+      "slug": "game-planner-tool-choices",
+      "sources": [
+        "docs/editorial/company-career-material.txt：第1章 ゲームプランナー／ゲームデザイナー",
+        "https://www.nintendo.co.jp/jobs/introduction/planning/index.html",
+        "https://shirusen.mext.go.jp/job_library/ゲームクリエイター/"
+      ],
+      "scenes": [
+        {
+          "sceneId": "scene-1",
+          "optionIds": [
+            "option-1",
+            "option-2",
+            "option-3"
+          ],
+          "occupational": {
+            "status": "pass",
+            "reason": "ゲームのルールと仕掛けの関係を設計し仕様へ落とすプランナーの職務。プレイヤーが有利な道具を当てる内容ではない。"
+          },
+          "editorial": {
+            "status": "pass",
+            "reason": "三道具と現在の同一効果を先に説明。役割分担、別経路、情報を重ねる三方向があり、情報不足で行き詰まらない経路を共通で確保する。"
+          },
+          "optionChecks": [
+            {
+              "optionId": "option-1",
+              "status": "pass",
+              "reason": "道具と場所の対応は役割を具体化する。対応当てだけになる懸念と選び直し・手掛かりの確認が対応。"
+            },
+            {
+              "optionId": "option-2",
+              "status": "pass",
+              "reason": "同じ目的地へ別の情報経路を作る案は過程の差を生む。制作量と全経路の情報整合を追加確認に置く。"
+            },
+            {
+              "optionId": "option-3",
+              "status": "pass",
+              "reason": "補足情報を重ねる案と再訪の意味が対応。往復負担と追加情報の価値の釣り合いを残す。"
+            }
+          ]
+        },
+        {
+          "sceneId": "scene-2",
+          "optionIds": [
+            "option-1",
+            "option-2",
+            "option-3"
+          ],
+          "occupational": {
+            "status": "pass",
+            "reason": "進行・ステージ・ゲームサイクルを設計する業務。工数や実装は制作チームと確認し、一案の有効性を資料が保証したとはしない。"
+          },
+          "editorial": {
+            "status": "pass",
+            "reason": "共通試作の二つ所持・拠点交換を明示し前案に非依存。行き先情報、途中交換、帰路短縮は選択の意味と再選択負担を調整する異なる方向。"
+          },
+          "optionChecks": [
+            {
+              "optionId": "option-1",
+              "status": "pass",
+              "reason": "出発前の見通しを増やす案は戻る前に選べる情報へ作用。答えが分かりすぎる限界を明記。"
+            },
+            {
+              "optionId": "option-2",
+              "status": "pass",
+              "reason": "途中交換は再選択までの距離へ作用。地点数が選択制約を変えるため、多ければよいとしない。"
+            },
+            {
+              "optionId": "option-3",
+              "status": "pass",
+              "reason": "拠点交換を維持して帰路を短くする案。移動を省く条件が探索のつながりを変える限界に対応する。"
+            }
+          ]
+        },
+        {
+          "sceneId": "scene-3",
+          "optionIds": [
+            "option-1",
+            "option-2",
+            "option-3"
+          ],
+          "occupational": {
+            "status": "pass",
+            "reason": "モニタープレイの行動と反応を分析し意図と照合する職務。操作不具合は別の検証対象として保持する。"
+          },
+          "editorial": {
+            "status": "pass",
+            "reason": "別の共通試作と統一した操作説明を明示。選択理由、使用箇所、選び直しの三軸でルールが生む行動を観察する。"
+          },
+          "optionChecks": [
+            {
+              "optionId": "option-1",
+              "status": "pass",
+              "reason": "区切り後の理由聴取と観察を組み合わせ、事後説明をその瞬間の全思考とは扱わない。"
+            },
+            {
+              "optionId": "option-2",
+              "status": "pass",
+              "reason": "場所を図へ記録し利用機会を見られる。未使用を不要と決めず、気づきや理由を確かめる。"
+            },
+            {
+              "optionId": "option-3",
+              "status": "pass",
+              "reason": "再選択の過程と感想を合わせ、短時間なら負担がないと断定しない。行動と本人の声を分けて残す。"
+            }
+          ]
+        }
+      ],
+      "sha256": "ceb8369218bfb18020e12de3ca23c51b8a5d0fbc315c69a35847d56b6a7f86ed"
+    },
+    {
+      "slug": "engineer-duplicate-submission",
+      "sources": [
+        "docs/editorial/company-career-material.txt：第1章 SE・プログラマ（Web業務は補完）",
+        "https://developer.mozilla.org/ja/docs/Web/HTTP/Reference/Methods/POST",
+        "https://docs.aws.amazon.com/wellarchitected/2022-03-31/framework/rel_prevent_interaction_failure_idempotent.html",
+        "https://shigoto.mhlw.go.jp/User/Occupation/Detail/314"
+      ],
+      "scenes": [
+        {
+          "sceneId": "scene-1",
+          "optionIds": [
+            "option-1",
+            "option-2",
+            "option-3"
+          ],
+          "occupational": {
+            "status": "pass",
+            "reason": "Webの依頼・通信・DB保存・応答を追う不具合調査。ディレクターの導線企画だけでなく処理対応を具体化する。"
+          },
+          "editorial": {
+            "status": "pass",
+            "reason": "許可済みテスト環境と二件登録を提示。操作送信、受信保存、保存応答の三地点で原因を絞り、連打防止のみの完了にしない。"
+          },
+          "optionChecks": [
+            {
+              "optionId": "option-1",
+              "status": "pass",
+              "reason": "操作と通信の回数を比べるため一回と再操作を区別できる。送信数と登録数の一致は仮定しない。"
+            },
+            {
+              "optionId": "option-2",
+              "status": "pass",
+              "reason": "依頼と保存記録を対応させる利点に、内容一致だけで同じ意図と判定できない限界が対応。"
+            },
+            {
+              "optionId": "option-3",
+              "status": "pass",
+              "reason": "処理完了と画面応答の時差を調べ、失敗に見える状態を検討する。速度向上だけでは再送対策にならない。"
+            }
+          ]
+        },
+        {
+          "sceneId": "scene-2",
+          "optionIds": [
+            "option-1",
+            "option-2",
+            "option-3"
+          ],
+          "occupational": {
+            "status": "pass",
+            "reason": "サーバー側で一つの論理的依頼を識別し、保存と応答を検証するエンジニアの仕事。AWSの再送識別設計は参考で、番号だけで効果を保証しない。"
+          },
+          "editorial": {
+            "status": "pass",
+            "reason": "同じ申し込みに同じ番号を使用する共通設計。並行、応答喪失、内容違いの三境界条件を同じテスト設計段階へ置く。"
+          },
+          "optionChecks": [
+            {
+              "optionId": "option-1",
+              "status": "pass",
+              "reason": "先行処理中の再送でも保存を増やさないかを調べる。処理中と完了を分け、通信切断の検証は別に残す。"
+            },
+            {
+              "optionId": "option-2",
+              "status": "pass",
+              "reason": "保存後の応答喪失を再現するため既存受付の再利用を検証できる。保存前の失敗と混同しない。"
+            },
+            {
+              "optionId": "option-3",
+              "status": "pass",
+              "reason": "同番号・異内容を仕様どおり拒否等の扱いにできるか検証する。別番号の正当な新規まで妨げない確認も残す。"
+            }
+          ]
+        },
+        {
+          "sceneId": "scene-3",
+          "optionIds": [
+            "option-1",
+            "option-2",
+            "option-3"
+          ],
+          "occupational": {
+            "status": "pass",
+            "reason": "サーバーの状態・保存結果と画面の結合テスト。単なる表示コピーの選定ではなく状態遷移と再送の対応を具体化する。"
+          },
+          "editorial": {
+            "status": "pass",
+            "reason": "受付済み・処理中・結果不明を選択前に提示。全案で同じ依頼の番号を保ち、結果不明を成功や失敗と断言しない。"
+          },
+          "optionChecks": [
+            {
+              "optionId": "option-1",
+              "status": "pass",
+              "reason": "既存の受付結果を同じ依頼へ返すか確認する。権限確認も必要とし、番号の一致だけで個人情報を返さない。"
+            },
+            {
+              "optionId": "option-2",
+              "status": "pass",
+              "reason": "処理中に別件を作らず待機・確認へ進む対応を検証。無期限に待たせず期限後の案内も決める。"
+            },
+            {
+              "optionId": "option-3",
+              "status": "pass",
+              "reason": "確認通信も失敗する条件を試し、再確認・問い合わせの経路を残す。運営側の調査手順まで必要な限界を示す。"
+            }
+          ]
+        }
+      ],
+      "sha256": "34f54662dff2553847658f9cb5a454f3cb8c2fef7b9b4b19a6f3fb587c4ae14b"
+    },
+    {
+      "slug": "childcare-block-town",
+      "sources": [
+        "docs/editorial/company-career-material.txt：第17章 保育士",
+        "https://shigoto.mhlw.go.jp/User/Occupation/Detail/131"
+      ],
+      "scenes": [
+        {
+          "sceneId": "scene-1",
+          "optionIds": [
+            "option-1",
+            "option-2",
+            "option-3"
+          ],
+          "occupational": {
+            "status": "pass",
+            "reason": "子どもの興味を観察し安心できる遊びの環境を整える保育士の職務。完成形の指導や一場面からの発達評価ではない。"
+          },
+          "editorial": {
+            "status": "pass",
+            "reason": "四歳児の道と並行する遊びを提示。言葉、試す動き、周りとの位置関係を観察する三視点で、安全援助は全案に共通。"
+          },
+          "optionChecks": [
+            {
+              "optionId": "option-1",
+              "status": "pass",
+              "reason": "道の行き先を短く尋ね、本人の思いを聞く案。返答を求め続けず遊びを尊重する限界に対応。"
+            },
+            {
+              "optionId": "option-2",
+              "status": "pass",
+              "reason": "繰り返す行動を観察し言葉にならない関心を考える。見た動きを意図そのものとは扱わない。"
+            },
+            {
+              "optionId": "option-3",
+              "status": "pass",
+              "reason": "周りの通路や別の遊びも見るため環境を全体で調整できる。保育士都合で形を変えず本人に聞く。"
+            }
+          ]
+        },
+        {
+          "sceneId": "scene-2",
+          "optionIds": [
+            "option-1",
+            "option-2",
+            "option-3"
+          ],
+          "occupational": {
+            "status": "pass",
+            "reason": "子どもが試せる物・空間・関わりを支える保育。完成品を保育士が先に作る援助に限定しない。"
+          },
+          "editorial": {
+            "status": "pass",
+            "reason": "別場面の橋、使用確認済み材料、空間の余地を提示。材料追加、場所調整、希望する子との関わりは同段階の援助。"
+          },
+          "optionChecks": [
+            {
+              "optionId": "option-1",
+              "status": "pass",
+              "reason": "長さの違う物を手に取れる環境と自分で選ぶ機会が対応。物の追加量を無制限に増やさない。"
+            },
+            {
+              "optionId": "option-2",
+              "status": "pass",
+              "reason": "本人の希望から間隔・場所を考える案。通路安全と本人が残したい形を両立する相談にする。"
+            },
+            {
+              "optionId": "option-3",
+              "status": "pass",
+              "reason": "本人も相手も関心がある場合に接続する。共同遊びを強制せず、一人で試す権利を残す。"
+            }
+          ]
+        },
+        {
+          "sceneId": "scene-3",
+          "optionIds": [
+            "option-1",
+            "option-2",
+            "option-3"
+          ],
+          "occupational": {
+            "status": "pass",
+            "reason": "観察・記録を継続する保育と保育士間共有へつなぐ業務。記録で発達上の成果が保証されるとはしない。"
+          },
+          "editorial": {
+            "status": "pass",
+            "reason": "場所を午後使うので作品は残せない条件を提示。写真、本人の絵、本人の言葉の三手段があり、明日の遊びを固定しない。"
+          },
+          "optionChecks": [
+            {
+              "optionId": "option-1",
+              "status": "pass",
+              "reason": "園の撮影運用と本人が残したい所を確認する。形の再現を強制せず、写真に残らない思いも聞く。"
+            },
+            {
+              "optionId": "option-2",
+              "status": "pass",
+              "reason": "本人が描きたい場合に表す機会を用意。表現を片付け後の義務にせず代替方法を残す。"
+            },
+            {
+              "optionId": "option-3",
+              "status": "pass",
+              "reason": "本人の次の思いを保育士が記す案。保育士の解釈を本人の言葉として補作しない。"
+            }
+          ]
+        }
+      ],
+      "sha256": "3b14b3d7d3423a4129c87d6362e32b5bc5d677ae36af60194a42091cd30fa571"
+    },
+    {
+      "slug": "video-producer-location-sound",
+      "sources": [
+        "docs/editorial/company-career-material.txt：第5章 映像・CMディレクター",
+        "https://homeworkers.mhlw.go.jp/casestudy/work/work10.html"
+      ],
+      "scenes": [
+        {
+          "sceneId": "scene-1",
+          "optionIds": [
+            "option-1",
+            "option-2",
+            "option-3"
+          ],
+          "occupational": {
+            "status": "pass",
+            "reason": "映像の構成・演出と撮影・音声への具体指示を行うディレクターの職務。専門的な録音機材操作は音声担当と分担する。"
+          },
+          "editorial": {
+            "status": "pass",
+            "reason": "一分と撮れる三種の素材を提示。作業の流れ、空間の広がり、人の声という構成上の違いがあり、架空の同時性を作らない。"
+          },
+          "optionChecks": [
+            {
+              "optionId": "option-1",
+              "status": "pass",
+              "reason": "作業映像と音を時間関係に沿ってつなぐ案。過程が見える利点に、通り全体が分かりにくい懸念が対応。"
+            },
+            {
+              "optionId": "option-2",
+              "status": "pass",
+              "reason": "広景から店へ近づく構成で場所の導入を作る。長すぎる広景は店の時間を減らす一分内の制約を明記。"
+            },
+            {
+              "optionId": "option-3",
+              "status": "pass",
+              "reason": "許可されたあいさつを入口にし、誰の声か文脈を保持。一つの声を全体の代表にしない。"
+            }
+          ]
+        },
+        {
+          "sceneId": "scene-2",
+          "optionIds": [
+            "option-1",
+            "option-2",
+            "option-3"
+          ],
+          "occupational": {
+            "status": "pass",
+            "reason": "素材の使用方針を決め、録音や編集の担当者へ意図を伝える仕事。技術的なノイズ除去を自己判断で保証しない。"
+          },
+          "editorial": {
+            "status": "pass",
+            "reason": "現場再収録・別録り・発言不使用の可否を選択前に明示。全案で本人の了承と事実関係を確認し、聞こえない言葉を補作しない。"
+          },
+          "optionChecks": [
+            {
+              "optionId": "option-1",
+              "status": "pass",
+              "reason": "現場の雰囲気と声を同時に残したい案に対応。再収録で車の音がなくなる保証はせず時間と代案を残す。"
+            },
+            {
+              "optionId": "option-2",
+              "status": "pass",
+              "reason": "静かな別録りで言葉を優先できる見通しと、口の動き・現場音との整合が対応。別録りを生録と偽る案にしない。"
+            },
+            {
+              "optionId": "option-3",
+              "status": "pass",
+              "reason": "言葉を使わず別の使用可能素材で構成する条件がある。声の関わりが減る懸念を依頼目的と再照合する。"
+            }
+          ]
+        },
+        {
+          "sceneId": "scene-3",
+          "optionIds": [
+            "option-1",
+            "option-2",
+            "option-3"
+          ],
+          "occupational": {
+            "status": "pass",
+            "reason": "漠然とした感想を比較する編集指示へ変える演出業務。原因を断定せず、音・画面配分・切替位置の仮説を具体化する。"
+          },
+          "editorial": {
+            "status": "pass",
+            "reason": "初見の感想と使用可能素材を提示。比較対象以外の条件をそろえる方針を共通とし、少人数の声を全体へ一般化しない。"
+          },
+          "optionChecks": [
+            {
+              "optionId": "option-1",
+              "status": "pass",
+              "reason": "同じ映像で音を残す区間を比べるため周囲音の寄与を検討。音量を増やすだけの正解にせず素材対応も守る。"
+            },
+            {
+              "optionId": "option-2",
+              "status": "pass",
+              "reason": "音の構成をそろえ画面の時間配分を変えるため場所の情報量を検討。手元説明が短くなる制約も読む。"
+            },
+            {
+              "optionId": "option-3",
+              "status": "pass",
+              "reason": "同じ素材と全体尺で音画の切替位置を比較し、連続の感じ方を検討。別場所や時刻を同一出来事に見せる誤認を防ぐ。"
+            }
+          ]
+        }
+      ],
+      "sha256": "92d3ca831bfe0352a0884c464bc20602f5f4600fe21151c0d67f20f9e03bc4e1"
+    }
+  ]
+}

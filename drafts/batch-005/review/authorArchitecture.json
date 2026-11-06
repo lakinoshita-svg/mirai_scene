@@ -1,0 +1,115 @@
+{
+  "entries": [
+    {
+      "slug": "architect-site-verification",
+      "sources": [
+        "docs/editorial/company-career-material.txt：第4章 建築士",
+        "https://shigoto.mhlw.go.jp/User/Occupation/Detail/20",
+        "https://www.mlit.go.jp/jutakukentiku/house/jutakukentiku_house_fr_000019.html",
+        "https://www.mlit.go.jp/common/000048580.pdf"
+      ],
+      "scenes": [
+        {
+          "sceneId": "scene-1",
+          "occupational": {
+            "status": "pass",
+            "reason": "設計図・材料の指定と納入材料を照合する工事監理の役割。施工者の発注・作業指揮と区別し、品番が違う理由を調べることと材料の採用を決めることを分ける。"
+          },
+          "editorial": {
+            "status": "pass",
+            "reason": "未施工、使用保留、現品ラベル・納品書・メーカー資料という共通条件がある。現品と納品書、設計の指定、品番の性質という三つの照合の入口があり、全案で必要資料を併用する。"
+          },
+          "optionChecks": [
+            {
+              "optionId": "option-1",
+              "status": "pass",
+              "reason": "現品と書類の対応を調べるため記載違いと納品物の違いを区別する入口になる。その一致は設計適合を意味しないという限界が対応する。"
+            },
+            {
+              "optionId": "option-2",
+              "status": "pass",
+              "reason": "基準となる指定と決定記録をたどり、同じ指定が共有されているかを調べる案。現品の性質は別の資料が必要で、書類だけで材料を認めない。"
+            },
+            {
+              "optionId": "option-3",
+              "status": "pass",
+              "reason": "二つの品番の性質を調べる方法と、照合材料が得られる利点がつながる。メーカーの説明だけで当該住宅への適合を確定せず手続きと建築主の確認を残す。"
+            }
+          ],
+          "optionIds": [
+            "option-1",
+            "option-2",
+            "option-3"
+          ]
+        },
+        {
+          "sceneId": "scene-2",
+          "occupational": {
+            "status": "pass",
+            "reason": "施工段階に合わせた立会い・書類確認を計画する建築士の業務。壁内の断熱材を対象に設計との照合を扱い、断熱工事の実施方法や安全指揮は扱わない。"
+          },
+          "editorial": {
+            "status": "pass",
+            "reason": "壁を閉じる前という確認時期を選択前に提示。日程、対象箇所、記録内容の三案は確認計画を具体化する同じ段階で、どれかだけで完了させない。"
+          },
+          "optionChecks": [
+            {
+              "optionId": "option-1",
+              "status": "pass",
+              "reason": "工程と確認時期を合わせると見えなくなる前の確認を準備できる。日程のみでは対象や資料が決まらないという懸念がつながる。"
+            },
+            {
+              "optionId": "option-2",
+              "status": "pass",
+              "reason": "図面上の対象と指定を整理し、施工者との照合対象を共有できる。図面への印は現場確認の実施ではないという区別を維持する。"
+            },
+            {
+              "optionId": "option-3",
+              "status": "pass",
+              "reason": "位置・段階・材料と記録を結びつける方法は後の照合に対応する。写真の枚数を確認の十分さとせず、記録外の確認方法も計画する。"
+            }
+          ],
+          "optionIds": [
+            "option-1",
+            "option-2",
+            "option-3"
+          ]
+        },
+        {
+          "sceneId": "scene-3",
+          "occupational": {
+            "status": "pass",
+            "reason": "工事監理の確認記録を建築主への途中報告にまとめる仕事。施工者の品質記録をそのまま転記せず設計との照合結果を示す。最終報告の完了判断とは区別。"
+          },
+          "editorial": {
+            "status": "pass",
+            "reason": "前の選択に依存しない共通例。位置が不明な写真を推測で確認済みにせず、根拠対応・項目別結果・追加確認計画という報告準備の入口を比較できる。"
+          },
+          "optionChecks": [
+            {
+              "optionId": "option-1",
+              "status": "pass",
+              "reason": "図面と写真を対応させる行動で箇所の根拠を追える。一致しても必要な状態が写るとは限らないという情報の限界がある。"
+            },
+            {
+              "optionId": "option-2",
+              "status": "pass",
+              "reason": "項目ごとに結果と未確認を分けることで写真有無だけの報告を避ける。理由を追うため資料へ戻れる形も必要とする。"
+            },
+            {
+              "optionId": "option-3",
+              "status": "pass",
+              "reason": "残る確認の方法と時期を整え次の行動を明らかにする。予定を実施済みと扱わず、得た根拠で再び確認することが懸念に対応する。"
+            }
+          ],
+          "optionIds": [
+            "option-1",
+            "option-2",
+            "option-3"
+          ]
+        }
+      ],
+      "sha256": "50e22f85ee82d485d70e513d48d01e72081b8c72086aa422c0db4a4e73083306"
+    }
+  ]
+}

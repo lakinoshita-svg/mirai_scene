@@ -19,6 +19,7 @@ ZIPを展開し、${prefix}/manuscript.html をブラウザで開いてくださ
 回答ごとの成立条件・確認理由は ${prefix}/review/answerChecks.md にあります。
 出典と確認範囲は ${prefix}/REVIEW.md にあります。
 自社資料の原文は docs/editorial/company-career-material.txt にあります。
+原稿が画像を参照する場合は public/assets/ 以下に同梱します。フォルダ構成を保つと原稿一覧にも表示されます。
 
 ■ 制作元へ取り込む
 編集元は ${prefix}/ 直下の${counts.experiences}個の職業JSONです。
@@ -50,10 +51,17 @@ export function packageDraftContent(batchId, { root = process.cwd(), outputDirec
 
   // 同梱対象を明示し、一時ファイルや別バッチの原稿を混ぜない。
   const prefix = `drafts/${batchId}`;
+  // review内の閲覧資料と照合記録を同じバッチから集める。別バッチや作業用フォルダは含めない。
+  const reviewDocuments = fs.readdirSync(path.join(batch.directory, 'review'), { withFileTypes: true })
+    .filter(entry => entry.isFile() && /\.(md|json)$/.test(entry.name))
+    .map(entry => `review/${entry.name}`);
+  const sourceMapping = 'docs/editorial/source-mapping.md';
   const relativeFiles = [
     ...batch.entries.map(entry => `${prefix}/${entry.file}`),
-    ...['README.md', 'REVIEW.md', 'review/occupationChecks.json', ...batch.documents].map(file => `${prefix}/${file}`),
+    ...new Set(['README.md', 'REVIEW.md', ...reviewDocuments, ...batch.documents].map(file => `${prefix}/${file}`)),
     'docs/editorial/company-career-material.txt',
+    ...(fs.existsSync(path.join(root, sourceMapping)) ? [sourceMapping] : []),
+    ...batch.assets.map(asset => asset.path),
   ];
   const files = relativeFiles.map(relativePath => {
     const sourcePath = path.join(root, relativePath);

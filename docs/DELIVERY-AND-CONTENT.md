@@ -40,7 +40,7 @@ PowerShellで `Get-FileHash deliveries/release-2026-10-16/miraiSceneShinronavi20
 npm run content:package-drafts -- batch-002
 ```
 
-確認記録と原稿を照合して原稿一覧・回答確認表・職種確認表を生成し、原稿JSON・自社資料の原文とともにZIPへ収録する。Windows PowerShellが必要。出力は `outputs/contentReview/<batch-id>/<UTC日時>/`。ZIP内全ファイルとmanifestを照合し、既存ZIPは上書きしない。展開後は `drafts/<batch-id>/manuscript.html` を開く。確認記録は `review/occupationChecks.json` が正本で、Markdownの確認表は生成物。
+確認記録と原稿を照合して原稿一覧・回答確認表・職種確認表を生成し、原稿JSON・自社資料の原文とともにZIPへ収録する。バッチのreview直下にあるMarkdown・JSONも収録するため、根拠対照表や画面確認記録を一緒に渡せる。自社資料の対応表がある場合も同梱する。Windows PowerShellが必要。出力は `outputs/contentReview/<batch-id>/<UTC日時>/`。ZIP内全ファイルとmanifestを照合し、既存ZIPは上書きしない。展開後は `drafts/<batch-id>/manuscript.html` を開く。確認記録は `review/occupationChecks.json` が正本で、Markdownの確認表は生成物。
 
 このZIPは原稿と確認資料の受け渡し用。進路ナビへ配置する生成HTML・一覧・接続部品の配布は、一式またはコンテンツ差分の手順を使う。
 

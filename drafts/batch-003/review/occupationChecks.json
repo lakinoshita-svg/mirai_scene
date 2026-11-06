@@ -1,0 +1,1124 @@
+{
+  "batchId": "batch-003",
+  "reviewType": "twoPassSelfReview",
+  "passes": {
+    "occupational": {
+      "reviewer": "Codex（同一担当による自己確認）",
+      "checkedAt": "2026-10-23",
+      "method": "自社原文とjob tagの10職業の本文を照合し、Adobe・W3C・総務省統計局・USDA・日本ヘアカラー協会の一次資料を補完。短い引用と該当節をsourceEvidence.mdに残し、全30シーンの職業上の事実・教材設定・判断の見通しを区別。"
+    },
+    "editorial": {
+      "reviewer": "Codex（同一担当による二巡目の自己確認）",
+      "checkedAt": "2026-10-23",
+      "method": "全30シーン・90案の状況、問い、共通解説、説明、良い点、懸念点、振り返りを再読。数値と単位、選択肢の違い、前提の記載、集団と個人・因果の区別、前の選択への非依存を照合。passは教材条件での編集整合を示し、実務効果の実証を意味しない。"
+    }
+  },
+  "limitations": [
+    "同一Codexによる資料照合と二段階の自己確認。資料発行者からの個別回答、独立レビュー、実務経験者の確認ではない。",
+    "実務経験者の確認、高校生による読解・所要時間の確認、公開承認は未実施。",
+    "各案の効果は未実測。passは架空の教材条件での整合を表し、資料が全90案の実務上の効果・安全性・最善を認定した意味ではない。",
+    "業務資料・補完資料・原稿の対応と、資料だけでは確定しない範囲はreview/sourceEvidence.mdに記載。"
+  ],
+  "entries": [
+    {
+      "slug": "designer-shop-card",
+      "sources": [
+        "docs/editorial/company-career-material.txt：第6章 グラフィックデザイナー",
+        "https://shigoto.mhlw.go.jp/User/Occupation/Detail/334",
+        "https://helpx.adobe.com/jp/creative-cloud/apps/colors/understand-color-modes.html",
+        "https://helpx.adobe.com/jp/photoshop/using/color-managing-documents--printing.html"
+      ],
+      "scenes": [
+        {
+          "sceneId": "scene-1",
+          "optionIds": [
+            "option-1",
+            "option-2",
+            "option-3"
+          ],
+          "occupational": {
+            "status": "pass",
+            "reason": "自社原文の紙面設計とjob tagの目的・媒体の確認、レイアウト制作に対応。編集者の取材企画ではなく、同じ情報を表裏へ配置する判断を扱う。"
+          },
+          "editorial": {
+            "status": "pass",
+            "reason": "再訪の案内と店の印象という二つの目的を先に提示。全案で店名・営業時間・定休日・場所を保持し、配置の違いだけを比較する。"
+          },
+          "optionChecks": [
+            {
+              "optionId": "option-1",
+              "status": "pass",
+              "reason": "表を印象、裏を案内に分ける案。情報を一面で探せる利点と、裏へ気付かない限界が同じ構成に対応する。必要情報を省く案ではない。"
+            },
+            {
+              "optionId": "option-2",
+              "status": "pass",
+              "reason": "店名と営業時間を表で結び付ける案。店の開いている時間を知れる利点に対し、定休日も一緒に扱う条件と、場所は裏を読む必要がある構成を確認。"
+            },
+            {
+              "optionId": "option-3",
+              "status": "pass",
+              "reason": "店名と場所を表で結び付ける案。訪れた位置の記憶を助け得る一方、地図の面積が絵の面積を減らすという紙面内の制約に対応。"
+            }
+          ]
+        },
+        {
+          "sceneId": "scene-2",
+          "optionIds": [
+            "option-1",
+            "option-2",
+            "option-3"
+          ],
+          "occupational": {
+            "status": "pass",
+            "reason": "job tagの表現案の提示・依頼者との検討に対応。店名・絵・文字情報の見え方というグラフィック固有の対象を扱い、調査結果の一般化はしない。"
+          },
+          "editorial": {
+            "status": "pass",
+            "reason": "前の選択と独立する比較用案と明記。二枚の情報・配色・寸法は同じで、重点と配置が異なる。記憶・情報探索・店の印象の三軸は別々の判断材料になる。"
+          },
+          "optionChecks": [
+            {
+              "optionId": "option-1",
+              "status": "pass",
+              "reason": "短時間の印象を尋ねるため、覚えた店名と絵を聞く行動が問いに対応する。店主の既知情報と提示順の影響を残し、記憶向上を保証しない。"
+            },
+            {
+              "optionId": "option-2",
+              "status": "pass",
+              "reason": "実寸の試し刷りを使える条件が状況にある。営業時間と定休日の探索を文字の大きさ・位置へ結び付け、雰囲気の評価までできるとはしない。"
+            },
+            {
+              "optionId": "option-3",
+              "status": "pass",
+              "reason": "色・文字・絵・余白の具体部分について理由を尋ねる。店主の感覚を制作要素へ移せる利点と、初来店者の受け取り方は未確認という限界がつながる。"
+            }
+          ]
+        },
+        {
+          "sceneId": "scene-3",
+          "optionIds": [
+            "option-1",
+            "option-2",
+            "option-3"
+          ],
+          "occupational": {
+            "status": "pass",
+            "reason": "job tagの印刷会社への色の指示・校正と、Adobeの色域・機器プロファイル・用紙とインクの説明を照合。画面と紙の完全一致や、紙だけが原因という断定をしない。"
+          },
+          "editorial": {
+            "status": "pass",
+            "reason": "暗く感じたという観察は架空の条件。画面と印刷の仕組みの違いを共通解説に示し、変える要素以外の条件をそろえて三つの確認の入口を比べる。各案の効果を実証したとはしない。"
+          },
+          "optionChecks": [
+            {
+              "optionId": "option-1",
+              "status": "pass",
+              "reason": "同じデータを用紙違いで比べ、紙の要因を検討する。実物の印象を相談できる利点に対し、用紙の利用可否・費用・納期の確認が必要な範囲を示す。"
+            },
+            {
+              "optionId": "option-2",
+              "status": "pass",
+              "reason": "用紙を固定して色指定だけを比べるため、変える条件がそろう。紙で見られる利点と、画面上の値だけでは確認できず再試作の回数にも制約がある点が対応。"
+            },
+            {
+              "optionId": "option-3",
+              "status": "pass",
+              "reason": "店内で現物を見る行動は、使う場所で何が暗いのかを特定する入口になる。照明条件の限界を明示し、どこでも同じ色になるとはしない。"
+            }
+          ]
+        }
+      ],
+      "sha256": "3aef0aa16828cc4ea1b2e9b0c49a9756ec17f45570238060e7f3581a0fac3c47"
+    },
+    {
+      "slug": "architect-entry-storage",
+      "sources": [
+        "docs/editorial/company-career-material.txt：第4章 建築士",
+        "https://shigoto.mhlw.go.jp/User/Occupation/Detail/20"
+      ],
+      "scenes": [
+        {
+          "sceneId": "scene-1",
+          "optionIds": [
+            "option-1",
+            "option-2",
+            "option-3"
+          ],
+          "occupational": {
+            "status": "pass",
+            "reason": "自社原文の用途・使いやすさを考える設計、job tagの依頼者との調査・空間条件の整理に対応。物や動きを棚の寸法・配置に結び付けるため、単なる片付け助言にしない。"
+          },
+          "editorial": {
+            "status": "pass",
+            "reason": "現況調査は共通条件。帰宅・物・朝の同時利用の三方向を図面の条件へ結び付ける。振り返りの引用は状況の「朝は出入りしにくい」と対応し、狭さの原因を断定しない。"
+          },
+          "optionChecks": [
+            {
+              "optionId": "option-1",
+              "status": "pass",
+              "reason": "帰宅時の動きを現況図へ重ねるため、途中で物を置く位置と収納の関係が判断材料になる。朝の重なりや量は別確認とし、一日の生活全体が分かるとはしない。"
+            },
+            {
+              "optionId": "option-2",
+              "status": "pass",
+              "reason": "使用頻度と実物寸法は棚の高さ・奥行きの条件を作る。収まるだけでは出し入れは分からず、前に立てる範囲も確かめるという限界が対応。"
+            },
+            {
+              "optionId": "option-3",
+              "status": "pass",
+              "reason": "朝の立ち位置と移動を聞くことで、同時利用の重なりを配置へ反映する。決まった外出順だけに合わせることの限界を示し、時間調整だけで解決させない。"
+            }
+          ]
+        },
+        {
+          "sceneId": "scene-2",
+          "optionIds": [
+            "option-1",
+            "option-2",
+            "option-3"
+          ],
+          "occupational": {
+            "status": "pass",
+            "reason": "job tagの機能・空間の要件を定めて設計図を作る仕事に対応。収納の扉・奥行き・壁面配置を比較し、施工会社へ現場の監督権限を越えて指示する内容は含めない。"
+          },
+          "editorial": {
+            "status": "pass",
+            "reason": "扉方式・壁面・室内収納を検討可能と提示。通路との重なりがある設定であり、全く通れなくなると誇張しない。全案で構造・設備・安全性と実際の動きを確認する。"
+          },
+          "optionChecks": [
+            {
+              "optionId": "option-1",
+              "status": "pass",
+              "reason": "扉の張り出しを減らす方法として横に動く方式を提案する。棚位置を保てる可能性と、一度に開く幅・かばんの出し入れ・費用という残る確認が対応。"
+            },
+            {
+              "optionId": "option-2",
+              "status": "pass",
+              "reason": "室内収納を使える前提があるため、大きな物の置き分けを比較できる。玄関の占有を減らす利点に、取りに行く負担と室内側の容量の懸念をそろえた。"
+            },
+            {
+              "optionId": "option-3",
+              "status": "pass",
+              "reason": "別壁面を検討できるため、扉前に立つ場所の移動が通路との関係を変える。照明・コンセント・別の扉との干渉を追加確認し、単なる位置変更で解決とはしない。"
+            }
+          ]
+        },
+        {
+          "sceneId": "scene-3",
+          "optionIds": [
+            "option-1",
+            "option-2",
+            "option-3"
+          ],
+          "occupational": {
+            "status": "pass",
+            "reason": "job tagの予算・材料・設備を調べて計画する業務に対応。材料見本、既製寸法、コンセント移設を含む見積という設計側の対象で、電気工事の実行手順を指示しない。"
+          },
+          "editorial": {
+            "status": "pass",
+            "reason": "前の回答とは別の比較用計画を扱うため分岐を仮定しない。予算超過と見積の内訳を提示し、収納量・通路を保つ条件、再見積と家族の了承は全案共通とした。"
+          },
+          "optionChecks": [
+            {
+              "optionId": "option-1",
+              "status": "pass",
+              "reason": "寸法を保ちながら仕上げ材を比べる案。材料費と見た目を調整できる可能性に対し、加工費を含む全体金額と傷・手入れも確認するため、安価化を保証しない。"
+            },
+            {
+              "optionId": "option-2",
+              "status": "pass",
+              "reason": "既製収納は本体価格だけでなく取付・隙間処理・収納量を図面と照合する案。寸法調整による追加工事を含めるため、価格比較の前提がそろう。"
+            },
+            {
+              "optionId": "option-3",
+              "status": "pass",
+              "reason": "配置を変えて既存コンセントをふさがない案を検討し、移設要否を施工会社へ確認する。別工事や使いにくさが増える可能性を残し、移設省略を単独の正解にしない。"
+            }
+          ]
+        }
+      ],
+      "sha256": "fa98f38d6c65e9ba99e29731840a93f82fae03aa37b21d44eefc9ba3bafbeb9c"
+    },
+    {
+      "slug": "chef-consistent-service",
+      "sources": [
+        "docs/editorial/company-career-material.txt：第10章 調理師（関連業務）",
+        "https://shigoto.mhlw.go.jp/User/Occupation/Detail/99",
+        "https://foodbuyingguide.fns.usda.gov/Home/ResourceCenter"
+      ],
+      "scenes": [
+        {
+          "sceneId": "scene-1",
+          "optionIds": [
+            "option-1",
+            "option-2",
+            "option-3"
+          ],
+          "occupational": {
+            "status": "pass",
+            "reason": "自社原文の料理を作る業務とjob tagの下ごしらえ・レシピによる調理・盛り付けに対応。料理長が基準を決め、担当料理人が具体化する範囲で、資格や栄養指導の権限を足さない。"
+          },
+          "editorial": {
+            "status": "pass",
+            "reason": "ひと口大・お玉一杯という曖昧さと、切り方・具の量の二つの観察を提示。写真・計量・工程観察は同じ仕上がりを共有する異なる入口で、単独で全差をなくすとはしない。"
+          },
+          "optionChecks": [
+            {
+              "optionId": "option-1",
+              "status": "pass",
+              "reason": "切った野菜の見本を作るため、ひと口大の曖昧さへ直接対応する。共有できる大きさの利点と、一杯の具量は別の問題という限界が対応する。"
+            },
+            {
+              "optionId": "option-2",
+              "status": "pass",
+              "reason": "料理長の基準の具と汁をはかりで計り、容量を扱うお玉と区別する。USDAの容量と重さの説明に対応。料理長の具体の基準と盛り方の扱いやすさは試作で確認する条件。"
+            },
+            {
+              "optionId": "option-3",
+              "status": "pass",
+              "reason": "同じ材料・レシピで動作を見比べ、切り方やすくい方の判断箇所を特定する案。その場の協働だけでは一人の再現にならないため、目安を資料へ残す懸念がつながる。"
+            }
+          ]
+        },
+        {
+          "sceneId": "scene-2",
+          "optionIds": [
+            "option-1",
+            "option-2",
+            "option-3"
+          ],
+          "occupational": {
+            "status": "pass",
+            "reason": "job tagの盛り付け業務に対応。容量と重さの区別をUSDAのPortion Controlで確認し、同資料を日本のレストランの法的・衛生的な基準や個別の盛り方の実証にはしない。"
+          },
+          "editorial": {
+            "status": "pass",
+            "reason": "料理長の共通基準と衛生手順に合う道具・はかりを先に提示。鍋内を整える、具と汁を別々に扱う、途中計量で調整する三つの入口を区別し、営業前の試作で確かめる。"
+          },
+          "optionChecks": [
+            {
+              "optionId": "option-1",
+              "status": "pass",
+              "reason": "鍋の中を整えることとすくう動作をそろえる案。具の偏りを減らせるか試す行動であり、野菜の形と量が保たれるかという限界も扱う。"
+            },
+            {
+              "optionId": "option-2",
+              "status": "pass",
+              "reason": "具と汁を分けて扱うため、一杯の具量を独立して調整できる。工程が増える限界を述べ、営業前の試作から提供時の手数・時間を検討する。作り置き保存の手順ではない。"
+            },
+            {
+              "optionId": "option-3",
+              "status": "pass",
+              "reason": "最初・途中・最後の量を計り、差の出る段階ですくい方を調整して再試作する案。具と汁を別取りする案とは判断の入口が異なる。一部計量で全杯を保証せず、営業中の手間も残す。"
+            }
+          ]
+        },
+        {
+          "sceneId": "scene-3",
+          "optionIds": [
+            "option-1",
+            "option-2",
+            "option-3"
+          ],
+          "occupational": {
+            "status": "pass",
+            "reason": "job tagの従業員への教育・指導に対応。料理長のレシピを基準に、調理と盛り付けで使う目安を料理人間で共有する場面で、経営管理や商品企画とは区別する。"
+          },
+          "editorial": {
+            "status": "pass",
+            "reason": "共通レシピを使う場面と明記し、前の選択を採用した設定にしない。工程写真・口頭での判断共有・資料による試作という違いがあり、全案で受け手の理解を確かめる。"
+          },
+          "optionChecks": [
+            {
+              "optionId": "option-1",
+              "status": "pass",
+              "reason": "完成形に加え、切った野菜や一杯分の具の状態を示す案。途中で照合できる利点と、動き・力加減までは写真で分からない限界が対応する。"
+            },
+            {
+              "optionId": "option-2",
+              "status": "pass",
+              "reason": "実際の仕込みと盛り付け中に互いの判断を説明する案。省略されがちな目安を発見できる一方、後で使うための記録と料理長の共有が必要な範囲を示す。"
+            },
+            {
+              "optionId": "option-3",
+              "status": "pass",
+              "reason": "資料を使う料理人の迷いから不足を見つける案。経験者が質問しながら試せる条件で成立し、一人の再現だけで他の料理人にも通用すると一般化しない。"
+            }
+          ]
+        }
+      ],
+      "sha256": "5be8b306e04f955fa8c7c785cff4d9dcdf1dc5d598b633c5e26e6fbe58cfd77c"
+    },
+    {
+      "slug": "web-designer-mobile-guide",
+      "sources": [
+        "docs/editorial/company-career-material.txt：第6章 Webデザイナー",
+        "https://shigoto.mhlw.go.jp/User/Occupation/Detail/326",
+        "https://www.w3.org/WAI/WCAG22/Understanding/headings-and-labels.html",
+        "https://www.w3.org/WAI/WCAG22/Understanding/reflow.html"
+      ],
+      "scenes": [
+        {
+          "sceneId": "scene-1",
+          "optionIds": [
+            "option-1",
+            "option-2",
+            "option-3"
+          ],
+          "occupational": {
+            "status": "pass",
+            "reason": "自社原文の見た目と使いやすさ、job tagの目的に合うレイアウトと確認に対応。プロジェクトの統括でなく画面の情報配置を判断対象にする。"
+          },
+          "editorial": {
+            "status": "pass",
+            "reason": "同じ文字・図・寸法の二案を用意。探索、第一印象、操作の三つの確認方法を同じ段階で比較し、操作できる試作の用意も状況に提示。"
+          },
+          "optionChecks": [
+            {
+              "optionId": "option-1",
+              "status": "pass",
+              "reason": "日時と費用を探す観察がページの目的に直接対応。探索上の迷いが分かる利点と、魅力の伝わり方は別確認という限界を分けた。"
+            },
+            {
+              "optionId": "option-2",
+              "status": "pass",
+              "reason": "第一印象と記憶を尋ねる方法。提示順を入れ替える条件を示し、印象と情報探索を同一の成果にしない。"
+            },
+            {
+              "optionId": "option-3",
+              "status": "pass",
+              "reason": "操作できる試作がある前提で、スマホのスクロールとボタンの発見を観察する。静止画との差を確認し、実装後にも検証が必要とした。"
+            }
+          ]
+        },
+        {
+          "sceneId": "scene-2",
+          "optionIds": [
+            "option-1",
+            "option-2",
+            "option-3"
+          ],
+          "occupational": {
+            "status": "pass",
+            "reason": "画面上の言葉と操作の表現を調整するため、Webデザインの範囲に対応。申込処理を開発するエンジニアや制作全体を管理するディレクターの主業務にしない。"
+          },
+          "editorial": {
+            "status": "pass",
+            "reason": "移動先は参加条件、その先が申込フォームという共通の動作を明記。文言、近くの補足、手順の表示は併用可能で、どこから試すかを問う。"
+          },
+          "optionChecks": [
+            {
+              "optionId": "option-1",
+              "status": "pass",
+              "reason": "ボタン自身に直後の行動を書く案で、周囲を読まなくても目的が伝わる利点が対応する。長い文字と押せる範囲の確認を残す。"
+            },
+            {
+              "optionId": "option-2",
+              "status": "pass",
+              "reason": "誤解の内容を近くの補足で解く案。小さい補足は読まれない場合があるため、ボタン単独の意味との併用を促す。"
+            },
+            {
+              "optionId": "option-3",
+              "status": "pass",
+              "reason": "実際の手順と一致した段階表示で、送信までの見通しを示す案。表示量が主情報を圧迫する懸念も同じ画面条件に対応。"
+            }
+          ]
+        },
+        {
+          "sceneId": "scene-3",
+          "optionIds": [
+            "option-1",
+            "option-2",
+            "option-3"
+          ],
+          "occupational": {
+            "status": "pass",
+            "reason": "レイアウトの規則をエンジニアと共有するWebデザイナーの協働に対応。プログラミングや処理速度の保証を単独の職務としていない。"
+          },
+          "editorial": {
+            "status": "pass",
+            "reason": "小画面での単純縮小を問題とし、並び方、長い文字、実機操作という異なる確認対象を設定。長い教室名の例と相談相手を選択前に提示。"
+          },
+          "optionChecks": [
+            {
+              "optionId": "option-1",
+              "status": "pass",
+              "reason": "横から縦へ並べ直す規則を図で示すため、小画面の読み順の相談に直結する。ページが長くなりボタンまで遠くなる限界を残す。"
+            },
+            {
+              "optionId": "option-2",
+              "status": "pass",
+              "reason": "長い見出しや会場名で折り返しを検討する案。短い見本の欠点を探せる一方、本文とボタンの流れは別途確認する。"
+            },
+            {
+              "optionId": "option-3",
+              "status": "pass",
+              "reason": "実機で指による操作と間隔を見る案。画面上の見た目だけから押しやすさを断定せず、別の幅や文字拡大を確認項目に含む。"
+            }
+          ]
+        }
+      ],
+      "sha256": "ef8a1462e1546bdc432b9c9b3b46d7cd52e7e9e94c6c9bde86e224fc19200888"
+    },
+    {
+      "slug": "editor-source-numbers",
+      "sources": [
+        "docs/editorial/company-career-material.txt：第6章 編集者",
+        "https://shigoto.mhlw.go.jp/User/Occupation/Detail/210",
+        "https://www.stat.go.jp/naruhodo/7_shurui/zensu.html"
+      ],
+      "scenes": [
+        {
+          "sceneId": "scene-1",
+          "optionIds": [
+            "option-1",
+            "option-2",
+            "option-3"
+          ],
+          "occupational": {
+            "status": "pass",
+            "reason": "自社の本づくりの管理と、job tagの原稿整理・著者との確認に対応。調査を実施・認証する役割でなく、資料と原稿の対象範囲を照合する。"
+          },
+          "editorial": {
+            "status": "pass",
+            "reason": "40÷50＝80％の計算と対象を照合。誤った地域全体の表現は全案で直し、人数、割合、活動内容のどこを主に伝えるかを比較する。"
+          },
+          "optionChecks": [
+            {
+              "optionId": "option-1",
+              "status": "pass",
+              "reason": "50人中40人と対象を一文に入れ、人数の規模が読める利点がある。未回答者の気持ちは分からず、交流会全体へ一般化しない。"
+            },
+            {
+              "optionId": "option-2",
+              "status": "pass",
+              "reason": "割合と年・対象を主文、人数を近い注記に分ける構成。注記が遠いと読まれない限界を紙面の確認へ結び付ける。"
+            },
+            {
+              "optionId": "option-3",
+              "status": "pass",
+              "reason": "活動紹介を軸に数値を添え、何の評価かを伝える案。活動紹介の長さで結果が埋もれる懸念を示し、対象の省略はしない。"
+            }
+          ]
+        },
+        {
+          "sceneId": "scene-2",
+          "optionIds": [
+            "option-1",
+            "option-2",
+            "option-3"
+          ],
+          "occupational": {
+            "status": "pass",
+            "reason": "job tagの見出し整理、デザイナーと行う紙面制作に対応する。活動を取材し直す企画でなく、確定した数値をどう見出しにするかを扱う。"
+          },
+          "editorial": {
+            "status": "pass",
+            "reason": "この80％は満足と回答した人の割合で、満足の強さの得点ではない。全案で対象と結果を伝え、人数・年を近くに置く。一般に満足度という語が常に誤りとは主張しない。"
+          },
+          "optionChecks": [
+            {
+              "optionId": "option-1",
+              "status": "pass",
+              "reason": "回答者のうち満足と答えた割合を示す見出しで、対象と結果が対応する。年と人数を近くに示し、長い文字を無理に小さくしない。満足の強さの得点とは扱わない。"
+            },
+            {
+              "optionId": "option-2",
+              "status": "pass",
+              "reason": "50人中40人という人数を主にし、回答者数と割合の規模を具体化する。50人が全参加者だという誤解を避ける条件を残し、満足の点数へ置き換えない。"
+            },
+            {
+              "optionId": "option-3",
+              "status": "pass",
+              "reason": "活動名の下に対象と結果を小見出しで示し、何の評価かを先に伝える。数値の意味を割合として保ち、結果が本文に埋もれる懸念と配置の確認を対応させる。"
+            }
+          ]
+        },
+        {
+          "sceneId": "scene-3",
+          "optionIds": [
+            "option-1",
+            "option-2",
+            "option-3"
+          ],
+          "occupational": {
+            "status": "pass",
+            "reason": "job tagの原稿整理・表記統一・印刷前の校正に対応。外部調査を保証する権限や全誤りを防ぐ効果は主張しない。"
+          },
+          "editorial": {
+            "status": "pass",
+            "reason": "元資料、著者確認済み原稿、確認用紙面を手元に置く条件を提示。出典との照合、同一ページ内の統一、読む大きさの確認を区別し、併用を前提にする。"
+          },
+          "optionChecks": [
+            {
+              "optionId": "option-1",
+              "status": "pass",
+              "reason": "数字だけでなく対象と年も照合するため、意味のずれを探せる。原文一致と紙面の読みやすさは別の確認とした。"
+            },
+            {
+              "optionId": "option-2",
+              "status": "pass",
+              "reason": "同一結果の複数箇所を比較し、一部だけ異なる表記を探す。全箇所で同じ誤りの場合に備えて元資料との確認も残す。"
+            },
+            {
+              "optionId": "option-3",
+              "status": "pass",
+              "reason": "実物大で注記の位置と大きさを確かめるため、拡大画面との差に対応する。整った見た目だけで情報の正しさを保証しない。"
+            }
+          ]
+        }
+      ],
+      "sha256": "d10e7d8b22eb08d0da5827b6eeca7eca4dc3ad428200696535dfcf2cc5f264f2"
+    },
+    {
+      "slug": "tourism-budget-breakdown",
+      "sources": [
+        "docs/editorial/company-career-material.txt：旅行プランナーの直接項目なし",
+        "https://shigoto.mhlw.go.jp/User/Occupation/Detail/109"
+      ],
+      "scenes": [
+        {
+          "sceneId": "scene-1",
+          "optionIds": [
+            "option-1",
+            "option-2",
+            "option-3"
+          ],
+          "occupational": {
+            "status": "pass",
+            "reason": "job tagのカウンター相談、予算聞き取り、費用の見積もりに対応。旅行プランナーのうち店頭相談に近い業務と明示し、自社原文の直接根拠はない。"
+          },
+          "editorial": {
+            "status": "pass",
+            "reason": "全額一人分、一泊二日、朝食付き宿泊・昼食2回・夕食1回・現地交通を比較範囲として明記。A28000円、B26000円、予算との差2000円・4000円を照合。実売価格の証拠とはしない。"
+          },
+          "optionChecks": [
+            {
+              "optionId": "option-1",
+              "status": "pass",
+              "reason": "共通の費目で含むものと別払いを表にする案。比較しやすさの利点に対してサービス内容は数字以外で確認する限界を示す。"
+            },
+            {
+              "optionId": "option-2",
+              "status": "pass",
+              "reason": "見込み総額と予算残額が算数上対応。残額を確定の自由予算として保証せず、未確定の費用で変わることを伝える。"
+            },
+            {
+              "optionId": "option-3",
+              "status": "pass",
+              "reason": "出発から帰宅の支払いをたどるため、別払いの場面を旅程と結び付けられる。金額差は一覧も必要とし、この方法だけで比較が完結とはしない。"
+            }
+          ]
+        },
+        {
+          "sceneId": "scene-2",
+          "optionIds": [
+            "option-1",
+            "option-2",
+            "option-3"
+          ],
+          "occupational": {
+            "status": "pass",
+            "reason": "希望と予算に応じた候補の組み合わせという旅行相談に対応。宿・食事・体験の内容や値下げの実現を保証しない。"
+          },
+          "editorial": {
+            "status": "pass",
+            "reason": "別の相談例とし、前の二案を採用した分岐ではない。候補があることを先に提示し、希望を勝手に削らない条件を全案で守る。"
+          },
+          "optionChecks": [
+            {
+              "optionId": "option-1",
+              "status": "pass",
+              "reason": "希望の理由から優先順位を聞き、組み合わせの軸を作る。聞き取りだけでは具体案にならず費用提示へ進む必要がある。"
+            },
+            {
+              "optionId": "option-2",
+              "status": "pass",
+              "reason": "一項目ずつ替えた案にするため、費用と失う条件の対応が見える。案が多い場合は反応を聞いて絞る懸念を示す。"
+            },
+            {
+              "optionId": "option-3",
+              "status": "pass",
+              "reason": "一泊二日の旅程へ宿・夕食・体験と費用を重ね、価格だけでなく移動と自由時間を比べる。旅程の案を作っても予約可能とは限らず、空きと利用条件を確認する。"
+            }
+          ]
+        },
+        {
+          "sceneId": "scene-3",
+          "optionIds": [
+            "option-1",
+            "option-2",
+            "option-3"
+          ],
+          "occupational": {
+            "status": "pass",
+            "reason": "旅行相談、費用案内、手配状況の説明に対応。予約・契約の法的成立時点や取消料を独自に定義しない。"
+          },
+          "editorial": {
+            "status": "pass",
+            "reason": "全て未予約で、交通・宿の見積確認と体験の返答待ちを区別。全案で未予約を伝え、状態、予算への影響、経過連絡の異なる整理を比較する。"
+          },
+          "optionChecks": [
+            {
+              "optionId": "option-1",
+              "status": "pass",
+              "reason": "項目別に見積確認と返答待ちを分け、全体が未予約だと示す。確認済みの料金と、まだ確保していない空きを混同せず、予約時に両方を再確認する条件を残す。"
+            },
+            {
+              "optionId": "option-2",
+              "status": "pass",
+              "reason": "体験料を仮の見込みとして分離し、総額への影響を伝える。料金の説明だけでは予約状態が分からないため別途明示する。"
+            },
+            {
+              "optionId": "option-3",
+              "status": "pass",
+              "reason": "誰へ何を問い合わせ、いつ経過を知らせるかを整理する。連絡日と予約枠確保は別で、返答遅延時にも経過連絡する条件を残す。"
+            }
+          ]
+        }
+      ],
+      "sha256": "7bca2918aee76b35f8223c0b05c5ebeaf7977cf9b8041d522ffb86d4ab37f739"
+    },
+    {
+      "slug": "event-planner-participation-guide",
+      "sources": [
+        "docs/editorial/company-career-material.txt：第5章 イベントプランナー",
+        "https://shigoto.mhlw.go.jp/User/Occupation/Detail/566"
+      ],
+      "scenes": [
+        {
+          "sceneId": "scene-1",
+          "optionIds": [
+            "option-1",
+            "option-2",
+            "option-3"
+          ],
+          "occupational": {
+            "status": "pass",
+            "reason": "自社原文の企画・運営・調整と、job tagの出展者等との調整と広報に対応。広告デザインの制作でなく参加条件と案内の構成を扱う。"
+          },
+          "editorial": {
+            "status": "pass",
+            "reason": "対象年齢、費用、受付方法の確認は全案共通。比較一覧、参加の流れ、質問形式は、同じ確定情報へ入る三つの入口として成立する。"
+          },
+          "optionChecks": [
+            {
+              "optionId": "option-1",
+              "status": "pass",
+              "reason": "各プログラムの条件を同じ項目でそろえ、比較の手掛かりを作る。情報量による探しにくさを構成担当との確認へつなげる。"
+            },
+            {
+              "optionId": "option-2",
+              "status": "pass",
+              "reason": "予約と当日受付の行動順を分けるため、参加までの具体の動きが見える。条件の一覧も必要とし、流れだけで全情報は伝わらない。"
+            },
+            {
+              "optionId": "option-3",
+              "status": "pass",
+              "reason": "利用者の疑問を見出しにした案。入口を探しやすくする見通しと、質問が多くなる一覧性の限界を対応させた。"
+            }
+          ]
+        },
+        {
+          "sceneId": "scene-2",
+          "optionIds": [
+            "option-1",
+            "option-2",
+            "option-3"
+          ],
+          "occupational": {
+            "status": "pass",
+            "reason": "job tagの当日進行、スタッフ役割分担、現場管理に対応。主催者が時刻を決定し、プランナーが案内と実施確認を調整する範囲。"
+          },
+          "editorial": {
+            "status": "pass",
+            "reason": "必要な全連絡・会場対応は共通で行い、一つの手段だけを選ばせない。13時から13時30分の決定は全案共通で、文、場所、実施確認の整備を比較する。"
+          },
+          "optionChecks": [
+            {
+              "optionId": "option-1",
+              "status": "pass",
+              "reason": "教室名、時刻、待つ場所や窓口を主催者に確認した共通文へまとめる。媒体ごとの文字量調整は必要とし、同文の機械的配布ではない。"
+            },
+            {
+              "optionId": "option-2",
+              "status": "pass",
+              "reason": "来場者の動線と表示場所を照合し、古い案内や死角を探す。場所だけで内容や完了はそろわないため他の確認も残す。"
+            },
+            {
+              "optionId": "option-3",
+              "status": "pass",
+              "reason": "担当と完了・未達の報告先を決め、依頼と実施を区別する。実施報告が全来場者の理解の証明ではないことを示す。"
+            }
+          ]
+        },
+        {
+          "sceneId": "scene-3",
+          "optionIds": [
+            "option-1",
+            "option-2",
+            "option-3"
+          ],
+          "occupational": {
+            "status": "pass",
+            "reason": "job tagの運営スタッフへの指導と関係者調整に対応する。案内係へ例外の参加可否を判断する権限を与えない。"
+          },
+          "editorial": {
+            "status": "pass",
+            "reason": "回答できる窓口を用意済みとし、推測で答えないことは全案共通。参照表、引き継ぎの流れ、練習の順序の違いを比べる。"
+          },
+          "optionChecks": [
+            {
+              "optionId": "option-1",
+              "status": "pass",
+              "reason": "基本回答と確認先を一覧にする案で、記憶依存を減らす。古い表を使う限界に対し、当日決定との整合を保つ担当も定める。"
+            },
+            {
+              "optionId": "option-2",
+              "status": "pass",
+              "reason": "質問の聞き取りから回答の返却まで扱うため、窓口名の提示だけにしない。急ぎの対応等は会場運営ルールに合わせる。"
+            },
+            {
+              "optionId": "option-3",
+              "status": "pass",
+              "reason": "質問例の練習から曖昧な点を探す案で、未経験者の運営準備に対応。練習外の質問もあり、未知の場合の確認先を残す。"
+            }
+          ]
+        }
+      ],
+      "sha256": "bcf880bdbcd4b75d5cb074300d1957ff7a0f235981149178772ff54f634d4f06"
+    },
+    {
+      "slug": "pastry-seasonal-fruit",
+      "sources": [
+        "docs/editorial/company-career-material.txt：第10章 パティシエ／和菓子職人／パン職人（洋菓子部分）",
+        "https://shigoto.mhlw.go.jp/User/Occupation/Detail/3"
+      ],
+      "scenes": [
+        {
+          "sceneId": "scene-1",
+          "optionIds": [
+            "option-1",
+            "option-2",
+            "option-3"
+          ],
+          "occupational": {
+            "status": "pass",
+            "reason": "自社原文の洋菓子製造とjob tagの生地・クリーム・果物の準備や仕上げに対応。レシピや組み合わせの効果は資料の事実でなく架空の試作で検討する。"
+          },
+          "editorial": {
+            "status": "pass",
+            "reason": "桃だけと組み合わせの試食の違いを観察として提示。甘さ、割合、生地を一度に全部変えず比較する。安全・原材料の確認は共通の前提。"
+          },
+          "optionChecks": [
+            {
+              "optionId": "option-1",
+              "status": "pass",
+              "reason": "クリームの甘さ以外をそろえ、桃の感じ方を試すため問いに対応。甘さを減らせば必ず引き立つとはせず、食感等も確認する。"
+            },
+            {
+              "optionId": "option-2",
+              "status": "pass",
+              "reason": "同じ材料でひと口の割合を変える案。桃の増量だけを正解にせず、構造・食べやすさ・費用という残る条件を示す。"
+            },
+            {
+              "optionId": "option-3",
+              "status": "pass",
+              "reason": "生地の風味を変え、桃とクリームを固定する案。香りや味の一体感を検討できる一方、生地の食感と製造工程も確認する。"
+            }
+          ]
+        },
+        {
+          "sceneId": "scene-2",
+          "optionIds": [
+            "option-1",
+            "option-2",
+            "option-3"
+          ],
+          "occupational": {
+            "status": "pass",
+            "reason": "job tagの果物の切り分け・準備、洋菓子の飾り付けに対応する。完成図の好みでなく、試食して確かめる形の候補を扱う。"
+          },
+          "editorial": {
+            "status": "pass",
+            "reason": "共通の比較用試作品であり前の回答に依存しない。店内用フォークという条件を置き、果物総量をそろえた切り方・層・配置を比較する。"
+          },
+          "optionChecks": [
+            {
+              "optionId": "option-1",
+              "status": "pass",
+              "reason": "一片を小さくし総量をそろえるので、切る動きとの関係を試せる。小ささを無条件に推奨せず、印象と作業の増加を確かめる。"
+            },
+            {
+              "optionId": "option-2",
+              "status": "pass",
+              "reason": "桃を上と層へ分け、同じ道具でひと口のまとまりを試す。形や食感・店の保管手順での状態は未検証とする。"
+            },
+            {
+              "optionId": "option-3",
+              "status": "pass",
+              "reason": "大きさ・量を固定して高さと配置を変え、フォークでの取り方を比較する。広げる面積や器の条件を追加確認し、配置で解決とは断定しない。"
+            }
+          ]
+        },
+        {
+          "sceneId": "scene-3",
+          "optionIds": [
+            "option-1",
+            "option-2",
+            "option-3"
+          ],
+          "occupational": {
+            "status": "pass",
+            "reason": "job tagの手作業による製造・仕上げを、通常の製造工程と結び付けた場面。管理業務のみでなく果物の仕上げの動作が具体の対象。"
+          },
+          "editorial": {
+            "status": "pass",
+            "reason": "共通試作品の課題で分岐の採用を仮定しない。少数試作で、順番・目安・飾り構成を比べる。作業時間短縮より品質や衛生を劣後させない。"
+          },
+          "optionChecks": [
+            {
+              "optionId": "option-1",
+              "status": "pass",
+              "reason": "切る・取る・並べる・確認を分けて時間のかかる動きを調べる。単工程の短縮と全体の短縮は異なることを示す。"
+            },
+            {
+              "optionId": "option-2",
+              "status": "pass",
+              "reason": "写真の位置見本で角度を考える時間を検討する。果物の個体差を無視して強制的に同じ形へ合わせない限界を示す。"
+            },
+            {
+              "optionId": "option-3",
+              "status": "pass",
+              "reason": "総量を保った簡潔な重ね方を試し、製品の形から製造性を検討する。同量でも味や印象は同じとは限らないとした。"
+            }
+          ]
+        }
+      ],
+      "sha256": "05b73c48b3d7f625e7f2a3fa5faf0ef7c15b37572e0738ca2e106605d2eabf27"
+    },
+    {
+      "slug": "data-scientist-survey-scope",
+      "sources": [
+        "docs/editorial/company-career-material.txt：直接項目なし。第1章 SE・プログラマは関連職のみ",
+        "https://shigoto.mhlw.go.jp/User/Occupation/Detail/323",
+        "https://www.stat.go.jp/naruhodo/7_shurui/zensu.html",
+        "https://www.stat.go.jp/naruhodo/5_tokucho/index.html",
+        "https://www.stat.go.jp/dstart/point/keyword/index.html"
+      ],
+      "scenes": [
+        {
+          "sceneId": "scene-1",
+          "optionIds": [
+            "option-1",
+            "option-2",
+            "option-3"
+          ],
+          "occupational": {
+            "status": "pass",
+            "reason": "job tagの課題の聞き取り、データの理解・加工に対応。自社に直接項目がないことを記録し、SEやプログラマの説明をそのまま根拠にしない。"
+          },
+          "editorial": {
+            "status": "pass",
+            "reason": "曜日・時間帯も記録されていること、元回答と質問文を確認できることを状況で提示。範囲・測定区間・未回答を三方向から整理し、一案だけで分析準備が完結するとはしない。"
+          },
+          "optionChecks": [
+            {
+              "optionId": "option-1",
+              "status": "pass",
+              "reason": "曜日・時間帯の集まり方を数えて、範囲の偏りを探す。回答数の多さで代表性を保証せず、未回答の範囲も確認する。"
+            },
+            {
+              "optionId": "option-2",
+              "status": "pass",
+              "reason": "質問文から測定区間を確かめ、注文までと受取までを混在させない。質問文が同じでも回答者の解釈は保証できず限界を記録する。"
+            },
+            {
+              "optionId": "option-3",
+              "status": "pass",
+              "reason": "空欄をゼロにせず数値と未回答・要確認に分類する。除外による偏りを残し、処理件数と理由を報告するため都合のよい削除を認めない。"
+            }
+          ]
+        },
+        {
+          "sceneId": "scene-2",
+          "optionIds": [
+            "option-1",
+            "option-2",
+            "option-3"
+          ],
+          "occupational": {
+            "status": "pass",
+            "reason": "job tagのデータ理解・分析の入口として、統計局の代表値と分布の説明を照合。五件をビッグデータや完成した予測モデルと扱わず、計算と個別記録の理解を体験する。"
+          },
+          "editorial": {
+            "status": "pass",
+            "reason": "5＋5＋5＋5＋30＝50、50÷5＝10、5分の人4人と照合。小さな説明用例で全体代表でないと明記。原因の推定と記録の観察を区別する。"
+          },
+          "optionChecks": [
+            {
+              "optionId": "option-1",
+              "status": "pass",
+              "reason": "値ごとの人数を示して分布を可視化する案。平均との違いが読める利点と、理由は不明という限界が対応する。"
+            },
+            {
+              "optionId": "option-2",
+              "status": "pass",
+              "reason": "来店時間との組み合わせで調べる条件の候補を探す。5件だけで時間帯の傾向や因果を断定せず、注文と追加記録を確認する。"
+            },
+            {
+              "optionId": "option-3",
+              "status": "pass",
+              "reason": "長い記録を元記録と照合し、入力誤りと実際の出来事を分ける。大きいから除外するのを認めず、一件を全体へ広げない。"
+            }
+          ]
+        },
+        {
+          "sceneId": "scene-3",
+          "optionIds": [
+            "option-1",
+            "option-2",
+            "option-3"
+          ],
+          "occupational": {
+            "status": "pass",
+            "reason": "業務改善に向けたデータ分析という役割はjob tagに対応。前後の集計と因果の区別は統計局の説明で確認し、job tagのモデル性能検証をそのままこの場面の証拠にはしない。"
+          },
+          "editorial": {
+            "status": "pass",
+            "reason": "前後で利用者数とメニューが違い、回答者も同一と仮定しない。20分以上は教材用の比較基準。近い条件、分布と割合、収集方法を区別し、個人の変化や施策の因果を断定しない。"
+          },
+          "optionChecks": [
+            {
+              "optionId": "option-1",
+              "status": "pass",
+              "reason": "曜日等を近づけて比較する案。全条件がそろうとはせず、比較可能な日が少ないことと残る違いを報告する。"
+            },
+            {
+              "optionId": "option-2",
+              "status": "pass",
+              "reason": "前後で20分以上という同じ基準の割合と分布を比べ、回答数と範囲を添える。平均だけで見えない集団の差を扱い、同じ個人の短縮や取り組みの効果とは混同しない。"
+            },
+            {
+              "optionId": "option-3",
+              "status": "pass",
+              "reason": "収集方法と回答範囲を照合し複数週の記録を計画する。データの量だけで因果が証明できないことと、運営負担を限界に記載。"
+            }
+          ]
+        }
+      ],
+      "sha256": "ae4346d3548ab2a3896fc5221139f6463acae140229daedfc418b2278029cd61"
+    },
+    {
+      "slug": "beauty-color-consultation",
+      "sources": [
+        "docs/editorial/company-career-material.txt：第8章 美容師",
+        "https://shigoto.mhlw.go.jp/User/Occupation/Detail/116",
+        "https://jhca.ne.jp/levelscale/"
+      ],
+      "scenes": [
+        {
+          "sceneId": "scene-1",
+          "optionIds": [
+            "option-1",
+            "option-2",
+            "option-3"
+          ],
+          "occupational": {
+            "status": "pass",
+            "reason": "自社原文のカラーとjob tagの髪の状態・希望の確認、顧客との会話に対応。専門色の選択や薬剤の判断は利用者へ委ねない。"
+          },
+          "editorial": {
+            "status": "pass",
+            "reason": "必要な施術前確認は共通条件で任意案にしない。見本、避けたい印象、日常場面を相談の入口にする。画像の色を評価する問題でないため比較画像は必須でない。"
+          },
+          "optionChecks": [
+            {
+              "optionId": "option-1",
+              "status": "pass",
+              "reason": "毛束見本から近い明るさ・色味の幅を聞くため曖昧な希望に対応。見本と本人の髪の違いを明示し同色再現を保証しない。"
+            },
+            {
+              "optionId": "option-2",
+              "status": "pass",
+              "reason": "派手という語を明るさ等の要素へ分けるため、避けたい方向を知れる。否定の範囲だけで決めず好ましい印象も確認する。"
+            },
+            {
+              "optionId": "option-3",
+              "status": "pass",
+              "reason": "服装や場面から使う状況を聞く案。属性から好みを断定せず、候補を本人へ見せ反応を確かめる条件を明記。"
+            }
+          ]
+        },
+        {
+          "sceneId": "scene-2",
+          "optionIds": [
+            "option-1",
+            "option-2",
+            "option-3"
+          ],
+          "occupational": {
+            "status": "pass",
+            "reason": "髪の状態・履歴と希望を踏まえた美容師の相談業務に対応。施術可否は必要な確認を行った美容師が判断済みで、技法の適否を教材で認定しない。"
+          },
+          "editorial": {
+            "status": "pass",
+            "reason": "別の相談例と明示し、一回では目指しにくいという共通前提を置く。今日の範囲、段階的相談、見送りを安全な案として並べ、了承は全案必須。"
+          },
+          "optionChecks": [
+            {
+              "optionId": "option-1",
+              "status": "pass",
+              "reason": "希望との差を示して今日の提案を相談する。可能範囲の表示を確定色の保証にせず、見込みの幅と費用を説明する。"
+            },
+            {
+              "optionId": "option-2",
+              "status": "pass",
+              "reason": "将来の来店や費用も検討材料とする。回数を増やせば達成できるとは言わず、髪の状態を見て相談する範囲を残す。"
+            },
+            {
+              "optionId": "option-3",
+              "status": "pass",
+              "reason": "来店後も施術を見送れる案を提示し、無理に決めない判断を支える。次に同じ迷いが残らぬよう今回の希望と理由を確認・記録する。"
+            }
+          ]
+        },
+        {
+          "sceneId": "scene-3",
+          "optionIds": [
+            "option-1",
+            "option-2",
+            "option-3"
+          ],
+          "occupational": {
+            "status": "pass",
+            "reason": "job tagのカラーリング、仕上げ、顧客との会話に対応する。照明や色再現の技術指導、追加施術方法は扱わない。"
+          },
+          "editorial": {
+            "status": "pass",
+            "reason": "共通の確認場面で前の選択に依存しない。鏡と安全に移れる店内の確認場所を用意し、全案で追加施術を即決せず気になる点を聞く。"
+          },
+          "optionChecks": [
+            {
+              "optionId": "option-1",
+              "status": "pass",
+              "reason": "横と後ろも鏡で見せるため、本人の見えない部分を共有できる。別の環境の見え方までは分からない限界が対応する。"
+            },
+            {
+              "optionId": "option-2",
+              "status": "pass",
+              "reason": "店内の違う明るさの場所で同じ髪を見る案。確認できる条件に限り、全ての日常環境で同じ色に見える保証はしない。"
+            },
+            {
+              "optionId": "option-3",
+              "status": "pass",
+              "reason": "明るさと色味に分けて感想を聞き、本人が気にする部分を特定する。誘導質問を避け、本人の言葉と見る条件を合わせる。"
+            }
+          ]
+        }
+      ],
+      "sha256": "0b472acac327de819d22ca0445256fd7d29e33188da61351687441024727a41e"
+    }
+  ]
+}

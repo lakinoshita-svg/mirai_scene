@@ -1,0 +1,351 @@
+{
+  "batchId": "batch-005",
+  "reviewType": "twoPassSelfReview",
+  "passes": {
+    "occupational": {
+      "reviewer": "Codex authorCareTravel（執筆担当による自己確認）",
+      "checkedAt": "2026-11-06",
+      "method": "11月5日に本文を確認したjob tagと保育所保育指針、自社原文を基に、保育士・美容師・旅行会社で旅程を提案する旅行プランナーの担当範囲を全9シーンで照合。資料にある仕事、教材の条件、効果の見通しを分離した。"
+    },
+    "editorial": {
+      "reviewer": "Codex authorCareTravel（執筆担当による二巡目の自己確認）",
+      "checkedAt": "2026-11-06",
+      "method": "職種名による印象を根拠にせず、全9シーン・27案を状況、問い、共通解説、各説明・利点・懸念、振り返りの順に再読。役割の具体性、前提の提示、前の回答への非依存、三案の比較、成果を保証しない表現を確認した。"
+    }
+  },
+  "limitations": [
+    "同じ執筆担当による二段階の自己確認であり、実務経験者や資料発行者による個別確認ではない。",
+    "個別の対応方法の効果、所要時間、高校生による読みやすさの実測、公開承認は未実施。reviewStatusはeditorial-draft。",
+    "資料本文確認は2026-11-05、原稿の二巡自己確認は2026-11-06。"
+  ],
+  "entries": [
+    {
+      "slug": "childcare-picture-book-voices",
+      "sources": [
+        "docs/editorial/company-career-material.txt：第17章 保育士",
+        "https://shigoto.mhlw.go.jp/User/Occupation/Detail/131",
+        "https://www.mhlw.go.jp/web/t_doc?dataId=00010450"
+      ],
+      "scenes": [
+        {
+          "sceneId": "scene-1",
+          "optionIds": [
+            "option-1",
+            "option-2",
+            "option-3"
+          ],
+          "occupational": {
+            "status": "pass",
+            "reason": "子どもの興味に即した働きかけと観察という保育士の職務を、絵本の言葉・絵・物語を楽しむ場面に具体化。図書館での資料選定や発達の採点にしない。"
+          },
+          "editorial": {
+            "status": "pass",
+            "reason": "もう一度読める時間と見える位置を選択前に示す。三案は言葉の間、絵への応答、物語の流れという読み方の違いで、全員への発言強制や感情の断定がない。"
+          },
+          "optionChecks": [
+            {
+              "optionId": "option-1",
+              "status": "pass",
+              "reason": "繰り返しの言葉を既に口にする子がいる条件で、自然に声を重ねられる間をつくる行動と利点が対応。全員の発声を目的にせず、流れの中断という限界を残す。"
+            },
+            {
+              "optionId": "option-2",
+              "status": "pass",
+              "reason": "虫の絵を指したという状況に直接応じる。本人の発見を共有する利点に対し、細部探しのクイズ化や物語の中断を懸念として示す。"
+            },
+            {
+              "optionId": "option-3",
+              "status": "pass",
+              "reason": "発問を増やさず反応を見ながら物語をつなぐ案。静かに聞く楽しみを守る一方、完読優先で指さしや困りごとを無視しない条件がある。"
+            }
+          ]
+        },
+        {
+          "sceneId": "scene-2",
+          "optionIds": [
+            "option-1",
+            "option-2",
+            "option-3"
+          ],
+          "occupational": {
+            "status": "pass",
+            "reason": "保育所保育指針の、絵本からの想像と言葉による伝え合いを支える内容に対応。物語に書かれていない理由を正解として教える役割は与えていない。"
+          },
+          "editorial": {
+            "status": "pass",
+            "reason": "本文が理由を明示しない設定を選択前に提示。別場面で前シーンの選択に依存しない。言葉の受容、注目箇所、続きの想像の三つを、解答を強制しない同じ関わり段階にそろえる。"
+          },
+          "optionChecks": [
+            {
+              "optionId": "option-1",
+              "status": "pass",
+              "reason": "二つの解釈を返すことで違う感じ方を共有する案。保育士が本人の意味を追加しすぎる限界と、本人の訂正を聞く対応を明示している。"
+            },
+            {
+              "optionId": "option-2",
+              "status": "pass",
+              "reason": "絵の気になる箇所を指さしでも示せるため、言語説明だけを要求しない。理由が説明できない想像も受け止め、根拠の採点へ変えない。"
+            },
+            {
+              "optionId": "option-3",
+              "status": "pass",
+              "reason": "話したい子の続きを聞く行動と、意見を一つにそろえず想像を広げる利点が対応。実際の物語と区別し、話の得意な子の独占や全員発表を避ける。"
+            }
+          ]
+        },
+        {
+          "sceneId": "scene-3",
+          "optionIds": [
+            "option-1",
+            "option-2",
+            "option-3"
+          ],
+          "occupational": {
+            "status": "pass",
+            "reason": "観察と保育記録、保育士同士の共有を扱う。発言の有無から発達・性格を診断せず、次の関わりへ向けた職務の範囲に収めている。"
+          },
+          "editorial": {
+            "status": "pass",
+            "reason": "笑ったことと自分でページを開いたことは観察事実、楽しんだ内容は未確認と分離。ページ、活動形態、日をまたぐ継続という三軸で、記録と推測を混同しない。"
+          },
+          "optionChecks": [
+            {
+              "optionId": "option-1",
+              "status": "pass",
+              "reason": "笑った場面と見返したページを結ぶため、自発的な関わりを共有する利点がある。同じページを開いた理由は確定しないという限界も整合する。"
+            },
+            {
+              "optionId": "option-2",
+              "status": "pass",
+              "reason": "一緒に聞く時と一人で見る時を比べ、二種類の環境を考える案。観察していない行動を補作せず、集団が苦手などの評価に飛躍しない。"
+            },
+            {
+              "optionId": "option-3",
+              "status": "pass",
+              "reason": "別の日の具体的な記録を保育士間で確かめるため、単発の一般化を避けられる。記憶の印象を確定事実にせず、今回と異なる条件も残す。"
+            }
+          ]
+        }
+      ],
+      "sha256": "65e742adfb91c7bc6cd66b8ee65851b99cfb5f35c46ff80728ef174da1801b80"
+    },
+    {
+      "slug": "beauty-growing-hair-consultation",
+      "sources": [
+        "docs/editorial/company-career-material.txt：第8章 美容師",
+        "https://shigoto.mhlw.go.jp/User/Occupation/Detail/116"
+      ],
+      "scenes": [
+        {
+          "sceneId": "scene-1",
+          "optionIds": [
+            "option-1",
+            "option-2",
+            "option-3"
+          ],
+          "occupational": {
+            "status": "pass",
+            "reason": "美容師が実際の髪を見て要望を聞き、施術する髪型を決める仕事に対応。切る量を読者に医学的・技術的な正解として判断させず、確認の入口を扱う。"
+          },
+          "editorial": {
+            "status": "pass",
+            "reason": "伸ばす希望と仕事で結ぶ条件を提示し、まだ切っていない段階に統一。今の困りごと、結ぶ機能、将来の長さの優先度という異なる聞き取りから、全案で実物の確認と合意へつなげる。"
+          },
+          "optionChecks": [
+            {
+              "optionId": "option-1",
+              "status": "pass",
+              "reason": "本人が気にする毛先を示す行動が、整える対象を絞る利点につながる。全部切れば解消するとはせず、残す長さとの兼ね合いを確認する。"
+            },
+            {
+              "optionId": "option-2",
+              "status": "pass",
+              "reason": "仕事で結ぶ条件に対して普段の位置と落ちてほしくない部分を聞く。機能上の条件を具体化する一方、下ろした時の見た目は別に確認する限界がある。"
+            },
+            {
+              "optionId": "option-3",
+              "status": "pass",
+              "reason": "伸ばす目標と今整える優先度を照合するため、今日だけの提案にしない。生育期間を保証せず、現在の髪の状態も確認する必要を残す。"
+            }
+          ]
+        },
+        {
+          "sceneId": "scene-2",
+          "optionIds": [
+            "option-1",
+            "option-2",
+            "option-3"
+          ],
+          "occupational": {
+            "status": "pass",
+            "reason": "美容師による要望と毛髪状態の相談を、顔まわりを短くする希望と結ぶ条件の照合に具体化。道具や切断手順を指示せず、実現範囲を説明する役割を守る。"
+          },
+          "editorial": {
+            "status": "pass",
+            "reason": "別の相談例と明記し、乾いた髪と結ぶ様子を見られる条件を提示。結んで確認、下ろして確認、残す範囲を分ける提案で、合意前の切断や見た目の保証がない。"
+          },
+          "optionChecks": [
+            {
+              "optionId": "option-1",
+              "status": "pass",
+              "reason": "普段の結び方を実際に確認するため、位置と必要な長さを共有する入口になる。一度結べた状態を日常動作まで保証せず、仕事中の状況も聞く。"
+            },
+            {
+              "optionId": "option-2",
+              "status": "pass",
+              "reason": "顔まわりという範囲を実物で示す行動と、変えたい見た目の把握が対応。仮に示す形と施術後を同一視せず、結ぶ条件も残す。"
+            },
+            {
+              "optionId": "option-3",
+              "status": "pass",
+              "reason": "残す部分と整える部分を分ける提案は、両方の希望を検討できる。変化が小さくなる可能性も説明し、本人の合意なしに進めない。"
+            }
+          ]
+        },
+        {
+          "sceneId": "scene-3",
+          "optionIds": [
+            "option-1",
+            "option-2",
+            "option-3"
+          ],
+          "occupational": {
+            "status": "pass",
+            "reason": "顧客の希望に応える美容師の仕上がり確認。美容師独自の好みを押し付けず、追加施術前に元の長さの条件と本人の言葉をすり合わせる。"
+          },
+          "editorial": {
+            "status": "pass",
+            "reason": "共通の別例として、乾いた仕上がりと長さを保つ希望を先に提示。鏡の形、結ぶ状態、感覚の聞き分けを同じ確認段階にそろえ、すっきり＝短くするという飛躍を避ける。"
+          },
+          "optionChecks": [
+            {
+              "optionId": "option-1",
+              "status": "pass",
+              "reason": "位置を本人に示してもらうことで見た目の対象を絞れる。見える形だけでは普段の使い心地が分からないため、結ぶ場面も確かめる限界が対応。"
+            },
+            {
+              "optionId": "option-2",
+              "status": "pass",
+              "reason": "普段の結び方で確かめる行動は、保持したい長さと追加希望の照合になる。結ぶ時だけを優先せず、下ろした時の希望を合わせる。"
+            },
+            {
+              "optionId": "option-3",
+              "status": "pass",
+              "reason": "触覚か見た目かを聞くことで言葉の意味のずれを調べられる。提示した二択に無理に分類せず、ほかの意味も受け止めて髪の状態と合わせる。"
+            }
+          ]
+        }
+      ],
+      "sha256": "351cf45c14942ed6b5c9571698e0a81f22b40a2eb687f35f3932e364224046bf"
+    },
+    {
+      "slug": "tourism-transit-connections",
+      "sources": [
+        "docs/editorial/source-mapping.md：旅行プランナーは自社原文に直接の項目なし",
+        "https://shigoto.mhlw.go.jp/User/Occupation/Detail/109"
+      ],
+      "scenes": [
+        {
+          "sceneId": "scene-1",
+          "optionIds": [
+            "option-1",
+            "option-2",
+            "option-3"
+          ],
+          "occupational": {
+            "status": "pass",
+            "reason": "旅行会社で個別旅行を相談し、最新情報と希望に基づき交通を手配する仕事。交通事業者の運行判断を代行せず、乗り継ぎを保証しない旅行プランナーの提案段階に限定する。"
+          },
+          "editorial": {
+            "status": "pass",
+            "reason": "架空の10時着・10時15分発と未確認情報を先に提示し、経路・利用者条件・手続きの三つを最初に詳しく見る入口として扱う。どれも必要な確認で、単独で完了とする案はない。"
+          },
+          "optionChecks": [
+            {
+              "optionId": "option-1",
+              "status": "pass",
+              "reason": "ホームからバス停を調べる行動は、時刻表にない移動の把握に対応。距離や案内の目安を個人の移動時間と同一視せず、荷物等も合わせる。"
+            },
+            {
+              "optionId": "option-2",
+              "status": "pass",
+              "reason": "荷物・階段・休憩など必要な希望を聞き、最短以外の条件を得る。本人の希望だけでは経路の可否は決まらず、設備情報も必要な懸念が対応。"
+            },
+            {
+              "optionId": "option-3",
+              "status": "pass",
+              "reason": "予約・受付・次便を確認するため、出発時刻だけでは不足する条件が分かる。次便があっても旅先の時間は変わるため旅行全体と照らす。"
+            }
+          ]
+        },
+        {
+          "sceneId": "scene-2",
+          "optionIds": [
+            "option-1",
+            "option-2",
+            "option-3"
+          ],
+          "occupational": {
+            "status": "pass",
+            "reason": "希望、交通、訪問先を合わせた行程表の比較案づくり。早い便・遅い便の存在や空きは調査対象とし、施設や事業者の条件を無断で変更する役割を与えない。"
+          },
+          "editorial": {
+            "status": "pass",
+            "reason": "共通例の90分と体験60分、移動・休憩の必要性を明示。出発を早める、訪問先を絞る、帰宅を遅らせる三案の負担を区別。前の回答に依存せず、比較のための具体化であって即決ではない。"
+          },
+          "optionChecks": [
+            {
+              "optionId": "option-1",
+              "status": "pass",
+              "reason": "早い便を調べるため帰りを保ち現地時間を増やせるか検討できる。自宅から出発地への接続と朝の負担も必要とし、早い便の存在を確定しない。"
+            },
+            {
+              "optionId": "option-2",
+              "status": "pass",
+              "reason": "工芸体験を優先して訪問先を外す案は、時刻を保つ比較案になる。残したい場所の再確認と体験以外の受付・移動時間を忘れない。"
+            },
+            {
+              "optionId": "option-3",
+              "status": "pass",
+              "reason": "遅い便の利用可否を調べて自宅到着まで示すため、朝を保つ案の利点と帰宅の負担を比べられる。現地の最終便だけで成立とはしない。"
+            }
+          ]
+        },
+        {
+          "sceneId": "scene-3",
+          "optionIds": [
+            "option-1",
+            "option-2",
+            "option-3"
+          ],
+          "occupational": {
+            "status": "pass",
+            "reason": "job tagのサービス利用方法の説明と行程表作成に対応。添乗員として現場誘導するのではなく、旅行会社で出発前に案内を補う業務を具体化する。"
+          },
+          "editorial": {
+            "status": "pass",
+            "reason": "予約確認済みの共通例なので前の案への分岐依存がない。移動順、使う予約情報、確認先を三入口として示し、全案で公式情報照合と当日の再確認を共通条件とする。"
+          },
+          "optionChecks": [
+            {
+              "optionId": "option-1",
+              "status": "pass",
+              "reason": "降車から乗車への経路を図でたどる行動が、駅内での動きのイメージにつながる。現地表示が変わり得るため暗記を頼みにしない。"
+            },
+            {
+              "optionId": "option-2",
+              "status": "pass",
+              "reason": "区間ごとに必要な予約情報を準備する案で、取り出す物が明確になる。書類だけで乗り場は分からず、個人情報の不用意な配布も避ける。"
+            },
+            {
+              "optionId": "option-3",
+              "status": "pass",
+              "reason": "運行情報、駅の案内、旅行会社の役割と対応時間を分けるため、予定外の確認先が分かる。連絡できれば必ず乗れるなどの成果保証をしていない。"
+            }
+          ]
+        }
+      ],
+      "sha256": "a5f5f606e4a7172e75e18732a0776d75512d80a42cfb6d1314a0485e143c98c9"
+    }
+  ]
+}

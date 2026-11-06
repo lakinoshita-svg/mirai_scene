@@ -79,6 +79,7 @@ GitHub Pages用の生成物を更新するときは、HTMLが参照する`_astro
 | 二段階・回答別の記録と原稿ハッシュの照合 | `scripts/lib/editorialReview.mjs` |
 | 原稿一覧HTML・読み手用の確認表 | `scripts/lib/draftReviewDocuments.mjs` |
 | 原稿一覧の見た目 | `scripts/templates/draftManuscript.css` |
+| 確認用HTML・ZIPで使う画像の照合 | `scripts/lib/draftAssets.mjs` |
 | 確認用ZIPの対象・案内・manifest | `scripts/lib/contentReviewPackage.mjs` |
 | ZIP作成と展開内容のハッシュ照合 | `scripts/lib/contentReviewArchive.ps1` |
 

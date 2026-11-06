@@ -162,6 +162,8 @@
 
 各シーンの `optionChecks` に3案それぞれの `optionId`・`status`・`reason` を記録する。`reason` は、その案が問いに答える理由と、説明・良い点・懸念点が状況の条件でつながる理由を書く。全案を「正しい」と一括判定するだけでは不足。回答例の効果を確認した資料と、架空の条件で成立するという編集判断を区別する。本人確認や安全確保など全案で必要な条件を、任意の一案だけに置かない。
 
+資料で確認できる業務、教材の架空の設定、各案の効果の見通しを分ける。job tagに「盛り付け」があるだけで、個別の盛り方の効果が実証されたとは扱わない。根拠を示す場合は、一次資料の短い引用・該当節・対応シーン・資料だけでは分からない範囲を残す。[根拠対照表の例](../../drafts/batch-003/review/sourceEvidence.md)を参照。引用があることと、実務経験者から個別の確認を得たことも区別する。
+
 ```text
 npm run content:verify-review -- batch-NNN
 npm run content:verify-drafts -- batch-NNN
@@ -170,7 +172,9 @@ npm run content:export-drafts -- batch-NNN
 
 `verify-review` は全原稿・全シーンの二段階の記録とSHA-256を照合する。`export-drafts` はこの照合を必須として、`manuscript.html` と `review/answerChecks.md`、`review/occupationChecks.md` を生成する。原稿の表示文と記録済みの判断理由を使い、判定理由を自動で補完しない。記録漏れ・未解決判定・確認対象と異なる原稿では書き出さない。これは確認漏れや対象違いを防ぐ検査であり、文章の真偽を自動判定する機能ではない。既存のExcel出力・本番ビルドを自動で制御するものでもない。
 
-確認用の受け渡しには `npm run content:package-drafts -- batch-NNN` を使う。Windows PowerShellでZIPを作り、全同梱ファイルをSHA-256で照合する。原稿・確認資料・自社原文を含む。出力は `outputs/contentReview/<batch-id>/<UTC日時>/` のZIPとmanifest.json。件数は原稿から集計し、同名出力を上書きしない。進路ナビへの導入用ZIPは、公開承認・配置済み版との照合を含む別工程。
+確認用の受け渡しには `npm run content:package-drafts -- batch-NNN` を使う。Windows PowerShellでZIPを作り、全同梱ファイルをSHA-256で照合する。原稿・確認資料・自社原文を含む。バッチのreview直下のMarkdown・JSONは根拠対照表や画面確認記録も含めて同梱し、自社資料の対応表があれば一緒に渡す。出力は `outputs/contentReview/<batch-id>/<UTC日時>/` のZIPとmanifest.json。件数は原稿から集計し、同名出力を上書きしない。進路ナビへの導入用ZIPは、公開承認・配置済み版との照合を含む別工程。
+
+原稿が参照する単独・比較画像は `public/assets/` に置く。`content:export-drafts` は画像の実体とpublic内のパスを照合し、原稿一覧に表示する。確認用ZIPには参照画像も同梱する。展開後も `drafts/<batch-id>/` と `public/assets/` の位置関係を保つ。
 
 原稿を編集したら両観点を再確認し、判定理由と対象原稿のハッシュをそろえる。エラー解消だけを目的にハッシュや `pass` を書き換えない。判断できない原稿は未確認事項を残した下書きとして個別に渡し、二段階確認済みの原稿集へ混ぜない。
 

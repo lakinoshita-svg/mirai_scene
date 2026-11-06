@@ -1,0 +1,119 @@
+{
+  "packageType": "reviewedContentSources",
+  "batchId": "batch-004",
+  "createdAt": "2026-11-05T07:06:24.849Z",
+  "zip": "miraiSceneContentsBatch004.zip",
+  "sha256": "403fa6fa83eb5ddd981e5492f254648ab65215bbff8f51a454930a5eea94de45",
+  "bytes": 129380,
+  "fileCount": 21,
+  "experienceCount": 10,
+  "sceneCount": 30,
+  "optionCount": 90,
+  "files": [
+    {
+      "path": "drafts/batch-004/animal-keeper-feeding-enrichment.json",
+      "sha256": "97382dd5887fc1378a08985b3964c8317f1d0d9d15c368c100664404b3bd4eb0",
+      "bytes": 11042
+    },
+    {
+      "path": "drafts/batch-004/farmer-planting-plan.json",
+      "sha256": "b73e1a9cff85ab10796cfe15c027af373b93d14c47d88ed9b15e85051ae1d406",
+      "bytes": 11115
+    },
+    {
+      "path": "drafts/batch-004/logistics-picking-layout.json",
+      "sha256": "b2e117969ba023e6c22c432731c495cdfd622ff65a64b4cf3032e8a866cb3af3",
+      "bytes": 11414
+    },
+    {
+      "path": "drafts/batch-004/librarian-storytime-preparation.json",
+      "sha256": "78a9e0504a88d6d581668f51a83dcf29b21bba2a04ea705a80fae39a479b75aa",
+      "bytes": 11210
+    },
+    {
+      "path": "drafts/batch-004/museum-curator-collection-loan.json",
+      "sha256": "fa576e3d786910c4b71affb262e712f71154e995c1ecc6afdab9f98f8fca5f92",
+      "bytes": 11388
+    },
+    {
+      "path": "drafts/batch-004/product-developer-customer-use.json",
+      "sha256": "7c800d7a81cbffde84a351bdfa49ca1073a0d264b65985200a56bab0c27035a5",
+      "bytes": 11462
+    },
+    {
+      "path": "drafts/batch-004/game-planner-tool-choices.json",
+      "sha256": "ceb8369218bfb18020e12de3ca23c51b8a5d0fbc315c69a35847d56b6a7f86ed",
+      "bytes": 11683
+    },
+    {
+      "path": "drafts/batch-004/engineer-duplicate-submission.json",
+      "sha256": "34f54662dff2553847658f9cb5a454f3cb8c2fef7b9b4b19a6f3fb587c4ae14b",
+      "bytes": 11925
+    },
+    {
+      "path": "drafts/batch-004/childcare-block-town.json",
+      "sha256": "3b14b3d7d3423a4129c87d6362e32b5bc5d677ae36af60194a42091cd30fa571",
+      "bytes": 11589
+    },
+    {
+      "path": "drafts/batch-004/video-producer-location-sound.json",
+      "sha256": "92d3ca831bfe0352a0884c464bc20602f5f4600fe21151c0d67f20f9e03bc4e1",
+      "bytes": 12127
+    },
+    {
+      "path": "drafts/batch-004/README.md",
+      "sha256": "098fbd80810754a5df140b67a48b0701556766e9015196278d14f997e08b22de",
+      "bytes": 4210
+    },
+    {
+      "path": "drafts/batch-004/REVIEW.md",
+      "sha256": "f9bc427318e5d56159b2c83188c3d5543292e0fc8a708168f57471af9e333fa3",
+      "bytes": 9024
+    },
+    {
+      "path": "drafts/batch-004/review/answerChecks.md",
+      "sha256": "c5666fbac277d43a0285abe58b5c89c40ea83fe520c4774f54a6931ef75c711b",
+      "bytes": 27830
+    },
+    {
+      "path": "drafts/batch-004/review/displayChecks.json",
+      "sha256": "ef75c13141e9d322a0b21fa2fd75f05ebb04a464a88cc1d4b58f962349eba52b",
+      "bytes": 9477
+    },
+    {
+      "path": "drafts/batch-004/review/occupationChecks.json",
+      "sha256": "67eaf0e7c25d31aa6ddc7a8ee9aaaf2b64c190b9703f992eff23c4d4344c0218",
+      "bytes": 50446
+    },
+    {
+      "path": "drafts/batch-004/review/occupationChecks.md",
+      "sha256": "e8e679574400193fd64b5c202ba49ab10135889e8d020e3572e016149dafdbfd",
+      "bytes": 12359
+    },
+    {
+      "path": "drafts/batch-004/review/sourceEvidence.md",
+      "sha256": "276458745f94fe8a8ddc00dc65962d3c4c33ebdf41da7802a07050c9faba881c",
+      "bytes": 11206
+    },
+    {
+      "path": "drafts/batch-004/manuscript.html",
+      "sha256": "450dc8eeacdd3a8224489de1351c6cc778287f857879b45ea42dab60c158d5cc",
+      "bytes": 118956
+    },
+    {
+      "path": "docs/editorial/company-career-material.txt",
+      "sha256": "e9e4e2b03694cf14b62f690597c8fd0d5476a69cea5b56bbb1c8c3992c62dbab",
+      "bytes": 31974
+    },
+    {
+      "path": "docs/editorial/source-mapping.md",
+      "sha256": "0d94c2e1831a4376857bc6d5c014cb2114d6ec086cd211429ef70a96dc54b56c",
+      "bytes": 4641
+    },
+    {
+      "path": "README.txt",
+      "sha256": "73fd5ce0a20499c6d2134b2ada158203195cade33ae8d72e078aa2b501e0ca25",
+      "bytes": 1323
+    }
+  ]
+}

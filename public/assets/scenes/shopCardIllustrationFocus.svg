@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="760" viewBox="0 0 1200 760" role="img" aria-labelledby="title desc">
+  <title id="title">さんぽ喫茶のカード：カップの絵を主役にした案</title>
+  <desc id="desc">中央上部に大きなカップの絵を置き、その下に店名・紹介文・営業時間・定休日を中央揃えにした架空の表面案。</desc>
+  <rect x="8" y="8" width="1184" height="744" rx="24" fill="#fcfbfd" stroke="#7043ae" stroke-width="4"/>
+  <g fill="none" stroke="#7043ae" stroke-width="14" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M420 180h280v92c0 104-280 104-280 0z"/>
+    <path d="M700 194h40c80 0 80 108 0 108h-40M394 382h352M490 130c-30-32 30-46 0-78M584 130c-30-32 30-46 0-78"/>
+  </g>
+  <g fill="#2c243d" font-family="'Noto Sans JP','Yu Gothic',sans-serif" text-anchor="middle">
+    <text x="600" y="500" font-size="104" font-weight="700">さんぽ喫茶</text>
+    <text x="600" y="574" font-size="40">ひと息つける、まちの喫茶店</text>
+    <text x="600" y="640" font-size="46" font-weight="700">10:00–18:00</text>
+    <text x="600" y="702" font-size="40">木曜定休</text>
+  </g>
+  <circle cx="1086" cy="120" r="16" fill="#ee7800"/>
+</svg>

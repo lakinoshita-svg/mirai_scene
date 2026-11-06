@@ -51,3 +51,30 @@ test('確認後の編集がある場合は既存の閲覧用資料を書き換�
   assert.throws(() => exportDraftDocuments('batch-999', fixture.root), /確認対象と原稿/);
   assert.deepEqual(fs.readFileSync(target), before);
 });
+
+test('単独画像と比較画像は実体を照合し、原稿一覧から開ける相対パスで表示する', t => {
+  const fixture = createReviewFixture(t);
+  const directory = path.join(fixture.root, 'public/assets/scenes');
+  fs.mkdirSync(directory, {recursive:true});
+  fs.writeFileSync(path.join(directory, 'example.svg'), '<svg xmlns="http://www.w3.org/2000/svg"/>');
+  const image = {src:'assets/scenes/example.svg', alt:'文字と絵の配置'};
+  fixture.manuscript.scenes[0].image = image;
+  fixture.manuscript.scenes[1].comparison = [{...image, caption:'案A'}, {...image, caption:'案B'}];
+  fixture.writeManuscript();
+  const result = exportDraftDocuments('batch-999', fixture.root);
+  assert.equal(result.assets.length, 1);
+  const html = fs.readFileSync(path.join(fixture.directory, 'manuscript.html'), 'utf8');
+  const images = descendants(parse(html)).filter(node => node.tagName === 'img');
+  assert.equal(images.length, 3);
+  for (const node of images) {
+    const src = node.attrs.find(attr => attr.name === 'src').value;
+    assert.ok(fs.existsSync(path.resolve(fixture.directory, src)));
+  }
+  fixture.manuscript.scenes[0].image.src = 'assets/../../private.svg';
+  fixture.writeManuscript();
+  assert.throws(() => exportDraftDocuments('batch-999', fixture.root), /画像パスが不正/);
+  fixture.manuscript.scenes[0].image.src = 'assets/scenes/missing.svg';
+  fixture.writeManuscript();
+  assert.throws(() => exportDraftDocuments('batch-999', fixture.root), /ENOENT/);
+  assert.equal(fs.readFileSync(path.join(fixture.directory, 'manuscript.html'), 'utf8'), html);
+});

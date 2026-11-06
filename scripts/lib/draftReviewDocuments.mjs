@@ -1,6 +1,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { verifyEditorialReview } from './editorialReview.mjs';
+import { collectDraftAssets, draftAssetHref } from './draftAssets.mjs';
 
 const stylesheet = fs.readFileSync(new URL('../templates/draftManuscript.css', import.meta.url), 'utf8');
 const briefLabels = { role: '役割', audience: '相手', goal: '目的', constraint: '条件' };
@@ -17,12 +18,18 @@ function renderOption(option, index) {
   </div>`;
 }
 
+function renderImage(image) {
+  return `<figure><a href="${draftAssetHref(image.src)}" target="_blank" rel="noopener"><img src="${draftAssetHref(image.src)}" alt="${escapeHtml(image.alt)}" loading="lazy"></a>${image.caption ? `<figcaption>${escapeHtml(image.caption)}</figcaption>` : ''}</figure>`;
+}
+
 function renderScene(scene, index) {
   return `<section>
     <p class="eyebrow">SCENE ${index + 1} / 3 · ${escapeHtml(scene.id)}</p>
     <h3>${escapeHtml(scene.title)}</h3>
     <p>${escapeHtml(scene.situation)}</p>
     <h4>${escapeHtml(scene.question)}</h4>
+    ${scene.image ? renderImage(scene.image) : ''}
+    ${scene.comparison ? `<div class="comparison">${scene.comparison.map(renderImage).join('')}</div><p>画像を押すと、別タブで大きく見られます。</p>` : ''}
     <aside><strong>共通解説・状況の整理</strong><p>${escapeHtml(scene.contextExplanation)}</p></aside>
     ${scene.options.map(renderOption).join('\n')}
     <p><strong>仕事の視点：</strong>${escapeHtml(scene.perspective)}</p>
@@ -39,6 +46,7 @@ function renderManuscript(manuscript) {
     <p class="eyebrow">${escapeHtml(manuscript.category)} ／ ${escapeHtml(manuscript.name)} ／ ${escapeHtml(manuscript.slug)}</p>
     <h2>${escapeHtml(manuscript.entryTitle)}</h2>
     <p>${escapeHtml(manuscript.description)}</p>
+    ${manuscript.image ? renderImage(manuscript.image) : ''}
     ${manuscript.mission ? `<p><strong>ミッション：</strong>${escapeHtml(manuscript.mission)}</p>` : ''}
     ${brief}
     ${manuscript.scenes.map(renderScene).join('\n')}
@@ -121,11 +129,12 @@ ${rows.join('\n')}
 // 判定理由は生成しない。人・AIが原稿を読んで記録した確認結果を、原稿の表示文と対応させる。
 export function exportDraftDocuments(batchId, root = process.cwd()) {
   const batch = verifyEditorialReview(batchId, root);
+  const assets = collectDraftAssets(batch, root);
   const documents = {
     'manuscript.html': renderDraftManuscript(batch),
     'review/answerChecks.md': renderAnswerChecks(batch),
     'review/occupationChecks.md': renderOccupationChecks(batch),
   };
   for (const [relativePath, body] of Object.entries(documents)) fs.writeFileSync(path.join(batch.directory, relativePath), body);
-  return { ...batch, documents: Object.keys(documents) };
+  return { ...batch, documents: Object.keys(documents), assets };
 }
