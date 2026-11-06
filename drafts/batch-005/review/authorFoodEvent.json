@@ -1,0 +1,335 @@
+{
+  "reviewer": "Codex author_food_event（執筆者による二巡の自己確認）",
+  "sourceCheckedAt": "2026-11-05",
+  "editorialCheckedAt": "2026-11-06",
+  "scope": "3体験・9シーン・27選択肢。職種と一次資料の対応を確認後、最終原稿の全状況・問い・各案の説明/良い点/懸念・共通解説・振り返りを再読。実務経験者の確認や公開承認とは別。",
+  "entries": [
+    {
+      "slug": "chef-ingredient-yield",
+      "sha256": "e62cc234658e28d6b8ac1fec9036ee350c22516901aa78a2216d61b33ed37e5e",
+      "sources": [
+        "docs/editorial/company-career-material.txt：第10章 調理師（料理人の関連業務として扱う）",
+        "https://shigoto.mhlw.go.jp/User/Occupation/Detail/99"
+      ],
+      "scenes": [
+        {
+          "sceneId": "scene-1",
+          "optionIds": [
+            "option-1",
+            "option-2",
+            "option-3"
+          ],
+          "occupational": {
+            "status": "pass",
+            "reason": "下ごしらえ・試作・原価管理の業務に対応。料理に使う量、厨房の時間、料理の仕上がりを対象とし、バイヤーの仕入契約だけの話にしない。"
+          },
+          "editorial": {
+            "status": "pass",
+            "reason": "500円と700円は購入重量当たりの架空の見積もり。使える量が不明なので価格の優劣を決めず、三案を料理長への相談材料を集める同段階に置く。"
+          },
+          "optionChecks": [
+            {
+              "optionId": "option-1",
+              "status": "pass",
+              "reason": "購入重量と下処理後の使用可能量を対応させるため、一皿分の材料費を見積もる材料になる。一回の材料からすべての入荷分に同じ割合を適用しない限界が対応。"
+            },
+            {
+              "optionId": "option-2",
+              "status": "pass",
+              "reason": "作業時間を記録すると厨房での準備の負担を検討できる。時間の短さを材料費や品質の良さと同一視せず、別の観点の確認を残している。"
+            },
+            {
+              "optionId": "option-3",
+              "status": "pass",
+              "reason": "同じ分量・調理法の試作は購入形態による仕上がりを検討する入口。味を比べるだけでは材料費や継続的なばらつきは分からない限界を明示。"
+            }
+          ]
+        },
+        {
+          "sceneId": "scene-2",
+          "optionIds": [
+            "option-1",
+            "option-2",
+            "option-3"
+          ],
+          "occupational": {
+            "status": "pass",
+            "reason": "新しい料理の試作と原価管理に対応。材料変更は調理結果と計量を伴い、料理長と検討する範囲に置く。"
+          },
+          "editorial": {
+            "status": "pass",
+            "reason": "全体量とかぼちゃを楽しむ条件を共通化。使用可能な三種の材料は状況文にあり、前の回答に依存しない共通試作品から検討する。安価化を保証しない。"
+          },
+          "optionChecks": [
+            {
+              "optionId": "option-1",
+              "status": "pass",
+              "reason": "下処理済み品への変更は、料理構成を保って購入額と使える量の対応を調べられる。購入単位や実使用量で安価にならない可能性を残す。"
+            },
+            {
+              "optionId": "option-2",
+              "status": "pass",
+              "reason": "別産地という選択は同分量で材料費と味を比較する試作に対応。産地だけから品質を評価せず、実物と入荷条件を確かめる。"
+            },
+            {
+              "optionId": "option-3",
+              "status": "pass",
+              "reason": "じゃがいもの使用は状況で許容されており、量を保ち組み合わせを検討する案。かぼちゃの印象の低下を懸念とし、主役を残す依頼と照合する。"
+            }
+          ]
+        },
+        {
+          "sceneId": "scene-3",
+          "optionIds": [
+            "option-1",
+            "option-2",
+            "option-3"
+          ],
+          "occupational": {
+            "status": "pass",
+            "reason": "複数皿の調理・盛り付け、厨房での作業、料理人への共有に対応。店長の販売判断を料理人個人が代行しない。"
+          },
+          "editorial": {
+            "status": "pass",
+            "reason": "共通候補の味と材料費は少量で確認済みと明記。三案は営業条件で未確認の量・同時進行・引継ぎを調べる入口で、全部できたと見なさない。"
+          },
+          "optionChecks": [
+            {
+              "optionId": "option-1",
+              "status": "pass",
+              "reason": "予定皿数への試し盛りは使用量の見積もりを実際の分量と照合できる。材料量の確認では時間や設備条件までは満たさない点が整合。"
+            },
+            {
+              "optionId": "option-2",
+              "status": "pass",
+              "reason": "模擬注文による調理は鍋・場所・作業の重複を把握できる。限定した注文構成の成功を全営業へ一般化しない。"
+            },
+            {
+              "optionId": "option-3",
+              "status": "pass",
+              "reason": "別の料理人と作ることで暗黙の分量・仕上がり判断を見つけられる。説明の理解だけで処理量と所要時間を保証しない。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "pastry-gift-production",
+      "sha256": "aafde5f6c088719580071d5ed8b8f6faa3d58801239e237d0d61411c942dc7d6",
+      "sources": [
+        "docs/editorial/company-career-material.txt：第10章 パティシエ／和菓子職人／パン職人の洋菓子部分",
+        "https://shigoto.mhlw.go.jp/User/Occupation/Detail/3"
+      ],
+      "scenes": [
+        {
+          "sceneId": "scene-1",
+          "optionIds": [
+            "option-1",
+            "option-2",
+            "option-3"
+          ],
+          "occupational": {
+            "status": "pass",
+            "reason": "生産計画・成形・焼成・冷却・包装と対応。洋菓子店のパティシエが製造責任者と工程を組む役割で、販売予測だけの仕事にしない。"
+          },
+          "editorial": {
+            "status": "pass",
+            "reason": "30箱×一種類二個＝各60個の条件が明示されている。設備、場所、人手を同じ計画段階で調べ、全案で原材料と資材も照合する。"
+          },
+          "optionChecks": [
+            {
+              "optionId": "option-1",
+              "status": "pass",
+              "reason": "オーブン使用の重複を一覧化する案は焼成順の相談へつながる。焼成条件を勝手に変えず、後工程に残る制約を明記。"
+            },
+            {
+              "optionId": "option-2",
+              "status": "pass",
+              "reason": "冷却・包装の場所を調べる案は品物の置き場を計画できる。空いているだけでは適切な場所とせず、衛生・保管・動線の確認を残す。"
+            },
+            {
+              "optionId": "option-3",
+              "status": "pass",
+              "reason": "手作業と人の時間対応を整理し、同じ人への作業集中を検討する。人数だけで能力や設備を代替できるとはしない。"
+            }
+          ]
+        },
+        {
+          "sceneId": "scene-2",
+          "optionIds": [
+            "option-1",
+            "option-2",
+            "option-3"
+          ],
+          "occupational": {
+            "status": "pass",
+            "reason": "複数種の菓子を製造する生産計画に対応。工程の短縮技法やレシピを教えず、設備・作業順・役割の調整とする。"
+          },
+          "editorial": {
+            "status": "pass",
+            "reason": "共通予定表を使い前の回答に依存しない。調整できる範囲と省けない条件が選択前にあり、三案とも実行可能性を予定表で確認する案。"
+          },
+          "optionChecks": [
+            {
+              "optionId": "option-1",
+              "status": "pass",
+              "reason": "包装人員の入れる時間から焼成順を考えることで工程間をつなぐ。予想時刻だけで冷却完了としない限界が対応。"
+            },
+            {
+              "optionId": "option-2",
+              "status": "pass",
+              "reason": "通常商品も含む設備順の整理は注文分のみを優先しない計画になる。設備が空いても人手が不足し得る点を残す。"
+            },
+            {
+              "optionId": "option-3",
+              "status": "pass",
+              "reason": "製造後の人の移動を役割表にすることで包装への応援を検討できる。衛生上の切替時間や前工程の遅れを除外しない。"
+            }
+          ]
+        },
+        {
+          "sceneId": "scene-3",
+          "optionIds": [
+            "option-1",
+            "option-2",
+            "option-3"
+          ],
+          "occupational": {
+            "status": "pass",
+            "reason": "製造から包装へつなげる業務の具体化。個別の手作業方式の優劣は資料の事実ではなく教材の比較案として扱う。"
+          },
+          "editorial": {
+            "status": "pass",
+            "reason": "個包装済みの三種類と名称を示す見本を前提にし、原材料表示・数量・品質の確認は全案共通。選択肢は照合のしやすい作業方法の違い。"
+          },
+          "optionChecks": [
+            {
+              "optionId": "option-1",
+              "status": "pass",
+              "reason": "一箱分を先にトレーへそろえることで確認単位ができる。移動時の取り違えや追加の場所・作業を懸念に対応させる。"
+            },
+            {
+              "optionId": "option-2",
+              "status": "pass",
+              "reason": "少数箱へ種類ごとに入れる案は扱う種類を限定できる。箱の飛ばしや入れ忘れを防ぐ完成時の個別確認を残す。"
+            },
+            {
+              "optionId": "option-3",
+              "status": "pass",
+              "reason": "一箱ずつ定順で入れる案は中断した未確認箱を区別しやすい。慣れから確認が省かれないよう名称・個数の照合を維持する。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "event-planner-stage-schedule",
+      "sha256": "9b132c2dcf0038629cb28f5cede7c3eb572e4365587074533530b99a2f7e23d9",
+      "sources": [
+        "docs/editorial/company-career-material.txt：第5章 イベントプランナー",
+        "https://shigoto.mhlw.go.jp/User/Occupation/Detail/566"
+      ],
+      "scenes": [
+        {
+          "sceneId": "scene-1",
+          "optionIds": [
+            "option-1",
+            "option-2",
+            "option-3"
+          ],
+          "occupational": {
+            "status": "pass",
+            "reason": "当日の進行・役割分担・関係者との調整に対応。舞台・音響の専門判断を確認し、イベントプランナーが独断で機材操作や安全時間を設定しない。"
+          },
+          "editorial": {
+            "status": "pass",
+            "reason": "90分枠と70分の出演案の差20分に、未計上の準備・開閉会が必要と提示。物、人、音の三入口から切替時間を調べる問いで、余白を十分と断言しない。"
+          },
+          "optionChecks": [
+            {
+              "optionId": "option-1",
+              "status": "pass",
+              "reason": "使用物と搬入出を一覧にすることで切替作業の対象が分かる。現地の動線や所要時間は別途確認が必要という懸念に対応。"
+            },
+            {
+              "optionId": "option-2",
+              "status": "pass",
+              "reason": "音響担当者に切替時の確認を聞くため、演奏準備を出演時間外へ計上できる。音の準備だけで舞台全体が完了とはしない。"
+            },
+            {
+              "optionId": "option-3",
+              "status": "pass",
+              "reason": "出演者の待機と呼出の流れを確認するため、案内の時間と滞留を計画へ含められる。移動完了だけで開演せず舞台・音響の完了合図が必要。"
+            }
+          ]
+        },
+        {
+          "sceneId": "scene-2",
+          "optionIds": [
+            "option-1",
+            "option-2",
+            "option-3"
+          ],
+          "occupational": {
+            "status": "pass",
+            "reason": "関係者の要望を踏まえた企画内容・進行の調整に対応。主催者と出演者への提案として、合意なしの時間削減をしない。"
+          },
+          "editorial": {
+            "status": "pass",
+            "reason": "共通進行95分と90分枠の不足5分が明示され、調整可能な三項目も状況にある。一案だけで5分短くなる保証はなく、再計測と合意を必須にする。"
+          },
+          "optionChecks": [
+            {
+              "optionId": "option-1",
+              "status": "pass",
+              "reason": "質問を絞る案は中心テーマを守りながら話す範囲を整理できる。話の広がりの減少と削り過ぎを懸念にし、想定時間を測る。"
+            },
+            {
+              "optionId": "option-2",
+              "status": "pass",
+              "reason": "紹介の重複をまとめる案は必要な情報を残しつつ分担を整理する。類似表現の目的が異なる場合を考慮し、読み合わせを残す。"
+            },
+            {
+              "optionId": "option-3",
+              "status": "pass",
+              "reason": "感想の問いを整理する案は本編を保ちながら締め方を調整できる。感想を聞く目的そのものを失わない合意が必要という懸念に対応。"
+            }
+          ]
+        },
+        {
+          "sceneId": "scene-3",
+          "optionIds": [
+            "option-1",
+            "option-2",
+            "option-3"
+          ],
+          "occupational": {
+            "status": "pass",
+            "reason": "当日の進行・現場管理・スタッフの役割分担の具体化。開始の判断と連絡先は責任者と確認し、専門担当者の業務を置き換えない。"
+          },
+          "editorial": {
+            "status": "pass",
+            "reason": "主催者確認済みの共通進行表を使い前の選択に依存しない。口頭の読み合わせ、役割の表記、遅れの想定という三手法で曖昧な判断・合図を具体化する。"
+          },
+          "optionChecks": [
+            {
+              "optionId": "option-1",
+              "status": "pass",
+              "reason": "切替を担当者の発言でたどることで連絡の欠落を発見できる。会議での理解だけでは現地で合図が届くとは限らず連絡手段と立ち位置を確認する。"
+            },
+            {
+              "optionId": "option-2",
+              "status": "pass",
+              "reason": "同じ行に担当別の動きを置くことで待機と作業の前後を比較できる。記載だけで共有済みとはせず、合図の意味を読み合わせる。"
+            },
+            {
+              "optionId": "option-3",
+              "status": "pass",
+              "reason": "音の準備が遅れる具体例で連絡先と判断順を試すため、時刻だけで始めることを避ける。一つの例をすべての緊急対応に一般化しない。"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
