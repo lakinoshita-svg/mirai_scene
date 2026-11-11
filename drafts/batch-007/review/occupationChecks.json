@@ -1,0 +1,2223 @@
+{
+  "batchId": "batch-007",
+  "reviewType": "twoPassSelfReview",
+  "passes": {
+    "occupational": {
+      "reviewer": "Codex（自己確認）",
+      "checkedAt": "2026-11-10",
+      "method": "自社原文の該当職種とjob tagの本文を確認し、全60シーンで役割・権限・隣接職種との分担と架空の設定を照合。"
+    },
+    "editorial": {
+      "reviewer": "Codex（同一担当の二巡目の自己確認）",
+      "checkedAt": "2026-11-10",
+      "method": "全20体験を通読し、60シーンのつながり、180案の説明・利点・懸念、共通解説と振り返りの対応を再読。画像の条件・比率・説明との対応も確認。"
+    }
+  },
+  "limitations": [
+    "独立レビュー、実務経験者の確認、高校生の試読、公開承認は未実施。",
+    "資料は仕事の背景の根拠であり、架空のシーンや回答の効果を保証するものではない。",
+    "学びの学校分野IDは提供された本体のマスタに照合。本番検索での選択状態は別途確認する。"
+  ],
+  "entries": [
+    {
+      "slug": "physician-consultation-story",
+      "sha256": "34e99e26ecc4ed4c8b4748308813fdcba76058e8225c56fc04280674fd32dad1",
+      "sources": [
+        "https://shigoto.mhlw.go.jp/User/Occupation/Detail/404",
+        "docs/editorial/company-career-material.txt：12 医師：診察・診断・治療の概要に直接対応。",
+        "drafts/batch-007/review/sourceEvidence.md"
+      ],
+      "scenes": [
+        {
+          "sceneId": "scene-1",
+          "optionIds": [
+            "option-1",
+            "option-2",
+            "option-3"
+          ],
+          "occupational": {
+            "status": "pass",
+            "reason": "問診による情報収集に対応。緊急度確認を共通前提とし、病名や治療の選択を利用者に求めない。"
+          },
+          "editorial": {
+            "status": "pass",
+            "reason": "経過・生活・心配という異なる入口で、いずれも必要な問診を省略しない。"
+          },
+          "optionChecks": [
+            {
+              "optionId": "option-1",
+              "status": "pass",
+              "reason": "経過の整理であり、日付だけで病因を断定しない。"
+            },
+            {
+              "optionId": "option-2",
+              "status": "pass",
+              "reason": "生活の影響を入口にし、身体評価の代用にはしない。"
+            },
+            {
+              "optionId": "option-3",
+              "status": "pass",
+              "reason": "不安を尊重しつつ、重症度の指標と混同しない。"
+            }
+          ]
+        },
+        {
+          "sceneId": "scene-2",
+          "optionIds": [
+            "option-1",
+            "option-2",
+            "option-3"
+          ],
+          "occupational": {
+            "status": "pass",
+            "reason": "内科医による検査の必要性と方針の説明。特定の検査の適応を設定しない。"
+          },
+          "editorial": {
+            "status": "pass",
+            "reason": "全案で目的と負担を説明する条件を明記し、入口だけを選ばせる。"
+          },
+          "optionChecks": [
+            {
+              "optionId": "option-1",
+              "status": "pass",
+              "reason": "未確定を明示し、理解確認を残す。"
+            },
+            {
+              "optionId": "option-2",
+              "status": "pass",
+              "reason": "日程の確約はせず予定として伝える。"
+            },
+            {
+              "optionId": "option-3",
+              "status": "pass",
+              "reason": "疑問中心でも説明義務を質問の有無に依存させない。"
+            }
+          ]
+        },
+        {
+          "sceneId": "scene-3",
+          "optionIds": [
+            "option-1",
+            "option-2",
+            "option-3"
+          ],
+          "occupational": {
+            "status": "pass",
+            "reason": "患者・家族への丁寧な説明と生活への助言の範囲。具体的な受診基準や医療助言は教材に載せない。"
+          },
+          "editorial": {
+            "status": "pass",
+            "reason": "前の選択と独立した説明後の共通場面。受診目安そのものは出題しない。"
+          },
+          "optionChecks": [
+            {
+              "optionId": "option-1",
+              "status": "pass",
+              "reason": "理解の確認であって患者を採点しない。"
+            },
+            {
+              "optionId": "option-2",
+              "status": "pass",
+              "reason": "配慮と医療判断を分ける。"
+            },
+            {
+              "optionId": "option-3",
+              "status": "pass",
+              "reason": "書面と対話を併用する。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "nurse-rest-environment",
+      "sha256": "f1a80d6f83463575dfc2f01fd6af0caa9840f28d869574595a3b6696b71d57cb",
+      "sources": [
+        "https://shigoto.mhlw.go.jp/User/Occupation/Detail/156",
+        "docs/editorial/company-career-material.txt：12 看護師：療養上の支援・診療の補助に直接対応。",
+        "drafts/batch-007/review/sourceEvidence.md"
+      ],
+      "scenes": [
+        {
+          "sceneId": "scene-1",
+          "optionIds": [
+            "option-1",
+            "option-2",
+            "option-3"
+          ],
+          "occupational": {
+            "status": "pass",
+            "reason": "看護師の休息への支援と状態観察に対応。症状評価を飛ばして環境だけを扱わない。"
+          },
+          "editorial": {
+            "status": "pass",
+            "reason": "三案は原因の断定ではなく情報収集の入口。"
+          },
+          "optionChecks": [
+            {
+              "optionId": "option-1",
+              "status": "pass",
+              "reason": "時系列と記録を照らし、憶測を避ける。"
+            },
+            {
+              "optionId": "option-2",
+              "status": "pass",
+              "reason": "習慣尊重と病棟条件を両立する。"
+            },
+            {
+              "optionId": "option-3",
+              "status": "pass",
+              "reason": "心理支援を診断や強制的な聞き取りにしない。"
+            }
+          ]
+        },
+        {
+          "sceneId": "scene-2",
+          "optionIds": [
+            "option-1",
+            "option-2",
+            "option-3"
+          ],
+          "occupational": {
+            "status": "pass",
+            "reason": "看護による療養環境の調整。設備操作の具体手順は示さず、病棟の安全条件を前提にする。"
+          },
+          "editorial": {
+            "status": "pass",
+            "reason": "照明・カーテン・訪室説明という異なる工夫に共通の安全条件を設定。"
+          },
+          "optionChecks": [
+            {
+              "optionId": "option-1",
+              "status": "pass",
+              "reason": "設定範囲と観察を維持する。"
+            },
+            {
+              "optionId": "option-2",
+              "status": "pass",
+              "reason": "遮光を優先して動線を塞がない。"
+            },
+            {
+              "optionId": "option-3",
+              "status": "pass",
+              "reason": "説明による受忍を強制しない。"
+            }
+          ]
+        },
+        {
+          "sceneId": "scene-3",
+          "optionIds": [
+            "option-1",
+            "option-2",
+            "option-3"
+          ],
+          "occupational": {
+            "status": "pass",
+            "reason": "看護師間の状態・ケアの共有。睡眠改善の因果や効果は断定しない。"
+          },
+          "editorial": {
+            "status": "pass",
+            "reason": "各案は記録の重点であり、必須記録を省く選択ではない。"
+          },
+          "optionChecks": [
+            {
+              "optionId": "option-1",
+              "status": "pass",
+              "reason": "見ていない時間を睡眠と推定しない。"
+            },
+            {
+              "optionId": "option-2",
+              "status": "pass",
+              "reason": "因果関係と同時発生を分ける。"
+            },
+            {
+              "optionId": "option-3",
+              "status": "pass",
+              "reason": "将来の確認と実施記録を両方保持する。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "pharmacist-medication-conversation",
+      "sha256": "3b059d6fdde83fb154d0d988d03cd74c464a5f26ab057460d9e19d4d41b3de1c",
+      "sources": [
+        "https://shigoto.mhlw.go.jp/User/Occupation/Detail/158",
+        "docs/editorial/company-career-material.txt：12 薬剤師：調剤・服薬指導・医薬品管理に直接対応。",
+        "drafts/batch-007/review/sourceEvidence.md"
+      ],
+      "scenes": [
+        {
+          "sceneId": "scene-1",
+          "optionIds": [
+            "option-1",
+            "option-2",
+            "option-3"
+          ],
+          "occupational": {
+            "status": "pass",
+            "reason": "併用薬・処方確認の範囲。照会や個別の薬の変更を利用者に判断させない。"
+          },
+          "editorial": {
+            "status": "pass",
+            "reason": "不明な併用薬の確認を全案で継続し、危険な自己判断を選択肢にしない。"
+          },
+          "optionChecks": [
+            {
+              "optionId": "option-1",
+              "status": "pass",
+              "reason": "資料の網羅性を保証しない。"
+            },
+            {
+              "optionId": "option-2",
+              "status": "pass",
+              "reason": "画像や色だけで薬を同定しない。"
+            },
+            {
+              "optionId": "option-3",
+              "status": "pass",
+              "reason": "所在情報を薬剤情報の代用にしない。"
+            }
+          ]
+        },
+        {
+          "sceneId": "scene-2",
+          "optionIds": [
+            "option-1",
+            "option-2",
+            "option-3"
+          ],
+          "occupational": {
+            "status": "pass",
+            "reason": "個人に合わせた服薬指導に対応。用量・時刻の具体的助言は教材に含めない。"
+          },
+          "editorial": {
+            "status": "pass",
+            "reason": "照会完了を全ルート共通の場面として明記。"
+          },
+          "optionChecks": [
+            {
+              "optionId": "option-1",
+              "status": "pass",
+              "reason": "外観依存の誤認を避ける。"
+            },
+            {
+              "optionId": "option-2",
+              "status": "pass",
+              "reason": "生活への適用と処方変更を明確に区別する。"
+            },
+            {
+              "optionId": "option-3",
+              "status": "pass",
+              "reason": "理解確認を患者への評価にしない。"
+            }
+          ]
+        },
+        {
+          "sceneId": "scene-3",
+          "optionIds": [
+            "option-1",
+            "option-2",
+            "option-3"
+          ],
+          "occupational": {
+            "status": "pass",
+            "reason": "薬に関する相談業務に対応。緊急時対応や副作用の見分け方を一般化しない。"
+          },
+          "editorial": {
+            "status": "pass",
+            "reason": "案ごとに連絡経路・相談材料・疑問の言語化を分ける。"
+          },
+          "optionChecks": [
+            {
+              "optionId": "option-1",
+              "status": "pass",
+              "reason": "連絡可能性と医療上の判断を混同しない。"
+            },
+            {
+              "optionId": "option-2",
+              "status": "pass",
+              "reason": "相談前の情報完備を条件にしない。"
+            },
+            {
+              "optionId": "option-3",
+              "status": "pass",
+              "reason": "疑問の記録と解決を区別する。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "care-worker-daily-choice",
+      "sha256": "84793030f8b640026fad2d6747271b1f1786db4b9ee519054cb966a7f479ffdf",
+      "sources": [
+        "https://shigoto.mhlw.go.jp/Occupation/Detail?occupationId=134",
+        "docs/editorial/company-career-material.txt：14 介護福祉士：日常生活の支援に直接対応。job tagは資格保有者に限らない施設介護員全体を扱う。",
+        "drafts/batch-007/review/sourceEvidence.md"
+      ],
+      "scenes": [
+        {
+          "sceneId": "scene-1",
+          "optionIds": [
+            "option-1",
+            "option-2",
+            "option-3"
+          ],
+          "occupational": {
+            "status": "pass",
+            "reason": "本人の自立と日常生活を支える施設介護。診断や身体介助の技法を出題しない。"
+          },
+          "editorial": {
+            "status": "pass",
+            "reason": "体調・時間・服の準備を状況で提示し、全案が実行できる。"
+          },
+          "optionChecks": [
+            {
+              "optionId": "option-1",
+              "status": "pass",
+              "reason": "一律に二択へ制限せず本人の反応に応じる。"
+            },
+            {
+              "optionId": "option-2",
+              "status": "pass",
+              "reason": "助言で選択を代行しない。"
+            },
+            {
+              "optionId": "option-3",
+              "status": "pass",
+              "reason": "過去の好みで固定しない。"
+            }
+          ]
+        },
+        {
+          "sceneId": "scene-2",
+          "optionIds": [
+            "option-1",
+            "option-2",
+            "option-3"
+          ],
+          "occupational": {
+            "status": "pass",
+            "reason": "レクリエーションやコミュニケーション支援の範囲。活動参加を強制せず、状態確認を別途行う。"
+          },
+          "editorial": {
+            "status": "pass",
+            "reason": "選ぶ対象を活動の成果でなく本人の過ごし方に置く。"
+          },
+          "optionChecks": [
+            {
+              "optionId": "option-1",
+              "status": "pass",
+              "reason": "見る参加の継続を強制しない。"
+            },
+            {
+              "optionId": "option-2",
+              "status": "pass",
+              "reason": "沈黙の解釈を断定しない。"
+            },
+            {
+              "optionId": "option-3",
+              "status": "pass",
+              "reason": "本人の選択と必要支援を両立する。"
+            }
+          ]
+        },
+        {
+          "sceneId": "scene-3",
+          "optionIds": [
+            "option-1",
+            "option-2",
+            "option-3"
+          ],
+          "occupational": {
+            "status": "pass",
+            "reason": "介護記録と職員間連携に対応。嗜好や意欲を一日の観察で固定しない。"
+          },
+          "editorial": {
+            "status": "pass",
+            "reason": "朝と午後の出来事をどの案でも起こり得る形で接続。"
+          },
+          "optionChecks": [
+            {
+              "optionId": "option-1",
+              "status": "pass",
+              "reason": "発言と解釈を分離する。"
+            },
+            {
+              "optionId": "option-2",
+              "status": "pass",
+              "reason": "支援方法の効果を保証しない。"
+            },
+            {
+              "optionId": "option-3",
+              "status": "pass",
+              "reason": "未来の確認で実施記録を置き換えない。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "medical-clerk-visit-guidance",
+      "sha256": "9ae17c5131620a73269c3943050964269076384a21ad0a668fa50ea2213968ba",
+      "sources": [
+        "https://shigoto.mhlw.go.jp/User/Occupation/Detail/443",
+        "docs/editorial/company-career-material.txt：13 医療事務／医療秘書：受付・会計・請求事務部分に対応。秘書業務全体を同一視しない。",
+        "drafts/batch-007/review/sourceEvidence.md"
+      ],
+      "scenes": [
+        {
+          "sceneId": "scene-1",
+          "optionIds": [
+            "option-1",
+            "option-2",
+            "option-3"
+          ],
+          "occupational": {
+            "status": "pass",
+            "reason": "外来受付と案内業務。保険証等の特定媒体を固定せず、医療判断は医療職へつなぐ。"
+          },
+          "editorial": {
+            "status": "pass",
+            "reason": "必要な事務確認を共通前提にし、伝達方法を選ぶ。"
+          },
+          "optionChecks": [
+            {
+              "optionId": "option-1",
+              "status": "pass",
+              "reason": "段階案内と見通しを両立する。"
+            },
+            {
+              "optionId": "option-2",
+              "status": "pass",
+              "reason": "図が全員に有効とはしない。"
+            },
+            {
+              "optionId": "option-3",
+              "status": "pass",
+              "reason": "診療の一律の順序を保証しない。"
+            }
+          ]
+        },
+        {
+          "sceneId": "scene-2",
+          "optionIds": [
+            "option-1",
+            "option-2",
+            "option-3"
+          ],
+          "occupational": {
+            "status": "pass",
+            "reason": "診療記録と請求の確認業務。診療行為の有無や請求可否を独断で決めない。"
+          },
+          "editorial": {
+            "status": "pass",
+            "reason": "照会用情報の整理で、診療内容や算定ルールの正解当てにしない。"
+          },
+          "optionChecks": [
+            {
+              "optionId": "option-1",
+              "status": "pass",
+              "reason": "不一致の比較と患者識別を両立する。"
+            },
+            {
+              "optionId": "option-2",
+              "status": "pass",
+              "reason": "時刻だけで正本を決めない。"
+            },
+            {
+              "optionId": "option-3",
+              "status": "pass",
+              "reason": "質問と根拠記録をセットにする。"
+            }
+          ]
+        },
+        {
+          "sceneId": "scene-3",
+          "optionIds": [
+            "option-1",
+            "option-2",
+            "option-3"
+          ],
+          "occupational": {
+            "status": "pass",
+            "reason": "窓口応対と会計業務の範囲。未確定の処理時刻や費用を保証しない。"
+          },
+          "editorial": {
+            "status": "pass",
+            "reason": "第二シーンのどの照会方法でも成立する確認中の場面。"
+          },
+          "optionChecks": [
+            {
+              "optionId": "option-1",
+              "status": "pass",
+              "reason": "透明性と情報保護を両立する。"
+            },
+            {
+              "optionId": "option-2",
+              "status": "pass",
+              "reason": "待機案内が独断の院外移動許可にならない。"
+            },
+            {
+              "optionId": "option-3",
+              "status": "pass",
+              "reason": "状況連絡の約束と完了保証を区別する。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "materials-research-test-conditions",
+      "sha256": "3b3116467524549eb8ed9d89ae2d0eabf18b121d4a4d9a141b000c46aa5382c5",
+      "sources": [
+        "https://shigoto.mhlw.go.jp/User/Occupation/Detail/308",
+        "docs/editorial/company-career-material.txt：直接の項目なし。11 スポーツ用品研究者は用途が限定された関連職であり、高分子材料研究全般の根拠にはしない。",
+        "drafts/batch-007/review/sourceEvidence.md"
+      ],
+      "scenes": [
+        {
+          "sceneId": "scene-1",
+          "optionIds": [
+            "option-1",
+            "option-2",
+            "option-3"
+          ],
+          "occupational": {
+            "status": "pass",
+            "reason": "高分子材料の物性試験・研究開発に対応。数値と試料は架空で、具体的な試験規格や性能を示さない。"
+          },
+          "editorial": {
+            "status": "pass",
+            "reason": "厚さ・反復・記録の異なる入口で、材料の優劣を問わない。"
+          },
+          "optionChecks": [
+            {
+              "optionId": "option-1",
+              "status": "pass",
+              "reason": "厚さをそろえるだけで因果を保証しない。"
+            },
+            {
+              "optionId": "option-2",
+              "status": "pass",
+              "reason": "繰り返しだけで厚さの交絡が消えないことを明記。"
+            },
+            {
+              "optionId": "option-3",
+              "status": "pass",
+              "reason": "情報整理と実験を区別する。"
+            }
+          ]
+        },
+        {
+          "sceneId": "scene-2",
+          "optionIds": [
+            "option-1",
+            "option-2",
+            "option-3"
+          ],
+          "occupational": {
+            "status": "pass",
+            "reason": "材料試験の分析・記録の範囲。外れ値の除外基準を一律に示さない。"
+          },
+          "editorial": {
+            "status": "pass",
+            "reason": "条件統一はチーム共通の進展として明記し、第一シーンの選択に依存させない。"
+          },
+          "optionChecks": [
+            {
+              "optionId": "option-1",
+              "status": "pass",
+              "reason": "相関と原因を分ける。"
+            },
+            {
+              "optionId": "option-2",
+              "status": "pass",
+              "reason": "機器確認だけで材料差を確定しない。"
+            },
+            {
+              "optionId": "option-3",
+              "status": "pass",
+              "reason": "都合のよい結果の選別を避ける。"
+            }
+          ]
+        },
+        {
+          "sceneId": "scene-3",
+          "optionIds": [
+            "option-1",
+            "option-2",
+            "option-3"
+          ],
+          "occupational": {
+            "status": "pass",
+            "reason": "研究結果の共有・開発検討の範囲。用途の適合や耐久性を未測定のまま認定しない。"
+          },
+          "editorial": {
+            "status": "pass",
+            "reason": "全案が同じ研究結果を異なる順序で報告し、優位性の断定を避ける。"
+          },
+          "optionChecks": [
+            {
+              "optionId": "option-1",
+              "status": "pass",
+              "reason": "結果の集約によるばらつき隠しを避ける。"
+            },
+            {
+              "optionId": "option-2",
+              "status": "pass",
+              "reason": "結論の短縮で条件を省略しない。"
+            },
+            {
+              "optionId": "option-3",
+              "status": "pass",
+              "reason": "提案と実証済み事実を分ける。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "mechanical-designer-cart-handle",
+      "sha256": "faa6a0b7258c69de73e544d9ee0d01b82148b25934be070285d8267b46bb14c0",
+      "sources": [
+        "https://shigoto.mhlw.go.jp/User/Occupation/Detail/262",
+        "docs/editorial/company-career-material.txt：直接の項目なし。4 建築士の設計業務を機械設計の根拠へ転用しない。",
+        "drafts/batch-007/review/sourceEvidence.md"
+      ],
+      "scenes": [
+        {
+          "sceneId": "scene-1",
+          "optionIds": [
+            "option-1",
+            "option-2",
+            "option-3"
+          ],
+          "occupational": {
+            "status": "pass",
+            "reason": "機械設計の要求確認と仕様検討に対応。安全性の判断を素人の印象だけに任せない。"
+          },
+          "editorial": {
+            "status": "pass",
+            "reason": "三案は要件調査の重点で、必要な荷重条件の確認を共通にする。"
+          },
+          "optionChecks": [
+            {
+              "optionId": "option-1",
+              "status": "pass",
+              "reason": "寸法だけで性能を決めない。"
+            },
+            {
+              "optionId": "option-2",
+              "status": "pass",
+              "reason": "観察の代表性の限界を残す。"
+            },
+            {
+              "optionId": "option-3",
+              "status": "pass",
+              "reason": "主観の希望と仕様を区別する。"
+            }
+          ]
+        },
+        {
+          "sceneId": "scene-2",
+          "optionIds": [
+            "option-1",
+            "option-2",
+            "option-3"
+          ],
+          "occupational": {
+            "status": "pass",
+            "reason": "試作品による設計検証。架空の持ち手図であり、製作・荷重・安全規格の指示ではない。"
+          },
+          "editorial": {
+            "status": "pass",
+            "reason": "同条件の比較と事前安全確認を前提に、形の好みの正解当てを避ける。"
+          },
+          "optionChecks": [
+            {
+              "optionId": "option-1",
+              "status": "pass",
+              "reason": "姿勢から医学的な負担を断定しない。"
+            },
+            {
+              "optionId": "option-2",
+              "status": "pass",
+              "reason": "操作時間を唯一の性能指標にしない。"
+            },
+            {
+              "optionId": "option-3",
+              "status": "pass",
+              "reason": "全員への一般化をしない。"
+            }
+          ]
+        },
+        {
+          "sceneId": "scene-3",
+          "optionIds": [
+            "option-1",
+            "option-2",
+            "option-3"
+          ],
+          "occupational": {
+            "status": "pass",
+            "reason": "製造部門との設計調整と実現可能性確認に対応。未試験の耐久性を保証しない。"
+          },
+          "editorial": {
+            "status": "pass",
+            "reason": "二案の採用結果を固定せず、どの前の選択でも成立。"
+          },
+          "optionChecks": [
+            {
+              "optionId": "option-1",
+              "status": "pass",
+              "reason": "安全を多数の得点で相殺しない。"
+            },
+            {
+              "optionId": "option-2",
+              "status": "pass",
+              "reason": "図の確定状態を明確にする。"
+            },
+            {
+              "optionId": "option-3",
+              "status": "pass",
+              "reason": "未確認を予定で埋めて合格扱いにしない。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "auto-mechanic-sound-inspection",
+      "sha256": "69d5747ee7b4af14fb54fb52eac8e2aad45bc64cb8db4bdb5d823bbd506c8cc1",
+      "sources": [
+        "https://shigoto.mhlw.go.jp/User/Occupation/Detail/197",
+        "docs/editorial/company-career-material.txt：2 自動車整備士：点検・整備・修理に直接対応。",
+        "drafts/batch-007/review/sourceEvidence.md"
+      ],
+      "scenes": [
+        {
+          "sceneId": "scene-1",
+          "optionIds": [
+            "option-1",
+            "option-2",
+            "option-3"
+          ],
+          "occupational": {
+            "status": "pass",
+            "reason": "不具合の状況・状態の聞き取りに対応。危険な走行再現や自己点検を促さない。"
+          },
+          "editorial": {
+            "status": "pass",
+            "reason": "全案は記憶からの聴取で、安全確保の遅延を選ばせない。"
+          },
+          "optionChecks": [
+            {
+              "optionId": "option-1",
+              "status": "pass",
+              "reason": "条件と故障原因を直結させない。"
+            },
+            {
+              "optionId": "option-2",
+              "status": "pass",
+              "reason": "擬音の普遍性を仮定しない。"
+            },
+            {
+              "optionId": "option-3",
+              "status": "pass",
+              "reason": "危険な再現依頼を排除する。"
+            }
+          ]
+        },
+        {
+          "sceneId": "scene-2",
+          "optionIds": [
+            "option-1",
+            "option-2",
+            "option-3"
+          ],
+          "occupational": {
+            "status": "pass",
+            "reason": "点検・原因調査の範囲。走行可否や特定部品の交換を断定しない。"
+          },
+          "editorial": {
+            "status": "pass",
+            "reason": "結果がない場面で独断の帰庫・部品交換を選択肢にしない。"
+          },
+          "optionChecks": [
+            {
+              "optionId": "option-1",
+              "status": "pass",
+              "reason": "未確認条件の再現を安全判断から切り離さない。"
+            },
+            {
+              "optionId": "option-2",
+              "status": "pass",
+              "reason": "未実施を合格扱いにしない。"
+            },
+            {
+              "optionId": "option-3",
+              "status": "pass",
+              "reason": "既知事例と個車の診断を区別する。"
+            }
+          ]
+        },
+        {
+          "sceneId": "scene-3",
+          "optionIds": [
+            "option-1",
+            "option-2",
+            "option-3"
+          ],
+          "occupational": {
+            "status": "pass",
+            "reason": "整備内容の顧客説明に対応。見積もりの承認を得る架空の工場設定。"
+          },
+          "editorial": {
+            "status": "pass",
+            "reason": "全案で説明項目と了承を共通にし、強引な受注を正解にしない。"
+          },
+          "optionChecks": [
+            {
+              "optionId": "option-1",
+              "status": "pass",
+              "reason": "経過と契約条件の両方を示す。"
+            },
+            {
+              "optionId": "option-2",
+              "status": "pass",
+              "reason": "費用のみで技術説明を置き換えない。"
+            },
+            {
+              "optionId": "option-3",
+              "status": "pass",
+              "reason": "相談と根拠のない保証を区別する。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "food-sales-store-proposal",
+      "sha256": "fefa6519af1e816b7b96b708c1111014fe6bba9e562cb86ba9fd850fc508c58f",
+      "sources": [
+        "https://shigoto.mhlw.go.jp/User/Occupation/Detail/527",
+        "docs/editorial/company-career-material.txt：直接の項目なし。9 マーチャンダイザーは関連職だが、食品メーカー営業の職務そのものの根拠はjob tagで確認。",
+        "drafts/batch-007/review/sourceEvidence.md"
+      ],
+      "scenes": [
+        {
+          "sceneId": "scene-1",
+          "optionIds": [
+            "option-1",
+            "option-2",
+            "option-3"
+          ],
+          "occupational": {
+            "status": "pass",
+            "reason": "食品メーカー営業の販売提案と店舗運営支援に対応。売り場の決定権は店側に置く。"
+          },
+          "editorial": {
+            "status": "pass",
+            "reason": "棚不足に直接つながる三つの聞き取り軸を提示。"
+          },
+          "optionChecks": [
+            {
+              "optionId": "option-1",
+              "status": "pass",
+              "reason": "適合と販売成果を同一視しない。"
+            },
+            {
+              "optionId": "option-2",
+              "status": "pass",
+              "reason": "顧客データの範囲と予測限界を明示。"
+            },
+            {
+              "optionId": "option-3",
+              "status": "pass",
+              "reason": "運営条件と商品目的を両立。"
+            }
+          ]
+        },
+        {
+          "sceneId": "scene-2",
+          "optionIds": [
+            "option-1",
+            "option-2",
+            "option-3"
+          ],
+          "occupational": {
+            "status": "pass",
+            "reason": "食品の取扱提案と見積もりの範囲。少量・限定導入は架空の会社条件として明記。"
+          },
+          "editorial": {
+            "status": "pass",
+            "reason": "全て会社が提供可能な条件として記載し、独断の値引きや納期確約をしない。"
+          },
+          "optionChecks": [
+            {
+              "optionId": "option-1",
+              "status": "pass",
+              "reason": "少数試行の限界と取引コストを残す。"
+            },
+            {
+              "optionId": "option-2",
+              "status": "pass",
+              "reason": "一商品の反応を全商品へ一般化しない。"
+            },
+            {
+              "optionId": "option-3",
+              "status": "pass",
+              "reason": "一店の結果の外的妥当性を限定する。"
+            }
+          ]
+        },
+        {
+          "sceneId": "scene-3",
+          "optionIds": [
+            "option-1",
+            "option-2",
+            "option-3"
+          ],
+          "occupational": {
+            "status": "pass",
+            "reason": "販売データを使う営業提案と店舗支援に対応。因果関係や売上増を断定しない。"
+          },
+          "editorial": {
+            "status": "pass",
+            "reason": "導入方法を特定せず、合意した試行という共通の次場面にする。"
+          },
+          "optionChecks": [
+            {
+              "optionId": "option-1",
+              "status": "pass",
+              "reason": "欠品分を確定売上として加算しない。"
+            },
+            {
+              "optionId": "option-2",
+              "status": "pass",
+              "reason": "陳列変更との因果を保証しない。"
+            },
+            {
+              "optionId": "option-3",
+              "status": "pass",
+              "reason": "運用負担と需要を両方確認する。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "it-sales-workflow-proposal",
+      "sha256": "65fd09928bc40cac17746914bc94a2f99cf58b75d4a68753600024031bd790de",
+      "sources": [
+        "https://shigoto.mhlw.go.jp/User/Occupation/Detail/452",
+        "docs/editorial/company-career-material.txt：直接の項目なし。1 システムエンジニアは協働する関連職であり、営業と開発の役割を分ける。",
+        "drafts/batch-007/review/sourceEvidence.md"
+      ],
+      "scenes": [
+        {
+          "sceneId": "scene-1",
+          "optionIds": [
+            "option-1",
+            "option-2",
+            "option-3"
+          ],
+          "occupational": {
+            "status": "pass",
+            "reason": "IT営業による顧客課題の確認に対応。開発可能性の判断は技術者と行う。"
+          },
+          "editorial": {
+            "status": "pass",
+            "reason": "三案とも顧客業務理解であり、実装案の独断にならない。"
+          },
+          "optionChecks": [
+            {
+              "optionId": "option-1",
+              "status": "pass",
+              "reason": "一事例を業務全体へ一般化しない。"
+            },
+            {
+              "optionId": "option-2",
+              "status": "pass",
+              "reason": "要望と実装確約を分ける。"
+            },
+            {
+              "optionId": "option-3",
+              "status": "pass",
+              "reason": "例外と通常処理の両方を要件にする。"
+            }
+          ]
+        },
+        {
+          "sceneId": "scene-2",
+          "optionIds": [
+            "option-1",
+            "option-2",
+            "option-3"
+          ],
+          "occupational": {
+            "status": "pass",
+            "reason": "技術者と共同するITサービス提案。三案は技術・予算確認済みという架空条件。"
+          },
+          "editorial": {
+            "status": "pass",
+            "reason": "費用や実現性を状況でそろえ、各案の達成範囲を明確化。"
+          },
+          "optionChecks": [
+            {
+              "optionId": "option-1",
+              "status": "pass",
+              "reason": "通知導入を全面自動化としない。"
+            },
+            {
+              "optionId": "option-2",
+              "status": "pass",
+              "reason": "試行部署からの一般化を限定する。"
+            },
+            {
+              "optionId": "option-3",
+              "status": "pass",
+              "reason": "既存機能で全課題を解決するとしない。"
+            }
+          ]
+        },
+        {
+          "sceneId": "scene-3",
+          "optionIds": [
+            "option-1",
+            "option-2",
+            "option-3"
+          ],
+          "occupational": {
+            "status": "pass",
+            "reason": "営業と開発部門の提案書作成・調整業務。営業が未確認の仕様を確定しない。"
+          },
+          "editorial": {
+            "status": "pass",
+            "reason": "第二シーンのどの提案でも成立する契約前の情報整理。"
+          },
+          "optionChecks": [
+            {
+              "optionId": "option-1",
+              "status": "pass",
+              "reason": "表の項目名だけで合意済みにしない。"
+            },
+            {
+              "optionId": "option-2",
+              "status": "pass",
+              "reason": "代表シナリオで範囲を網羅したとしない。"
+            },
+            {
+              "optionId": "option-3",
+              "status": "pass",
+              "reason": "保留と確定の両方を保持する。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "real-estate-sales-home-priorities",
+      "sha256": "3dc3024b833fcbb81dadd943b7b0e860d4679d9855a96bdb14f5a10a1e438fab",
+      "sources": [
+        "https://shigoto.mhlw.go.jp/User/Occupation/Detail/59",
+        "docs/editorial/company-career-material.txt：直接の項目なし。建築設計やインテリアの説明で営業の職務を代用しない。",
+        "drafts/batch-007/review/sourceEvidence.md"
+      ],
+      "scenes": [
+        {
+          "sceneId": "scene-1",
+          "optionIds": [
+            "option-1",
+            "option-2",
+            "option-3"
+          ],
+          "occupational": {
+            "status": "pass",
+            "reason": "住まいの要望確認と相談業務。予算増額や契約を迫る提案にしない。"
+          },
+          "editorial": {
+            "status": "pass",
+            "reason": "三案は条件の背景を聞く方法で、希望を削る圧力にしない。"
+          },
+          "optionChecks": [
+            {
+              "optionId": "option-1",
+              "status": "pass",
+              "reason": "移動時間の一律保証をしない。"
+            },
+            {
+              "optionId": "option-2",
+              "status": "pass",
+              "reason": "利用目的の確認にとどめプライバシーを尊重。"
+            },
+            {
+              "optionId": "option-3",
+              "status": "pass",
+              "reason": "費用と住み心地を混同しない。"
+            }
+          ]
+        },
+        {
+          "sceneId": "scene-2",
+          "optionIds": [
+            "option-1",
+            "option-2",
+            "option-3"
+          ],
+          "occupational": {
+            "status": "pass",
+            "reason": "物件情報提供と現地案内に対応。契約条件や設備の性能を未確認で保証しない。"
+          },
+          "editorial": {
+            "status": "pass",
+            "reason": "A/Bの優劣ではなく比較方法を問い、どの案も両方を扱う。"
+          },
+          "optionChecks": [
+            {
+              "optionId": "option-1",
+              "status": "pass",
+              "reason": "面積から収容可否を即断しない。"
+            },
+            {
+              "optionId": "option-2",
+              "status": "pass",
+              "reason": "一度の現地確認を全条件に一般化しない。"
+            },
+            {
+              "optionId": "option-3",
+              "status": "pass",
+              "reason": "不明を曖昧な好評価で埋めない。"
+            }
+          ]
+        },
+        {
+          "sceneId": "scene-3",
+          "optionIds": [
+            "option-1",
+            "option-2",
+            "option-3"
+          ],
+          "occupational": {
+            "status": "pass",
+            "reason": "不動産取引の相談と契約前の案内。重要事項説明は宅地建物取引士の役割として区別。"
+          },
+          "editorial": {
+            "status": "pass",
+            "reason": "本人の検討を支え、架空の締切や希少性を使わない。"
+          },
+          "optionChecks": [
+            {
+              "optionId": "option-1",
+              "status": "pass",
+              "reason": "情報支援と意思決定代行を区別する。"
+            },
+            {
+              "optionId": "option-2",
+              "status": "pass",
+              "reason": "照会予定を確約としない。"
+            },
+            {
+              "optionId": "option-3",
+              "status": "pass",
+              "reason": "状況共有を仮押さえ保証にしない。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "accountant-payment-reconciliation",
+      "sha256": "ba323b29a46eba0ebd7295105c359a4dda3f3686ec88d53edb86a4bc4c0cd99b",
+      "sources": [
+        "https://shigoto.mhlw.go.jp/User/Occupation/Detail/430",
+        "docs/editorial/company-career-material.txt：7 経理担当者：記録・会計処理・決算に直接対応。",
+        "drafts/batch-007/review/sourceEvidence.md"
+      ],
+      "scenes": [
+        {
+          "sceneId": "scene-1",
+          "optionIds": [
+            "option-1",
+            "option-2",
+            "option-3"
+          ],
+          "occupational": {
+            "status": "pass",
+            "reason": "入出金管理・帳簿照合の範囲。実在取引の会計処理や税務判断は示さない。"
+          },
+          "editorial": {
+            "status": "pass",
+            "reason": "1万+2万=3万の計算は正しいが、それを照合の完了条件にしない。"
+          },
+          "optionChecks": [
+            {
+              "optionId": "option-1",
+              "status": "pass",
+              "reason": "支払予定だけを入金済みの証拠にしない。"
+            },
+            {
+              "optionId": "option-2",
+              "status": "pass",
+              "reason": "名義の一致で請求対応を即断しない。"
+            },
+            {
+              "optionId": "option-3",
+              "status": "pass",
+              "reason": "口頭回答だけで照合を省略しない。"
+            }
+          ]
+        },
+        {
+          "sceneId": "scene-2",
+          "optionIds": [
+            "option-1",
+            "option-2",
+            "option-3"
+          ],
+          "occupational": {
+            "status": "pass",
+            "reason": "月次の残高照合に対応。会計基準や勘定科目の選択は出題しない。"
+          },
+          "editorial": {
+            "status": "pass",
+            "reason": "架空の残高差を扱い、調整用の架空仕訳を選択肢にしない。"
+          },
+          "optionChecks": [
+            {
+              "optionId": "option-1",
+              "status": "pass",
+              "reason": "日付一致を正確性保証にしない。"
+            },
+            {
+              "optionId": "option-2",
+              "status": "pass",
+              "reason": "未対応を直ちに誤り認定しない。"
+            },
+            {
+              "optionId": "option-3",
+              "status": "pass",
+              "reason": "金額以外のキーを持つ照合。"
+            }
+          ]
+        },
+        {
+          "sceneId": "scene-3",
+          "optionIds": [
+            "option-1",
+            "option-2",
+            "option-3"
+          ],
+          "occupational": {
+            "status": "pass",
+            "reason": "経理資料の作成と共有。月次確定・承認は未確認項目と分ける。"
+          },
+          "editorial": {
+            "status": "pass",
+            "reason": "確認完了を装わず、継続中の二件を全案に含める。"
+          },
+          "optionChecks": [
+            {
+              "optionId": "option-1",
+              "status": "pass",
+              "reason": "証拠共有とアクセス制御を両立。"
+            },
+            {
+              "optionId": "option-2",
+              "status": "pass",
+              "reason": "保留の状態を明示。"
+            },
+            {
+              "optionId": "option-3",
+              "status": "pass",
+              "reason": "概要と原資料を接続する。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "hr-new-employee-orientation",
+      "sha256": "fb9324aa8040062aa1a6f039f29912455b9633131b6542cb75d6411fb3b87794",
+      "sources": [
+        "https://shigoto.mhlw.go.jp/User/Occupation/Detail/432",
+        "docs/editorial/company-career-material.txt：直接の項目なし。経理や秘書の原文で人事の職務全体を代用しない。",
+        "drafts/batch-007/review/sourceEvidence.md"
+      ],
+      "scenes": [
+        {
+          "sceneId": "scene-1",
+          "optionIds": [
+            "option-1",
+            "option-2",
+            "option-3"
+          ],
+          "occupational": {
+            "status": "pass",
+            "reason": "新入社員への会社生活の案内・教育訓練に対応。法的義務の内容や時期は具体化せず遵守前提にする。"
+          },
+          "editorial": {
+            "status": "pass",
+            "reason": "三案は情報整理の軸で、必須説明を減らす選択ではない。"
+          },
+          "optionChecks": [
+            {
+              "optionId": "option-1",
+              "status": "pass",
+              "reason": "時期整理で必須説明を遅延しない。"
+            },
+            {
+              "optionId": "option-2",
+              "status": "pass",
+              "reason": "想定質問外の導線を残す。"
+            },
+            {
+              "optionId": "option-3",
+              "status": "pass",
+              "reason": "問い合わせ誘導で事前説明を代用しない。"
+            }
+          ]
+        },
+        {
+          "sceneId": "scene-2",
+          "optionIds": [
+            "option-1",
+            "option-2",
+            "option-3"
+          ],
+          "occupational": {
+            "status": "pass",
+            "reason": "教育訓練の企画・運営の範囲。人事評価や適性の判定と切り離す。"
+          },
+          "editorial": {
+            "status": "pass",
+            "reason": "質問なしを理解不足とも理解済みとも決め付けない。"
+          },
+          "optionChecks": [
+            {
+              "optionId": "option-1",
+              "status": "pass",
+              "reason": "確認を個人の能力査定にしない。"
+            },
+            {
+              "optionId": "option-2",
+              "status": "pass",
+              "reason": "匿名回答だけで個別支援を閉じない。"
+            },
+            {
+              "optionId": "option-3",
+              "status": "pass",
+              "reason": "参加強制や機微情報の集団共有を避ける。"
+            }
+          ]
+        },
+        {
+          "sceneId": "scene-3",
+          "optionIds": [
+            "option-1",
+            "option-2",
+            "option-3"
+          ],
+          "occupational": {
+            "status": "pass",
+            "reason": "社員の業務支援・能力開発に対応。部署固有の手順は関係者と調整する。"
+          },
+          "editorial": {
+            "status": "pass",
+            "reason": "一か月の別場面でどの前の選択にも依存しない。"
+          },
+          "optionChecks": [
+            {
+              "optionId": "option-1",
+              "status": "pass",
+              "reason": "少数例の一般化を抑える。"
+            },
+            {
+              "optionId": "option-2",
+              "status": "pass",
+              "reason": "問い合わせ数の偏りを認識する。"
+            },
+            {
+              "optionId": "option-3",
+              "status": "pass",
+              "reason": "現場慣習と正式規定を区別する。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "bank-teller-procedure-guidance",
+      "sha256": "c1efe9f828f8ee8af3a649a480a5760ab6b0c345f9ee35b946dcf9754220baf6",
+      "sources": [
+        "https://shigoto.mhlw.go.jp/User/Occupation/Detail/438",
+        "docs/editorial/company-career-material.txt：直接の項目なし。7のビジネス関連項目のみを銀行固有業務の根拠にしない。",
+        "drafts/batch-007/review/sourceEvidence.md"
+      ],
+      "scenes": [
+        {
+          "sceneId": "scene-1",
+          "optionIds": [
+            "option-1",
+            "option-2",
+            "option-3"
+          ],
+          "occupational": {
+            "status": "pass",
+            "reason": "住所変更などの届出受付と本人確認に対応。必要書類や規定を一般化しない。"
+          },
+          "editorial": {
+            "status": "pass",
+            "reason": "本人確認を共通前提とし、機密確認の具体的な回避方法は扱わない。"
+          },
+          "optionChecks": [
+            {
+              "optionId": "option-1",
+              "status": "pass",
+              "reason": "自己申告だけで確認事項を閉じない。"
+            },
+            {
+              "optionId": "option-2",
+              "status": "pass",
+              "reason": "用件に必要な情報に限定する。"
+            },
+            {
+              "optionId": "option-3",
+              "status": "pass",
+              "reason": "一般案内と個別受付を区別する。"
+            }
+          ]
+        },
+        {
+          "sceneId": "scene-2",
+          "optionIds": [
+            "option-1",
+            "option-2",
+            "option-3"
+          ],
+          "occupational": {
+            "status": "pass",
+            "reason": "窓口事務の案内と相談対応。オンライン・郵送等の可否は未確認で断定しない。"
+          },
+          "editorial": {
+            "status": "pass",
+            "reason": "確認省略を選択肢にせず、適切な案内の違いを扱う。"
+          },
+          "optionChecks": [
+            {
+              "optionId": "option-1",
+              "status": "pass",
+              "reason": "一覧にない書類を補作しない。"
+            },
+            {
+              "optionId": "option-2",
+              "status": "pass",
+              "reason": "確認前の手段を確約しない。"
+            },
+            {
+              "optionId": "option-3",
+              "status": "pass",
+              "reason": "来店と手続き完了を混同しない。"
+            }
+          ]
+        },
+        {
+          "sceneId": "scene-3",
+          "optionIds": [
+            "option-1",
+            "option-2",
+            "option-3"
+          ],
+          "occupational": {
+            "status": "pass",
+            "reason": "相談内容に応じた担当部署への引き継ぎ。金融商品の推奨や利益保証を含めない。"
+          },
+          "editorial": {
+            "status": "pass",
+            "reason": "案ごとに希望・情報・機会を分け、商品判断を出題しない。"
+          },
+          "optionChecks": [
+            {
+              "optionId": "option-1",
+              "status": "pass",
+              "reason": "相談目的と購入意思を区別する。"
+            },
+            {
+              "optionId": "option-2",
+              "status": "pass",
+              "reason": "担当権限と確認状態を維持する。"
+            },
+            {
+              "optionId": "option-3",
+              "status": "pass",
+              "reason": "予約を契約同意として扱わない。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "lawyer-consultation-facts",
+      "sha256": "1c8a9c703151da5980eea78ed51ecba223cbf9fb3e1332dd5bebe4f0816869d8",
+      "sources": [
+        "https://shigoto.mhlw.go.jp/User/Occupation/Detail/89",
+        "docs/editorial/company-career-material.txt：7 弁護士：相談・交渉・裁判による支援に直接対応。",
+        "drafts/batch-007/review/sourceEvidence.md"
+      ],
+      "scenes": [
+        {
+          "sceneId": "scene-1",
+          "optionIds": [
+            "option-1",
+            "option-2",
+            "option-3"
+          ],
+          "occupational": {
+            "status": "pass",
+            "reason": "法律相談の聞き取りに対応。架空の取引で法律上の責任や請求権を断定しない。"
+          },
+          "editorial": {
+            "status": "pass",
+            "reason": "三案は聴取の重点。責任の結論を選ぶ問題にしない。"
+          },
+          "optionChecks": [
+            {
+              "optionId": "option-1",
+              "status": "pass",
+              "reason": "記憶を確定事実として扱わない。"
+            },
+            {
+              "optionId": "option-2",
+              "status": "pass",
+              "reason": "抜粋で契約内容を断定しない。"
+            },
+            {
+              "optionId": "option-3",
+              "status": "pass",
+              "reason": "希望と法的実現可能性を区別する。"
+            }
+          ]
+        },
+        {
+          "sceneId": "scene-2",
+          "optionIds": [
+            "option-1",
+            "option-2",
+            "option-3"
+          ],
+          "occupational": {
+            "status": "pass",
+            "reason": "法律相談に伴う資料確認。契約成立・責任などの法的結論は出さない。"
+          },
+          "editorial": {
+            "status": "pass",
+            "reason": "相談者の希望を否定せず、根拠と認識を区別して検討する。"
+          },
+          "optionChecks": [
+            {
+              "optionId": "option-1",
+              "status": "pass",
+              "reason": "文書だけで事情を完結させない。"
+            },
+            {
+              "optionId": "option-2",
+              "status": "pass",
+              "reason": "確信と証明力を区別する。"
+            },
+            {
+              "optionId": "option-3",
+              "status": "pass",
+              "reason": "相手未確認事項を合意済みにしない。"
+            }
+          ]
+        },
+        {
+          "sceneId": "scene-3",
+          "optionIds": [
+            "option-1",
+            "option-2",
+            "option-3"
+          ],
+          "occupational": {
+            "status": "pass",
+            "reason": "依頼者の利益を守る法律相談・交渉の方針説明。特定案件の法的助言や勝訴予測は含めない。"
+          },
+          "editorial": {
+            "status": "pass",
+            "reason": "法的検討は専門家が行う共通前提。利用者は説明方法だけを選ぶ。"
+          },
+          "optionChecks": [
+            {
+              "optionId": "option-1",
+              "status": "pass",
+              "reason": "比較表で意思を代行しない。"
+            },
+            {
+              "optionId": "option-2",
+              "status": "pass",
+              "reason": "希望適合と成果保証を区別。"
+            },
+            {
+              "optionId": "option-3",
+              "status": "pass",
+              "reason": "手順の見通しを相手行動の確約にしない。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "aircraft-mechanic-maintenance-handover",
+      "sha256": "b08b51c20b2c35a98f3a206cb8ff091bd0328ecd854b6408f0c6c7e03e09549c",
+      "sources": [
+        "https://shigoto.mhlw.go.jp/User/Occupation/Detail/206",
+        "docs/editorial/company-career-material.txt：3 航空整備士：機体・装備の点検整備に直接対応。",
+        "drafts/batch-007/review/sourceEvidence.md"
+      ],
+      "scenes": [
+        {
+          "sceneId": "scene-1",
+          "optionIds": [
+            "option-1",
+            "option-2",
+            "option-3"
+          ],
+          "occupational": {
+            "status": "pass",
+            "reason": "所定の手順による航空機整備に対応。具体的な整備操作や許容基準は示さない。"
+          },
+          "editorial": {
+            "status": "pass",
+            "reason": "全て必須確認の整理軸。手順を自己流に最適化する教材にしない。"
+          },
+          "optionChecks": [
+            {
+              "optionId": "option-1",
+              "status": "pass",
+              "reason": "対象一致だけで手順適合を認定しない。"
+            },
+            {
+              "optionId": "option-2",
+              "status": "pass",
+              "reason": "最新版と適用対象を区別する。"
+            },
+            {
+              "optionId": "option-3",
+              "status": "pass",
+              "reason": "問い合わせと確認完了を区別する。"
+            }
+          ]
+        },
+        {
+          "sceneId": "scene-2",
+          "optionIds": [
+            "option-1",
+            "option-2",
+            "option-3"
+          ],
+          "occupational": {
+            "status": "pass",
+            "reason": "整備の記録と報告・チーム連携を題材化。交代方法は架空の事業者手順で、安全規程の代替ではない。"
+          },
+          "editorial": {
+            "status": "pass",
+            "reason": "三案を自由な代替手順でなく説明順序として定義。"
+          },
+          "optionChecks": [
+            {
+              "optionId": "option-1",
+              "status": "pass",
+              "reason": "文書照合のみで現物確認を省かない。"
+            },
+            {
+              "optionId": "option-2",
+              "status": "pass",
+              "reason": "重要箇所優先と網羅を両立。"
+            },
+            {
+              "optionId": "option-3",
+              "status": "pass",
+              "reason": "現物の印象だけで作業完了としない。"
+            }
+          ]
+        },
+        {
+          "sceneId": "scene-3",
+          "optionIds": [
+            "option-1",
+            "option-2",
+            "option-3"
+          ],
+          "occupational": {
+            "status": "pass",
+            "reason": "整備状況の確認・報告に対応。独断の署名補完や運航許可を出題しない。"
+          },
+          "editorial": {
+            "status": "pass",
+            "reason": "全案で報告・規定遵守を前提にし、運航可否を選ばせない。"
+          },
+          "optionChecks": [
+            {
+              "optionId": "option-1",
+              "status": "pass",
+              "reason": "周辺の整合で未確認を埋めない。"
+            },
+            {
+              "optionId": "option-2",
+              "status": "pass",
+              "reason": "証拠と記憶を区別。"
+            },
+            {
+              "optionId": "option-3",
+              "status": "pass",
+              "reason": "状態観察を整備完了の認定にしない。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "fashion-designer-apron-pockets",
+      "sha256": "96abce8d957f77a062da5d1a32e66df352f2db1a925b50147ea7301654d629f8",
+      "sources": [
+        "https://shigoto.mhlw.go.jp/User/Occupation/Detail/340",
+        "docs/editorial/company-career-material.txt：9 ファッションデザイナー：衣服の形・素材・色の設計に直接対応。",
+        "drafts/batch-007/review/sourceEvidence.md"
+      ],
+      "scenes": [
+        {
+          "sceneId": "scene-1",
+          "optionIds": [
+            "option-1",
+            "option-2",
+            "option-3"
+          ],
+          "occupational": {
+            "status": "pass",
+            "reason": "販売対象・コンセプトに沿う衣服設計に対応。作業服の機能を印象だけで保証しない。"
+          },
+          "editorial": {
+            "status": "pass",
+            "reason": "使う人・印象・手入れの異なる調査軸を衣服設計へ結ぶ。"
+          },
+          "optionChecks": [
+            {
+              "optionId": "option-1",
+              "status": "pass",
+              "reason": "一人の動作を全員の仕様にしない。"
+            },
+            {
+              "optionId": "option-2",
+              "status": "pass",
+              "reason": "視覚表現と機能を両立。"
+            },
+            {
+              "optionId": "option-3",
+              "status": "pass",
+              "reason": "素材性能を外見から断定しない。"
+            }
+          ]
+        },
+        {
+          "sceneId": "scene-2",
+          "optionIds": [
+            "option-1",
+            "option-2",
+            "option-3"
+          ],
+          "occupational": {
+            "status": "pass",
+            "reason": "デザイン案・試作品の検討、パタンナーとの調整に対応。ポケット案は架空の図で優劣を保証しない。"
+          },
+          "editorial": {
+            "status": "pass",
+            "reason": "同じ素材・道具など比較条件を明示し、画像だけで最適案を選ばせない。"
+          },
+          "optionChecks": [
+            {
+              "optionId": "option-1",
+              "status": "pass",
+              "reason": "アクセス性だけを採用条件にしない。"
+            },
+            {
+              "optionId": "option-2",
+              "status": "pass",
+              "reason": "静止外観と着用機能を区別。"
+            },
+            {
+              "optionId": "option-3",
+              "status": "pass",
+              "reason": "短時間の試着の限界を明示。"
+            }
+          ]
+        },
+        {
+          "sceneId": "scene-3",
+          "optionIds": [
+            "option-1",
+            "option-2",
+            "option-3"
+          ],
+          "occupational": {
+            "status": "pass",
+            "reason": "衣服の仕様作成とパタンナー・縫製者との協働に対応。具体的な縫製規格は創作しない。"
+          },
+          "editorial": {
+            "status": "pass",
+            "reason": "採用案を固定せず、方向決定をチーム共通の進展にする。"
+          },
+          "optionChecks": [
+            {
+              "optionId": "option-1",
+              "status": "pass",
+              "reason": "意図図と製作仕様を分ける。"
+            },
+            {
+              "optionId": "option-2",
+              "status": "pass",
+              "reason": "単一の感想による仕様決定を避ける。"
+            },
+            {
+              "optionId": "option-3",
+              "status": "pass",
+              "reason": "現物共有と仕様記録を両立。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "primary-teacher-fraction-explanation",
+      "sha256": "cef3dbe012984f68c145c1a685f2347cb205368d0cc967e811da09f10cd86da0",
+      "sources": [
+        "https://shigoto.mhlw.go.jp/User/Occupation/Detail/179",
+        "docs/editorial/company-career-material.txt：17 小学校教諭：各教科の指導と生活・成長支援に直接対応。",
+        "drafts/batch-007/review/sourceEvidence.md"
+      ],
+      "scenes": [
+        {
+          "sceneId": "scene-1",
+          "optionIds": [
+            "option-1",
+            "option-2",
+            "option-3"
+          ],
+          "occupational": {
+            "status": "pass",
+            "reason": "授業計画・教材準備と教科指導に対応。分数の比較は同じ全体を等分した条件に限定。"
+          },
+          "editorial": {
+            "status": "pass",
+            "reason": "数学の条件は同じ全体・等分で固定。教師の支援方法を選ぶ設問。"
+          },
+          "optionChecks": [
+            {
+              "optionId": "option-1",
+              "status": "pass",
+              "reason": "視覚の答えと理解の確認を分ける。"
+            },
+            {
+              "optionId": "option-2",
+              "status": "pass",
+              "reason": "不正確な等分を教材の誤差として残さない。"
+            },
+            {
+              "optionId": "option-3",
+              "status": "pass",
+              "reason": "言語表現力と分数理解を混同しない。"
+            }
+          ]
+        },
+        {
+          "sceneId": "scene-2",
+          "optionIds": [
+            "option-1",
+            "option-2",
+            "option-3"
+          ],
+          "occupational": {
+            "status": "pass",
+            "reason": "授業運営・子どもへの学習支援の範囲。固定的な能力分類をしない。"
+          },
+          "editorial": {
+            "status": "pass",
+            "reason": "全案で共通の教材と個別支援の余地を用意。"
+          },
+          "optionChecks": [
+            {
+              "optionId": "option-1",
+              "status": "pass",
+              "reason": "課題選択を能力の固定ラベルにしない。"
+            },
+            {
+              "optionId": "option-2",
+              "status": "pass",
+              "reason": "児童へ指導責任を丸投げしない。"
+            },
+            {
+              "optionId": "option-3",
+              "status": "pass",
+              "reason": "筆記負担で理解を誤判定しない。"
+            }
+          ]
+        },
+        {
+          "sceneId": "scene-3",
+          "optionIds": [
+            "option-1",
+            "option-2",
+            "option-3"
+          ],
+          "occupational": {
+            "status": "pass",
+            "reason": "児童の理解の把握と授業計画に対応。単発課題で能力や成績を確定しない。"
+          },
+          "editorial": {
+            "status": "pass",
+            "reason": "別の図でも全体の大きさと等分を明示して数学上の条件を保持。"
+          },
+          "optionChecks": [
+            {
+              "optionId": "option-1",
+              "status": "pass",
+              "reason": "操作結果と概念理解を区別。"
+            },
+            {
+              "optionId": "option-2",
+              "status": "pass",
+              "reason": "言葉の長さと理解を混同しない。"
+            },
+            {
+              "optionId": "option-3",
+              "status": "pass",
+              "reason": "無回答を理解済みにしない。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "municipal-officer-waste-guidance",
+      "sha256": "41ff8d002a3110957fff1af8f723296a44650d7f02a3cad1dc77296057f24318",
+      "sources": [
+        "https://shigoto.mhlw.go.jp/User/Occupation/Detail/139",
+        "docs/editorial/company-career-material.txt：18 国家公務員／地方公務員：地方自治体の行政サービス部分に対応。",
+        "drafts/batch-007/review/sourceEvidence.md"
+      ],
+      "scenes": [
+        {
+          "sceneId": "scene-1",
+          "optionIds": [
+            "option-1",
+            "option-2",
+            "option-3"
+          ],
+          "occupational": {
+            "status": "pass",
+            "reason": "市区町村のごみ事業と住民窓口の範囲。分別や回収日の具体的ルールは架空にも設定しない。"
+          },
+          "editorial": {
+            "status": "pass",
+            "reason": "住民の知識不足と決め付けず、正式ルールへ接続する。"
+          },
+          "optionChecks": [
+            {
+              "optionId": "option-1",
+              "status": "pass",
+              "reason": "品目類似から分別を推測しない。"
+            },
+            {
+              "optionId": "option-2",
+              "status": "pass",
+              "reason": "資料適合と理解を区別。"
+            },
+            {
+              "optionId": "option-3",
+              "status": "pass",
+              "reason": "言葉の説明と地域条件を両立する。"
+            }
+          ]
+        },
+        {
+          "sceneId": "scene-2",
+          "optionIds": [
+            "option-1",
+            "option-2",
+            "option-3"
+          ],
+          "occupational": {
+            "status": "pass",
+            "reason": "行政の事業運営・住民案内の企画として設定。デザイン制作の実務そのものと混同しない。"
+          },
+          "editorial": {
+            "status": "pass",
+            "reason": "三案は正式情報の案内設計で、行政職員がルールを独断で変更しない。"
+          },
+          "optionChecks": [
+            {
+              "optionId": "option-1",
+              "status": "pass",
+              "reason": "地区判定の曖昧な例の経路を確保。"
+            },
+            {
+              "optionId": "option-2",
+              "status": "pass",
+              "reason": "統一と平易さを両立する。"
+            },
+            {
+              "optionId": "option-3",
+              "status": "pass",
+              "reason": "来庁を唯一の情報取得経路にしない。"
+            }
+          ]
+        },
+        {
+          "sceneId": "scene-3",
+          "optionIds": [
+            "option-1",
+            "option-2",
+            "option-3"
+          ],
+          "occupational": {
+            "status": "pass",
+            "reason": "行政サービスの運用確認を題材化。施策の効果や代表性は実証済みとしない。"
+          },
+          "editorial": {
+            "status": "pass",
+            "reason": "前の案の採用を固定せず、部署での試行を共通場面にする。"
+          },
+          "optionChecks": [
+            {
+              "optionId": "option-1",
+              "status": "pass",
+              "reason": "協力者の選択バイアスを明示。"
+            },
+            {
+              "optionId": "option-2",
+              "status": "pass",
+              "reason": "無回答を満足とみなさない。"
+            },
+            {
+              "optionId": "option-3",
+              "status": "pass",
+              "reason": "相談件数の限界を維持する。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "sports-instructor-beginner-session",
+      "sha256": "e3b0f3f8f1158b21902edd0b8db04ac9e21ca6ea6cf2ef8063bb7253e80eaa69",
+      "sources": [
+        "https://shigoto.mhlw.go.jp/User/Occupation/Detail/120",
+        "docs/editorial/company-career-material.txt：11 スポーツインストラクター：施設での実技指導に直接対応。",
+        "drafts/batch-007/review/sourceEvidence.md"
+      ],
+      "scenes": [
+        {
+          "sceneId": "scene-1",
+          "optionIds": [
+            "option-1",
+            "option-2",
+            "option-3"
+          ],
+          "occupational": {
+            "status": "pass",
+            "reason": "目的・経験に応じたスポーツ指導に対応。医学的な参加可否や運動処方を出題しない。"
+          },
+          "editorial": {
+            "status": "pass",
+            "reason": "体調確認を三択にせず共通前提にし、希望の聴取を扱う。"
+          },
+          "optionChecks": [
+            {
+              "optionId": "option-1",
+              "status": "pass",
+              "reason": "短期達成を保証しない。"
+            },
+            {
+              "optionId": "option-2",
+              "status": "pass",
+              "reason": "経験と現在の身体状態を区別。"
+            },
+            {
+              "optionId": "option-3",
+              "status": "pass",
+              "reason": "心理的な圧力による参加継続を避ける。"
+            }
+          ]
+        },
+        {
+          "sceneId": "scene-2",
+          "optionIds": [
+            "option-1",
+            "option-2",
+            "option-3"
+          ],
+          "occupational": {
+            "status": "pass",
+            "reason": "実演を交えた技能指導に対応。個別の身体操作や負荷の増加を指示しない。"
+          },
+          "editorial": {
+            "status": "pass",
+            "reason": "全体を停止し安全確認済みの状況で、指導の伝達方法を問う。"
+          },
+          "optionChecks": [
+            {
+              "optionId": "option-1",
+              "status": "pass",
+              "reason": "可視性と理解を区別。"
+            },
+            {
+              "optionId": "option-2",
+              "status": "pass",
+              "reason": "分解により全体が失われる点を補う。"
+            },
+            {
+              "optionId": "option-3",
+              "status": "pass",
+              "reason": "説明能力を参加条件にしない。"
+            }
+          ]
+        },
+        {
+          "sceneId": "scene-3",
+          "optionIds": [
+            "option-1",
+            "option-2",
+            "option-3"
+          ],
+          "occupational": {
+            "status": "pass",
+            "reason": "指導後の相談と目的に応じた支援。健康効果や習慣化を保証しない。"
+          },
+          "editorial": {
+            "status": "pass",
+            "reason": "どの前の指導方法でも成立する体験後の振り返り。"
+          },
+          "optionChecks": [
+            {
+              "optionId": "option-1",
+              "status": "pass",
+              "reason": "感想と身体の状態を区別。"
+            },
+            {
+              "optionId": "option-2",
+              "status": "pass",
+              "reason": "上達を確約しない。"
+            },
+            {
+              "optionId": "option-3",
+              "status": "pass",
+              "reason": "販売目標より参加者の選択を尊重。"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

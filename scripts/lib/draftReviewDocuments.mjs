@@ -75,7 +75,7 @@ export function renderDraftManuscript(batch) {
   <nav id="contents" aria-label="原稿一覧"><ol>${navigation}</ol></nav>
   ${manuscripts.map(renderManuscript).join('\n')}
 </main></body>
-</html>\n`;
+</html>\n`.replace(/^[\t ]+$/gm, '');
 }
 
 function reviewIntroduction(batch) {
@@ -126,15 +126,19 @@ ${rows.join('\n')}
 各案の理由は[回答確認表](answerChecks.md)、対象原稿のSHA-256と判定はoccupationChecks.jsonに保持します。\n`;
 }
 
-// 判定理由は生成しない。人・AIが原稿を読んで記録した確認結果を、原稿の表示文と対応させる。
-export function exportDraftDocuments(batchId, root = process.cwd()) {
-  const batch = verifyEditorialReview(batchId, root);
-  const assets = collectDraftAssets(batch, root);
-  const documents = {
+export function renderDraftDocuments(batch) {
+  return {
     'manuscript.html': renderDraftManuscript(batch),
     'review/answerChecks.md': renderAnswerChecks(batch),
     'review/occupationChecks.md': renderOccupationChecks(batch),
   };
+}
+
+// 判定理由は生成しない。人・AIが原稿を読んで記録した確認結果を、原稿の表示文と対応させる。
+export function exportDraftDocuments(batchId, root = process.cwd()) {
+  const batch = verifyEditorialReview(batchId, root);
+  const assets = collectDraftAssets(batch, root);
+  const documents = renderDraftDocuments(batch);
   for (const [relativePath, body] of Object.entries(documents)) fs.writeFileSync(path.join(batch.directory, relativePath), body);
   return { ...batch, documents: Object.keys(documents), assets };
 }

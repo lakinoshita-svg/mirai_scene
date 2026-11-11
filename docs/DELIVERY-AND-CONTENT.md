@@ -6,15 +6,28 @@
 
 初期導入・共通実装の配布はPHP・テンプレートを含む一式。原稿・シーン画像だけの配布は [差分配布手順](CONTENT-DELIVERY.md) に従う。一式の導入処理はdry-run・導入済みハッシュとの照合・競合停止・削除対象の表示に対応する。公開承認、配布前検証、取り込み手順は [制作・配布運用](OPERATIONS.md) を参照する。
 
+## 配布版と配置済み版の確認
+
+| 管理対象 | 確認先 | 意味 |
+|---|---|---|
+| 制作側の配布設定 | `config/delivery.json` | 現在はrelease-2026-10-20。次の生成先を決める設定で、配置完了の記録ではない |
+| release-2026-10-20 | [manifest](../deliveries/release-2026-10-20/manifest.json) | 導入確認用一式。19体験・57シーン。公開承認未登録・本番公開不可 |
+| release-2026-10-16 | [manifest](../deliveries/release-2026-10-16/manifest.json) | 保管されている導入用一式。19体験・57シーン。本番配置の記録は未実施 |
+| 初期固定版 | [案内](../deliveries/initial-2026-10-02/README.md) | 初期導入の保存基準。通常のコンテンツ制作では書き換えない |
+| 担当者への受け渡し版 | 実際に渡したZIP名とmanifest | リポジトリの配布設定だけでは特定できない |
+| 実際の配置済み版 | 導入先のbuildManifest.jsonと配置記録 | 差分配布の基準。運営設定のdeployedReleaseは配置完了後に記録する |
+
+確認日：2026-11-10。release-2026-10-20のZIPは存在し、SHA-256がmanifestと一致する。これは内容の配布承認や本番配置完了を意味しない。`config/publicationApprovals.json` と `config/contentOperations.json` に承認・配置済み版の登録はない。
+
 ## 導入担当
 
-現在の導入指定版は `deliveries/release-2026-10-16/miraiSceneShinronavi20261016.zip`。19体験・57シーンと2026-10-16時点の共通実装を収録する。ZIP内のINSTALL.md・VALIDATION.md・運用マニュアルと、隣のmanifest.jsonを渡す。固定配布物は指定版で保管する。
+受け渡し対象の版を明記し、そのZIP内のINSTALL.md・VALIDATION.md・運用マニュアルと、隣のmanifest.jsonを使う。制作フォルダーの最新原稿や最新マニュアルを、固定ZIPの収録内容と同一と扱わない。固定配布物は指定版で保管する。
 
 通常の `build:shinronavi` が更新する `integrations/shinronavi/output/latest.json` は制作側の最新ビルドを示す。配布対象は日付・版を明記したdeliveries内のZIPで指定する。配布設定は `config/delivery.json`。`npm run release:package` でZIPと照合manifestを生成する。
 
 ZIPは大容量の生成物のためGit対象外。manifestと手順はGitで管理する。別PCで導入作業する際は固定ZIPを別途共有し、manifestのSHA-256と照合する。Gitをcloneしただけでは固定ZIPは付属しない。
 
-PowerShellで `Get-FileHash deliveries/release-2026-10-16/miraiSceneShinronavi20261016.zip -Algorithm SHA256` を実行してmanifest.jsonと照合する。ハッシュが違う場合はそのまま導入せず、対象版を確認する。
+PowerShellで `Get-FileHash -LiteralPath "受け取ったZIPのパス" -Algorithm SHA256` を実行し、そのZIPに付属するmanifest.jsonと照合する。ハッシュが違う場合はそのまま導入せず、対象版を確認する。
 
 初期導入中に修正が必要になった場合も、このZIPへ上書きせず別の版を指定し、収録内容と適用手順を明記する。本番配置・rewrite・実際の進路ナビとの併存確認はINSTALL.mdに従う。
 

@@ -48,6 +48,12 @@
     "miraiUrl": "https://lakinoshita-svg.github.io/mirai_scene/explore/childcare/"
   },
   {
+    "lessonSlug": "education_education",
+    "lessonUrl": "https://shinronavi.com/forteacher/lesson?slug=education_education",
+    "label": "教育・教員養成のミライシーンへ",
+    "miraiUrl": "https://lakinoshita-svg.github.io/mirai_scene/explore/education/"
+  },
+  {
     "lessonSlug": "childcare_childcare",
     "lessonUrl": "https://shinronavi.com/forteacher/lesson?slug=childcare_childcare",
     "label": "保育・幼児教育のミライシーンへ",
@@ -120,6 +126,18 @@
     "miraiUrl": "https://lakinoshita-svg.github.io/mirai_scene/explore/business/"
   },
   {
+    "lessonSlug": "socialscience_commerce",
+    "lessonUrl": "https://shinronavi.com/forteacher/lesson?slug=socialscience_commerce",
+    "label": "会計・経理のミライシーンへ",
+    "miraiUrl": "https://lakinoshita-svg.github.io/mirai_scene/explore/accounting/"
+  },
+  {
+    "lessonSlug": "socialscience_commerce",
+    "lessonUrl": "https://shinronavi.com/forteacher/lesson?slug=socialscience_commerce",
+    "label": "経済・金融のミライシーンへ",
+    "miraiUrl": "https://lakinoshita-svg.github.io/mirai_scene/explore/finance/"
+  },
+  {
     "lessonSlug": "music_business",
     "lessonUrl": "https://shinronavi.com/forteacher/lesson?slug=music_business",
     "label": "イベントのミライシーンへ",
@@ -178,5 +196,161 @@
     "lessonUrl": "https://shinronavi.com/forteacher/lesson?slug=humanities_history",
     "label": "文学・文化・歴史のミライシーンへ",
     "miraiUrl": "https://lakinoshita-svg.github.io/mirai_scene/explore/culture/"
+  },
+  {
+    "lessonSlug": "medical_medicine",
+    "lessonUrl": "https://shinronavi.com/forteacher/lesson?slug=medical_medicine",
+    "label": "医学のミライシーンへ",
+    "miraiUrl": "https://lakinoshita-svg.github.io/mirai_scene/explore/medicine/"
+  },
+  {
+    "lessonSlug": "medical_nursing",
+    "lessonUrl": "https://shinronavi.com/forteacher/lesson?slug=medical_nursing",
+    "label": "看護のミライシーンへ",
+    "miraiUrl": "https://lakinoshita-svg.github.io/mirai_scene/explore/nursing/"
+  },
+  {
+    "lessonSlug": "nursing_nursing",
+    "lessonUrl": "https://shinronavi.com/forteacher/lesson?slug=nursing_nursing",
+    "label": "看護のミライシーンへ",
+    "miraiUrl": "https://lakinoshita-svg.github.io/mirai_scene/explore/nursing/"
+  },
+  {
+    "lessonSlug": "medical_pharmacy",
+    "lessonUrl": "https://shinronavi.com/forteacher/lesson?slug=medical_pharmacy",
+    "label": "薬学のミライシーンへ",
+    "miraiUrl": "https://lakinoshita-svg.github.io/mirai_scene/explore/pharmacy/"
+  },
+  {
+    "lessonSlug": "socialscience_social_welfare",
+    "lessonUrl": "https://shinronavi.com/forteacher/lesson?slug=socialscience_social_welfare",
+    "label": "介護・福祉のミライシーンへ",
+    "miraiUrl": "https://lakinoshita-svg.github.io/mirai_scene/explore/welfare/"
+  },
+  {
+    "lessonSlug": "welfare_care",
+    "lessonUrl": "https://shinronavi.com/forteacher/lesson?slug=welfare_care",
+    "label": "介護・福祉のミライシーンへ",
+    "miraiUrl": "https://lakinoshita-svg.github.io/mirai_scene/explore/welfare/"
+  },
+  {
+    "lessonSlug": "science_chemistry",
+    "lessonUrl": "https://shinronavi.com/forteacher/lesson?slug=science_chemistry",
+    "label": "材料・化学のミライシーンへ",
+    "miraiUrl": "https://lakinoshita-svg.github.io/mirai_scene/explore/materials/"
+  },
+  {
+    "lessonSlug": "engineering_materials",
+    "lessonUrl": "https://shinronavi.com/forteacher/lesson?slug=engineering_materials",
+    "label": "材料・化学のミライシーンへ",
+    "miraiUrl": "https://lakinoshita-svg.github.io/mirai_scene/explore/materials/"
+  },
+  {
+    "lessonSlug": "business_realestate",
+    "lessonUrl": "https://shinronavi.com/forteacher/lesson?slug=business_realestate",
+    "label": "不動産のミライシーンへ",
+    "miraiUrl": "https://lakinoshita-svg.github.io/mirai_scene/explore/real-estate/"
+  },
+  {
+    "lessonSlug": "business_accounting",
+    "lessonUrl": "https://shinronavi.com/forteacher/lesson?slug=business_accounting",
+    "label": "会計・経理のミライシーンへ",
+    "miraiUrl": "https://lakinoshita-svg.github.io/mirai_scene/explore/accounting/"
+  },
+  {
+    "lessonSlug": "education_teacher_training",
+    "lessonUrl": "https://shinronavi.com/forteacher/lesson?slug=education_teacher_training",
+    "label": "教育・教員養成のミライシーンへ",
+    "miraiUrl": "https://lakinoshita-svg.github.io/mirai_scene/explore/education/"
+  },
+  {
+    "lessonSlug": "socialscience_politics",
+    "lessonUrl": "https://shinronavi.com/forteacher/lesson?slug=socialscience_politics",
+    "label": "行政・公務のミライシーンへ",
+    "miraiUrl": "https://lakinoshita-svg.github.io/mirai_scene/explore/public-service/"
+  },
+  {
+    "lessonSlug": "lawadmin_public_servant",
+    "lessonUrl": "https://shinronavi.com/forteacher/lesson?slug=lawadmin_public_servant",
+    "label": "行政・公務のミライシーンへ",
+    "miraiUrl": "https://lakinoshita-svg.github.io/mirai_scene/explore/public-service/"
+  },
+  {
+    "lessonSlug": "engineering_mechanical",
+    "lessonUrl": "https://shinronavi.com/forteacher/lesson?slug=engineering_mechanical",
+    "label": "機械のミライシーンへ",
+    "miraiUrl": "https://lakinoshita-svg.github.io/mirai_scene/explore/mechanical/"
+  },
+  {
+    "lessonSlug": "machine_machine",
+    "lessonUrl": "https://shinronavi.com/forteacher/lesson?slug=machine_machine",
+    "label": "機械のミライシーンへ",
+    "miraiUrl": "https://lakinoshita-svg.github.io/mirai_scene/explore/mechanical/"
+  },
+  {
+    "lessonSlug": "autoaviation_auto",
+    "lessonUrl": "https://shinronavi.com/forteacher/lesson?slug=autoaviation_auto",
+    "label": "自動車・整備のミライシーンへ",
+    "miraiUrl": "https://lakinoshita-svg.github.io/mirai_scene/explore/automotive/"
+  },
+  {
+    "lessonSlug": "socialscience_economics",
+    "lessonUrl": "https://shinronavi.com/forteacher/lesson?slug=socialscience_economics",
+    "label": "経済・金融のミライシーンへ",
+    "miraiUrl": "https://lakinoshita-svg.github.io/mirai_scene/explore/finance/"
+  },
+  {
+    "lessonSlug": "socialscience_law",
+    "lessonUrl": "https://shinronavi.com/forteacher/lesson?slug=socialscience_law",
+    "label": "法律のミライシーンへ",
+    "miraiUrl": "https://lakinoshita-svg.github.io/mirai_scene/explore/law/"
+  },
+  {
+    "lessonSlug": "engineering_aerospace",
+    "lessonUrl": "https://shinronavi.com/forteacher/lesson?slug=engineering_aerospace",
+    "label": "航空・整備のミライシーンへ",
+    "miraiUrl": "https://lakinoshita-svg.github.io/mirai_scene/explore/aviation/"
+  },
+  {
+    "lessonSlug": "autoaviation_aviation",
+    "lessonUrl": "https://shinronavi.com/forteacher/lesson?slug=autoaviation_aviation",
+    "label": "航空・整備のミライシーンへ",
+    "miraiUrl": "https://lakinoshita-svg.github.io/mirai_scene/explore/aviation/"
+  },
+  {
+    "lessonSlug": "fashion_designer",
+    "lessonUrl": "https://shinronavi.com/forteacher/lesson?slug=fashion_designer",
+    "label": "服飾・ファッションのミライシーンへ",
+    "miraiUrl": "https://lakinoshita-svg.github.io/mirai_scene/explore/fashion/"
+  },
+  {
+    "lessonSlug": "fashion_pattern",
+    "lessonUrl": "https://shinronavi.com/forteacher/lesson?slug=fashion_pattern",
+    "label": "服飾・ファッションのミライシーンへ",
+    "miraiUrl": "https://lakinoshita-svg.github.io/mirai_scene/explore/fashion/"
+  },
+  {
+    "lessonSlug": "sports_sports",
+    "lessonUrl": "https://shinronavi.com/forteacher/lesson?slug=sports_sports",
+    "label": "スポーツ・健康のミライシーンへ",
+    "miraiUrl": "https://lakinoshita-svg.github.io/mirai_scene/explore/sports/"
+  },
+  {
+    "lessonSlug": "sports_trainer",
+    "lessonUrl": "https://shinronavi.com/forteacher/lesson?slug=sports_trainer",
+    "label": "スポーツ・健康のミライシーンへ",
+    "miraiUrl": "https://lakinoshita-svg.github.io/mirai_scene/explore/sports/"
+  },
+  {
+    "lessonSlug": "medicaladmin_medical_admin",
+    "lessonUrl": "https://shinronavi.com/forteacher/lesson?slug=medicaladmin_medical_admin",
+    "label": "医療事務のミライシーンへ",
+    "miraiUrl": "https://lakinoshita-svg.github.io/mirai_scene/explore/medical-administration/"
+  },
+  {
+    "lessonSlug": "medicaladmin_health_info",
+    "lessonUrl": "https://shinronavi.com/forteacher/lesson?slug=medicaladmin_health_info",
+    "label": "医療事務のミライシーンへ",
+    "miraiUrl": "https://lakinoshita-svg.github.io/mirai_scene/explore/medical-administration/"
   }
 ]

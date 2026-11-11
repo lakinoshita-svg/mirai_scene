@@ -1,8 +1,24 @@
 # ミライシーンの制作・配布運用
 
+担当別の資料と原稿一覧は [README](../README.md)。本書は確認結果・承認・配布を記録する手順です。配布版と実際の配置済み版は [担当別手順](DELIVERY-AND-CONTENT.md#配布版と配置済み版の確認) で区別します。
+
+## 記録する情報と正本
+
+| 情報 | 正本・確認先 | 記録する役割 |
+|---|---|---|
+| 体験の本文・解説・画像参照 | 職業JSON。下書きはdrafts、公開元はsrc/content/careers | 制作担当 |
+| 参照資料・各案の確認理由 | 各バッチのREVIEW.md、review/occupationChecks.json | 内容確認担当 |
+| 体験数・職種数・原稿と記録の一致 | JSONから生成するcontentInventory | 制作担当が再集計 |
+| 担当・再確認予定・配置済み版 | config/contentOperations.json | 運営担当。配置情報は導入担当の報告に基づく |
+| 公開判断 | config/publicationApprovals.json | 実際の公開責任者 |
+| 配布する版 | config/delivery.jsonと固定ZIPのmanifest | 配布担当 |
+| 実際に配置した内容 | 導入先のbuildManifest.json・配置記録 | 進路ナビ開発担当 |
+
+HTML・確認用Excel・ZIPは閲覧または受け渡し用です。これらへの記入が原稿JSONや承認記録に自動で反映されることはありません。確認状態を伝える際は「資料確認」「自己確認」「実務確認」「公開承認」「本番配置」のどれかを明示します。
+
 ## 担当者の作業
 
-1. `npm run content:inventory` を実行し、`outputs/operations/contentInventory.html` で題材・テーマの件数・担当・再確認予定を確認する。同じ職業でも、相手・目的・制約が異なる体験を扱える。通常は2〜5件ずつ確認に回す。
+1. `npm run content:inventory` を実行し、`outputs/operations/contentInventory.html` で体験数・職種数・分野数、公開元・下書き・プレビュー設定別の内訳、担当・再確認予定を確認する。原稿と確認記録の不一致、確認用資料の不足・内容の不一致、ID・掲載順の重複も表示される。同じ職業でも、相手・目的・制約が異なる体験を扱える。通常は2〜5件ずつ確認に回す。
 2. `config/contentOperations.json` の `contents` に体験IDをキーとして `owner`（担当者）、`reviewDueAt`（再確認予定日）、`deployedRelease`（実際に配置した版）を記録する。未確認の値は記入しない。`ads` は広告IDごとの `owner` と `endsAt`（掲載終了日）を持つ。日付はYYYY-MM-DD。
 3. 下書きは `npm run content:verify-drafts -- batch-001` で監査とビルドを確認する。
 4. 部署確認には `npm run content:export-review -- --batch batch-001` を使う。公開元から一部を出す場合は `npm run content:export-review -- --ids designer,engineer`。指定を省略すると公開元全件。`--check` を加えるとファイルを生成せず対象件数だけを確認できる。連携設定は同じExcelに含む。

@@ -78,9 +78,12 @@ GitHub Pages用の生成物を更新するときは、HTMLが参照する`_astro
 | バッチID・原稿の読み込み・件数集計 | `scripts/lib/draftBatch.mjs` |
 | 二段階・回答別の記録と原稿ハッシュの照合 | `scripts/lib/editorialReview.mjs` |
 | 原稿一覧HTML・読み手用の確認表 | `scripts/lib/draftReviewDocuments.mjs` |
+| 運営一覧・体験数と職種数の集計・確認資料の照合 | `scripts/lib/contentInventory.mjs` |
 | 原稿一覧の見た目 | `scripts/templates/draftManuscript.css` |
 | 確認用HTML・ZIPで使う画像の照合 | `scripts/lib/draftAssets.mjs` |
 | 確認用ZIPの対象・案内・manifest | `scripts/lib/contentReviewPackage.mjs` |
 | ZIP作成と展開内容のハッシュ照合 | `scripts/lib/contentReviewArchive.ps1` |
+
+運営一覧は `collectContentInventory()` で読み取り・集計、`renderContentInventory()` で表示、`buildContentInventory()` で書き出す。公開元・下書きの読込は `loadManuscriptDirectory()`、確認資料の生成内容は `renderDraftDocuments()` を共有し、集計側で別の原稿解釈や確認表を作らない。同じslugは体験総数に重複計上せず、重複ファイル自体は要確認として表示する。
 
 CLIは `verifyEditorialReview.mjs`・`exportDraftManuscript.mjs`・`packageDrafts.mjs`。CLIの読み込みだけでファイルを生成せず、検証・生成はライブラリの明示的な関数で実行する。原稿JSONと `review/occupationChecks.json` を編集元とし、HTML・Markdownの確認表・ZIPはコマンドで生成する。`REVIEW.md` の資料と確認範囲は編集者が記録する。

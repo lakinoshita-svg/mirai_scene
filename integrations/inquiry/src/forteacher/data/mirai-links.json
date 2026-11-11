@@ -113,6 +113,10 @@
       {
         "id": "childcare",
         "label": "保育・幼児教育"
+      },
+      {
+        "id": "education",
+        "label": "教育・教員養成"
       }
     ],
     "careers": [
@@ -303,6 +307,14 @@
       {
         "id": "business",
         "label": "経営・商学"
+      },
+      {
+        "id": "accounting",
+        "label": "会計・経理"
+      },
+      {
+        "id": "finance",
+        "label": "経済・金融"
       }
     ],
     "careers": [
@@ -487,5 +499,239 @@
         "title": "ものに残る物語をひらく。"
       }
     ]
+  },
+  "medical_medicine": {
+    "fields": [
+      {
+        "id": "medicine",
+        "label": "医学"
+      }
+    ],
+    "careers": []
+  },
+  "medical_nursing": {
+    "fields": [
+      {
+        "id": "nursing",
+        "label": "看護"
+      }
+    ],
+    "careers": []
+  },
+  "nursing_nursing": {
+    "fields": [
+      {
+        "id": "nursing",
+        "label": "看護"
+      }
+    ],
+    "careers": []
+  },
+  "medical_pharmacy": {
+    "fields": [
+      {
+        "id": "pharmacy",
+        "label": "薬学"
+      }
+    ],
+    "careers": []
+  },
+  "socialscience_social_welfare": {
+    "fields": [
+      {
+        "id": "welfare",
+        "label": "介護・福祉"
+      }
+    ],
+    "careers": []
+  },
+  "welfare_care": {
+    "fields": [
+      {
+        "id": "welfare",
+        "label": "介護・福祉"
+      }
+    ],
+    "careers": []
+  },
+  "science_chemistry": {
+    "fields": [
+      {
+        "id": "materials",
+        "label": "材料・化学"
+      }
+    ],
+    "careers": []
+  },
+  "engineering_materials": {
+    "fields": [
+      {
+        "id": "materials",
+        "label": "材料・化学"
+      }
+    ],
+    "careers": []
+  },
+  "business_realestate": {
+    "fields": [
+      {
+        "id": "real-estate",
+        "label": "不動産"
+      }
+    ],
+    "careers": []
+  },
+  "business_accounting": {
+    "fields": [
+      {
+        "id": "accounting",
+        "label": "会計・経理"
+      }
+    ],
+    "careers": []
+  },
+  "education_teacher_training": {
+    "fields": [
+      {
+        "id": "education",
+        "label": "教育・教員養成"
+      }
+    ],
+    "careers": []
+  },
+  "socialscience_politics": {
+    "fields": [
+      {
+        "id": "public-service",
+        "label": "行政・公務"
+      }
+    ],
+    "careers": []
+  },
+  "lawadmin_public_servant": {
+    "fields": [
+      {
+        "id": "public-service",
+        "label": "行政・公務"
+      }
+    ],
+    "careers": []
+  },
+  "engineering_mechanical": {
+    "fields": [
+      {
+        "id": "mechanical",
+        "label": "機械"
+      }
+    ],
+    "careers": []
+  },
+  "machine_machine": {
+    "fields": [
+      {
+        "id": "mechanical",
+        "label": "機械"
+      }
+    ],
+    "careers": []
+  },
+  "autoaviation_auto": {
+    "fields": [
+      {
+        "id": "automotive",
+        "label": "自動車・整備"
+      }
+    ],
+    "careers": []
+  },
+  "socialscience_economics": {
+    "fields": [
+      {
+        "id": "finance",
+        "label": "経済・金融"
+      }
+    ],
+    "careers": []
+  },
+  "socialscience_law": {
+    "fields": [
+      {
+        "id": "law",
+        "label": "法律"
+      }
+    ],
+    "careers": []
+  },
+  "engineering_aerospace": {
+    "fields": [
+      {
+        "id": "aviation",
+        "label": "航空・整備"
+      }
+    ],
+    "careers": []
+  },
+  "autoaviation_aviation": {
+    "fields": [
+      {
+        "id": "aviation",
+        "label": "航空・整備"
+      }
+    ],
+    "careers": []
+  },
+  "fashion_designer": {
+    "fields": [
+      {
+        "id": "fashion",
+        "label": "服飾・ファッション"
+      }
+    ],
+    "careers": []
+  },
+  "fashion_pattern": {
+    "fields": [
+      {
+        "id": "fashion",
+        "label": "服飾・ファッション"
+      }
+    ],
+    "careers": []
+  },
+  "sports_sports": {
+    "fields": [
+      {
+        "id": "sports",
+        "label": "スポーツ・健康"
+      }
+    ],
+    "careers": []
+  },
+  "sports_trainer": {
+    "fields": [
+      {
+        "id": "sports",
+        "label": "スポーツ・健康"
+      }
+    ],
+    "careers": []
+  },
+  "medicaladmin_medical_admin": {
+    "fields": [
+      {
+        "id": "medical-administration",
+        "label": "医療事務"
+      }
+    ],
+    "careers": []
+  },
+  "medicaladmin_health_info": {
+    "fields": [
+      {
+        "id": "medical-administration",
+        "label": "医療事務"
+      }
+    ],
+    "careers": []
   }
 }

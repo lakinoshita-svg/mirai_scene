@@ -1,0 +1,241 @@
+{
+  "batchId": "batch-001",
+  "reviewType": "twoPassSelfReview",
+  "passes": {
+    "occupational": {
+      "reviewer": "Codex（自己確認）",
+      "checkedAt": "2026-11-10",
+      "method": "job tag二職種の仕事説明・タスクと自社関連原文を閲覧し、全6シーンの対象・役割・権限を照合。個別の架空場面と資料の一般的業務を区別。"
+    },
+    "editorial": {
+      "reviewer": "Codex（同一担当の二巡目）",
+      "checkedAt": "2026-11-10",
+      "method": "全6シーン・18案を通読し、状況・問い・共通解説・各案の説明/良い点/懸念・振り返りを照合。必須の受付結果を全案共通とし、確認の入口を選ぶ構成を確認。"
+    }
+  },
+  "limitations": [
+    "同一担当の二段階の自己確認。独立レビュー、実務経験者の確認、高校生の試読・所要時間測定、公開承認は未実施。"
+  ],
+  "entries": [
+    {
+      "slug": "engineer-reservation-capacity",
+      "sha256": "b900d3bff921eec3e3b5ead0458b2a5216f63a666368fd91e9ea6ea9d9ffd65c",
+      "sources": [
+        "https://shigoto.mhlw.go.jp/User/Occupation/Detail/314",
+        "docs/editorial/company-career-material.txt（関連職の範囲はREVIEW.md）",
+        "drafts/batch-001/REVIEW.md"
+      ],
+      "scenes": [
+        {
+          "sceneId": "scene-1",
+          "optionIds": [
+            "option-1",
+            "option-2",
+            "option-3"
+          ],
+          "occupational": {
+            "status": "pass",
+            "reason": "要件定義、内部処理、テストの業務に対応。運営ルールは運営者と合意し、技術者だけで定めない。"
+          },
+          "editorial": {
+            "status": "pass",
+            "reason": "画面だけでなく登録人数も定員を超えた状況を示す。再現・記録・ルールは調査の入口で、どれも単独の解決とはしない。"
+          },
+          "optionChecks": [
+            {
+              "optionId": "option-1",
+              "status": "pass",
+              "reason": "同時と時間差の操作を再現し、表示と人数を照合する。再現しない一回を解決の証拠にしない。"
+            },
+            {
+              "optionId": "option-2",
+              "status": "pass",
+              "reason": "残席確認と登録の記録から順序を調べる。ログ不足を前提に残し、必要以上の個人情報を取らない。"
+            },
+            {
+              "optionId": "option-3",
+              "status": "pass",
+              "reason": "席を確保する段階と満席時の扱いを運営者に確認する。合意だけでは同時申込みの不具合が直らないことを示す。"
+            }
+          ]
+        },
+        {
+          "sceneId": "scene-2",
+          "optionIds": [
+            "option-1",
+            "option-2",
+            "option-3"
+          ],
+          "occupational": {
+            "status": "pass",
+            "reason": "処理結果の表示と利用者・運営者の要件調整に対応。デザインの好みや販売責任者の独断にはしない。"
+          },
+          "editorial": {
+            "status": "pass",
+            "reason": "未成立の表示は全案共通。窓口・別日程・待機の案を追加案内として比較し、特定案だけが必須情報を伝える構造にしない。振り返りも受付結果の先にある行動の案内へ対応させる。"
+          },
+          "optionChecks": [
+            {
+              "optionId": "option-1",
+              "status": "pass",
+              "reason": "相談できる窓口と受付時間を運営者と確認する。連絡の道筋を示す利点と、席の保証ではない条件がつながる。"
+            },
+            {
+              "optionId": "option-2",
+              "status": "pass",
+              "reason": "既存の別日程を候補にできる設定。空きは変動し、候補表示を予約確定と混同しない。"
+            },
+            {
+              "optionId": "option-3",
+              "status": "pass",
+              "reason": "キャンセル待ちは導入判断前の相談案。通知・返答期限・役割まで検討し、未実装の機能を約束しない。"
+            }
+          ]
+        },
+        {
+          "sceneId": "scene-3",
+          "optionIds": [
+            "option-1",
+            "option-2",
+            "option-3"
+          ],
+          "occupational": {
+            "status": "pass",
+            "reason": "単体・総合・利用者テストや導入時の確認の業務に対応。公開は関係者が結果を持ち寄り判断する設定。"
+          },
+          "editorial": {
+            "status": "pass",
+            "reason": "三案は確認の着眼点であり、一つ通れば公開できるという正解選択ではない。前シーンの特定案を前提にしない。"
+          },
+          "optionChecks": [
+            {
+              "optionId": "option-1",
+              "status": "pass",
+              "reason": "元の同時申込みを再現して表示と登録人数を照合する。取消など別の操作の保証まで広げない。"
+            },
+            {
+              "optionId": "option-2",
+              "status": "pass",
+              "reason": "取消による人数・残席の変化を確認する。数の一致と案内の理解を別に確認する条件を残す。"
+            },
+            {
+              "optionId": "option-3",
+              "status": "pass",
+              "reason": "運営スタッフが申込みから受付まで試すことで運用の不足を探す。同時操作の技術検証を代替しない。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "librarian-local-research",
+      "sha256": "f5be99082d223bf6f9261161edf19ac6a0e4f115a5ec3416a1186eada8ee4a95",
+      "sources": [
+        "https://shigoto.mhlw.go.jp/User/Occupation/Detail/182",
+        "docs/editorial/company-career-material.txt（関連職の範囲はREVIEW.md）",
+        "drafts/batch-001/REVIEW.md"
+      ],
+      "scenes": [
+        {
+          "sceneId": "scene-1",
+          "optionIds": [
+            "option-1",
+            "option-2",
+            "option-3"
+          ],
+          "occupational": {
+            "status": "pass",
+            "reason": "job tagの資料相談、調べもの支援、郷土資料の扱いに対応。司書教諭の授業を司書の職務と同一視しない。"
+          },
+          "editorial": {
+            "status": "pass",
+            "reason": "時代・対象は未定、期限と写真の希望は提示済み。本人が問いを選び、司書は資料の入口を支援する。"
+          },
+          "optionChecks": [
+            {
+              "optionId": "option-1",
+              "status": "pass",
+              "reason": "きっかけから関心を絞る。話が広がる可能性と来週の期限を合わせて考える。"
+            },
+            {
+              "optionId": "option-2",
+              "status": "pass",
+              "reason": "館内の異なる年代の地図を手がかりに範囲を選ぶ。資料の偏りから問いまで限定しすぎない。"
+            },
+            {
+              "optionId": "option-3",
+              "status": "pass",
+              "reason": "発表条件と調査可能な時間から手順を考える。手軽さだけで本人の疑問を置き去りにしない。"
+            }
+          ]
+        },
+        {
+          "sceneId": "scene-2",
+          "optionIds": [
+            "option-1",
+            "option-2",
+            "option-3"
+          ],
+          "occupational": {
+            "status": "pass",
+            "reason": "資料を探し提供する業務に沿って、資料の条件や元資料を確認する支援。実在の測定値を独断で訂正する設定ではない。"
+          },
+          "editorial": {
+            "status": "pass",
+            "reason": "時点・範囲が未比較という状況と三案が対応。新しい資料が必ず正しいとはせず、両方成立する可能性を保つ。"
+          },
+          "optionChecks": [
+            {
+              "optionId": "option-1",
+              "status": "pass",
+              "reason": "出版年と測定時点を分けることで異時点比較を探す。時点の一致だけでは範囲の一致を保証しない。"
+            },
+            {
+              "optionId": "option-2",
+              "status": "pass",
+              "reason": "図や注記を使って広場の対象範囲を比べる。境界が不明なら推測せず出所へ戻る。"
+            },
+            {
+              "optionId": "option-3",
+              "status": "pass",
+              "reason": "転載元の報告から省略条件を調べる。必ず期限内に入手できるとはせず未確認点を残す。"
+            }
+          ]
+        },
+        {
+          "sceneId": "scene-3",
+          "optionIds": [
+            "option-1",
+            "option-2",
+            "option-3"
+          ],
+          "occupational": {
+            "status": "pass",
+            "reason": "情報探索と利用方法の案内という司書の役割。発表の結論や評価は利用者・学校側に置く。"
+          },
+          "editorial": {
+            "status": "pass",
+            "reason": "書名・ページの抜けを、出典対応、検索手順、事実と推定の整理という異なる支援で扱う。各方法は必要に応じて併用できる。"
+          },
+          "optionChecks": [
+            {
+              "optionId": "option-1",
+              "status": "pass",
+              "reason": "メモと資料を照合して根拠の場所へ戻れるようにする。出典記載が解釈の正しさまで証明するとはしない。"
+            },
+            {
+              "optionId": "option-2",
+              "status": "pass",
+              "reason": "同じ資料に戻る検索と棚の使い方を試す。検索だけでは使用ページが特定できないため記録も残す。"
+            },
+            {
+              "optionId": "option-3",
+              "status": "pass",
+              "reason": "事実・本人の考え・未確認を分け、次の調査を本人が選ぶ。司書が発表の結論を代わりに作らない。"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

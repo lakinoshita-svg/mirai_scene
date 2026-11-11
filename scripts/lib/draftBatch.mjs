@@ -7,10 +7,9 @@ export function assertBatchId(batchId) {
   return batchId;
 }
 
+// 公開元と下書きで、ファイル名・ハッシュ・並び順の扱いをそろえる。
 // 原稿直下のJSONだけを読み、review配下の記録を職業原稿に混ぜない。
-export function loadDraftBatch(batchId, root = process.cwd()) {
-  assertBatchId(batchId);
-  const directory = path.join(root, 'drafts', batchId);
+export function loadManuscriptDirectory(directory) {
   const entries = fs.readdirSync(directory).filter(file => file.endsWith('.json')).sort().map(file => {
     const sourcePath = path.join(directory, file);
     const bytes = fs.readFileSync(sourcePath);
@@ -18,8 +17,15 @@ export function loadDraftBatch(batchId, root = process.cwd()) {
     if (file !== `${manuscript.slug}.json`) throw new Error(`${file}: ファイル名とslugが一致しません。`);
     return { file, sourcePath, manuscript, sha256: digest(bytes) };
   });
-  if (!entries.length) throw new Error('確認対象の原稿がありません。');
   entries.sort((a, b) => a.manuscript.order - b.manuscript.order || a.manuscript.slug.localeCompare(b.manuscript.slug));
+  return entries;
+}
+
+export function loadDraftBatch(batchId, root = process.cwd()) {
+  assertBatchId(batchId);
+  const directory = path.join(root, 'drafts', batchId);
+  const entries = loadManuscriptDirectory(directory);
+  if (!entries.length) throw new Error('確認対象の原稿がありません。');
   return { batchId, directory, entries, manuscripts: entries.map(entry => entry.manuscript) };
 }
 

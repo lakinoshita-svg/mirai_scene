@@ -1,0 +1,3326 @@
+{
+  "batchId": "batch-006",
+  "reviewType": "twoPassSelfReview",
+  "passes": {
+    "occupational": {
+      "reviewer": "Codex（自己確認）",
+      "checkedAt": "2026-11-10",
+      "method": "自社原文の職種対応とjob tag本文を照合。全90シーンで職務の対象、権限、資料の裏付け範囲と教材の架空設定を確認。"
+    },
+    "editorial": {
+      "reviewer": "Codex（同一担当の二巡目の自己確認）",
+      "checkedAt": "2026-11-10",
+      "method": "全90シーン・270案について状況と問い、説明・利点・懸念、振り返りの接続と前シーンへの非依存を再読。個別理由は各シーン・各案に記録。"
+    }
+  },
+  "limitations": [
+    "独立レビュー、実務経験者の確認、高校生による試読、公開承認は未実施。",
+    "資料は職務の背景を支えるもので、架空の条件や選択肢の効果を実証するものではない。",
+    "物流プランナーは入出荷・在庫管理の改善を現場と行う役割に限定。自社原文がない職業は掲載済みと扱わない。"
+  ],
+  "entries": [
+    {
+      "slug": "animal-keeper-observation-log",
+      "sources": [
+        "https://shigoto.mhlw.go.jp/User/Occupation/Detail/220",
+        "docs/editorial/company-career-material.txt：直接対応：16「動物トレーナー／動物飼育係」の飼育・健康管理・解説部分。訓練業務全体を転用しない。",
+        "drafts/batch-006/review/sourceEvidence.md"
+      ],
+      "scenes": [
+        {
+          "sceneId": "scene-1",
+          "optionIds": [
+            "option-1",
+            "option-2",
+            "option-3"
+          ],
+          "occupational": {
+            "status": "pass",
+            "reason": "日常の行動観察と飼育日誌作成に対応。健康判断は既定の確認を優先。"
+          },
+          "editorial": {
+            "status": "pass",
+            "reason": "時間の異なる記録を単純比較せず、三つの整理方法を提示。"
+          },
+          "optionChecks": [
+            {
+              "optionId": "option-1",
+              "status": "pass",
+              "reason": "条件と内容を分離。"
+            },
+            {
+              "optionId": "option-2",
+              "status": "pass",
+              "reason": "事実と解釈を区別。"
+            },
+            {
+              "optionId": "option-3",
+              "status": "pass",
+              "reason": "分類の限界を残す。"
+            }
+          ]
+        },
+        {
+          "sceneId": "scene-2",
+          "optionIds": [
+            "option-1",
+            "option-2",
+            "option-3"
+          ],
+          "occupational": {
+            "status": "pass",
+            "reason": "飼育記録の情報共有。観察の代替や動物の診断は行わない。"
+          },
+          "editorial": {
+            "status": "pass",
+            "reason": "未観察をゼロ回としない三案。"
+          },
+          "optionChecks": [
+            {
+              "optionId": "option-1",
+              "status": "pass",
+              "reason": "区間分割の限界が明確。"
+            },
+            {
+              "optionId": "option-2",
+              "status": "pass",
+              "reason": "未確認と作業事情を区別。"
+            },
+            {
+              "optionId": "option-3",
+              "status": "pass",
+              "reason": "図と内容を併用。"
+            }
+          ]
+        },
+        {
+          "sceneId": "scene-3",
+          "optionIds": [
+            "option-1",
+            "option-2",
+            "option-3"
+          ],
+          "occupational": {
+            "status": "pass",
+            "reason": "飼育員間の日誌共有の範囲。異常時は施設の連絡手順に従う。"
+          },
+          "editorial": {
+            "status": "pass",
+            "reason": "採用前の書式検証で医学的判断をしない。"
+          },
+          "optionChecks": [
+            {
+              "optionId": "option-1",
+              "status": "pass",
+              "reason": "検索と比較の条件を分ける。"
+            },
+            {
+              "optionId": "option-2",
+              "status": "pass",
+              "reason": "同時刻を同条件としない。"
+            },
+            {
+              "optionId": "option-3",
+              "status": "pass",
+              "reason": "網羅と負担を両立。"
+            }
+          ]
+        }
+      ],
+      "sha256": "ee3ea66e97e43dc3347b653ab7138e343fc8c41f3e7860bfda343244aab4f8a8"
+    },
+    {
+      "slug": "animal-keeper-visitor-talk",
+      "sources": [
+        "https://shigoto.mhlw.go.jp/User/Occupation/Detail/220",
+        "docs/editorial/company-career-material.txt：直接対応：16「動物トレーナー／動物飼育係」の飼育・健康管理・解説部分。訓練業務全体を転用しない。",
+        "drafts/batch-006/review/sourceEvidence.md"
+      ],
+      "scenes": [
+        {
+          "sceneId": "scene-1",
+          "optionIds": [
+            "option-1",
+            "option-2",
+            "option-3"
+          ],
+          "occupational": {
+            "status": "pass",
+            "reason": "来園者への解説業務。個体の感情を断定しない。"
+          },
+          "editorial": {
+            "status": "pass",
+            "reason": "全案で動物を刺激せず、解説の入口を選ぶ。"
+          },
+          "optionChecks": [
+            {
+              "optionId": "option-1",
+              "status": "pass",
+              "reason": "種と個体を区別。"
+            },
+            {
+              "optionId": "option-2",
+              "status": "pass",
+              "reason": "観察とルールを両立。"
+            },
+            {
+              "optionId": "option-3",
+              "status": "pass",
+              "reason": "環境差を保持。"
+            }
+          ]
+        },
+        {
+          "sceneId": "scene-2",
+          "optionIds": [
+            "option-1",
+            "option-2",
+            "option-3"
+          ],
+          "occupational": {
+            "status": "pass",
+            "reason": "飼育員による生態解説の構成。保全活動の成果は創作しない。"
+          },
+          "editorial": {
+            "status": "pass",
+            "reason": "三分、一テーマ、資料確認済みという条件で選ぶ。"
+          },
+          "optionChecks": [
+            {
+              "optionId": "option-1",
+              "status": "pass",
+              "reason": "行動変動を想定。"
+            },
+            {
+              "optionId": "option-2",
+              "status": "pass",
+              "reason": "設備効果を保証しない。"
+            },
+            {
+              "optionId": "option-3",
+              "status": "pass",
+              "reason": "需要と必要情報の両立。"
+            }
+          ]
+        },
+        {
+          "sceneId": "scene-3",
+          "optionIds": [
+            "option-1",
+            "option-2",
+            "option-3"
+          ],
+          "occupational": {
+            "status": "pass",
+            "reason": "来園者サービスの振り返り。効果測定結果ではない。"
+          },
+          "editorial": {
+            "status": "pass",
+            "reason": "滞在と理解を同一視しない三つの確認。"
+          },
+          "optionChecks": [
+            {
+              "optionId": "option-1",
+              "status": "pass",
+              "reason": "回答者の偏りを明示。"
+            },
+            {
+              "optionId": "option-2",
+              "status": "pass",
+              "reason": "観察と理解を区別。"
+            },
+            {
+              "optionId": "option-3",
+              "status": "pass",
+              "reason": "任意の感想として確認。"
+            }
+          ]
+        }
+      ],
+      "sha256": "f529aeb2af8b7d84afaa63449f8718248bed6ac8f12f714b34d923546dcaefb7"
+    },
+    {
+      "slug": "animal-keeper-cleaning-record",
+      "sources": [
+        "https://shigoto.mhlw.go.jp/User/Occupation/Detail/220",
+        "docs/editorial/company-career-material.txt：直接対応：16「動物トレーナー／動物飼育係」の飼育・健康管理・解説部分。訓練業務全体を転用しない。",
+        "drafts/batch-006/review/sourceEvidence.md"
+      ],
+      "scenes": [
+        {
+          "sceneId": "scene-1",
+          "optionIds": [
+            "option-1",
+            "option-2",
+            "option-3"
+          ],
+          "occupational": {
+            "status": "pass",
+            "reason": "動物舎の清掃と日誌記録に対応。隔離確認と必要な連絡は全案共通。"
+          },
+          "editorial": {
+            "status": "pass",
+            "reason": "原因診断をせず記録対象を選ぶ。"
+          },
+          "optionChecks": [
+            {
+              "optionId": "option-1",
+              "status": "pass",
+              "reason": "位置と状態の対応。"
+            },
+            {
+              "optionId": "option-2",
+              "status": "pass",
+              "reason": "原因断定を避ける。"
+            },
+            {
+              "optionId": "option-3",
+              "status": "pass",
+              "reason": "記述の限界を明示。"
+            }
+          ]
+        },
+        {
+          "sceneId": "scene-2",
+          "optionIds": [
+            "option-1",
+            "option-2",
+            "option-3"
+          ],
+          "occupational": {
+            "status": "pass",
+            "reason": "清掃業務の共有。施設の安全手順の変更は扱わない。"
+          },
+          "editorial": {
+            "status": "pass",
+            "reason": "順序・状態・役割という三つの記録観点を比較。"
+          },
+          "optionChecks": [
+            {
+              "optionId": "option-1",
+              "status": "pass",
+              "reason": "記録を実施保証にしない。"
+            },
+            {
+              "optionId": "option-2",
+              "status": "pass",
+              "reason": "区別と複雑さのトレードオフ。"
+            },
+            {
+              "optionId": "option-3",
+              "status": "pass",
+              "reason": "記名と実行を区別。"
+            }
+          ]
+        },
+        {
+          "sceneId": "scene-3",
+          "optionIds": [
+            "option-1",
+            "option-2",
+            "option-3"
+          ],
+          "occupational": {
+            "status": "pass",
+            "reason": "飼育日誌と清掃記録の運用検討に限定。"
+          },
+          "editorial": {
+            "status": "pass",
+            "reason": "保存ルールを共通条件にして情報の省略を防ぐ。"
+          },
+          "optionChecks": [
+            {
+              "optionId": "option-1",
+              "status": "pass",
+              "reason": "見かけの重複を即削除しない。"
+            },
+            {
+              "optionId": "option-2",
+              "status": "pass",
+              "reason": "利用頻度だけで削らない。"
+            },
+            {
+              "optionId": "option-3",
+              "status": "pass",
+              "reason": "参照化の負担を明示。"
+            }
+          ]
+        }
+      ],
+      "sha256": "6aae974ca46e64fcfcfd0146f35fcdb07e82e1652d9f6fd7b3a0f86412559038"
+    },
+    {
+      "slug": "farmer-harvest-sorting",
+      "sources": [
+        "https://shigoto.mhlw.go.jp/User/Occupation/Detail/505",
+        "docs/editorial/company-career-material.txt：関連職：15「農業技術者」は研究・技術指導の説明。栽培・出荷を行う生産者の直接資料とは扱わない。",
+        "drafts/batch-006/review/sourceEvidence.md"
+      ],
+      "scenes": [
+        {
+          "sceneId": "scene-1",
+          "optionIds": [
+            "option-1",
+            "option-2",
+            "option-3"
+          ],
+          "occupational": {
+            "status": "pass",
+            "reason": "収穫・選別・出荷の業務に対応。品質基準は教材の架空条件。"
+          },
+          "editorial": {
+            "status": "pass",
+            "reason": "判断保留と既定手順を全案共通にする。"
+          },
+          "optionChecks": [
+            {
+              "optionId": "option-1",
+              "status": "pass",
+              "reason": "見本と測定条件を併用。"
+            },
+            {
+              "optionId": "option-2",
+              "status": "pass",
+              "reason": "分類と収納を分ける。"
+            },
+            {
+              "optionId": "option-3",
+              "status": "pass",
+              "reason": "保留と解決の両方を扱う。"
+            }
+          ]
+        },
+        {
+          "sceneId": "scene-2",
+          "optionIds": [
+            "option-1",
+            "option-2",
+            "option-3"
+          ],
+          "occupational": {
+            "status": "pass",
+            "reason": "出荷管理の架空場面。未確認品の出荷は選択肢にしない。"
+          },
+          "editorial": {
+            "status": "pass",
+            "reason": "原因未確定で三つの切り分けを置く。"
+          },
+          "optionChecks": [
+            {
+              "optionId": "option-1",
+              "status": "pass",
+              "reason": "単位と数量を分離。"
+            },
+            {
+              "optionId": "option-2",
+              "status": "pass",
+              "reason": "原因を限定しすぎない。"
+            },
+            {
+              "optionId": "option-3",
+              "status": "pass",
+              "reason": "照合中の変動を抑える。"
+            }
+          ]
+        },
+        {
+          "sceneId": "scene-3",
+          "optionIds": [
+            "option-1",
+            "option-2",
+            "option-3"
+          ],
+          "occupational": {
+            "status": "pass",
+            "reason": "生産量や出荷の計画に対応する記録。"
+          },
+          "editorial": {
+            "status": "pass",
+            "reason": "一日の結果を恒常的な割合としない。"
+          },
+          "optionChecks": [
+            {
+              "optionId": "option-1",
+              "status": "pass",
+              "reason": "実績と予測を区別。"
+            },
+            {
+              "optionId": "option-2",
+              "status": "pass",
+              "reason": "基準の更新余地。"
+            },
+            {
+              "optionId": "option-3",
+              "status": "pass",
+              "reason": "時間の条件差を明示。"
+            }
+          ]
+        }
+      ],
+      "sha256": "410aca6fc4a3bf84577410f497f96c76938e820abb8fb7e5c89d425bc6704b4d"
+    },
+    {
+      "slug": "farmer-shipping-forecast",
+      "sources": [
+        "https://shigoto.mhlw.go.jp/User/Occupation/Detail/505",
+        "docs/editorial/company-career-material.txt：関連職：15「農業技術者」は研究・技術指導の説明。栽培・出荷を行う生産者の直接資料とは扱わない。",
+        "drafts/batch-006/review/sourceEvidence.md"
+      ],
+      "scenes": [
+        {
+          "sceneId": "scene-1",
+          "optionIds": [
+            "option-1",
+            "option-2",
+            "option-3"
+          ],
+          "occupational": {
+            "status": "pass",
+            "reason": "出荷時期と生産量の計画に対応。架空の注文設定。"
+          },
+          "editorial": {
+            "status": "pass",
+            "reason": "注文を受けた日ではなく納品予定日と収穫・出荷の予定を対応させる。数量の確定と見込みを全案で区別する。"
+          },
+          "optionChecks": [
+            {
+              "optionId": "option-1",
+              "status": "pass",
+              "reason": "観察時点の限界。"
+            },
+            {
+              "optionId": "option-2",
+              "status": "pass",
+              "reason": "過去を保証にしない。"
+            },
+            {
+              "optionId": "option-3",
+              "status": "pass",
+              "reason": "必要なのは注文受付日ではなく届ける期日。収穫だけで到着できるとはせず、選別・箱詰め・輸送の時間を含めて見込みを比較する。"
+            }
+          ]
+        },
+        {
+          "sceneId": "scene-2",
+          "optionIds": [
+            "option-1",
+            "option-2",
+            "option-3"
+          ],
+          "occupational": {
+            "status": "pass",
+            "reason": "出荷・販売の調整を農場責任者と行う設定。"
+          },
+          "editorial": {
+            "status": "pass",
+            "reason": "独断の代替出荷を排除し相談段階を統一。"
+          },
+          "optionChecks": [
+            {
+              "optionId": "option-1",
+              "status": "pass",
+              "reason": "幅と再確認をセットにする。"
+            },
+            {
+              "optionId": "option-2",
+              "status": "pass",
+              "reason": "相手の条件を残す。"
+            },
+            {
+              "optionId": "option-3",
+              "status": "pass",
+              "reason": "連絡と供給を混同しない。"
+            }
+          ]
+        },
+        {
+          "sceneId": "scene-3",
+          "optionIds": [
+            "option-1",
+            "option-2",
+            "option-3"
+          ],
+          "occupational": {
+            "status": "pass",
+            "reason": "生育観察と生産計画の反復に対応。"
+          },
+          "editorial": {
+            "status": "pass",
+            "reason": "振り返りを原因断定や責任追及にしない。"
+          },
+          "optionChecks": [
+            {
+              "optionId": "option-1",
+              "status": "pass",
+              "reason": "場所と因果を分離。"
+            },
+            {
+              "optionId": "option-2",
+              "status": "pass",
+              "reason": "頻度と精度を保証しない。"
+            },
+            {
+              "optionId": "option-3",
+              "status": "pass",
+              "reason": "事後合わせを避ける。"
+            }
+          ]
+        }
+      ],
+      "sha256": "84763003475f9da68cbe7b435b4ac78b3ff4241d548dfa671c727ede1be9206b"
+    },
+    {
+      "slug": "farmer-tool-workflow",
+      "sources": [
+        "https://shigoto.mhlw.go.jp/User/Occupation/Detail/505",
+        "docs/editorial/company-career-material.txt：関連職：15「農業技術者」は研究・技術指導の説明。栽培・出荷を行う生産者の直接資料とは扱わない。",
+        "drafts/batch-006/review/sourceEvidence.md"
+      ],
+      "scenes": [
+        {
+          "sceneId": "scene-1",
+          "optionIds": [
+            "option-1",
+            "option-2",
+            "option-3"
+          ],
+          "occupational": {
+            "status": "pass",
+            "reason": "農場の作業準備と片付けを題材化。機械操作の指示は扱わない。"
+          },
+          "editorial": {
+            "status": "pass",
+            "reason": "点検と衛生を選択外の共通条件にする。"
+          },
+          "optionChecks": [
+            {
+              "optionId": "option-1",
+              "status": "pass",
+              "reason": "組合せと共用の両立。"
+            },
+            {
+              "optionId": "option-2",
+              "status": "pass",
+              "reason": "個人責任にしない。"
+            },
+            {
+              "optionId": "option-3",
+              "status": "pass",
+              "reason": "配置と数量を区別。"
+            }
+          ]
+        },
+        {
+          "sceneId": "scene-2",
+          "optionIds": [
+            "option-1",
+            "option-2",
+            "option-3"
+          ],
+          "occupational": {
+            "status": "pass",
+            "reason": "農作業の道具管理という架空の運用案。"
+          },
+          "editorial": {
+            "status": "pass",
+            "reason": "使用可否の区分を全案共通にする。"
+          },
+          "optionChecks": [
+            {
+              "optionId": "option-1",
+              "status": "pass",
+              "reason": "数量と状態を分離。"
+            },
+            {
+              "optionId": "option-2",
+              "status": "pass",
+              "reason": "表の維持条件を明示。"
+            },
+            {
+              "optionId": "option-3",
+              "status": "pass",
+              "reason": "追跡と負担を両立。"
+            }
+          ]
+        },
+        {
+          "sceneId": "scene-3",
+          "optionIds": [
+            "option-1",
+            "option-2",
+            "option-3"
+          ],
+          "occupational": {
+            "status": "pass",
+            "reason": "日々の作業準備の運用検討。生産量への効果は保証しない。"
+          },
+          "editorial": {
+            "status": "pass",
+            "reason": "作業者と決めた表示・記録の共通試行として示し、前シーンで記録案を選ぶことを必須にしない。準備時間だけでなく全工程の負担を比較する。"
+          },
+          "optionChecks": [
+            {
+              "optionId": "option-1",
+              "status": "pass",
+              "reason": "効率だけを基準にしない。"
+            },
+            {
+              "optionId": "option-2",
+              "status": "pass",
+              "reason": "必要記録を保護。"
+            },
+            {
+              "optionId": "option-3",
+              "status": "pass",
+              "reason": "習熟差を区別。"
+            }
+          ]
+        }
+      ],
+      "sha256": "c219275a6cb2bef00fcd18546fc26c8d0346d8273c372056d3ec02c2b2ca6e96"
+    },
+    {
+      "slug": "logistics-receiving-units",
+      "sources": [
+        "https://shigoto.mhlw.go.jp/User/Occupation/Detail/542",
+        "docs/editorial/company-career-material.txt：該当項目なし。自社原文に直接の職業説明があるとは扱わない。",
+        "drafts/batch-006/review/sourceEvidence.md",
+        "https://www.logisteed.com/eastjapan/newgrad/member03/"
+      ],
+      "scenes": [
+        {
+          "sceneId": "scene-1",
+          "optionIds": [
+            "option-1",
+            "option-2",
+            "option-3"
+          ],
+          "occupational": {
+            "status": "pass",
+            "reason": "出荷・受荷事務の数量照合を参考に、現場改善を担う役割として設定。"
+          },
+          "editorial": {
+            "status": "pass",
+            "reason": "開梱や受入可否は既定手順に従う条件を置く。"
+          },
+          "optionChecks": [
+            {
+              "optionId": "option-1",
+              "status": "pass",
+              "reason": "表示と実物を区別。"
+            },
+            {
+              "optionId": "option-2",
+              "status": "pass",
+              "reason": "発注と納品を分離。"
+            },
+            {
+              "optionId": "option-3",
+              "status": "pass",
+              "reason": "問い合わせを検品の代用にしない。"
+            }
+          ]
+        },
+        {
+          "sceneId": "scene-2",
+          "optionIds": [
+            "option-1",
+            "option-2",
+            "option-3"
+          ],
+          "occupational": {
+            "status": "pass",
+            "reason": "入荷・在庫情報管理の運用改善として位置付ける。"
+          },
+          "editorial": {
+            "status": "pass",
+            "reason": "提案を即時のシステム改造や承認にしない。"
+          },
+          "optionChecks": [
+            {
+              "optionId": "option-1",
+              "status": "pass",
+              "reason": "区分と転記負担の両立。"
+            },
+            {
+              "optionId": "option-2",
+              "status": "pass",
+              "reason": "参照値の鮮度を確保。"
+            },
+            {
+              "optionId": "option-3",
+              "status": "pass",
+              "reason": "確認工程の負担を残す。"
+            }
+          ]
+        },
+        {
+          "sceneId": "scene-3",
+          "optionIds": [
+            "option-1",
+            "option-2",
+            "option-3"
+          ],
+          "occupational": {
+            "status": "pass",
+            "reason": "在庫受払の情報管理に対応。架空の試行記録。"
+          },
+          "editorial": {
+            "status": "pass",
+            "reason": "出庫前という比較条件を提示。"
+          },
+          "optionChecks": [
+            {
+              "optionId": "option-1",
+              "status": "pass",
+              "reason": "増加数の範囲を限定。"
+            },
+            {
+              "optionId": "option-2",
+              "status": "pass",
+              "reason": "情報と現場を接続。"
+            },
+            {
+              "optionId": "option-3",
+              "status": "pass",
+              "reason": "保留を一律エラーにしない。"
+            }
+          ]
+        }
+      ],
+      "sha256": "dc91652ae2b82470d0d30d43b978257ebdcc111c06ceeafad9c758e58756e9bc"
+    },
+    {
+      "slug": "logistics-returns-routing",
+      "sources": [
+        "https://shigoto.mhlw.go.jp/User/Occupation/Detail/542",
+        "docs/editorial/company-career-material.txt：該当項目なし。自社原文に直接の職業説明があるとは扱わない。",
+        "drafts/batch-006/review/sourceEvidence.md",
+        "https://www.logisteed.com/eastjapan/newgrad/member03/"
+      ],
+      "scenes": [
+        {
+          "sceneId": "scene-1",
+          "optionIds": [
+            "option-1",
+            "option-2",
+            "option-3"
+          ],
+          "occupational": {
+            "status": "pass",
+            "reason": "返品伝票と在庫管理の業務を参考にした改善検討。"
+          },
+          "editorial": {
+            "status": "pass",
+            "reason": "再販売判断を権限者に分離。"
+          },
+          "optionChecks": [
+            {
+              "optionId": "option-1",
+              "status": "pass",
+              "reason": "未確認を推測で補わない。"
+            },
+            {
+              "optionId": "option-2",
+              "status": "pass",
+              "reason": "場所と記録を併用。"
+            },
+            {
+              "optionId": "option-3",
+              "status": "pass",
+              "reason": "記録と判定を区別。"
+            }
+          ]
+        },
+        {
+          "sceneId": "scene-2",
+          "optionIds": [
+            "option-1",
+            "option-2",
+            "option-3"
+          ],
+          "occupational": {
+            "status": "pass",
+            "reason": "保管場所・管理台帳の整合という範囲。"
+          },
+          "editorial": {
+            "status": "pass",
+            "reason": "記録遅れは仮説として扱い調査を先に置く。"
+          },
+          "optionChecks": [
+            {
+              "optionId": "option-1",
+              "status": "pass",
+              "reason": "予定と実態を分離。"
+            },
+            {
+              "optionId": "option-2",
+              "status": "pass",
+              "reason": "分類と負担の両立。"
+            },
+            {
+              "optionId": "option-3",
+              "status": "pass",
+              "reason": "実行負担の検証。"
+            }
+          ]
+        },
+        {
+          "sceneId": "scene-3",
+          "optionIds": [
+            "option-1",
+            "option-2",
+            "option-3"
+          ],
+          "occupational": {
+            "status": "pass",
+            "reason": "返品を含む在庫管理の調整業務。"
+          },
+          "editorial": {
+            "status": "pass",
+            "reason": "解消を無断処分に結びつけない。"
+          },
+          "optionChecks": [
+            {
+              "optionId": "option-1",
+              "status": "pass",
+              "reason": "不明を保持。"
+            },
+            {
+              "optionId": "option-2",
+              "status": "pass",
+              "reason": "権限を尊重。"
+            },
+            {
+              "optionId": "option-3",
+              "status": "pass",
+              "reason": "数量のみの順位付けを避ける。"
+            }
+          ]
+        }
+      ],
+      "sha256": "992ea319918a6945db94ad39a2515ae6b881ef6a3590c52fe750b93209c530b9"
+    },
+    {
+      "slug": "logistics-inventory-count",
+      "sources": [
+        "https://shigoto.mhlw.go.jp/User/Occupation/Detail/542",
+        "docs/editorial/company-career-material.txt：該当項目なし。自社原文に直接の職業説明があるとは扱わない。",
+        "drafts/batch-006/review/sourceEvidence.md",
+        "https://www.logisteed.com/eastjapan/newgrad/member03/"
+      ],
+      "scenes": [
+        {
+          "sceneId": "scene-1",
+          "optionIds": [
+            "option-1",
+            "option-2",
+            "option-3"
+          ],
+          "occupational": {
+            "status": "pass",
+            "reason": "在庫受払と保管管理を参考にする。"
+          },
+          "editorial": {
+            "status": "pass",
+            "reason": "数値の無断修正を除外し三仮説を比較。"
+          },
+          "optionChecks": [
+            {
+              "optionId": "option-1",
+              "status": "pass",
+              "reason": "範囲と時点を分離。"
+            },
+            {
+              "optionId": "option-2",
+              "status": "pass",
+              "reason": "記録と移動を区別。"
+            },
+            {
+              "optionId": "option-3",
+              "status": "pass",
+              "reason": "品番で同一性を保つ。"
+            }
+          ]
+        },
+        {
+          "sceneId": "scene-2",
+          "optionIds": [
+            "option-1",
+            "option-2",
+            "option-3"
+          ],
+          "occupational": {
+            "status": "pass",
+            "reason": "棚卸し・在庫管理の運用計画に対応。"
+          },
+          "editorial": {
+            "status": "pass",
+            "reason": "全業務停止を前提にせず責任者の方針内で相談。"
+          },
+          "optionChecks": [
+            {
+              "optionId": "option-1",
+              "status": "pass",
+              "reason": "停止影響を評価。"
+            },
+            {
+              "optionId": "option-2",
+              "status": "pass",
+              "reason": "移動記録の限界。"
+            },
+            {
+              "optionId": "option-3",
+              "status": "pass",
+              "reason": "時点固定と移動差を併用。"
+            }
+          ]
+        },
+        {
+          "sceneId": "scene-3",
+          "optionIds": [
+            "option-1",
+            "option-2",
+            "option-3"
+          ],
+          "occupational": {
+            "status": "pass",
+            "reason": "保管場所と在庫台帳の整合改善を扱う。"
+          },
+          "editorial": {
+            "status": "pass",
+            "reason": "記録漏れを確認済みの架空結果として明示。"
+          },
+          "optionChecks": [
+            {
+              "optionId": "option-1",
+              "status": "pass",
+              "reason": "表示と記録を分離。"
+            },
+            {
+              "optionId": "option-2",
+              "status": "pass",
+              "reason": "実行可能性を検証。"
+            },
+            {
+              "optionId": "option-3",
+              "status": "pass",
+              "reason": "確認負担も考慮。"
+            }
+          ]
+        }
+      ],
+      "sha256": "79b8fe1ddc2158893609285a5fd6eca5c029bd69622433bb2ac84991e1aef327"
+    },
+    {
+      "slug": "museum-curator-object-history",
+      "sources": [
+        "https://shigoto.mhlw.go.jp/User/Occupation/Detail/185",
+        "docs/editorial/company-career-material.txt：該当項目なし。自社原文に直接の職業説明があるとは扱わない。",
+        "drafts/batch-006/review/sourceEvidence.md"
+      ],
+      "scenes": [
+        {
+          "sceneId": "scene-1",
+          "optionIds": [
+            "option-1",
+            "option-2",
+            "option-3"
+          ],
+          "occupational": {
+            "status": "pass",
+            "reason": "学芸員の資料整理・調査研究に対応。"
+          },
+          "editorial": {
+            "status": "pass",
+            "reason": "名称差を誤記と断定せず三つの根拠を比較。"
+          },
+          "optionChecks": [
+            {
+              "optionId": "option-1",
+              "status": "pass",
+              "reason": "記録自体の性質を確認。"
+            },
+            {
+              "optionId": "option-2",
+              "status": "pass",
+              "reason": "記憶と確定事実を区別。"
+            },
+            {
+              "optionId": "option-3",
+              "status": "pass",
+              "reason": "類似を同一としない。"
+            }
+          ]
+        },
+        {
+          "sceneId": "scene-2",
+          "optionIds": [
+            "option-1",
+            "option-2",
+            "option-3"
+          ],
+          "occupational": {
+            "status": "pass",
+            "reason": "資料目録と調査記録の作成に対応。"
+          },
+          "editorial": {
+            "status": "pass",
+            "reason": "製作年を創作せず整理方法を比較。"
+          },
+          "optionChecks": [
+            {
+              "optionId": "option-1",
+              "status": "pass",
+              "reason": "証言の価値を否定しない。"
+            },
+            {
+              "optionId": "option-2",
+              "status": "pass",
+              "reason": "追跡と公開範囲を分離。"
+            },
+            {
+              "optionId": "option-3",
+              "status": "pass",
+              "reason": "未確認と確認済みを両立。"
+            }
+          ]
+        },
+        {
+          "sceneId": "scene-3",
+          "optionIds": [
+            "option-1",
+            "option-2",
+            "option-3"
+          ],
+          "occupational": {
+            "status": "pass",
+            "reason": "資料解説の作成に対応。"
+          },
+          "editorial": {
+            "status": "pass",
+            "reason": "製作年不明を保ち入口だけを変える。"
+          },
+          "optionChecks": [
+            {
+              "optionId": "option-1",
+              "status": "pass",
+              "reason": "適用範囲を限定。"
+            },
+            {
+              "optionId": "option-2",
+              "status": "pass",
+              "reason": "背景と対象の両立。"
+            },
+            {
+              "optionId": "option-3",
+              "status": "pass",
+              "reason": "未確定を誇張しない。"
+            }
+          ]
+        }
+      ],
+      "sha256": "70f9cef2cf872896ff60bd200dff645b1c7b0f264518ea44204926ec1f46aa0b"
+    },
+    {
+      "slug": "museum-curator-handling-program",
+      "sources": [
+        "https://shigoto.mhlw.go.jp/User/Occupation/Detail/185",
+        "docs/editorial/company-career-material.txt：該当項目なし。自社原文に直接の職業説明があるとは扱わない。",
+        "drafts/batch-006/review/sourceEvidence.md"
+      ],
+      "scenes": [
+        {
+          "sceneId": "scene-1",
+          "optionIds": [
+            "option-1",
+            "option-2",
+            "option-3"
+          ],
+          "occupational": {
+            "status": "pass",
+            "reason": "学芸員の講座・解説業務に対応。複製品使用は教材設定。"
+          },
+          "editorial": {
+            "status": "pass",
+            "reason": "安全確認と本物との差の説明を全案共通にする。 洗濯板の教材用イメージと表面の溝・木枠の観察を対応させ、実物資料の写真とは扱わない。"
+          },
+          "optionChecks": [
+            {
+              "optionId": "option-1",
+              "status": "pass",
+              "reason": "観察と推測を分離。"
+            },
+            {
+              "optionId": "option-2",
+              "status": "pass",
+              "reason": "想像と史実を分離。"
+            },
+            {
+              "optionId": "option-3",
+              "status": "pass",
+              "reason": "時代差を保持。"
+            }
+          ]
+        },
+        {
+          "sceneId": "scene-2",
+          "optionIds": [
+            "option-1",
+            "option-2",
+            "option-3"
+          ],
+          "occupational": {
+            "status": "pass",
+            "reason": "教育普及活動の進め方を検討する範囲。"
+          },
+          "editorial": {
+            "status": "pass",
+            "reason": "発言を強制しない条件を保持。"
+          },
+          "optionChecks": [
+            {
+              "optionId": "option-1",
+              "status": "pass",
+              "reason": "描画能力を採点しない。"
+            },
+            {
+              "optionId": "option-2",
+              "status": "pass",
+              "reason": "会話を必須化しない。"
+            },
+            {
+              "optionId": "option-3",
+              "status": "pass",
+              "reason": "問いの誘導範囲を限定。"
+            }
+          ]
+        },
+        {
+          "sceneId": "scene-3",
+          "optionIds": [
+            "option-1",
+            "option-2",
+            "option-3"
+          ],
+          "occupational": {
+            "status": "pass",
+            "reason": "講座の振り返りを題材化。効果の実証ではない。"
+          },
+          "editorial": {
+            "status": "pass",
+            "reason": "任意回答と非採点を明示。"
+          },
+          "optionChecks": [
+            {
+              "optionId": "option-1",
+              "status": "pass",
+              "reason": "感想と事実を区別。"
+            },
+            {
+              "optionId": "option-2",
+              "status": "pass",
+              "reason": "回答保証を避ける。"
+            },
+            {
+              "optionId": "option-3",
+              "status": "pass",
+              "reason": "資料管理の条件を保持。"
+            }
+          ]
+        }
+      ],
+      "sha256": "09b5d9341da1b75ff10d19b795d997d30681b0c1ab2c58eea5b2cf8f1e7946a9"
+    },
+    {
+      "slug": "museum-curator-digital-record",
+      "sources": [
+        "https://shigoto.mhlw.go.jp/User/Occupation/Detail/185",
+        "docs/editorial/company-career-material.txt：該当項目なし。自社原文に直接の職業説明があるとは扱わない。",
+        "drafts/batch-006/review/sourceEvidence.md"
+      ],
+      "scenes": [
+        {
+          "sceneId": "scene-1",
+          "optionIds": [
+            "option-1",
+            "option-2",
+            "option-3"
+          ],
+          "occupational": {
+            "status": "pass",
+            "reason": "学芸員の資料整理・目録作成に対応するデジタル管理場面。"
+          },
+          "editorial": {
+            "status": "pass",
+            "reason": "外見のみの同定を避ける。"
+          },
+          "optionChecks": [
+            {
+              "optionId": "option-1",
+              "status": "pass",
+              "reason": "単独資料を絶対視しない。"
+            },
+            {
+              "optionId": "option-2",
+              "status": "pass",
+              "reason": "不鮮明情報を創作しない。"
+            },
+            {
+              "optionId": "option-3",
+              "status": "pass",
+              "reason": "複数根拠の必要性。"
+            }
+          ]
+        },
+        {
+          "sceneId": "scene-2",
+          "optionIds": [
+            "option-1",
+            "option-2",
+            "option-3"
+          ],
+          "occupational": {
+            "status": "pass",
+            "reason": "資料の情報提供を題材にし、権利の法的判断は館の確認手順へ委ねる。"
+          },
+          "editorial": {
+            "status": "pass",
+            "reason": "公開承認を任意の一案にしない。"
+          },
+          "optionChecks": [
+            {
+              "optionId": "option-1",
+              "status": "pass",
+              "reason": "分類と承認を区別。"
+            },
+            {
+              "optionId": "option-2",
+              "status": "pass",
+              "reason": "確認範囲を保持。"
+            },
+            {
+              "optionId": "option-3",
+              "status": "pass",
+              "reason": "正確さと許諾を分離。"
+            }
+          ]
+        },
+        {
+          "sceneId": "scene-3",
+          "optionIds": [
+            "option-1",
+            "option-2",
+            "option-3"
+          ],
+          "occupational": {
+            "status": "pass",
+            "reason": "目録と資料情報の提供に対応。"
+          },
+          "editorial": {
+            "status": "pass",
+            "reason": "検索・参照・撮影情報の異なる確認対象。"
+          },
+          "optionChecks": [
+            {
+              "optionId": "option-1",
+              "status": "pass",
+              "reason": "検索補助と管理名を区別。"
+            },
+            {
+              "optionId": "option-2",
+              "status": "pass",
+              "reason": "参照の維持条件。"
+            },
+            {
+              "optionId": "option-3",
+              "status": "pass",
+              "reason": "欠損を補作しない。"
+            }
+          ]
+        }
+      ],
+      "sha256": "62df78874c4e76a75e2f6e76825a34d88100275ff75da8d039b55c9b1c883ce8"
+    },
+    {
+      "slug": "architect-shop-delivery-route",
+      "sources": [
+        "https://shigoto.mhlw.go.jp/User/Occupation/Detail/20",
+        "docs/editorial/company-career-material.txt：直接対応：4「建築士」。設計・工事監理の説明を土台とし、施工管理とは区別する。",
+        "drafts/batch-006/review/sourceEvidence.md"
+      ],
+      "scenes": [
+        {
+          "sceneId": "scene-1",
+          "optionIds": [
+            "option-1",
+            "option-2",
+            "option-3"
+          ],
+          "occupational": {
+            "status": "pass",
+            "reason": "建築設計技術者の用途・設備等の調査と依頼者打合せに対応。"
+          },
+          "editorial": {
+            "status": "pass",
+            "reason": "販売演出ではなく改修に必要な空間の条件を聞く問い。"
+          },
+          "optionChecks": [
+            {
+              "optionId": "option-1",
+              "status": "pass",
+              "reason": "搬入量と時間を空間条件へ結び、平均の限界を示す。"
+            },
+            {
+              "optionId": "option-2",
+              "status": "pass",
+              "reason": "物の動きと必要な場所の対応を確認する。"
+            },
+            {
+              "optionId": "option-3",
+              "status": "pass",
+              "reason": "道具の寸法と作業する範囲を区別する。"
+            }
+          ]
+        },
+        {
+          "sceneId": "scene-2",
+          "optionIds": [
+            "option-1",
+            "option-2",
+            "option-3"
+          ],
+          "occupational": {
+            "status": "pass",
+            "reason": "用途に応じた平面計画の検討。物流作業の指示や施工管理とは区別。"
+          },
+          "editorial": {
+            "status": "pass",
+            "reason": "具体的な図の優劣を問わず、案を検討する観点を選ぶ。"
+          },
+          "optionChecks": [
+            {
+              "optionId": "option-1",
+              "status": "pass",
+              "reason": "抽象的な動線と実際の占有範囲を区別する。"
+            },
+            {
+              "optionId": "option-2",
+              "status": "pass",
+              "reason": "短距離だけを最適とせず実利用の条件を残す。"
+            },
+            {
+              "optionId": "option-3",
+              "status": "pass",
+              "reason": "兼用の利点と片付けを続ける負担を示す。"
+            }
+          ]
+        },
+        {
+          "sceneId": "scene-3",
+          "optionIds": [
+            "option-1",
+            "option-2",
+            "option-3"
+          ],
+          "occupational": {
+            "status": "pass",
+            "reason": "設計図面の作成と施主との打合せに対応。"
+          },
+          "editorial": {
+            "status": "pass",
+            "reason": "前シーンの特定案の採用を前提にせず、複数候補の比較へ進む。"
+          },
+          "optionChecks": [
+            {
+              "optionId": "option-1",
+              "status": "pass",
+              "reason": "時間別の比較と想定外の物量を扱う。"
+            },
+            {
+              "optionId": "option-2",
+              "status": "pass",
+              "reason": "面積と空間の質を区別する。"
+            },
+            {
+              "optionId": "option-3",
+              "status": "pass",
+              "reason": "概算比較に未確定条件を伴わせる。"
+            }
+          ]
+        }
+      ],
+      "sha256": "b62522f6a59f9d3dd9444272c72ccfc17cb7cdca194508a3f36acf2ebd2048f1"
+    },
+    {
+      "slug": "architect-building-survey",
+      "sources": [
+        "https://shigoto.mhlw.go.jp/User/Occupation/Detail/20",
+        "docs/editorial/company-career-material.txt：直接対応：4「建築士」。設計・工事監理の説明を土台とし、施工管理とは区別する。",
+        "drafts/batch-006/review/sourceEvidence.md"
+      ],
+      "scenes": [
+        {
+          "sceneId": "scene-1",
+          "optionIds": [
+            "option-1",
+            "option-2",
+            "option-3"
+          ],
+          "occupational": {
+            "status": "pass",
+            "reason": "建築物の調査・設計業務に対応。目視と寸法測定の範囲に限定。"
+          },
+          "editorial": {
+            "status": "pass",
+            "reason": "撤去や構造判断を選択肢にしない。"
+          },
+          "optionChecks": [
+            {
+              "optionId": "option-1",
+              "status": "pass",
+              "reason": "日付だけを保証にしない。"
+            },
+            {
+              "optionId": "option-2",
+              "status": "pass",
+              "reason": "可視範囲を明示。"
+            },
+            {
+              "optionId": "option-3",
+              "status": "pass",
+              "reason": "証言を根拠と照合。"
+            }
+          ]
+        },
+        {
+          "sceneId": "scene-2",
+          "optionIds": [
+            "option-1",
+            "option-2",
+            "option-3"
+          ],
+          "occupational": {
+            "status": "pass",
+            "reason": "設計前の現況調査の一例。"
+          },
+          "editorial": {
+            "status": "pass",
+            "reason": "不一致を平均処理で隠さず再確認する。"
+          },
+          "optionChecks": [
+            {
+              "optionId": "option-1",
+              "status": "pass",
+              "reason": "範囲と方法を分離。"
+            },
+            {
+              "optionId": "option-2",
+              "status": "pass",
+              "reason": "再測定を絶対視しない。"
+            },
+            {
+              "optionId": "option-3",
+              "status": "pass",
+              "reason": "測定と記録を区別。"
+            }
+          ]
+        },
+        {
+          "sceneId": "scene-3",
+          "optionIds": [
+            "option-1",
+            "option-2",
+            "option-3"
+          ],
+          "occupational": {
+            "status": "pass",
+            "reason": "調査結果を設計条件にする業務。法適合の認定はしない。"
+          },
+          "editorial": {
+            "status": "pass",
+            "reason": "未確認を説明から落とさない三つのまとめ方。"
+          },
+          "optionChecks": [
+            {
+              "optionId": "option-1",
+              "status": "pass",
+              "reason": "状態の共通理解。"
+            },
+            {
+              "optionId": "option-2",
+              "status": "pass",
+              "reason": "未確認の隠蔽を避ける。"
+            },
+            {
+              "optionId": "option-3",
+              "status": "pass",
+              "reason": "根拠と読みやすさを両立。"
+            }
+          ]
+        }
+      ],
+      "sha256": "34c85dd6cf5a4be809c382241733a3645161aa39252809f3a7d7772aadba7057"
+    },
+    {
+      "slug": "data-scientist-missing-counts",
+      "sources": [
+        "https://shigoto.mhlw.go.jp/User/Occupation/Detail/323",
+        "docs/editorial/company-career-material.txt：直接対応なし。1のシステムエンジニア・プログラマを分析職そのものの根拠にしない。",
+        "drafts/batch-006/review/sourceEvidence.md"
+      ],
+      "scenes": [
+        {
+          "sceneId": "scene-1",
+          "optionIds": [
+            "option-1",
+            "option-2",
+            "option-3"
+          ],
+          "occupational": {
+            "status": "pass",
+            "reason": "分析対象データの確認・加工業務に対応。"
+          },
+          "editorial": {
+            "status": "pass",
+            "reason": "空欄の原因は未確定とし補完を急がない。"
+          },
+          "optionChecks": [
+            {
+              "optionId": "option-1",
+              "status": "pass",
+              "reason": "運用と記録を照合。"
+            },
+            {
+              "optionId": "option-2",
+              "status": "pass",
+              "reason": "傾向と原因を分離。"
+            },
+            {
+              "optionId": "option-3",
+              "status": "pass",
+              "reason": "元データの限界を保持。"
+            }
+          ]
+        },
+        {
+          "sceneId": "scene-2",
+          "optionIds": [
+            "option-1",
+            "option-2",
+            "option-3"
+          ],
+          "occupational": {
+            "status": "pass",
+            "reason": "分析目的とデータの適合を検討する業務。"
+          },
+          "editorial": {
+            "status": "pass",
+            "reason": "夕方欠測を明示し全体への一般化を避ける。"
+          },
+          "optionChecks": [
+            {
+              "optionId": "option-1",
+              "status": "pass",
+              "reason": "欠測率と実数を区別。"
+            },
+            {
+              "optionId": "option-2",
+              "status": "pass",
+              "reason": "限定集計の用途を明示。"
+            },
+            {
+              "optionId": "option-3",
+              "status": "pass",
+              "reason": "補完と新規計測を分離。"
+            }
+          ]
+        },
+        {
+          "sceneId": "scene-3",
+          "optionIds": [
+            "option-1",
+            "option-2",
+            "option-3"
+          ],
+          "occupational": {
+            "status": "pass",
+            "reason": "データ担当者へのヒアリングと加工条件の整理に対応。"
+          },
+          "editorial": {
+            "status": "pass",
+            "reason": "記録負担と未確認の保持を共通条件とする。"
+          },
+          "optionChecks": [
+            {
+              "optionId": "option-1",
+              "status": "pass",
+              "reason": "未知の状態を保持。"
+            },
+            {
+              "optionId": "option-2",
+              "status": "pass",
+              "reason": "推測入力を禁止。"
+            },
+            {
+              "optionId": "option-3",
+              "status": "pass",
+              "reason": "自由記述と負担を両立。"
+            }
+          ]
+        }
+      ],
+      "sha256": "cd10c03907bb7ddba2bcf1259e499b0244de0d69443407851bdab6480d3e4fb8"
+    },
+    {
+      "slug": "data-scientist-demand-validation",
+      "sources": [
+        "https://shigoto.mhlw.go.jp/User/Occupation/Detail/323",
+        "docs/editorial/company-career-material.txt：直接対応なし。1のシステムエンジニア・プログラマを分析職そのものの根拠にしない。",
+        "drafts/batch-006/review/sourceEvidence.md"
+      ],
+      "scenes": [
+        {
+          "sceneId": "scene-1",
+          "optionIds": [
+            "option-1",
+            "option-2",
+            "option-3"
+          ],
+          "occupational": {
+            "status": "pass",
+            "reason": "モデルの効果検証と複数データでの評価に対応。"
+          },
+          "editorial": {
+            "status": "pass",
+            "reason": "複数週の未使用実績と予測を選択前に示す。日別・曜日別・単純な予測との比較が成立し、品切れ時の販売数と需要を区別する。"
+          },
+          "optionChecks": [
+            {
+              "optionId": "option-1",
+              "status": "pass",
+              "reason": "実績の制約を保持。"
+            },
+            {
+              "optionId": "option-2",
+              "status": "pass",
+              "reason": "複数週の同じ曜日を比べられる条件。繰り返しの有無を検討できるが、曜日が原因と断定せず他の条件を確認する。"
+            },
+            {
+              "optionId": "option-3",
+              "status": "pass",
+              "reason": "同条件の基準比較。"
+            }
+          ]
+        },
+        {
+          "sceneId": "scene-2",
+          "optionIds": [
+            "option-1",
+            "option-2",
+            "option-3"
+          ],
+          "occupational": {
+            "status": "pass",
+            "reason": "業務責任者との目標設定に対応。発注権限は現場側に置く。"
+          },
+          "editorial": {
+            "status": "pass",
+            "reason": "過不足の影響を先に決めず確認する。"
+          },
+          "optionChecks": [
+            {
+              "optionId": "option-1",
+              "status": "pass",
+              "reason": "片側最適化を避ける。"
+            },
+            {
+              "optionId": "option-2",
+              "status": "pass",
+              "reason": "商品条件を保持。"
+            },
+            {
+              "optionId": "option-3",
+              "status": "pass",
+              "reason": "未来情報の混入を避ける。"
+            }
+          ]
+        },
+        {
+          "sceneId": "scene-3",
+          "optionIds": [
+            "option-1",
+            "option-2",
+            "option-3"
+          ],
+          "occupational": {
+            "status": "pass",
+            "reason": "環境変化に応じたモデル検討の反復に対応。"
+          },
+          "editorial": {
+            "status": "pass",
+            "reason": "予測使用を自動発注や成果保証としない。"
+          },
+          "optionChecks": [
+            {
+              "optionId": "option-1",
+              "status": "pass",
+              "reason": "指標自体の連続性。"
+            },
+            {
+              "optionId": "option-2",
+              "status": "pass",
+              "reason": "判断と結果を分離。"
+            },
+            {
+              "optionId": "option-3",
+              "status": "pass",
+              "reason": "相関と因果を区別。"
+            }
+          ]
+        }
+      ],
+      "sha256": "3f276fa86e179e58a287e632dd9c1aaf13dd4a9b960a36d5a2e5a2082fe6cddb"
+    },
+    {
+      "slug": "product-developer-size-lineup",
+      "sources": [
+        "https://shigoto.mhlw.go.jp/User/Occupation/Detail/461",
+        "docs/editorial/company-career-material.txt：関連業務：9「マーチャンダイザー」の品ぞろえ・販売計画。商品企画全般と同一視しない。",
+        "drafts/batch-006/review/sourceEvidence.md"
+      ],
+      "scenes": [
+        {
+          "sceneId": "scene-1",
+          "optionIds": [
+            "option-1",
+            "option-2",
+            "option-3"
+          ],
+          "occupational": {
+            "status": "pass",
+            "reason": "チェーンストアの商品調査・企画に対応。"
+          },
+          "editorial": {
+            "status": "pass",
+            "reason": "寸法や需要量を要望だけから決めない。"
+          },
+          "optionChecks": [
+            {
+              "optionId": "option-1",
+              "status": "pass",
+              "reason": "個別例の限界。"
+            },
+            {
+              "optionId": "option-2",
+              "status": "pass",
+              "reason": "場面と内容物を併用。"
+            },
+            {
+              "optionId": "option-3",
+              "status": "pass",
+              "reason": "要望者の偏りを残す。"
+            }
+          ]
+        },
+        {
+          "sceneId": "scene-2",
+          "optionIds": [
+            "option-1",
+            "option-2",
+            "option-3"
+          ],
+          "occupational": {
+            "status": "pass",
+            "reason": "商品の種類・量の計画と生産側との協働に対応。"
+          },
+          "editorial": {
+            "status": "pass",
+            "reason": "品質承認と企画比較を分離。"
+          },
+          "optionChecks": [
+            {
+              "optionId": "option-1",
+              "status": "pass",
+              "reason": "役割分担と重複を検討。"
+            },
+            {
+              "optionId": "option-2",
+              "status": "pass",
+              "reason": "試験範囲を限定。"
+            },
+            {
+              "optionId": "option-3",
+              "status": "pass",
+              "reason": "代替案の限界。"
+            }
+          ]
+        },
+        {
+          "sceneId": "scene-3",
+          "optionIds": [
+            "option-1",
+            "option-2",
+            "option-3"
+          ],
+          "occupational": {
+            "status": "pass",
+            "reason": "販売実験と商品計画の検討に対応。"
+          },
+          "editorial": {
+            "status": "pass",
+            "reason": "販売実験は前シーンで読者が選んだ結果ではなく、三案を比較した後のチーム共通の設定。小型の販売だけで需要増加を断定しない三案を比較する。"
+          },
+          "optionChecks": [
+            {
+              "optionId": "option-1",
+              "status": "pass",
+              "reason": "比較条件を残す。"
+            },
+            {
+              "optionId": "option-2",
+              "status": "pass",
+              "reason": "回答の偏りを明示。"
+            },
+            {
+              "optionId": "option-3",
+              "status": "pass",
+              "reason": "印象と件数を区別。"
+            }
+          ]
+        }
+      ],
+      "sha256": "7776d8d18016ca9aa7221c04d7810d6ab11704c7f2346090ba9fda19bf038c63"
+    },
+    {
+      "slug": "product-developer-trial-comparison",
+      "sources": [
+        "https://shigoto.mhlw.go.jp/User/Occupation/Detail/461",
+        "docs/editorial/company-career-material.txt：関連業務：9「マーチャンダイザー」の品ぞろえ・販売計画。商品企画全般と同一視しない。",
+        "drafts/batch-006/review/sourceEvidence.md"
+      ],
+      "scenes": [
+        {
+          "sceneId": "scene-1",
+          "optionIds": [
+            "option-1",
+            "option-2",
+            "option-3"
+          ],
+          "occupational": {
+            "status": "pass",
+            "reason": "商品企画開発の調査・試作検討に対応。"
+          },
+          "editorial": {
+            "status": "pass",
+            "reason": "安全性の自己判定をさせず動作評価へ限定。"
+          },
+          "optionChecks": [
+            {
+              "optionId": "option-1",
+              "status": "pass",
+              "reason": "動作ごとの範囲を保持。"
+            },
+            {
+              "optionId": "option-2",
+              "status": "pass",
+              "reason": "順序効果を考慮。"
+            },
+            {
+              "optionId": "option-3",
+              "status": "pass",
+              "reason": "想定と実行を区別。"
+            }
+          ]
+        },
+        {
+          "sceneId": "scene-2",
+          "optionIds": [
+            "option-1",
+            "option-2",
+            "option-3"
+          ],
+          "occupational": {
+            "status": "pass",
+            "reason": "販売前の商品評価を企画担当が設計する架空場面。"
+          },
+          "editorial": {
+            "status": "pass",
+            "reason": "評価目標と同じ書類条件を明示。"
+          },
+          "optionChecks": [
+            {
+              "optionId": "option-1",
+              "status": "pass",
+              "reason": "課題範囲の限界。"
+            },
+            {
+              "optionId": "option-2",
+              "status": "pass",
+              "reason": "統制の限界を明示。"
+            },
+            {
+              "optionId": "option-3",
+              "status": "pass",
+              "reason": "観察枠を固定しすぎない。"
+            }
+          ]
+        },
+        {
+          "sceneId": "scene-3",
+          "optionIds": [
+            "option-1",
+            "option-2",
+            "option-3"
+          ],
+          "occupational": {
+            "status": "pass",
+            "reason": "生産チームとの協働・企画書作成に対応。"
+          },
+          "editorial": {
+            "status": "pass",
+            "reason": "品質判断と製造可否は担当者との検討として保持。"
+          },
+          "optionChecks": [
+            {
+              "optionId": "option-1",
+              "status": "pass",
+              "reason": "使用感と品質保証を区別。"
+            },
+            {
+              "optionId": "option-2",
+              "status": "pass",
+              "reason": "企画目的を保持。"
+            },
+            {
+              "optionId": "option-3",
+              "status": "pass",
+              "reason": "確認計画まで接続。"
+            }
+          ]
+        }
+      ],
+      "sha256": "a1156a2013c3ba2a5aa6b5551d2819ec40fe3fc4f704c86f3ec77059e44dcc14"
+    },
+    {
+      "slug": "librarian-book-display",
+      "sources": [
+        "https://shigoto.mhlw.go.jp/User/Occupation/Detail/182",
+        "docs/editorial/company-career-material.txt：関連職：17「司書教諭」。学校教育の役割を一般図書館へそのまま当てはめない。",
+        "drafts/batch-006/review/sourceEvidence.md"
+      ],
+      "scenes": [
+        {
+          "sceneId": "scene-1",
+          "optionIds": [
+            "option-1",
+            "option-2",
+            "option-3"
+          ],
+          "occupational": {
+            "status": "pass",
+            "reason": "資料提供と読書を支える図書館業務の一例。"
+          },
+          "editorial": {
+            "status": "pass",
+            "reason": "展示の軸を選ぶ問いで資料の内容を創作しない。"
+          },
+          "optionChecks": [
+            {
+              "optionId": "option-1",
+              "status": "pass",
+              "reason": "内容と読者を接続。"
+            },
+            {
+              "optionId": "option-2",
+              "status": "pass",
+              "reason": "適用範囲を保持。"
+            },
+            {
+              "optionId": "option-3",
+              "status": "pass",
+              "reason": "内容根拠を確保。"
+            }
+          ]
+        },
+        {
+          "sceneId": "scene-2",
+          "optionIds": [
+            "option-1",
+            "option-2",
+            "option-3"
+          ],
+          "occupational": {
+            "status": "pass",
+            "reason": "貸出・資料提供と展示運用の範囲。"
+          },
+          "editorial": {
+            "status": "pass",
+            "reason": "個人情報を出さず館の利用条件に従う。"
+          },
+          "optionChecks": [
+            {
+              "optionId": "option-1",
+              "status": "pass",
+              "reason": "利用見通しを保証しない。"
+            },
+            {
+              "optionId": "option-2",
+              "status": "pass",
+              "reason": "資料の独自性を保持。"
+            },
+            {
+              "optionId": "option-3",
+              "status": "pass",
+              "reason": "導線の実用性を確認。"
+            }
+          ]
+        },
+        {
+          "sceneId": "scene-3",
+          "optionIds": [
+            "option-1",
+            "option-2",
+            "option-3"
+          ],
+          "occupational": {
+            "status": "pass",
+            "reason": "図書館サービスの運用検討として設定。"
+          },
+          "editorial": {
+            "status": "pass",
+            "reason": "利用者個人を追跡しない範囲で評価。"
+          },
+          "optionChecks": [
+            {
+              "optionId": "option-1",
+              "status": "pass",
+              "reason": "未計測を補完しない。"
+            },
+            {
+              "optionId": "option-2",
+              "status": "pass",
+              "reason": "回答者偏りを残す。"
+            },
+            {
+              "optionId": "option-3",
+              "status": "pass",
+              "reason": "導線と関心を分離。"
+            }
+          ]
+        }
+      ],
+      "sha256": "8a501d467c24f116451e6ba209266d8493fe7eadfbd06103a4bcbbbe1bb49e6f"
+    },
+    {
+      "slug": "librarian-catalog-description",
+      "sources": [
+        "https://shigoto.mhlw.go.jp/User/Occupation/Detail/182",
+        "docs/editorial/company-career-material.txt：関連職：17「司書教諭」。学校教育の役割を一般図書館へそのまま当てはめない。",
+        "drafts/batch-006/review/sourceEvidence.md"
+      ],
+      "scenes": [
+        {
+          "sceneId": "scene-1",
+          "optionIds": [
+            "option-1",
+            "option-2",
+            "option-3"
+          ],
+          "occupational": {
+            "status": "pass",
+            "reason": "目録整備と資料相談に対応。"
+          },
+          "editorial": {
+            "status": "pass",
+            "reason": "記憶の誤りを決めつけず複数根拠を使う。"
+          },
+          "optionChecks": [
+            {
+              "optionId": "option-1",
+              "status": "pass",
+              "reason": "記憶の限界を尊重。"
+            },
+            {
+              "optionId": "option-2",
+              "status": "pass",
+              "reason": "代替と同定を分離。"
+            },
+            {
+              "optionId": "option-3",
+              "status": "pass",
+              "reason": "新しさを優劣にしない。"
+            }
+          ]
+        },
+        {
+          "sceneId": "scene-2",
+          "optionIds": [
+            "option-1",
+            "option-2",
+            "option-3"
+          ],
+          "occupational": {
+            "status": "pass",
+            "reason": "資料の整理・貸出管理の範囲。"
+          },
+          "editorial": {
+            "status": "pass",
+            "reason": "紛失断定や利用者の履歴探索を避ける。"
+          },
+          "optionChecks": [
+            {
+              "optionId": "option-1",
+              "status": "pass",
+              "reason": "仮説を一つに固定しない。"
+            },
+            {
+              "optionId": "option-2",
+              "status": "pass",
+              "reason": "分類と利用状態を分離。"
+            },
+            {
+              "optionId": "option-3",
+              "status": "pass",
+              "reason": "根拠ある訂正を守る。"
+            }
+          ]
+        },
+        {
+          "sceneId": "scene-3",
+          "optionIds": [
+            "option-1",
+            "option-2",
+            "option-3"
+          ],
+          "occupational": {
+            "status": "pass",
+            "reason": "目録・資料配列の維持に対応。"
+          },
+          "editorial": {
+            "status": "pass",
+            "reason": "個人責任や無断の分類変更にしない。"
+          },
+          "optionChecks": [
+            {
+              "optionId": "option-1",
+              "status": "pass",
+              "reason": "案内量のバランス。"
+            },
+            {
+              "optionId": "option-2",
+              "status": "pass",
+              "reason": "一般化を避ける。"
+            },
+            {
+              "optionId": "option-3",
+              "status": "pass",
+              "reason": "説明とデータ精度の両立。"
+            }
+          ]
+        }
+      ],
+      "sha256": "ba044d217fb945c276a685b322e96a5b05003295dce86a6fcc7fa3f8040e9d73"
+    },
+    {
+      "slug": "event-planner-equipment-handover",
+      "sources": [
+        "https://shigoto.mhlw.go.jp/User/Occupation/Detail?occupationId=566",
+        "docs/editorial/company-career-material.txt：直接対応：5「イベントプランナー」。企画、運営、関係者調整を土台とする。",
+        "drafts/batch-006/review/sourceEvidence.md"
+      ],
+      "scenes": [
+        {
+          "sceneId": "scene-1",
+          "optionIds": [
+            "option-1",
+            "option-2",
+            "option-3"
+          ],
+          "occupational": {
+            "status": "pass",
+            "reason": "イベント設営業者との調整・役割分担に対応。"
+          },
+          "editorial": {
+            "status": "pass",
+            "reason": "安全条件と会場ルールを全案共通にする。"
+          },
+          "optionChecks": [
+            {
+              "optionId": "option-1",
+              "status": "pass",
+              "reason": "通常と遅延の両方を考慮。"
+            },
+            {
+              "optionId": "option-2",
+              "status": "pass",
+              "reason": "動線の安全条件を保持。"
+            },
+            {
+              "optionId": "option-3",
+              "status": "pass",
+              "reason": "数量と状態を分離。"
+            }
+          ]
+        },
+        {
+          "sceneId": "scene-2",
+          "optionIds": [
+            "option-1",
+            "option-2",
+            "option-3"
+          ],
+          "occupational": {
+            "status": "pass",
+            "reason": "当日の進行と役割分担の業務に対応。"
+          },
+          "editorial": {
+            "status": "pass",
+            "reason": "点検の省略で時間を埋めない。"
+          },
+          "optionChecks": [
+            {
+              "optionId": "option-1",
+              "status": "pass",
+              "reason": "計画と現場検証。"
+            },
+            {
+              "optionId": "option-2",
+              "status": "pass",
+              "reason": "状態と時間を区別。"
+            },
+            {
+              "optionId": "option-3",
+              "status": "pass",
+              "reason": "権限を守る。"
+            }
+          ]
+        },
+        {
+          "sceneId": "scene-3",
+          "optionIds": [
+            "option-1",
+            "option-2",
+            "option-3"
+          ],
+          "occupational": {
+            "status": "pass",
+            "reason": "イベント終了時の業者調整を題材化。"
+          },
+          "editorial": {
+            "status": "pass",
+            "reason": "状態報告を全案に必須化。"
+          },
+          "optionChecks": [
+            {
+              "optionId": "option-1",
+              "status": "pass",
+              "reason": "数と状態を分離。"
+            },
+            {
+              "optionId": "option-2",
+              "status": "pass",
+              "reason": "工程の状態を区別。"
+            },
+            {
+              "optionId": "option-3",
+              "status": "pass",
+              "reason": "指定条件を尊重。"
+            }
+          ]
+        }
+      ],
+      "sha256": "ea7af171644af7680ed0e6c137090ae17c23a9f6a2e81786a8e7fac0e8fb1ef7"
+    },
+    {
+      "slug": "event-planner-outcome-report",
+      "sources": [
+        "https://shigoto.mhlw.go.jp/User/Occupation/Detail?occupationId=566",
+        "docs/editorial/company-career-material.txt：直接対応：5「イベントプランナー」。企画、運営、関係者調整を土台とする。",
+        "drafts/batch-006/review/sourceEvidence.md"
+      ],
+      "scenes": [
+        {
+          "sceneId": "scene-1",
+          "optionIds": [
+            "option-1",
+            "option-2",
+            "option-3"
+          ],
+          "occupational": {
+            "status": "pass",
+            "reason": "終了後の関係者への報告に対応。"
+          },
+          "editorial": {
+            "status": "pass",
+            "reason": "販売を唯一の成果にしない設定。"
+          },
+          "optionChecks": [
+            {
+              "optionId": "option-1",
+              "status": "pass",
+              "reason": "未計測を保持。"
+            },
+            {
+              "optionId": "option-2",
+              "status": "pass",
+              "reason": "接触と理解を分離。"
+            },
+            {
+              "optionId": "option-3",
+              "status": "pass",
+              "reason": "回答偏りを明示。"
+            }
+          ]
+        },
+        {
+          "sceneId": "scene-2",
+          "optionIds": [
+            "option-1",
+            "option-2",
+            "option-3"
+          ],
+          "occupational": {
+            "status": "pass",
+            "reason": "イベント実施結果の報告資料作成。"
+          },
+          "editorial": {
+            "status": "pass",
+            "reason": "重複不明を実人数へ変換しない。"
+          },
+          "optionChecks": [
+            {
+              "optionId": "option-1",
+              "status": "pass",
+              "reason": "定義と伝達を両立。"
+            },
+            {
+              "optionId": "option-2",
+              "status": "pass",
+              "reason": "不明を補完しない。"
+            },
+            {
+              "optionId": "option-3",
+              "status": "pass",
+              "reason": "分離と目的接続。"
+            }
+          ]
+        },
+        {
+          "sceneId": "scene-3",
+          "optionIds": [
+            "option-1",
+            "option-2",
+            "option-3"
+          ],
+          "occupational": {
+            "status": "pass",
+            "reason": "関係者報告と企画検討の範囲。"
+          },
+          "editorial": {
+            "status": "pass",
+            "reason": "予算未定を守り追加実施を確約しない。"
+          },
+          "optionChecks": [
+            {
+              "optionId": "option-1",
+              "status": "pass",
+              "reason": "説明と体験の差。"
+            },
+            {
+              "optionId": "option-2",
+              "status": "pass",
+              "reason": "感想と原因を分離。"
+            },
+            {
+              "optionId": "option-3",
+              "status": "pass",
+              "reason": "見込みと確定を区別。"
+            }
+          ]
+        }
+      ],
+      "sha256": "e8fdaa38660f804c69a050b8e3fd006075d577f3425b2bf34bc600f445aaee4d"
+    },
+    {
+      "slug": "chef-recipe-reproducibility",
+      "sources": [
+        "https://shigoto.mhlw.go.jp/User/Occupation/Detail/99",
+        "docs/editorial/company-career-material.txt：関連業務：10「調理師」。料理人という仕事の呼称と資格名を同一視しない。",
+        "drafts/batch-006/review/sourceEvidence.md"
+      ],
+      "scenes": [
+        {
+          "sceneId": "scene-1",
+          "optionIds": [
+            "option-1",
+            "option-2",
+            "option-3"
+          ],
+          "occupational": {
+            "status": "pass",
+            "reason": "材料準備と調理、料理長の方法に沿った作業を題材化。"
+          },
+          "editorial": {
+            "status": "pass",
+            "reason": "衛生条件を全案共通とし原因を断定しない。"
+          },
+          "optionChecks": [
+            {
+              "optionId": "option-1",
+              "status": "pass",
+              "reason": "量だけを原因にしない。"
+            },
+            {
+              "optionId": "option-2",
+              "status": "pass",
+              "reason": "工程と評価を接続。"
+            },
+            {
+              "optionId": "option-3",
+              "status": "pass",
+              "reason": "結果と原因を分離。"
+            }
+          ]
+        },
+        {
+          "sceneId": "scene-2",
+          "optionIds": [
+            "option-1",
+            "option-2",
+            "option-3"
+          ],
+          "occupational": {
+            "status": "pass",
+            "reason": "調理の分業と工程共有を具体化する。"
+          },
+          "editorial": {
+            "status": "pass",
+            "reason": "料理長の確認と販売判断を分離。"
+          },
+          "optionChecks": [
+            {
+              "optionId": "option-1",
+              "status": "pass",
+              "reason": "計量条件と材料差。"
+            },
+            {
+              "optionId": "option-2",
+              "status": "pass",
+              "reason": "理解と実践を分離。"
+            },
+            {
+              "optionId": "option-3",
+              "status": "pass",
+              "reason": "習熟差を考慮。"
+            }
+          ]
+        },
+        {
+          "sceneId": "scene-3",
+          "optionIds": [
+            "option-1",
+            "option-2",
+            "option-3"
+          ],
+          "occupational": {
+            "status": "pass",
+            "reason": "調理結果の確認とチーム共有に対応。"
+          },
+          "editorial": {
+            "status": "pass",
+            "reason": "味の優劣を唯一の正解にせず比較条件を保持。"
+          },
+          "optionChecks": [
+            {
+              "optionId": "option-1",
+              "status": "pass",
+              "reason": "感覚語の曖昧さを保持。"
+            },
+            {
+              "optionId": "option-2",
+              "status": "pass",
+              "reason": "記録一致を保証にしない。"
+            },
+            {
+              "optionId": "option-3",
+              "status": "pass",
+              "reason": "試作と運用を区別。"
+            }
+          ]
+        }
+      ],
+      "sha256": "c105f36f661eb9343ca41ec45a5ff776a764d422baff414391a077e48f363edf"
+    },
+    {
+      "slug": "chef-kitchen-workstation",
+      "sources": [
+        "https://shigoto.mhlw.go.jp/User/Occupation/Detail/99",
+        "docs/editorial/company-career-material.txt：関連業務：10「調理師」。料理人という仕事の呼称と資格名を同一視しない。",
+        "drafts/batch-006/review/sourceEvidence.md"
+      ],
+      "scenes": [
+        {
+          "sceneId": "scene-1",
+          "optionIds": [
+            "option-1",
+            "option-2",
+            "option-3"
+          ],
+          "occupational": {
+            "status": "pass",
+            "reason": "厨房での準備・調理・分業を参考にした配置検討。"
+          },
+          "editorial": {
+            "status": "pass",
+            "reason": "営業外と安全衛生の共通条件を明示。"
+          },
+          "optionChecks": [
+            {
+              "optionId": "option-1",
+              "status": "pass",
+              "reason": "工程変更の制約を保持。"
+            },
+            {
+              "optionId": "option-2",
+              "status": "pass",
+              "reason": "距離と安全を分離。"
+            },
+            {
+              "optionId": "option-3",
+              "status": "pass",
+              "reason": "衛生手順を保持。"
+            }
+          ]
+        },
+        {
+          "sceneId": "scene-2",
+          "optionIds": [
+            "option-1",
+            "option-2",
+            "option-3"
+          ],
+          "occupational": {
+            "status": "pass",
+            "reason": "料理人の作業準備を題材化。安全設計の専門判断は含まない。"
+          },
+          "editorial": {
+            "status": "pass",
+            "reason": "候補の条件確認済みとして試行を比較。"
+          },
+          "optionChecks": [
+            {
+              "optionId": "option-1",
+              "status": "pass",
+              "reason": "定位置と交差の確認。"
+            },
+            {
+              "optionId": "option-2",
+              "status": "pass",
+              "reason": "分業の偏りを考慮。"
+            },
+            {
+              "optionId": "option-3",
+              "status": "pass",
+              "reason": "状態と場所を区別。"
+            }
+          ]
+        },
+        {
+          "sceneId": "scene-3",
+          "optionIds": [
+            "option-1",
+            "option-2",
+            "option-3"
+          ],
+          "occupational": {
+            "status": "pass",
+            "reason": "厨房作業の分業・準備の確認。"
+          },
+          "editorial": {
+            "status": "pass",
+            "reason": "時間短縮を単独の採用条件にしない。"
+          },
+          "optionChecks": [
+            {
+              "optionId": "option-1",
+              "status": "pass",
+              "reason": "効率と衛生を分離。"
+            },
+            {
+              "optionId": "option-2",
+              "status": "pass",
+              "reason": "主観と観察を併用。"
+            },
+            {
+              "optionId": "option-3",
+              "status": "pass",
+              "reason": "検証範囲を限定。"
+            }
+          ]
+        }
+      ],
+      "sha256": "19a3da5bb29253aa8319b2a551987848c6fbfd2ab6602a114ed0bab458de4359"
+    },
+    {
+      "slug": "designer-folded-leaflet",
+      "sources": [
+        "https://shigoto.mhlw.go.jp/User/Occupation/Detail/334",
+        "docs/editorial/company-career-material.txt：直接対応：6「グラフィックデザイナー」。紙面での情報伝達・レイアウトを土台とする。",
+        "drafts/batch-006/review/sourceEvidence.md"
+      ],
+      "scenes": [
+        {
+          "sceneId": "scene-1",
+          "optionIds": [
+            "option-1",
+            "option-2",
+            "option-3"
+          ],
+          "occupational": {
+            "status": "pass",
+            "reason": "媒体条件の確認とレイアウト計画に対応。"
+          },
+          "editorial": {
+            "status": "pass",
+            "reason": "実物の視覚比較ではなく配置前の情報整理に限定。"
+          },
+          "optionChecks": [
+            {
+              "optionId": "option-1",
+              "status": "pass",
+              "reason": "利用場面の連続性。"
+            },
+            {
+              "optionId": "option-2",
+              "status": "pass",
+              "reason": "分類と順序を分離。"
+            },
+            {
+              "optionId": "option-3",
+              "status": "pass",
+              "reason": "仮見本と製造仕様を区別。"
+            }
+          ]
+        },
+        {
+          "sceneId": "scene-2",
+          "optionIds": [
+            "option-1",
+            "option-2",
+            "option-3"
+          ],
+          "occupational": {
+            "status": "pass",
+            "reason": "印刷条件の指示と校正確認に対応。"
+          },
+          "editorial": {
+            "status": "pass",
+            "reason": "数値の印刷規格を創作しない。 内側三面の図で中央の文字が折り目にかかる条件を示し、寸法や印刷仕様を確定する図とは扱わない。"
+          },
+          "optionChecks": [
+            {
+              "optionId": "option-1",
+              "status": "pass",
+              "reason": "仕様と可読性を分離。"
+            },
+            {
+              "optionId": "option-2",
+              "status": "pass",
+              "reason": "試作条件の限界。"
+            },
+            {
+              "optionId": "option-3",
+              "status": "pass",
+              "reason": "内容判断の権限を守る。"
+            }
+          ]
+        },
+        {
+          "sceneId": "scene-3",
+          "optionIds": [
+            "option-1",
+            "option-2",
+            "option-3"
+          ],
+          "occupational": {
+            "status": "pass",
+            "reason": "関係者との調整、校正、納入前確認に対応。"
+          },
+          "editorial": {
+            "status": "pass",
+            "reason": "最終承認を自己判断で補わない。"
+          },
+          "optionChecks": [
+            {
+              "optionId": "option-1",
+              "status": "pass",
+              "reason": "計画と完了を分離。"
+            },
+            {
+              "optionId": "option-2",
+              "status": "pass",
+              "reason": "対象一致を維持。"
+            },
+            {
+              "optionId": "option-3",
+              "status": "pass",
+              "reason": "局所と周辺影響。"
+            }
+          ]
+        }
+      ],
+      "sha256": "7b57c470cb6f117fa97dc7789b654a846f16b101d37e490ed1ff4545debefc5c"
+    },
+    {
+      "slug": "designer-print-file-handover",
+      "sources": [
+        "https://shigoto.mhlw.go.jp/User/Occupation/Detail/334",
+        "docs/editorial/company-career-material.txt：直接対応：6「グラフィックデザイナー」。紙面での情報伝達・レイアウトを土台とする。",
+        "drafts/batch-006/review/sourceEvidence.md"
+      ],
+      "scenes": [
+        {
+          "sceneId": "scene-1",
+          "optionIds": [
+            "option-1",
+            "option-2",
+            "option-3"
+          ],
+          "occupational": {
+            "status": "pass",
+            "reason": "印刷会社への発注・最終確認に対応。"
+          },
+          "editorial": {
+            "status": "pass",
+            "reason": "特定の入稿数値や手順を普遍化しない。"
+          },
+          "optionChecks": [
+            {
+              "optionId": "option-1",
+              "status": "pass",
+              "reason": "推測設定を避ける。"
+            },
+            {
+              "optionId": "option-2",
+              "status": "pass",
+              "reason": "画面と印刷を区別。"
+            },
+            {
+              "optionId": "option-3",
+              "status": "pass",
+              "reason": "納品と編集元を分離。"
+            }
+          ]
+        },
+        {
+          "sceneId": "scene-2",
+          "optionIds": [
+            "option-1",
+            "option-2",
+            "option-3"
+          ],
+          "occupational": {
+            "status": "pass",
+            "reason": "制作関係者とのデータ受け渡しを題材化。"
+          },
+          "editorial": {
+            "status": "pass",
+            "reason": "用途別のファイルがある条件を事前提示。"
+          },
+          "optionChecks": [
+            {
+              "optionId": "option-1",
+              "status": "pass",
+              "reason": "名前と実体を分離。"
+            },
+            {
+              "optionId": "option-2",
+              "status": "pass",
+              "reason": "相手側の条件を尊重。"
+            },
+            {
+              "optionId": "option-3",
+              "status": "pass",
+              "reason": "内容と製造条件を分離。"
+            }
+          ]
+        },
+        {
+          "sceneId": "scene-3",
+          "optionIds": [
+            "option-1",
+            "option-2",
+            "option-3"
+          ],
+          "occupational": {
+            "status": "pass",
+            "reason": "印刷会社との調整と最終確認に対応。"
+          },
+          "editorial": {
+            "status": "pass",
+            "reason": "受信を製造承認と扱わない。"
+          },
+          "optionChecks": [
+            {
+              "optionId": "option-1",
+              "status": "pass",
+              "reason": "対象と意図を分離。"
+            },
+            {
+              "optionId": "option-2",
+              "status": "pass",
+              "reason": "関係者の権限を保持。"
+            },
+            {
+              "optionId": "option-3",
+              "status": "pass",
+              "reason": "記録と実行を区別。"
+            }
+          ]
+        }
+      ],
+      "sha256": "2f8336552162422e9ad365f4065aa1e33b3d3fe41dd1ba178566305b29e7a696"
+    },
+    {
+      "slug": "web-designer-error-guidance",
+      "sources": [
+        "https://shigoto.mhlw.go.jp/User/Occupation/Detail/326",
+        "docs/editorial/company-career-material.txt：直接対応：6「Webデザイナー」。見た目、情報の分かりやすさ、使いやすさを土台とする。",
+        "drafts/batch-006/review/sourceEvidence.md"
+      ],
+      "scenes": [
+        {
+          "sceneId": "scene-1",
+          "optionIds": [
+            "option-1",
+            "option-2",
+            "option-3"
+          ],
+          "occupational": {
+            "status": "pass",
+            "reason": "Web画面の構成・使いやすさの設計に対応。入力検証処理はエンジニア担当。"
+          },
+          "editorial": {
+            "status": "pass",
+            "reason": "規則は確定として見せ方に対象を限定。"
+          },
+          "optionChecks": [
+            {
+              "optionId": "option-1",
+              "status": "pass",
+              "reason": "情報量の制約。"
+            },
+            {
+              "optionId": "option-2",
+              "status": "pass",
+              "reason": "個人差を保持。"
+            },
+            {
+              "optionId": "option-3",
+              "status": "pass",
+              "reason": "例と入力値を区別。"
+            }
+          ]
+        },
+        {
+          "sceneId": "scene-2",
+          "optionIds": [
+            "option-1",
+            "option-2",
+            "option-3"
+          ],
+          "occupational": {
+            "status": "pass",
+            "reason": "画面デザインと制作者との協働の範囲。"
+          },
+          "editorial": {
+            "status": "pass",
+            "reason": "色のみで伝えず、入力保持を共通条件にする。"
+          },
+          "optionChecks": [
+            {
+              "optionId": "option-1",
+              "status": "pass",
+              "reason": "局所案内の限界。"
+            },
+            {
+              "optionId": "option-2",
+              "status": "pass",
+              "reason": "一覧と移動を接続。"
+            },
+            {
+              "optionId": "option-3",
+              "status": "pass",
+              "reason": "言葉と場所を併用。"
+            }
+          ]
+        },
+        {
+          "sceneId": "scene-3",
+          "optionIds": [
+            "option-1",
+            "option-2",
+            "option-3"
+          ],
+          "occupational": {
+            "status": "pass",
+            "reason": "Webデザインの使いやすさの確認に対応。"
+          },
+          "editorial": {
+            "status": "pass",
+            "reason": "実データを使わず表示評価と処理検証を分離。"
+          },
+          "optionChecks": [
+            {
+              "optionId": "option-1",
+              "status": "pass",
+              "reason": "行動と意図を分離。"
+            },
+            {
+              "optionId": "option-2",
+              "status": "pass",
+              "reason": "誘導を避ける。"
+            },
+            {
+              "optionId": "option-3",
+              "status": "pass",
+              "reason": "環境範囲を限定。"
+            }
+          ]
+        }
+      ],
+      "sha256": "75a069559c35d018f5850129fa3c7e11c2a2715b4c217a770687b0ab48bd886b"
+    },
+    {
+      "slug": "pastry-baking-variation",
+      "sources": [
+        "https://shigoto.mhlw.go.jp/User/Occupation/Detail/3",
+        "docs/editorial/company-career-material.txt：直接対応：10「パティシエ／和菓子職人／パン職人」の洋菓子部分。三職種を同一視しない。",
+        "drafts/batch-006/review/sourceEvidence.md"
+      ],
+      "scenes": [
+        {
+          "sceneId": "scene-1",
+          "optionIds": [
+            "option-1",
+            "option-2",
+            "option-3"
+          ],
+          "occupational": {
+            "status": "pass",
+            "reason": "計量・生地づくり・焼成という製菓工程に対応。"
+          },
+          "editorial": {
+            "status": "pass",
+            "reason": "試作品で安全条件を守り原因未確定を保持。"
+          },
+          "optionChecks": [
+            {
+              "optionId": "option-1",
+              "status": "pass",
+              "reason": "単一原因にしない。"
+            },
+            {
+              "optionId": "option-2",
+              "status": "pass",
+              "reason": "一回の相関を断定しない。"
+            },
+            {
+              "optionId": "option-3",
+              "status": "pass",
+              "reason": "欠測を補作しない。"
+            }
+          ]
+        },
+        {
+          "sceneId": "scene-2",
+          "optionIds": [
+            "option-1",
+            "option-2",
+            "option-3"
+          ],
+          "occupational": {
+            "status": "pass",
+            "reason": "製菓工程の試作確認を教材化した編集判断。"
+          },
+          "editorial": {
+            "status": "pass",
+            "reason": "厚さを比較対象として事前に明示。"
+          },
+          "optionChecks": [
+            {
+              "optionId": "option-1",
+              "status": "pass",
+              "reason": "計画と実施を分離。"
+            },
+            {
+              "optionId": "option-2",
+              "status": "pass",
+              "reason": "識別の正確性。"
+            },
+            {
+              "optionId": "option-3",
+              "status": "pass",
+              "reason": "品質観察と安全を分離。"
+            }
+          ]
+        },
+        {
+          "sceneId": "scene-3",
+          "optionIds": [
+            "option-1",
+            "option-2",
+            "option-3"
+          ],
+          "occupational": {
+            "status": "pass",
+            "reason": "洋菓子の製造・仕上がりの検討に対応。"
+          },
+          "editorial": {
+            "status": "pass",
+            "reason": "嗜好を正誤とせず責任者の判断へ渡す。"
+          },
+          "optionChecks": [
+            {
+              "optionId": "option-1",
+              "status": "pass",
+              "reason": "感覚語の解釈差。"
+            },
+            {
+              "optionId": "option-2",
+              "status": "pass",
+              "reason": "反対意見も保持。"
+            },
+            {
+              "optionId": "option-3",
+              "status": "pass",
+              "reason": "試作と量産を分離。"
+            }
+          ]
+        }
+      ],
+      "sha256": "0eed34c228629b85d83ce0554ed6ac007fbf07ebe75d937add10c2007e270e51"
+    },
+    {
+      "slug": "editor-terminology-guide",
+      "sources": [
+        "https://shigoto.mhlw.go.jp/User/Occupation/Detail/210",
+        "docs/editorial/company-career-material.txt：直接対応：6「編集者」。企画、原稿整理、著者との連携を土台とする。",
+        "drafts/batch-006/review/sourceEvidence.md"
+      ],
+      "scenes": [
+        {
+          "sceneId": "scene-1",
+          "optionIds": [
+            "option-1",
+            "option-2",
+            "option-3"
+          ],
+          "occupational": {
+            "status": "pass",
+            "reason": "図書編集者の原稿整理・表記統一に対応。"
+          },
+          "editorial": {
+            "status": "pass",
+            "reason": "意味を変える修正は著者確認を共通条件にする。"
+          },
+          "optionChecks": [
+            {
+              "optionId": "option-1",
+              "status": "pass",
+              "reason": "表記一致と意味を分離。"
+            },
+            {
+              "optionId": "option-2",
+              "status": "pass",
+              "reason": "意図と伝達を区別。"
+            },
+            {
+              "optionId": "option-3",
+              "status": "pass",
+              "reason": "読順の多様性。"
+            }
+          ]
+        },
+        {
+          "sceneId": "scene-2",
+          "optionIds": [
+            "option-1",
+            "option-2",
+            "option-3"
+          ],
+          "occupational": {
+            "status": "pass",
+            "reason": "原稿整理とレイアウト担当等との連携に対応。"
+          },
+          "editorial": {
+            "status": "pass",
+            "reason": "引用等の例外を機械的に改変しない。"
+          },
+          "optionChecks": [
+            {
+              "optionId": "option-1",
+              "status": "pass",
+              "reason": "例外の扱いを保持。"
+            },
+            {
+              "optionId": "option-2",
+              "status": "pass",
+              "reason": "担当者連携。"
+            },
+            {
+              "optionId": "option-3",
+              "status": "pass",
+              "reason": "例の適用範囲。"
+            }
+          ]
+        },
+        {
+          "sceneId": "scene-3",
+          "optionIds": [
+            "option-1",
+            "option-2",
+            "option-3"
+          ],
+          "occupational": {
+            "status": "pass",
+            "reason": "原稿の熟読・整理・校正業務に対応。"
+          },
+          "editorial": {
+            "status": "pass",
+            "reason": "著者確認を省かず読者視点を加える。"
+          },
+          "optionChecks": [
+            {
+              "optionId": "option-1",
+              "status": "pass",
+              "reason": "読順の制約を明示。"
+            },
+            {
+              "optionId": "option-2",
+              "status": "pass",
+              "reason": "言葉と内容を区別。"
+            },
+            {
+              "optionId": "option-3",
+              "status": "pass",
+              "reason": "検索を自動判定にしない。"
+            }
+          ]
+        }
+      ],
+      "sha256": "a9fca5b1f12f1bd99706fa6d58761aeb4b9d45254ec94e8dd02e985ae92eb80a"
+    },
+    {
+      "slug": "tourism-accommodation-needs",
+      "sources": [
+        "https://shigoto.mhlw.go.jp/User/Occupation/Detail/109",
+        "docs/editorial/company-career-material.txt：該当項目なし。自社原文に直接の職業説明があるとは扱わない。",
+        "drafts/batch-006/review/sourceEvidence.md"
+      ],
+      "scenes": [
+        {
+          "sceneId": "scene-1",
+          "optionIds": [
+            "option-1",
+            "option-2",
+            "option-3"
+          ],
+          "occupational": {
+            "status": "pass",
+            "reason": "旅行会社カウンター係の希望確認と宿泊手配を参考にする。"
+          },
+          "editorial": {
+            "status": "pass",
+            "reason": "予約前相談と未確認サービスを区別。"
+          },
+          "optionChecks": [
+            {
+              "optionId": "option-1",
+              "status": "pass",
+              "reason": "設備サービスを推測しない。"
+            },
+            {
+              "optionId": "option-2",
+              "status": "pass",
+              "reason": "同行者の差を保持。"
+            },
+            {
+              "optionId": "option-3",
+              "status": "pass",
+              "reason": "希望と商品条件を分離。"
+            }
+          ]
+        },
+        {
+          "sceneId": "scene-2",
+          "optionIds": [
+            "option-1",
+            "option-2",
+            "option-3"
+          ],
+          "occupational": {
+            "status": "pass",
+            "reason": "予算に応じた宿泊選択の支援に対応。"
+          },
+          "editorial": {
+            "status": "pass",
+            "reason": "料金・空室の変動と確認時点を明示。"
+          },
+          "optionChecks": [
+            {
+              "optionId": "option-1",
+              "status": "pass",
+              "reason": "未確認費用を保持。"
+            },
+            {
+              "optionId": "option-2",
+              "status": "pass",
+              "reason": "日程条件を保持。"
+            },
+            {
+              "optionId": "option-3",
+              "status": "pass",
+              "reason": "順位の押し付けを避ける。"
+            }
+          ]
+        },
+        {
+          "sceneId": "scene-3",
+          "optionIds": [
+            "option-1",
+            "option-2",
+            "option-3"
+          ],
+          "occupational": {
+            "status": "pass",
+            "reason": "旅行商品の案内・予約業務に対応。契約条件は具体値を創作しない。"
+          },
+          "editorial": {
+            "status": "pass",
+            "reason": "規定の説明と本人確認を全案共通とする。"
+          },
+          "optionChecks": [
+            {
+              "optionId": "option-1",
+              "status": "pass",
+              "reason": "整理と鮮度を両立。"
+            },
+            {
+              "optionId": "option-2",
+              "status": "pass",
+              "reason": "要望と確約を分離。"
+            },
+            {
+              "optionId": "option-3",
+              "status": "pass",
+              "reason": "沈黙を理解としない。"
+            }
+          ]
+        }
+      ],
+      "sha256": "22ef1b76e8e5119556e4792515a24e0090e99ed42ee7523686a9cd7d2e5cf984"
+    }
+  ]
+}

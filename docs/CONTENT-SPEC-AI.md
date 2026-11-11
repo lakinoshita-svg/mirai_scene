@@ -2,6 +2,8 @@
 
 作業者への説明には [作業者向け仕様書](CONTENT-SPEC.md) を使い、JSONやコマンドの理解を前提にしないこと。この文書は制作・検証・実装用の詳細仕様。
 
+資料の役割・現在の件数・原稿一覧・残る確認は [README](../README.md) が入口。件数の機械集計は `outputs/operations/contentInventory.json`、題材の管理は `CONTENT-BATCHES.md`、配布版の扱いは `DELIVERY-AND-CONTENT.md` を参照する。設定値から本番の配置済み版や公開承認を推測しない。
+
 ## 体験後の振り返りと共通導線
 
 - 各 `scenes[]` の必須文字列 `reflectionResponse` は、そのシーンの `insight` ボタンを押したときに表示する。職業JSONが表示文の正本。3シーンの文章を個別に執筆する。

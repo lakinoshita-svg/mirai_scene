@@ -1,0 +1,70 @@
+{
+  "checkedAt": "2026-11-10",
+  "batch": "batch-006",
+  "counts": {
+    "allExperiences": 111,
+    "draftExperiences": 30,
+    "scenes": 90,
+    "options": 270,
+    "manuscriptFields": 1950,
+    "images": 2,
+    "localLinks": 92
+  },
+  "checks": {
+    "uniqueSlugs": true,
+    "uniqueOrders": true,
+    "manuscriptMatchesJson": true,
+    "distinctReflectionResponses": 90,
+    "reviewStatus": "editorial-draft",
+    "reviewSha256": "889b727f1a169705cef9e9a8d7a57c9afdeb6f66ad309cb5f4deba1844980052"
+  },
+  "build": {
+    "project": "tmp/draft-preview-J49xqd",
+    "experiences": 49,
+    "testFiles": [
+      "build.test.mjs",
+      "catalog.test.mjs",
+      "reflectionContent.test.mjs"
+    ],
+    "passed": 10
+  },
+  "sharedVerification": {
+    "command": "npm run content:verify",
+    "testsPassed": 63,
+    "astroErrors": 0,
+    "astroWarnings": 0
+  },
+  "browser": {
+    "scope": "画像のある代表場面の表示確認。全体験・全回答のブラウザ操作ではない。",
+    "samples": [
+      {
+        "slug": "museum-curator-handling-program",
+        "width": 390,
+        "documentWidth": 375,
+        "scenesViewed": [
+          1
+        ],
+        "images": 1,
+        "sha256": "09b5d9341da1b75ff10d19b795d997d30681b0c1ab2c58eea5b2cf8f1e7946a9",
+        "horizontalOverflow": false
+      },
+      {
+        "slug": "designer-folded-leaflet",
+        "width": 390,
+        "documentWidth": 375,
+        "scenesViewed": [
+          1,
+          2
+        ],
+        "images": 1,
+        "sha256": "7b57c470cb6f117fa97dc7789b654a846f16b101d37e490ed1ff4545debefc5c",
+        "horizontalOverflow": false
+      }
+    ],
+    "viewportReset": true
+  },
+  "limitations": [
+    "独立レビュー・実務経験者の確認・高校生の試読・公開承認は未実施。",
+    "学校検索の本番選択状態は未確認。"
+  ]
+}

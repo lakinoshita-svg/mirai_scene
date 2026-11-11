@@ -416,5 +416,431 @@
         "label": "史学､地理学"
       }
     ]
+  },
+  {
+    "id": "medicine",
+    "label": "医学",
+    "description": "体の働きや病気を学び、診察と治療の根拠を考える学び。",
+    "lessons": [
+      {
+        "slug": "medical_medicine",
+        "label": "医学",
+        "schoolType": "大学・短大"
+      }
+    ],
+    "schoolFields": [
+      {
+        "id": "U-615",
+        "label": "医学"
+      }
+    ]
+  },
+  {
+    "id": "nursing",
+    "label": "看護",
+    "description": "体や暮らしの状態を捉え、その人の療養を支える学び。",
+    "lessons": [
+      {
+        "slug": "medical_nursing",
+        "label": "看護学",
+        "schoolType": "大学・短大"
+      },
+      {
+        "slug": "nursing_nursing",
+        "label": "看護",
+        "schoolType": "専門学校"
+      }
+    ],
+    "schoolFields": [
+      {
+        "id": "U-601",
+        "label": "看護学"
+      },
+      {
+        "id": "F-601",
+        "label": "看護師"
+      }
+    ]
+  },
+  {
+    "id": "pharmacy",
+    "label": "薬学",
+    "description": "薬の働きと使い方を学び、安全な使用を支える学び。",
+    "lessons": [
+      {
+        "slug": "medical_pharmacy",
+        "label": "薬学",
+        "schoolType": "大学・短大"
+      }
+    ],
+    "schoolFields": [
+      {
+        "id": "U-617",
+        "label": "薬学"
+      }
+    ]
+  },
+  {
+    "id": "welfare",
+    "label": "介護・福祉",
+    "description": "本人の希望と生活の状況から、暮らしを支える方法を考える学び。",
+    "lessons": [
+      {
+        "slug": "socialscience_social_welfare",
+        "label": "社会福祉学",
+        "schoolType": "大学・短大"
+      },
+      {
+        "slug": "welfare_care",
+        "label": "介護福祉",
+        "schoolType": "専門学校"
+      }
+    ],
+    "schoolFields": [
+      {
+        "id": "U-619",
+        "label": "介護福祉士"
+      },
+      {
+        "id": "F-619",
+        "label": "介護福祉士"
+      },
+      {
+        "id": "L-225",
+        "label": "社会福祉学"
+      }
+    ]
+  },
+  {
+    "id": "materials",
+    "label": "材料・化学",
+    "description": "材料の構造や性質を調べ、実験を通して使い道を考える学び。",
+    "lessons": [
+      {
+        "slug": "science_chemistry",
+        "label": "化学",
+        "schoolType": "大学・短大"
+      },
+      {
+        "slug": "engineering_materials",
+        "label": "材料工学",
+        "schoolType": "大学・短大"
+      }
+    ],
+    "schoolFields": [
+      {
+        "id": "R-428",
+        "label": "化学"
+      },
+      {
+        "id": "S-416",
+        "label": "材料工学"
+      },
+      {
+        "id": "S-431",
+        "label": "応用化学"
+      }
+    ]
+  },
+  {
+    "id": "real-estate",
+    "label": "不動産",
+    "description": "住まいや土地の情報と、取引に関わる条件を学ぶ分野。",
+    "lessons": [
+      {
+        "slug": "business_realestate",
+        "label": "不動産",
+        "schoolType": "専門学校"
+      }
+    ],
+    "schoolFields": [
+      {
+        "id": "B-257",
+        "label": "不動産宅建"
+      }
+    ]
+  },
+  {
+    "id": "accounting",
+    "label": "会計・経理",
+    "description": "取引を記録し、数字を根拠に会社の活動を読み解く学び。",
+    "lessons": [
+      {
+        "slug": "socialscience_commerce",
+        "label": "商学",
+        "schoolType": "大学・短大"
+      },
+      {
+        "slug": "business_accounting",
+        "label": "経理・会計",
+        "schoolType": "専門学校"
+      }
+    ],
+    "schoolFields": [
+      {
+        "id": "L-218",
+        "label": "商学､会計学"
+      },
+      {
+        "id": "B-221",
+        "label": "ビジネス<簿記･販売･OA･秘書等>"
+      }
+    ]
+  },
+  {
+    "id": "education",
+    "label": "教育・教員養成",
+    "description": "子どもの理解や成長を捉え、学ぶ環境や授業を考える学び。",
+    "lessons": [
+      {
+        "slug": "education_education",
+        "label": "教育学",
+        "schoolType": "大学・短大"
+      },
+      {
+        "slug": "education_teacher_training",
+        "label": "教員養成",
+        "schoolType": "大学・短大"
+      }
+    ],
+    "schoolFields": [
+      {
+        "id": "N-212",
+        "label": "教育学"
+      },
+      {
+        "id": "N-234",
+        "label": "教員養成課程<小学校教諭>"
+      }
+    ]
+  },
+  {
+    "id": "public-service",
+    "label": "行政・公務",
+    "description": "地域の課題や制度を知り、住民の暮らしを支える仕組みを学ぶ分野。",
+    "lessons": [
+      {
+        "slug": "socialscience_politics",
+        "label": "政治学",
+        "schoolType": "大学・短大"
+      },
+      {
+        "slug": "lawadmin_public_servant",
+        "label": "国家公務員・地方公務員",
+        "schoolType": "専門学校"
+      }
+    ],
+    "schoolFields": [
+      {
+        "id": "L-215",
+        "label": "政治学"
+      },
+      {
+        "id": "B-255",
+        "label": "公務員（事務）・法律・行政"
+      }
+    ]
+  },
+  {
+    "id": "mechanical",
+    "label": "機械",
+    "description": "力や動き、構造を学び、使う目的に合う機械を考える分野。",
+    "lessons": [
+      {
+        "slug": "engineering_mechanical",
+        "label": "機械工学",
+        "schoolType": "大学・短大"
+      },
+      {
+        "slug": "machine_machine",
+        "label": "機械",
+        "schoolType": "専門学校"
+      }
+    ],
+    "schoolFields": [
+      {
+        "id": "S-407",
+        "label": "機械工学"
+      },
+      {
+        "id": "D-407",
+        "label": "機械･メカトロニクス"
+      }
+    ]
+  },
+  {
+    "id": "automotive",
+    "label": "自動車・整備",
+    "description": "自動車の仕組みを理解し、点検や整備の技術を学ぶ分野。",
+    "lessons": [
+      {
+        "slug": "autoaviation_auto",
+        "label": "自動車整備",
+        "schoolType": "専門学校"
+      }
+    ],
+    "schoolFields": [
+      {
+        "id": "D-435",
+        "label": "自動車整備"
+      },
+      {
+        "id": "S-408",
+        "label": "自動車工学"
+      }
+    ]
+  },
+  {
+    "id": "finance",
+    "label": "経済・金融",
+    "description": "お金の流れや経済の仕組みを知り、金融の役割を考える学び。",
+    "lessons": [
+      {
+        "slug": "socialscience_economics",
+        "label": "経済学",
+        "schoolType": "大学・短大"
+      },
+      {
+        "slug": "socialscience_commerce",
+        "label": "商学",
+        "schoolType": "大学・短大"
+      }
+    ],
+    "schoolFields": [
+      {
+        "id": "L-217",
+        "label": "経済学"
+      },
+      {
+        "id": "L-218",
+        "label": "商学､会計学"
+      }
+    ]
+  },
+  {
+    "id": "law",
+    "label": "法律",
+    "description": "社会のルールを学び、事実と法律から問題を考える分野。",
+    "lessons": [
+      {
+        "slug": "socialscience_law",
+        "label": "法学",
+        "schoolType": "大学・短大"
+      }
+    ],
+    "schoolFields": [
+      {
+        "id": "L-214",
+        "label": "法学"
+      }
+    ]
+  },
+  {
+    "id": "aviation",
+    "label": "航空・整備",
+    "description": "航空機の仕組みと、飛行を支える技術を学ぶ分野。",
+    "lessons": [
+      {
+        "slug": "engineering_aerospace",
+        "label": "航空・宇宙工学",
+        "schoolType": "大学・短大"
+      },
+      {
+        "slug": "autoaviation_aviation",
+        "label": "航空整備",
+        "schoolType": "専門学校"
+      }
+    ],
+    "schoolFields": [
+      {
+        "id": "S-417",
+        "label": "航空･宇宙工学"
+      },
+      {
+        "id": "D-417",
+        "label": "航空整備･航空工学"
+      }
+    ]
+  },
+  {
+    "id": "fashion",
+    "label": "服飾・ファッション",
+    "description": "衣服の素材・形・色と、着る人の暮らしを結び付ける学び。",
+    "lessons": [
+      {
+        "slug": "fashion_designer",
+        "label": "デザイナー",
+        "schoolType": "専門学校"
+      },
+      {
+        "slug": "fashion_pattern",
+        "label": "パタンナー",
+        "schoolType": "専門学校"
+      }
+    ],
+    "schoolFields": [
+      {
+        "id": "P-104",
+        "label": "被服学"
+      },
+      {
+        "id": "A-104",
+        "label": "ファッション･スタイリスト"
+      }
+    ]
+  },
+  {
+    "id": "sports",
+    "label": "スポーツ・健康",
+    "description": "体の働きと運動を知り、目的に合った指導を考える学び。",
+    "lessons": [
+      {
+        "slug": "sports_sports",
+        "label": "体育学",
+        "schoolType": "大学・短大"
+      },
+      {
+        "slug": "sports_trainer",
+        "label": "インストラクター・トレーナー",
+        "schoolType": "専門学校"
+      }
+    ],
+    "schoolFields": [
+      {
+        "id": "O-106",
+        "label": "体育学･健康科学"
+      },
+      {
+        "id": "A-106",
+        "label": "体育･スポーツ･健康･レジャー"
+      }
+    ]
+  },
+  {
+    "id": "medical-administration",
+    "label": "医療事務",
+    "description": "医療の制度と事務の仕組みを学び、受診や会計を支える分野。",
+    "lessons": [
+      {
+        "slug": "medicaladmin_medical_admin",
+        "label": "医療事務・医療秘書",
+        "schoolType": "専門学校"
+      },
+      {
+        "slug": "medicaladmin_health_info",
+        "label": "診療情報管理",
+        "schoolType": "専門学校"
+      }
+    ],
+    "schoolFields": [
+      {
+        "id": "U-240",
+        "label": "医療秘書・医療事務"
+      },
+      {
+        "id": "B-222",
+        "label": "医療秘書、医療・福祉ビジネス、歯科助手"
+      }
+    ]
   }
 ]
